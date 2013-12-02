@@ -1,0 +1,51 @@
+Category:System
+License:GPLv3
+Web Site:http://sufficientlysecure.org/index.php/adaway
+Source Code:https://github.com/dschuermann/ad-away
+Issue Tracker:https://github.com/dschuermann/ad-away/issues
+Donate:http://sufficientlysecure.org/index.php/adaway
+FlattrID:369138
+
+Auto Name:AdAway
+Summary:Block advertisements
+Description:
+An ad blocker that uses the hosts file. The hosts file
+contains a list of mappings between hostnames and IP addresses. When
+an app requests an ad, that request is directed to 127.0.0.1 which does
+nothing. There are options to run a web server
+to respond to blocked hostnames and to direct requests to the IP
+address of your choosing. You can download hosts files from the
+app but it is possible to use your own and to add certain sites
+to the white- and black-lists.
+
+[https://github.com/dschuermann/ad-away/raw/master/CHANGELOG Changelog]
+
+Requires root: Yes. The hosts files is located in /system which is normally
+read-only.
+.
+
+Requires Root:Yes
+
+Repo Type:git
+Repo:https://github.com/dschuermann/ad-away.git
+
+Build Version:2.3,42,v2.3,subdir=AdAway,srclibs=RootCommands@c940b0e503,\
+extlibs=htmlcleaner/htmlcleaner-2.2.jar,init=rm android-libs/Donations/custom_rules.xml && \
+git clone https://github.com/dschuermann/HtmlSpanner android-libs/HtmlSpanner,\
+update=.;android-libs/Donations;android-libs/ActionBarSherlock;\
+android-libs/HtmlSpanner/htmlspanner,prebuild=\
+rm -rf ../update_zip libs/root-commands-1.2.jar libs/htmlspanner-0.2-fork.jar && \
+cp -f libs/htmlcleaner-2.2.jar android-libs/HtmlSpanner/htmlspanner/libs/ && \
+echo "android.library.reference.3=$$RootCommands$$" >> project.properties && \
+echo "android.library.reference.4=android-libs/HtmlSpanner/htmlspanner" >> project.properties && \
+find . -type f -print0 | xargs -0 sed -i 's/org.rootcommands/org.sufficientlysecure.rootcommands/g' && \
+cp android-libs/Donations/ant-templates/other/DonationsConfig.java \
+android-libs/Donations/src/org/donations/,buildjni=yes
+
+Build Version:2.8,47,v2.8,subdir=AdAway,build=$$NDK$$/ndk-build APP_ABI=armeabi-v7a,gradle=yes@..,preassemble=renameExecutables
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.8
+Current Version Code:47
+

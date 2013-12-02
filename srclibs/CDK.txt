@@ -1,0 +1,2 @@
+Repo Type:svn
+Repo:svn://svn.code.sf.net/p/cdk/svn/cdk/tags/cdk-1.2.0

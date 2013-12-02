@@ -1,0 +1,30 @@
+Categories:Navigation
+License:GPLv3+
+Web Site:https://github.com/grote/Liberario#liberario
+Source Code:https://github.com/grote/Liberario
+Issue Tracker:https://github.com/grote/Liberario/issues
+FlattrID:1921242
+
+Auto Name:Liberario
+Summary:Public transport routing
+Description:
+It finds connections from your home, current position or given station to wherever you want to go.
+Locations are automatically saved and shown with the most used on top.
+You can also save entire connections as favorites and find next trips with one click.
+
+The app can find nearby stations and show upcoming departures including the delays (if there are any).
+.
+
+Repo Type:git
+Repo:https://github.com/grote/Liberario.git
+
+Build:0.4,6
+    commit=0.4
+    submodules=yes
+    build=./build-pte.sh
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.4
+Current Version Code:6
+

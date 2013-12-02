@@ -1,0 +1,80 @@
+diff --git a/project.properties b/project.properties
+index 9d8db91..982a955 100644
+--- a/project.properties
++++ b/project.properties
+@@ -2,4 +2,4 @@ proguard.config=${sdk.dir}/tools/proguard/proguard-android.txt:proguard-project.
+ 
+ target=android-18
+ 
+-android.library.reference.1=extern/Universal-Image-Loader/library
++android.library.reference.1=../srclib/ImageLoader/library
+diff --git a/res/values-fr/strings.xml b/res/values-fr/strings.xml
+index 140d071..719b25e 100644
+--- a/res/values-fr/strings.xml
++++ b/res/values-fr/strings.xml
+@@ -44,7 +44,7 @@
+   <string name="repo_update_title">Mettre à jour les dépôts</string>
+   <string name="tab_installed">Installée</string>
+   <string name="tab_noninstalled">Disponible</string>
+-  <string name="tab_updates">Mises à jour</string>
++  <string name="tab_updates">MàJ</string>
+   <string name="one_update_available">1 mise à jour est disponible.</string>
+   <string name="many_updates_available">%d mises à jour sont disponibles.</string>
+   <string name="fdroid_updates_available">Des mises à jour F-Droid sont disponibles</string>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 317d395..697164b 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -80,6 +80,7 @@
+ 	<string name="menu_preferences">Preferences</string>
+ 	<string name="menu_about">About</string>
+ 	<string name="menu_search">Search</string>
++	<string name="menu_market">Google Play</string>
+ 	<string name="menu_add_repo">New Repository</string>
+ 	<string name="menu_rem_repo">Remove Repository</string>
+ 
+diff --git a/src/org/fdroid/fdroid/AppDetails.java b/src/org/fdroid/fdroid/AppDetails.java
+index 4e06d23..875a319 100644
+--- a/src/org/fdroid/fdroid/AppDetails.java
++++ b/src/org/fdroid/fdroid/AppDetails.java
+@@ -184,6 +184,7 @@ public class AppDetails extends ListActivity {
+     private static final int LITECOIN = Menu.FIRST + 11;
+     private static final int FLATTR = Menu.FIRST + 12;
+     private static final int DONATE_URL = Menu.FIRST + 13;
++    private static final int MARKET = Menu.FIRST + 14;
+ 
+     private DB.App app;
+     private String appid;
+@@ -668,6 +669,8 @@ public class AppDetails extends ListActivity {
+             menu.add(Menu.NONE, SOURCE, 5, R.string.menu_source).setIcon(
+                     android.R.drawable.ic_menu_view);
+         }
++        menu.add(Menu.NONE, MARKET, 14, R.string.menu_market).setIcon(
++                android.R.drawable.ic_menu_view);
+ 
+         if (app.detail_bitcoinAddr != null || app.detail_litecoinAddr != null ||
+                 app.detail_flattrID != null || app.detail_donateURL != null) {
+@@ -754,6 +757,10 @@ public class AppDetails extends ListActivity {
+             tryOpenUri("bitcoin:" + app.detail_bitcoinAddr);
+             return true;
+ 
++        case MARKET:
++            tryOpenUri("https://play.google.com/store/apps/details?id=" + app.id);
++            return true;
++
+         case LITECOIN:
+             tryOpenUri("litecoin:" + app.detail_litecoinAddr);
+             return true;
+diff --git a/src/org/fdroid/fdroid/views/fragments/AppListFragment.java b/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
+index b8102f3..359300c 100644
+--- a/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
++++ b/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
+@@ -64,7 +64,7 @@ abstract class AppListFragment extends Fragment implements AdapterView.OnItemCli
+ 
+     protected ListView createAppListView() {
+         ListView list = new ListView(getActivity());
+-        list.setFastScrollEnabled(true);
++        list.setFastScrollEnabled(false);
+         list.setOnItemClickListener(this);
+         list.setAdapter(getAppListAdapter());
+         return list;

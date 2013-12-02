@@ -1,0 +1,21 @@
+Category:Office
+License:MIT
+Source Code:https://github.com/omegavesko/HoloCounter
+Issue Tracker:https://github.com/omegavesko/HoloCounter/issues
+Bitcoin:19J43UNjckM9Q2M59ZM8ptCW5kA1dWdHdp
+
+Auto Name:Holo Counter
+Summary:Simple counting app
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/omegavesko/HoloCounter.git
+
+Build Version:1.0,1,02af73fe2d
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+

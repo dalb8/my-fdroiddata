@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:http://mel-tools.mit.edu/git-ro/SimpleContentProvider.git
+Prepare:rm -rf example test
+Update Project:Yes

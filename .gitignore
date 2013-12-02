@@ -1,0 +1,12 @@
+/config.py
+/repo/
+/archive/
+/logs/
+/tmp/
+*~
+*.pyc
+/unsigned/
+/note
+/misc/
+/shmetadata/
+/shmextlib/

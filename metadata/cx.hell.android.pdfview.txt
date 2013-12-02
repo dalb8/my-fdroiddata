@@ -1,0 +1,34 @@
+Category:Reading
+License:GPLv3
+Web Site:http://code.google.com/p/apv/
+Source Code:http://code.google.com/p/apv/source/checkout
+Issue Tracker:http://code.google.com/p/apv/issues/list
+Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LKB59NTKW9QLS
+Bitcoin:1MLdh6uAPymWVJ4bmRde684uTcLJWwumkK
+
+Auto Name:APV PDF Viewer
+Summary:PDF viewer
+Description:
+* Textual search support
+* Flexible key/button/gesture configuration
+* Different color schemes for comfortable reading
+* Optimizations for eInk
+* x86 support
+* Pinch to zoom
+.
+
+Repo Type:hg
+Repo:https://code.google.com/p/apv/
+
+Build Version:0.4.0,40000,69670732537b,subdir=pdfview,target=android-17,buildjni=yes,\
+extlibs=android/android-support-v4.jar,prebuild=sed -i '/ndk-build/d' scripts/build-native.sh && \
+./scripts/build-native.sh && sed -i '/proguard/d' project.properties
+
+Build Version:0.4.0.1,40010,!not a release,subdir=pdfview
+Build Version:0.4.0.2,40020,!not a release,subdir=pdfview
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:0.4.0.2
+Current Version Code:40020
+

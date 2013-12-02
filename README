@@ -1,0 +1,9 @@
+An Fdroiddata repo. Like the f-droid.org one, the texts are GPLv3.
+
+Metadata here serves to maintain my own repository, so everything has been 
+reasonably well tested and inspected to the extent
+that the apks run on one of my devices and that all prebuilts are via third parties.
+While I keep up to speed with the f-droid.org repo, keeping everything bang up-to-
+date isn't top priority.
+
+Everything is built with a recent version of fdroidserver.

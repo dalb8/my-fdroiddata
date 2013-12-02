@@ -1,0 +1,34 @@
+Category:Multimedia
+License:GPLv3
+Source Code:https://github.com/qorron/666up
+Issue Tracker:https://github.com/qorron/666up/issues
+
+Auto Name:666up!
+Summary:Image uploader
+Description:
+666kb.com is a very simple image hoster. It is:
+* Anonymous (no login required, however your ip will be reported to the authorities if you do something bad)
+* Spamfree and adfree
+* Private (there is no index of uploaded images, so one has to know the exact url of an image to access it)
+
+The developer of this app is not associated with 666kb.com.
+
+You can use this app to upload images from your Android device to 666kb.com and then share the image link.
+
+666kb.com has a size limit of 666kb for any uploaded picture. pictures that are larger than that will be 
+resized so they fit in that boundary. This is done on the Android device and since the memory in such a 
+device is usually limited, the result may not be as beautiful as it could have been when the picture is 
+resized on a computer.
+.
+
+Repo Type:git
+Repo:https://github.com/qorron/666up.git
+
+Build Version:0.4.1,16,5eb85badf,subdir=up666
+
+Auto Update Mode:None
+#Device variable and tags are old
+Update Check Mode:RepoManifest
+Current Version:0.4.1
+Current Version Code:16
+

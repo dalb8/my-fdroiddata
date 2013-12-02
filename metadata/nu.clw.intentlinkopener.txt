@@ -1,0 +1,19 @@
+Category:System
+#see https://github.com/clworld/IntentLinkOpener/issues/1
+License:Unknown
+Source Code:https://github.com/clworld/IntentLinkOpener
+Issue Tracker:https://github.com/clworld/IntentLinkOpener/issues
+
+Auto Name:
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/clworld/IntentLinkOpener.git
+
+Build Version:0.6,6,!unknown license at master
+
+Auto Update Mode:None
+Update Check Mode:None
+

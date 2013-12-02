@@ -1,0 +1,39 @@
+Category:System
+License:Apache2
+Web Site:http://code.google.com/p/softkeyboard/
+Source Code:https://github.com/AnySoftKeyboard/AnySoftKeyboard
+Issue Tracker:https://github.com/AnySoftKeyboard/AnySoftKeyboard/issues
+Donate:http://code.google.com/p/softkeyboard/
+
+Auto Name:AnySoftKeyboard
+Summary:Alternative keyboard
+Description:
+* Multi-language keyboard support via external packages (English as standard)
+* Completion dictionaries for multiple languages
+* Multitouch support
+* Extension keyboard (swipe your finger all the way up out of the keyboard)
+* Gesture support: swipe left or right to switch layouts; swipe up to shift; swipe down to close the keyboard
+* Theme support (comes with several skins)
+* Built-in user dictionary words editor
+* Optional 16-key English keyboard
+* Cursor movement soft-keys that can also be mapped to hardware keys
+.
+
+Repo Type:git
+Repo:https://github.com/AnySoftKeyboard/AnySoftKeyboard.git
+
+Build Version:20130709,106,f1ba2de,\
+rm=ant;keyboard_keystore;StoreStuff;res/raw/words_1.dict,\
+srclibs=1:AnySoftKeyboard-API@30851236d7;AnySoftKeyboardTools@73e9a09496,\
+prebuild=sed -i 's@..\/AnySoftKeyboardTools@$$AnySoftKeyboardTools$$@g' build.xml,\
+buildjni=yes
+
+Maintainer Notes:
+Tags are at menny/AnySoftKeyboard
+.
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:20130919
+Current Version Code:111
+

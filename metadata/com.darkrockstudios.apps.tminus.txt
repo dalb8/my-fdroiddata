@@ -1,0 +1,22 @@
+Category:Navigation
+License:MIT
+Source Code:https://github.com/Wavesonics/TMinus
+Issue Tracker:https://github.com/Wavesonics/TMinus/issues
+
+Auto Name:
+Summary:Space launch info
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/Wavesonics/TMinus.git
+
+Build Version:0.10,12,!GMS at master,subdir=TMinus,gradle=yes,\
+prebuild=rm src/main/java/com/darkrockstudios/apps/tminus/fragments/Location* \
+src/main/java/com/darkrockstudios/apps/tminus/Location* && \
+sed -i '15d' src/main/java/com/darkrockstudios/apps/tminus/LaunchListActivity.java && \
+sed -i '/play/d' build.gradle 
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+

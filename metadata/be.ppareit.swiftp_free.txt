@@ -1,0 +1,25 @@
+Category:Internet
+License:GPLv3
+Web Site:https://ppareit.github.com/swiftp
+Source Code:https://github.com/ppareit/swiftp
+Issue Tracker:https://github.com/ppareit/swiftp/issues
+Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZBVLYKWYMXQ3G
+
+Name:FTP Server
+Auto Name:FTP Server (Demo)
+Summary:Access your phone wirelessly
+Description:
+This app can serve files over the internet but the most likely usage is to access files from another
+computer without needing a cable.
+.
+
+Repo Type:git
+Repo:https://github.com/ppareit/swiftp.git
+
+Build Version:2.5.4,28,v2.5.4,subdir=Free,rm=Promotional;Documentation,prebuild=mkdir src
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.5.4
+Current Version Code:28
+

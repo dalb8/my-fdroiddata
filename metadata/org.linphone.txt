@@ -1,0 +1,42 @@
+Category:Phone & SMS
+License:GPLv3
+Web Site:http://www.linphone.org
+Source Code:http://www.linphone.org/eng/download/git.html
+Issue Tracker:
+
+Auto Name:Linphone
+Summary:SIP (VOIP) phone
+Description:
+* Audio: speex; iLBC; G711; GSM; G722. No Silk and AMR-WB depends on device in this build
+* Video with VP8, mpeg4, x264 (ARMv7 only). No h264 in this build
+* Audio multicall and conferencing
+* SRTP/ZRTP media encryption
+* Echo cancellation
+* Address book integration
+* Call history
+* Multiple accounts support
+* Native x86
+.
+
+Repo Type:git
+Repo:git://git.linphone.org/linphone-android.git
+
+Build Version:2.1.2-fdroid,2120,846a2a3a58,\
+update=no,\
+init=git submodule update --init --recursive,\
+patch=makefile.patch,\
+prebuild=sed -i '1 i NDK_PATH=$$NDK$$\nSDK_PATH=$$SDK$$/tools\n\
+SDK_PLATFORM_TOOLS_PATH=$$SDK$$/platform-tools\n' Makefile && \
+         echo 'version.name=2.1.2-fdroid' > default.properties && \
+         rm -rf tests submodules/externals/webrtc/modules/\
+video_capture/main/source/android/java/org/webrtc/videoengine/* && \
+         sed -i 's/allowBackup="true"/debuggable="false"/g' AndroidManifest.xml && \
+         sed -i 's/markets">true/markets">=false/g' res/values/non_localizable_custom.xml,\
+build=make,\
+buildjni=no
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.2.0.2
+Current Version Code:2202
+

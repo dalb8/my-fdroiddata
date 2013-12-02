@@ -1,0 +1,31 @@
+AntiFeatures:
+Category:
+License:
+Web Site:
+Source Code:
+Issue Tracker:
+Donate:
+FlattrID:
+Bitcoin:
+
+Summary:
+Description:
+.
+
+
+Repo Type:git
+Repo:https://github.com/vmihalachi/turbo-editor
+
+Build Version:1.2,6,!WIP at ba0fb4ebaa7,gradle=yes,subdir=Turbo Editor,\
+rm=Turbo Editor/libs/eventbus-2.0.2.jar,\
+srclibs=EventBus@e7c3779d72f8d,\
+prebuild=\
+   echo -e "\ninclude ':EventBus'\n\
+project(':EventBus').projectDir = new File('$(readlink -f $$EventBus$$)');" >> ../settings.gradle && \
+   sed -i "29d" build.gradle && sed -i "29 i compile project(':EventBus')" build.gradle
+
+Auto Update Mode:
+Update Check Mode:Tags
+Current Version:
+Current Version Code:
+

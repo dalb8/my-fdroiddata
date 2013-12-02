@@ -1,0 +1,39 @@
+Category:System
+License:Apache2
+Source Code:https://github.com/koush/Superuser
+Issue Tracker:https://github.com/koush/Superuser/issues
+
+Auto Name:Superuser
+Summary:Manage root access
+Description:
+An app to allow or forbid apps' requests to run as root.
+The entire app can be built from source with the Android
+SDK and NDK, including the '''su''' binary which is bundled within and
+copied to /system when the prompts are followed.
+You must already have root for this to work, because it leverages
+the existing su and Superuser app to install itself.
+However, if you know what you are doing you can use this apk
+as a su/Superuser substitute if you are gaining an initial root.
+Once the install is completed you can disable or remove the old app.
+It should work with both ARM, x86 and MIPS.
+.
+
+Requires Root:Yes
+
+Repo Type:git
+Repo:https://github.com/koush/Superuser.git
+
+Build Version:1.0.2.8,1028,74363eaa79,\
+subdir=Superuser,patch=packageid_1028.patch,\
+srclibs=1:KoushWidgets@2cc45f3,prebuild=\
+sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk && \
+echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties && \
+sed -i 's/#define REQUESTOR JAVA_PACKAGE_NAME/#define REQUESTOR \
+"org.fdroid.superuser"/g' jni/su/su.h,buildjni=yes
+
+Auto Update Mode:None
+# different package name
+Update Check Mode:None
+Current Version:1.0.2.8
+Current Version Code:1028
+

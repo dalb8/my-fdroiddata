@@ -1,0 +1,31 @@
+Category:Reading
+License:GPLv2
+Web Site:http://crengine.sourceforge.net
+Source Code:http://sourceforge.net/p/crengine/crengine/ci/master/tree
+Issue Tracker:http://sourceforge.net/tracker/?group_id=191284
+Donate:http://sourceforge.net/project/project_donations.php?group_id=191284
+
+Auto Name:Cool Reader
+Summary:E-book reader.
+Description:
+An e-book reader. Supported formats: FB2, TXT, RTF, TCR, HTML, EPUB, CHM.
+Browse free books online and add your own OPDS shares.
+
+The default dictionary app is non-free. However,
+you can choose [[aarddict.android]] as a dictionary from the Dictionary 
+section of the Settings.
+.
+
+Repo Type:git
+Repo:git://crengine.git.sourceforge.net/gitroot/crengine/crengine
+
+Build Version:3.1.2-27,847,cr3-3.1.2-27,subdir=android,rm=android/ant.properties,buildjni=yes,target=android-16
+Build Version:3.1.2-35,855,!ndk failure at cr3gl3.3.2,subdir=android,rm=android/ant.properties,\
+target=android-17,prebuild=sed -i '15s/3/4/g' AndroidManifest.xml,buildjni=yes
+
+Auto Update Mode:None
+# Too many tags
+Update Check Mode:RepoManifest
+Current Version:3.1.2-35
+Current Version Code:855
+

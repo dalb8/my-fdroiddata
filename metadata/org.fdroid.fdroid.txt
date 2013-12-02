@@ -1,0 +1,38 @@
+Category:System
+License:GPLv3+
+Web Site:https://f-droid.org
+Source Code:https://gitorious.org/f-droid/fdroidclient
+Issue Tracker:https://f-droid.org/repository/issues
+Donate:https://f-droid.org/about
+FlattrID:343053
+Bitcoin:15u8aAPK4jJ5N8wpWJ5gutAyyeHtKX5i18
+
+Auto Name:F-Droid
+Summary:Application manager
+Description:
+Android is open in the sense that you are free to install apks from anywhere you wish,
+but there are many good reasons for using a client/repository setup:
+
+* Be notified when updates are available
+* Keep track of older and beta versions
+* Filter apps that aren't compatible with the device
+* Find apps via categories and searchable descriptions
+* Access associated urls for donations, source code etc.
+* Stay safe by checking repo index signatures and apk hashes
+
+[http://f-droid.org/posts/category/changelog Changelog]
+.
+
+Repo Type:git
+Repo:git://gitorious.org/f-droid/fdroidclient.git
+
+Build Version:0.53-test,53,0.53-test,\
+rm=res/drawable-xxhdpi/ic_stat_notify_updates.png,\
+srclibs=1:ImageLoader@4aec2034749,\
+patch=icon_53.patch;play_53.patch
+
+Auto Update Mode:None
+Update Check Mode:Static
+Current Version:0.55
+Current Version Code:55
+

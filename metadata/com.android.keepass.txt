@@ -1,0 +1,34 @@
+Category:Office
+License:GPLv3
+Web Site:http://www.keepassdroid.com/
+Source Code:http://github.com/bpellin/keepassdroid
+Issue Tracker:http://code.google.com/p/keepassdroid/issues/list
+Donate:http://www.keepassdroid.com/
+
+Auto Name:KeePassDroid
+Summary:KeePass-compatible password safe
+Description:
+A password safe, compatible with KeePass. Keepass is available on all the
+major desktop platforms:
+on GNU/Linux KeePassX is a well-established client. Portable editions are
+available if you need to use it
+on a Windows machine. Supports both versions 1
+(kdb) & 2 (kdbx) of the Keepass database. Supports MIPS and x86 natively.
+.
+
+Repo Type:git
+Repo:git://github.com/bpellin/keepassdroid.git
+
+Build Version:1.99.10,128,v1.99.9,extlibs=keepass/sha2-07-01-07.zip,prebuild=\
+unzip libs/sha2-07-01-07.zip -d jni/sha && rm libs/sha2-07-01-07.zip,buildjni=yes
+
+Maintainer Notes:
+check jni/prep_build.sh prior to build
+once a tag was a beta
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.99.10
+Current Version Code:128
+

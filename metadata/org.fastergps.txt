@@ -1,0 +1,52 @@
+Category:System
+License:GPLv3
+Web Site:http://sufficientlysecure.org/index.php/android-apps/#fastergps
+Source Code:https://github.com/dschuermann/faster-gps
+Issue Tracker:https://github.com/dschuermann/faster-gps/issues
+Donate:http://sufficientlysecure.org/index.php/android-apps/#fastergps
+FlattrID:527132
+
+Auto Name:FasterGPS
+Summary:Faster GPS fix
+Description:
+With FasterGPS you can select a NTP Server matching your region to
+speed up the
+process of getting a GPS fix. For more details on why NTP Server choice
+could matter, read
+[http://stackoverflow.com/questions/8308412/gps-how-ntp-time-injection-works this].
+
+Permissions:
+* Internet access: To allow donations
+
+Requires root: Yes. To write gps.conf file to /system partition.
+.
+
+Requires Root:Yes
+
+Repo Type:git
+Repo:https://github.com/dschuermann/faster-gps.git
+
+Build Version:1.6,7,399ec19,subdir=FasterGPS,\
+extlibs=htmlcleaner/htmlcleaner-2.2.jar,init=rm -f android-libs/Donations/custom_rules.xml && \
+git clone https://github.com/dschuermann/HtmlSpanner android-libs/HS && \
+git clone https://github.com/dschuermann/root-commands android-libs/RC && \
+cd android-libs/RC && git checkout a99695d4cd && rm -rf RootCommands-Demo,\
+update=.;android-libs/Donations;android-libs/HS/htmlspanner;\
+android-libs/RC/RootCommands-Library,prebuild=\
+find . -type f -print0 | xargs -0 sed -i 's/org.rootcommands/org.sufficientlysecure.rootcommands/g' && \
+rm -f libs/root-commands-1.2.jar libs/htmlspanner-0.2-fork.jar && \
+cp -f libs/htmlcleaner-2.2.jar android-libs/HS/htmlspanner/libs/ && \
+echo "android.library.reference.2=android-libs/RC/RootCommands-Library" >> project.properties && \
+echo "android.library.reference.3=android-libs/HS/htmlspanner" >> project.properties && \
+cp android-libs/Donations/ant-templates/other/DonationsConfig.java \
+android-libs/Donations/src/org/donations/
+
+Build Version:1.9,11,v1.9,subdir=FasterGPS,gradle=fdroid
+
+Build Version:1.10,12,v1.10,subdir=FasterGPS,gradle=fdroid
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.10
+Current Version Code:12
+

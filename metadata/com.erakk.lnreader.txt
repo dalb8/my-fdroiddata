@@ -1,0 +1,19 @@
+Categories:Reading
+License:Unknown
+Source Code:https://github.com/calvinaquino/LNReader-Android
+Issue Tracker:https://github.com/calvinaquino/LNReader-Android/issues
+
+Summary:Read Japanese novels
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/calvinaquino/LNReader-Android.git
+
+Build:1.1.12b,20131130
+    commit=master
+    subdir=LNReader
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+

@@ -1,0 +1,29 @@
+Category:Reading
+License:GPLv3
+Web Site:
+Source Code:https://github.com/dschuermann/document-viewer
+Issue Tracker:https://github.com/dschuermann/document-viewer/issues
+
+Auto Name:Document Viewer
+Summary:Viewer for many document formats
+Description:
+Document Viewer is a fork of the last GPL version of 
+[http://code.google.com/p/ebookdroid EBookDroid]. Supports:
+
+* PDF
+* DjVu
+* XPS (OpenXPS)
+* Comic Books (cbz) (NO support for cbr (rar compressed))
+* FictionBook (fb2, fb2.zip)
+.
+
+Repo Type:git
+Repo:https://github.com/dschuermann/document-viewer.git
+
+Build Version:2.2,2200,v2.2,subdir=document-viewer,buildjni=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.2
+Current Version Code:2200
+

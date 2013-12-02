@@ -1,0 +1,20 @@
+Category:Navigation
+License:GPLv3
+Web Site:http://www.chacunsonasso.net
+Source Code:https://svn.strasweb.fr/strasweb/API%20Animafac/phonegap
+
+Summary:For French students
+Description:
+This app allows students wishing to volunteer to find an association that suits them.
+It allows you to search for associations in the Animafac directory, 
+by theme, department and name.
+.
+
+Repo Type:git-svn
+Repo:https://svn.strasweb.fr/strasweb/API%20Animafac/phonegap
+
+Build Version:1.0.1,2,171,prebuild=sed -i '37s/true/false' AndroidManifest.xml
+
+# on gplay
+Update Check Mode:RepoManifest
+

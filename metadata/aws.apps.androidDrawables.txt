@@ -1,0 +1,31 @@
+Category:Development
+License:Apache2
+Web Site:http://aschillings.co.uk/html/android_resource_viewer.html
+Source Code:https://github.com/alt236/Android-Drawables---Android
+Issue Tracker:https://github.com/alt236/Android-Drawables---Android/issues
+
+Auto Name:Android Resources
+Summary:List Android Resources
+Description:
+This application will list all public and private Android resources (i.e.
+resources located under android.R.* and under com.android.internal.R.*) for
+the current device. If the resource is a drawable or a colour the background
+colour of the list can be changed to see how it looks next to a different
+colour. Internal resources (anything under 'com.android._internal_.R') are not
+guaranteed to be in all devices/Android versions. Do not reference them
+directly in your application or it will crash on untested device
+configurations.
+.
+
+Repo Type:git
+Repo:https://github.com/alt236/Android-Drawables---Android.git
+
+Build Version:0.0.7,7,v0.0.7,extlibs=android/android-support-v4.jar,\
+srclibs=1:ActionBarSherlock@4.1.0;2:NewQuickAction3D@f2b7b,\
+prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.0.6
+Current Version Code:7
+

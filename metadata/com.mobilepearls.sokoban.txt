@@ -1,0 +1,27 @@
+Categories:Games
+License:GPLv2
+Web Site:http://mobilepearls.com
+Source Code:https://github.com/mobilepearls/com.mobilepearls.sokoban
+Issue Tracker:https://github.com/mobilepearls/com.mobilepearls.sokoban/issues
+
+Auto Name:Sokoban
+Summary:A Sokoban game for Android
+Description:
+Push the jewels in to the green zones, but don't corner yourself!
+.
+
+Repo Type:git
+Repo:https://github.com/mobilepearls/com.mobilepearls.sokoban.git
+
+Build:1.11,12
+    commit=48e1976f9d9881adb70e
+
+Build:1.12,13
+    disable=not published
+    commit=ae80d2feb77
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.12
+Current Version Code:13
+

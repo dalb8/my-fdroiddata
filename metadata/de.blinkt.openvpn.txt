@@ -1,0 +1,26 @@
+Category:Internet
+License:NewBSD/GPLv2
+Web Site:http://code.google.com/p/ics-openvpn/
+Source Code:http://code.google.com/p/ics-openvpn/source/checkout
+Issue Tracker:http://code.google.com/p/ics-openvpn/issues/list
+
+Auto Name:OpenVPN for Android
+Summary:OpenVPN without root
+Description:
+With the VPNService in Android 4.0+ it is possible to create a VPN that doesn't
+need root access. The GUI is licensed under BSD while the OpenVPN core is licensed
+under the GPL.
+.
+
+Repo Type:hg
+Repo:https://code.google.com/p/ics-openvpn/
+
+Build Version:0.5.47,80,v0.5.47,buildjni=no,gradle=yes,build=\
+    echo WITH_BREAKPAD=0 >> jni/Android.mk && sed -i '/google-breakpad/d' jni/Android.mk && \
+    sed -i 's/-j 8/-j 2/g' misc/build-native.sh && ./misc/build-native.sh
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.5.37
+Current Version Code:67
+

@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/sqlcipher/android-database-sqlcipher
+Prepare:rm -rf dist && git submodule update --init
+

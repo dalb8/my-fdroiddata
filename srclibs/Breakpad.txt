@@ -1,0 +1,2 @@
+Repo Type:svn
+Repo:http://google-breakpad.googlecode.com/svn/trunk

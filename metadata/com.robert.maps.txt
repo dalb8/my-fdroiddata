@@ -1,0 +1,31 @@
+AntiFeatures:UpstreamNonFree
+Category:Navigation
+License:GPLv3
+Web Site:http://robertdeveloper.blogspot.com/2009/08/rmaps.html
+Source Code:http://code.google.com/p/robertprojects/source/checkout
+Issue Tracker:http://code.google.com/p/robertprojects/issues/list
+
+Auto Name:RMaps
+Summary:Map viewer
+Description:
+Map viewer with a long list of online sources available from OpenStreetMap Cyclemap to Soviet military maps.
+Offline maps using sqlite can be created easily with
+[http://trekbuddyatlasc.sourceforge.net/index.html Mobile Atlas Creator].
+
+The non-free Google Analytics library has been replaced with the NoAnalytics library.
+.
+
+Repo Type:git-svn
+Repo:http://robertprojects.googlecode.com/svn;trunk=trunk;tags=tags
+
+Build Version:0.9.4,8140,699,subdir=RMaps.Free,srclibs=NoAnalytics@158a4a,\
+rm=RMaps.AppLib/libs/libGoogleAnalytics.jar,\
+update=.;../RMaps.AppLib,prebuild=\
+echo "android.library.reference.1=$$NoAnalytics$$" >> ../RMaps.AppLib/project.properties &&\
+mkdir src
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.9.4
+Current Version Code:8140
+

@@ -1,0 +1,27 @@
+Category:Internet
+License:GPLv3
+Web Site:https://github.com/Anasthase/TintBrowser
+Source Code:https://github.com/Anasthase/TintBrowser
+Issue Tracker:https://github.com/Anasthase/TintBrowser/issues
+
+Auto Name:Tint Browser
+Summary:Web browser
+Description:
+Enhanced version of the stock browser, featuring:
+* All basic browser features
+* Auto-hiding controls
+* Import/export bookmarks from/to SD card
+* Disable search suggestions
+* Custom search engines
+.
+
+Repo Type:git
+Repo:https://github.com/Anasthase/TintBrowser.git
+
+Build Version:1.8,10,8c489ca41550c7ce,srclibs=1:TintAddon@1.5
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.7
+Current Version Code:9
+

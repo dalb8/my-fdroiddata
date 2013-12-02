@@ -1,0 +1,35 @@
+Category:System
+License:MIT
+Web Site:https://bitbucket.org/gyrussolutions/yaab/wiki/Home
+Source Code:https://bitbucket.org/gyrussolutions/yaab/src
+Issue Tracker:https://bitbucket.org/gyrussolutions/yaab/issues
+
+Auto Name:YAAB
+Summary:Control screen brightness
+Description:
+This is a small custom brightness regulator app. The idea is to make
+screens of old devices like HTC Desire dimmer, as dim as possible.
+Of course HTC Sense on Desire has auto brightness feature, but average
+brightness level set by Sense is pretty much higher than needed for
+comfortable work. For people who use their devices for reading books,
+emails, texting, etc. this kind of application would allow to save up to
+30% of battery. The website has a full explanation of the ideas
+behind the operation.
+.
+
+Repo Type:hg
+Repo:https://bitbucket.org/gyrussolutions/yaab
+
+Build Version:1.6.2,10,6def1b3
+Build Version:1.6.3,11,release1.6.3,target=android-16
+Build Version:1.9,14,release1.9,target=android-16
+Build Version:1.9.3,17,release1.9.3,target=android-17
+Build Version:1.9.5,19,release1.9.5,init=rm -rf bin gen
+Build Version:1.9.6,20,release1.9.6
+Build Version:1.9.7,21,release1.9.7
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.9.7
+Current Version Code:21
+

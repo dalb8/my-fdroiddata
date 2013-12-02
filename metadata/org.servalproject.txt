@@ -1,0 +1,43 @@
+Category:Phone & SMS
+License:GPLv3
+Web Site:http://www.servalproject.org
+Source Code:https://github.com/servalproject/batphone
+Issue Tracker:https://github.com/servalproject/batphone/issues
+Donate:http://www.servalproject.org/donations
+
+Auto Name:Serval Mesh
+Summary:Peer to peer communications
+Description:
+This is '''experimental software''': it may not work as advertised. 
+It may lose or alter messages and files that it carries;
+it may consume a lot of space, speed and battery, and it may crash unexpectedly.
+
+Mobile communications are useful, but depend on infrastructure that can be
+damaged, overwhelmed,
+or even absent. This app assumes zero infrastructure. The phones talk to each
+other using WiFi;
+relaying calls and messages and figuring out how to resolve numbers. In other
+words, it lets your phone
+communicate with other Android phones running Serval Mesh within WiFi range.
+
+Requires root: No. Basic Android still doesn't allow WiFi in AdHoc mode,
+so the app will ask for root if you try to enable adhoc mode. 
+
+The Java/XML part is distributable under the GNU GPLv3 while the serval-dna
+(distributed number architecture) project is GPLv2.
+.
+
+Repo Type:git
+Repo:https://github.com/servalproject/batphone.git
+
+Build Version:0.91,2120,0.91,\
+submodules=yes,\
+forceversion=yes,\
+buildjni=no
+
+# Releases are in master branch, beta in development; run ant version to get version info
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:0.91
+Current Version Code:2120
+

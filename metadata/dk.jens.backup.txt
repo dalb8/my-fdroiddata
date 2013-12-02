@@ -1,0 +1,37 @@
+Category:System
+License:MIT
+Web Site:
+Source Code:https://github.com/jensstein/oandbackup
+Issue Tracker:https://github.com/jensstein/oandbackup/issues
+
+Auto Name:oandbackup
+Summary:Backup manager
+Description:
+Make backups of selected apps on your device and restore from those backups.
+oandbackup enables you to save app data to a user-accessible location. 
+Both backup / restore of single apps and of multiple apps are supported.
+
+Requires a working busybox installation at the moment (often pre-installed on custom roms).
+
+Status: Beta
+
+[https://github.com/jensstein/oandbackup/blob/master/changelog.md Changelog]
+
+Requires root: Yes. Copies files from /data/data, /data/app and /system/app.
+
+(If you don't have root but have Android 4+ you can use the command-line
+program ''adb'' from the [http://developer.android.com/sdk Android SDK] 
+platform tools to make backups via a desktop computer)
+.
+
+Requires Root:Yes
+
+Repo Type:git
+Repo:https://github.com/jensstein/oandbackup.git
+
+Build Version:0.2.4,10,0.2.4,target=android-17
+
+Update Check Mode:Tags
+Current Version:0.2.4
+Current Version Code:10
+

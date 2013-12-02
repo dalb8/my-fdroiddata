@@ -1,0 +1,28 @@
+Categories:Internet
+License:Apache2
+Web Site:http://andstatus.org/
+Source Code:https://github.com/andstatus/andstatus
+Issue Tracker:https://github.com/andstatus/andstatus/issues
+
+Auto Name:AndStatus
+Summary:Light-weight Microblogger
+Description:
+Andstatus is a client for microblogging services such as Twitter, Identi.ca
+and pump.io. It allows you to read messages, send status updates and create
+favorites, even when you are offline.
+
+Messages can be stored on the local storage indefinitely and the search option
+is limited to that.
+.
+
+Repo Type:git
+Repo:git://github.com/andstatus/andstatus.git
+
+Build:4.0,86
+    commit=0ca60ad6ba6
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:3.0
+Current Version Code:85
+

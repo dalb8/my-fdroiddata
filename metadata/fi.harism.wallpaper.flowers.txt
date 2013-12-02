@@ -1,0 +1,21 @@
+Category:Wallpaper
+License:Apache2
+Source Code:https://github.com/harism/android_wallpaper_flowers
+Issue Tracker:https://github.com/harism/android_wallpaper_flowers/issues
+
+Auto Name:Peppy Flowers
+Summary:Live wallpaper
+Description:
+Animated flower drawing.
+.
+
+Repo Type:git
+Repo:https://github.com/harism/android_wallpaper_flowers.git
+
+Build Version:3.2,10,51d7f9a56
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:3.2
+Current Version Code:10
+

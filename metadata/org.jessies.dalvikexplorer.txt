@@ -1,0 +1,26 @@
+Category:Development
+License:GPLv3
+Web Site:https://code.google.com/p/enh/wiki/DalvikExplorer
+Source Code:https://code.google.com/p/enh/source/list
+Issue Tracker:https://code.google.com/p/enh/issues/list
+
+Auto Name:Dalvik Explorer
+Summary:System info
+Description:
+Find out what Java system properties, environment variables, java.nio.charset.Charsets,
+java.util.Locales, or java.util.TimeZones are available to your app on a specific device.
+(Also useful for debugging problems users in other territories are experiencing.)
+.
+
+Repo Type:git-svn
+Repo:http://enh.googlecode.com/svn/trunk/dalvik-explorer
+
+Build:3.7,37
+    commit=706
+    target=android-18
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:3.7
+Current Version Code:37
+

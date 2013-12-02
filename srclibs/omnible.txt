@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/icechen1/Omnible
+Subdir:actionbarsherlock_omnible
+Update Project:Yes

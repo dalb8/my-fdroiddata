@@ -1,0 +1,58 @@
+Category:Office
+License:GPLv3
+Web Site:http://code.google.com/p/bitcoin-wallet/
+Source Code:https://github.com/schildbach/bitcoin-wallet/tree/prod
+Issue Tracker:http://code.google.com/p/bitcoin-wallet/issues/list
+Bitcoin:1HkX6X8EakdsgAysL93oKrWiXGPbFiG1xV
+
+Summary:Store digital currency
+Description:
+* No cloud server or web service needed: this wallet works peer to peer
+* Display of wallet balance in Bitcoin and various other currencies
+* Sending and receiving of Bitcoin via NFC, QR-codes or Bitcoin URLs
+* Address book for regularly used Bitcoin addresses
+* Enter transactions while offline, will be executed when online
+* Manages blockchain on your device
+* System notifications for Bitcoin connectivity and received coins
+* App widget for Bitcoin balance 
+* Back up private keys to local storage encrypted with a password
+
+A few tens of MiB must be downloaded to set up the blockchain and a couple
+more per month subsequently to keep it updated.
+When run for the first time, it can happen that the app shows only a white 
+display for some seconds.
+.
+
+Repo Type:git
+Repo:https://github.com/schildbach/bitcoin-wallet
+
+Build:3.19,140
+    commit=885f13e01a86
+    maven=yes
+    srclibs=BitcoinJWallet@1134572f61
+    prebuild=sed -i '30,33d' pom.xml && \
+        cp -r $$BitcoinJWallet$$/ . && \
+        rm -rf market/
+    build=$$MVN3$$ clean install -DskipTests -f BitcoinJWallet/pom.xml
+    bindir=wallet/target
+
+Build:3.27,148
+    commit=5787167f05b8
+    subdir=wallet
+    maven=yes@..
+    srclibs=BitcoinJWallet-origin@v0.10.3
+    prebuild=sed -i '73s/3.7.0/3.8.0/g' ../pom.xml
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJWallet-origin$$/pom.xml
+
+Maintainer Notes:
+This won't build proguard: need to run mvn -Prelease for that.
+
+See wallet/{README,CHANGES} or git log for info about what BitcoinJ tag to use.
+Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
+.
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest/prod
+Current Version:3.27
+Current Version Code:148
+

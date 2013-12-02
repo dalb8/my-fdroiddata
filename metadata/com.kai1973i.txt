@@ -1,0 +1,28 @@
+Category:Science & Education
+License:Apache2
+Web Site:http://code.google.com/p/auroraapp/
+Source Code:http://code.google.com/p/auroraapp/source/checkout
+Issue Tracker:http://code.google.com/p/auroraapp/issues/list
+
+Name:aAuroraApp
+Auto Name:aAuroraApp (Alpha)
+Summary:Space weather info
+Description:
+Well this solar cycle was less than spectacular but anyway. 
+
+It presents notices and graphs from the internet and a heatmap for the aurora.
+
+Status: Alpha. Not very polished but functional and stable.
+.
+
+Repo Type:git-svn
+Repo:http://auroraapp.googlecode.com/svn;trunk=trunk;tags=tags
+
+Build Version:1.04,4,9,subdir=aAuroraApp,target=android-10
+
+Auto Update Mode:None
+#not in the market
+Update Check Mode:RepoManifest
+Current Version:1.04
+Current Version Code:4
+

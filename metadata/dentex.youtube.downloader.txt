@@ -1,0 +1,39 @@
+AntiFeatures:Tracking
+Category:Multimedia
+License:GPLv3
+Web Site:
+Source Code:https://github.com/dentex/ytdownloader
+Issue Tracker:https://github.com/dentex/ytdownloader/issues
+
+Auto Name:YouTube Downloader
+Summary:Download files from YouTube
+Description:
+Share a url from YouTube to this app and you will get the option
+to download the media to your local storage in your choice of
+quality. Optionally,
+you can send it via ssh to another computer. It isn't necessary
+to have the YouTube app: URLs can be shared from the browser.
+
+See the source code page for a changelog.
+
+Anti-feature: Tracking. Crash reporting operates without user interaction.
+.
+
+Repo Type:git
+Repo:https://github.com/dentex/ytdownloader.git
+
+Build:3.1,65
+    commit=3.1
+    subdir=dentex.youtube.downloader
+    update=.;../android-download-manger-lib;../android-filechooser;../dentex.youtube.downloader.strings
+    prebuild=mkdir -p ../dentex.youtube.downloader.strings/src && \
+        tar xvf ../FFmpeg_and_lame_sources/liblame.tar.gz && \
+        mv liblame/jni . 
+    scanignore=android-download-manger-lib/libs/bugsense-3.5.jar;android-filechooser/libs/bugsense-3.5.jar;dentex.youtube.downloader/libs/bugsense-3.5.jar
+    buildjni=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:3.2
+Current Version Code:66
+

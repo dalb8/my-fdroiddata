@@ -1,0 +1,20 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/AndreiLux/Synapse
+Source Code:https://github.com/AndreiLux/Synapse
+Issue Tracker:https://github.com/AndreiLux/Synapse/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/AndreiLux/Synapse.git
+
+Build:0.1,1
+    commit=master
+    gradle=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+

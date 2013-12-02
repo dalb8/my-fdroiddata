@@ -1,0 +1,38 @@
+AntiFeatures:UpstreamNonFree
+Category:Games
+License:GPLv3
+Web Site:
+Source Code:https://github.com/sandeel/Bushido-Blocks
+Issue Tracker:https://github.com/sandeel/Bushido-Blocks/issues
+
+Auto Name:Bushido Blocks
+Summary:Block-matching game
+Description:
+Test your skills and master the way of the Samurai in this fast-paced and
+addictive Bejeweled-style puzzle game!
+Tap matches of three or more blocks to slice them with your katana.
+The more blocks you can slice in one go, the more time you gain in a race
+against the clock.
+Special blocks eliminate whole rows of blocks but don't give you any extra
+time, so use them wisely!
+.
+
+Repo Type:git
+Repo:https://github.com/sandeel/Bushido-Blocks
+
+# crashes on my armv6 device
+Build Version:1.4,13,25c7009d3989,patch=swarm.patch,\
+init=zip -r libgdx.zip libs/arm*,\
+rm=bushido-blocks-android/libs/GoogleAdMobAdsSdk-6.2.1.jar,\
+srclibs=1:MobAdMob@2d5736,\
+subdir=bushido-blocks-android,prebuild=\
+mv ../bushido-blocks/libs/gdx.jar libs/ && \
+sed -i '/merger/d' project.properties && \
+printf 'source.dir=src;../bushido-blocks/src' > ant.properties,\
+build=unzip libgdx.zip
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.4
+Current Version Code:13
+

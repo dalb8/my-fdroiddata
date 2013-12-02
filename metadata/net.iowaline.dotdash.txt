@@ -1,0 +1,24 @@
+Category:System
+License:GPLv3
+Web Site:http://code.google.com/p/dotdash-keyboard-android/
+Source Code:http://code.google.com/p/dotdash-keyboard-android/source/checkout
+Issue Tracker:http://code.google.com/p/dotdash-keyboard-android/issues/list
+
+Auto Name:DotDash Keyboard
+Summary:Morse code keyboard
+Description:
+A keyboard using non-standard "untimed" Morse code. Tap out the code for a letter and hit enter to display it.
+Don't worry if you don't know it: a cheat-sheet is accessible by swiping up from the keyboard. The utility
+keyboard, accessible by swiping to the side must be enabled in the settings for it to become available.
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/dotdash-keyboard-android/
+
+Build Version:1.1.5,12,95c0f978a724
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.1.5
+Current Version Code:12
+
