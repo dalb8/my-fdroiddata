@@ -1,0 +1,28 @@
+Categories:Office
+License:Apache2
+Source Code:http://code.google.com/p/quickdic-dictionary/source/list
+Issue Tracker:http://code.google.com/p/quickdic-dictionary/issues/list
+
+Auto Name:QuickDic
+Summary:Offline translation dictionary
+Description:
+Uses data from Wiktionary and Beolingus to generate dictionary files that can
+be used offline. These can be downloaded from within the app.
+Learn how to construct your own dictionaries by viewing
+the wiki page on the website.
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/quickdic-dictionary.dictionary/
+
+Build Version:4.0.1,23,1950e66885eb,srclibs=1:QuickdicUtil@6beac13a3bc644,\
+prebuild=mkdir libs && \
+cd jars/icu4j-4_8_1_1/ && sed -i '108d' build.xml && ant clean collator transliterator moduleJar && \
+mv icu4j.jar ../../libs/
+
+Auto Update Mode:None
+#Cross reference with version of apk in root directory
+Update Check Mode:RepoManifest
+Current Version:4.0.1
+Current Version Code:23
+

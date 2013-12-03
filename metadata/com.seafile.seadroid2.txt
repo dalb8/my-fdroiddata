@@ -1,0 +1,34 @@
+Categories:Internet
+License:Apache2
+Web Site:http://seafile.com/en/download/
+Source Code:https://github.com/haiwen/seadroid
+Issue Tracker:https://github.com/haiwen/seadroid
+
+Auto Name:Seafile
+Summary:File synchronization
+Description:
+Client for the Seafile cloud file server and project management software.
+If you are in a small team with a few people, you can create a group in Seafile
+and invite other team members.
+Team members can then maintain file libraries together and collaborate
+around them.
+
+You can try the [https://seacloud.cc/demo demo], sign up for an account
+at the website, or since the server-side is also free-as-in-freedom, it can be
+installed on any server and configured to work with the app.
+.
+
+Repo Type:git
+Repo:https://github.com/haiwen/seadroid.git
+
+Build Version:0.7.1,12,0.7.1,\
+srclibs=1:ActionBarSherlock@4.4.0;2:aFileChooser@bd54d1411f;3:NewQuickAction3D-haiwen@master;\
+HttpRequest-Sawicki@http-request-5.3,\
+prebuild=echo 'source.dir=src;$$HttpRequest-Sawicki$$' >> ant.properties && \
+         cp libs/android-support-v4.jar $$aFileChooser$$/libs/android-support-v4.jar
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:0.7.1
+Current Version Code:12
+

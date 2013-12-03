@@ -1,0 +1,21 @@
+Category:Internet
+License:Apache2
+Web Site:
+Source Code:http://code.google.com/p/i-jetty
+Issue Tracker:http://code.google.com/p/i-jetty/issues/list
+
+Summary:Port of the Jetty web container
+Description:
+Having a "personal" webserver on your phone opens up a world of possibilities, 
+letting you run your favourite existing webapps in your mobile environment.
+.
+
+Repo Type:svn
+Repo:http://i-jetty.googlecode.com/svn/tags/i-jetty-3.1/i-jetty
+
+Build Version:3.1-SNAPSHOT,31,475,maven=yes,bindir=i-jetty-ui/target,scanignore=i-jetty-ui/res/raw/;i-jetty-server/src/main/java/org/mortbay/ijetty/webapp/AndroidClassLoader.java,patch=patch_31.patch
+
+Update Check Mode:None
+Current Version:3.1
+Current Version Code:31
+

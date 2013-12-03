@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://code.google.com/p/quickdic-dictionary.util
+
+Prepare:$$SDK$$/tools/android update project -p . -t android-8

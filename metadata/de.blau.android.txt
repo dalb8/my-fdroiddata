@@ -1,0 +1,39 @@
+Categories:Navigation
+License:Apache2
+Web Site:https://code.google.com/p/osmeditor4android
+Source Code:https://code.google.com/p/osmeditor4android/source/list
+Issue Tracker:https://code.google.com/p/osmeditor4android/issues/list
+
+Auto Name:Vespucci
+Summary:OpenStreetMap editor
+Description:
+* Create and edit new Nodes and Ways
+* Append Nodes to existing Ways
+* Delete Nodes
+* Create, edit and delete Tags
+* Download and Upload to OSM-Server
+* Highlight unnamed highways, and ways/nodes with TODOs or FIXMEs
+* Add, comment and close OpenStreetBugs
+* Use a variety of background tile layers as reference
+* Show the users GPS-Track with accuracy
+* Display the raw data
+
+What is Vespucci NOT?
+* a map-view or even a routing-application
+* a professional-editing tool like JOSM or Merkaator
+
+Instructions are on the [https://code.google.com/p/osmeditor4android/wiki/Overview?tm=6 wiki].
+.
+
+Repo Type:git-svn
+Repo:http://osmeditor4android.googlecode.com/svn/trunk
+
+Build Version:0.8.3r419,19,419,srclibs=1:ActionBarSherlock@4.2.0,target=android-14,\
+extlibs=android/android-support-v4.jar,prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+Auto Update Mode:None
+# Version in res/values/appname.xml; device variable i.e see playmarket for date
+Update Check Mode:RepoManifest
+Current Version:0.8.3r419
+Current Version Code:19
+
