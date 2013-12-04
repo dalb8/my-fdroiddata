@@ -13,16 +13,15 @@ No description available
 Repo Type:git
 Repo:https://github.com/themagpimag/magpi-android.git
 
-Build:1.0-publicbeta,1
-    commit=v1.0-publicbeta
-    srclibs=1:ActionBarSherlock@4.4.0;2:ImageLoader@v1.9.0;3:RSS-ahorn@master;4:AsynCache@master;Async-http@master
-    prebuild=mkdir libs && \
-        cp $$SDK$$/extras/google/gcm/gcm-client/dist/gcm.jar libs/ && \
-        echo 'source.dir=src;$$Async-http$$/library/src/main/java' >ant.properties && \
-        rm src/com/themagpi/android/Config.java
+Build:1.0-rc1,1
+    commit=71da98740114
+    extlibs=android/android-support-v4.jar
+    srclibs=1:ActionBarSherlock@4.4.0;2:ImageLoader@v1.9.0;3:RSS-ahorn@7763a4374c802;4:AsynCache@2e1f27c42f56;5:Async-http@1.4.4
+    prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
+        cp $$SDK$$/extras/google/gcm/gcm-client/dist/gcm.jar libs/ 
 
 Auto Update Mode:None
-Update Check Mode:Tags
+Update Check Mode:RepoManifest
 Current Version:1.0-alpha3.1
 Current Version Code:1
 

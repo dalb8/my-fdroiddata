@@ -1,2 +1,6 @@
 Repo Type:git
 Repo:https://github.com/loopj/android-async-http
+
+Subdir:library
+Prepare:echo -e 'android.library=true\ntarget=android-19' > project.properties
+Update Project:Yes
