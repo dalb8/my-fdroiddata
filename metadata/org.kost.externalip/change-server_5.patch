@@ -10,7 +10,7 @@ diff -r 431da48bfb10 -r c7c8c7aa3f67 src/org/kost/externalip/ExternalIP.java
          	// HttpGet httpget = new HttpGet("http://whatismyip.everdot.org/ip");
          	// HttpGet httpget = new HttpGet("http://whatismyip.com.au/");
          	// HttpGet httpget = new HttpGet("http://www.whatismyip.org/");
-+        	HttpGet httpget = new HttpGet("http://wtfismyip.org");
++        	HttpGet httpget = new HttpGet("http://wtfismyip.com/text");
          	HttpResponse response;
          	
          	response = httpclient.execute(httpget);
