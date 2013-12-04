@@ -21,7 +21,7 @@ stations les plus proches.
 Repo Type:git
 Repo:https://github.com/ojacquemart/vlilleChecker.git
 
-Build:3.0,600
+Build:3.0.0,600
     commit=v3.0.0
     subdir=app
     prebuild=sed -i 's/-SNAPSHOT//g;21s/actionbarsherlock/extra-abs/g' build.gradle

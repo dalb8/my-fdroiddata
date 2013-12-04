@@ -26,3 +26,7 @@ build=\
    $$MVN3$$ package -DskipTests=true -f $$BitcoinJWallet$$/core/pom.xml && \
    mv $$BitcoinJWallet$$/core/target/bitcoinj-0.10.1.jar libs/
 
+Update Check Mode:RepoManifest
+Current Version:0.4
+Current Version Code:4
+

@@ -20,6 +20,7 @@ Build:1.4,60
     target=android-10
     patch=scoping-fix.patch;handle-no-market.patch;fix-appname.patch;button-name.patch
 
+# 1.7 on gplay
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.5

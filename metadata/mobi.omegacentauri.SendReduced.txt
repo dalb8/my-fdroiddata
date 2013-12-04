@@ -19,6 +19,7 @@ Build:0.05,5
     commit=7
     target=android-16
 
+# 0.06 on gplay
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.05

@@ -25,6 +25,7 @@ srclibs=INSTEAD@r1854,patch=jpeg.patch,update=force,\
 init=echo -e "APP_CFLAGS += -D__ARM_ARCH_5__" > jni/Application.mk && cd .. && ./update_xml.sh || true,\
 prebuild=ln -s `readlink -f $$INSTEAD$$` jni/src/instead
 
+# 1.9.1.1 on gplay
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.6.1.9

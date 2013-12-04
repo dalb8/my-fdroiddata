@@ -21,6 +21,7 @@ Build Version:1.6.4,19,04b37f313,subdir=BatteryExtension,\
 srclibs=DashClock@v1.2,rm=BatteryExtension/libs/dashclock-api-r1.1.jar,prebuild=\
 cp -r $$DashClock$$/api/src/com src/
 
+# 1.8.x on gplay
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.6.4
