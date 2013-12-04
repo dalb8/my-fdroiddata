@@ -1,0 +1,29 @@
+Categories:Navigation
+License:GPLv3
+Web Site:
+Source Code:https://github.com/ruleant/getback_gps
+Issue Tracker:https://github.com/ruleant/getback_gps/issues
+
+Auto Name:GetBack GPS
+Summary:Compass-based navigation
+Description:
+*Use best/most accurate location provider
+*Get location updates automatically (based on a time interval or change of location) or
+*Get location on demand (by manually refreshing)
+*Save a location
+*''get back'' mode : indicator pointing to a stored location (showing distance and direction)
+indicate current speed and current bearing
+.
+
+Repo Type:git
+Repo:https://github.com/ruleant/getback_gps.git
+
+Build:0.1,10
+    commit=v0.1
+    maven=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.1
+Current Version Code:11
+

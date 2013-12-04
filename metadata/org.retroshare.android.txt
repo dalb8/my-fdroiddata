@@ -18,7 +18,7 @@ Repo:https://git.gitorious.org/retroshare/retroshare-android-user-interface.git
 
 Build:0.2.4,7
     commit=v0.2.4
-	disable=wip https://gitorious.org/retroshare/retroshare-android-user-interface/source/master:README.md
+    disable=wip: probably compile protobuf
     subdir=RetroShareAndroidIntegration
     extlibs=android/android-support-v4.jar
     srclibs=protobuf-android@2.4.1

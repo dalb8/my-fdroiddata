@@ -1,4 +1,4 @@
-Category:Science & Education;Development
+Categories:Science & Education,Development
 License:GPLv3+
 Web Site:https://github.com/uberspot/DebianDroid
 Source Code:https://github.com/uberspot/DebianDroid
@@ -20,10 +20,12 @@ and on pending bugs for those packages, etc.
 Repo Type:git
 Repo:https://github.com/uberspot/DebianDroid.git
 
-Build Version:1.1,2,7eb6a0f6888deb338ae
+Build:1.7,12
+    disable=issue #4; use srclibs anyway
+    commit=a9eb950dd6f
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.1
-Current Version Code:2
+Current Version:1.7
+Current Version Code:12
 

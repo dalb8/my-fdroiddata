@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3
 Web Site:https://fcoin.de/index.php
 Source Code:https://github.com/PrXenon/fcoin
@@ -18,10 +18,14 @@ Documentation and app language is German.
 Repo Type:git
 Repo:https://github.com/PrXenon/fcoin.git
 
-Build Version:1.8.6,27,!Needs time at 35cce1404
+# broken
+Build:1.8.6,27
+    commit=35cce1404
 
 Auto Update Mode:None
-Update Check Mode:Static
+Update Check Mode:RepoManifest
+Current Version:1.8.6
+Current Version Code:27
 
 # On market
 No Source Since:1.9.6

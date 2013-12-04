@@ -9,9 +9,6 @@ Name:OsmAnd~
 Auto Name:OsmAnd~
 Summary:Maps & navigation; online and off
 Description:
-'''N.B''' Each apk is labelled according to the CPU architecture which it is 
-designed to run on; if in doubt, use ARM. 
-
 Osmand~'s features can be extended by enabling the plugins 
 via the settings, which include online
 maps from many sources, tracking, OSM editing and accessibility enhancements.

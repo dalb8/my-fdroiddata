@@ -5,7 +5,7 @@ Issue Tracker:https://github.com/abaker/tasks/issues
 
 Summary:Task manager
 Description:
-Based on last version of Astrid. Back up tasks via settings
+Based on last version of Astrid. Auto back-up is enabled in settings.
 .
 
 Repo Type:git

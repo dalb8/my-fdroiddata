@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3
 Web Site:http://aarddict.org/android/
 Source Code:https://github.com/aarddict/android
@@ -22,10 +22,12 @@ on the website.
 Repo Type:git
 Repo:git://github.com/aarddict/android.git
 
-Build Version:1.6.6,21,1.6.6,target=android-17
+Build:1.6.7,22
+    commit=1.6.7
+    target=android-17
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.6.6
-Current Version Code:21
+Current Version:1.6.7
+Current Version Code:22
 

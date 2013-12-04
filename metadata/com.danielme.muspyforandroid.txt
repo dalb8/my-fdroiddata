@@ -21,5 +21,6 @@ Repo:https://github.com/danielme-com/Muspy-for-Android.git
 Build Version:1.2,3,826fa
 
 Update Check Mode:RepoManifest
+Current Version:xxx
 Current Version Code:3
 

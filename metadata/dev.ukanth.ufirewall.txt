@@ -3,6 +3,7 @@ License:GPLv3
 Web Site:https://github.com/ukanth/afwall/wiki
 Source Code:https://github.com/ukanth/afwall
 Issue Tracker:https://github.com/ukanth/afwall/issues
+Donate:http://forum.xda-developers.com/donatetome.php?u=3249429
 
 Auto Name:AFWall+ 
 Summary:Control network traffic
@@ -43,7 +44,7 @@ Build:1.2.6.1,136
         patch -p1 < ../022-ipv6.patch && \
         cp ../defconfig .config && \
         cd ../../../ && \
-        rm res/raw/busybox_g2 res/raw/iptables_armv5 res/raw/nflog            external/busybox/busybox-1.21.1.tar.bz2 && \
+        rm res/raw/busybox_g2 res/raw/iptables_armv5 res/raw/nflog external/busybox/busybox-1.21.1.tar.bz2 && \
         mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
         sed -i 's@\(.1=\).*@\1$$ActionBarSherlock$$@' project.properties && \
         sed -i 's@\(.2=\).*@\1$$LockPattern$$@' project.properties
@@ -61,7 +62,8 @@ Build:1.2.6.1,136
 
 Maintainer Notes:
 iptables patch doesn't work with ndk-r9 (even with legacy toolchains)!
-Hopefully 1.2.7 has been geared up on dev's end
+1.2.7 has been substantially improved for building but no instructions at time of update
+so hopefully all will be well
 .
 
 Auto Update Mode:None

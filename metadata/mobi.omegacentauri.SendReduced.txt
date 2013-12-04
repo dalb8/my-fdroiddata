@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:NewBSD
 Web Site:http://code.google.com/p/sendreduced/
 Source Code:http://code.google.com/p/sendreduced/source/list
@@ -15,7 +15,9 @@ messaging client.
 Repo Type:git-svn
 Repo:http://sendreduced.googlecode.com/svn/trunk/
 
-Build Version:0.05,5,7,target=android-16
+Build:0.05,5
+    commit=7
+    target=android-16
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

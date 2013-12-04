@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3+
 Web Site:http://meta.ath0.com/software/rpn/
 Source Code:https://github.com/lpar/RPN
@@ -17,7 +17,8 @@ such as setting the number of decimal points, swapping items on the stack and th
 Repo Type:git
 Repo:https://github.com/lpar/RPN.git
 
-Build Version:2.0.3,17,ad0277c167
+Build:2.0.3,17
+    commit=ad0277c167
 
 Auto Update Mode:None
 Update Check Mode:Tags

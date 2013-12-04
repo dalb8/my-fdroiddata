@@ -1,4 +1,4 @@
-Category:Games
+Categories:Games
 License:MIT
 Web Site:http://chris.boyle.name/projects/android-puzzles
 Source Code:https://github.com/chrisboyle/sgtpuzzles
@@ -14,10 +14,16 @@ logic games.
 Repo Type:git
 Repo:git://github.com/chrisboyle/sgtpuzzles.git
 
-Build Version:9561.2,72,9561.1,patch=gradle.patch,gradle=yes,buildjni=yes
+Build:9561.2,72
+    disable=ndk-r9 problem
+    commit=9561.1
+    gradle=yes
+    patch=gradle.patch
+    prebuild=echo -e 'NDK_TOOLCHAIN_VERSION=4.6\nAPP_ABI=armeabi' > jni/Application.mk
+    buildjni=yes
 
 Auto Update Mode:None
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:9561.1
 Current Version Code:72
 

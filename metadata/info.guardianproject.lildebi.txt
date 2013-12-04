@@ -52,7 +52,10 @@ Requires Root:Yes
 Repo Type:git
 Repo:https://github.com/guardianproject/lildebi.git
 
-Build Version:0.4.5,10,0.4.5,build=make NDK_BASE=$$NDK$$ -C external assets,submodules=yes
+Build:0.4.5,10
+    commit=0.4.5
+    disable=build gpg from source
+    build=make NDK_BASE=$$NDK$$ -C external assets,submodules=yes
 
 # See info.guardianproject.gpg README to build using srclibs=GNUPG
 # external/data/data/info.guardianproject.gpg/app_opt/bin/gpg2-static :

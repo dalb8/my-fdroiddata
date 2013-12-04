@@ -24,9 +24,6 @@ Build:0.8.2,8002
     commit=v0.8.2
     gradle=yes
 
-Maintainer Notes:
-.
-
 Update Check Mode:Tags
 Current Version:0.8.2
 Current Version Code:8002

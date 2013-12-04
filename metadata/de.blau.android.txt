@@ -26,14 +26,15 @@ Instructions are on the [https://code.google.com/p/osmeditor4android/wiki/Overvi
 .
 
 Repo Type:git-svn
-Repo:http://osmeditor4android.googlecode.com/svn/trunk
+Repo:http://osmeditor4android.googlecode.com/svn;trunk=trunk;tags=tags;branches=branches
 
-Build Version:0.8.3r419,19,419,srclibs=1:ActionBarSherlock@4.2.0,target=android-14,\
-extlibs=android/android-support-v4.jar,prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+Build:0.9.3r641,24
+    commit=630
+    srclibs=1:ActionBarSherlock@4.4.0
 
 Auto Update Mode:None
 # Version in res/values/appname.xml; device variable i.e see playmarket for date
-Update Check Mode:RepoManifest
-Current Version:0.8.3r419
-Current Version Code:19
+Update Check Mode:None
+Current Version:0.9
+Current Version Code:24
 

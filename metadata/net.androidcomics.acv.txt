@@ -1,4 +1,4 @@
-AntiFeatures:UpstreamNonFree
+#AntiFeatures:UpstreamNonFree
 Category:Reading
 License:Apache2
 Web Site:http://forums.droidcomicviewer.com

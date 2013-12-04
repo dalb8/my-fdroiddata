@@ -1,0 +1,2 @@
+Repo Type:git
+Repo:http://code.google.com/p/clementine-remote-android.dep-jmdns

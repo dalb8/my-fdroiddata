@@ -13,7 +13,7 @@ searched with the keyboard.
 Repo Type:git
 Repo:git://git.busydoingnothing.co.uk/prevo-android.git
 
-Build Version:0.8,8,!some fdroid problems at 0.8,\
+Build Version:0.8,8,!fdroid problems: build with ant at 0.8,\
 srclibs=Revo@ade7e27bf8;PrevoDB@c2de0f915c9c4,\
 target=android-14,\
 build=cp -r $$Revo$$ . && cp -r $$PrevoDB$$ . && cd PrevoDB && aclocal && autoheader && \
@@ -22,4 +22,6 @@ build=cp -r $$Revo$$ . && cp -r $$PrevoDB$$ . && cd PrevoDB && aclocal && autohe
 
 #Tags/Repo can't find version info and no reviews on market
 Update Check Mode:Static
+Current Version:0.8
+Current Version Code:8
 

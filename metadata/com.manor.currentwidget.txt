@@ -1,11 +1,10 @@
-Category:System
+Categories:System
 License:GPLv3
 Web Site:http://code.google.com/p/currentwidget/
 Source Code:http://code.google.com/p/currentwidget/source/list
 Issue Tracker:http://code.google.com/p/currentwidget/issues/list
 Donate:http://code.google.com/p/currentwidget/
 
-Auto Name:
 Summary:Battery current draw widget
 Description:
 Displays how much electric current the device is using from the battery or 
@@ -35,17 +34,22 @@ N.B Latest code uses GMS
 Repo Type:git-svn
 Repo:http://currentwidget.googlecode.com/svn/trunk
 
-Build Version:0.39,38,283,subdir=CurrentWidget,update=.;../CurrentWidgetLibrary,\
-srclibs=Color-Picker-2@45ee6554a1db,target=android-17,prebuild=\
-printf "android.library.reference.1=../CurrentWidgetLibrary" >> project.properties && \
-mkdir -p src/ && rm -rf ../CurrentWidgetLibrary/bin && \
-mv res/drawable/icon.png ../CurrentWidgetLibrary/res/drawable/ && \
-printf "android.library=true\nandroid.library.reference.1=$$Color-Picker-2$$" >> \
-../CurrentWidgetLibrary/project.properties
+Build:0.39,38
+    commit=283
+    subdir=CurrentWidget
+    target=android-17
+    update=.;../CurrentWidgetLibrary
+    srclibs=Color-Picker-2@45ee6554a1db
+    prebuild=printf "android.library.reference.1=../CurrentWidgetLibrary" >> project.properties && \
+        mkdir -p src/ && \
+        rm -rf ../CurrentWidgetLibrary/bin && \
+        mv res/drawable/icon.png ../CurrentWidgetLibrary/res/drawable/ && \
+        printf "android.library=true\nandroid.library.reference.1=$$Color-Picker-2$$" >> ../CurrentWidgetLibrary/project.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:0.39a
-Current Version Code:39
+Current Version:0.38a
+Current Version Code:36
 
 No Source Since:0.39a
+

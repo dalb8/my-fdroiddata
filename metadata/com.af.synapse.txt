@@ -1,10 +1,9 @@
-Categories:None
+Categories:System
 License:Unknown
-Web Site:https://github.com/AndreiLux/Synapse
 Source Code:https://github.com/AndreiLux/Synapse
 Issue Tracker:https://github.com/AndreiLux/Synapse/issues
 
-Summary:
+Summary:Kernel configuration
 Description:
 .
 
@@ -12,9 +11,12 @@ Repo Type:git
 Repo:https://github.com/AndreiLux/Synapse.git
 
 Build:0.1,1
+    disable=licence
     commit=master
     gradle=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags
+Current Version:0.1
+Current Version Code:1
 

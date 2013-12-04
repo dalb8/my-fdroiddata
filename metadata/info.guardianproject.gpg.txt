@@ -27,7 +27,7 @@ Repo:https://github.com/guardianproject/gnupg-for-android
 Build:0.2.1,3
     commit=0.2.1
     submodules=yes
-    prebuild=rm -rf external/gnupg-for-java/
+    rm=external/gnupg-for-java
     build=make NDK_BASE=$$NDK$$ -C external/ distclean clean-assets && \
         make NDK_BASE=$$NDK$$ -C external/
     buildjni=yes

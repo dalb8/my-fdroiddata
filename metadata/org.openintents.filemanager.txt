@@ -1,4 +1,4 @@
-Category:System
+Categories:System
 License:Apache2
 Web Site:http://www.openintents.org
 Source Code:https://github.com/openintents/filemanager
@@ -19,11 +19,15 @@ you will not be able to upgrade it without first manually removing (as root) the
 Repo Type:git
 Repo:https://github.com/openintents/filemanager.git
 
-Build Version:2.0.2,26,328b40775,subdir=FileManager,\
-rm=FileManagerDemo;icons;promotion;FileManagerTest,\
-target=android-14,buildjni=yes,srclibs=OI@4170,prebuild=\
-sed -i 's@\(android.library.reference.1=\).*@\1$$OI$$/distribution/DistributionLibrary@' project.properties && \
-$$SDK$$/tools/android update project -p $$OI$$/distribution/DistributionLibrary -t android-11
+Build:2.0.2,26
+    commit=328b40775
+    subdir=FileManager
+    target=android-14
+    rm=FileManagerDemo;icons;promotion;FileManagerTest
+    srclibs=OI@4170
+    prebuild=sed -i 's@\(android.library.reference.1=\).*@\1$$OI$$/distribution/DistributionLibrary@' project.properties && \
+        $$SDK$$/tools/android update project -p $$OI$$/distribution/DistributionLibrary -t android-11
+    buildjni=yes
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

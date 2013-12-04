@@ -1,8 +1,10 @@
-Category:Internet
+Categories:Internet
 License:Apache2
+Web Site:
 Source Code:https://github.com/emartynov/UrlSetter
 Issue Tracker:https://github.com/emartynov/UrlSetter/issues
 
+Auto Name:UrlSetter
 Summary:Peek at shortened addresses
 Description:
 Decode short urls from many popular websites, which can then be passed to your 
@@ -12,8 +14,12 @@ app of choice.
 Repo Type:git
 Repo:https://github.com/emartynov/UrlSetter.git
 
-Build Version:1.0,1,f32ce3038334,gradle=yes
+Build:1.0,1
+    commit=f32ce3038334
+    gradle=yes
 
+Auto Update Mode:None
 Update Check Mode:RepoManifest
+Current Version:1.0
 Current Version Code:1
 

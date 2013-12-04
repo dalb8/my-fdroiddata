@@ -1,11 +1,13 @@
 Categories:System
 License:Apache2
+Web Site:
 Source Code:https://github.com/SimonMarquis/Android-PreferencesManager
 Issue Tracker:https://github.com/SimonMarquis/Android-PreferencesManager/issues
 
 Auto Name:Preferences Manager
 Summary:Edit app preferences
 Description:
+No description available
 .
 
 Requires Root:Yes
@@ -16,16 +18,16 @@ Repo:https://github.com/SimonMarquis/Android-PreferencesManager.git
 Build:1.4,15
     commit=b3d8533ace17
     subdir=PreferencesManager
-    rm=PreferencesManager/assets;Resources;PreferencesManager/libs/rootfw.jar
     target=android-18
+    rm=PreferencesManager/assets;Resources;PreferencesManager/libs/rootfw.jar
     srclibs=Support-v7@android-4.3_r2.1;RootFW@2_0.3.2;StickyListHeaders-tots@62be7e8a7e547
     patch=fonts_15.patch
     prebuild=mv libs/android-support-v4.jar $$Support-v7$$/libs/ && \
-         $$SDK$$/tools/android update project -l $$RootFW$$ -p . && \
-         $$SDK$$/tools/android update project -l $$StickListHeaders-tots$$ -p .
+        $$SDK$$/tools/android update project -l $$RootFW$$ -p . && \
+        $$SDK$$/tools/android update project -l $$StickListHeaders-tots$$ -p .
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.4
-Current Version Code:15
+Current Version:1.5
+Current Version Code:16
 

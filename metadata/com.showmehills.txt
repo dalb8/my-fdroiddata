@@ -1,5 +1,4 @@
-AntiFeatures:Tracking,UpstreamNonFree
-Category:Navigation
+Categories:Navigation
 License:GPLv3
 Web Site:https://github.com/ShowMeHills/ShowMeHills/wiki
 Source Code:https://github.com/ShowMeHills/ShowMeHills
@@ -27,15 +26,17 @@ Google Analytics was removed before building.
 Repo Type:git
 Repo:https://github.com/ShowMeHills/ShowMeHills.git
 
-Build Version:0.30,30,v0.30,\
-update=no,srclibs=NoAnalytics@c8d7785075,\
-subdir=ShowMe/ShowMeHills,rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar,prebuild=\
-mkdir src && echo "sdk.dir=$$SDK$$" >local.properties && \
-echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \
-echo "sdk.dir=$$SDK$$" >../ShowMeX/local.properties && \
-sed -i 's/<uses-library android:name="com.google.android.maps" \/>\
-/<uses-library android:name="com.google.android.maps" \
-android:required="false" \/>/g' AndroidManifest.xml
+Build:0.30,30
+    commit=v0.30
+    subdir=ShowMe/ShowMeHills
+    update=no
+    rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar
+    srclibs=NoAnalytics@c8d7785075
+    prebuild=mkdir src && \
+        echo "sdk.dir=$$SDK$$" >local.properties && \
+        echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \
+        echo "sdk.dir=$$SDK$$" >../ShowMeX/local.properties && \
+        sed -i 's/<uses-library android:name="com.google.android.maps" \/>/<uses-library android:name="com.google.android.maps" android:required="false" \/>/g' AndroidManifest.xml
 
 Auto Update Mode:None
 Update Check Mode:Tags

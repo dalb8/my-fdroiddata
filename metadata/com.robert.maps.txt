@@ -1,4 +1,4 @@
-AntiFeatures:UpstreamNonFree
+#AntiFeatures:UpstreamNonFree
 Category:Navigation
 License:GPLv3
 Web Site:http://robertdeveloper.blogspot.com/2009/08/rmaps.html

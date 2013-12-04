@@ -1,4 +1,4 @@
-Category:Wallpaper
+Categories:Wallpaper
 License:Apache
 Web Site:http://forum.xda-developers.com/showthread.php?p=46387352
 Source Code:https://github.com/jruesga/PhotoPhase
@@ -14,11 +14,13 @@ applying transitions and effects.
 Repo Type:git
 Repo:https://github.com/jruesga/PhotoPhase.git
 
-Build Version:1.0.1,1003,v1.0.1,target=android-18,prebuild=\
-mv libs/color-picker-view/src/afzkl src/
+Build:1.0.1,1003
+    commit=v1.0.1
+    target=android-18
+    prebuild=mv libs/color-picker-view/src/afzkl src/
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.0.1
-Current Version Code:1003
+Current Version:1.0.6
+Current Version Code:1008
 

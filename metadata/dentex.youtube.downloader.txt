@@ -1,5 +1,5 @@
 AntiFeatures:Tracking
-Category:Multimedia
+Categories:Multimedia
 License:GPLv3
 Web Site:
 Source Code:https://github.com/dentex/ytdownloader
@@ -34,6 +34,6 @@ Build:3.1,65
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:3.2
-Current Version Code:66
+Current Version:3.4.1
+Current Version Code:70
 

@@ -22,7 +22,7 @@ target=android-17,prebuild=sed -i '18 i android:versionCode="1"\n\
 android:versionName="android-4.2.2_r1.2"' AndroidManifest.xml
 
 Auto Update Mode:None
-Update Check Mode:Static
+Update Check Mode:None
 Current Version:android-4.2.2_r1.2
 Current Version Code:1
 

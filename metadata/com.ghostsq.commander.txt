@@ -1,0 +1,51 @@
+Categories:System
+License:GPLv3
+Web Site:http://sites.google.com/site/ghostcommander1/
+Source Code:http://sourceforge.net/p/ghostcommander/code/
+Issue Tracker:http://sourceforge.net/projects/ghostcommander/support
+Donate:http://sourceforge.net/p/ghostcommander/donate/
+
+Auto Name:Ghost Commander
+Summary:Dual-panel file manager
+Description:
+Dual panel file manager, like Norton Commander, Midnight Commander or
+Total Commander. Unlike regular file managers, it copies and moves
+files between its two panels.
+
+The file manager can also create or extract ZIP archives and transfer
+files to/from FTP servers.
+The SFTP/SMB network share functionalities need
+plugin apps, that can also be found in the repository.
+There is also a handy app manager featuring package names,
+installation dates, sharing apks (via long-press), manifests and
+access to activities and shortcuts.
+
+Requires root: No, but if you allow it root you can remount filesystems,
+and mess around with the system files.
+.
+
+Repo Type:srclib
+Repo:GhostCommander
+
+Build:1.51b7,224
+    commit=402
+    scanignore=src/com/ghostsq/commander/adapters/CA.java
+
+Build:1.51.2,227
+    commit=405
+    disable=Build fails - missing R.drawable.plugins
+    scanignore=src/com/ghostsq/commander/adapters/CA.java
+
+Maintainer Notes:
+No commit messages in source repo! No tags. Apks on website can be used to
+confirm a release is real. Commit where AndroidManifest is changed usually
+corresponds to version.
+
+The scanignore is for the dex class loading which is used for loading plugins.
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:1.51.2
+Current Version Code:227
+

@@ -1,8 +1,10 @@
-Category:Multimedia
+Categories:Multimedia
 License:GPLv3
+Web Site:
 Source Code:https://github.com/abeiro/amplayer.droid
 Issue Tracker:https://github.com/abeiro/amplayer.droid/issues
 
+Auto Name:AMPlayer
 Summary:Network music player
 Description:
 Play your music collection via the internet by connecting to 
@@ -23,6 +25,11 @@ for the Chromium browser.
 Repo Type:git
 Repo:https://github.com/abeiro/amplayer.droid.git
 
-Build Version:0.4.2,1,79ba84d6522e
+Build:0.4.2,1
+    commit=79ba84d6522e
 
+Auto Update Mode:None
 Update Check Mode:RepoManifest
+Current Version:0.4.2
+Current Version Code:1
+

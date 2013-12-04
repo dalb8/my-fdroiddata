@@ -1,8 +1,10 @@
-Category:Wallpaper
+Categories:Wallpaper
 License:GPLv3+
+Web Site:
 Source Code:https://github.com/NightlyNexus/Color-Clock
 Issue Tracker:https://github.com/NightlyNexus/Color-Clock/issues
 
+Auto Name:Color Clock
 Summary:Clock widget
 Description:
 Simple digital clock widget in your choice of colours
@@ -11,11 +13,12 @@ Simple digital clock widget in your choice of colours
 Repo Type:git
 Repo:https://github.com/NightlyNexus/Color-Clock.git
 
-Build Version:1.0,1,64d55457728b,\
-srclibs=1:ColorPickerPreference@15b666
+Build:1.0,1
+    commit=64d55457728b
+    srclibs=1:ColorPickerPreference@15b666
 
 Auto Update Mode:None
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1
 

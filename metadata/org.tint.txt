@@ -1,6 +1,5 @@
-Category:Internet
+Categories:Internet
 License:GPLv3
-Web Site:https://github.com/Anasthase/TintBrowser
 Source Code:https://github.com/Anasthase/TintBrowser
 Issue Tracker:https://github.com/Anasthase/TintBrowser/issues
 
@@ -18,10 +17,12 @@ Enhanced version of the stock browser, featuring:
 Repo Type:git
 Repo:https://github.com/Anasthase/TintBrowser.git
 
-Build Version:1.8,10,8c489ca41550c7ce,srclibs=1:TintAddon@1.5
+Build:1.8,10
+    commit=8c489ca41550c7ce
+    srclibs=1:TintAddon@1.5
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.7
-Current Version Code:9
+Current Version:1.8
+Current Version Code:10
 

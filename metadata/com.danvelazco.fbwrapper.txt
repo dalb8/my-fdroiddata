@@ -1,5 +1,5 @@
 AntiFeatures:Tracking
-Category:Internet
+Categories:Internet
 License:Apache2
 Web Site:
 Source Code:https://github.com/velazcod/Tinfoil-Facebook
@@ -21,10 +21,12 @@ the preferences section, which is disabled by default.
 Repo Type:git
 Repo:https://github.com/velazcod/Tinfoil-Facebook
 
-Build Version:1.2.1,20130726,v1.2.1,gradle=yes
+Build:1.2.1,20130726
+    commit=v1.2.1
+    gradle=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.2.1
-Current Version Code:20130726
+Current Version:1.1.8
+Current Version Code:20130520
 

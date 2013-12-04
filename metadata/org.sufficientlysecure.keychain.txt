@@ -24,8 +24,7 @@ It doesn't integrate with any email client yet, but that is a planned feature.
 Repo Type:git
 Repo:https://github.com/dschuermann/openpgp-keychain.git
 
-Build Version:2.1.1,21100,v2.1.1,subdir=OpenPGP-Keychain,\
-    update=.;../libraries/ActionBarSherlock;../libraries/HtmlTextView
+Build Version:2.1.1,21100,v2.1.1,subdir=OpenPGP-Keychain
 
 Auto Update Mode:None
 Update Check Mode:Tags

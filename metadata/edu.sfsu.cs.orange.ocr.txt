@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:Apache2
 Web Site:
 Source Code:https://github.com/rmtheis/android-ocr
@@ -46,14 +46,17 @@ the settings.
 Repo Type:git
 Repo:https://github.com/rmtheis/android-ocr.git
 
-Build Version:0.5.12,31,5ca566e5,\
-subdir=android,srclibs=TessTwo@cbfa61eff0,prebuild=\
-sed -i 's@\(rence.1=\).*@\1../tess-two@' project.properties && \
-cp -r $$TessTwo$$ ../,build=$$NDK$$/ndk-build -C ../tess-two
+Build:0.5.12,31
+    commit=5ca566e5
+    subdir=android
+    srclibs=TessTwo@cbfa61eff0
+    prebuild=sed -i 's@\(rence.1=\).*@\1../tess-two@' project.properties && \
+        cp -r $$TessTwo$$ ../
+    build=$$NDK$$/ndk-build -C ../tess-two
 
 Auto Update Mode:None
 # very tentatively
 Update Check Mode:RepoManifest
-Current Version:0.5.12
-Current Version Code:31
+Current Version:0.5.13
+Current Version Code:32
 

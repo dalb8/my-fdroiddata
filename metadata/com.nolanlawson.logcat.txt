@@ -16,7 +16,9 @@ a widget, can record logs in the background and has useful colour coding.
 Repo Type:git
 Repo:https://github.com/nolanlawson/Catlog.git
 
-Build Version:1.4.4,41,v41,subdir=Catlog
+Build:1.4.4,41
+    commit=v41
+    subdir=Catlog
 
 Auto Update Mode:None
 Update Check Mode:Tags

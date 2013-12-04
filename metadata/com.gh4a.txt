@@ -1,5 +1,6 @@
-Category:Development
+Categories:Development
 License:Apache2
+Web Site:
 Source Code:https://github.com/slapperwan/gh4a
 Issue Tracker:https://github.com/slapperwan/gh4a/issues
 
@@ -23,18 +24,22 @@ report any issues to the issue tracker.
 Repo Type:git
 Repo:https://github.com/slapperwan/gh4a.git
 
-Build Version:3.2,32,5149069ae5,srclibs=ActionBarSherlock@9598f2bb2c;ViewPagerIndicator@65457eac06,\
-prebuild=\
-sed -i '/Pager/d' project.properties && \
-sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@' project.properties && \
-echo "android.library.reference.2=$$ViewPagerIndicator$$" >> project.properties && \
-rm -rf libs/android-support-v4.jar
-Build Version:3.3,33,!build errors at cd7d72c5878,\
-srclibs=1:ActionBarSherlock@4.3.0;2:ViewPagerIndicator@65457e;\
-GitHubAPI@stable-2.3;Google-Gson@1163;PrettyTime@1.0.8.Final,prebuild=\
-rm libs/gson*.jar libs/pretty*.jar libs/android-supp*.jar && \
-echo 'source.dir=src;$$PrettyTime$$/src/main;$$Google-Gson$$/src;$$GitHubAPI$$/src' >ant.properties && \
-cp $$ActionBarSherlock$$/libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/ && \
+Build:3.2,32
+    commit=5149069ae5
+    srclibs=ActionBarSherlock@9598f2bb2c;ViewPagerIndicator@65457eac06
+    prebuild=sed -i '/Pager/d' project.properties && \
+        sed -i 's@\(android.library.reference.1=\).*@\1$$ActionBarSherlock$$@' project.properties && \
+        echo "android.library.reference.2=$$ViewPagerIndicator$$" >> project.properties && \
+        rm -rf libs/android-support-v4.jar
+
+Build:3.3,33
+    disable=build errors at cd7d72c5878
+    commit=cd7d72c5878
+    srclibs=1:ActionBarSherlock@4.3.0;2:ViewPagerIndicator@65457e;GitHubAPI@stable-2.3;Google-Gson@1163;PrettyTime@1.0.8.Final
+    prebuild=rm libs/gson*.jar libs/pretty*.jar libs/android-supp*.jar && \
+        echo 'source.dir=src;$$PrettyTime$$/src/main;$$Google-Gson$$/src;$$GitHubAPI$$/src' >ant.properties && \
+        cp $$ActionBarSherlock$$/libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/ && \
+        
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
