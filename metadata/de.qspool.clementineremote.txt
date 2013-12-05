@@ -27,7 +27,7 @@ Build:8.1,24
              wget http://downloads.sourceforge.net/project/jmdns/jmdns/JmDNS%203.4.0/jmdns-3.4.0.tgz && \
              tar xf jmdns-3.4.0.tgz src/javax/ && rm -rf src/javax/jmdns/test/
     build=ant jar -f libs/jmdns-build.xml && \
-          cd unjar/ && jar xf ../libs/bin/jmdns.jar && \
+          cd unjar/ && jar xf ../libs/jmdns.jar && \
           jar cfm ../libs/jmdns.jar META-INF/MANIFEST.MF javax/
 
 Auto Update Mode:None
