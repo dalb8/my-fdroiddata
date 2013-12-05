@@ -23,6 +23,10 @@ Tracking: Stats are sent back regularly to the developers, but that can
 be disabled via settings.
 .
 
+Build:25.0,2013102514
+    commit=25.0
+    disable=WIP!!!!
+
 Auto Update Mode:None
 Update Check Mode:None
 #Update Check Data:http://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/multi/android_info.txt|buildID=(\d{10})\d{4}|http://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/multi/|fennec-([\d.]+)\.multi\.android-arm\.apk
