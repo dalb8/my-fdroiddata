@@ -7,14 +7,14 @@ Issue Tracker:https://github.com/themagpimag/magpi-android/issues
 Auto Name:The MagPi
 Summary:Magazine about microcomputers
 Description:
-No description available
+Read summaries of issues, download PDFs of magazines and read news about it.
 .
 
 Repo Type:git
 Repo:https://github.com/themagpimag/magpi-android.git
 
 Build:1.0-rc1,1
-    commit=71da98740114
+    commit=d4d6a95fee0730e5dfd8a0aa1dc109dc41b105b2
     extlibs=android/android-support-v4.jar
     srclibs=1:ActionBarSherlock@4.4.0;2:ImageLoader@v1.9.0;3:RSS-ahorn@7763a4374c802;4:AsynCache@2e1f27c42f56;5:Async-http@1.4.4
     prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
