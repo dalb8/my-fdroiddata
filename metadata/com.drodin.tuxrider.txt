@@ -1,4 +1,4 @@
-#AntiFeatures:UpstreamNonFree
+AntiFeatures:UpstreamNonFree
 Category:Games
 License:GPL
 Web Site:http://tuxrider.drodin.com/

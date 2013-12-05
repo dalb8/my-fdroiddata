@@ -1,4 +1,4 @@
-#Antifeatures:UpstreamNonFree
+Antifeatures:UpstreamNonFree
 Categories:Games
 License:GPLv3
 Web Site:http://www.paulscode.com/forum/index.php?topic=96
