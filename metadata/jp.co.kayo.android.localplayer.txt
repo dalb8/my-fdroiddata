@@ -40,12 +40,10 @@ Build:3.37b,2071400330
 Build:3.37,2111600304
     commit=e7ba9ce76
     subdir=JUSTPLAYER
-    init=rm -f ../LibAndroTranslation-1.0.1/build.xml
-    update=.;../LibAndroTranslation-1.0.1
+    rm=LibAndroTranslation-1.0.1/build.xml;JUSTPLAYER/.google_apis;JUSTPLAYER/libs/GoogleAdMobAdsSdk-6.2.1.jar
     extlibs=android/android-support-v4.jar
     srclibs=MobAdMob@2d5736
     prebuild=echo 'android.library.reference.2=$$MobAdMob$$' >> project.properties && \
-        rm -rf .google_apis libs/GoogleAdMobAdsSdk-6.2.1.jar && \
         sed -i 's/KeysDummy/Keys/g' src/jp/co/kayo/android/localplayer/secret/KeysDummy.java && \
         mv src/jp/co/kayo/android/localplayer/secret/KeysDummy.java src/jp/co/kayo/android/localplayer/secret/Keys.java
 

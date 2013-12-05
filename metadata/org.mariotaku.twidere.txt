@@ -21,10 +21,6 @@ Features include:
 * GZip compressing for API requests
 * TCP DNS query and custom host mapping to fight against censorship
 
-Development is focussed on Twitter and that service is the only one officially
-supported.
-Versions prior to 0.2.0 use Twitter API v1.0.
-
 If you want a StatusNet account press the button at the top of the account
 setup page.
 Set an appropriate REST API url and choose basic authentication.

@@ -29,6 +29,7 @@ Repo:https://github.com/ukanth/afwall.git
 
 Build:1.2.6.1,136
     commit=v1.2.6.1
+    disable=iptables won't build on ndk-r9 like this
     extlibs=android/android-support-v4.jar;afwall.patch
     srclibs=ActionBarSherlock@4.2.0;LockPattern@1c1307;iptables@android-4.2.2_r1
     prebuild=rm -rf external/iptables/* && \

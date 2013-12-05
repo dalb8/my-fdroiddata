@@ -7,8 +7,8 @@ Issue Tracker:https://github.com/andstatus/andstatus/issues
 Auto Name:AndStatus
 Summary:Light-weight Microblogger
 Description:
-Andstatus is a client for microblogging services such as Twitter, Identi.ca
-and pump.io. It allows you to read messages, send status updates and create
+Andstatus is a client for microblogging services such as Twitter.com, Quitter.se
+and Pumpdog.me. It allows you to read messages, send status updates and create
 favorites, even when you are offline.
 
 Messages can be stored on the local storage indefinitely and the search option

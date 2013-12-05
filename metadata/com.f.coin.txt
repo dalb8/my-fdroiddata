@@ -18,8 +18,8 @@ Documentation and app language is German.
 Repo Type:git
 Repo:https://github.com/PrXenon/fcoin.git
 
-# broken
 Build:1.8.6,27
+    disable=broken
     commit=35cce1404
 
 Auto Update Mode:None

@@ -12,7 +12,7 @@ to get through the day while trying to avoid running into your boss as you
 move from room to room along the 'Escher Hallway' of your company's office 
 building.
 
-How to play:
+''How to play'':
 
 Your working day is divided up into rounds of five minutes each. 
 Sometime during each round, you must decide which room to move to for the next

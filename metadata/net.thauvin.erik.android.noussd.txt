@@ -17,7 +17,7 @@ Regular phone numbers will be sent automatically to your favorite dialer.
 Repo Type:git
 Repo:https://github.com/ethauvin/NoUSSD.git
 
-Build Version:1.0.1,2,1afdca26803,target=android-15,rm=libs/android-support-v4.jar,\
+Build Version:1.0.1,2,1afdca26803,target=android-15,\
 extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None

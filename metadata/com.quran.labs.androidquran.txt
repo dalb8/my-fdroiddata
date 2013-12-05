@@ -24,9 +24,9 @@ Build Version:2.3.1,231,v2.3.1,target=android-17,subdir=app,\
 srclibs=ActionBarSherlock@4.1.0,prebuild=\
 echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
 
-# crashlytics
+# crashlytics in 2.4.8
 Auto Update Mode:None
 Update Check Mode:None
-Current Version:248
+Current Version:2.4.8
 Current Version Code:248
 

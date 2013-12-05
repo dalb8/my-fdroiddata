@@ -1,3 +1,4 @@
+AntiFeatures:UpstreamNonFree
 Category:Games
 License:MIT
 Web Site:http://mobile.zame-dev.org/gloomy
