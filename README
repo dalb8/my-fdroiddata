@@ -1,9 +1,18 @@
-An Fdroiddata repo. Like the f-droid.org one, the texts are GPLv3.
+An Fdroiddata repo for building FOSS Android apps from source. 
+Like the f-droid.org one, the texts are licensed as GPLv3; 
+currently the git repo is about 15MiB in size.
 
-Metadata here serves to maintain my own repository, so everything has been 
-reasonably well tested and inspected to the extent
-that the apks run on one of my devices and that all prebuilts are via third parties.
-While I keep up to speed with the f-droid.org repo, keeping everything bang up-to-
-date isn't top priority.
+Metadata here serves to maintain my own apk repository serving close friends 
+and family; It has been tested and inspected to the extent that the apks build; 
+they run on at least one gadget and that the only prebuilts used are via third 
+parties.
 
-Everything is built with a recent version of fdroidserver.
+The info should be accurate, but bear in mind that Current Versions 
+are mostly automated so they could easily be incorrect; descriptions and URLs 
+may be out-dated. If you wish to distribute apks based on it, please try
+to keep them current, so that the developers will be happy; although I watch
+the f-droid.org repo, keeping everything fresh isn't a top priority for me.
+
+Everything is built with a recent version of fdroidserver, but probably not
+on a build server so you could have dependency issues for some of the apps.
+
