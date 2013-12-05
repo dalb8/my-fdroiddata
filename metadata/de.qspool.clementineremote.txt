@@ -20,10 +20,14 @@ Build:8.1,24
     commit=bf64fada3ce0d
     rm=libs/jmdns.jar
     srclibs=1:ActionBarSherlock@4.4.0;protobuf-clementine@201d572f787a
+    extlibs=jmdns-build.xml
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
              echo 'source.dir=src;$$protobuf-clementine$$/src' > ant.properties && \
-             wget http://repo1.maven.org/maven2/javax/jmdns/jmdns/3.4.0/jmdns-3.4.0.jar -O libs/jmdns.jar
-    build=mkdir unjar/ && cd unjar/ && jar xf ../libs/jmdns.jar && \
+             mkdir unjar/ && cd libs/ && \
+             wget http://downloads.sourceforge.net/project/jmdns/jmdns/JmDNS%203.4.0/jmdns-3.4.0.tgz && \
+             tar xf jmdns-3.4.0.tgz src/javax/ && rm -rf src/javax/jmdns/test/
+    build=ant jar -f libs/jmdns-build.xml && \
+          cd unjar/ && jar xf ../libs/bin/jmdns.jar && \
           jar cfm ../libs/jmdns.jar META-INF/MANIFEST.MF javax/
 
 Auto Update Mode:None
