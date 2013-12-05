@@ -15,17 +15,16 @@ If you receive a call or want to make one, you don't have pause the current trac
 Repo Type:git
 Repo:https://code.google.com/p/clementine-remote-android/
 
-Build:8.1,22
-    commit=4d36bb
-    srclibs=1:ActionBarSherlock@4.4.0;protobuf-clementine@201d572f787a;jmdns-clementine@f6f2f
+# see https://code.google.com/p/clementine-remote-android/issues/detail?id=28
+Build:8.1,24
+    commit=bf64fada3ce0d
+    rm=libs/jmdns.jar
+    srclibs=1:ActionBarSherlock@4.4.0;protobuf-clementine@201d572f787a
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
              echo 'source.dir=src;$$protobuf-clementine$$/src' > ant.properties && \
-             cp -r $$jmdns-clementine$$ . && \
-             cd jmdns-clementine/ && mkdir unjar/ && rm lib/jmdns.jar jmdns.jar && \
-             wget http://repo1.maven.org/maven2/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar -O jmdns.jar
-    build=cd jmdns-clementine/unjar/ && jar xf ../jmdns.jar && \
-          jar cfm ../jmdns.jar META-INF/MANIFEST.MF javax/ && \
-          mv ../jmdns.jar ../../libs/
+             wget http://repo1.maven.org/maven2/javax/jmdns/jmdns/3.4.0/jmdns-3.4.0.jar -O libs/jmdns.jar
+    build=mkdir unjar/ && cd unjar/ && jar xf ../libs/jmdns.jar && \
+          jar cfm ../libs/jmdns.jar META-INF/MANIFEST.MF javax/
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
