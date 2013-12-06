@@ -6,7 +6,4 @@
 *~
 *.pyc
 /unsigned/
-/note
-/misc/
 /shmetadata/
-/shmextlib/
