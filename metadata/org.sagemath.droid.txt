@@ -1,0 +1,28 @@
+Categories:Science & Education
+License:GPLv3
+Web Site:http://www.sagemath.org
+Source Code:http://code.google.com/p/sage-android/source/checkout
+Issue Tracker:http://code.google.com/p/sage-android/issues/list
+
+Auto Name:Sage
+Summary:Calculation client
+Description:
+Sage is mathematical software that combines many packages into a common interface.
+This Android application connects as a http client to a Sage server,
+authenticates, initiates a session, sends commands and displays the results.
+There are some demos which appear to function via public server.
+
+Status: Beta.
+.
+
+Repo Type:git
+Repo:https://github.com/sagemath/android
+
+Build:0.9.1,5
+    commit=0d6c7f0df7120
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:0.9.1
+Current Version Code:5
+
