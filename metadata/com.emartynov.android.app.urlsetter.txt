@@ -14,8 +14,8 @@ app of choice.
 Repo Type:git
 Repo:https://github.com/emartynov/UrlSetter.git
 
-Build:1.0,1
-    commit=f32ce3038334
+Build:1.0.0.1,1
+    commit=5168e722e9d1
     gradle=yes
 
 Auto Update Mode:None

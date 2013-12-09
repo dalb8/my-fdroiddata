@@ -14,10 +14,9 @@ applying transitions and effects.
 Repo Type:git
 Repo:https://github.com/jruesga/PhotoPhase.git
 
-Build:1.0.1,1003
-    commit=v1.0.1
-    target=android-18
-    prebuild=mv libs/color-picker-view/src/afzkl src/
+Build:1.0.6,1008
+    commit=v1.0.6
+    target=android-19
 
 Auto Update Mode:None
 Update Check Mode:Tags

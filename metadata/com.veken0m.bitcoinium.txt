@@ -27,6 +27,13 @@ Build:1.6.0,33
         $$MVN3$$ clean package -f $$XChange$$/pom.xml && \
         mv $(find $$XChange$$ -name \*.jar) libs/
 
+Build:1.8.2,47
+    commit=v1.8.2
+    srclibs=XChange@xchange-1.10.0;1:ActionBarSherlock@4.4.0;2:ColorPickerPreference@a6ffb91b1
+    prebuild=rm -f libs/xchange*
+    build=$$MVN3$$ clean package -DskipTests -f $$XChange$$/pom.xml && \
+        mv $(find $$XChange$$ -name \*0.jar) libs/
+
 Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.8.3

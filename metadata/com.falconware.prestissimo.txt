@@ -14,8 +14,8 @@ e.g. [[de.danoeh.antennapod]].
 Repo Type:git
 Repo:https://github.com/TheRealFalcon/Prestissimo.git
 
-Build:0.4.3,9
-    commit=v0.4.3
+Build:0.5,10
+    commit=v0.5
     target=android-17
     srclibs=Sonic@637de
     prebuild=sed -i '/INTERNET/d' AndroidManifest.xml

@@ -1,30 +1,24 @@
-Categories:
-License:
-Web Site:
-Source Code:
-Issue Tracker:
+Categories:Office
+License:GPLv3
+Source Code:https://github.com/vmihalachi/turbo-editor
+Issue Tracker:https://github.com/vmihalachi/turbo-editor/issues
+Donate:https://github.com/vmihalachi/turbo-editor
+FlattrID:2173527
 
 Auto Name:Turbo Editor
-Summary:
+Summary:Simple text editor
 Description:
-No description available
 .
 
 Repo Type:git
 Repo:https://github.com/vmihalachi/turbo-editor
 
 Build:1.2,6
-    disable=WIP at ba0fb4ebaa7
-    commit=ba0fb4ebaa7
+    commit=3697dd
     subdir=Turbo Editor
     gradle=yes
-    rm=Turbo Editor/libs/eventbus-2.0.2.jar
-    srclibs=EventBus@e7c3779d72f8d
-    prebuild=echo -e "\ninclude ':EventBus'\nproject(':EventBus').projectDir = new File('$(readlink -f $$EventBus$$)');" >> ../settings.gradle && \
-        sed -i "29d" build.gradle && \
-        sed -i "29 i compile project(':EventBus')" build.gradle
 
-Auto Update Mode:
+Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.2
 Current Version Code:6
