@@ -3,7 +3,7 @@
 
     <target name="compile" description="Compile source">
         <mkdir dir="bin" />
-	<javac srcdir="src" includes="**" destdir="bin" />
+	<javac srcdir="javax" includes="**" destdir="bin" />
     </target>
 
     <target name="jar" description="Package into JAR" depends="compile">
