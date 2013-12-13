@@ -31,6 +31,11 @@ rm=res/drawable-xxhdpi/ic_stat_notify_updates.png,\
 srclibs=1:ImageLoader@4aec2034749,\
 patch=icon_53.patch;play_53.patch
 
+Build:0.55,55
+    commit=0.55
+    srclibs=1:ImageLoader@v1.9.0
+    patch=play_53.patch
+
 Auto Update Mode:None
 Update Check Mode:Static
 Current Version:0.55

@@ -3,5 +3,6 @@ Repo:https://github.com/Prototik/HoloEverywhere
 
 Subdir:library
 
+Prepare:mkdir -p libs
 Update Project:Yes
 
