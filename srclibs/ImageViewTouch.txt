@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/sephiroth74/ImageViewZoom
+
+Subdir:library
+#Prepare:rm build.xml && $$SDK$$/tools/android update project -p . -l ../../Easing/library/src/main

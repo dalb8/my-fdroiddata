@@ -1,0 +1,6 @@
+Repo Type:git
+Repo:https://github.com/sephiroth74/Android-Easing
+
+Subdir:library
+#Prepare:[ -f project.properties ] || echo -e "source.dir=java\nandroid.library=true\ntarget=android-19\n" >> project.properties
+#Update Project:Yes

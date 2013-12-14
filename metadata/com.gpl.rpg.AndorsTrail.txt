@@ -1,0 +1,33 @@
+Categories:Games
+License:GPLv2
+Web Site:http://andors.techby2guys.com/
+Source Code:http://code.google.com/p/andors-trail/
+Issue Tracker:http://code.google.com/p/andors-trail/issues/list
+
+Auto Name:Andor's Trail
+Summary:Quest-driven RPG
+Description:
+Quest-driven Roguelike fantasy dungeon crawler RPG with a powerful story.
+Uncover the truths about your home village and the disappearance of your
+brother.
+
+Battle fierce monsters, gain experience and levels. Solve quests, find
+hidden treasures and improve your equipment.
+
+Please note that this is a work in progress, which means that all maps
+are not yet done. This is mainly a version for bug-hunting and
+compatibility testing. Please give feedback on the project page.
+Many of the graphical resources are CC-licensed; see the
+[http://code.google.com/p/andors-trail/wiki/License wiki] for details.
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/andors-trail/
+
+Build Version:0.7.0,39,v0.7.0,subdir=AndorsTrail
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.7.0
+Current Version Code:39
+

@@ -1,0 +1,25 @@
+Categories:Games
+License:Unknown
+Source Code:https://github.com/bobuhiro11/PuzzleRoad
+Issue Tracker:https://github.com/bobuhiro11/PuzzleRoad/issues
+
+Auto Name:ぱずうぇい
+Summary:Pipe game
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/bobuhiro11/PuzzleRoad.git
+
+Build:2.0,2
+    disable=no license
+    commit=v3.0
+    prebuild=sed -i '1 s/^\xef\xbb\xbf//' src/net/bobuhiro11/puzzleroad/*.java && \
+        find . -type f -print0 | xargs -0 sed -i '/awt/d' 
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.0
+Current Version Code:2
+

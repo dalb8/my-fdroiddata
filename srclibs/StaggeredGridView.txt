@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/maurycyw/StaggeredGridView
+Prepare:mkdir -p libs/ 
+Update Project:Yes

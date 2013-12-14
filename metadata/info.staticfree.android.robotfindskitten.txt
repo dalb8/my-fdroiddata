@@ -1,0 +1,23 @@
+Categories:Games
+License:GPLv3
+Web Site:http://staticfree.info/projects/rfk/
+Source Code:https://staticfree.info/git/robotfindskitten.git
+Issue Tracker:
+FlattrID:633876
+
+Auto Name:robotfindskitten
+Summary:A retro Zen simulation
+Description:
+You are the robot and your goal is to find the kitten
+.
+
+Repo Type:git
+Repo:git://staticfree.info/git/robotfindskitten/
+
+Build Version:1.0.701,7,v1.0.701
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.0.701
+Current Version Code:7
+

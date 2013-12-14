@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/nwertzberger/libogg-vorbis-android
+Subdir:main
+Prepare:$$NDK$$/ndk-build
+Update Project:Yes

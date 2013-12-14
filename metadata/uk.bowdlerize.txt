@@ -1,0 +1,35 @@
+Categories:Internet
+License:GPLv3
+Web Site:http://bowdlerize.co.uk
+Source Code:https://github.com/openrightsgroup/Android-Probe
+Issue Tracker:https://github.com/openrightsgroup/Android-Probe/issues
+Donate:https://www.openrightsgroup.org/donate
+
+Auto Name:Censor Census
+Summary:Contribute to index of censorship
+Description:
+The server sends URLs to the app which then sends a HTTP HEAD request
+via the cellular network to see if the content can be reached.
+The results of the tests are analysed by 
+[https://www.openrightsgroup.org Open Rights Group] in the U.K
+and the Tor Project.
+
+Alternatively, you can submit URLs for analysis via the
+[https://bowdlerize.co.uk/blocked.org.uk website].
+
+Status: Alpha
+.
+
+Repo Type:git
+Repo:https://github.com/openrightsgroup/Android-Probe.git
+
+Build:Alpha Release #6,6
+    commit=f019a07fa739
+    init=sed -i '76,79d' build.gradle
+    gradle=foss
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:Alpha Release #6
+Current Version Code:6
+
