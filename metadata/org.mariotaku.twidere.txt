@@ -32,17 +32,17 @@ For general info about the StatusNet API see
 Repo Type:git
 Repo:git://github.com/mariotaku/twidere.git
 
-Build:0.2.9.4,80
-    commit=0fd65d7f5707
+Build:0.2.9.7-update1,86
+    commit=d7817432c24437a8
     rm=dist;art;libs/android-support-v13.jar
     extlibs=android/android-support-v4.jar;android/android-support-v13.jar
     srclibs=1:PullToRefresh-Banes@v0.9.1;2:DragSort@0.6.1;3:SlidingMenu@7ebe32772
+    patch=google-services_86.patch
     prebuild=cp libs/android-support-v4.jar $$DragSort$$/libs/ && \
-             cp libs/android-support-v4.jar $$SlidingMenu$$/libs/
-    patch=google-services_80.patch
+        cp libs/android-support-v4.jar $$SlidingMenu$$/libs/
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest/f-droid
-Current Version:0.2.9.4
-Current Version Code:80
+Update Check Mode:RepoManifest/dev
+Current Version:0.2.9.7-update1
+Current Version Code:86
 

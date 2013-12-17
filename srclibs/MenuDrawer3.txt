@@ -2,8 +2,8 @@
 Repo Type:git
 Repo:https://github.com/SimonVT/android-menudrawer
 
-Subdir:library
+Subdir:library,menudrawer
 
-Update Project:No
-Prepare:$$SDK$$/tools/android update project -p . -t android-17
+Prepare:[ -f project.properties ] || echo -e 'android.library=true\ntarget=android-17' > project.properties
+Update Project:Yes
 

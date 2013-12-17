@@ -1,0 +1,6 @@
+Repo Type:git
+Repo:https://android.googlesource.com/platform/frameworks/support
+
+Subdir:v7/gridlayout
+Update Project:Yes
+Prepare:mkdir -p libs

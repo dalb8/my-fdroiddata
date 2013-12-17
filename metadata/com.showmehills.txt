@@ -31,7 +31,7 @@ Build:0.30,30
     subdir=ShowMe/ShowMeHills
     update=no
     rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar
-    srclibs=NoAnalytics@c8d7785075
+    srclibs=NoAnalytics@d38ae535b543
     prebuild=mkdir src && \
         echo "sdk.dir=$$SDK$$" >local.properties && \
         echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \

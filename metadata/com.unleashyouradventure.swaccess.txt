@@ -24,9 +24,6 @@ Build:011 beta,11
         cp -r $$ImageLoader-Novoda$$/src/main/java/com/novoda/ src/com/ && \
         cp -r $$Google-Gson$$/src/main/java/com/google/ src/com/
 
-Build:012 beta,12
-    disable=not published
-
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:012 beta

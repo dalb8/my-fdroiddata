@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/shontauro/android-pulltorefresh-and-loadmore
+Subdir:pulltorefresh-and-loadmore
+Update Project:Yes
