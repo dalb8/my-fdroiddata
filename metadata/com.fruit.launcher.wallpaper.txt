@@ -1,0 +1,25 @@
+Categories:Wallpaper
+License:Apache2
+Web Site:
+Source Code:https://github.com/yftx/fruit.launcher.wallpaper
+Issue Tracker:https://github.com/yftx/fruit.launcher.wallpaper/issues
+
+Auto Name:Wallpapers
+Summary:20 photographic wallpapers
+Description:
+For HDPI phones (~800x480 pixels).
+.
+
+Repo Type:git
+Repo:https://github.com/yftx/fruit.launcher.wallpaper.git
+
+Build:1.0,1
+    commit=bf6a7
+    target=android-16
+    prebuild=sed -i '3s/Wallpapers/HDPI Photo Wallpapers/g' res/values/strings.xml
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:1.0
+Current Version Code:1
+

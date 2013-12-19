@@ -1,0 +1,26 @@
+Categories:Wallpaper
+License:Unknown
+Web Site:http://www.desire.giesecke.tk
+Source Code:https://github.com/beegee-tokyo/android_packages_apps_g_Wallpapers
+Issue Tracker:https://github.com/beegee-tokyo/android_packages_apps_g_Wallpapers/issues
+Donate:http://www.desire.giesecke.tk
+
+Summary:High resolution wallpapers
+Description:
+10 Mt. Fuji-themed and 6 dark anime wallpapers for XHDPI screens.
+.
+
+Repo Type:git
+Repo:https://github.com/beegee-tokyo/android_packages_apps_g_Wallpapers.git
+
+Build:1.0,1
+    commit=ics
+    disable=unknown license
+    target=android-17
+    prebuild=sed -i '4 i android:versionCode="1"\nandroid:versionName="1.0"' AndroidManifest.xml 
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:1.0
+Current Version Code:1
+
