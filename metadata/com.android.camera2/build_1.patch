@@ -1,0 +1,159 @@
+commit 5124730fd9e154eeae5b71942ec137278484141a
+Author: David Black <david8black@gmail.com>
+Date:   Fri Dec 20 17:19:09 2013 +0000
+
+    s
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index e14a251..b1d09e8 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ 
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.android.camera2">
++      android:versionName="1.0" android:versionCode="1" package="com.android.camera2">
+ 
+     <uses-sdk
+         android:minSdkVersion="14"
+diff --git a/ant.properties b/ant.properties
+new file mode 100644
+index 0000000..82bb6b9
+--- /dev/null
++++ b/ant.properties
+@@ -0,0 +1,4 @@
++source.dir=src_pd;src_pd_gcam;src;xmp_toolkit/XMPCore/src
++version_name_package=1.0
++version_code_package=1
++
+diff --git a/build.xml b/build.xml
+new file mode 100644
+index 0000000..4594c91
+--- /dev/null
++++ b/build.xml
+@@ -0,0 +1,114 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project name="importer" default="help">
++
++    <!-- The local.properties file is created and updated by the 'android' tool.
++         It contains the path to the SDK. It should *NOT* be checked into
++         Version Control Systems. -->
++    <property file="local.properties" />
++
++    <!-- The ant.properties file can be created by you. It is only edited by the
++         'android' tool to add properties to it.
++         This is the place to change some Ant specific build properties.
++         Here are some properties you may want to change/update:
++
++         source.dir
++             The name of the source directory. Default is 'src'.
++         out.dir
++             The name of the output directory. Default is 'bin'.
++
++         For other overridable properties, look at the beginning of the rules
++         files in the SDK, at tools/ant/build.xml
++
++         Properties related to the SDK location or the project target should
++         be updated using the 'android' tool with the 'update' action.
++
++         This file is an integral part of the build system for your
++         application and should be checked into Version Control Systems.
++
++         -->
++    <property file="ant.properties" />
++
++    <!-- if sdk.dir was not set from one of the property file, then
++         get it from the ANDROID_HOME env var.
++         This must be done before we load project.properties since
++         the proguard config can use sdk.dir -->
++    <property environment="env" />
++    <condition property="sdk.dir" value="${env.ANDROID_HOME}">
++        <isset property="env.ANDROID_HOME" />
++    </condition>
++
++    <!-- The project.properties file is created and updated by the 'android'
++         tool, as well as ADT.
++
++         This contains project specific properties such as project target, and library
++         dependencies. Lower level build properties are stored in ant.properties
++         (or in .classpath for Eclipse projects).
++
++         This file is an integral part of the build system for your
++         application and should be checked into Version Control Systems. -->
++    <loadproperties srcFile="project.properties" />
++
++    <!-- quick check on sdk.dir -->
++    <fail
++            message="sdk.dir is missing. Make sure to generate local.properties using 'android update project' or to inject it through the ANDROID_HOME environment variable."
++            unless="sdk.dir"
++    />
++
++    <!--
++        Import per project custom build rules if present at the root of the project.
++        This is the place to put custom intermediary targets such as:
++            -pre-build
++            -pre-compile
++            -post-compile (This is typically used for code obfuscation.
++                           Compiled code location: ${out.classes.absolute.dir}
++                           If this is not done in place, override ${out.dex.input.absolute.dir})
++            -post-package
++            -post-build
++            -pre-clean
++    -->
++    <import file="custom_rules.xml" optional="true" />
++
++    <target name="-package-resources" depends="-crunch">
++	  <do-only-if-not-library elseText="Library project: do not package resources..." >
++              <exec executable="${aapt}" >
++  			<arg value="package" />
++  			<arg value="-f" />
++  			<arg value="-M" />
++  			<arg path="AndroidManifest.xml" />
++ 			<arg value="-F" />
++			<arg path="${out.absolute.dir}/${resource.package.file.name}" />
++ 			<arg value="-I" />
++			<arg path="${android.jar}" />
++ 			<arg value="-S" />
++			<arg path="${resource.absolute.dir}" />
++			<arg value="--version-name" />
++			<arg path="${version_name_package}" />
++			<arg value="--version-code" />
++			<arg path="${version_code_package}" />
++  			<arg value="--auto-add-overlay" />
++		</exec>
++	  </do-only-if-not-library>
++   </target>
++ 
++    <!-- Import the actual build file.
++
++         To customize existing targets, there are two options:
++         - Customize only one target:
++             - copy/paste the target into this file, *before* the
++               <import> task.
++             - customize it to your needs.
++         - Customize the whole content of build.xml
++             - copy/paste the content of the rules files (minus the top node)
++               into this file, replacing the <import> task.
++             - customize to your needs.
++
++         ***********************
++         ****** IMPORTANT ******
++         ***********************
++         In all cases you must update the value of version-tag below to read 'custom' instead of an integer,
++         in order to avoid having your file be overridden by tools such as "android update project"
++    -->
++    <!-- version-tag: 1 -->
++    <import file="${sdk.dir}/tools/ant/build.xml" />
++
++</project>
+diff --git a/project.properties b/project.properties
+index ce39f2d..4ab1256 100644
+--- a/project.properties
++++ b/project.properties
+@@ -11,4 +11,4 @@
+ #proguard.config=${sdk.dir}/tools/proguard/proguard-android.txt:proguard-project.txt
+ 
+ # Project target.
+-target=android-18
++target=android-19

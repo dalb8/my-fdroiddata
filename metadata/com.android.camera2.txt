@@ -1,0 +1,30 @@
+Category:Multimedia
+License:
+Web Site:
+Source Code:https://github.com/CyanogenMod/android_packages_apps_Camera2
+Issue Tracker:
+
+Summary:CM camera
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/CyanogenMod/android_packages_apps_Camera2
+
+Build:1,1.0
+    commit=cm-11.0 
+    extlibs=android/android-support-v13.jar
+    srclibs=Xmp@android-4.4.2_r1
+    patch=build_1.patch
+    prebuild=cp -r $$Xmp$$ . && \
+         echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties
+    buildjni=yes
+
+Maintainer Notes:
+See version.mk for their version scheme
+.
+
+Update Check Mode:None
+Current Version:1.0
+Current Version Code:1
+

@@ -1,0 +1,30 @@
+Categories:Office
+License:GPLv3
+Web Site:https://github.com/Letme/give-me-coinsMonitoringApp
+Source Code:https://github.com/Letme/give-me-coinsMonitoringApp
+Issue Tracker:https://github.com/Letme/give-me-coinsMonitoringApp/issues
+#Crt Lukancic Mori (Letme)
+Bitcoin:16625Ktt9LU4tuDPmSAnh781JYd2E5qQmC
+#Patrik Hummelbrunner
+Litecoin:LYAWygquzJizQCjNTZbQPcqGeTdxh3zH2V
+
+Auto Name:give-me-coins.com Dashboard
+Summary:Crypto-Currency mining monitor
+Description:
+Monitoring your BTC, LTC or FTC workers. 
+It implements QR Code reader and save settings as well as whole pool monitoring tab.
+
+Status: Beta
+.
+
+Repo Type:git
+Repo:https://github.com/Letme/give-me-coinsMonitoringApp.git
+
+Build:Beta2.6,19
+    commit=Beta2.6
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:Beta2.6
+Current Version Code:19
+

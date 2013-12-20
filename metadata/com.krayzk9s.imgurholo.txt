@@ -1,0 +1,25 @@
+Categories:Internet
+License:Apache2
+Web Site:
+Source Code:https://github.com/Krayzk9s/imgur-holo
+Issue Tracker:https://github.com/Krayzk9s/imgur-holo/issues
+
+Auto Name:imgur Holo
+Summary:Client for imgur.com
+Description:
+Status:Beta
+.
+
+Repo Type:git
+Repo:https://github.com/Krayzk9s/imgur-holo.git
+
+Build:0.15.0,33
+    commit=7bae
+    subdir=ImgurHolo
+    gradle=yes
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:0.15.0
+Current Version Code:33
+
