@@ -1,0 +1,24 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/segler-alex/RadioDroid
+Source Code:https://github.com/segler-alex/RadioDroid
+Issue Tracker:https://github.com/segler-alex/RadioDroid/issues
+
+Auto Name:RadioDroid
+Summary:client for radio-browser.info
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/segler-alex/RadioDroid.git
+
+Build:0.3,3
+    commit=master
+    disable=basic and service stays alive
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:0.3
+Current Version Code:3
+

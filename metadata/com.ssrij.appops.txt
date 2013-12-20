@@ -1,0 +1,23 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/theblixguy/AppOps
+Source Code:https://github.com/theblixguy/AppOps
+Issue Tracker:https://github.com/theblixguy/AppOps/issues
+
+Auto Name:AppOps
+Summary:App Ops for post 4.4.2
+Description:
+'''Move to /system/priv-app and set permissions to 777 (?)'''
+.
+
+Repo Type:git
+Repo:https://github.com/theblixguy/AppOps.git
+
+Build:1.0,1
+    commit=master
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+

@@ -1,0 +1,24 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/bkueng/clash_of_balls
+Source Code:https://github.com/bkueng/clash_of_balls
+Issue Tracker:https://github.com/bkueng/clash_of_balls/issues
+
+Auto Name:Clash of Balls
+Summary:
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/bkueng/clash_of_balls.git
+
+Build:1.11,111
+    disable=crashy
+    commit=v1.11
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.11
+Current Version Code:111
+

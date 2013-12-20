@@ -1,0 +1,26 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/dubyajaysmith/OURSS
+Source Code:https://github.com/dubyajaysmith/OURSS
+Issue Tracker:https://github.com/dubyajaysmith/OURSS/issues
+
+Auto Name:OURSS
+Summary:
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/dubyajaysmith/OURSS.git
+
+Build:1.0,1
+    disable=early days
+    commit=master
+    subdir=ourss
+    gradle=yes
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+

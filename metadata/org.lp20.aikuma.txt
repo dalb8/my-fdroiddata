@@ -1,0 +1,40 @@
+Categories:Science & Education
+License:MIT
+Web Site:http://lp20.org/aikuma
+Source Code:https://github.com/langtech/aikuma
+Issue Tracker:https://github.com/langtech/aikuma/issues
+
+Auto Name:Aikuma
+Summary:Record oral histories
+Description:
+For recording and translating spoken language. 
+Make your own recordings, share them, and translate recordings into other languages.
+
+A special feature of Aikuma is its voice-driven translation mode. 
+Hold the phone to your ear and listen, and interrupt to give a commentary or 
+translation. 
+The phone records what you say and lines it up with the original. Now the meaning is also preserved.
+
+Aikuma means “meeting” in Usarufa, a language of Papua New Guinea where this technology was first tested.
+
+Status:Beta
+.
+
+Repo Type:git
+Repo:https://github.com/langtech/aikuma.git
+
+Build:1.0.0-beta.13,10011
+    commit=v1.0.0-beta.13
+    subdir=Aikuma
+    rm=resources;web;Aikuma/test
+
+Maintainer Notes:
+Soon to use Google Cloud Storage: see https://github.com/langtech/aikuma/issues/115, which
+will probably require hard-coded keys.
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.0.0-beta.13
+Current Version Code:10011
+
