@@ -11,7 +11,7 @@ Description:
 Repo Type:git
 Repo:https://github.com/CyanogenMod/android_packages_apps_Camera2
 
-Build:1,1.0
+Build:1.0,1
     commit=cm-11.0 
     extlibs=android/android-support-v13.jar
     srclibs=Xmp@android-4.4.2_r1

@@ -1,0 +1,26 @@
+Categories:Office
+License:Apache2
+Source Code:https://github.com/dsandler/markers
+Issue Tracker:https://github.com/dsandler/markers/issues
+
+Auto Name:Markers
+Summary:Finger drawing
+Description:
+Uses the multitouch and pressure sensitivity of capactive screens but there
+are differences in screen technology, so please see the website if you
+experience problems.
+
+A tutorial on the website shows how to simulate layers.
+.
+
+Repo Type:git
+Repo:https://github.com/dsandler/markers
+
+Build:1.2.1,52
+    commit=8fb6
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.2.1
+Current Version Code:52
+

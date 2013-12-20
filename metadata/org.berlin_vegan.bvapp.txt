@@ -1,0 +1,31 @@
+Categories:None
+License:GPL
+Web Site:http://www.berlin-vegan.org/app
+Source Code:https://github.com/smeir/Berlin-Vegan-Guide
+Issue Tracker:https://github.com/smeir/Berlin-Vegan-Guide/issues
+
+Auto Name:Berlin Vegan
+Summary:
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/smeir/Berlin-Vegan-Guide.git
+
+Build:1.6,18
+    disable=not ready
+    commit=master
+    subdir=platforms/android
+    target=android-19 
+    prebuild=sed -i '57s/cordova.js,cordova_plugins.js/phonegap.0.9.6.min.js,phonegap_android.js/g' ../../build.xml && \
+        rm libs/phonegap*.jar libs/cordova-1.5.0.jar
+    build=cd ../../ && \
+        ant prod.android
+    antcommand="-p"
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.6
+Current Version Code:18
+
