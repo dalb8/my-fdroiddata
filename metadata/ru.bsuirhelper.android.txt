@@ -1,0 +1,23 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/BSUIR-Helper/helper-android
+Source Code:https://github.com/BSUIR-Helper/helper-android
+Issue Tracker:https://github.com/BSUIR-Helper/helper-android/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/BSUIR-Helper/helper-android.git
+
+Build:0.2,2
+    commit=v0.2
+    subdir=app
+    extlibs=android/android-support-v4.jar;joda/jodatime.jar
+    srclibs=1:Support-v7@android-4.3_r2.1
+    prebuild=mv libs/android-support-v4.jar $$Support-v7$$/libs/
+
+Auto Update Mode:None
+Update Check Mode:Tags
+

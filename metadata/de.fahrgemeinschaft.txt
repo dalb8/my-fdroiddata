@@ -1,0 +1,56 @@
+Categories:Navigation
+License:GPL
+Web Site:http://fahrgemeinschaft.de
+Source Code:https://github.com/fahrgemeinschaft/android-app
+Issue Tracker:https://github.com/fahrgemeinschaft/android-app/issues
+
+Auto Name:Fahrgemeinschaft
+Summary:Rideshare/carpooling client
+Description:
+Mitfahrgelegenheiten bei Fahrgemeinschaft.de einstellen und suchen!
+Fahrgemeinschaft.de bietet das einfache, kostenlose und provisionsfreie Inserieren und Finden von Mitfahrgelegenheiten und Gesuchen für Fahrten im Auto und mit der Bahn. Derzeit stehen ca. 3,4 Mio. Fahrtangebote und Mitfahrgesuche zum Abruf bereit (Stand 09/2013).
+Funktionen für Fahrer:
+- schnelles Einstellen von einmaligen und regelmäßigen Fahrten
+- Auswahl verschiedener Kontakt-Optionen
+- kostenlose, direkte Kontaktaufnahme durch Mitfahrer (kein Buchungssystem)
+- einfaches Verwalten eigener Inserate (z.B. freie Plätze)
+Funktionen für Mitfahrer:
+- kostenlose, direkte Kontaktaufnahme zum Fahrer (kein Buchungssystem)
+- übersichtliche Suchergebnisse
+- schneller Wechsel zwischen unterschiedlichen Mitfahrgelegenheiten durch Wischgeste (swipe)
+- Information zur Aktualität der angebotenen Fahrgemeinschaft
+- Anzeige aller Fahrten von A nach B
+- Anzeige aller Fahrten mit Abfahrtsort A
+- Anzeige aller Fahrten mit Ankunftsort B
+Wir wünschen Dir eine gute Mit-/Fahrt!
+Fahrgemeinschaften leben vom Mitmachen - bewerte die App und empfiehl uns weiter!
+Dein Fahrgemeinschaft.de-Team
+Wir freuen uns auf Kommentare und Anregungen!
+Facebook: http://www.facebook.com/fahrgemeinschaft
+Twitter: http://twitter.com/gemeinsamfahren
+Forum: http://www.fahrgemeinschaft.de/forum
+KONTAKT: android@fahrgemeinschaft.de
+--
+tags:
+mitfahrgelegenheit | mitfahrzentrale | mitfahren | fahrgemeinschaft | mitfahrbörse | carpooling | carpool | ridesharing | rideshare | Auto | Bahn | umweltfreundlich | reisen | pendler | gemeinsamfahren | mobilität | carsharing | transport | Alternative | mitfahrgelegenheiten | mobility
+Die Fahrgemeinschaft.de-App ist freie Software.
+Github: https://github.com/fahrgemeinschaft
+.
+
+Repo Type:git
+Repo:https://github.com/fahrgemeinschaft/android-app.git
+
+Build:1.0.3,70
+    disable=need api keys
+    commit=a597e
+    target=android-18
+    rm=libs/android-library-0.1.jar;libs/geohash-java.jar
+    srclibs=1:ActionBarSherlock@4.4.0;Teleportr@4067be;Geohash@1.0.9
+    prebuild=echo 'source.dir=src;$$Geohash$$/src;$$Teleportr$$/src' > ant.properties && \
+        mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.0.3
+Current Version Code:70
+

@@ -1,0 +1,25 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/Teovald/Draw
+Source Code:https://github.com/Teovald/Draw
+Issue Tracker:https://github.com/Teovald/Draw/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/Teovald/Draw.git
+
+Build:0.1-almost,1
+    commit=master
+    disable=wip; strange support jar errors
+    extlibs=android/android-support-v4.jar
+    srclibs=1:Support-v7-gridlayout@android-4.3_r2.1;2:ActionBarSherlock@4.4.0;3:HoloColorPicker@4f509
+    prebuild=cp libs/android-support-v4.jar $$Support-v7-gridlayout$$/libs && \
+              cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs && \
+              cp libs/android-support-v4.jar $$HoloColorPicker$$/libs 
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+

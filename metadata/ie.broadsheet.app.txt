@@ -1,0 +1,29 @@
+Categories:Reading
+License:MIT
+Web Site:https://github.com/kmonaghan/Broadsheet.ie-Android
+Source Code:https://github.com/kmonaghan/Broadsheet.ie-Android
+Issue Tracker:https://github.com/kmonaghan/Broadsheet.ie-Android/issues
+
+Auto Name:Broadsheet.ie
+Summary:Client for an Irish website
+Description:
+Shows Broadsheet, a satirical website.
+.
+
+Repo Type:git
+Repo:https://github.com/kmonaghan/Broadsheet.ie-Android.git
+
+Build:2.0.2,2
+    disable=build problem
+    commit=v2.0.2
+    maven=yes
+    forceversion=yes
+    forcevercode=yes
+    prebuild=sed -i '14s/3.5.0/3.8.0/g;s/<platform>7/<platform>16/' pom.xml
+
+Auto Update Mode:None
+# version all wrong
+Update Check Mode:None
+Current Version:2.0.2
+Current Version Code:2
+

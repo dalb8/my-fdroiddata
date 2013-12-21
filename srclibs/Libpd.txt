@@ -1,7 +1,7 @@
 Repo Type:git
 Repo:https://github.com/libpd/pd-for-android.git
 
+# won't work on r9 , just leave the prebuilts: $$NDK$$/ndk-build -i -C PdCore
 Subdir:PdCore
-
-Update Project:Yes
+Prepare:cd ../ && git submodule update --init --recursive && $$SDK$$/tools/android update project -p PdCore && $$SDK$$/tools/android update project -p midi/AndroidMidi
 

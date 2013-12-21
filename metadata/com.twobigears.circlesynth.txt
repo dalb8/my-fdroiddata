@@ -1,0 +1,42 @@
+AntiFeatures:UpstreamNonFree
+Categories:Multimedia
+License:GPL
+Web Site:http://twobigears.com
+Source Code:https://github.com/twobigears/Circle-Synth
+Issue Tracker:https://github.com/twobigears/Circle-Synth/issues
+
+Auto Name:Circle Synth
+Summary:Grid-less sequencer synthesizer
+Description:
+Draw shapes, choose presets, apply effects and create one bar compositions worth sharing!
+
+* 12 different scales
+* 10 presets
+* Choose from 4 assignable FX for each circle or node
+* Controllable BPM
+* Accelerometer controlled filter sweep
+* Record your sketches and even set them as ringtones!
+* Save and share your musical sketches
+
+A proprietary analytics library was removed.
+
+Donations are currently only possible via Google Play.
+.
+
+Repo Type:git
+Repo:https://github.com/twobigears/Circle-Synth.git
+
+# prebuilts (both native and the processing.jar) are too tricky for me but theoretically possible:https://github.com/twobigears/Circle-Synth/issues/47. The app_license string must be inserted because of Google Play donations mallarkey.
+Build:2.0,5
+    commit=v2.0
+    init=zip -r native.zip libs/armeabi* libs/x86 libs/mips
+    rm=libs/libGoogleAnalyticsV2.jar
+    srclibs=1:Libpd@master;2:NoAnalytics@d38a
+    prebuild=sed -i '150 i \\t<string name="app_license">GPLv2</string>' res/values/strings.xml
+    build=unzip native.zip
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.0
+Current Version Code:5
+

@@ -1,0 +1,19 @@
+Categories:None
+License:Unknown
+Source Code:https://github.com/MohammadAG/Android-AZLyricsViewer
+Issue Tracker:https://github.com/MohammadAG/Android-AZLyricsViewer/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/MohammadAG/Android-AZLyricsViewer.git
+
+Build:1.1,2
+    commit=master
+    disable=no license; a bit basic
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+

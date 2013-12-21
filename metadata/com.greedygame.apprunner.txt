@@ -1,0 +1,36 @@
+Categories:Games
+License:Unknown
+Web Site:https://github.com/GreedyGame/Aam-Aadmi-Runner
+Source Code:https://github.com/GreedyGame/Aam-Aadmi-Runner
+Issue Tracker:https://github.com/GreedyGame/Aam-Aadmi-Runner/issues
+
+Auto Name:Aam Runner
+Summary:Endless runner game
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/GreedyGame/Aam-Aadmi-Runner.git
+
+Build:2.0,8
+    commit=2.0
+    disable=need to patch out greedygame.jar
+    subdir=gg-runner-android
+    init=zip -r native.zip libs/armeabi* && \
+        mv ../gg-runner/libs/* libs/ && \
+        rm libs/*sources.jar && \
+        echo 'source.dir=src;../gg-runner/src' > ant.properties
+    rm=gg-runner-android/libs/google-play-services.jar;gg-runner-android/libs/libGoogleAnalyticsV2.jar
+    srclibs=2:NoAnalytics@d38ae535b543;1:FacebookSDK@sdk-version-3.5
+    prebuild=sed -i '31d' src/com/greedygame/apprunner/AnalyticsEngineAndroid.java
+    build=unzip native.zip
+
+Maintainer Notes:
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.0
+Current Version Code:8
+

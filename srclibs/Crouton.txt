@@ -3,4 +3,5 @@ Repo:https://github.com/keyboardsurfer/Crouton
 
 Subdir:library
 
+Prepare:mkdir -p libs
 Update Project:Yes

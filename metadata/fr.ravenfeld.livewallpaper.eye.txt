@@ -1,0 +1,24 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/ravenfeld/LiveWallpaperEye
+Source Code:https://github.com/ravenfeld/LiveWallpaperEye
+Issue Tracker:https://github.com/ravenfeld/LiveWallpaperEye/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/ravenfeld/LiveWallpaperEye.git
+
+Build:1.0,1
+    commit=master
+    disable=wip
+    srclibs=Rajawali@v0.9;2:RajawaliLiveWallpaper@ae0029;1:aFileChooser@bd54d1411f
+    extlibs=android/android-support-v4.jar
+    prebuild=cp libs/android-support-v4.jar $$Rajawali$$/libs/ && \
+             mv libs/android-support-v4.jar $$aFileChooser$$/libs/
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+

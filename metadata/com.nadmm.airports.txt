@@ -1,0 +1,64 @@
+AntiFeatures:UpstreamNonFree
+Categories:Navigation
+License:GPLv3
+Source Code:https://github.com/nhasan/Airports
+Issue Tracker:https://github.com/nhasan/Airports/issues
+
+Auto Name:FlightIntel
+Summary:Resources for pilots in the U.S.A
+Description:
+FlightIntel is designed to be a resource to a pilot during all phases of a flight. 
+It provides detailed information about 5500+ US public airports. 
+AF/D data is downloaded to your phone and is available for offline use.
+Free data updates as per FAA data cycle (Every 56 days for A/FD and d-A/FD, 
+every 28 days for d-TPP and Library).
+
+The AeroNav products (TPP PDF charts and A/FD PDF pages) are not available 
+to those without Google Apps since it costs the author to obtain the materials and
+that is currently the only way to make a donation. 
+
+* Detailed info on 5,500+ US public use airports
+* Favorite airports/Wx
+* Nearby airports/Wx/FSS
+* Nearby navaids from an airport
+* Detailed ILS info
+* NOTAMs
+* TFRs
+* METAR
+* TAF
+* PIREPs
+* AIRMET/SIGMET
+* Weather radar images
+* Prognosis images
+* Winds aloft images
+* Pressure altitude/density altitude
+* Sunrise/sunset in local and UTC time
+* Instrument procedures a.k.a. Approach plates (PDF)
+* A/FD pages (PDF)
+* ATC frequencies
+* ATC phone numbers
+* FSS frequencies
+* Location 
+* Scratch pad to note down ATC and Wx
+* UTC Clock, stopwatch and countdown timer
+* E6B
+
+A proprietary analytics library was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/nhasan/Airports.git
+
+Build:5.5.0,5500
+    commit=v5.5.0
+    disable=crashy and can't download maps
+    gradle=yes
+    rm=market;libs/libGoogleAnalyticsServices.jar
+    srclibs=NoAnalytics@d38ae535b543
+    prebuild=sed -i "s@'src'@'src', '$$NoAnalytics$$/src'@g" build.gradle
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:5.5.0
+Current Version Code:5500
+
