@@ -1,0 +1,29 @@
+Categories:Multimedia
+License:Apache2
+Web Site:
+Source Code:https://github.com/Mikuz/Boarder
+Issue Tracker:https://github.com/Mikuz/Boarder/issues
+Donate:http://forum.xda-developers.com/donatetome.php?u=2863486
+
+Auto Name:Boarder
+Summary:Create and share soundboards
+Description:
+Boarder is an app for creating and managing soundboards - the aural equivalent of a painter's
+palette.
+.
+
+Repo Type:git
+Repo:https://github.com/Mikuz/Boarder.git
+
+Build:0.33,15
+    commit=v0.33
+
+Maintainer Notes:
+contains bugsense
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.33
+Current Version Code:15
+

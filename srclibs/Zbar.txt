@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/ZBar/ZBar
+Subdir:android
+Update Project:Yes
+Prepare:$$NDK$$/ndk-build ICONV_SRC=../../Iconv

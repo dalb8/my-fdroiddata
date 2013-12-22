@@ -21,10 +21,10 @@ Challenge your friends to see who is the true FlickIt! master.
 Repo Type:git
 Repo:https://github.com/louffoster/FlickIt.git
 
-Build:1.0,1
-    commit=3498ff
+Build:1.1,2
+    commit=13b9b
     subdir=FlickIt-android
-    init=zip -r native.zip libs/armeabi* libs/x86 && \
+    init=zip -r native.zip libs/armeabi-v7a && \
         mv ../FlickIt/libs/gdx.jar libs/ && \
         echo 'source.dir=src;../FlickIt/src' > ant.properties
     build=unzip native.zip

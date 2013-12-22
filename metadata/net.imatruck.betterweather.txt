@@ -1,35 +1,36 @@
-Categories:None
+Categories:Wallpaper
 License:Apache2
-Web Site:https://github.com/MarcDufresne/BetterWeather
 Source Code:https://github.com/MarcDufresne/BetterWeather
 Issue Tracker:https://github.com/MarcDufresne/BetterWeather/issues
-Donate:
 
-Summary:
+Auto Name:BetterWeather
+Summary:DashClock extension
 Description:
-If you like this extension you can support my work and donate right from the app, thanks!
-BetterWeather is now open source! You can clone the repo to add features and translations! I'll be happy to take your pull request! See the repo here: https://github.com/MarcDufresne/BetterWeather
-It is based on the weather extension included with DashClock and allows you to set your own location, instead of relying on your network location.
-It also contains more weather status icons than the original extension (Thunderstorms, Mostly Cloudy, Hail, etc.) and multiple icon themes (Climacons, Weathercons and Chameleon icon packs).
+Based on the weather extension included with [[net.nurik.roman.dashclock]].
+It also contains more weather status icons than the original extension 
+(Thunderstorms, Mostly Cloudy, Hail, etc.) and 
+multiple icon themes (Climacons, Weathercons and Chameleon icon packs).
+
 Full feature list includes:
-- Manual or automatic location;
-- Refresh on touch;
-- Custom shortcut on touch;
-- Forecasts;
-- Wind speed and wind chill;
-- Humidity level;
-- Lots of icons!
+* Manual or automatic location;
+* Refresh on touch;
+* Custom shortcut on touch;
+* Forecasts;
+* Wind speed and wind chill;
+* Humidity level;
+* Lots of icons
 .
 
 Repo Type:git
 Repo:https://github.com/MarcDufresne/BetterWeather.git
 
-Build:2.2.1,33
-    commit=1a951
-    disable=not working
+Build:2.2.2,34
+    commit=ba20a05e3506fb
     subdir=betterweather
     gradle=yes
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
+Current Version:2.2.2
+Current Version Code:34
 

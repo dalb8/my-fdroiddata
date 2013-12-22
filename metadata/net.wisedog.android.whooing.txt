@@ -1,0 +1,29 @@
+Categories:Office
+License:Apache2
+Web Site:https://peashellapp.blogspot.kr
+Source Code:https://github.com/wisedog/Whoochoo
+Issue Tracker:https://bitbucket.org/wisedognet/whooing-for-android/issues
+
+Auto Name:WhooChoo
+Summary:Client for whooing.com
+Description:
+"Whoochoo" is a client for the Korea-based website whooing.com, for double-entry 
+bookkeeping. 
+You can manage your expenses, account, income, cash flow by this application.
+.
+
+Repo Type:git
+Repo:https://github.com/wisedog/Whoochoo.git
+
+Build:1.2.0,120
+    disable=not published yet
+
+Maintainer Notes:
+(Should) use tags
+.
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest/develop
+Current Version:1.2.0
+Current Version Code:120
+
