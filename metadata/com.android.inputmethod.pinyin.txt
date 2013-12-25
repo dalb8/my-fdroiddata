@@ -9,13 +9,13 @@ Description:
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/inputmethods/PinyinIME
 
-Build:1.0,0
-    commit=android-4.4_r1.2
-    disable=no idea what I'm doing here ...
-    init=$$SDK$$/build-tools/19.0.0/aidl lib/com/android/inputmethod/pinyin/IPinyinDecoderService.aidl && \
-         echo -e 'target=android-19\nproguard.config=$$SDK$$/tools/proguard/proguard-android.txt:proguard.flags:proguard.cfg' > project.properties && \
-         sed -i '18d' jni/android/com_android_inputmethod_pinyin_PinyinDecoderService.cpp && \
-         find jni -type f -print0 | xargs -0 sed -i '/LOG/d'
+Build:4.2.1,1
+    commit=cm-10.2.0
+    disable=uses import android.os.SystemProperties
+    target=android-19
+    patch=build_1.patch;ndk-build_1.patch
+    prebuild=mv lib/com/android/inputmethod/pinyin/* src/com/android/inputmethod/pinyin/ && \
+         echo -e 'version.name=4.2.1\nversion.code=1' > ant.properties
     buildjni=yes
 
 Update Check Mode:None

@@ -1,5 +1,5 @@
 Categories:Wallpaper
-License:MIT or Apache2
+License:Apache2
 Web Site:http://frankkie.nl
 Source Code:https://github.com/frankkienl/BronyLiveWallpaper
 Issue Tracker:https://github.com/frankkienl/BronyLiveWallpaper/issues
@@ -10,20 +10,21 @@ Description:
 Featuring characters from MLP:FIM (trademarked to Hasbro Inc.).
 
 GIFs are from the [http://desktopponies.bugs3.com Desktop Ponies]
-project and licensed as CCBYSANC;
-see [https://docs.google.com/document/d/1dJp8_k0mNvydyUQbLIeRiH4HJCvAClhU0tlBHlLDvVI/edit this]
-Google Doc for individual credits.
+project and licensed as CCBYSANC.
+
+Status: Beta
 .
 
 Repo Type:git
 Repo:https://github.com/frankkienl/BronyLiveWallpaper.git
 
-Build:1.2.1,8
-    commit=2a35d
+Build:1.2.2,8
+    commit=v1.2.2
+    subdir=BronyLiveWallpaper
     gradle=yes
 
 Auto Update Mode:None
-Update Check Mode:None
-Current Version:1.2.1
+Update Check Mode:Tags
+Current Version:1.2.2
 Current Version Code:8
 

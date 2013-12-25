@@ -1,30 +1,34 @@
 Category:Multimedia
-License:
+License:Apache2
 Web Site:
 Source Code:https://github.com/CyanogenMod/android_packages_apps_Camera2
-Issue Tracker:
+Issue Tracker:http://code.google.com/p/android/issues/list?can=2&q=camera&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
-Summary:CM camera
+Summary:Stock camera
 Description:
+This is the camera2 package which is a new package in Android 4.4.
 .
 
 Repo Type:git
-Repo:https://github.com/CyanogenMod/android_packages_apps_Camera2
+Repo:https://android.googlesource.com/platform/packages/apps/Camera2
 
-Build:1.0,1
-    commit=cm-11.0 
+Build:4.4.2,1
+    commit=android-4.4.2_r1
+    target=android-19
     extlibs=android/android-support-v13.jar
     srclibs=Xmp@android-4.4.2_r1
-    patch=build_1.patch
+    patch=build.xml_1.patch
     prebuild=cp -r $$Xmp$$ . && \
-         echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties
+             echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=1' >> ant.properties && \
+             echo 'APP_ABI := all' >> jni/Application.mk
     buildjni=yes
 
 Maintainer Notes:
+You could alway switch this to Cyanogenmod or OmniROM but at the moment they are very similar
 See version.mk for their version scheme
 .
 
 Update Check Mode:None
-Current Version:1.0
+Current Version:4.2.1
 Current Version Code:1
 

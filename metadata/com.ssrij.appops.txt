@@ -7,7 +7,8 @@ Issue Tracker:https://github.com/theblixguy/AppOps/issues
 Auto Name:AppOps
 Summary:App Ops for post 4.4.2
 Description:
-'''Move to /system/priv-app and set permissions to 777 (?)'''
+App Ops compiled from AOSP via theblixguy.
+'''Move to /system/priv-app and set permissions to 644 and reboot'''
 .
 
 Repo Type:git

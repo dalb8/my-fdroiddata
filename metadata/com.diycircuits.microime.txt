@@ -1,0 +1,20 @@
+Categories:None
+License:Unknown
+Web Site:https://github.com/hilarycheng/microime
+Source Code:https://github.com/hilarycheng/microime
+Issue Tracker:https://github.com/hilarycheng/microime/issues
+
+Summary:
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/hilarycheng/microime.git
+
+Build:0.01,1
+    commit=master
+    buildjni=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+
