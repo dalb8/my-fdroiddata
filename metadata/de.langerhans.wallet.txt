@@ -1,0 +1,39 @@
+Categories:Office
+License:GPLv3
+Web Site:
+Source Code:https://github.com/langerhans/dogecoin-wallet
+Issue Tracker:
+Dogecoin:DEwTHxztkSDUJEMywbPk5zVUGrupaNRqEy
+
+Auto Name:Dogecoin Wallet
+Summary:Such wallet
+Description:
+Many currency. So amaze. Wow.
+.
+
+Repo Type:git
+Repo:https://github.com/langerhans/dogecoin-wallet-new
+
+Build:1.00,149
+    disable=native libs need building
+    commit=1.00
+    subdir=wallet
+    init=sed -i '/sample-integration/d;s/3.7.0/3.8.0/g' ../pom.xml && \
+        sed -i '124,126d' pom.xml
+    maven=yes@..
+    rm=wallet/test
+    srclibs=Dogecoinj-new@66094
+    scanignore=wallet/libs/armeabi/libscrypt.so;wallet/libs/x86/libscrypt.so
+    build=$$MVN3$$ clean install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
+
+Maintainer Notes:
+Native libs aren't to be deleted by fdroid.
+The native libs source code is from here https://github.com/wg/scrypt but I can't build it
+See issue #14 there.
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.00
+Current Version Code:149
+
