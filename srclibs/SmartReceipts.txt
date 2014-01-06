@@ -1,6 +1,6 @@
 Repo Type:git
 Repo:https://github.com/wbaumann/Smart-Receipts
 
+Srclibs:ActionBarSherlock,Mini-WB,AndroidCamera-WB
 Update Project:Yes
 
-Prepare:rm -rf bin gen && sed -i 's@\(android.library.reference.1=\).*@\1../Mini-WB@;s@\(android.library.reference.2=\).*@\1../ActionBarSherlock/library@;s@\(android.library.reference.3=\).*@\1../AndroidCamera-WB@' project.properties

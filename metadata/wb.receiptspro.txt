@@ -4,7 +4,7 @@ Web Site:
 Source Code:https://github.com/wbaumann/SmartReceiptsPro
 Issue Tracker:https://github.com/wbaumann/SmartReceiptsPro/issues
 
-Auto Name:Smart Receipts
+Auto Name:Smart Receipts Pro
 Summary:Receipt scanner/expense reporter
 Description:
 Turns your phone into a receipt scanner and expense report generator. Just
@@ -25,10 +25,19 @@ Build:2.2.1,82
         cp $$SmartReceipts$$/libs/android-support-v4.jar $$AndroidCamera-WB$$/libs/ && \
         rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java
 
-# Tags can be used hopefully for srclibs in next version
+Build:3.0.0,86
+    commit=v3.0.0
+    disable=missing symblols in SmartReceipts srclib
+    srclibs=ActionBarSherlock@4.4.0;AndroidCamera-WB@v3.0.0;Mini-WB@v3.0.0;1:SmartReceipts@v3.0.0
+    prebuild=rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java && \
+             mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+Maintainer Notes:
+Tags UCM not working
+.
+
 Auto Update Mode:None
-# Tags are nonsensical in source repo
 Update Check Mode:RepoManifest
-Current Version:2.2.2
-Current Version Code:85
+Current Version:3.0.0
+Current Version Code:86
 

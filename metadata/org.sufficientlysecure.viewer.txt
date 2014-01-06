@@ -1,4 +1,4 @@
-Category:Reading
+Categories:Reading
 License:GPLv3
 Web Site:
 Source Code:https://github.com/dschuermann/document-viewer
@@ -20,10 +20,14 @@ Document Viewer is a fork of the last GPL version of
 Repo Type:git
 Repo:https://github.com/dschuermann/document-viewer.git
 
-Build Version:2.2,2200,v2.2,subdir=document-viewer,buildjni=yes
+Build:2.4,2400
+    commit=6888f6bae47cf1a47d
+    subdir=document-viewer
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi armeabi-v7a"
+    buildjni=no
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:2.2
-Current Version Code:2200
+Current Version:2.4
+Current Version Code:2400
 

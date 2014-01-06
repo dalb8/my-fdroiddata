@@ -17,8 +17,12 @@ Build:1.8,9
     commit=5cd3b
     prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties
 
+Build:2.1,11
+    commit=610cfe3374e
+    prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.8
-Current Version Code:9
+Current Version:2.1
+Current Version Code:11
 

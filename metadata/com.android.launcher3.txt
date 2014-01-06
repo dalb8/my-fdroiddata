@@ -11,20 +11,6 @@ Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/apps/Launcher3
 #Repo:https://github.com/MuddPuddle/packages_apps_Launcher3
 
-Build:1.0,0
-    commit=android-4.4_r1.2
-    disable=build problem with protos
-    init=echo -e 'target=android-19\nproguard.config=$$SDK$$/tools/proguard/proguard-android.txt:proguard.flags' >  project.properties
-    extlibs=android/android-support-v4.jar
-    patch=manifest-minsdk_1.patch
-    srclibs=protobuf-android@android-4.4_r1.2
-    build=cp -r $$protobuf-android$$ . && \
-          cd protobuf-android && ./configure && make && \
-          cd java && rm -rf src/test && $$MVN3$$ package -Pnano && \
-          cp target/protobuf-java-2.3.0-nano.jar ../../libs/ && \
-          mkdir ../gen && \
-          ./src/protoc --javamicro_out=../gen --proto_path=../protos ../protos/backup.proto 
-
 Build:1.0,1
     commit=android-4.4_r1.2
     extlibs=android/android-support-v4.jar

@@ -15,8 +15,8 @@ Build:0.2,2
     commit=v0.2
     subdir=app
     extlibs=android/android-support-v4.jar;joda/jodatime.jar
-    srclibs=1:Support-v7@android-4.3_r2.1
-    prebuild=mv libs/android-support-v4.jar $$Support-v7$$/libs/
+    srclibs=1:Gridlayout@android-4.3_r2.1
+    prebuild=mv libs/android-support-v4.jar $$Gridlayout$$/libs/
 
 Auto Update Mode:None
 Update Check Mode:Tags
