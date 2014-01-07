@@ -1,0 +1,47 @@
+diff --git a/pom.xml b/pom.xml
+index 7354650..9d8fa77 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -11,7 +11,7 @@
+ 		<robospice.google.http.client.version>1.4.5</robospice.google.http.client.version>
+ 		<google.http.client.version>1.15.0-rc</google.http.client.version>
+ 		<commons.logging.version>1.1.3</commons.logging.version>
+-		<android-maven-plugin.version>3.5.0</android-maven-plugin.version>
++		<android-maven-plugin.version>3.8.0</android-maven-plugin.version>
+ 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+ 		<maven-clean-plugin.version>2.5</maven-clean-plugin.version>
+ 		<maven-dependency-plugin.version>2.6</maven-dependency-plugin.version>
+@@ -35,6 +35,18 @@
+ 				</exclusion>
+ 			</exclusions>
+ 		</dependency>
++                <dependency>
++	                <groupId>com.github.chrisbanes.pulltorefresh</groupId>
++			<artifactId>library</artifactId>
++			<version>2.0</version>
++			<type>apklib</type>
++		</dependency>		
++                <dependency>
++			<groupId>com.actionbarsherlock</groupId>
++			<artifactId>actionbarsherlock</artifactId>
++			<version>4.2.0</version>
++			<type>apklib</type>
++		</dependency>		
+ 		<dependency>
+ 			<groupId>com.google.http-client</groupId>
+ 			<artifactId>google-http-client-jackson</artifactId>
+@@ -79,11 +91,11 @@
+ 					<resourceDirectory>${project.basedir}/res</resourceDirectory>
+ 					<nativeLibrariesDirectory>${project.basedir}/src/main/native</nativeLibrariesDirectory>
+ 					<sdk>
+-						<platform>7</platform>
++						<platform>17</platform>
+ 					</sdk>
+ 					<undeployBeforeDeploy>true</undeployBeforeDeploy>
+ 				</configuration>
+ 			</plugin>
+ 		</plugins>
+ 	</build>
+-</project>
+\ No newline at end of file
++</project>

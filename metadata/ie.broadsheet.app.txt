@@ -1,6 +1,6 @@
 Categories:Reading
 License:MIT
-Web Site:https://github.com/kmonaghan/Broadsheet.ie-Android
+Web Site:
 Source Code:https://github.com/kmonaghan/Broadsheet.ie-Android
 Issue Tracker:https://github.com/kmonaghan/Broadsheet.ie-Android/issues
 
@@ -14,12 +14,16 @@ Repo Type:git
 Repo:https://github.com/kmonaghan/Broadsheet.ie-Android.git
 
 Build:2.0.2,2
-    disable=build problem
     commit=v2.0.2
-    maven=yes
     forceversion=yes
     forcevercode=yes
-    prebuild=sed -i '14s/3.5.0/3.8.0/g;s/<platform>7/<platform>16/' pom.xml
+    maven=yes
+    srclibs=NoAnalytics@d38ae535b543;CwacEndless@v1.2.2;CwacAdapter@v1.0.1
+    patch=pom_2.patch
+    prebuild=cp res/drawable-mdpi/default_user.png res/drawable-hdpi/ && \
+             sed -i '11d;53d' src/ie/broadsheet/app/BroadsheetApplication.java && \
+             cp -r $$NoAnalytics$$/src/com/ src/ && cp -r $$CwacEndless$$/src/com/commonsware src/com/ && \
+             cp -r $$CwacAdapter$$/src/com/commonsware/cwac/adapter src/com/commonsware/cwac/
 
 Auto Update Mode:None
 # version all wrong
