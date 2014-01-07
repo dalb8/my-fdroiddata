@@ -23,8 +23,20 @@ Build:1.00,149
     rm=wallet/test;wallet/libs/armeabi/libscrypt.so;wallet/libs/x86
     srclibs=Dogecoinj-new@66094;Scrypt@1.4.0
     build=TARGET=android PATH=$PATH:$$NDK$$/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86/bin NDK_ROOT=$$NDK$$ make -C $$Scrypt$$ && \
-          mv $$Scrypt$$/target/libscrypt.so libs/armeabi/ && \
-          $$MVN3$$ clean install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
+        mv $$Scrypt$$/target/libscrypt.so libs/armeabi/ && \
+        $$MVN3$$ clean install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
+
+Build:1.02,151
+    commit=1.02
+    subdir=wallet
+    init=sed -i '/sample-integration/d;s/3.7.0/3.8.0/g' ../pom.xml && \
+        sed -i '124,126d;161,163d;166,190d' pom.xml
+    maven=yes@..
+    rm=wallet/test;wallet/libs/armeabi/libscrypt.so;wallet/libs/x86
+    srclibs=Dogecoinj-new@7661884e742ae0;Scrypt@1.4.0
+    build=TARGET=android PATH=$PATH:$$NDK$$/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86/bin NDK_ROOT=$$NDK$$ make -C $$Scrypt$$ && \
+        mv $$Scrypt$$/target/libscrypt.so libs/armeabi/ && \
+        $$MVN3$$ clean install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
 
 Maintainer Notes:
 Native libs aren't be deleted by fdroid.
@@ -33,6 +45,6 @@ Extra effort needed to build x86 binaries.
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.00
-Current Version Code:149
+Current Version:1.02
+Current Version Code:151
 
