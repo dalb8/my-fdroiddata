@@ -38,14 +38,15 @@ Build:0.2.3.23-rc-1.0.11-RC5-test2,51
         touch iptables_n1 iptables_g1
     build=NDK_BASE=$$NDK$$ PATH=$PATH:$$NDK$$/toolchain/bin make -C external
 
-Build:13.0.0-alpha-1,62
-    commit=13.0.0-alpha-1
+Build:13.0.0,63
+    commit=2735a59151
     submodules=yes
-    prebuild=sed -i 's@\(NDK_PROCESSOR:=\).*@\1x86@' external/Makefile 
-    build=NDK_BASE=$$NDK$$ make -C external 
+    rm=libs/armeabi;libs/jtorctl.jar
+    build=sed -i 's/TOOLCHAIN_VERSION=4.7/TOOLCHAIN_VERSION=4.8/g' external/Makefile && \
+          NDK_BASE=$$NDK$$ make -C external 
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:13.0.0-alpha-1
-Current Version Code:62
+Current Version:13.0.0
+Current Version Code:63
 
