@@ -1,13 +1,14 @@
 Categories:Reading
 License:MIT
-Web Site:
+Web Site:http://karlmonaghan.com
 Source Code:https://github.com/kmonaghan/Broadsheet.ie-Android
 Issue Tracker:https://github.com/kmonaghan/Broadsheet.ie-Android/issues
 
 Auto Name:Broadsheet.ie
 Summary:Client for an Irish website
 Description:
-Shows Broadsheet, a satirical website.
+Shows Broadsheet, an image board with a satirical bent. 
+View comments and pass an ould tip along, if ye want.
 .
 
 Repo Type:git

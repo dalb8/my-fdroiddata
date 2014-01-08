@@ -1,4 +1,5 @@
 Categories:Internet
+# +must ask devs permission to publish on gplay
 License:Apache2
 Web Site:
 Source Code:https://github.com/Krayzk9s/imgur-holo
@@ -20,6 +21,6 @@ Build:0.15.0,33
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:0.15.0
-Current Version Code:33
+Current Version:0.16.0
+Current Version Code:38
 

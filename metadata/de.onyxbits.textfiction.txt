@@ -20,12 +20,13 @@ Savegames are kept on the sdcard.
 Repo Type:git
 Repo:https://github.com/onyxbits/TextFiction.git
 
-Build:1.1,2
-    commit=master
+Build:1.2,3
+    commit=v1.2
+    rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.0
-Current Version Code:1
+Current Version:1.2
+Current Version Code:3
 
