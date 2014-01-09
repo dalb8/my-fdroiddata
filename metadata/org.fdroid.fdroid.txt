@@ -36,6 +36,13 @@ Build:0.55,55
     srclibs=1:ImageLoader@v1.9.0
     patch=play_53.patch
 
+Build:0.57-test,570
+    commit=9b28fde89f7fa92d
+    submodules=yes
+    update=no
+    patch=play_570.patch
+    prebuild=./ant-prepare.sh
+
 Auto Update Mode:None
 Update Check Mode:Static
 Current Version:0.55

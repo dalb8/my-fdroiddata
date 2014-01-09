@@ -1,0 +1,62 @@
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index a466bd9..a47eab2 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -104,6 +104,7 @@
+ 	<string name="menu_source">Source Code</string>
+ 	<string name="menu_upgrade">Upgrade</string>
+ 	<string name="menu_donate">Donate</string>
++	<string name="menu_market">Google Play</string>
+ 
+ 	<string name="details_installed">Version %s installed</string>
+ 	<string name="details_notinstalled">Not installed</string>
+diff --git a/src/org/fdroid/fdroid/AppDetails.java b/src/org/fdroid/fdroid/AppDetails.java
+index 3ca9cc7..da76856 100644
+--- a/src/org/fdroid/fdroid/AppDetails.java
++++ b/src/org/fdroid/fdroid/AppDetails.java
+@@ -212,6 +212,7 @@ public class AppDetails extends ListActivity {
+     private static final int DOGECOIN = Menu.FIRST + 12;
+     private static final int FLATTR = Menu.FIRST + 13;
+     private static final int DONATE_URL = Menu.FIRST + 14;
++    private static final int MARKET = Menu.FIRST + 15;
+ 
+     private DB.App app;
+     private String appid;
+@@ -728,6 +729,11 @@ public class AppDetails extends ListActivity {
+                 donate.add(Menu.NONE, DONATE_URL, 10, R.string.menu_website);
+         }
+ 
++        if (app.detail_sourceURL.length() > 0) {
++                menu.add(Menu.NONE, MARKET, 14, R.string.menu_market).setIcon(
++                android.R.drawable.ic_menu_view);
++        }
++
+         return true;
+     }
+ 
+@@ -815,7 +821,12 @@ public class AppDetails extends ListActivity {
+             tryOpenUri(app.detail_donateURL);
+             return true;
+ 
++        case MARKET:
++            tryOpenUri("https://play.google.com/store/apps/details?id=" + app.id);
++            return true;
++
+         }
++
+         return super.onOptionsItemSelected(item);
+     }
+ 
+diff --git a/src/org/fdroid/fdroid/views/fragments/AppListFragment.java b/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
+index 98ee1d9..08db4a8 100644
+--- a/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
++++ b/src/org/fdroid/fdroid/views/fragments/AppListFragment.java
+@@ -67,7 +67,7 @@ abstract class AppListFragment extends Fragment implements AdapterView.OnItemCli
+ 
+     protected ListView createAppListView() {
+         ListView list = new ListView(getActivity());
+-        list.setFastScrollEnabled(true);
++        list.setFastScrollEnabled(false);
+         list.setOnItemClickListener(this);
+         list.setAdapter(getAppListAdapter());
+         return list;
