@@ -10,6 +10,19 @@ index a466bd9..a47eab2 100644
  
  	<string name="details_installed">Version %s installed</string>
  	<string name="details_notinstalled">Not installed</string>
+diff --git a/res/values-fr/strings.xml b/res/values-fr/strings.xml
+index aad7680..0262938 100644
+--- a/res/values-fr/strings.xml
++++ b/res/values-fr/strings.xml
+@@ -51,7 +51,7 @@ L\'URL d\'un dépôt ressemble à ceci : http://f-droid.org/repo</string>
+   <string name="repo_update_title">Mettre à jour les dépôts</string>
+   <string name="tab_installed">Installée</string>
+   <string name="tab_noninstalled">Disponible</string>
+-  <string name="tab_updates">Mises à jour</string>
++  <string name="tab_updates">MàJ</string>
+   <string name="one_update_available">1 mise à jour est disponible.</string>
+   <string name="many_updates_available">%d mises à jour sont disponibles.</string>
+   <string name="fdroid_updates_available">Des mises à jour F-Droid sont disponibles</string>
 diff --git a/src/org/fdroid/fdroid/AppDetails.java b/src/org/fdroid/fdroid/AppDetails.java
 index 3ca9cc7..da76856 100644
 --- a/src/org/fdroid/fdroid/AppDetails.java
