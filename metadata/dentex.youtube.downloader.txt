@@ -32,8 +32,12 @@ Build:3.1,65
     scanignore=android-download-manger-lib/libs/bugsense-3.5.jar;android-filechooser/libs/bugsense-3.5.jar;dentex.youtube.downloader/libs/bugsense-3.5.jar
     buildjni=yes
 
+Build:3.5.4,75
+    commit=3.5.4
+    disable=using bugsense 3.6 which is definitely more non-free
+
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:3.4.1
-Current Version Code:70
+Current Version:3.5.4
+Current Version Code:75
 
