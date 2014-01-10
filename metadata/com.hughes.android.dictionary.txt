@@ -1,12 +1,13 @@
 Categories:Office
 License:Apache2
+Web Site:
 Source Code:http://code.google.com/p/quickdic-dictionary/source/list
 Issue Tracker:http://code.google.com/p/quickdic-dictionary/issues/list
 
 Auto Name:QuickDic
 Summary:Offline translation dictionary
 Description:
-Uses data from Wiktionary and Beolingus to generate dictionary files that can
+Uses data from Wiktionary to generate dictionary files that can
 be used offline. These can be downloaded from within the app.
 Learn how to construct your own dictionaries by viewing
 the wiki page on the website.
@@ -15,14 +16,16 @@ the wiki page on the website.
 Repo Type:git
 Repo:https://code.google.com/p/quickdic-dictionary.dictionary/
 
-Build Version:4.0.1,23,1950e66885eb,srclibs=1:QuickdicUtil@6beac13a3bc644,\
-prebuild=mkdir libs && \
-cd jars/icu4j-4_8_1_1/ && sed -i '108d' build.xml && ant clean collator transliterator moduleJar && \
-mv icu4j.jar ../../libs/
+Build:5.0.1,25
+    commit=97678ecfbd78a2
+    srclibs=1:QuickdicUtil@d57bfc6bcf5be651f;2:ActionBarSherlock@4.4.0
+    build=ant clean collator transliterator moduleJar -f jars/icu4j-52_1/build.xml && \
+          mv jars/icu4j-52_1/icu4j.jar libs/ && \
+          mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
 Auto Update Mode:None
 #Cross reference with version of apk in root directory
 Update Check Mode:RepoManifest
-Current Version:4.0.1
-Current Version Code:23
+Current Version:5.0.1
+Current Version Code:25
 
