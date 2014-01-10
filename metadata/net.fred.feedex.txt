@@ -14,13 +14,12 @@ from the device on a regular basis.
 Repo Type:git
 Repo:https://github.com/HoloAddict/FeedEx.git
 
-Build:1.4.0,34
-    commit=v1.4.0
-    prebuild=sed -i -e '/proguard/d' project.properties
+Build:1.4.1,35
+    commit=v1.4.1
+    prebuild=sed -i 's/sans-serif-light/serif/g' src/net/fred/feedex/view/EntryView.java 
 
-# gradle used too
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.4.0
-Current Version Code:34
+Current Version:1.4.1
+Current Version Code:35
 
