@@ -16,7 +16,7 @@ Repo:https://github.com/HoloAddict/FeedEx.git
 
 Build:1.4.1,35
     commit=v1.4.1
-    prebuild=sed -i 's/sans-serif-light/serif/g' src/net/fred/feedex/view/EntryView.java 
+    prebuild=sed -i 's/font-family: sans-serif-light;/line-height:150%; font-family: serif;/g' src/net/fred/feedex/view/EntryView.java 
 
 Auto Update Mode:None
 Update Check Mode:Tags
