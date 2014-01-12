@@ -1,0 +1,32 @@
+AntiFeatures:UpstreamNonFree
+Categories:Multimedia
+License:GPLv3
+Web Site:
+Source Code:https://github.com/yankovskiy/PhotoTools
+Issue Tracker:https://github.com/yankovskiy/PhotoTools/issues
+
+Auto Name:Photo Tools
+Summary:Tools for photographers
+Description:
+Currently:
+# Depth of field calculator
+# Exposure pairs calculator
+# Sunset/sunrise calculator
+
+Google Play Services library was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/yankovskiy/PhotoTools.git
+
+Build:0.7.2,51
+    commit=v0.7.2
+    srclibs=ActionBarSherlock@4.4.0;WheelWidget@903ef
+    patch=gms_51.patch
+    prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.7.2
+Current Version Code:51
+

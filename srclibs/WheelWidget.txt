@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/yankovskiy/WheelWidget
+Subdir:wheel
+Update Project:Yes

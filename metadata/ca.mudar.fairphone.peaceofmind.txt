@@ -1,9 +1,10 @@
-Category:Office
+Categories:Office
 License:Apache2
 Web Site:http://fairphone.mudar.ca
 Source Code:https://github.com/mudar/Fairphone
 Issue Tracker:https://github.com/mudar/Fairphone/issues
 
+Auto Name:Peace of Mind+
 Summary:Widget to quiet the phone
 Description:
 Based-on a widget that comes with the [http://fairphone.com Fairphone],
@@ -24,13 +25,13 @@ Repo:Fairphone-mudar
 Build:0.9.2-beta,4
     commit=5a432
     subdir=FairphonePeaceOfMind
+    gradle=yes
     srclibs=RootTools@310
     prebuild=sed -i 's/19.0.0/19.0.1/;/RootTools-3.3.jar/d' build.gradle && \
-             cp -r $$RootTools$$/3.4/src/* src/main/java/
-    gradle=yes
+        cp -r $$RootTools$$/3.4/src/* src/main/java/
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:
-Current Version Code:
+Current Version:0.9.2 beta
+Current Version Code:4
 
