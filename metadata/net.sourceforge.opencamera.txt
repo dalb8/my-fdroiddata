@@ -1,0 +1,25 @@
+Categories:Multimedia
+License:GPLv3
+Web Site:http://opencamera.sourceforge.net
+Source Code:http://sourceforge.net/p/opencamera/code
+Issue Tracker:http://sourceforge.net/p/opencamera/tickets
+Donate:http://sourceforge.net/donate/?user_id=439017
+Bitcoin:LKCFto9SQGqtcvqZxHkqDPqNjSnfMmsow
+
+Auto Name:Open Camera
+Summary:Configurable camera app
+Description:
+See website for a list of features
+.
+
+Repo Type:git
+Repo:git://git.code.sf.net/p/opencamera/code
+
+Build:1.5,7
+    commit=v1.5
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.5
+Current Version Code:7
+
