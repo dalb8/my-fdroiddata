@@ -1,0 +1,48 @@
+Categories:Reading
+License:GPLv3
+Web Site:http://pageturner-reader.org/
+Source Code:https://github.com/NightWhistler/PageTurner
+Issue Tracker:https://github.com/NightWhistler/PageTurner/issues
+Donate:http://www.pageturner-reader.org/
+FlattrID:462097
+
+Auto Name:PageTurner
+Summary:Synchronising e-reader
+Description:
+* Cloud synchronization for reading progress
+* Integrates with Calibre content server (or other OPDS/Stanza sources)
+* Search OPDS / Stanza catalogs
+* Buy books from Smashwords directly from the app.
+* Animated page flips by tapping/swiping/volume buttons/d-pad
+* Auto-scroll with rolling blind and timed page changes
+* Library to organize the books on your device.
+* Day / night mode with configurable colour schemes
+* Renders tables for use in text / tech books
+* Detects installed file managers and integrates with them
+* Brightness controls
+* Orientation locking
+* Whitespace stripping
+* Installable to SD Card
+.
+
+Repo Type:git
+Repo:https://github.com/NightWhistler/PageTurner.git
+
+
+Build:2.2.5,60
+    commit=2.2.5
+    srclibs=HtmlSpanner@8910e
+    extlibs=htmlcleaner/htmlcleaner-2.2.jar
+    prebuild=wget https://github.com/downloads/corgrath/osbcp-css-parser/osbcp-css-parser-1.4.jar -P libs/ && \
+             $$MVN3$$ install:install-file -DgroupId=com.osbcp.cssparser -DartifactId=cssparser -Dversion=1.5 -Dpackaging=jar -Dfile=libs/osbcp-css-parser-1.4.jar && \
+             $$MVN3$$ install:install-file -DgroupId=net.sourceforge.htmlcleaner -DartifactId=htmlcleaner -Dversion=2.2 -Dpackaging=jar -Dfile=libs/htmlcleaner-2.2.jar && \
+             sed -i '15,27d;s/3.6.1/3.8.0/g' pom.xml && \
+             sed -i '366,372d' src/net/nightwhistler/pageturner/view/bookview/TextLoader.java
+    build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
+    maven=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.2.5
+Current Version Code:60
+
