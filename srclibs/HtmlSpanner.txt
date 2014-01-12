@@ -1,3 +1,6 @@
 Repo Type:git
 Repo:https://github.com/NightWhistler/HtmlSpanner
 
+# remove first-party repos
+Prepare:sed -i '12,18d' pom.xml
+

@@ -1,0 +1,52 @@
+Categories:Office
+License:GPLv3
+Web Site:https://openecard.org/en
+Source Code:https://github.com/ecsec/open-ecard
+Issue Tracker:https://github.com/ecsec/open-ecard/issues
+
+Auto Name:Open eCard App
+Summary:Electronic ID cards
+Description:
+Client side implementation of the eCard-API-Framework (BSI TR-03112) and 
+related international standards, such as ISO/IEC 24727. 
+NFC is required in this app but there are Java apps for the desktop platforms too.
+It would be intended for ID cards, primarily in Germany for now as 
+an alternative to AusweisApp.
+
+Status: Not officially published!
+.
+
+Repo Type:git
+Repo:https://github.com/ecsec/open-ecard.git
+
+Build:1.0,1
+    commit=8168f3812d2cf2a826
+    disable=build failure with ndk-r9c
+    subdir=clients/android
+    submodules=yes
+    init=export ANDROID_NDK_HOME=$$NDK$$ && \
+        wget https://seek-for-android.googlecode.com/svn/trunk/repository/18/scapi.zip && \
+        unzip scapi.zip && \
+        sed -i '79,86d;s/3.6.1/3.8.0/g' ../../pom.xml && \
+        sed -i '19,20d' ../pom.xml && \
+        sed -i '150,155d' pom.xml && \
+        $$MVN3$$ install:install-file -DgroupId=org.simalliance -DartifactId=openmobileapi -Dversion=2.3.0 -Dpackaging=jar -Dfile=scapi/libs/org.simalliance.openmobileapi.jar 
+    maven=yes@../..
+    novcheck=yes
+
+Maintainer Notes:
+Fails with, 'the module, org.openecard.ifd.scio-backend:android-pcsc:apklib:1.1.0-pre1 can't be found',
+because ndk-build fails.
+
+pom.xml hacked to remove first-party ''artifact'' repositories,
+but hopefully everything needed is in the repo except scapi.
+
+One of the tests opens a graphical dialog!
+Uses a lot of first-party plugins yet. Should be OK for f-droid.org ;-)
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.0
+Current Version Code:1
+
