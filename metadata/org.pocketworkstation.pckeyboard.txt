@@ -1,0 +1,43 @@
+Categories:System
+License:Apache2
+Web Site:http://code.google.com/p/hackerskeyboard/
+Source Code:http://code.google.com/p/hackerskeyboard/source/checkout
+Issue Tracker:http://code.google.com/p/hackerskeyboard/issues/list
+
+Name:Hacker's Keyboard
+Auto Name:Hacker's Keyboard
+Summary:Four- or five-row soft-keyboard
+Description:
+There are about thirty different languages covered, which can be enabled 
+in the settings. 
+For the five-row layout, the keyboard has separate number keys, punctuation in 
+the usual places; tab, ctrl and arrow keys. 
+It is based on the AOSP Gingerbread soft keyboard, so it supports multitouch 
+for the modifier keys.
+
+Completion dictionaries are only possible via plug-in packages, available from 
+the website, though there is no template for building these from source.
+Anysoftkeyboard dictionaries don't appear to work.
+
+The permissions requested by the application are those needed by the underlying 
+Gingerbread keyboard. 
+It uses the contacts information for completion of names and email addresses, 
+and audio recording for the voice input feature.
+.
+
+Repo Type:hg
+Repo:https://hackerskeyboard.googlecode.com/hg/
+Build:v1.37,1037
+    commit=1.37
+    subdir=java
+    srclibs=1:VoiceIME@5763e36eab31
+    target=android-19
+    prebuild=sed -i "s/Hg-ident/hg ident/" AutoVersion.sh && \
+        ./AutoVersion.sh
+    buildjni=yes
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:v1.37
+Current Version Code:1037
+
