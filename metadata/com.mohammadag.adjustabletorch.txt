@@ -1,11 +1,12 @@
 Categories:None
-License:Unknown
+License:GPLv3
 Web Site:https://github.com/MohammadAG/android-AdjustableTorch
 Source Code:https://github.com/MohammadAG/android-AdjustableTorch
 Issue Tracker:https://github.com/MohammadAG/android-AdjustableTorch/issues
 
 Summary:
 Description:
+Only works on certain devices.
 .
 
 Repo Type:git
@@ -13,8 +14,8 @@ Repo:https://github.com/MohammadAG/android-AdjustableTorch.git
 
 Build:1.6,7
     commit=master
-    disable=no license; only works on some devices
-    srclibs=1:RootTools@249;2:MobAdMob@2d5736
+    srclibs=RootTools@310;2:MobAdMob@2d5736
+    prebuild=echo 'source.dir=src;$$RootTools$$/3.4/src' >> ant.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

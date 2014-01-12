@@ -1,0 +1,36 @@
+Category:Office
+License:Apache2
+Web Site:http://fairphone.mudar.ca
+Source Code:https://github.com/mudar/Fairphone
+Issue Tracker:https://github.com/mudar/Fairphone/issues
+
+Summary:Widget to quiet the phone
+Description:
+Based-on a widget that comes with the [http://fairphone.com Fairphone],
+a phone that's made from ethically-sourced materials.
+
+Would you like to disconnect, if only for a moment? 
+Your phone will go silent and disconnect from the world: no e-mail, no status 
+updates, no SMS and no phone calls. 
+Choose how long you wish to disconnect (up to 3 hours).
+
+Requires root on Android 4.2+ to put the phone in Airplane Mode; if 
+the request is declined only Silent Mode will be enabled instead.
+.
+
+Repo Type:srclib
+Repo:Fairphone-mudar
+
+Build:0.9.2-beta,4
+    commit=5a432
+    subdir=FairphonePeaceOfMind
+    srclibs=RootTools@310
+    prebuild=sed -i 's/19.0.0/19.0.1/;/RootTools-3.3.jar/d' build.gradle && \
+             cp -r $$RootTools$$/3.4/src/* src/main/java/
+    gradle=yes
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:
+Current Version Code:
+
