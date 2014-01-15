@@ -8,6 +8,7 @@ Auto Name:Smashwords Access
 Summary:eBook shop
 Description:
 Unofficial app for smashwords.com, a purveyor of DRM-free and gratis ebooks
+You can sign into your account to access books you've already purchased.
 
 Apps can be loaded directly from the likes of [[org.coolreader]].
 .

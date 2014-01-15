@@ -32,6 +32,7 @@ Build:1.4,13
     prebuild=mv ../bushido-blocks/libs/gdx.jar libs/ && \
         sed -i '/merger/d' project.properties && \
         printf 'source.dir=src;../bushido-blocks/src' > ant.properties
+    scanignore=bushido-blocks-android/libs/armeabi;bushido-blocks-android/libs/armeabi-v7a
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

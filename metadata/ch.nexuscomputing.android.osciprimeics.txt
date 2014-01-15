@@ -15,7 +15,7 @@ Repo Type:hg
 Repo:https://bitbucket.org/dalb8/osciiprime
 
 Build Version:Dagobert,14,0,extlibs=android/android-support-v4.jar,\
-scanignore=build/ch.nexuscomputing.android.osciprimeics/jni,\
+scanignore=jni,\
 prebuild=cp $$NDK$$/platforms/android-14/arch-arm/usr/lib/liblog.so jni/,\
 buildjni=yes
 

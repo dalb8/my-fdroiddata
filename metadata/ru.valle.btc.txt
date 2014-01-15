@@ -24,9 +24,8 @@ Build:1.7.0,170
 
 Build:1.9.0,190
     commit=ec6970073cf2
-    init=zip -r native.zip libs/armeabi* libs/x86
+    scanignore=libs/armeabi;libs/x86
     target=android-16
-    build=unzip native.zip
 
 Maintainer Notes:
 zbar libraries are from official binaries on sourceforge. I tried to compile from

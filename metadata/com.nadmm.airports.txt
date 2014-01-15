@@ -51,6 +51,7 @@ Repo:https://github.com/nhasan/Airports.git
 
 Build:5.5.3,5530
     commit=v5.5.3
+    disable=not much good without the maps
     gradle=yes
     rm=market;libs/libGoogleAnalyticsServices.jar
     srclibs=NoAnalytics@d38ae535b543

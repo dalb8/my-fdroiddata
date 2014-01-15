@@ -17,7 +17,7 @@ Build:1.0,1
     commit=1.0
     subdir=glxy-android
     rm=proguard.cfg
-    scanignore=libs/armeabi;libs/armeabi-v7a
+    scanignore=glxy-android/libs/armeabi;glxy-android/libs/armeabi-v7a
 
 Auto Update Mode:None
 Update Check Mode:Tags

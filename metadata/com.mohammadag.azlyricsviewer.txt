@@ -11,6 +11,7 @@ Repo Type:git
 Repo:https://github.com/MohammadAG/Android-AZLyricsViewer.git
 
 Build:1.1,2
+    disable=basic
     commit=master
 
 Auto Update Mode:None

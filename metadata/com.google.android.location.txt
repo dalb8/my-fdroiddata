@@ -5,7 +5,7 @@ Source Code:https://github.com/microg/NetworkLocation
 Issue Tracker:https://github.com/microg/NetworkLocation/issues
 
 Auto Name:Network Location
-Summary:
+Summary:Location method
 Description:
 Drop-in (under system/app; system/priv-app in Android 4.4) 
 replacement for NetworkLocation.apk
