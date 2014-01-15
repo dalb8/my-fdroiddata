@@ -1,0 +1,31 @@
+Categories:Multimedia
+License:Apache2
+Web Site:http://brk3.github.io
+Source Code:https://github.com/brk3/glimmr
+Issue Tracker:https://github.com/brk3/glimmr/issues
+
+Auto Name:Glimmr-L
+Summary:Flickr client
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/brk3/glimmr.git
+
+Build:2.22-SNAPSHOT,39
+    commit=glimmrpro-2.22
+    maven=yes
+    srclibs=Flickrj@401b946c5b7a425
+    patch=api.patch
+    build=$$MVN3$$ install -DskipTests -f $$Flickrj$$/pom.xml
+
+Maintainer Notes:
+Need to install the CWAC jars in libs too.
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.22-SNAPSHOT
+Current Version Code:39
+
