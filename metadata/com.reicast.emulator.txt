@@ -1,3 +1,4 @@
+AntiFeatures:UpstreamNonFree
 Categories:Games
 License:GPL
 Web Site:http://reicast.com/
@@ -9,6 +10,8 @@ Description:
 This is a fork/rewrite/remix of various versions of nulldc and nulldce.
 Bios/flash have to be on /sdcard/dc/data/dc_boot.bin and /sdcard/dc/data/dc_flash.bin.
 Supported game formats: gdi, chd.
+
+Ouya SDK library was removed.
 .
 
 Repo Type:git

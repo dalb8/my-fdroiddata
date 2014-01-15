@@ -36,8 +36,9 @@ Build:0.55,55
     srclibs=1:ImageLoader@v1.9.0
     patch=play_53.patch
 
-Build:0.57-test,570
-    commit=9b28fde89f7fa92d
+Build:0.58,580
+    commit=0.58
+    disable=doesn't show incompatible versions
     submodules=yes
     update=no
     patch=play_570.patch

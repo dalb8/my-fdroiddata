@@ -1,21 +1,23 @@
-Categories:None
+Categories:System
 License:GPLv3
-Web Site:https://github.com/MohammadAG/android-AdjustableTorch
+Web Site:
 Source Code:https://github.com/MohammadAG/android-AdjustableTorch
 Issue Tracker:https://github.com/MohammadAG/android-AdjustableTorch/issues
 
-Summary:
+Summary:Adjust rear camera LED
 Description:
-Only works on certain devices.
+Only works on certain Samsung Galaxy devices; the app will check for
+compatiblity.
 .
 
 Repo Type:git
 Repo:https://github.com/MohammadAG/android-AdjustableTorch.git
 
 Build:1.6,7
-    commit=master
+    commit=69a82f84d2cec3072
+    disable=build error
     srclibs=RootTools@310;2:MobAdMob@2d5736
-    prebuild=echo 'source.dir=src;$$RootTools$$/3.4/src' >> ant.properties
+    prebuild=echo 'source.dir=src;$$MobAdMob$$/src;$$RootTools$$/3.4/src' >> ant.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

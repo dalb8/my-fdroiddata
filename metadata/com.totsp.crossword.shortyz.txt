@@ -22,7 +22,7 @@ Build Version:3.2.1,30201,0aa74b9d2bef,subdir=shortyz,target=android-11,prebuild
 Build:3.2.10,30210
     commit=1ba821b4825c
     subdir=shortyz
-    init=rm build.xml
+    update=force
 
 Auto Update Mode:None
 Update Check Mode:None

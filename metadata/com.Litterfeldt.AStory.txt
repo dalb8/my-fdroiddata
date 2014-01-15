@@ -1,25 +1,23 @@
 Categories:Multimedia
-License:Unknown
-Web Site:https://github.com/Litterfeldt/AStory/
+License:Apache2
 Source Code:https://github.com/Litterfeldt/AStory
 Issue Tracker:https://github.com/Litterfeldt/AStory/issues
 
 Auto Name:AStory
 Summary:Audiobook player
 Description:
-No description available
+Status: Beta.
 .
 
 Repo Type:git
 Repo:https://github.com/Litterfeldt/AStory.git
 
-Build:1.0,1
-    disable=no license & buggy
-    commit=cf145
+Build:Better Beta,2
+    commit=fe4ef
     extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.0
-Current Version Code:1
+Current Version:Better Beta
+Current Version Code:2
 

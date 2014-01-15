@@ -1,4 +1,4 @@
-Categories:None
+Categories:Science & Education
 License:GPL
 Web Site:https://github.com/micku7zu/trafictube
 Source Code:https://github.com/micku7zu/trafictube
@@ -16,7 +16,7 @@ Repo:https://github.com/micku7zu/trafictube.git
 Build:0.4 Beta,4
     commit=388b1
     subdir=Trafictube
-    init=rm build.xml ../libraries/ActionBarSherlock/build.xml  ../libraries/PullToREfresh/build.xml ../libraries/SlidingMenuu/build.xml ../libraries/UrlImageViewHelper/build.xml && \
+    init=rm $(find .. -name build.xml) && \
         echo -e 'java.target=1.6\njava.source=1.6' >> ant.properties && \
         echo 'android.library.reference.4=../libraries/ActionBarSherlock' >> project.properties
     rm=Trafictube/out

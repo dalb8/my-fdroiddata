@@ -21,15 +21,14 @@ You can read it later with all good exif reader.
 Repo Type:git
 Repo:https://github.com/oux/PhotoCaption.git
 
-Build:1.0,1
-    commit=1.0
-    disable=wobbly
+Build:1.3,4
+    commit=1.4
     extlibs=android/android-support-v4.jar
     srclibs=2:PhotoView@v1.2.2;1:StaggeredGridView@06dbc
     prebuild=mv libs/android-support-v4r18.jar $$StaggeredGridView$$/libs/
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.0
-Current Version Code:1
+Current Version:1.3
+Current Version Code:4
 

@@ -49,9 +49,8 @@ A proprietary analytics library was removed.
 Repo Type:git
 Repo:https://github.com/nhasan/Airports.git
 
-Build:5.5.0,5500
-    commit=v5.5.0
-    disable=crashy and can't download maps
+Build:5.5.3,5530
+    commit=v5.5.3
     gradle=yes
     rm=market;libs/libGoogleAnalyticsServices.jar
     srclibs=NoAnalytics@d38ae535b543

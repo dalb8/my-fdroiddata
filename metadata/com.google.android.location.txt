@@ -1,25 +1,28 @@
 Categories:System
 License:Apache2
+Web Site:http://forum.xda-developers.com/showthread.php?t=1715375
 Source Code:https://github.com/microg/NetworkLocation
 Issue Tracker:https://github.com/microg/NetworkLocation/issues
 
 Auto Name:Network Location
 Summary:
 Description:
-Drop-in (as system app) replacement for NetworkLocation.apk
+Drop-in (under system/app; system/priv-app in Android 4.4) 
+replacement for NetworkLocation.apk
+
+'''This version isn't for Android 4.4'''
 .
 
 Repo Type:git
 Repo:https://github.com/microg/NetworkLocation.git
 
-Build:1.3.0,1300
-    commit=v1.3.0
-    disable=fdroid thinks apk is debuggable
+Build:1.3.2,1302
+    commit=v1.3.2
     subdir=NetworkLocation
     maven=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.3.0
-Current Version Code:1300
+Current Version:1.3.2
+Current Version Code:1302
 

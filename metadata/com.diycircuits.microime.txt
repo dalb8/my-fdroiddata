@@ -16,5 +16,5 @@ Build:0.01,1
     buildjni=yes
 
 Auto Update Mode:None
-Update Check Mode:Tags
+Update Check Mode:RepoManifest
 

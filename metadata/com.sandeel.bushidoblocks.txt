@@ -16,24 +16,22 @@ against the clock.
 Special blocks eliminate whole rows of blocks but don't give you any extra
 time, so use them wisely!
 
+A couple of proprietary libraries were removed.
 (Crashes on u8160).
 .
 
 Repo Type:git
 Repo:https://github.com/sandeel/Bushido-Blocks
 
-# crashes on my armv6 device
 Build:1.4,13
     commit=25c7009d3989
     subdir=bushido-blocks-android
-    init=zip -r libgdx.zip libs/arm*
     rm=bushido-blocks-android/libs/GoogleAdMobAdsSdk-6.2.1.jar
     srclibs=1:MobAdMob@2d5736
     patch=swarm.patch
     prebuild=mv ../bushido-blocks/libs/gdx.jar libs/ && \
         sed -i '/merger/d' project.properties && \
         printf 'source.dir=src;../bushido-blocks/src' > ant.properties
-    build=unzip libgdx.zip
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
