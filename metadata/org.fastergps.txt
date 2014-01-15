@@ -5,6 +5,7 @@ Source Code:https://github.com/dschuermann/faster-gps
 Issue Tracker:https://github.com/dschuermann/faster-gps/issues
 Donate:http://sufficientlysecure.org/index.php/android-apps/#fastergps
 FlattrID:527132
+Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 
 Auto Name:FasterGPS
 Summary:Faster GPS fix

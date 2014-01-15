@@ -5,6 +5,7 @@ Source Code:https://github.com/dschuermann/ntp-sync
 Issue Tracker:https://github.com/dschuermann/ntp-sync/issues
 Donate:http://sufficientlysecure.org/index.php/android-apps/#ntpsync
 FlattrID:669294
+Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 
 Auto Name:NTPSync
 Summary:Update the device clock
