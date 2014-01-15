@@ -1,9 +1,10 @@
-AntiFeatures:Tracking
+AntiFeatures:UpstreamNonFree
 Categories:Multimedia
 License:GPLv3
-Web Site:
+Web Site:https://sourceforge.net/projects/ytdownloader
 Source Code:https://github.com/dentex/ytdownloader
 Issue Tracker:https://github.com/dentex/ytdownloader/issues
+FlattrID:
 
 Auto Name:YouTube Downloader
 Summary:Download files from YouTube
@@ -16,25 +17,21 @@ to have the YouTube app: URLs can be shared from the browser.
 
 See the source code page for a changelog.
 
-Anti-feature: Tracking. Crash reporting operates without user interaction.
+A proprietary crash reporting library was removed.
 .
 
 Repo Type:git
 Repo:https://github.com/dentex/ytdownloader.git
 
-Build:3.1,65
-    commit=3.1
-    subdir=dentex.youtube.downloader
-    update=.;../android-download-manger-lib;../android-filechooser;../dentex.youtube.downloader.strings
-    prebuild=mkdir -p ../dentex.youtube.downloader.strings/src && \
-        tar xvf ../FFmpeg_and_lame_sources/liblame.tar.gz && \
-        mv liblame/jni . 
-    scanignore=android-download-manger-lib/libs/bugsense-3.5.jar;android-filechooser/libs/bugsense-3.5.jar;dentex.youtube.downloader/libs/bugsense-3.5.jar
-    buildjni=yes
-
 Build:3.5.4,75
     commit=3.5.4
-    disable=using bugsense 3.6 which is definitely more non-free
+    subdir=dentex.youtube.downloader
+    prebuild=find .. -type f -print0 | xargs -0 sed -i '/BugSenseHandler/d' && \
+        rm -rf $(find .. -name bugsense-3.6.jar) libs/armeabi* && \
+        mkdir -p ../dentex.youtube.downloader.strings/src && \
+        tar xvf ../FFmpeg_and_lame_sources/liblame.tar.gz && \
+        mv liblame/jni . 
+    buildjni=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags
