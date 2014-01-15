@@ -1,3 +1,4 @@
+AntiFeatures:UpstreamNonFree,NonFreeNet
 Categories:Internet
 License:AGPLv3
 Web Site:https://one.ubuntu.com

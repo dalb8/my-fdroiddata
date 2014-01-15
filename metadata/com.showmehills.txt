@@ -1,3 +1,4 @@
+AntiFeatures:Tracking,UpstreamNonFree
 Categories:Navigation
 License:GPLv3
 Web Site:https://github.com/ShowMeHills/ShowMeHills/wiki
