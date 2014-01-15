@@ -20,8 +20,8 @@ Repo Type:git
 Repo:https://github.com/ecsec/open-ecard.git
 
 Build:1.0,1
-    commit=8168f3812d2cf2a826
     disable=build failure with ndk-r9c
+    commit=8168f3812d2cf2a826
     subdir=clients/android
     submodules=yes
     init=export ANDROID_NDK_HOME=$$NDK$$ && \

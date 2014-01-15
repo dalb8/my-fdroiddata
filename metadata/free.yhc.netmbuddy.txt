@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:Apache2
 Web Site:http://yhcting.tistory.com
 Source Code:https://github.com/yhcting/netmbuddy
@@ -15,7 +15,8 @@ play and pause audio in the background.
 Repo Type:git
 Repo:https://github.com/yhcting/netmbuddy.git
 
-Build Version:1.2.11-1,29,netmbuddy-v1.2.11-1
+Build:1.2.11-1,29
+    commit=netmbuddy-v1.2.11-1
 
 # 1.2.12 on gplay
 Auto Update Mode:None

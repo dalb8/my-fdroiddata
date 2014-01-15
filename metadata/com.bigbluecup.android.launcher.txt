@@ -32,15 +32,18 @@ Repo:git://github.com/adventuregamestudio/ags.git
 Build:3.3.0-beta,1
     disable=build woes on ndk r9
     commit=v.3.3.0-beta
-    init=find ../.. -iregex ".+\.\(a\|dll\|so\|exe\|lib\)" -type f -delete && \
-	cd ../../ && git submodule foreach git checkout d6f13daef9
-    build=cd ../buildlibs && find -name "*.sh" -exec chmod +x {} + && ./buildall.sh
-    patch=ndkr9.patch
     subdir=Android/launcher_list
     submodules=yes
+    init=find ../.. -iregex ".+\.\(a\|dll\|so\|exe\|lib\)" -type f -delete && \
+        cd ../../ && \
+        git submodule foreach git checkout d6f13daef9
     target=android-17
     update=.;../library
     forceversion=yes
+    patch=ndkr9.patch
+    build=cd ../buildlibs && \
+        find -name "*.sh" -exec chmod +x {} + && \
+        ./buildall.sh
     buildjni=../library
 
 Auto Update Mode:None

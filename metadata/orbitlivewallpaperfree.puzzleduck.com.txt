@@ -1,4 +1,4 @@
-Category:Wallpaper
+Categories:Wallpaper
 License:GPLv2
 Web Site:https://github.com/PuZZleDucK/Orbital-Live-Wallpaper/
 Source Code:https://github.com/PuZZleDucK/Orbital-Live-Wallpaper
@@ -13,7 +13,10 @@ Rotating circles that respond to your touch. Wallpaper that takes up little ram.
 Repo Type:git
 Repo:https://github.com/PuZZleDucK/Orbital-Live-Wallpaper.git
 
-Build Version:2.0,4,ea32533f,subdir=Orbital-Live-Wallpaper,target=android-8
+Build:2.0,4
+    commit=ea32533f
+    subdir=Orbital-Live-Wallpaper
+    target=android-8
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

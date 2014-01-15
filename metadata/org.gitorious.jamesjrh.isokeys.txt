@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:GPLv3
 Web Site:https://gitorious.org/hexiano
 Source Code:https://gitorious.org/hexiano
@@ -34,9 +34,14 @@ If anyone can help out with MIDI support please check out:
 Repo Type:git
 Repo:git://gitorious.org/hexiano/hexiano.git
 
-Build Version:0.82.1 ALPHA,14,a2dad34,bindir=Hexiano/build/bin/,subdir=Hexiano,target=android-10,\
-prebuild=git checkout build.xml && echo "app.packagename=org.gitorious.jamesjrh.isokeys" >> \
-local.properties && ant filter-package
+Build:0.82.1 ALPHA,14
+    commit=a2dad34
+    subdir=Hexiano
+    target=android-10
+    prebuild=git checkout build.xml && \
+        echo "app.packagename=org.gitorious.jamesjrh.isokeys" >> local.properties && \
+        ant filter-package
+    bindir=Hexiano/build/bin/
 
 Auto Update Mode:None
 #Generic package id in manifest

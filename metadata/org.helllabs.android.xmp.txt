@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:GPLv2+
 Web Site:http://xmp.sourceforge.net/
 Source Code:http://sourceforge.net/projects/xmp/develop
@@ -17,14 +17,20 @@ browse /sdcard/mod from the app and sites that distribute more are listed on the
 Repo Type:git
 Repo:git://git.code.sf.net/p/xmp/xmp-android
 
-Build Version:3.6.0,39,android-3.6.0,\
-target=android-17,srclibs=Libxmp@libxmp-4.1.0,prebuild=\
-sed -i 's/android:minSdkVersion="3"/\
-android:minSdkVersion="4"/g;/supports-screens/d' AndroidManifest.xml && \
-cd jni && cp -r ../../extlib/Libxmp . && \
-ln -fs Libxmp/include include && ln -fs Libxmp/src src && \
-sed -i 's/..\/..\/libxmp/Libxmp/g' Android.mk && cd Libxmp && \
-autoconf && ./configure,buildjni=yes
+Build:3.6.0,39
+    commit=android-3.6.0
+    target=android-17
+    srclibs=Libxmp@libxmp-4.1.0
+    prebuild=sed -i 's/android:minSdkVersion="3"/android:minSdkVersion="4"/g;/supports-screens/d' AndroidManifest.xml && \
+        cd jni && \
+        cp -r ../../extlib/Libxmp . && \
+        ln -fs Libxmp/include include && \
+        ln -fs Libxmp/src src && \
+        sed -i 's/..\/..\/libxmp/Libxmp/g' Android.mk && \
+        cd Libxmp && \
+        autoconf && \
+        ./configure
+    buildjni=yes
 
 # See res/values/strings.xml to determine Libxmp version
 Auto Update Mode:None

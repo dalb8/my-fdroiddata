@@ -1,5 +1,6 @@
 Categories:Office
 License:MIT
+Web Site:
 Source Code:https://github.com/ValleZ/Paper-Wallet
 Issue Tracker:https://github.com/ValleZ/Paper-Wallet/issues
 
@@ -24,8 +25,8 @@ Build:1.7.0,170
 
 Build:1.9.0,190
     commit=ec6970073cf2
-    scanignore=libs/armeabi;libs/x86
     target=android-16
+    scanignore=libs/armeabi;libs/x86
 
 Maintainer Notes:
 zbar libraries are from official binaries on sourceforge. I tried to compile from

@@ -1,4 +1,4 @@
-Category:System
+Categories:System
 License:GPLv3
 Web Site:https://github.com/GodsMoon/Flashify
 Source Code:https://github.com/GodsMoon/Flashify
@@ -14,7 +14,8 @@ will open the current url in the browser of your choice.
 Repo Type:git
 Repo:https://github.com/GodsMoon/Flashify.git
 
-Build Version:1.1,2,ee2ee
+Build:1.1,2
+    commit=ee2ee
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

@@ -1,4 +1,4 @@
-Category:Games
+Categories:Games
 License:GPLv3
 Web Site:http://code.google.com/p/hunkypunk
 Source Code:http://code.google.com/p/hunkypunk/source/list
@@ -28,20 +28,27 @@ Hunky Punk, created by Rafał Rzepecki, which hasn't been updated in a while.
 Repo Type:git
 Repo:https://code.google.com/p/hunkypunk/
 
-Build Version:0.3,1,14ecc2a0d37c,bindir=alt-apk/mod/bin,init=rm ant.properties,prebuild=\
-echo "bash-location=/bin/sh" >> local.properties && \
-sed -i '68d' build.xml && \
-cd jni/nitfol && bison -o inform.c inform.y,buildjni=no,antcommand=mod-release
+Build:0.3,1
+    commit=14ecc2a0d37c
+    init=rm ant.properties
+    prebuild=echo "bash-location=/bin/sh" >> local.properties && \
+        sed -i '68d' build.xml && \
+        cd jni/nitfol && \
+        bison -o inform.c inform.y
+    buildjni=no
+    bindir=alt-apk/mod/bin
+    antcommand=mod-release
 
 Build:0.8,6
     commit=744b8c26032
     rm=ant.properties
     prebuild=sed -i '139,140d' build.xml && \
-             echo "bash-location=/bin/bash" >> local.properties && \
-             cd jni/nitfol && bison -o inform.c inform.y
+        echo "bash-location=/bin/bash" >> local.properties && \
+        cd jni/nitfol && \
+        bison -o inform.c inform.y
     buildjni=no
-    antcommand=mod4-release
     bindir=alt-apk/mod4/bin
+    antcommand=mod4-release
 
 Auto Update Mode:None
 #None of the methods work

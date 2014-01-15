@@ -1,4 +1,4 @@
-Category:System
+Categories:System
 License:Apache2
 Web Site:
 Source Code:https://github.com/eolwral/OSMonitor
@@ -20,9 +20,9 @@ Repo:https://github.com/eolwral/OSMonitor
 Build:3.0.8.2,53
     commit=3.0.8.2
     subdir=OSMonitor
+    rm=OSMonitor/assets/osmcore_arm
     extlibs=android/android-support-v4.jar
     srclibs=1:Appcompat@android-4.4_r1.1;2:Volley@android-4.4_r1.2
-    rm=OSMonitor/assets/osmcore_arm
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
     build=$$NDK$$/ndk-build -e "APP_ABI=armeabi" && \
         mv libs/armeabi/osmcore assets/osmcore_arm

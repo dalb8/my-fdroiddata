@@ -1,5 +1,6 @@
-Category:Multimedia
+Categories:Multimedia
 License:GPLv3
+Web Site:
 Source Code:https://github.com/qorron/666up
 Issue Tracker:https://github.com/qorron/666up/issues
 
@@ -24,7 +25,9 @@ resized on a computer.
 Repo Type:git
 Repo:https://github.com/qorron/666up.git
 
-Build Version:0.4.1,16,5eb85badf,subdir=up666
+Build:0.4.1,16
+    commit=5eb85badf
+    subdir=up666
 
 Auto Update Mode:None
 #Device variable and tags are old

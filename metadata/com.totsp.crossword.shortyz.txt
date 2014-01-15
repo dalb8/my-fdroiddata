@@ -1,4 +1,4 @@
-Category:Games
+Categories:Games
 License:GPLv3
 Web Site:http://code.google.com/p/shortyz/
 Source Code:http://code.google.com/p/shortyz/source/checkout
@@ -13,11 +13,15 @@ Crossword game that downloads puzzles from a variety of internet locations.
 Repo Type:hg
 Repo:https://code.google.com/p/shortyz/
 
-Build Version:3.2.1,30201,0aa74b9d2bef,subdir=shortyz,target=android-11,prebuild=\
-	mkdir -p libs/ && rm -rf src/com/totsp/crossword/io/ src/com/totsp/crossword/puz/ && \
-	cd ../puzlib && mvn package &&\
-	mv target/*.jar ../shortyz/libs/ && rm -rf target &&\
-	cd ../shortyz
+Build:3.2.1,30201
+    commit=0aa74b9d2bef
+    subdir=shortyz
+    target=android-11
+    prebuild=mkdir -p libs/ && \
+        rm -rf src/com/totsp/crossword/io/ src/com/totsp/crossword/puz/ && \
+        cd ../puzlib && \
+        mvn package &&	mv target/*.jar ../shortyz/libs/ && \
+        rm -rf target &&	cd ../shortyz
 
 Build:3.2.10,30210
     commit=1ba821b4825c

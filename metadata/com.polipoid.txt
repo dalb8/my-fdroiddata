@@ -1,10 +1,10 @@
-Category:Internet
+Categories:Internet
 License:GPLv3
 Web Site:
 Source Code:https://github.com/splondike/polipoid/
 Issue Tracker:https://github.com/splondike/polipoid/issues
-Bitcoin:eef5109f143cf9d8c79e01371913c8f7
 Donate:https://flattr.com/submit/auto?user_id=splondike&amp;url=http://github.com/splondike/polipoid/&amp;title=Polipoid&amp;description=Android%20wrapper%20for%20the%20Polipo%20proxy&amp;language=en_GB&amp;tags=android,proxy&amp;category=software
+Bitcoin:eef5109f143cf9d8c79e01371913c8f7
 
 Auto Name:Polipoid
 Summary:Allow for browsing offline
@@ -17,12 +17,15 @@ switched to offline browsing mode when the network is disconnected.
 Repo Type:git
 Repo:https://github.com/splondike/polipoid.git
 
-Build Version:1.0.1,2,v1.0.1,submodules=yes,maven=yes,init=\
-  TOOLCHAIN=/tmp/polipoid-toolchain && \
-  $$NDK$$/build/tools/make-standalone-toolchain.sh --platform=android-8 --install-dir=$TOOLCHAIN && \
-  cd polipo/ && \
-  PATH=$TOOLCHAIN/bin:$PATH CC=arm-linux-androideabi-gcc EXTRA_DEFINES="-U __linux__" make clean polipo && \
-  mv polipo ../assets/
+Build:1.0.1,2
+    commit=v1.0.1
+    submodules=yes
+    init=TOOLCHAIN=/tmp/polipoid-toolchain && \
+        $$NDK$$/build/tools/make-standalone-toolchain.sh --platform=android-8 --install-dir=$TOOLCHAIN && \
+        cd polipo/ && \
+        PATH=$TOOLCHAIN/bin:$PATH CC=arm-linux-androideabi-gcc EXTRA_DEFINES="-U __linux__" make clean polipo && \
+        mv polipo ../assets/
+    maven=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags

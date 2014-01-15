@@ -1,5 +1,6 @@
 Categories:System
 License:MIT
+Web Site:
 Source Code:https://github.com/handschuh/Slight-backup
 Issue Tracker:
 
@@ -23,7 +24,8 @@ The backups are stored unencrypted in an editable location on the SD card.
 Repo Type:git
 Repo:https://github.com/handschuh/Slight-backup.git
 
-Build Version:0.5.2,19,v0.5.2
+Build:0.5.2,19
+    commit=v0.5.2
 
 Auto Update Mode:None
 Update Check Mode:Tags

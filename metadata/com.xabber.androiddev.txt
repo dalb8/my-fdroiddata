@@ -21,7 +21,7 @@ Build:0.9.30b,81
     rm=libs/otr4j.jar
     srclibs=Otr4j@master
     prebuild=sed -i "/debuggable.*true/d" AndroidManifest.xml && \
-         echo 'source.dir=src;$$Otr4j$$/src' > ant.properties
+        echo 'source.dir=src;$$Otr4j$$/src' > ant.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

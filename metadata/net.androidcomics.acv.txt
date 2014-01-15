@@ -1,5 +1,5 @@
 AntiFeatures:UpstreamNonFree
-Category:Reading
+Categories:Reading
 License:Apache2
 Web Site:http://forums.droidcomicviewer.com
 Source Code:https://github.com/robotmedia/droid-comic-viewer
@@ -20,12 +20,14 @@ The non-free Flurry Analytics library was removed before building.
 Repo Type:git
 Repo:https://github.com/robotmedia/droid-comic-viewer.git
 
-Build Version:1.4.1.4,46,1.4.1.4,srclibs=1:BillingLibrary@0153cf5b;FinfAgent@v0.1,\
-scanignore=src/net/robotmedia/acv/logic/FlurryAgentProxy.java,\
-rm=src/com/github/junrar;src/net/robotmedia/acv/comic/RarComic.java;lib,\
-patch=rar.patch,prebuild=\
-sed -i '96d;97d;105d;112d' src/net/robotmedia/acv/Constants.java && \
-echo "android.library.reference.2=$$FinfAgent$$" >> project.properties
+Build:1.4.1.4,46
+    commit=1.4.1.4
+    rm=src/com/github/junrar;src/net/robotmedia/acv/comic/RarComic.java;lib
+    srclibs=1:BillingLibrary@0153cf5b;FinfAgent@v0.1
+    patch=rar.patch
+    prebuild=sed -i '96d;97d;105d;112d' src/net/robotmedia/acv/Constants.java && \
+        echo "android.library.reference.2=$$FinfAgent$$" >> project.properties
+    scanignore=src/net/robotmedia/acv/logic/FlurryAgentProxy.java
 
 Auto Update Mode:None
 Update Check Mode:Tags

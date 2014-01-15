@@ -1,5 +1,6 @@
 Categories:Games
 License:AGPLv3+
+Web Site:
 Source Code:https://github.com/DaveRead/SequenceHunt
 Issue Tracker:https://github.com/DaveRead/SequenceHunt/issues
 
@@ -12,7 +13,8 @@ Find the sequence of colours by trial and error.
 Repo Type:git
 Repo:https://github.com/DaveRead/SequenceHunt.git
 
-Build Version:01.07.03,21,v1.7.3
+Build:01.07.03,21
+    commit=v1.7.3
 
 Auto Update Mode:None
 Update Check Mode:Tags

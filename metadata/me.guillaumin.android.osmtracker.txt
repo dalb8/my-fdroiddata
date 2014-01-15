@@ -18,7 +18,9 @@ track on top of an OpenStreetMap background.
 Repo Type:git
 Repo:https://github.com/nguillaumin/osmtracker-android.git
 
-Build Version:0.6.6,30,0.6.6,rm=custom_rules.xml
+Build:0.6.6,30
+    commit=0.6.6
+    rm=custom_rules.xml
 
 Auto Update Mode:None
 Update Check Mode:Tags

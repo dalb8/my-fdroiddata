@@ -5,8 +5,8 @@ Source Code:https://github.com/janosgyerik/bluetoothviewer
 Issue Tracker:https://github.com/janosgyerik/bluetoothviewer/issues
 Donate:https://github.com/janosgyerik/bluetoothviewer#Donations
 
-Auto Name:Bluetooth Viewer (LITE)
 Name:Bluetooth Viewer
+Auto Name:Bluetooth Viewer (LITE)
 Summary:Bluetooth connection debugging tool
 Description:
 * Connect to any Bluetooth device

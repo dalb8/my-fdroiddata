@@ -1,6 +1,6 @@
 Categories:System
 License:MIT
-Website:http://aragaer.github.com/jtt_android
+Web Site:
 Source Code:https://github.com/aragaer/jtt_android
 Issue Tracker:https://github.com/aragaer/jtt_android/issues
 
@@ -29,6 +29,6 @@ Uses git submodules
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.4.4.1
-Current Version Code:23
+Current Version:1.4.5pre
+Current Version Code:25
 

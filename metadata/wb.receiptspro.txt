@@ -26,11 +26,11 @@ Build:2.2.1,82
         rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java
 
 Build:3.0.0,86
-    commit=v3.0.0
     disable=missing symblols in SmartReceipts srclib
+    commit=v3.0.0
     srclibs=ActionBarSherlock@4.4.0;AndroidCamera-WB@v3.0.0;Mini-WB@v3.0.0;1:SmartReceipts@v3.0.0
     prebuild=rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java && \
-             mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
+        mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
 Maintainer Notes:
 Tags UCM not working

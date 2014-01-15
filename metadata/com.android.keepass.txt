@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3
 Web Site:http://www.keepassdroid.com/
 Source Code:http://github.com/bpellin/keepassdroid
@@ -19,8 +19,12 @@ on a Windows machine. Supports both versions 1
 Repo Type:git
 Repo:git://github.com/bpellin/keepassdroid.git
 
-Build Version:1.99.10,128,v1.99.9,extlibs=keepass/sha2-07-01-07.zip,prebuild=\
-unzip libs/sha2-07-01-07.zip -d jni/sha && rm libs/sha2-07-01-07.zip,buildjni=yes
+Build:1.99.10,128
+    commit=v1.99.9
+    extlibs=keepass/sha2-07-01-07.zip
+    prebuild=unzip libs/sha2-07-01-07.zip -d jni/sha && \
+        rm libs/sha2-07-01-07.zip
+    buildjni=yes
 
 Maintainer Notes:
 check jni/prep_build.sh prior to build

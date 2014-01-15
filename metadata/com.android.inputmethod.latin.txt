@@ -1,5 +1,6 @@
 Categories:System
 License:Apache2
+Web Site:
 Source Code:https://android.googlesource.com/platform/packages/inputmethods/LatinIME
 Issue Tracker:http://code.google.com/p/android/issues/list?can=2&q=keyboard&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
@@ -20,9 +21,10 @@ Build:4.2.1,1
     srclibs=Inputmethodcommon@android-4.2.1_r1
     patch=build.xml_1.patch
     prebuild=echo 'package.name=com.android.inputmethod.latin' >> ant.properties && \
-             sed -i '19 i android:versionName="4.2.1" android:versionCode="1"' AndroidManifest.xml && \
-             cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/
-    build=$$NDK$$/ndk-build -e "APP_ABI=all" -C ../native && mv ../native/libs/* libs/
+        sed -i '19 i android:versionName="4.2.1" android:versionCode="1"' AndroidManifest.xml && \
+        cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/
+    build=$$NDK$$/ndk-build -e "APP_ABI=all" -C ../native && \
+        mv ../native/libs/* libs/
 
 Maintainer Notes:
 Use the ant.properties to change the package name if you wish: it works fine

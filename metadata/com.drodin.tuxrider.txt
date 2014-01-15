@@ -1,5 +1,5 @@
 AntiFeatures:UpstreamNonFree
-Category:Games
+Categories:Games
 License:GPL
 Web Site:http://tuxrider.drodin.com/
 Source Code:https://github.com/drodin/TuxRider
@@ -21,8 +21,12 @@ The build has Admob replaced with a dummy library.
 Repo Type:git
 Repo:git://github.com/drodin/TuxRider.git
 
-Build Version:1.0.9,11,36220e5,forceversion=yes,buildjni=yes,srclibs=MobAdMob@2d5736,prebuild=\
-echo "android.library.reference.1=$$MobAdMob$$" >> project.properties
+Build:1.0.9,11
+    commit=36220e5
+    forceversion=yes
+    srclibs=MobAdMob@2d5736
+    prebuild=echo "android.library.reference.1=$$MobAdMob$$" >> project.properties
+    buildjni=yes
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

@@ -1,4 +1,4 @@
-Category:System
+Categories:System
 License:GPLv3
 Web Site:http://code.google.com/p/dotdash-keyboard-android/
 Source Code:http://code.google.com/p/dotdash-keyboard-android/source/checkout
@@ -15,7 +15,8 @@ keyboard, accessible by swiping to the side must be enabled in the settings for 
 Repo Type:git
 Repo:https://code.google.com/p/dotdash-keyboard-android/
 
-Build Version:1.1.5,12,95c0f978a724
+Build:1.1.5,12
+    commit=95c0f978a724
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

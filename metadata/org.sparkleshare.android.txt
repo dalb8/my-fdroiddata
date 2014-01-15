@@ -1,4 +1,4 @@
-Category:Internet
+Categories:Internet
 License:GPLv3
 Web Site:http://www.sparkleshare.org
 Source Code:https://github.com/NewProggie/SparkleShare-Android
@@ -17,7 +17,9 @@ browse your files right from your Android device.
 Repo Type:git
 Repo:https://github.com/NewProggie/SparkleShare-Android.git
 
-Build Version:1.0,1,a9e23f0f9,target=android-7
+Build:1.0,1
+    commit=a9e23f0f9
+    target=android-7
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

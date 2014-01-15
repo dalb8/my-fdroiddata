@@ -1,4 +1,4 @@
-Category:Internet
+Categories:Internet
 License:MIT
 Web Site:http://code.google.com/p/sparserss/
 Source Code:http://code.google.com/p/sparserss/source/checkout
@@ -16,7 +16,8 @@ feed problems via the address in the about screen.
 Repo Type:git
 Repo:https://code.google.com/p/sparserss/
 
-Build Version:1.7,87,4a9c5614d2e7
+Build:1.7,87
+    commit=4a9c5614d2e7
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

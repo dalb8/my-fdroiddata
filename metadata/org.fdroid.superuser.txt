@@ -1,5 +1,6 @@
-Category:System
+Categories:System
 License:Apache2
+Web Site:
 Source Code:https://github.com/koush/Superuser
 Issue Tracker:https://github.com/koush/Superuser/issues
 
@@ -22,13 +23,15 @@ Requires Root:Yes
 Repo Type:git
 Repo:https://github.com/koush/Superuser.git
 
-Build Version:1.0.2.8,1028,74363eaa79,\
-subdir=Superuser,patch=packageid_1028.patch,\
-srclibs=1:KoushWidgets@2cc45f3,prebuild=\
-sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk && \
-echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties && \
-sed -i 's/#define REQUESTOR JAVA_PACKAGE_NAME/#define REQUESTOR \
-"org.fdroid.superuser"/g' jni/su/su.h,buildjni=yes
+Build:1.0.2.8,1028
+    commit=74363eaa79
+    subdir=Superuser
+    srclibs=1:KoushWidgets@2cc45f3
+    patch=packageid_1028.patch
+    prebuild=sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk && \
+        echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties && \
+        sed -i 's/#define REQUESTOR JAVA_PACKAGE_NAME/#define REQUESTOR "org.fdroid.superuser"/g' jni/su/su.h
+    buildjni=yes
 
 Auto Update Mode:None
 # different package name

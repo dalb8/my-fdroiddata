@@ -14,8 +14,11 @@ Supports multiple sessions, including running them concurrently.
 Repo Type:git
 Repo:https://code.google.com/p/connectbot.git
 
-Build Version:22-46-35-snapshot,365,716cdaa48,forceversion=yes,prebuild=\
-sed -i 's/minSdkVersion=\"3\"/minSdkVersion=\"4\"/g' AndroidManifest.xml,buildjni=yes
+Build:22-46-35-snapshot,365
+    commit=716cdaa48
+    forceversion=yes
+    prebuild=sed -i 's/minSdkVersion=\"3\"/minSdkVersion=\"4\"/g' AndroidManifest.xml
+    buildjni=yes
 
 Auto Update Mode:None
 Update Check Mode:None

@@ -21,11 +21,11 @@ installed on any server and configured to work with the app.
 Repo Type:git
 Repo:https://github.com/haiwen/seadroid.git
 
-Build Version:0.7.1,12,0.7.1,\
-srclibs=1:ActionBarSherlock@4.4.0;2:aFileChooser@bd54d1411f;3:NewQuickAction3D-haiwen@master;\
-HttpRequest-Sawicki@http-request-5.3,\
-prebuild=echo 'source.dir=src;$$HttpRequest-Sawicki$$' >> ant.properties && \
-         cp libs/android-support-v4.jar $$aFileChooser$$/libs/android-support-v4.jar
+Build:0.7.1,12
+    commit=0.7.1
+    srclibs=1:ActionBarSherlock@4.4.0;2:aFileChooser@bd54d1411f;3:NewQuickAction3D-haiwen@master;HttpRequest-Sawicki@http-request-5.3
+    prebuild=echo 'source.dir=src;$$HttpRequest-Sawicki$$' >> ant.properties && \
+        cp libs/android-support-v4.jar $$aFileChooser$$/libs/android-support-v4.jar
 
 Auto Update Mode:None
 Update Check Mode:None

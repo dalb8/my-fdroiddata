@@ -31,22 +31,22 @@ Description:
 Repo Type:git
 Repo:https://github.com/NightWhistler/PageTurner.git
 
-
 Build:2.2.5,60
     commit=2.2.5
-    srclibs=HtmlSpanner@8910e
-    extlibs=htmlcleaner/htmlcleaner-2.2.jar;cssparser/osbcp-css-parser-1.4.jar;LinLibertine.zip
-    prebuild=$$MVN3$$ install:install-file -DgroupId=com.osbcp.cssparser -DartifactId=cssparser -Dversion=1.5 -Dpackaging=jar -Dfile=libs/osbcp-css-parser-1.4.jar && \
-             $$MVN3$$ install:install-file -DgroupId=net.sourceforge.htmlcleaner -DartifactId=htmlcleaner -Dversion=2.2 -Dpackaging=jar -Dfile=libs/htmlcleaner-2.2.jar && \
-             sed -i '15,27d;s/3.6.1/3.8.0/g' pom.xml && \
-             sed -i '366,372d' src/net/nightwhistler/pageturner/view/bookview/TextLoader.java && \
-         unzip libs/LinLibertine.zip && rm libs/LinLibertine.zip && \
-         mv LinLibertine_Re.ttf assets/FrankRuehl.otf && \
-         mv LinLibertine_It.ttf assets/FrankRuehl-Italic.otf && \
-         mv LinLibertine_Bd.ttf assets/FrankRuehl-Bold.otf && \
-         mv LinLibertine_BI.ttf assets/FrankRuehl-BoldItalic.otf
-    build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
     maven=yes
+    extlibs=htmlcleaner/htmlcleaner-2.2.jar;cssparser/osbcp-css-parser-1.4.jar;LinLibertine.zip
+    srclibs=HtmlSpanner@8910e
+    prebuild=$$MVN3$$ install:install-file -DgroupId=com.osbcp.cssparser -DartifactId=cssparser -Dversion=1.5 -Dpackaging=jar -Dfile=libs/osbcp-css-parser-1.4.jar && \
+        $$MVN3$$ install:install-file -DgroupId=net.sourceforge.htmlcleaner -DartifactId=htmlcleaner -Dversion=2.2 -Dpackaging=jar -Dfile=libs/htmlcleaner-2.2.jar && \
+        sed -i '15,27d;s/3.6.1/3.8.0/g' pom.xml && \
+        sed -i '366,372d' src/net/nightwhistler/pageturner/view/bookview/TextLoader.java && \
+        unzip libs/LinLibertine.zip && \
+        rm libs/LinLibertine.zip && \
+        mv LinLibertine_Re.ttf assets/FrankRuehl.otf && \
+        mv LinLibertine_It.ttf assets/FrankRuehl-Italic.otf && \
+        mv LinLibertine_Bd.ttf assets/FrankRuehl-Bold.otf && \
+        mv LinLibertine_BI.ttf assets/FrankRuehl-BoldItalic.otf
+    build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
 
 Auto Update Mode:None
 Update Check Mode:Tags

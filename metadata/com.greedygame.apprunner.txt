@@ -14,8 +14,8 @@ Repo Type:git
 Repo:https://github.com/GreedyGame/Aam-Aadmi-Runner.git
 
 Build:2.0,8
-    commit=2.0
     disable=need to patch out greedygame.jar
+    commit=2.0
     subdir=gg-runner-android
     init=zip -r native.zip libs/armeabi* && \
         mv ../gg-runner/libs/* libs/ && \

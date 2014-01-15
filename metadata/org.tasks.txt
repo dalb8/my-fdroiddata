@@ -1,5 +1,6 @@
-Category:Office
+Categories:Office
 License:GPLv3
+Web Site:
 Source Code:https://github.com/abaker/tasks
 Issue Tracker:https://github.com/abaker/tasks/issues
 
@@ -11,8 +12,11 @@ Based on last version of Astrid. Auto back-up is enabled in settings.
 Repo Type:git
 Repo:https://github.com/abaker/tasks
 
-Build Version:4.6.11,325,4.6.11,gradle=yes@..
+Build:4.6.11,325
+    commit=4.6.11
+    gradle=yes@..
 
+Auto Update Mode:None
 Update Check Mode:None
 Current Version:4.6.11
 Current Version Code:325

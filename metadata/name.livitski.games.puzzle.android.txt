@@ -1,7 +1,8 @@
-Category:Games
+Categories:Games
 License:GPLv3+
 Web Site:http://www.livitski.name/projects/n-puzzle
 Source Code:https://github.com/StanLivitski/n-puzzle
+Issue Tracker:
 
 Summary:A classic puzzle game with custom images
 Description:
@@ -27,8 +28,11 @@ is stored and resumed next time you run n-Puzzle.
 Repo Type:git
 Repo:https://github.com/StanLivitski/n-puzzle.git
 
-Build Version:1.1,2,v-1.1-2,target=android-18
+Build:1.1,2
+    commit=v-1.1-2
+    target=android-18
 
+Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.1
 Current Version Code:2

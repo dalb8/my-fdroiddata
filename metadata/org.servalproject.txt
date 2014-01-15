@@ -1,4 +1,4 @@
-Category:Phone & SMS
+Categories:Phone & SMS
 License:GPLv3
 Web Site:http://www.servalproject.org
 Source Code:https://github.com/servalproject/batphone
@@ -30,10 +30,11 @@ The Java/XML part is distributable under the GNU GPLv3 while the serval-dna
 Repo Type:git
 Repo:https://github.com/servalproject/batphone.git
 
-Build Version:0.91,2120,0.91,\
-submodules=yes,\
-forceversion=yes,\
-buildjni=no
+Build:0.91,2120
+    commit=0.91
+    submodules=yes
+    forceversion=yes
+    buildjni=no
 
 # Releases are in master branch, beta in development; run ant version to get version info
 Auto Update Mode:None

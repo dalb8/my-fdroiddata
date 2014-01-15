@@ -1,5 +1,5 @@
 AntiFeatures:Tracking
-Category:Internet
+Categories:Internet
 License:GPLv3
 Web Site:http://code.google.com/p/twimight
 Source Code:http://code.google.com/p/twimight/source
@@ -14,14 +14,15 @@ Repo Type:svn
 Repo:http://twimight.googlecode.com/svn/trunk
 
 Build:1.1.2,1700023
-    commit=368
     disable=doesn't work with my keys
+    commit=368
     rm=libs/crittercism_v3_0_8_sdkonly.jar;src/ch/ethz/twimight/util/LogCollector.java
     extlibs=Obfuscator.java
     srclibs=1:PhotoView@v1.2.2
     prebuild=sed -i '/LogCollector/d' src/ch/ethz/twimight/activities/TwimightBaseActivity.java && \
         mv libs/Obfuscator.java src/ch/ethz/twimight/ 
 
+Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.1.2
 Current Version Code:1700023

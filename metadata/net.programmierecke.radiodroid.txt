@@ -14,8 +14,8 @@ Repo Type:git
 Repo:https://github.com/segler-alex/RadioDroid.git
 
 Build:0.3,3
-    commit=master
     disable=basic and service stays alive
+    commit=master
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

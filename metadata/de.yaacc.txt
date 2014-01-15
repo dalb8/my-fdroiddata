@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:GPLv3
 Web Site:http://www.yaacc.de
 Source Code:http://sourceforge.net/p/yaacc/code/ci/master/tree/
@@ -23,7 +23,10 @@ Features:
 Repo Type:git
 Repo:git://git.code.sf.net/p/yaacc/code
 
-Build Version:1.1,2,release-1.1,subdir=main,target=android-17
+Build:1.1,2
+    commit=release-1.1
+    subdir=main
+    target=android-17
 
 Auto Update Mode:None
 Update Check Mode:Static

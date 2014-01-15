@@ -1,5 +1,6 @@
 Categories:System
 License:Unknown
+Web Site:
 Source Code:https://github.com/HannahMitt/Nomophobia
 Issue Tracker:https://github.com/HannahMitt/Nomophobia/issues
 
@@ -14,10 +15,10 @@ Repo Type:git
 Repo:https://github.com/HannahMitt/Nomophobia.git
 
 Build:1.0,1
-    commit=v1.0
     disable=no license
-    prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties
+    commit=v1.0
     update=.;libs/GraphView
+    prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties
 
 Auto Update Mode:None
 Update Check Mode:Tags

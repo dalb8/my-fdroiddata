@@ -1,6 +1,7 @@
 AntiFeatures:UpstreamNonFree
 Categories:Navigation
 License:GPLv3
+Web Site:
 Source Code:https://github.com/nhasan/Airports
 Issue Tracker:https://github.com/nhasan/Airports/issues
 
@@ -50,8 +51,8 @@ Repo Type:git
 Repo:https://github.com/nhasan/Airports.git
 
 Build:5.5.3,5530
-    commit=v5.5.3
     disable=not much good without the maps
+    commit=v5.5.3
     gradle=yes
     rm=market;libs/libGoogleAnalyticsServices.jar
     srclibs=NoAnalytics@d38ae535b543

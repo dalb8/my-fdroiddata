@@ -24,7 +24,9 @@ Many of the graphical resources are CC-licensed; see the
 Repo Type:git
 Repo:https://code.google.com/p/andors-trail/
 
-Build Version:0.7.0,39,v0.7.0,subdir=AndorsTrail
+Build:0.7.0,39
+    commit=v0.7.0
+    subdir=AndorsTrail
 
 Auto Update Mode:None
 Update Check Mode:Tags

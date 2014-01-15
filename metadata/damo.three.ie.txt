@@ -1,4 +1,4 @@
-Category:Internet
+Categories:Internet
 License:GPLv3
 Web Site:
 Source Code:https://github.com/DamienOReilly/PrepayCredit
@@ -22,7 +22,10 @@ Neither the app nor its author is affiliated with Hutchison 3G Ireland.
 Repo Type:git
 Repo:https://github.com/DamienOReilly/PrepayCredit.git
 
-Build Version:0.9,9,v0.9,subdir=PrepayCreditAndroid,maven=yes
+Build:0.9,9
+    commit=v0.9
+    subdir=PrepayCreditAndroid
+    maven=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags

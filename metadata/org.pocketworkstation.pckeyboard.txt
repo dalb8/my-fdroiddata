@@ -24,9 +24,9 @@ Repo:https://hackerskeyboard.googlecode.com/hg
 Build:v1.37,1037
     commit=1.37
     subdir=java
+    target=android-19
     extlibs=main_en.dict
     srclibs=1:VoiceIME@5763e36eab31
-    target=android-19
     prebuild=sed -i 's@\(MARKET_URI = \).*@\1"http://code.google.com/p/hackerskeyboard/downloads/list";@' src/org/pocketworkstation/pckeyboard/Main.java && \
         sed -i "s/Hg-ident/hg ident/" AutoVersion.sh && \
         ./AutoVersion.sh && \

@@ -1,4 +1,4 @@
-Category:Wallpaper
+Categories:Wallpaper
 License:Public Domain
 Web Site:http://www.tamanegi.org/prog/android-apps/mplwp.html
 Source Code:https://github.com/lllllT/MultiPictureLiveWallpaper
@@ -17,7 +17,11 @@ options for cropping and colour depth etc.
 Repo Type:git
 Repo:https://github.com/lllllT/MultiPictureLiveWallpaper.git
 
-Build Version:0.6.11,48,v0.6.11,subdir=variant/dnt,update=.;../..,prebuild=mkdir -p src
+Build:0.6.11,48
+    commit=v0.6.11
+    subdir=variant/dnt
+    update=.;../..
+    prebuild=mkdir -p src
 
 Auto Update Mode:None
 Update Check Mode:Tags

@@ -1,4 +1,4 @@
-Category:Internet
+Categories:Internet
 License:GPLv3
 Web Site:https://code.google.com/p/external-ip/
 Source Code:https://code.google.com/p/external-ip/source/checkout
@@ -15,8 +15,13 @@ are a couple of html tags in the output.
 Repo Type:hg
 Repo:https://code.google.com/p/external-ip/
 
-Build Version:1.2-wtfismyip,5,431da48bfb10,forceversion=yes,target=android-8,patch=change-server_5.patch,\
-forcevercode=yes,prebuild=sed -i '15s/3/4/g' AndroidManifest.xml
+Build:1.2-wtfismyip,5
+    commit=431da48bfb10
+    target=android-8
+    forceversion=yes
+    forcevercode=yes
+    patch=change-server_5.patch
+    prebuild=sed -i '15s/3/4/g' AndroidManifest.xml
 
 Auto Update Mode:None
 #No revisions in a long time

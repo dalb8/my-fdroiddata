@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3
 Web Site:http://code.google.com/p/android-quill/
 Source Code:http://code.google.com/p/android-quill/source/checkout
@@ -33,8 +33,10 @@ the [http://code.google.com/p/android-quill/wiki/SupportedDevices wiki] for more
 Repo Type:hg
 Repo:https://code.google.com/p/android-quill/
 
-Build Version:10.6,40,257,\
-srclibs=1:Color-Picker-2@45ee6554a;2:File-Picker@7,buildjni=yes
+Build:10.6,40
+    commit=257
+    srclibs=1:Color-Picker-2@45ee6554a;2:File-Picker@7
+    buildjni=yes
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

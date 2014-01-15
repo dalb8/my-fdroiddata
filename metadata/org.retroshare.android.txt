@@ -1,4 +1,4 @@
-Category:Internet
+Categories:Internet
 License:GPLv3+
 Web Site:http://www.retroshare.org/
 Source Code:https://gitorious.org/retroshare/retroshare-android-user-interface/
@@ -17,14 +17,17 @@ Repo Type:git
 Repo:https://git.gitorious.org/retroshare/retroshare-android-user-interface.git
 
 Build:0.2.4,7
-    commit=v0.2.4
     disable=wip: probably compile protobuf
+    commit=v0.2.4
     subdir=RetroShareAndroidIntegration
     extlibs=android/android-support-v4.jar
     srclibs=protobuf-android@2.4.1
     prebuild=echo "source.dir=../lib/rsctrl;../../$$protobuf-android$$/src;." >> project.properties && \
-		cd ../lib && wget http://lag.net/jaramiko/download/jaramiko-151.zip && unzip jaramiko-151.zip && \
-        cd jaramiko-151 && ant jar
+        cd ../lib && \
+        wget http://lag.net/jaramiko/download/jaramiko-151.zip && \
+        unzip jaramiko-151.zip && \
+        cd jaramiko-151 && \
+        ant jar
 
 Auto Update Mode:None
 Update Check Mode:Tags

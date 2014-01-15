@@ -1,4 +1,4 @@
-Category:Multimedia
+Categories:Multimedia
 License:NewBSD
 Web Site:https://github.com/rjmarsan/Pixelesque
 Source Code:https://github.com/rjmarsan/Pixelesque
@@ -18,10 +18,11 @@ under a new BSD license.
 Repo Type:git
 Repo:https://github.com/rjmarsan/Pixelesque.git
 
-Build Version:1.2.01,7,3bd5e,\
-rm=libs/AndMT.zip;exports,\
-extlibs=android/android-support-v4.jar,\
-srclibs=1:Processing-Multitouch@bb88609
+Build:1.2.01,7
+    commit=3bd5e
+    rm=libs/AndMT.zip;exports
+    extlibs=android/android-support-v4.jar
+    srclibs=1:Processing-Multitouch@bb88609
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

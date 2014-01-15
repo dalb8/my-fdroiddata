@@ -1,5 +1,6 @@
 Categories:Wallpaper
 License:Unknown
+Web Site:
 Source Code:https://github.com/efung/glimmer
 Issue Tracker:https://github.com/efung/glimmer/issues
 
@@ -13,8 +14,8 @@ Repo Type:git
 Repo:https://github.com/efung/glimmer.git
 
 Build:1.1.2,4
-    commit=v1.1.2
     disable=no license
+    commit=v1.1.2
     submodules=yes
 
 Auto Update Mode:None

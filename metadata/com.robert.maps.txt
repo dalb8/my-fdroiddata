@@ -1,5 +1,5 @@
 AntiFeatures:UpstreamNonFree
-Category:Navigation
+Categories:Navigation
 License:GPLv3
 Web Site:http://robertdeveloper.blogspot.com/2009/08/rmaps.html
 Source Code:http://code.google.com/p/robertprojects/source/checkout
@@ -18,11 +18,13 @@ The non-free Google Analytics library has been replaced with the NoAnalytics lib
 Repo Type:git-svn
 Repo:http://robertprojects.googlecode.com/svn;trunk=trunk;tags=tags
 
-Build Version:0.9.4,8140,699,subdir=RMaps.Free,srclibs=NoAnalytics@158a4a,\
-rm=RMaps.AppLib/libs/libGoogleAnalytics.jar,\
-update=.;../RMaps.AppLib,prebuild=\
-echo "android.library.reference.1=$$NoAnalytics$$" >> ../RMaps.AppLib/project.properties &&\
-mkdir src
+Build:0.9.4,8140
+    commit=699
+    subdir=RMaps.Free
+    update=.;../RMaps.AppLib
+    rm=RMaps.AppLib/libs/libGoogleAnalytics.jar
+    srclibs=NoAnalytics@158a4a
+    prebuild=echo "android.library.reference.1=$$NoAnalytics$$" >> ../RMaps.AppLib/project.properties &&mkdir src
 
 Auto Update Mode:None
 Update Check Mode:Tags

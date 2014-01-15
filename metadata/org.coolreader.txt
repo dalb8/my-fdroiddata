@@ -1,4 +1,4 @@
-Category:Reading
+Categories:Reading
 License:GPLv2
 Web Site:http://crengine.sourceforge.net
 Source Code:http://sourceforge.net/p/crengine/crengine/ci/master/tree
@@ -19,16 +19,22 @@ section of the Settings.
 Repo Type:git
 Repo:git://crengine.git.sourceforge.net/gitroot/crengine/crengine
 
-Build Version:3.1.2-27,847,cr3-3.1.2-27,subdir=android,rm=android/ant.properties,buildjni=yes,target=android-16
+Build:3.1.2-27,847
+    commit=cr3-3.1.2-27
+    subdir=android
+    target=android-16
+    rm=android/ant.properties
+    buildjni=yes
+
 Build:3.1.2-35,855
-     commit=cr3gl3.3.2
-     disable=build probs
-     subdir=android
-     rm=android/ant.properties
-     target=android-17
-     init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
-     prebuild=echo -e 'APP_ABI=armeabi\nNDK_TOOLCHAIN_VERSION=4.8\nAPP_CFLAGS += -Wno-error=format-security' > jni/Application.mk
-     buildjni=yes
+    disable=build probs
+    commit=cr3gl3.3.2
+    subdir=android
+    init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
+    target=android-17
+    rm=android/ant.properties
+    prebuild=echo -e 'APP_ABI=armeabi\nNDK_TOOLCHAIN_VERSION=4.8\nAPP_CFLAGS += -Wno-error=format-security' > jni/Application.mk
+    buildjni=yes
 
 Auto Update Mode:None
 # Too many tags

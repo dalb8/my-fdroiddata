@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:Apache2
 Web Site:http://wikidpad.sourceforge.net/WikiAndPad.html
 Source Code:http://svnandroid.wikidpad2.webfactional.com/
@@ -23,8 +23,15 @@ Original Sqlite within WikidPad on the desktop and copy it to your sdcard.
 Repo Type:git-svn
 Repo:http://svnandroid.wikidpad2.webfactional.com/trunk
 
-Build Version:0.2alpha02,200200,17,target=android-10
-Build Version:0.2alpha03,200300,!buggy at 32,extlibs=android/android-support-v4.jar,target=android-8
+Build:0.2alpha02,200200
+    commit=17
+    target=android-10
+
+Build:0.2alpha03,200300
+    disable=buggy at 32
+    commit=32
+    target=android-8
+    extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

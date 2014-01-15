@@ -1,4 +1,4 @@
-Category:System
+Categories:System
 License:GPLv3+
 Web Site:https://f-droid.org
 Source Code:https://gitorious.org/f-droid/fdroidclient
@@ -26,10 +26,11 @@ but there are many good reasons for using a client/repository setup:
 Repo Type:git
 Repo:git://gitorious.org/f-droid/fdroidclient.git
 
-Build Version:0.53-test,53,0.53-test,\
-rm=res/drawable-xxhdpi/ic_stat_notify_updates.png,\
-srclibs=1:ImageLoader@4aec2034749,\
-patch=icon_53.patch;play_53.patch
+Build:0.53-test,53
+    commit=0.53-test
+    rm=res/drawable-xxhdpi/ic_stat_notify_updates.png
+    srclibs=1:ImageLoader@4aec2034749
+    patch=icon_53.patch;play_53.patch
 
 Build:0.55,55
     commit=0.55
@@ -37,8 +38,8 @@ Build:0.55,55
     patch=play_53.patch
 
 Build:0.58,580
-    commit=0.58
     disable=doesn't show incompatible versions
+    commit=0.58
     submodules=yes
     update=no
     patch=play_570.patch

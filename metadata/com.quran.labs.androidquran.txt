@@ -1,4 +1,4 @@
-Category:Reading
+Categories:Reading
 #See README
 License:Custom
 Web Site:https://github.com/ahmedre/quran_android
@@ -20,9 +20,12 @@ Audio from Every Ayah. Images from
 Repo Type:git
 Repo:https://github.com/ahmedre/quran_android.git
 
-Build Version:2.3.1,231,v2.3.1,target=android-17,subdir=app,\
-srclibs=ActionBarSherlock@4.1.0,prebuild=\
-echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
+Build:2.3.1,231
+    commit=v2.3.1
+    subdir=app
+    target=android-17
+    srclibs=ActionBarSherlock@4.1.0
+    prebuild=echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties
 
 # crashlytics in 2.4.8
 Auto Update Mode:None

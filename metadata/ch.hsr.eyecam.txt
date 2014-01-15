@@ -6,17 +6,18 @@ Issue Tracker:https://github.com/tom-and-jerry/eyeCam/issues
 
 Summary:
 Description:
+No description available
 .
 
 Repo Type:git
 Repo:https://github.com/tom-and-jerry/eyeCam.git
 
 Build:0.9-beta,90
-    commit=d3ab6
     disable=no license
-    novcheck=yes
+    commit=d3ab6
     update=force
     buildjni=yes
+    novcheck=yes
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

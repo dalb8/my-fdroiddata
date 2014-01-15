@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:Apache2
 Web Site:http://gorry.haun.org/android/nicownng
 Source Code:https://bitbucket.org/dalb8/nicownng
@@ -17,13 +17,18 @@ code hosting website.
 Repo Type:hg
 Repo:https://bitbucket.org/dalb8/nicownng
 
-Build Version:2013.0425.1.1305,201304251,3,target=android-10,prebuild=\
-echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk,buildjni=yes
+Build:2013.0425.1.1305,201304251
+    commit=3
+    target=android-10
+    prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk
+    buildjni=yes
 
-Build Version:2013.0708.1.1305,201307081,!missing a resource at 4,\
-target=android-10,\
-prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk,\
-buildjni=yes
+Build:2013.0708.1.1305,201307081
+    disable=missing a resource at 4
+    commit=4
+    target=android-10
+    prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk
+    buildjni=yes
 
 Maintainer Notes:
 Grab zip from website and push to repo.

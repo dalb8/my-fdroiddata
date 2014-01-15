@@ -1,4 +1,4 @@
-Category:Office
+Categories:Office
 License:GPLv3
 Web Site:http://code.google.com/p/android-salat-times
 Source Code:http://code.google.com/p/android-salat-times/source/list
@@ -15,7 +15,9 @@ direction of Mecca.
 Repo Type:git
 Repo:https://code.google.com/p/android-salat-times/
 
-Build Version:2.5,200,1c443f55db96,target=android-16
+Build:2.5,200
+    commit=1c443f55db96
+    target=android-16
 
 Maintainer Notes:
 Well behind gplay. already got positive response via email, yet no source code.

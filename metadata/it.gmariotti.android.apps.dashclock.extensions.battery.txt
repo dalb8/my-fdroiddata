@@ -1,4 +1,4 @@
-Category:Wallpaper
+Categories:Wallpaper
 License:Apache2
 Web Site:
 Source Code:https://github.com/gabrielemariotti/dashclockbattery
@@ -17,9 +17,12 @@ Description:
 Repo Type:git
 Repo:https://github.com/gabrielemariotti/dashclockbattery.git
 
-Build Version:1.6.4,19,04b37f313,subdir=BatteryExtension,\
-srclibs=DashClock@v1.2,rm=BatteryExtension/libs/dashclock-api-r1.1.jar,prebuild=\
-cp -r $$DashClock$$/api/src/com src/
+Build:1.6.4,19
+    commit=04b37f313
+    subdir=BatteryExtension
+    rm=BatteryExtension/libs/dashclock-api-r1.1.jar
+    srclibs=DashClock@v1.2
+    prebuild=cp -r $$DashClock$$/api/src/com src/
 
 # 1.8.x on gplay
 Auto Update Mode:None
