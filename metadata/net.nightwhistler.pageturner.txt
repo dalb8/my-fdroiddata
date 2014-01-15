@@ -41,10 +41,10 @@ Build:2.2.5,60
              sed -i '15,27d;s/3.6.1/3.8.0/g' pom.xml && \
              sed -i '366,372d' src/net/nightwhistler/pageturner/view/bookview/TextLoader.java && \
          unzip libs/LinLibertine.zip && rm libs/LinLibertine.zip && \
-         mv LinLibertine_Re.ttf assets/GentiumBasic.otf && \
-         mv LinLibertine_It.ttf assets/GentiumBasic-Italic.otf && \
-         mv LinLibertine_Bd.ttf assets/GentiumBasic-Bold.otf && \
-         mv LinLibertine_BI.ttf assets/GentiumBasic-BoldItalic.otf
+         mv LinLibertine_Re.ttf assets/FrankRuehl.otf && \
+         mv LinLibertine_It.ttf assets/FrankRuehl-Italic.otf && \
+         mv LinLibertine_Bd.ttf assets/FrankRuehl-Bold.otf && \
+         mv LinLibertine_BI.ttf assets/FrankRuehl-BoldItalic.otf
     build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
     maven=yes
 
