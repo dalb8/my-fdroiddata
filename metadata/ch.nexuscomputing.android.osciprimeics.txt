@@ -17,8 +17,7 @@ Repo:https://bitbucket.org/dalb8/osciiprime
 Build:Dagobert,14
     commit=0
     extlibs=android/android-support-v4.jar
-    prebuild=cp $$NDK$$/platforms/android-14/arch-arm/usr/lib/liblog.so jni/
-    scanignore=jni
+    build=cp $$NDK$$/platforms/android-14/arch-arm/usr/lib/liblog.so jni/
     buildjni=yes
 
 # grab zip from website

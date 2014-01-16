@@ -13,11 +13,6 @@ No description available
 Repo Type:git
 Repo:https://github.com/anthonycr/Lightning-Browser.git
 
-Build:2.4.3,42
-    commit=103b4e40e113beaf
-    target=android-17
-    prebuild=sed -i 's/MAX_TABS = 5/MAX_TABS = 15/g;s/MAX_BOOKMARKS = 5/MAX_BOOKMARKS = 50/g' src/acr/browser/barebones/Barebones.java
-
 Build:2.5.1.4,60
     commit=a383f8e77871b1
     target=android-18

@@ -30,7 +30,6 @@ Repo Type:git
 Repo:git://github.com/adventuregamestudio/ags.git
 
 Build:3.3.0-beta,1
-    disable=build woes on ndk r9
     commit=v.3.3.0-beta
     subdir=Android/launcher_list
     submodules=yes

@@ -13,14 +13,14 @@ Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/apps/Camera2
 
 Build:4.4.2,1
-    commit=android-4.4.2_r1
+    commit=android-sdk-4.4.2_r1
     target=android-19
     extlibs=android/android-support-v13.jar
     srclibs=Xmp@android-4.4.2_r1
     patch=build.xml_1.patch
     prebuild=cp -r $$Xmp$$ . && \
         echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=1' >> ant.properties && \
-        echo 'APP_ABI := all' >> jni/Application.mk
+        echo 'APP_ABI := armeabi-v7a' >> jni/Application.mk
     buildjni=yes
 
 Maintainer Notes:
