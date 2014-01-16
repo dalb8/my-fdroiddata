@@ -31,6 +31,7 @@ Repo:git://github.com/adventuregamestudio/ags.git
 
 Build:3.3.0-beta,1
     commit=v.3.3.0-beta
+    disable=ndk-r9 woes; legacy toolchains not an option
     subdir=Android/launcher_list
     submodules=yes
     init=find ../.. -iregex ".+\.\(a\|dll\|so\|exe\|lib\)" -type f -delete && \

@@ -17,9 +17,7 @@ Repo:https://code.google.com/p/music-practice-tools/
 Build:2.0,2
     commit=6e1c575b30d7
     target=android-16
-    srclibs=NumberPicker-SimonVT@1da4372;ActionBarSherlock@4.1.0
-    prebuild=echo "android.library.reference.1=$$ActionBarSherlock$$" >> project.properties && \
-        echo "android.library.reference.2=$$NumberPicker-SimonVT$$" >> project.properties
+    srclibs=2:NumberPicker-SimonVT@1da4372;1:ActionBarSherlock@4.1.0
     buildjni=yes
 
 Auto Update Mode:None

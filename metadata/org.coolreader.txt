@@ -27,13 +27,11 @@ Build:3.1.2-27,847
     buildjni=yes
 
 Build:3.1.2-35,855
-    disable=build probs
     commit=cr3gl3.3.2
     subdir=android
     init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
     target=android-17
     rm=android/ant.properties
-    prebuild=echo -e 'APP_ABI=armeabi\nNDK_TOOLCHAIN_VERSION=4.8\nAPP_CFLAGS += -Wno-error=format-security' > jni/Application.mk
     buildjni=yes
 
 Auto Update Mode:None

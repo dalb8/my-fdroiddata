@@ -18,8 +18,6 @@ navigation by default uses offline methods.
 Map data packages for many territories can be downloaded from
 within the app and there is a desktop program available on the website as well
 for creating your own.
-
-The "~" is appended to differentiate it from the developers' builds.
 .
 
 # Name srclibs in such a way as to replicate OsmAnd build tree

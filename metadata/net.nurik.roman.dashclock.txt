@@ -38,6 +38,17 @@ Build:1.4.3,19
     commit=v1.4.3
     subdir=main
 
+# gradle build that uses customized aars of dragsort
+# see ../../../main/version.properties for version
+Build:1.6,25
+    commit=ba178b86f8b7
+    disable=gradle version problems
+    subdir=main
+    gradle=yes
+    prebuild=echo 'sdk.dir=$$SDK$$' > ../local.properties && \
+         sed -i '10s/dashclock/main/g;51\,86d' build.gradle && \
+         sed -i '59\,74d' src/main/res/values-es/strings.xml
+
 Build:1.6,26
     commit=ba178b86f8b7
     subdir=main/src/main
@@ -50,16 +61,11 @@ Build:1.6,26
     prebuild=cd ../../../ && \
         echo "source.dir=$PWD/main/src/main/java;$PWD/api/src/main/java;$PWD/main/src/main/aidl;$PWD/api/src/main/aidl" >> main/src/main/ant.properties
 
-# gradle build that uses customized aars of dragsort
-# see ../../../main/version.properties for version
-#Build Version:1.5,25,v1.5,subdir=main,gradle=yes,\
-#prebuild=echo 'sdk.dir=$$SDK$$' > ../local.properties && \
-#         sed -i '10s/dashclock/main/g;s/18.0.0/18.0.1/g;51\,86d' build.gradle && \
-#         sed -i 's@"aidl@"$$SDK$$/build-tools/18.0.1/aidl@g' ../api/build.gradle && \
-#         sed -i 's/0.4/0.5.6/g' ../example-extension/build.gradle && \
-#         sed -i '59\,74d' src/main/res/values-es/strings.xml
-Auto Update Mode:None
+Maintainer Notes:
 # RM don't work; last version without GMS
+.
+
+Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.6
 Current Version Code:26
