@@ -8,34 +8,32 @@ Summary:Android keyboard
 Description:
 Comes with English, Spanish, Russian, Brazilian, Italian, German, French, dictionaries.
 The version name corresponds to the Android version.
+
+Emojis, white, etc.
 .
 
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/inputmethods/LatinIME
 
-Build:4.2.1,1
-    commit=android-4.2.1_r1
+Build:4.4.2-ARMv7,4424
+    commit=android-sdk-4.4.2_r1
     subdir=java
-    target=android-17
+    target=android-19
+    srclibs=Inputmethodcommon@android-4.4.2_r1
     extlibs=android/android-support-v4r13.jar
-    srclibs=Inputmethodcommon@android-4.2.1_r1
-    patch=build.xml_1.patch
-    prebuild=echo 'package.name=com.android.inputmethod.latin' >> ant.properties && \
-        sed -i '19 i android:versionName="4.2.1" android:versionCode="1"' AndroidManifest.xml && \
+    patch=custom_rules.xml_1.patch
+    prebuild=echo -e 'package.name=com.android.inputmethod.latin\nversion.name=4.4.2-ARMv7\nversion.code=4424' >> ant.properties && \
         cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/
-    build=$$NDK$$/ndk-build -e "APP_ABI=all" -C ../native && \
-        mv ../native/libs/* libs/
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi-v7a" -e "APP_CFLAGS += -w" -C ../native && mv ../native/libs/* libs/
 
 Maintainer Notes:
-Use the ant.properties to change the package name if you wish: it works fine
-
-4.3 or 4.4 don't build with NDK 9:
-jni/src/suggest/core/layout/proximity_info_utils.h:41:88:   instantiated from here
-/home/gerry/android-ndk-r9c/sources/cxx-stl/stlport/stlport/stl/_function_base.h:141:8: error: base class 'struct std::unary_function<std::pair<int const, int>, int const>' has a non-virtual destructor [-Werror=effc++]
+            echo -e 'APP_ABI=all\nAPP_CFLAGS += -w' >> ../native/jni/Application.mk && \
+Note that, like other AOSP apps, there are now special tags with 'sdk' in them; 
+not sure what the difference is.
 .
 
 Auto Update Mode:None
 Update Check Mode:None
-Current Version:4.2.1
-Current Version Code:1
+Current Version:4.4.2
+Current Version Code:4424
 

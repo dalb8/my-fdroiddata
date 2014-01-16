@@ -18,10 +18,13 @@ given location; if the device doesn't know it you can enter a manual one.
 Repo Type:git
 Repo:https://github.com/aragaer/jtt_android.git
 
-Build:1.4.4.1,23
-    commit=v1.4.4.1
+Build:1.4.4.2,24
+    commit=v1.4.4.2
     init=sed -i '/reference.1/d' project.properties
     srclibs=1:SunriseSunset-aragaer@aee96f
+
+Build:1.4.4.5-pre,25
+    disable=not published
 
 Maintainer Notes:
 Uses git submodules
