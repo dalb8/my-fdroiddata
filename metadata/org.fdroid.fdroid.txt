@@ -32,7 +32,7 @@ Build:0.53-test,53
     srclibs=1:ImageLoader@4aec2034749
     patch=icon_53.patch;play_53.patch
 
-Build:0.55,55
+Build:0.55,550
     commit=0.55
     srclibs=1:ImageLoader@v1.9.0
     patch=play_53.patch
@@ -44,6 +44,10 @@ Build:0.58,580
     update=no
     patch=play_570.patch
     prebuild=./ant-prepare.sh
+
+Maintainer Notes:
+    rm=res/drawable-xxhdpi;res/drawable-xhdpi;res/drawable-hdpi
+.
 
 Auto Update Mode:None
 Update Check Mode:Static
