@@ -7,13 +7,23 @@ Issue Tracker:http://code.google.com/p/android/issues/list?can=2&q=keyboard&cols
 Summary:Android keyboard
 Description:
 Comes with English, Spanish, Russian, Brazilian, Italian, German, French, dictionaries.
-The version name corresponds to the Android version.
-
-Emojis, white, etc.
+Emojis, white, etc. NO gesturing
 .
 
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/inputmethods/LatinIME
+
+Build:2.3.7,2370
+    commit=android-2.3.7_r1
+    disable=need to patch out logging code
+    subdir=java
+    target=android-10
+    extlibs=android/android-support-v4r10.jar
+    patch=custom_rules.xml_1.patch
+    prebuild=mv ../native jni/ && \
+             echo 'APP_ABI=all' >> jni/Application.mk && \
+             echo -e "package.name=com.android.inputmethod.latin\nversion.name=2.3.7\nversion.code=2370" >> ant.properties
+    buildjni=yes
 
 Build:4.4.2-ARMv7,4424
     commit=android-sdk-4.4.2_r1
@@ -25,11 +35,6 @@ Build:4.4.2-ARMv7,4424
     prebuild=echo -e "package.name=com.android.inputmethod.latin\nversion.name=4.4.2-ARMv7\nversion.code=4424" >> ant.properties && \
         cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/
     build=$$NDK$$/ndk-build -e "APP_ABI=armeabi-v7a" -e "APP_CFLAGS += -w" -C ../native && mv ../native/libs/* libs/
-
-Maintainer Notes:
-Note that, like other AOSP apps, there are now special tags with 'sdk' in them; 
-not sure what the difference is.
-.
 
 Auto Update Mode:None
 Update Check Mode:None
