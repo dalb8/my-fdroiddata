@@ -6,7 +6,7 @@ Issue Tracker:http://code.google.com/p/android/issues/list?can=2&q=keyboard&cols
 
 Summary:Android keyboard
 Description:
-Comes with English, Spanish, Russian, Brazilian, Italian, German, French, dictionaries.
+Comes with English, Spanish, French dictionaries.
 Emojis, white, etc. NO gesturing
 .
 
@@ -19,10 +19,10 @@ Build:2.3.7,2370
     subdir=java
     target=android-10
     extlibs=android/android-support-v4r10.jar
-    patch=custom_rules.xml_1.patch
+    patch=custom_rules.xml_4424.patch
     prebuild=mv ../native jni/ && \
              echo 'APP_ABI=all' >> jni/Application.mk && \
-             echo -e "package.name=com.android.inputmethod.latin\nversion.name=2.3.7\nversion.code=2370" >> ant.properties
+             echo -e "package.name=com.android.inputmethod.latino\nversion.name=2.3.7\nversion.code=2370" >> ant.properties
     buildjni=yes
 
 Build:4.4.2-ARMv7,4424
@@ -31,9 +31,11 @@ Build:4.4.2-ARMv7,4424
     target=android-19
     srclibs=Inputmethodcommon@android-4.4.2_r1
     extlibs=android/android-support-v4.jar
-    patch=custom_rules.xml_1.patch
-    prebuild=echo -e "package.name=com.android.inputmethod.latin\nversion.name=4.4.2-ARMv7\nversion.code=4424" >> ant.properties && \
-        cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/
+    patch=custom_rules.xml_4424.patch
+    rm=java/res/raw/main_ru.dict;java/res/raw/main_de.dict;java/res/raw/main_it.dict;java/res/raw/main_pt_br.dict
+    prebuild=echo -e "package.name=com.android.inputmethod.latino\nversion.name=4.4.2-ARMv7\nversion.code=4424" >> ant.properties && \
+        cp -r $$Inputmethodcommon$$/java/com/android/inputmethodcommon src/com/android/ && \
+        sed -i 's/com.android.inputmethod.dictionarypack.aosp/com.android.inputmethod.dictionarypack.aospo/g' res/values/dictionary-pack.xml
     build=$$NDK$$/ndk-build -e "APP_ABI=armeabi-v7a" -e "APP_CFLAGS += -w" -C ../native && mv ../native/libs/* libs/
 
 Auto Update Mode:None
