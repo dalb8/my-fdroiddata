@@ -25,7 +25,7 @@ Build:2.21.0-ARMv7,22100
     init=sed -i 's/android-4/android-8/g' ViewPagerIndicator/library/project.properties
     extlibs=iptables-script_1.4.20.zip
     rm=jni/iptables;res/raw
-    prebuild=sed -i 's/_armv7//g' src/com/googlecode/networklog/SysUtils.java && \
+    prebuild=sed -i -e 's/_armv7//' -e 's/5515873b7ce1617f3d724a3332c2b947/20e0f8e6248cfe1b814e48767f332d0b/' -e 's/69d0726f2b314a32fcd906a753deaabb/a0789f46374a169754a7ed306c9c0b59/' -e 's/5cdaa519c10ace37f62a0e6d65ce4f6e/97bf524c006ffb350e5e741b9f6897a7/' src/com/googlecode/networklog/SysUtils.java && \
              unzip libs/iptables-script_1.4.20.zip && \
              rm libs/iptables-script_1.4.20.zip && \
              sed -i 's/arm x86 mips/arm/;s/armeabi/armeabi-v7a/' external/Makefile && \
