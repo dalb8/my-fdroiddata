@@ -1,0 +1,63 @@
+Categories:Internet
+License:MPL2
+Web Site:https://code.google.com/p/iptableslog/
+Source Code:https://code.google.com/p/iptableslog/source
+Issue Tracker:https://code.google.com/p/iptableslog/issues
+
+Auto Name:Network Log
+Summary:See what's accessing the internet
+Description:
+Network Log monitors iptables-logging to display a real-time list of which apps
+are making
+network connections, and provides statistics about those app connections.
+
+Requires root: Yes. iptables must run as root
+.
+
+Requires Root:Yes
+
+Repo Type:git
+Repo:http://code.google.com/p/iptableslog/
+
+Build:2.21.0,22100
+    commit=2.21.0
+    init=sed -i 's/android-4/android-8/g' ViewPagerIndicator/library/project.properties
+    extlibs=iptables-script_1.4.20.zip
+    rm=jni/iptables;res/raw
+    prebuild=unzip libs/iptables-script_1.4.20.zip && \
+             rm libs/iptables-script_1.4.20.zip && \
+             mkdir -p res/raw libs/armeabi libs/armeabi-v7a libs/x86 libs/mips
+    build=make -C external NDK=$$NDK$$ && \
+        cp  external/iptables_arm        libs/armeabi-v7a/iptables_armv7 && \
+        zip  res/raw/iptables_armv7.zip  libs/armeabi-v7a/iptables_armv7 && \
+        mv  external/iptables_arm            libs/armeabi/iptables_armv5 && \
+        zip  res/raw/iptables_armv5.zip      libs/armeabi/iptables_armv5 && \
+        mv  external/iptables_x86                libs/x86/iptables_x86 && \
+        zip  res/raw/iptables_x86.zip            libs/x86/iptables_x86 && \
+        mv  external/iptables_mips              libs/mips/iptables_mips && \
+        zip  res/raw/iptables_mips.zip          libs/mips/iptables_mips && \
+        $$NDK$$/ndk-build && \
+        mv  libs/armeabi-v7a/nflog              libs/armeabi-v7a/nflog_armv7 && \
+        zip          res/raw/nflog_armv7.zip    libs/armeabi-v7a/nflog_armv7 && \
+        mv      libs/armeabi/nflog                  libs/armeabi/nflog_armv5 && \
+        zip          res/raw/nflog_armv5.zip        libs/armeabi/nflog_armv5 && \
+        mv          libs/x86/nflog                      libs/x86/nflog_x86 && \
+        zip          res/raw/nflog_x86.zip              libs/x86/nflog_x86 && \
+        mv         libs/mips/nflog                     libs/mips/nflog_mips && \
+        zip          res/raw/nflog_mips.zip            libs/mips/nflog_mips && \
+        mv     libs/armeabi-v7a/grep             libs/armeabi-v7a/grep_armv7 && \
+        zip             res/raw/grep_armv7.zip   libs/armeabi-v7a/grep_armv7 && \
+        mv         libs/armeabi/grep                 libs/armeabi/grep_armv5 && \
+        zip             res/raw/grep_armv5.zip       libs/armeabi/grep_armv5 && \
+        mv             libs/x86/grep                     libs/x86/grep_x86 && \
+        zip             res/raw/grep_x86.zip             libs/x86/grep_x86 && \
+        mv            libs/mips/grep                    libs/mips/grep_mips && \
+        zip             res/raw/grep_mips.zip           libs/mips/grep_mips && \
+        rm -rf libs/armeabi libs/armeabi-v7a libs/mips libs/x86
+    buildjni=no
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.21.0
+Current Version Code:22100
+
