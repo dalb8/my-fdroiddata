@@ -1,0 +1,24 @@
+Categories:System
+License:GPLv3
+Web Site:http://code.google.com/p/applocker
+Source Code:http://code.google.com/p/applocker/source
+Issue Tracker:http://code.google.com/p/applocker/issues
+
+Auto Name:AppLocker
+Summary:Lockdown your apps
+Description:
+A simple mechanism for preventing certain apps from opening without a password
+.
+
+Repo Type:git-svn
+Repo:http://applocker.googlecode.com/svn/trunk/AppLocker
+
+Build:1.2,3
+    commit=6
+    prebuild=sed -i '/AndroidBinding/d' project.properties
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.2
+Current Version Code:3
+
