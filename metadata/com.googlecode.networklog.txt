@@ -21,6 +21,7 @@ Repo:http://code.google.com/p/iptableslog/
 
 Build:2.21.0,22100
     commit=2.21.0
+    disable=non-functional: Error: no valid subcommand given
     init=sed -i 's/android-4/android-8/g' ViewPagerIndicator/library/project.properties
     extlibs=iptables-script_1.4.20.zip
     rm=jni/iptables;res/raw
