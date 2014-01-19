@@ -26,9 +26,9 @@ Build:0.9.4-beta,6
     commit=81646ec7f0151c3
     subdir=FairphonePeaceOfMind
     gradle=yes
-    srclibs=RootTools@310
+    srclibs=RootTools@3.4
     prebuild=sed -i '/RootTools/d' build.gradle && \
-        cp -r $$RootTools$$/3.4/src/* src/main/java/
+        cp -r $$RootTools$$/src/* src/main/java/
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest

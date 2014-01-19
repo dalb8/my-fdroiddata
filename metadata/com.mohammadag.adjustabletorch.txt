@@ -16,8 +16,8 @@ Repo:https://github.com/MohammadAG/android-AdjustableTorch.git
 Build:1.6,7
     disable=build error
     commit=69a82f84d2cec3072
-    srclibs=RootTools@310;2:MobAdMob@2d5736
-    prebuild=echo 'source.dir=src;$$MobAdMob$$/src;$$RootTools$$/3.4/src' >> ant.properties
+    srclibs=RootTools@3.4;2:MobAdMob@2d5736
+    prebuild=echo 'source.dir=src;$$MobAdMob$$/src;$$RootTools$$/src' >> ant.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
