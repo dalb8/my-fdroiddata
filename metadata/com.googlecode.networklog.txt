@@ -21,40 +21,27 @@ Repo:http://code.google.com/p/iptableslog/
 
 Build:2.21.0,22100
     commit=2.21.0
-    disable=non-functional: Error: no valid subcommand given
+    disable=non-functional; iptables problem
     init=sed -i 's/android-4/android-8/g' ViewPagerIndicator/library/project.properties
     extlibs=iptables-script_1.4.20.zip
     rm=jni/iptables;res/raw
     prebuild=unzip libs/iptables-script_1.4.20.zip && \
              rm libs/iptables-script_1.4.20.zip && \
+             sed -i 's/arm x86 mips/arm/' external/Makefile && \
              mkdir -p res/raw libs/armeabi libs/armeabi-v7a libs/x86 libs/mips
     build=make -C external NDK=$$NDK$$ && \
         cp  external/iptables_arm        libs/armeabi-v7a/iptables_armv7 && \
         zip  res/raw/iptables_armv7.zip  libs/armeabi-v7a/iptables_armv7 && \
-        mv  external/iptables_arm            libs/armeabi/iptables_armv5 && \
-        zip  res/raw/iptables_armv5.zip      libs/armeabi/iptables_armv5 && \
-        mv  external/iptables_x86                libs/x86/iptables_x86 && \
-        zip  res/raw/iptables_x86.zip            libs/x86/iptables_x86 && \
-        mv  external/iptables_mips              libs/mips/iptables_mips && \
-        zip  res/raw/iptables_mips.zip          libs/mips/iptables_mips && \
         $$NDK$$/ndk-build && \
         mv  libs/armeabi-v7a/nflog              libs/armeabi-v7a/nflog_armv7 && \
         zip          res/raw/nflog_armv7.zip    libs/armeabi-v7a/nflog_armv7 && \
-        mv      libs/armeabi/nflog                  libs/armeabi/nflog_armv5 && \
-        zip          res/raw/nflog_armv5.zip        libs/armeabi/nflog_armv5 && \
-        mv          libs/x86/nflog                      libs/x86/nflog_x86 && \
-        zip          res/raw/nflog_x86.zip              libs/x86/nflog_x86 && \
-        mv         libs/mips/nflog                     libs/mips/nflog_mips && \
-        zip          res/raw/nflog_mips.zip            libs/mips/nflog_mips && \
-        mv     libs/armeabi-v7a/grep             libs/armeabi-v7a/grep_armv7 && \
-        zip             res/raw/grep_armv7.zip   libs/armeabi-v7a/grep_armv7 && \
-        mv         libs/armeabi/grep                 libs/armeabi/grep_armv5 && \
-        zip             res/raw/grep_armv5.zip       libs/armeabi/grep_armv5 && \
-        mv             libs/x86/grep                     libs/x86/grep_x86 && \
-        zip             res/raw/grep_x86.zip             libs/x86/grep_x86 && \
-        mv            libs/mips/grep                    libs/mips/grep_mips && \
-        zip             res/raw/grep_mips.zip           libs/mips/grep_mips && \
-        rm -rf libs/armeabi libs/armeabi-v7a libs/mips libs/x86
+        mv  libs/armeabi-v7a/grep               libs/armeabi-v7a/grep_armv7 && \
+        zip          res/raw/grep_armv7.zip     libs/armeabi-v7a/grep_armv7 && \
+        rm -rf libs/armeabi libs/armeabi-v7a libs/mips libs/x86 && \
+        cd res/raw/ && \
+        touch iptables_armv5.zip iptables_x86.zip iptables_mips.zip && \
+        touch nflog_armv5.zip    nflog_x86.zip    nflog_mips.zip && \
+        touch grep_armv5.zip     grep_x86.zip     grep_mips.zip
     buildjni=no
 
 Auto Update Mode:None
