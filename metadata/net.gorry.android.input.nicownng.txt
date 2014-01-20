@@ -33,7 +33,6 @@ Build:2013.0708.1.1305,201307081
 Build:2013.1231.1.1305,201312311
     commit=5
     target=android-19
-    prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk
     buildjni=yes
 
 Maintainer Notes:
