@@ -49,6 +49,6 @@ Build:2.4.4,363
 Auto Update Mode:None
 Update Check Mode:Tags
 Vercode Operation:%c*10 + 3
-Current Version:2.4.2
-Current Version Code:343
+Current Version:2.4.4
+Current Version Code:363
 

@@ -1,0 +1,15 @@
+Categories:Multimedia
+License:Apache2
+Source Code:https://github.com/CyanogenMod/android_packages_apps_DSPManager
+Issue Tracker:https://github.com/CyanogenMod/android_packages_apps_DSPManager/issues
+
+Summary:Audio filters
+Description:
+Handy filters for headphone users.
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:2.0
+Current Version Code:2
+
