@@ -1,0 +1,47 @@
+diff --git a/android/build.gradle b/android/build.gradle
+index d445484..76a7f2c 100644
+--- a/android/build.gradle
++++ b/android/build.gradle
+@@ -4,7 +4,6 @@ buildscript {
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:0.7.+'
+-        classpath 'com.github.jcandksolutions.gradle:android-unit-test:1.0.+'
+     }
+ }
+ 
+@@ -12,9 +11,6 @@ apply plugin: 'android'
+ 
+ repositories {
+     mavenCentral()
+-    maven {
+-        url project.hasProperty('ligisMavenUrl') ? ligisMavenUrl : "https://raw.github.com/ligi/ligis-mvn-repo/master";
+-    }
+ }
+ 
+ 
+@@ -56,23 +52,7 @@ android {
+ }
+ 
+ 
+-apply plugin: 'android-unit-test'
+-
+ dependencies {
+-    repositories {
+-        mavenCentral()
+-    }
+-
+-    compile 'org.ligi:tracedroid:1.1'
+-
+-    testCompile 'junit:junit:4.10'
+-    testCompile 'org.robolectric:robolectric:2.2'
+-    testCompile "com.squareup:fest-android:1.0.7"
++    compile files ('Tracedroid-1.1.jar')
+ }
+ 
+-
+-tasks.withType(Test) {
+-    scanForTestClasses = false
+-    include "**/*The*.class" // whatever Ant pattern matches your test class files
+-    exclude '**/*$*' //exclude inner classes
+-}
