@@ -16,17 +16,22 @@ Apps can be loaded directly from the likes of [[org.coolreader]].
 Repo Type:git-svn
 Repo:http://smashwords-access-for-android.googlecode.com/svn/trunk/
 
-Build:011 beta,11
-    commit=25
+Build:014 beta,14
+    commit=33
     subdir=SmashwordsAccess
-    extlibs=jsoup/jsoup-1.7.2.jar
-    srclibs=1:ActionBarSherlock@4.4.0;Smashwords-API@51;Google-Gson@1163;ImageLoader-Novoda@imageloader-parent-1.5.0
-    prebuild=cp -r $$Smashwords-API$$/src/main/java/com/unleashyouradventure/swapi/ src/com/unleashyouradventure/ && \
-        cp -r $$ImageLoader-Novoda$$/src/main/java/com/novoda/ src/com/ && \
-        cp -r $$Google-Gson$$/src/main/java/com/google/ src/com/
+    extlibs=SW-build.gradle_58
+    srclibs=1:ActionBarSherlock@4.4.0;Smashwords-API@58;ImageLoader-Novoda@imageloader-parent-1.5.8
+    rm=SmashwordsAccess/libs/imageloader-core-1.5.8.jar
+    prebuild=cp -r $$ImageLoader-Novoda$$/src/main/java/com/novoda/ src/com/ && \
+             mv libs/SW-build.gradle_58 $$Smashwords-API$$/build.gradle
+    build=gradle jar -p $$Smashwords-API$$ && \
+          mv $$Smashwords-API$$/build/libs/SmashwordsAPI-1.0-SNAPSHOT.jar libs/
+
+Maintainer Notes:
+.
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:012 beta
-Current Version Code:12
+Update Check Mode:None
+Current Version:014 beta
+Current Version Code:14
 

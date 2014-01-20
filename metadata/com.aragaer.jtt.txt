@@ -1,18 +1,22 @@
 Categories:System
 License:MIT
-Web Site:
+Web Site:http://aragaer.github.com/jtt_android
 Source Code:https://github.com/aragaer/jtt_android
 Issue Tracker:https://github.com/aragaer/jtt_android/issues
 
 Auto Name:Japanese Traditional Time
 Summary:Clock widget
 Description:
+A clock widget based on the traditional Japanese time
+[https://en.wikipedia.org/wiki/Japanese_clock#The_traditional_Japanese_time_system system].
+
 * Widget showing the current hour (named after an animal)
 * Mapping of traditional time to local time
 * (Eventually) Alarms based on traditional time
 
-It all comes down to knowing sunrise and sunset time for a given date in a 
-given location; if the device doesn't know it you can enter a manual one. 
+The sunrise and sunset times for are calculated locally 
+by the app for the current location; 
+if the device doesn't know that you can enter a manual one. 
 .
 
 Repo Type:git
