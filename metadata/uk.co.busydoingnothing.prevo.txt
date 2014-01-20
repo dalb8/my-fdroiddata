@@ -14,8 +14,8 @@ searched with the keyboard.
 Repo Type:git
 Repo:git://git.busydoingnothing.co.uk/prevo-android.git
 
-Build:0.8,8
-    commit=0.8
+Build:0.9,9
+    commit=0.9
     target=android-14
     srclibs=Revo@ade7e27bf8;PrevoDB@c2de0f915c9c4
     build=cp -r $$Revo$$ . && \
@@ -32,8 +32,8 @@ Build:0.8,8
         ./src/prevodb -i ../Revo -o ..
 
 Auto Update Mode:None
-#Tags/Repo can't find version info and no reviews on market
-Update Check Mode:Static
-Current Version:0.8
-Current Version Code:8
+# Tags/Repo can't find version info
+Update Check Mode:None
+Current Version:0.9
+Current Version:9
 
