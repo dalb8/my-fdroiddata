@@ -1,0 +1,24 @@
+Categories:Navigation
+License:Unknown
+Web Site:
+Source Code:https://github.com/takyonxxx/Flight-Computer-Android
+Issue Tracker:https://github.com/takyonxxx/Flight-Computer-Android/issues
+
+Auto Name:FlightComputer
+Summary:Maps for flying
+Description:
+Note: many other cool apps by developer
+.
+
+Repo Type:git
+Repo:https://github.com/takyonxxx/Flight-Computer-Android.git
+
+Build:3.1,31
+    disable=jars look legit but no license
+    commit=c7d25ec9597dc82
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:3.1
+Current Version Code:31
+
