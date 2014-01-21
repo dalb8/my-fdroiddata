@@ -1,5 +1,7 @@
 Repo Type:git
 Repo:https://github.com/asksven/AndroidCommon
 
+Srclibs:RootTools
+Prepare:rm libs/RootTools-2.6.jar
 Update Project:Yes
-
+#&& cp -R $$RootTools$$/src/com/* src/com/    && sed -i '/RootTools/d' project.properties
