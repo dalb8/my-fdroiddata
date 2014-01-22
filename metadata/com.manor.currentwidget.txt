@@ -51,5 +51,3 @@ Update Check Mode:RepoManifest
 Current Version:0.38a
 Current Version Code:36
 
-No Source Since:0.39a
-

@@ -1,4 +1,4 @@
-Categories:Wallpaper
+Category:Wallpaper
 License:MIT
 Web Site:
 Source Code:https://github.com/shakalaca/BeautyClockLiveWallpaper
@@ -8,8 +8,8 @@ Auto Name:Beauty Clock
 Summary:Pictures of people with the time
 Description:
 Bijin Tokei is a genre of wallpaper that is popular in East Asia.
-Every minute the wallpaper changes to a picture of a person (usually 
-a pretty woman) holding an object that displays the time.
+Every minute the wallpaper changes to a picture of a pretty girl
+holding an object that displays the time.
 
 This app will download the pictures for every minute from your chosen
 site without caching them ''but'' it will check if images already exist

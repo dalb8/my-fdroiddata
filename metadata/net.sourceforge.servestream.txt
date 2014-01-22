@@ -36,7 +36,7 @@ Build:0.6.3,78
         sed -i 's/make -j4/make -j2/g' scripts/* && \
         rm custom_rules.xml && \
         chmod +x scripts/build-ffmpeg.sh && \
-        sed -i 's/x86 mips/mips/g' jni/Application.mk
+        sed -i 's/x86 mips//g' jni/Application.mk
     build=./scripts/build-ffmpeg.sh
     buildjni=yes
 

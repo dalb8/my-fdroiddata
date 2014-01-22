@@ -30,11 +30,6 @@ Build:0.4.0,40000
         sed -i '/proguard/d' project.properties
     buildjni=yes
 
-Build:0.4.0.1,40010
-    disable=not a release
-    commit=unknown - see disabled
-    subdir=pdfview
-
 Build:0.4.0.2,40020
     disable=not a release
     commit=unknown - see disabled

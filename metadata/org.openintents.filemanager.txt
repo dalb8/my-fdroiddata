@@ -29,6 +29,9 @@ Build:2.0.2,26
         $$SDK$$/tools/android update project -p $$OI$$/distribution/DistributionLibrary -t android-11
     buildjni=yes
 
+Build:2.0.3,28
+    disable=beta
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:2.0.3-rc1
