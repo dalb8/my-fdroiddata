@@ -15,4 +15,5 @@ the f-droid.org repo, keeping everything fresh isn't a top priority for me.
 
 Everything is built with a recent version of fdroidserver, but probably not
 on a build server so you could have dependency issues for some of the apps.
+Current tweaks: Remove gradle clean.
 
