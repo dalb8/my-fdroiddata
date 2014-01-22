@@ -27,15 +27,11 @@ Build:1.0.2.8,1028
     commit=74363eaa79
     subdir=Superuser
     srclibs=1:KoushWidgets@2cc45f3
-    patch=packageid_1028.patch
-    prebuild=sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk && \
-        echo "android.jar=$$SDK$$/platforms/android-19/android.jar" > ant.properties && \
-        sed -i 's/#define REQUESTOR JAVA_PACKAGE_NAME/#define REQUESTOR "org.fdroid.superuser"/g' jni/su/su.h
+    prebuild=sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk
     buildjni=yes
 
 Auto Update Mode:None
-# different package name
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:1.0.2.8
 Current Version Code:1028
 
