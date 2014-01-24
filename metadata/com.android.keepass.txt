@@ -22,6 +22,7 @@ Repo:git://github.com/bpellin/keepassdroid.git
 Build:1.99.10,128
     commit=v1.99.9
     extlibs=keepass/sha2-07-01-07.zip
+    rm=assets
     prebuild=unzip libs/sha2-07-01-07.zip -d jni/sha && \
         rm libs/sha2-07-01-07.zip
     buildjni=yes
