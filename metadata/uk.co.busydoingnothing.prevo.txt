@@ -25,15 +25,13 @@ Build:0.9,9
         aclocal && \
         autoheader && \
         automake -a && \
-        intltoolize && \
         autoconf && \
         ./configure && \
         make -j2 && \
         ./src/prevodb -i ../Revo -o ..
 
 Auto Update Mode:None
-# Tags/Repo can't find version info
-Update Check Mode:None
+Update Check Mode:Tags
 Current Version:0.9
 Current Version:9
 

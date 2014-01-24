@@ -23,7 +23,7 @@ Requires Root:Yes
 Repo Type:git
 Repo:https://github.com/koush/Superuser.git
 
-Build:1.0.2.8,1028
+Build:1.0.2.8,1027
     commit=74363eaa79
     subdir=Superuser
     srclibs=1:KoushWidgets@2cc45f3
@@ -33,5 +33,5 @@ Build:1.0.2.8,1028
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0.2.8
-Current Version Code:1028
+Current Version Code:1027
 
