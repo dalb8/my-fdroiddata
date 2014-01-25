@@ -8,7 +8,7 @@ Donate:http://forum.xda-developers.com/donatetome.php?u=4674443
 Summary:System configuration
 Description:
 '''Uninstall 2.1.8 before installing 2.1.9'''
-'''N.B''' Sqlite functions removed in 2.1.5.
+Sqlite functions don't work unless you have sqlite3 busybox applet installed.
 
 *Change CPU Governor, I/O Scheduler and Clock Speed
 *Battery information + Fast Charge setting + Battery Life eXtender setting
@@ -29,10 +29,13 @@ Repo:https://github.com/erik96/android_packages_apps_PerformanceControl
 
 Build:2.1.9 beta2,4
     commit=17f6e6df80c89
-    prebuild=rm assets/sq*
+    target=android=19
+    rm=assets/sqlite3
+    prebuild=sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
 
 Maintainer Notes:
 quite hard to figure out
+development in gh.com/horn3t
 Update Check Mode:RepoManifest/jb2
 .
 
