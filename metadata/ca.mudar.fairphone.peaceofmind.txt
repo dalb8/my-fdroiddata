@@ -26,10 +26,12 @@ Build:1.0,8
     commit=36fd2aeb73
     subdir=FairphonePeaceOfMind
     gradle=yes
-    srclibs=RootTools@3.4
+    srclibs=RootTools-new@3.4
     rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar
-    prebuild=sed -i '/RootTools/d' build.gradle && \
-        cp -r $$RootTools$$/src/* src/main/java/
+    prebuild=sed -i "/^    compile files/d" build.gradle && \
+             sed -i "37 i \ \ \ \ compile project(':RootTools-new')" build.gradle && \
+             echo "include ':RootTools-new'" >> ../settings.gradle && \
+             ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
