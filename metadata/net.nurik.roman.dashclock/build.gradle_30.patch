@@ -1,0 +1,27 @@
+diff --git a/main/build.gradle b/main/build.gradle
+index 14b8eb7..e04e756 100644
+--- a/main/build.gradle
++++ b/main/build.gradle
+@@ -29,9 +29,6 @@ project.archivesBaseName = "dashclock"
+ 
+ repositories {
+     mavenCentral()
+-    flatDir {
+-        dirs '../local_aars'
+-    }
+ }
+ 
+ dependencies {
+--- a/main/build.gradle
++++ b/main/build.gradle
+@@ -36,8 +36,7 @@ repositories {
+ 
+ dependencies {
+     compile 'com.android.support:support-v13:18.0.0'
+-    compile 'com.google.android.gms:play-services:4.0.30'
+-    //compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1-SNAPSHOT-AAR'
++    compile project(':DragSort')
+-    compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1-SNAPSHOT-AAR@aar'
++    //compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1-SNAPSHOT-AAR@aar'
+     compile project(':api')
+ }
