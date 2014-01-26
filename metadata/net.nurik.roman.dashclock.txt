@@ -1,3 +1,4 @@
+AntiFeatures:UpstreamNonFree
 Categories:Wallpaper
 License:Apache2
 Web Site:http://code.google.com/p/dashclock
@@ -25,18 +26,6 @@ and then dragging it horizontally to the very rightmost position.
 
 Repo Type:srclib
 Repo:DashClock
-
-# gradle build that uses customized aars of dragsort
-# see ../../../main/version.properties for version
-Build:1.6,25
-    commit=ba178b86f8b7
-    disable=fdroid hobbles the build.gradle
-    subdir=main
-    gradle=yes
-    rm=example-extension
-    prebuild=echo 'sdk.dir=$$SDK$$' > ../local.properties && \
-         sed -i '10s/dashclock/main/g;51,86d' build.gradle && \
-         sed -i '59,74d' src/main/res/values-es/strings.xml
 
 Build:1.6,26
     commit=ba178b86f8b7
