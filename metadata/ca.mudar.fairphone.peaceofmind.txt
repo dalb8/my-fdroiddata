@@ -22,16 +22,17 @@ the request is declined only Silent Mode will be enabled instead.
 Repo Type:srclib
 Repo:Fairphone-mudar
 
-Build:0.9.4-beta,6
-    commit=81646ec7f0151c3
+Build:1.0,8
+    commit=36fd2aeb73
     subdir=FairphonePeaceOfMind
     gradle=yes
     srclibs=RootTools@3.4
+    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar
     prebuild=sed -i '/RootTools/d' build.gradle && \
         cp -r $$RootTools$$/src/* src/main/java/
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:0.9.4 beta
-Current Version Code:6
+Current Version:1.0
+Current Version Code:8
 
