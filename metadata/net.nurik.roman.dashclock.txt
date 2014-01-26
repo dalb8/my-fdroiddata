@@ -56,6 +56,7 @@ Build:1.6,30
     gradle=yes
     extlibs=DragSort-build.gradle
     srclibs=DragSort@0.6.1
+    rm=example-extension
     patch=code_30.patch;disable_gplay_30.patch;build.gradle_30.patch
     prebuild=echo "sdk.dir=$ANDROID_HOME" > ../local.properties && \
              echo -e "include ':DragSort'\nproject(':DragSort').projectDir = new File('$(readlink -f $$DragSort$$)')" >> ../settings.gradle && \
@@ -63,10 +64,11 @@ Build:1.6,30
              sed -i '/^project\.archivesBaseName/d' build.gradle
 
 Maintainer Notes:
+code patch necessary due to this open issue: http://code.google.com/p/dashclock/issues/detail?id=495
 .
 
 Auto Update Mode:None
-Update Check Mode:Tags
+Update Check Mode:None
 Current Version:1.6
 Current Version Code:26
 
