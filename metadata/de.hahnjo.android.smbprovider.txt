@@ -1,0 +1,21 @@
+Categories:System
+License:GPLv3
+Source Code:https://github.com/hahnjo/SMBProvider
+Issue Tracker:https://github.com/hahnjo/SMBProvider/issues
+
+Summary:Access SMB shares
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/hahnjo/SMBProvider.git
+
+Build:0.9,1
+    commit=0.9
+    gradle=yes
+    prebuild=sed -i 's/gradle:+/gradle:0.7.+/g' build.gradle
+    rm=store
+
+Auto Update Mode:None
+Update Check Mode:Tags
+
