@@ -1,0 +1,27 @@
+Categories:System
+License:Apache2
+Web Site:https://github.com/jackpal/Android-Terminal-Emulator/wiki
+Source Code:https://github.com/jackpal/Android-Terminal-Emulator
+Issue Tracker:https://github.com/jackpal/Android-Terminal-Emulator/issues
+
+Auto Name:Terminal Emulator
+Summary:Terminal Emulator
+Description:
+VT-100 compatible terminal emulator.
+.
+
+Repo Type:git
+Repo:https://github.com/jackpal/Android-Terminal-Emulator.git
+
+Build:1.0.54,55
+    commit=v1.0.54
+    target=android-12
+    update=.;libraries/emulatorview
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    buildjni=no
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.0.54
+Current Version Code:55
+

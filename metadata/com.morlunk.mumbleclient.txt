@@ -1,0 +1,45 @@
+Categories:Internet
+License:GPLv3
+Web Site:https://morlunk.com
+Source Code:https://github.com/Morlunk/Plumble
+Issue Tracker:https://github.com/Morlunk/Plumble/issues
+
+Auto Name:Plumble
+Summary:Voice chat for Mumble servers
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/Morlunk/Plumble.git
+
+Build:3.0.0-beta1,53
+    commit=9233fb
+    subdir=Plumble
+    gradle=official
+    init=sed -i 's/libonionkit/libonionkit:libonionkit/g' ../settings.gradle && \
+         sed -i 's/libonionkit/libonionkit:libonionkit/g'    build.gradle && \
+         cd ../ && \
+         git submodule update --init --recursive 
+    prebuild=cd libraries/libonionkit/libonionkit && \
+             git stash && \
+             git clean -dfx && \
+             cd ../../Jumble && \
+             git stash && \
+             git clean -dfx && \
+             rm libs/armeabi/*
+    buildjni=libraries/Jumble/jni
+
+Maintainer Notes:
+Use this for gradle 1.10:
+
+         sed -i 's/gradle:0.7.+/gradle:0.8.+/g' build.gradle && \
+         sed -i 's/gradle:0.5.+/gradle:0.8.+/g' libraries/libonionkit/libonionkit/build.gradle && \
+         sed -i 's/gradle:0.7.+/gradle:0.8.+/g' libraries/Jumble/build.gradle && \
+.
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:3.0.0-beta1
+Current Version Code:53
+
