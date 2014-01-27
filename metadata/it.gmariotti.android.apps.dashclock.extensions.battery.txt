@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:Wallpaper
 License:Apache2
 Web Site:

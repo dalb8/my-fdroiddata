@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:System
 License:MIT
 Web Site:http://aragaer.github.com/jtt_android

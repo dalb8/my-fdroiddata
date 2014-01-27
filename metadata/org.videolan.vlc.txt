@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:Multimedia
 License:LGPLv3
 Web Site:http://www.videolan.org/vlc/download-android.html

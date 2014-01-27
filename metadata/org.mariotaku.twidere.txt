@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:Internet
 License:GPLv3
 Web Site:https://github.com/mariotaku/twidere

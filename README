@@ -1,6 +1,6 @@
 An Fdroiddata repo for building FOSS Android apps from source. 
 Like the f-droid.org one, the texts are licensed as GPLv3; 
-currently the git repo is about 15MiB in size.
+currently this git repo is about 18MiB in size.
 
 Metadata here serves to maintain my own apk repository serving close friends 
 and family; It has been tested and inspected to the extent that the apks build; 
@@ -15,9 +15,5 @@ the f-droid.org repo, keeping everything fresh isn't a top priority for me.
 
 Everything is built with a recent version of fdroidserver, but probably not
 on a build server so you could have dependency issues for some of the apps.
-<<<<<<< HEAD
-Current tweaks: Remove gradle clean.
-=======
-Current tweaks: Remove ant/gradle clean.
->>>>>>> f046b4c9a0bd858d7e37adc1b56df1b11cb43034
+Current tweaks: Remove gradle clean; make empty tarballs.
 

@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/pom.xml b/pom.xml
 index 7354650..9d8fa77 100644
 --- a/pom.xml

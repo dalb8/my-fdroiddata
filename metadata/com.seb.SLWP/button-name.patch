@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Use consistent capitalization on button name.
 
 diff --git a/res/layout/prefliste.xml b/res/layout/prefliste.xml

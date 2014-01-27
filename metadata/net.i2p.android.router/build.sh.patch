@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 *** a/routerjars/jni/build.sh	2013-10-28 19:34:32.790844250 +0100
 --- b/routerjars/jni/build.sh	2013-10-28 19:35:39.906841258 +0100
 ***************

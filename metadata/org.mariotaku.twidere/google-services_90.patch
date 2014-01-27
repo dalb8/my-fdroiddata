@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/src/org/mariotaku/twidere/activity/support/MapViewerActivity.java b/src/org/mariotaku/twidere/activity/support/MapViewerActivity.java
 index 25f07ac..7e2b5f5 100644
 --- a/src/org/mariotaku/twidere/activity/support/MapViewerActivity.java

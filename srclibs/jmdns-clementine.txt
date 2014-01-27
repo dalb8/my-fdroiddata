@@ -1,2 +1,4 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Repo Type:git
 Repo:http://code.google.com/p/clementine-remote-android.dep-jmdns

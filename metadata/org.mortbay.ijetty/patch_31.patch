@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/i-jetty-ui/pom.xml b/i-jetty-ui/pom.xml
 index 26adc2f..d9eabc5 100644
 --- a/i-jetty-ui/pom.xml

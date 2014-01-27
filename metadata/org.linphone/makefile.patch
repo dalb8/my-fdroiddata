@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/Makefile b/Makefile
 index 2dbde39..fa7d6b8 100644
 --- a/Makefile

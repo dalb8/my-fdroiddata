@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/res/values-fr/strings.xml b/res/values-fr/strings.xml
 index 140d071..719b25e 100644
 --- a/res/values-fr/strings.xml

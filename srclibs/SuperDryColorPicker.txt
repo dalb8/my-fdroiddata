@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Repo Type:git
 Repo:https://github.com/superdry/SuperdryColorPickerLib
 Prepare:$$SDK$$/tools/android update project -p . -t android-10

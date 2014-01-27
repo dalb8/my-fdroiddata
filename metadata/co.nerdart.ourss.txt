@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:None
 License:Unknown
 Web Site:https://github.com/dubyajaysmith/OURSS

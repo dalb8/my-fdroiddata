@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:System
 License:Apache2
 Web Site:
@@ -13,8 +15,8 @@ Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/inputmethods/PinyinIME
 
 Build:4.2.1,1
-    disable=uses import android.os.SystemProperties
-    commit=cm-10.2.0
+    disable=uses android.os properties
+    commit=android-sdk-4.4.2_r1
     target=android-19
     patch=build_1.patch;ndk-build_1.patch
     prebuild=mv lib/com/android/inputmethod/pinyin/* src/com/android/inputmethod/pinyin/ && \

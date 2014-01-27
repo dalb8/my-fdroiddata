@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Categories:Multimedia
 License:Apache2
 Web Site:
@@ -17,7 +19,7 @@ Build:4.4.2,1
     target=android-19
     extlibs=android/android-support-v13.jar
     srclibs=Xmp@android-4.4.2_r1
-    patch=build.xml_1.patch
+    patch=custom_rules.xml_1.patch
     prebuild=cp -r $$Xmp$$ . && \
         echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=1' >> ant.properties && \
         echo 'APP_ABI := armeabi-v7a' >> jni/Application.mk

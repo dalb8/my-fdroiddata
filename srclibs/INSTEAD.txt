@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 # The repo is blob-heavy, so no git-svn
 Repo Type:svn
 Repo:http://svn.code.sf.net/p/instead/code/trunk

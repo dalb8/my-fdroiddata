@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/project.properties b/project.properties
 index 79a96c4..910deaf 100644
 --- a/project.properties

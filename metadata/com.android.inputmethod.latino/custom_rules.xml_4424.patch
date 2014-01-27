@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/java/custom_rules.xml b/java/custom_rules.xml
 new file mode 100644
 index 0000000..25fc1eb

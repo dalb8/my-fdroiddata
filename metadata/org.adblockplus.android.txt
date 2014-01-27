@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 AntiFeatures:Tracking,Ads
 Categories:Internet
 License:GPLv3

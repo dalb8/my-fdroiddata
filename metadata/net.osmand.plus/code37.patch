@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/OsmAnd/AndroidManifest.xml b/OsmAnd/AndroidManifest.xml
 index c9460eb..8afd022 100644
 --- a/OsmAnd/AndroidManifest.xml

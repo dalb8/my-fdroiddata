@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 diff --git a/bushido-blocks-android/src/com/sandeel/bushidoblocks/AndroidLeaderboard.java b/bushido-blocks-android/src/com/sandeel/bushidoblocks/AndroidLeaderboard.java
 index 6f70a79..73ba50f 100644
 --- a/bushido-blocks-android/src/com/sandeel/bushidoblocks/AndroidLeaderboard.java

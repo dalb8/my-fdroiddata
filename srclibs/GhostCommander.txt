@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/adsgasd/my-fdroiddata
 Repo Type:git-svn
 Repo:http://svn.code.sf.net/p/ghostcommander/code/
 Prepare:rm -rf gen/ && $$SDK$$/tools/android update project -p . -t android-17
