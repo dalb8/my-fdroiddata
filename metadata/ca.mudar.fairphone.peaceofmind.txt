@@ -21,19 +21,21 @@ Requires root on Android 4.2+ to put the phone in Airplane Mode; if
 the request is declined only Silent Mode will be enabled instead.
 .
 
-Repo Type:srclib
-Repo:Fairphone-mudar
+Repo Type:git
+Repo:https://github.com/mudar/Fairphone
 
 Build:1.0,8
     commit=36fd2aeb73
     subdir=FairphonePeaceOfMind
     gradle=defaultFlavor
     srclibs=RootTools-new@3.4
-    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar
+    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar;FairphoneHome
     prebuild=sed -i "/^    compile files/d" build.gradle && \
              sed -i "37 i \ \ \ \ compile project(':RootTools-new')" build.gradle && \
              echo "include ':RootTools-new'" >> ../settings.gradle && \
-             ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new
+             ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new && \
+             sed -i 's/gradle:0.7.+/gradle:0.8.+/g' build.gradle && \
+             sed -i 's/gradle:0.7.+/gradle:0.8.+/g' ../RootTools-new/build.gradle
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
