@@ -24,8 +24,8 @@ the request is declined only Silent Mode will be enabled instead.
 Repo Type:git
 Repo:https://github.com/mudar/Fairphone
 
-Build:1.0,8
-    commit=36fd2aeb73
+Build:1.1,10
+    commit=3c2b38f6a47e4c
     subdir=FairphonePeaceOfMind
     gradle=defaultFlavor
     srclibs=RootTools-new@3.4
@@ -39,6 +39,6 @@ Build:1.0,8
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.0
-Current Version Code:8
+Current Version:1.1
+Current Version Code:10
 
