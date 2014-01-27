@@ -1,0 +1,30 @@
+Categories:Wallpaper
+License:Apache2
+Web Site:http://quuux.org
+Source Code:https://github.com/mdellavo/plasma
+Issue Tracker:https://github.com/mdellavo/plasma/issues
+
+Summary:Plasma wallpaper
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/mdellavo/plasma.git
+
+Build:1.0.1,2
+    commit=09c68aef83b45
+    subdir=plasma
+    patch=build.gradle_1.patch
+    prebuild=echo -e 'ndk.dir=$$NDK$$\nsdk.dir=$$SDK$$' > ../local.properties
+    gradle=yes
+
+Maintainer Notes:
+Can't use gradle 1.10, only 1.9
+Should use a better way of setting the version numbers
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:1.0.1
+Current Version Code:2
+

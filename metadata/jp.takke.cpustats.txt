@@ -1,0 +1,24 @@
+Categories:System
+License:Apache2
+Web Site:
+Source Code:https://github.com/takke/cpustats
+Issue Tracker:https://github.com/takke/cpustats/issues
+
+Auto Name:CPU Stats
+Summary:
+Description:
+Show CPU usage (load?)/frequency, either in app or in status bar.
+.
+
+Repo Type:git
+Repo:https://github.com/takke/cpustats.git
+
+Build:1.2.0,6
+    commit=33ef50
+    subdir=CpuStats
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:1.2.0
+Current Version Code:6
+
