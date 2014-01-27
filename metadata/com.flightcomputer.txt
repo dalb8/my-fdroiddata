@@ -1,5 +1,5 @@
 Categories:Navigation
-License:Unknown
+License:GPLv3
 Web Site:
 Source Code:https://github.com/takyonxxx/Flight-Computer-Android
 Issue Tracker:https://github.com/takyonxxx/Flight-Computer-Android/issues
@@ -13,12 +13,12 @@ Note: many other cool apps by developer
 Repo Type:git
 Repo:https://github.com/takyonxxx/Flight-Computer-Android.git
 
-Build:3.1,31
-    disable=jars look legit but no license
-    commit=c7d25ec9597dc82
+Build:3.2,32
+    commit=7bf90e2f963a5
+    prebuild=sed -i '/VectorTileMap/d' project.properties
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:3.1
-Current Version Code:31
+Current Version:3.2
+Current Version Code:32
 
