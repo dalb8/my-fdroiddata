@@ -1,5 +1,5 @@
 # Copyright (c) 2014 David Black. Licensed as GPLv3.
-# See https://gitorious.org/adsgasd/my-fdroiddata
+# See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/backends/platform/android/android.mk b/backends/platform/android/android.mk
 index e24d797..ec63b91 100644
 --- a/backends/platform/android/android.mk

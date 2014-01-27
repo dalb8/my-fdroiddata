@@ -1,5 +1,5 @@
 # Copyright (c) 2014 David Black. Licensed as GPLv3.
-# See https://gitorious.org/adsgasd/my-fdroiddata
+# See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:GPLv3+
 Web Site:http://sufficientlysecure.org/index.php/openpgp-keychain/
@@ -20,8 +20,6 @@ Features:
 * Import/export of GPG key rings and exported keys from/to the SD card
 * Basic keyserver support
 * Easy API
-
-It doesn't integrate with any email client yet, but that is a planned feature.
 .
 
 Repo Type:git
@@ -30,6 +28,12 @@ Repo:https://github.com/dschuermann/openpgp-keychain.git
 Build:2.1.1,21100
     commit=v2.1.1
     subdir=OpenPGP-Keychain
+
+Build:2.2,22000
+    commit=v2.2
+    subdir=OpenPGP-Keychain
+    init=sed -i '51,82d' build.gradle
+    gradle=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags

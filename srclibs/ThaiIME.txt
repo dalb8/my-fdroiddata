@@ -1,4 +1,4 @@
 # Copyright (c) 2014 David Black. Licensed as GPLv3.
-# See https://gitorious.org/adsgasd/my-fdroiddata
+# See https://gitorious.org/asdgasd/my-fdroiddata
 Repo Type:git
 Repo:https://github.com/sugree/android-thaiime

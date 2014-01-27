@@ -1,5 +1,5 @@
 # Copyright (c) 2014 David Black. Licensed as GPLv3.
-# See https://gitorious.org/adsgasd/my-fdroiddata
+# See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/main/src/main/java/com/google/android/apps/dashclock/configuration/ConfigureExtensionsFragment.java b/main/src/main/java/com/google/android/apps/dashclock/configuration/ConfigureExtensionsFragment.java
 index a61b785..58979dd 100644
 --- a/main/src/main/java/com/google/android/apps/dashclock/configuration/ConfigureExtensionsFragment.java
