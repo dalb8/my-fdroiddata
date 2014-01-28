@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:GPLv3
 Web Site:https://morlunk.com
@@ -16,18 +18,18 @@ Repo:https://github.com/Morlunk/Plumble.git
 Build:3.0.0-beta1,53
     commit=9233fb
     subdir=Plumble
-    gradle=official
     init=sed -i 's/libonionkit/libonionkit:libonionkit/g' ../settings.gradle && \
-         sed -i 's/libonionkit/libonionkit:libonionkit/g'    build.gradle && \
-         cd ../ && \
-         git submodule update --init --recursive 
+        sed -i 's/libonionkit/libonionkit:libonionkit/g'    build.gradle && \
+        cd ../ && \
+        git submodule update --init --recursive 
+    gradle=official
     prebuild=cd libraries/libonionkit/libonionkit && \
-             git stash && \
-             git clean -dfx && \
-             cd ../../Jumble && \
-             git stash && \
-             git clean -dfx && \
-             rm libs/armeabi/*
+        git stash && \
+        git clean -dfx && \
+        cd ../../Jumble && \
+        git stash && \
+        git clean -dfx && \
+        rm libs/armeabi/*
     buildjni=libraries/Jumble/jni
 
 Maintainer Notes:
