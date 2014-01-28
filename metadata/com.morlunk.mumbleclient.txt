@@ -16,11 +16,9 @@ Repo Type:git
 Repo:https://github.com/Morlunk/Plumble.git
 
 Build:3.0.0-beta1,53
-    commit=9233fb
+    commit=3.0.0-beta1
     subdir=Plumble
-    init=sed -i 's/libonionkit/libonionkit:libonionkit/g' ../settings.gradle && \
-        sed -i 's/libonionkit/libonionkit:libonionkit/g'    build.gradle && \
-        cd ../ && \
+    init=cd ../ && \
         git submodule update --init --recursive 
     gradle=official
     prebuild=cd libraries/libonionkit/libonionkit && \
