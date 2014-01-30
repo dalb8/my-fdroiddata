@@ -19,6 +19,8 @@ to have the YouTube app: URLs can be shared from the browser.
 See the source code page for a changelog.
 
 A proprietary crash reporting library was removed.
+
+Status: There is no source code for latest versions.
 .
 
 Repo Type:git
@@ -40,7 +42,7 @@ copies lame binaries into NDK.
 .
 
 Auto Update Mode:None
-Update Check Mode:Tags
+Update Check Mode:Static
 Current Version:3.5.4
 Current Version Code:75
 
