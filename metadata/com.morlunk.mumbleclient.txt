@@ -16,26 +16,22 @@ Repo Type:git
 Repo:https://github.com/Morlunk/Plumble.git
 
 Build:3.0.0-beta1,53
+    disable=fails on lint translation errors 
     commit=3.0.0-beta1
     subdir=Plumble
-    init=cd ../ && \
-        git submodule update --init --recursive 
+    submodules=yes
     gradle=official
-    prebuild=cd libraries/libonionkit/libonionkit && \
-        git stash && \
-        git clean -dfx && \
-        cd ../../Jumble && \
-        git stash && \
-        git clean -dfx && \
-        rm libs/armeabi/*
+    rm=Plumble/libraries/Jumble/libs/armeabi
     buildjni=libraries/Jumble/jni
 
 Maintainer Notes:
-Use this for gradle 1.10:
-
-         sed -i 's/gradle:0.7.+/gradle:0.8.+/g' build.gradle && \
-         sed -i 's/gradle:0.5.+/gradle:0.8.+/g' libraries/libonionkit/libonionkit/build.gradle && \
-         sed -i 's/gradle:0.7.+/gradle:0.8.+/g' libraries/Jumble/build.gradle && \
+android {
+      lintOptions {
+          checkReleaseBuilds false
+          // Or, if you prefer, you can continue to check for errors in release builds,
+          // but continue the build even when errors are found:
+          abortOnError false
+      }
 .
 
 Auto Update Mode:None
