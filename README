@@ -1,19 +1,27 @@
-An Fdroiddata repo for building FOSS Android apps from source. 
-Like the f-droid.org one, the texts are licensed as GPLv3; 
-currently this git repo is about 18MiB in size.
+A collection of recipes for building FOSS Android apps from source. 
+The texts are licensed as GPLv3 and you are encouraged to add your own 
+copyright.
 
-Metadata here serves to maintain my own apk repository serving close friends 
-and family; It has been tested and inspected to the extent that the apks build; 
-they run on at least one gadget and that the only prebuilts used are via third 
-parties.
+The main requirement is that each app must have a maintainer: somebody who
+uses it, looks at the source code when building new versions and has a
+friendly relationship with the developers.
+Apps that can't be maintained will have the 'Disabled:' field added at the 
+top; if anybody is making use of this via an F-Droid client, then we'll need
+to look into getting the status of the app in description instead.
+Another principle is that any prebuilt libraries must come from a
+third party; if there are exceptions they should be noted in the description.
 
-The info should be accurate, but bear in mind that Current Versions 
-are mostly automated so they could easily be incorrect; descriptions and URLs 
-may be out-dated. If you wish to distribute apks based on it, please try
-to keep them current, so that the developers will be happy; although I watch
-the f-droid.org repo, keeping everything fresh isn't a top priority for me.
+Contributions are welcome from people who don't have a lot of time to spare,
+so we are tolerant of, if not delighted about, obsolete data.
+Bear in mind that some data, such as Current Versions, are updated automatically
+so they could easily be incorrect.
 
-Everything is built with a recent version of fdroidserver, but probably not
-on a build server so you could have dependency issues for some of the apps.
-Current tweaks: Remove gradle clean; make empty tarballs.
+Everything should build with a recent version of fdroidserver, but maybe not
+on a build server so we need to be tolerant of dependency issues for some of the apps.
+In particlular, the gradle versioning system for non-build server setups is
+dependent on your path to the gradle binary and you might have to change the
+gradle android plugin versions.
+
+Currently this git repo is about 18MiB in size.
+
 
