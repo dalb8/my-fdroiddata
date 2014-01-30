@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/nicolasgramlich/AndEngine
+Prepare:rm -rf libs/* && $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+Update Project:Yes
+
