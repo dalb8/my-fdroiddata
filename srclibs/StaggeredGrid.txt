@@ -1,0 +1,7 @@
+Repo Type:git
+Repo:https://github.com/etsy/AndroidStaggeredGrid
+
+Subdir:library/src/main
+Prepare:mkdir -p libs && echo 'source.dir=java' > ant.properties && echo -e 'android.library=true\ntarget=android-19' >> project.properties
+Update Project:Yes
+
