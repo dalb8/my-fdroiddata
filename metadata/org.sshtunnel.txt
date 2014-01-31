@@ -1,5 +1,6 @@
 # Copyright (c) 2014 David Black. Licensed as GPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
+AntiFeatures:UpstreamNonFree
 Categories:Internet
 License:GPLv3
 Web Site:http://code.google.com/p/sshtunnel
@@ -19,6 +20,8 @@ You can find free shell accounts by searching the WWW.
 After editing your server settings and credentials, enable the tunnel via the
 switch at the top. If pages don't load or the IP address doesn't change
 try enabling the socks proxy and Global proxy.
+
+A proprietary analytics library was removed.
 .
 
 Requires Root:Yes
