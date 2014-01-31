@@ -15,7 +15,10 @@ nginx / squid), you can easily browse internet through a SSH tunnel on your
 android devices.
 It uses [http://darkk.net.ru/redsocks Redsocks] to redirect all traffic.
 
-May not work with all apps on all platforms.
+You can find free shell accounts by searching the WWW.
+After editing your server settings and credentials, enable the tunnel via the
+switch at the top. If pages don't load or the IP address doesn't change
+try enabling the socks proxy and Global proxy.
 .
 
 Requires Root:Yes
