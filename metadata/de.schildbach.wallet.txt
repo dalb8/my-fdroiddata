@@ -2,9 +2,9 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Office
 License:GPLv3
-Web Site:http://code.google.com/p/bitcoin-wallet/
+Web Site:https://code.google.com/p/bitcoin-wallet/
 Source Code:https://github.com/schildbach/bitcoin-wallet/tree/prod
-Issue Tracker:http://code.google.com/p/bitcoin-wallet/issues/list
+Issue Tracker:https://code.google.com/p/bitcoin-wallet/issues/list
 Bitcoin:1HkX6X8EakdsgAysL93oKrWiXGPbFiG1xV
 
 Summary:Store digital currency

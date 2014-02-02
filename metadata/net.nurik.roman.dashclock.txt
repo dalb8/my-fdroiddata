@@ -3,9 +3,9 @@
 AntiFeatures:UpstreamNonFree
 Categories:Wallpaper
 License:Apache2
-Web Site:http://code.google.com/p/dashclock
-Source Code:http://code.google.com/p/dashclock/source/list
-Issue Tracker:http://code.google.com/p/dashclock/issues/list
+Web Site:https://code.google.com/p/dashclock
+Source Code:https://code.google.com/p/dashclock/source/list
+Issue Tracker:https://code.google.com/p/dashclock/issues/list
 
 Auto Name:DashClock Widget
 Summary:Extensible lock screen widget
@@ -55,7 +55,7 @@ Build:1.6,30
              sed -i '/^project\.archivesBaseName/d' build.gradle
 
 Maintainer Notes:
-code patch necessary due to this open issue: http://code.google.com/p/dashclock/issues/detail?id=495
+code patch necessary due to this open issue: https://code.google.com/p/dashclock/issues/detail?id=495
 .
 
 Auto Update Mode:None

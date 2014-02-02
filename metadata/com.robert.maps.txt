@@ -4,8 +4,8 @@ AntiFeatures:UpstreamNonFree
 Categories:Navigation
 License:GPLv3
 Web Site:http://robertdeveloper.blogspot.com/2009/08/rmaps.html
-Source Code:http://code.google.com/p/robertprojects/source/checkout
-Issue Tracker:http://code.google.com/p/robertprojects/issues/list
+Source Code:https://code.google.com/p/robertprojects/source/checkout
+Issue Tracker:https://code.google.com/p/robertprojects/issues/list
 
 Auto Name:RMaps
 Summary:Map viewer
@@ -18,7 +18,7 @@ The non-free Google Analytics library has been replaced with the NoAnalytics lib
 .
 
 Repo Type:git-svn
-Repo:http://robertprojects.googlecode.com/svn;trunk=trunk;tags=tags
+Repo:https://robertprojects.googlecode.com/svn;trunk=trunk;tags=tags
 
 Build:0.9.4,8140
     commit=699

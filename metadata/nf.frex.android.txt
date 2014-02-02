@@ -2,9 +2,9 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Science & Education
 License:GPLv3
-Web Site:http://code.google.com/p/frex-app
-Source Code:http://code.google.com/p/frex-app/source/list
-Issue Tracker:http://code.google.com/p/frex-app/issues/list
+Web Site:https://code.google.com/p/frex-app
+Source Code:https://code.google.com/p/frex-app/source/list
+Issue Tracker:https://code.google.com/p/frex-app/issues/list
 
 Auto Name:Frex
 Summary:Fractal viewer

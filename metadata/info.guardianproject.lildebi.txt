@@ -39,7 +39,7 @@ directory. It does not touch /system at all.
 
 This is built from source by f-droid except for the gpgv part which can be
 built from the instructions in the
-[http://gitorious.org/f-droid/fdroiddata/blobs/master/metadata/info.guardianproject.gpg.txt metadata]
+[https://gitorious.org/f-droid/fdroiddata/blobs/master/metadata/info.guardianproject.gpg.txt metadata]
 in the fdroiddata repo. See the website for full usage instructions: or try
 running $su then #debian#shell after mounting the image.
 

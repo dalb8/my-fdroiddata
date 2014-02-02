@@ -28,7 +28,7 @@ Instructions are on the [https://code.google.com/p/osmeditor4android/wiki/Overvi
 .
 
 Repo Type:git-svn
-Repo:http://osmeditor4android.googlecode.com/svn/branches/0.9
+Repo:https://osmeditor4android.googlecode.com/svn/branches/0.9
 
 Build:0.9.3r641,24
     commit=641

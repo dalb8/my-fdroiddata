@@ -3,8 +3,8 @@
 Categories:Office
 License:Apache2
 Web Site:
-Source Code:http://code.google.com/p/quickdic-dictionary/source/list
-Issue Tracker:http://code.google.com/p/quickdic-dictionary/issues/list
+Source Code:https://code.google.com/p/quickdic-dictionary/source/list
+Issue Tracker:https://code.google.com/p/quickdic-dictionary/issues/list
 
 Auto Name:QuickDic
 Summary:Offline translation dictionary

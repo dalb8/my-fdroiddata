@@ -2,9 +2,9 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
 License:GPLv3
-Web Site:http://code.google.com/p/hunkypunk
-Source Code:http://code.google.com/p/hunkypunk/source/list
-Issue Tracker:http://code.google.com/p/hunkypunk/issues/list
+Web Site:https://code.google.com/p/hunkypunk
+Source Code:https://code.google.com/p/hunkypunk/source/list
+Issue Tracker:https://code.google.com/p/hunkypunk/issues/list
 
 Auto Name:Hunky Punk
 Summary:Interactive fiction player

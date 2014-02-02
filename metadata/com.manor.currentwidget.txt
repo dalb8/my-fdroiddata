@@ -2,10 +2,10 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:System
 License:GPLv3
-Web Site:http://code.google.com/p/currentwidget/
-Source Code:http://code.google.com/p/currentwidget/source/list
-Issue Tracker:http://code.google.com/p/currentwidget/issues/list
-Donate:http://code.google.com/p/currentwidget/
+Web Site:https://code.google.com/p/currentwidget/
+Source Code:https://code.google.com/p/currentwidget/source/list
+Issue Tracker:https://code.google.com/p/currentwidget/issues/list
+Donate:https://code.google.com/p/currentwidget/
 
 Summary:Battery current draw widget
 Description:
@@ -28,13 +28,13 @@ this in the battery driver or in the hardware.
 * Set an arithmetic operation on the current value to adjust for different devices
 * Plot current graph
 
-[http://code.google.com/p/currentwidget/wiki/ChangeLog Changelog]
+[https://code.google.com/p/currentwidget/wiki/ChangeLog Changelog]
 
 N.B Latest code uses GMS
 .
 
 Repo Type:git-svn
-Repo:http://currentwidget.googlecode.com/svn/trunk
+Repo:https://currentwidget.googlecode.com/svn/trunk
 
 Build:0.39,38
     commit=283

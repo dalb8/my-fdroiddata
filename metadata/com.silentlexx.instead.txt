@@ -20,7 +20,7 @@ choosen language.
 .
 
 Repo Type:git-svn
-Repo:http://instead-android.googlecode.com/svn/trunk/
+Repo:https://instead-android.googlecode.com/svn/trunk/
 
 Build:1.6.1.9,16109
     commit=r44

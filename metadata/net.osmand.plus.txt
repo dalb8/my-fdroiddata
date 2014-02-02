@@ -4,8 +4,8 @@ Categories:Navigation
 License:GPLv3
 Web Site:http://osmand.net
 Source Code:https://github.com/osmandapp/Osmand
-Issue Tracker:http://code.google.com/p/osmand/issues/list
-Donate:http://code.google.com/p/osmand/#Please_support_the_project
+Issue Tracker:https://code.google.com/p/osmand/issues/list
+Donate:https://code.google.com/p/osmand/#Please_support_the_project
 
 Name:OsmAnd~
 Auto Name:OsmAnd~

@@ -3,8 +3,8 @@
 Categories:System
 License:Apache2
 Web Site:
-Source Code:http://code.google.com/p/hackerskeyboard/source/checkout
-Issue Tracker:http://code.google.com/p/hackerskeyboard/issues/list
+Source Code:https://code.google.com/p/hackerskeyboard/source/checkout
+Issue Tracker:https://code.google.com/p/hackerskeyboard/issues/list
 
 Auto Name:Hacker's Keyboard
 Summary:Four- or five-row soft-keyboard
@@ -29,7 +29,7 @@ Build:v1.37,1037
     target=android-19
     extlibs=main_en.dict
     srclibs=1:VoiceIME@5763e36eab31
-    prebuild=sed -i 's@\(MARKET_URI = \).*@\1"http://code.google.com/p/hackerskeyboard/downloads/list";@' src/org/pocketworkstation/pckeyboard/Main.java && \
+    prebuild=sed -i 's@\(MARKET_URI = \).*@\1"https://code.google.com/p/hackerskeyboard/downloads/list";@' src/org/pocketworkstation/pckeyboard/Main.java && \
         sed -i "s/Hg-ident/hg ident/" AutoVersion.sh && \
         ./AutoVersion.sh && \
         mv libs/main_en.dict res/raw/main.dict
