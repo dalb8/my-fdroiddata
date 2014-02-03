@@ -1,0 +1,28 @@
+source ~/fdroidserver/completion/bash-completion
+alias aup='android update project -p . -s'
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+
+alias fdim='fdroid import -u'
+alias fd='fdroid'
+complete -F _fdroid fd
+alias fbld='fdroid build'
+complete -F _fdroid_build fbld
+alias fbldv='fdroid build -l -v'
+complete -F _fdroid_build fbldv
+alias fbldi='fdroid install -l -v'
+complete -F _fdroid_install fbldi
+alias fcheck='fdroid checkupdates -v'
+complete -F _fdroid_checkupdates fcheck
+alias cdf='cd ~/fdroiddata'
+alias jsign='jarsigner -keystore /home/gerry/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA'
+function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
+function gplayl() { luakit play.google.com/store/apps/details/?id="$@" ;}
+#adb logcat | grep `adb shell ps | grep com.example.package | cut -c10-15`
+
+export ANDROID_HOME=/home/gerry/android-sdk-linux
+export M2_HOME=/opt/maven/apache-maven-3.1.1
+export M2=${M2_HOME}/bin
+export GRADLE_HOME=/opt/gradle/versions/1.10
+export GRADLE=${GRADLE_HOME}/bin
+export PATH=${PATH}:/home/gerry/android-sdk-linux/platform-tools:/home/gerry/android-sdk-linux/build-tools/19.0.1:/home/gerry/android-sdk-linux/tools:/home/gerry/android-ndk-r9c:/home/gerry/fdroidserver:/sbin:/usr/sbin:${M2}:${GRADLE}
+
