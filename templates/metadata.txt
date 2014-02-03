@@ -1,0 +1,64 @@
+## For extra fields see https://f-droid.org/manual 
+
+# Copyright (c) John Doe 1929
+Disabled: (if an app must vanish from the repo)
+AntiFeatures: (comma-separated) (possible values hard-coded in fdroidserver)
+Categories: (comma-separated)
+License:
+
+Web Site: (web link)
+Source Code: (web link)
+Issue Tracker: (web link)
+
+Donate: (web link)
+FlattrID: (number)
+Bitcoin: (address)
+Litecoin: (address)
+Dogecoin: (address)
+
+Name: (to override the name of the app in the index)
+Summary: (one sentence, no more than 30-40 chars)
+Description:
+Anything you like goes here! 
+
+A blank line means a line break, i.e. the end of a paragraph.
+
+Bulleted lists can be used:
+
+* Item 1
+* Item 2
+
+Or ranked lists:
+
+# First item 
+# Second item
+
+Links can be added like this:
+[https://github.com/org/project/raw/master/res/raw/changelog.xml Changelog]
+
+Links to other apps that extend functionality: [[some.other.app]]
+
+(Finish with a line with a single ".")
+.
+
+Requires Root: Yes (if not having root renders it useless; otherwise don't use)
+
+# Repo and Build fields only matter in source-built apps
+Repo Type: (git, git-svn, svn, hg, bzr or srclib)
+Repo: (repo url, don't use auth
+
+# One for each source build
+# For a complete list of parameters, see the manual
+Build:<version>,<version code>
+    commit=<tag/commit/rev>
+    [...]
+
+
+Maintainer Notes:
+Like Description: but for more technical considerations
+.
+
+Update Check Mode: (see the manual)
+Current Version: (current version name)
+Current Version Code: (current version code, i.e. number)
+

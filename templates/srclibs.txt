@@ -1,3 +1,4 @@
+Repo Type:
 Repo:
 
 # Comma-separated list of subdirs to use. The first existing subdirectory
@@ -8,6 +9,9 @@ Subdir:
 # Any extra commands to prepare the source library
 Prepare:
 
-# If given "Yes", "android update project -p ." will be executed
+# If given "Yes", "android update project -p . -s" will be executed
 Update Project:
+
+# May not work! Must checkout the revision in the metadata
+Srclibs:
 
