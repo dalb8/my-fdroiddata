@@ -1,10 +1,5 @@
 A collection of recipes for building Android apps from source code.  
 
-Many of the texts are by the contributors to 
-https://gitorious.org/f-droid/fdroiddata and those are under the AGPLv3. 
-Other texts can be covered by any free licence and you are encouraged 
-to add your own copyright headers.
-
 We welcome your rambling descriptions and device-specific patches!
 Write as many comments as you feel like!
 
@@ -29,6 +24,11 @@ on a build server so we need to be tolerant of dependency issues for some of the
 In particlular, the gradle versioning system for non-build server setups is
 dependent on your path to the gradle binary and you might have to change the
 gradle android plugin versions.
+
+Many of the texts are by the contributors to 
+https://gitorious.org/f-droid/fdroiddata and those are under the AGPLv3. 
+Other texts can be covered by any free licence and you are encouraged 
+to add your own copyright headers.
 
 Currently this git repo is about 18MiB in size.
 
