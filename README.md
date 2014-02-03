@@ -1,20 +1,22 @@
-**my-fdroiddata** 
-*A collection of recipes for building Android apps from source code*
+**my-fdroiddata**  
+*Recipes for building Android apps from source code*
 
 It's similar enough to those used to make the packages on 
 [f-droid.org](https://f-droid.org).
-However, while they serve two-million apks a month of a thousand packages, we 
-can afford to take a less strict approach.
+However, while they have 1000 different apps (and serve two-million APKs a month), 
+there are only 300 recipes here. We can therefore get by with a less 
+strict approach.
 We welcome your rambling descriptions and device-specific patches!
-Write as many comments as you feel like!
+Write as many comments as you like!
 
+-------
 We are tolerant of, if not delighted about, obsolete data. 
 The Current Versions are updated automatically and perhaps infrequently, 
 so they could easily be incorrect.
 
 Since faults would likely go unnoticed, new builds are only
 committed after inspecting the source code and running the APK on a gadget.
-Prebuilt libraries, whether included or pulled from maven repos, 
+Prebuilt libraries, whether included or pulled at build time from maven repos, 
 should have been built by a third party, unless otherwise stated.
 
 By all means, include in-development apps; if they don't get very far
@@ -35,7 +37,7 @@ to add your own copyright headers.
 
 If you're distributing APKs try to have a recent version and to
 mention any significant modifications in the APK and description. If that's
-not possible, you should change the package name following the custom_rules.xml 
+not possible, you should change the package name following the custom\_rules.xml 
 template, via the build.gradle or with the script in tools/.
 
 Currently this git repo is about 18MiB in size.
