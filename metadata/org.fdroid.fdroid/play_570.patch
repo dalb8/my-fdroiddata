@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/res/values/strings.xml b/res/values/strings.xml
 index a466bd9..a47eab2 100644

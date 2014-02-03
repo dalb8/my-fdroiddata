@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/src/com/seb/SLWP/Prefs.java b/src/com/seb/SLWP/Prefs.java
 index 900ff3d..9a1691f 100755

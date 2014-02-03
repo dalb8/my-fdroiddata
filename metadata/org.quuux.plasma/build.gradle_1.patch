@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black. Licensed as GPLv3.
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/build.gradle b/build.gradle
 index cf78041..fed2cf6 100644
