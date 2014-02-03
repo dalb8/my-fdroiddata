@@ -1,5 +1,7 @@
 A collection of recipes for building Android apps from source code.  
-
+It's similar enough to those used to make the packages on f-droid.org.
+However, while they serve two-million apks a month of a thousand packages, we 
+can afford to have a less strict approach.
 We welcome your rambling descriptions and device-specific patches!
 Write as many comments as you feel like!
 
@@ -8,8 +10,8 @@ The Current Versions are updated automatically and perhaps infrequently,
 so they could easily be incorrect.
 
 If you're distributing apks try to have a recent version and to
-mention any modifications in the apk and/or description. If that's
-not possible, change the package name with the custom_rules.xml template,
+mention any significant modifications in the apk and description. If that's
+not possible, you should change the package name with the custom_rules.xml template,
 via the build.gradle or with the script in tools/.
 
 Prebuilt libraries, whether included or pulled from maven repos, 
