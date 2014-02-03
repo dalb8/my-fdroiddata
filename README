@@ -7,13 +7,14 @@ We welcome your rambling descriptions and device-specific patches!
 Write as many comments as you feel like!
 
 We are tolerant of, if not delighted about, obsolete data. 
-If you're distributing apks please try to have a recent version and to
-mention any modifications in the apk and/or description. If that's
-not possible change the package name with the custom_rules.xml template 
-or via the build.gradle.
+The Current Versions are updated automatically and perhaps infrequently, 
+so they could easily be incorrect.
 
-Bear in mind that some data, such as the Current Versions, are updated 
-automatically and perhaps infrequently, so they could easily be incorrect.
+If you're distributing apks try to have a recent version and to
+mention any modifications in the apk and/or description. If that's
+not possible, change the package name with the custom_rules.xml template,
+via the build.gradle or with the script in tools/.
+
 Prebuilt libraries, whether included or pulled from maven repos, 
 should have been built by a third party, unless otherwise stated.
 
