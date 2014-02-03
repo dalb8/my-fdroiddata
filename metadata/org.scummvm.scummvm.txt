@@ -43,17 +43,24 @@ Build:1.5.0,6
     prebuild=set -- $$SDK$$/build-tools/*/aapt && \
         sed -e "s|\$(ANDROID_SDK)/build-tools/\*/aapt|$1|" -i backends/platform/android/android.mk
     build=export ANDROID_SDK="$$SDK$$" ANDROID_NDK="$$NDK$$" && \
+        ln -s . bin && \
         chmod +x fdroid_build && \
         ./fdroid_build tremor $$Tremor$$ && \
         ./fdroid_build mad && \
         ./fdroid_build flac $$FLAC$$ && \
-        ./fdroid_build scummvm
-    bindir=.
+        ./fdroid_build scummvm 
     antcommand="-p"
 
-# Releases are tagged, but according to backends/platform/android/android.mk (which also contains 
-# version codes), Market uploads take priority. They may lag notably behind general development, 
-# so checking http://sourceforge.net/projects/scummvm/files/scummvm/ is advisable as well.
+Maintainer Notes:
+Made quick fix to work since bindir parameter was removed: not tested
+
+Todo: Can use make directly now with output parameter.
+
+Releases are tagged, but according to backends/platform/android/android.mk (which also contains 
+version codes), Market uploads take priority. They may lag notably behind general development, 
+so checking http://sourceforge.net/projects/scummvm/files/scummvm/ is advisable as well.
+.
+
 Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.5.0

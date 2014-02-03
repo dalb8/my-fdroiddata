@@ -30,13 +30,13 @@ Repo:https://github.com/schildbach/bitcoin-wallet
 
 Build:3.19,140
     commit=885f13e01a86
-    maven=yes
+    subdir=wallet
+    maven=yes@..
     srclibs=BitcoinJWallet@1134572f61
     prebuild=sed -i '30,33d' pom.xml && \
         cp -r $$BitcoinJWallet$$/ . && \
         rm -rf market/
     build=$$MVN3$$ clean install -DskipTests -f BitcoinJWallet/pom.xml
-    bindir=wallet/target
 
 Build:3.27,148
     commit=5787167f05b8

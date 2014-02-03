@@ -36,14 +36,12 @@ If anyone can help out with MIDI support please check out:
 Repo Type:git
 Repo:git://gitorious.org/hexiano/hexiano.git
 
-Build:0.82.1 ALPHA,14
+Build:0.82.1 ALPHA,13
+    disable=needs fixing now that bindir is no longer available
     commit=a2dad34
     subdir=Hexiano
-    target=android-10
-    prebuild=git checkout build.xml && \
-        echo "app.packagename=org.gitorious.jamesjrh.isokeys" >> local.properties && \
-        ant filter-package
-    bindir=Hexiano/build/bin/
+    update=force
+    prebuild=rm custom_rules.xml
 
 Auto Update Mode:None
 #Generic package id in manifest

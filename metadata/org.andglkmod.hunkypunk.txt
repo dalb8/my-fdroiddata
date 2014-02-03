@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
 License:GPLv3
@@ -41,15 +41,26 @@ Build:0.3,1
     bindir=alt-apk/mod/bin
     antcommand=mod-release
 
+Build:0.8,5
+    commit=744b8c26032
+    rm=ant.properties
+    prebuild=sed -i '139,140d' build.xml && \
+        echo "bash-location=/bin/bash" >> local.properties 
+    build=ln -s alt-apk/mod/bin . && \
+        cd jni/nitfol && \
+        bison -o inform.c inform.y 
+    buildjni=no
+    antcommand=mod-release
+
 Build:0.8,6
     commit=744b8c26032
     rm=ant.properties
     prebuild=sed -i '139,140d' build.xml && \
-        echo "bash-location=/bin/bash" >> local.properties && \
+        echo "bash-location=/bin/bash" >> local.properties 
+    build=ln -s alt-apk/mod4/bin . && \
         cd jni/nitfol && \
-        bison -o inform.c inform.y
+        bison -o inform.c inform.y 
     buildjni=no
-    bindir=alt-apk/mod4/bin
     antcommand=mod4-release
 
 Auto Update Mode:None
