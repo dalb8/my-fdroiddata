@@ -1,18 +1,16 @@
 A collection of recipes for building Android apps from source code.  
 It's similar enough to those used to make the packages on f-droid.org.
 However, while they serve two-million apks a month of a thousand packages, we 
-can afford to have a less strict approach.
+can afford to take a less strict approach.
 We welcome your rambling descriptions and device-specific patches!
 Write as many comments as you feel like!
 
 We are tolerant of, if not delighted about, obsolete data. 
 The Current Versions are updated automatically and perhaps infrequently, 
 so they could easily be incorrect.
-
-If you're distributing apks try to have a recent version and to
-mention any significant modifications in the apk and description. If that's
-not possible, you should change the package name with the custom_rules.xml template,
-via the build.gradle or with the script in tools/.
+Wherever possible, since faults are likely to go unnoticed, new builds should 
+be committed after inspecting the source code and running the apk on one 
+of your gadgets.
 
 Prebuilt libraries, whether included or pulled from maven repos, 
 should have been built by a third party, unless otherwise stated.
@@ -22,7 +20,7 @@ we'll add the 'Disabled:' field and eventually delete them.
 This is also true for apps that aren't licensed properly or go proprietary.
 
 Everything should build with a recent version of fdroidserver, but maybe not
-on a build server so we need to be tolerant of dependency issues for some of the apps.
+on a build server so we need to be tolerant of dependency issues for some apps.
 In particlular, the gradle versioning system for non-build server setups is
 dependent on your path to the gradle binary and you might have to change the
 gradle android plugin versions.
@@ -31,6 +29,11 @@ Many of the texts are by the contributors to
 https://gitorious.org/f-droid/fdroiddata and those are under the AGPLv3. 
 Other texts can be covered by any free licence and you are encouraged 
 to add your own copyright headers.
+
+If you're distributing apks try to have a recent version and to
+mention any significant modifications in the apk and description. If that's
+not possible, you should change the package name following the custom_rules.xml 
+template, via the build.gradle or with the script in tools/.
 
 Currently this git repo is about 18MiB in size.
 
