@@ -45,8 +45,12 @@ Build:1.4,40
     commit=satstat-1.4
     init=./setbuild.sh
 
+Build:1.6,60
+    commit=satstat-1.6
+    init=./setbuild.sh
+
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.4
-Current Version Code:40
+Current Version:1.6
+Current Version Code:60
 
