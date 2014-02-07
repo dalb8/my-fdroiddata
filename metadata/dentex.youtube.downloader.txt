@@ -20,7 +20,8 @@ See the source code page for a changelog.
 
 A proprietary crash reporting library was removed.
 
-Status: There is no source code for latest versions.
+Status: There is 
+[http://forum.xda-developers.com/showpost.php?p=49761727&postcount=1270 no source code]for latest versions.
 .
 
 Repo Type:git
@@ -28,6 +29,7 @@ Repo:https://github.com/dentex/ytdownloader.git
 
 Build:3.5.4,75
     commit=3.5.4
+    disable=source code gone; get tarball from f-droid.org
     subdir=dentex.youtube.downloader
     prebuild=find .. -type f -print0 | xargs -0 sed -i '/BugSenseHandler/d' && \
         rm -rf $(find .. -name bugsense-3.6.jar) libs/armeabi* && \
