@@ -1,7 +1,7 @@
 # Copyright (c) 2014 David Black. Licensed as CCBYSA.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
-License:Unknown
+License:MIT
 Web Site:
 Source Code:https://github.com/b2renger/Springs
 Issue Tracker:https://github.com/b2renger/Springs/issues
@@ -27,7 +27,6 @@ Repo:https://github.com/b2renger/Springs.git
 
 Build:2,10
     commit=master
-    disable=unknown licence
     subdir=Springs-v2
     srclibs=1:Libpd@b30d6;2:Processing-Multitouch@5f07f8ad884d
 
