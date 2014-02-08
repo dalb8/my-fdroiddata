@@ -38,7 +38,6 @@ Build:2.1.3,23
 
 Build:2.4.4 (debug),36
     commit=76f4285f0c2c6e6
-    disable=broken app; wait for proper version
     srclibs=1:Mupen64Dummy-ouya@300d;2:Mupen64Dummy-bda@300d
     rm=libs/ouya-sdk.jar;libs/ouya-sdk.jar.properties;libs/ouya-sdk.jar.dummy;libs/com.bda.controller.jar;libs/com.bda.controller.jar.dummy
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-7a'
