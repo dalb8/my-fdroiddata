@@ -1,7 +1,7 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Reading
-License:TBD, see tracker
+License:Apache2
 Web Site:
 Source Code:https://github.com/calvinaquino/LNReader-Android
 Issue Tracker:https://github.com/calvinaquino/LNReader-Android/issues
@@ -15,12 +15,15 @@ No description available
 Repo Type:git
 Repo:https://github.com/calvinaquino/LNReader-Android.git
 
-Build:1.1.12b,20131130
+Build:1.1.14,20140118
     commit=master
     subdir=LNReader
 
+Build:1.1.15,20140208
+    disable=beta
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.1.12b
-Current Version Code:20131130
+Current Version:1.1.15-beta2
+Current Version Code:20140208
 
