@@ -16,19 +16,20 @@ and there's a list of buttons for common actions as well as the ability
 to select text from the page to be an action.
 
 Supports games in Z3, Z5, Z8 format and games can be download in the app.
+Import games locally via the 'download' directory.
 Savegames are kept on the sdcard.
 .
 
 Repo Type:git
 Repo:https://github.com/onyxbits/TextFiction.git
 
-Build:1.2,3
-    commit=v1.2
+Build:2.0,4
+    commit=v2.0
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.2
-Current Version Code:3
+Current Version:2.0
+Current Version Code:4
 
