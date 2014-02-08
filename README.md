@@ -1,12 +1,12 @@
-**my-fdroiddata**  
+my-fdroiddata  
+==
 *Recipes for building Android apps from source code*
 
-It's similar enough to those used to make the packages on 
-[f-droid.org](https://f-droid.org).
-However, while they have 1000 different apps (and serve two-million APKs a month), 
-there are only 300 recipes here. We can therefore get by with a less 
-strict approach.
-We welcome your rambling descriptions and device-specific patches!
+It's the same format used to make the packages on [f-droid.org](https://f-droid.org).
+They have 1000 different apps (and serve two-million APKs a month) but there 
+are only 300 recipes here. 
+So we can try a less industrial approach; rambling descriptions and device-specific 
+patches are positively welcomed!
 Write as many comments as you like!
 
 -------
@@ -14,7 +14,7 @@ We are tolerant of, if not delighted about, obsolete data.
 The Current Versions are updated automatically and perhaps infrequently, 
 so they could easily be incorrect.
 
-Since faults would likely go unnoticed, new builds are only
+Since faults would otherwise go unnoticed, new builds should only be
 committed after inspecting the source code and running the APK on a gadget.
 Prebuilt libraries, whether included or pulled at build time from maven repos, 
 should have been built by a third party, unless otherwise stated.
@@ -41,7 +41,7 @@ not possible, you should change the package name following the custom\_rules.xml
 template, via the build.gradle or with the script in tools/.
 
 Currently this git repo is about 18MiB in size.
-If you're new to Gitorious, look at 
+If you're new to git or Gitorious, look at 
 [this](https://f-droid.org/forums/topic/adding-apps-with-git/#post-587) post
 for help in making contributions.
 
