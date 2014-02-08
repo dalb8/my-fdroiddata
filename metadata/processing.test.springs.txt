@@ -1,0 +1,36 @@
+Categories:Multimedia
+License:Unknown
+Web Site:
+Source Code:https://github.com/b2renger/Springs
+Issue Tracker:https://github.com/b2renger/Springs/issues
+
+Auto Name:Springs
+Summary:Synthesizer
+Description:
+A series of 8 springs control a bank of oscillators.
+Pull the springs and let them go; tap them to have them
+return to their normal position.
+
+Control base note, scales and the physical properties of
+the springs; shake the device to apply glissando.
+
+It's optimized for headphone use.
+
+The pdcore native libraries and processing jar are left as
+prebuilts.
+.
+
+Repo Type:git
+Repo:https://github.com/b2renger/Springs.git
+
+Build:2,10
+    commit=master
+    disable=unknown licence
+    subdir=Springs-v2
+    srclibs=1:Libpd@b30d6;2:Processing-Multitouch@5f07f8ad884d
+
+Auto Update Mode:None
+Update Check Mode:RepoManifest
+Current Version:2
+Current Version Code:10
+
