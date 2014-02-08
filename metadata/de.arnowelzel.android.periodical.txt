@@ -1,0 +1,30 @@
+Categories:Science & Education
+License:GPLv3+
+Web Site:https://arnowelzel.de/wiki/en/android/app/periodical
+Source Code:https://github.com/arnowelzel/periodical
+Issue Tracker:https://github.com/arnowelzel/periodical/issues
+
+Auto Name:Periodical
+Summary:Menstrual/period calendar
+Description:
+This application calculates the days of fertility according to Knaus-Ogino.
+The data can be backed up on a memory card, if present.
+
+If you have any further questions or want to help translating the app, please
+[http://arnowelzel.de/wiki/en/arno contact upstream].
+
+[http://arnowelzel.de/wiki/en/android/app/periodical Changelog]
+.
+
+Repo Type:git
+Repo:https://github.com/arnowelzel/periodical
+
+Build:0.14,14
+     commit=0.14
+     rm=publish;assets
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.13
+Current Version Code:13
+
