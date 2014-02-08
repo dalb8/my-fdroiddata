@@ -17,12 +17,9 @@ palette.
 Repo Type:git
 Repo:https://github.com/Mikuz/Boarder.git
 
-Build:0.33,15
-    commit=v0.33
-
-Maintainer Notes:
-Next version uses ACRA instead of Bugsense
-.
+Build:0.33-ACRA,15
+    commit=f4a5
+    forceversion=yes
 
 Auto Update Mode:None
 Update Check Mode:Tags
