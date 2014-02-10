@@ -23,12 +23,15 @@ By all means, include in-development apps; if they don't get very far
 we'll add the 'Disabled:' field and eventually delete them.
 This is also true for apps that aren't licensed properly or go proprietary.
 
-Everything should build with a recent version of 
-[fdroidserver](https://gitorious.org/f-droid/fdroidserver), but maybe not
-on a build server so we need to be tolerant of dependency issues for some apps.
-In particlular, the gradle versioning system for non-build server setups is
-dependent on your path to the gradle binary and you might have to change the
-gradle android plugin versions.
+I'm currently using a recent version of 
+[fdroidserver](https://gitorious.org/f-droid/fdroidserver).
+This implies newer recipes are likely to work but older recipes might not be
+valid any more. Since we only have a couple of builds per package
+we'll get around to revising them all eventually.
+Depending on the distro, there could also be dependency issues for some apps.
+Also the gradle versioning system for non-build server setups is
+dependent on your path to the gradle binary; I point config.py to a symlink 
+which I change when necessary to work around this.
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
@@ -42,7 +45,7 @@ template, via the build.gradle or with the script in tools/.
 
 Currently this git repo is about 18MiB in size.
 If you're new to git or Gitorious, look at 
-[this](https://f-droid.org/forums/topic/adding-apps-with-git/#post-587) post
+[this](https://f-droid.org/forums/topic/adding-apps-with-git) post
 for help in making contributions.
 
 
