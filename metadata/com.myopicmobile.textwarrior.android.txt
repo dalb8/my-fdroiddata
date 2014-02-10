@@ -1,0 +1,31 @@
+Categories:Development
+License:Apache2
+Web Site:http://sourceforge.net/projects/textwarrior
+Source Code:http://textwarrior.svn.sourceforge.net
+Issue Tracker:http://sourceforge.net/tracker/?group_id=347589
+
+Auto Name:TextWarrior
+Summary:Text editor
+Description:
+TextWarrior is a programming text editor for mobile devices, featuring
+efficient and fun ways to work on a touch screen. 
+Handles large files rather well too.
+.
+
+Repo Type:git-svn
+Repo:https://svn.code.sf.net/p/textwarrior/code;trunk=trunk/android;tags=releases/android
+
+Build:0.93,13
+    commit=0.93
+    subdir=TextWarrior
+
+Maintainer Notes:
+This seems oK. Note that target=android-17
+    prebuild=sed -i 's/targetSdkVersion="10"/targetSdkVersion="17"/g' AndroidManifest.xml
+.
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:0.93
+Current Version Code:13
+
