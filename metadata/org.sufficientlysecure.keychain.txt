@@ -35,8 +35,14 @@ Build:2.2,22000
     init=sed -i '51,82d' build.gradle
     gradle=yes
 
+Build:2.3.1,23100
+    commit=v2.3.1
+    subdir=OpenPGP-Keychain
+    init=sed -i '34,53d' build.gradle
+    gradle=yes
+
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:2.1.1
-Current Version Code:21100
+Current Version:2.3.1
+Current Version Code:23100
 

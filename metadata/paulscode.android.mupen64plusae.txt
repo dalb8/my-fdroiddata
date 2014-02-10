@@ -1,6 +1,6 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
-Antifeatures:UpstreamNonFree
+AntiFeatures:UpstreamNonFree
 Categories:Games
 License:GPLv3
 Web Site:http://www.paulscode.com/forum/index.php?topic=96

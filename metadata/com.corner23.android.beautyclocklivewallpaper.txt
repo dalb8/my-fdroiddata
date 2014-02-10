@@ -1,6 +1,6 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
-Category:Wallpaper
+Categories:Wallpaper
 License:MIT
 Web Site:
 Source Code:https://github.com/shakalaca/BeautyClockLiveWallpaper
