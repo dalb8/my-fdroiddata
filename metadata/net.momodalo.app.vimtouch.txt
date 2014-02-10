@@ -37,32 +37,36 @@ Build:2.3,25
     buildjni=no
 
 Build:2.5r2,21100027
-    commit=v2.5r2
     disable=less crashy but doesn't build like this
+    commit=v2.5r2
     init=sed -i 's/ANDROID_SDK_HOME/ANDROID_HOME/g' prepare-clean-checkout.sh && \
-         ant config && \
-         ./prepare-clean-checkout.sh
+        ant config && \
+        ./prepare-clean-checkout.sh
     extlibs=android/android-support-v4r13.jar
     prebuild=mkdir libraries/SlidingMenu/libs/ libraries/aFileChooser/libs/ && \
-             cp libs/android-support-v4r13.jar libraries/SlidingMenu/libs/ && \
-             mv libs/android-support-v4r13.jar libraries/aFileChooser/libs/
+        cp libs/android-support-v4r13.jar libraries/SlidingMenu/libs/ && \
+        mv libs/android-support-v4r13.jar libraries/aFileChooser/libs/
     scandelete=jni/libncurses
     buildjni=no
 
 Build:2.6r2,21100030
     commit=30b8f0510f2c5
     init=sed -i 's/ANDROID_SDK_HOME/ANDROID_HOME/g' prepare-clean-checkout.sh && \
-         ant config && \
-         ./prepare-clean-checkout.sh
+        ant config && \
+        ./prepare-clean-checkout.sh
     buildjni=no
 
 Maintainer Notes:
 see custom_rules.xml for building x86
+
+Don't use the 2.6r2 tag as it has GMS!
+
+UCM tags doesn't work because AM.xml is generated.
 .
 
 Auto Update Mode:None
-Update Check Mode:Tags
-Vercode Operation:%c + 21100000
+Update Check Mode:None
+#Vercode Operation:%c + 21100000
 Current Version:2.6r2
-Current Version Code:30
+Current Version Code:21100030
 
