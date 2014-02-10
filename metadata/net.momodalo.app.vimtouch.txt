@@ -2,23 +2,27 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Development
 License:Apache2/GPL
-Web Site:https://github.com/momodalo/vimtouch
+Web Site:
 Source Code:https://github.com/momodalo/vimtouch
 Issue Tracker:https://github.com/momodalo/vimtouch/issues
 
 Auto Name:Vi IMproved Touch
 Summary:Text editor
 Description:
+* Slide-out file manager to open arbitrary files
+* Usable in landscape on small screens (if you have a keyboard that pushes the text up)
+* Press and hold to magnify
 * Touch to move cursor
 * Fling to scroll
 * Swipe to zoom
 * Two-fingers gesture to zoom in/out
 * Unicode and multi-byte
-* Single tap to send "ESC"
+* Option to single tap to send "ESC"
 * Read email attachments
 * Single instance to open multiple files in vim windows
 * Real VIM runtime
 * Customizable VIM runtime (ex: can install syntax, doc, plugins)
+* Crashy though
 
 Iconv is GPL licensed but the main app is Apache2.
 .
@@ -28,6 +32,7 @@ Repo:https://github.com/momodalo/vimtouch.git
 
 Build:2.3,25
     commit=v2.3
+    disable=less crashy but has blobs
     extlibs=android/android-support-v4.jar
     prebuild=mkdir -p libraries/aFileChooser/libs/ && \
         mv libs/*-v4.jar libraries/aFileChooser/libs/ && \
@@ -37,7 +42,7 @@ Build:2.3,25
     buildjni=no
 
 Build:2.5r2,21100027
-    disable=less crashy but doesn't build like this
+    disable=less crashy but has blobs
     commit=v2.5r2
     init=sed -i 's/ANDROID_SDK_HOME/ANDROID_HOME/g' prepare-clean-checkout.sh && \
         ant config && \
@@ -46,7 +51,6 @@ Build:2.5r2,21100027
     prebuild=mkdir libraries/SlidingMenu/libs/ libraries/aFileChooser/libs/ && \
         cp libs/android-support-v4r13.jar libraries/SlidingMenu/libs/ && \
         mv libs/android-support-v4r13.jar libraries/aFileChooser/libs/
-    scandelete=jni/libncurses
     buildjni=no
 
 Build:2.6r2,21100030
