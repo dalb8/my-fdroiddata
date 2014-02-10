@@ -20,17 +20,13 @@ is limited to that.
 Repo Type:git
 Repo:git://github.com/andstatus/andstatus.git
 
-Build:5.1,89
-    commit=AndStatus-5.1
-
-Build:7.0,94
-    commit=95407a6d1b84d
-    disable=+
+Build:7.1,95
+    commit=AndStatus-7.1
     update=force
     rm=custom_rules.xml
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:7.0
-Current Version Code:94
+Update Check Mode:Tags
+Current Version:7.1
+Current Version Code:95
 

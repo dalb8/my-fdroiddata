@@ -52,7 +52,7 @@ Build:2.8,47
     commit=v2.8
     subdir=AdAway
     gradle=yes@..
-    build=$$NDK$$/ndk-build APP_ABI=armeabi-v7a
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     preassemble=renameExecutables
 
 Auto Update Mode:None

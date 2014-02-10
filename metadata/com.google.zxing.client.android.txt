@@ -19,21 +19,17 @@ http://en.wikibooks.org/w/index.php?search=%s.
 Repo Type:git
 Repo:https://github.com/zxing/zxing.git
 
-Build:4.5.1,94
-    commit=BS-4.5.1
+Build:4.6.1,96
+    commit=BS-4.6.1
     subdir=android
     build=$$MVN3$$ package -DskipTests -f ../core/pom.xml
-
-Build:4.5.2,95
-    commit=3de3374dd2
-    disable=not published
 
 Maintainer Notes:
 Looks weird but need to see pom.xmls to understand
 .
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:4.5.2
-Current Version Code:95
+Update Check Mode:Tags
+Current Version:4.6.1
+Current Version Code:96
 

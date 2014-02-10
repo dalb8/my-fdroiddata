@@ -15,9 +15,8 @@ No description available
 Repo Type:git
 Repo:https://github.com/Morlunk/Plumble.git
 
-Build:3.0.0-beta1,53
-    disable=fails on lint translation errors 
-    commit=3.0.0-beta1
+Build:3.0.0-beta3,55
+    commit=3.0.0-beta3
     subdir=Plumble
     submodules=yes
     gradle=official
@@ -25,6 +24,7 @@ Build:3.0.0-beta1,53
     buildjni=libraries/Jumble/jni
 
 Maintainer Notes:
+    disable=fails on lint translation errors 
 android {
       lintOptions {
           checkReleaseBuilds false
@@ -36,6 +36,6 @@ android {
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:3.0.0-beta1
-Current Version Code:53
+Current Version:3.0.0-beta3
+Current Version Code:55
 

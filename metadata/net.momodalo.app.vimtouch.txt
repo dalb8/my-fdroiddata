@@ -19,6 +19,8 @@ Description:
 * Single instance to open multiple files in vim windows
 * Real VIM runtime
 * Customizable VIM runtime (ex: can install syntax, doc, plugins)
+
+Newer versions use GMS.
 .
 
 Repo Type:git
@@ -34,12 +36,19 @@ Build:2.3,25
         ./prepare-clean-checkout.sh
     buildjni=no
 
-Build:2.6,28
-    disable=GMS; buggy
-    commit=unknown - see disabled
+Build:2.6r1,21100029
+    commit=v2.6r1
+    init=sed -i 's/ANDROID_SDK_HOME/ANDROID_HOME/g' prepare-clean-checkout.sh && \
+         ant config && \
+         ./prepare-clean-checkout.sh
+    buildjni=no
+
+Maintainer Notes:
+see custom_rules.xml for building x86
+.
 
 Auto Update Mode:None
-Update Check Mode:None
-Current Version:2.6
-Current Version Code:28
+Update Check Mode:Static
+Current Version:2.6r1
+Current Version Code:29
 

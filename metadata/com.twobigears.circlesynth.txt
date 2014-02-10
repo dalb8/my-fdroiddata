@@ -21,6 +21,8 @@ Draw shapes, choose presets, apply effects and create one bar compositions worth
 * Save and share your musical sketches
 
 A proprietary analytics library was removed.
+Some PD and Processing libraries are included as prebuilts since they are tricky
+to build.
 
 Donations are currently only possible via Google Play.
 .
@@ -28,14 +30,18 @@ Donations are currently only possible via Google Play.
 Repo Type:git
 Repo:https://github.com/twobigears/Circle-Synth.git
 
-# prebuilts (both native and the processing.jar) are too tricky for me but theoretically possible:https://github.com/twobigears/Circle-Synth/issues/47. The app_license string must be inserted because of Google Play donations mallarkey.
 Build:2.0,5
     commit=v2.0
-    init=zip -r native.zip libs/armeabi* libs/x86 libs/mips
-    rm=libs/libGoogleAnalyticsV2.jar
+    rm=libs/libGoogleAnalyticsV2.jar;libs/armeabi;libs/x86;libs/mips
     srclibs=1:Libpd@master;2:NoAnalytics@d38a
-    prebuild=sed -i '150 i \\t<string name="app_license">GPLv2</string>' res/values/strings.xml
-    build=unzip native.zip
+    prebuild=sed -i '150 i \\t<string name="app_license">xxx</string>' res/values/strings.xml
+    scanignore=libs/armeabi-v7a
+
+Maintainer Notes:
+prebuilts (both native and the processing.jar) are too tricky for me but 
+theoretically possible:https://github.com/twobigears/Circle-Synth/issues/47. 
+The app_license string must be inserted because of Google Play donations mallarkey.
+.
 
 Auto Update Mode:None
 Update Check Mode:Tags

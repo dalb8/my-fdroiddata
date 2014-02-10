@@ -32,8 +32,8 @@ Build:1.0.0-beta.13,10011
     rm=resources;web;Aikuma/test
 
 Maintainer Notes:
-Soon to use Google Cloud Storage: see https://github.com/langtech/aikuma/issues/115, which
-will probably require hard-coded keys.
+Soon to use coud storage: see https://github.com/langtech/aikuma/issues/115, which
+may require hard-coded keys.
 .
 
 Auto Update Mode:None

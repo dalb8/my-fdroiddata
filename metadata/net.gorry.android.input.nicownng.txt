@@ -25,13 +25,6 @@ Build:2013.0425.1.1305,201304251
     prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk
     buildjni=yes
 
-Build:2013.0708.1.1305,201307081
-    disable=missing a resource at 4
-    commit=4
-    target=android-10
-    prebuild=echo 'NDK_TOOLCHAIN_VERSION=4.4.3' >> jni/Application.mk
-    buildjni=yes
-
 Build:2013.1231.1.1305,201312311
     commit=5
     target=android-19

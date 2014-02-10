@@ -15,14 +15,6 @@ Description:
 Repo Type:git
 Repo:https://github.com/nicolassmith/urlevaluator.git
 
-Build:1.8,9
-    commit=5cd3b
-    prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties
-
-Build:2.1,11
-    commit=610cfe3374e
-    prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties
-
 Build:2.3,13
     commit=ce2a75c6573c9e02
     prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties

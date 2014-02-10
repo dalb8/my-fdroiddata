@@ -44,7 +44,6 @@ Build:13.0.4a,69
     commit=c3327d7ae8e368
     submodules=yes
     rm=libs/armeabi;libs/jtorctl.jar
-    prebuild=sed -i 's/NDK_TOOLCHAIN_VERSION=4.7/NDK_TOOLCHAIN_VERSION=4.8/g' external/Makefile
     build=NDK_BASE=$$NDK$$ make -C external 
 
 Auto Update Mode:None

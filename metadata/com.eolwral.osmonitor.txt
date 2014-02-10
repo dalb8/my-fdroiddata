@@ -14,6 +14,8 @@ Description:
 * Connection: display every tcp or udp network connection, and query it via WHOIS. There is an option to display the reverse-ip lookup map in OpenStreetMap.
 * Misc: monitor processor, battery and file system.
 * Message: check dmesg or logcat in real-time.
+
+Requires Root: No, but you can get extra features via a root switch in the settings.
 .
 
 Repo Type:git

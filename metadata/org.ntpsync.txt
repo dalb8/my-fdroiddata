@@ -43,16 +43,6 @@ Build:1.3,4
     build=mvn package -Dmaven.test.skip=true -f android-libs/NET_3_1/pom.xml && \
         mv android-libs/NET_3_1/target/commons-net-3.1.jar libs/
 
-Build:1.7,9
-    commit=v1.7
-    subdir=NTPSync
-    gradle=fdroid
-
-Build:1.8,10
-    commit=v1.8
-    subdir=NTPSync
-    gradle=fdroid
-
 Build:1.9,11
     commit=v1.9
     subdir=NTPSync

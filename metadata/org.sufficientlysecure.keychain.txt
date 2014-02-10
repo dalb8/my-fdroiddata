@@ -25,16 +25,6 @@ Features:
 Repo Type:git
 Repo:https://github.com/dschuermann/openpgp-keychain.git
 
-Build:2.1.1,21100
-    commit=v2.1.1
-    subdir=OpenPGP-Keychain
-
-Build:2.2,22000
-    commit=v2.2
-    subdir=OpenPGP-Keychain
-    init=sed -i '51,82d' build.gradle
-    gradle=yes
-
 Build:2.3.1,23100
     commit=v2.3.1
     subdir=OpenPGP-Keychain
