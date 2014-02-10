@@ -32,11 +32,21 @@ Repo:https://github.com/horn3t/android_packages_apps_PerformanceControl
 Build:2.1.10,4
     commit=68eae56264b
     target=android-19
-    rm=assets/sqlite3
     prebuild=sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
 
 Maintainer Notes:
 Update Check Mode:RepoManifest/jb2
+
+sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces 
+  PIE executable. guess it might ok
+    rm=assets/sqlite3
+    extlibs=sqlite3.zip
+    prebuild=unzip libs/sqlite3.zip && \
+             rm libs/sqlite3.zip && \
+             sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
+    build=$$NDK$$/ndk-build && \
+          mv libs/armeabi/libsqlite3.so assets/sqlite3
+    buildjni=no
 .
 
 Auto Update Mode:None

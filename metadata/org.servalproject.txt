@@ -35,6 +35,7 @@ Repo:https://github.com/servalproject/batphone.git
 Build:0.91,2120
     commit=0.91
     submodules=yes
+    rm=jni/opus/celt/tests;gdbserver
     forceversion=yes
     buildjni=no
 
