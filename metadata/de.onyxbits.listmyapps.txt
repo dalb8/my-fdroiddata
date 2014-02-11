@@ -1,0 +1,26 @@
+Categories:System
+License:Apache2
+Web Site:
+Source Code:https://github.com/onyxbits/listmyaps
+Issue Tracker:https://github.com/onyxbits/listmyaps/issues
+
+Auto Name:List My Apps
+Summary:List apps
+Description:
+Compiles a list of apps installed on the device, in a text format for easy
+sharing.
+.
+
+Repo Type:git
+Repo:https://github.com/onyxbits/listmyaps.git
+
+Build:2.3,8
+    commit=v2.3
+    rm=custom_rules.xml
+    extlibs=android/android-support-v4.jar
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:2.3
+Current Version Code:8
+
