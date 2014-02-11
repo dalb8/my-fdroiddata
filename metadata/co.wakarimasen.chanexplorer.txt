@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
 AntiFeatures:NonFreeNet
 Categories:Internet
 License:MIT
@@ -5,15 +7,17 @@ Web Site:http://chanexplorer.wakarimasen.co
 Source Code:https://github.com/wakarimasenco/chanexplorer
 Issue Tracker:https://github.com/wakarimasenco/chanexplorer/issues
 
-Summary:For 4chan.org image board
+Summary:For the 4chan.org image board
 Description:
-Unofficial 4chan app, explorer and browser.
-
-* Auto Updater
-* Tabs
-* GIFs
-* Image Downloading
+* Auto updater
+* Auto-fill posts
+* Tabbed UI for boards and threads which are cached
+* Themes
+* Popups for replies and follow ups
+* Display thread's images or images of OP's in a gallery
 * 4Chan Pass
+
+Anti-feature: Non-free network service. 4chan.org doesn't publish source code.
 .
 
 Repo Type:git

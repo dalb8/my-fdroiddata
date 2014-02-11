@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Development
 License:Apache2
 Web Site:http://sourceforge.net/projects/textwarrior
@@ -7,9 +9,14 @@ Issue Tracker:http://sourceforge.net/tracker/?group_id=347589
 Auto Name:TextWarrior
 Summary:Text editor
 Description:
-TextWarrior is a programming text editor for mobile devices, featuring
-efficient and fun ways to work on a touch screen. 
-Handles large files rather well too.
+* Unusual range of options to move the cursor, like a touch screen trackpad and a yo-yo
+* Text selection is done by dragging handles initiated by a double tap
+* Handles large files rather well
+* Can open arbitrary files via file browser
+* Undo
+* Search & replace
+* Programming features such as syntax highlighting and line numbering
+* Font, text size and themes are configurable
 .
 
 Repo Type:git-svn

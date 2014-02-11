@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:MPLv1.1
-Web Site:http://almalence.com
+Web Site:http://almalence.com/mobile-applications#abc
 Source Code:https://github.com/almalence/OpenCamera
 Issue Tracker:https://github.com/almalence/OpenCamera/issues
 
