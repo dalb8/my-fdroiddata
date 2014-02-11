@@ -40,8 +40,7 @@ Build:0.82.1 ALPHA,13
     disable=needs fixing now that bindir is no longer available
     commit=a2dad34
     subdir=Hexiano
-    update=force
-    prebuild=rm custom_rules.xml
+    prebuild=rm build.xml custom_rules.xml
 
 Auto Update Mode:None
 #Generic package id in manifest

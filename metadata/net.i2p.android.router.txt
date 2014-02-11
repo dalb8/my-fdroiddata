@@ -16,6 +16,7 @@ layers of encryption, and the network is both distributed and dynamic, with no
 trusted parties.
 
 WARNING - This is ALPHA SOFTWARE. Do not rely upon it for strong anonymity.
+Note that it takes a while for the network to become usable.
 .
 
 Repo Type:git

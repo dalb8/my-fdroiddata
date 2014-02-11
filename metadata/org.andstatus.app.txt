@@ -22,8 +22,7 @@ Repo:git://github.com/andstatus/andstatus.git
 
 Build:7.1,95
     commit=AndStatus-7.1
-    update=force
-    rm=custom_rules.xml
+    init=rm build.xml custom_rules.xml
 
 Auto Update Mode:None
 Update Check Mode:Tags

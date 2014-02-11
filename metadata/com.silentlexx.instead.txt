@@ -26,9 +26,9 @@ Build:1.6.1.9,16109
     commit=r44
     subdir=project
     init=echo -e "APP_CFLAGS += -D__ARM_ARCH_5__" > jni/Application.mk && \
+        rm build.xml && \
         cd .. && \
         ./update_xml.sh || true
-    update=force
     srclibs=INSTEAD@r1854
     patch=jpeg.patch
     prebuild=ln -s `readlink -f $$INSTEAD$$` jni/src/instead
