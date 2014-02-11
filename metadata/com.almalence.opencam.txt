@@ -1,0 +1,41 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Multimedia
+License:MPLv1.1
+Web Site:http://almalence.com
+Source Code:https://github.com/almalence/OpenCamera
+Issue Tracker:https://github.com/almalence/OpenCamera/issues
+
+Summary:Highly configurable camera
+Description:
+HDR, groupshot, burst, exposure-bracketing, night mode, object removal,
+panorama, sequence photo.
+Histograms, grids, white balance, focus mode and that's even before
+the settings are opened!
+
+Seems that even the premium features are available in this build.
+.
+
+Repo Type:git
+Repo:https://github.com/almalence/OpenCamera.git
+
+Build:3.15,51
+    commit=master
+    disable=many prebuilts
+    rm=jni/almashot/x86;jni/prebuilt/OpenCV/libs/x86;jni/prebuilt/x86
+    scanignore=jni/almashot/armeabi-v7a;jni/prebuilt/armeabi-v7a;jni/prebuilt/OpenCV/libs/armeabi-v7a;jni/prebuilt/OpenCV/3rdparty/libs
+    buildjni=yes
+
+Maintainer Notes:
+Builds armeabi-v7a by default.
+
+Lots of native prebuilts in source code that probably have source code
+but the exiv jar has the same namespace as the developer and I can't locate
+source.code.
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:3.15
+Current Version Code:51
+
