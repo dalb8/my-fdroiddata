@@ -3,5 +3,7 @@ Repo:https://github.com/jfeinstein10/SlidingMenu
 
 Subdir:library
 
-Update Project:Yes
+Srclibs:ActionBarSherlock
+
+Prepare:android update project -p . -t android-14 && rm src/com/slidingmenu/lib/app/SlidingMapActivity.java libs/actionbarsherlock-plugin-maps-4.1.0.jar
 
