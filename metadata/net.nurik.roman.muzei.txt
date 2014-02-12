@@ -1,0 +1,37 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Wallpaper
+License:Apache2
+Web Site:http://muzei.co
+Source Code:https://github.com/romannurik/muzei
+Issue Tracker:https://github.com/romannurik/muzei/issues
+
+Summary:Arty wallpaper
+Description:
+Live wallpaper that displays a different painting every day, or
+optionally an image from your own gallery. It's dimmed and blurred
+so as not to distract but double tapping free space brings it
+into focus.
+
+An API exists to make extensions for other collections.
+.
+
+Repo Type:git
+Repo:https://github.com/romannurik/muzei.git
+
+Build:0.5,1006
+    commit=fb2e4eb2dc8
+    subdir=main
+    gradle=yes
+    prebuild=echo "sdk.dir=$$SDK$$" > ../local.properties && \
+        sed -i '28s/muzei/main/' build.gradle
+
+Maintainer Notes:
+API releases are tagged.
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:0.5
+Current Version Code:1006
+
