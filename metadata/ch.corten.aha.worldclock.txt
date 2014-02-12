@@ -1,0 +1,29 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Wallpaper
+License:GPLv3
+Web Site:
+Source Code:https://github.com/arminha/worldclockwidget
+Issue Tracker:https://github.com/arminha/worldclockwidget/issues
+
+Auto Name:World Clock &amp; Weather
+Summary:Current time and weather
+Description:
+Simple widgets to display time and/or weather from 1000s of cities around 
+the world. Locations can be customized by name and coordinates
+
+Default source for weather is [http://openweathermap.org Open Weather Map].
+.
+
+Repo Type:git
+Repo:https://github.com/arminha/worldclockwidget.git
+
+Build:1.5.11,29
+    commit=1.5.11
+    subdir=worldclockwidget
+
+Auto Update Mode:None
+Update Check Mode:Tags
+Current Version:1.5.11
+Current Version Code:29
+
