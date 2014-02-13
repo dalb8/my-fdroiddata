@@ -26,8 +26,8 @@ ant = "ant"
 mvn3 = "mvn"
 
 # Command for running Gradle
-#gradle = "/path/to/gradle"
-gradle = "gradle"
+#gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.9-bin/qtvcssosa3asn4t6njd64fm3i/gradle-1.9/bin/gradle"
+gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle"
 
 repo_url = ""
 repo_name = "My F-Droid"
