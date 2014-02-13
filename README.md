@@ -30,8 +30,10 @@ valid any more. Since we only have a couple of builds per package
 we'll get around to revising them all eventually.
 Depending on the distro, there could also be dependency issues for some apps.
 Also the gradle versioning system for non-build server setups is
-dependent on your path to the gradle binary; I point config.py to a symlink 
-which I change when necessary to work around this.
+dependent on your path to the gradle binary; since I also use the gradle wrapper
+which caches gradle versions in ~/.gradle/wrapper, I store the path to each version 
+in config.py and comment out all but one, depending on the build; I prefer this
+to editing bashrc.
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
@@ -47,5 +49,4 @@ Currently this git repo is about 18MiB in size.
 If you're new to git or Gitorious, look at 
 [this](https://f-droid.org/forums/topic/adding-apps-with-git) post
 for help in making contributions.
-
 
