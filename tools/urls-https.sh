@@ -6,15 +6,19 @@
 # alternate, backup method of verifying the download, but also greatly reduces
 # meta data leaks.
 
-for f in metadata/*.txt srclibs/*.txt; do
-    printf `echo $f | cut -b1`
+for f in metadata/*.txt srclibs/*txt; do
+    # this shows progress based on 1st letter of package name
+    printf `echo $f | cut -b10`
     sed -i 's,http://dl.google.com,https://dl.google.com,g' $f
     sed -i 's,http://pypi,https://pypi,g' $f
     sed -i 's,http://code.google.com,https://code.google.com,g' $f
     sed -i 's,http://github.com,https://github.com,g' $f
+    sed -i 's,git://github.com,https://github.com,g' $f
     sed -i 's,http://\([^.]*\).googlecode.com/svn,https://\1.googlecode.com/svn,g' $f
     sed -i 's,http://svn.apache.org/repos,https://svn.apache.org/repos,g' $f
     sed -i 's,http://svn.code.sf.net,https://svn.code.sf.net,g' $f
+    sed -i 's,svn://svn.code.sf.net,https://svn.code.sf.net,g' $f
     sed -i 's,http://gitorious.org,https://gitorious.org,g' $f
+    sed -i 's,git://gitorious.org,https://gitorious.org,g' $f
 done
 echo ""
