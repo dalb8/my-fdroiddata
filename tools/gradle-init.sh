@@ -16,9 +16,13 @@ echo -e "\n\n\033[31m   Repos:"
 echo -e "\033[0m"
 find . -name build.gradle -print |xargs grep -A 2 repositor
 
-echo -e "\n\n\033[31m   Jars:"
+echo -e "\n\n\033[31m   Prebuilts and scripts:"
 echo -e "\033[0m"
 find . -name \*jar | grep -v 'gradle\|build\|dexed'
+find . -name \*zip
+find . -name \*.a
+find . -name \*so
+find .  -maxdepth 2 -type f -executable
 
 echo -e "\n\n\033[31m   Licence:"
 echo -e "\033[0m"
