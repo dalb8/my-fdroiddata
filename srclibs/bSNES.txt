@@ -1,2 +1,2 @@
 Repo Type:git
-Repo:git://gitorious.org/bsnes/bsnes.git
+Repo:https://gitorious.org/bsnes/bsnes.git

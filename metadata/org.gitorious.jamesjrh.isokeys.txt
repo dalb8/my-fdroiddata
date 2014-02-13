@@ -34,7 +34,7 @@ If anyone can help out with MIDI support please check out:
 .
 
 Repo Type:git
-Repo:git://gitorious.org/hexiano/hexiano.git
+Repo:https://gitorious.org/hexiano/hexiano.git
 
 Build:0.82.1 ALPHA,13
     disable=needs fixing now that bindir is no longer available

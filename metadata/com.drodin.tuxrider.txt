@@ -21,7 +21,7 @@ The build has Admob replaced with a dummy library.
 .
 
 Repo Type:git
-Repo:git://github.com/drodin/TuxRider.git
+Repo:https://github.com/drodin/TuxRider.git
 
 Build:1.0.9,11
     commit=36220e5

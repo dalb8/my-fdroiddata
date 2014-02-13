@@ -26,7 +26,7 @@ but there are many good reasons for using a client/repository setup:
 .
 
 Repo Type:git
-Repo:git://gitorious.org/f-droid/fdroidclient.git
+Repo:https://gitorious.org/f-droid/fdroidclient.git
 
 Build:0.53-test,53
     commit=0.53-test

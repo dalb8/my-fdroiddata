@@ -18,7 +18,7 @@ is limited to that.
 .
 
 Repo Type:git
-Repo:git://github.com/andstatus/andstatus.git
+Repo:https://github.com/andstatus/andstatus.git
 
 Build:7.1,95
     commit=AndStatus-7.1

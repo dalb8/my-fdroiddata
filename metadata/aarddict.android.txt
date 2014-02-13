@@ -23,7 +23,7 @@ on the website.
 .
 
 Repo Type:git
-Repo:git://github.com/aarddict/android.git
+Repo:https://github.com/aarddict/android.git
 
 Build:1.6.7,22
     commit=1.6.7

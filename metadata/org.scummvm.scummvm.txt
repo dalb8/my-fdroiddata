@@ -31,7 +31,7 @@ Unlike upstream build, this one has all plugins bundled together in single apk. 
 .
 
 Repo Type:git
-Repo:git://github.com/scummvm/scummvm.git
+Repo:https://github.com/scummvm/scummvm.git
 
 Build:1.5.0,6
     commit=v1.5.0

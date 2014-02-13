@@ -19,7 +19,7 @@ on a Windows machine. Supports both versions 1
 .
 
 Repo Type:git
-Repo:git://github.com/bpellin/keepassdroid.git
+Repo:https://github.com/bpellin/keepassdroid.git
 
 Build:1.99.10,128
     commit=1.99.10

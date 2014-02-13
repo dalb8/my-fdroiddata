@@ -33,7 +33,7 @@ For general info about the StatusNet API see
 .
 
 Repo Type:git
-Repo:git://github.com/mariotaku/twidere.git
+Repo:https://github.com/mariotaku/twidere.git
 
 Build:0.2.9.9,91
     commit=0.2.9.9
