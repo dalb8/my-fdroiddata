@@ -24,8 +24,8 @@ Status: There is
 [http://forum.xda-developers.com/showpost.php?p=49761727&postcount=1270 no source code]for latest versions.
 .
 
-Repo Type:git
-Repo:https://github.com/dentex/ytdownloader.git
+#Repo Type:git
+#Repo:https://github.com/dentex/ytdownloader.git
 
 Build:3.5.4,75
     commit=3.5.4

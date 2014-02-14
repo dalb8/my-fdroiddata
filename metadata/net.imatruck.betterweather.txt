@@ -13,6 +13,7 @@ Based on the weather extension included with [[net.nurik.roman.dashclock]].
 It also contains more weather status icons than the original extension 
 (Thunderstorms, Mostly Cloudy, Hail, etc.) and 
 multiple icon themes (Climacons, Weathercons and Chameleon icon packs).
+Forecast is courtesy of Yahoo''!''
 
 Full feature list includes:
 * Manual or automatic location;
@@ -34,6 +35,7 @@ Build:2.3.2,37
 
 Auto Update Mode:None
 Update Check Mode:None
+#Update Check Mode:RepoManifest
 Current Version:2.3.2
 Current Version Code:37
 
