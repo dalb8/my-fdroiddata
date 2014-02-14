@@ -30,7 +30,7 @@ find -L .  -maxdepth 2 -type f -executable
 
 echo -e "\n\n\033[31m   Licence:"
 echo -e "\033[0m"
-ls -1 LICENSE* COPYING | xargs head -n 3 
+ls -1 LICENSE* COPYING* | xargs head -n 3 
 #grep -r 'Apache\|GNU\|Copyright' *
 
 echo -e "\n\n\033[31m   Fix:"
