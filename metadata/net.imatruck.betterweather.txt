@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Wallpaper
 License:Apache2
@@ -27,13 +27,13 @@ Full feature list includes:
 Repo Type:git
 Repo:https://github.com/MarcDufresne/BetterWeather.git
 
-Build:2.2.2,34
-    commit=ba20a05e3506fb
+Build:2.3.2,37
+    disable=used gradlew
     subdir=betterweather
     gradle=yes
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:2.2.2
-Current Version Code:34
+Update Check Mode:None
+Current Version:2.3.2
+Current Version Code:37
 
