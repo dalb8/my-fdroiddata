@@ -8,21 +8,25 @@ echo -e "\n\033[31m   Overall:"
 echo -e "\033[0m"
 grep gradle build.gradle
 
+echo -e "\n\033[31m   Build Tools:"
+echo -e "\033[0m"
+grep buildTools $(find -L . -name build.gradle)
+
 echo -e "\n\033[31m   Library settings:"
 echo -e "\033[0m"
 cat settings.gradle
 
 echo -e "\n\n\033[31m   Repos:"
 echo -e "\033[0m"
-find . -name build.gradle -print |xargs grep -A 2 repositor
+find -L . -name build.gradle -print |xargs grep -A 2 repositor
 
 echo -e "\n\n\033[31m   Prebuilts and scripts:"
 echo -e "\033[0m"
-find . -name \*jar | grep -v 'gradle\|build\|dexed'
-find . -name \*zip
-find . -name \*.a
-find . -name \*so
-find .  -maxdepth 2 -type f -executable
+find -L . -name \*jar | grep -v 'gradle\|build\|dexed'
+find -L . -name \*zip
+find -L . -name \*.a
+find -L . -name \*so
+find -L .  -maxdepth 2 -type f -executable
 
 echo -e "\n\n\033[31m   Licence:"
 echo -e "\033[0m"
