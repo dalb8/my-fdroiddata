@@ -3,37 +3,42 @@ my-fdroiddata
 *Recipes for building Android apps from source code*
 
 It's the same format used to make the packages on [f-droid.org](https://f-droid.org).
-They have 1000 different apps (and serve two-million APKs a month) but there 
-are only 300 recipes here. 
+While they have over 1000 different apps (and serve two-million APKs a month), here are
+found only recipes that are of use to myself (and yourself).
+
 So we can try a less industrial approach; rambling descriptions and device-specific 
-patches are positively welcomed!
-Write as many comments as you like!
+patches are positively welcomed! Write as many comments as you like!
 
 -------
 We are tolerant of, if not delighted about, obsolete data. 
-The Current Versions are updated automatically and perhaps infrequently, 
-so they could easily be incorrect.
+Some of the Current Versions are updated automatically and 
+perhaps infrequently, so they could easily be incorrect; likewise any app
+with a manual Update Check Mode.
 
 Since faults would otherwise go unnoticed, new builds should only be
-committed after inspecting the source code and running the APK on a gadget.
-Prebuilt libraries, whether included or pulled at build time from maven repos, 
-should have been built by a third party, unless otherwise stated.
+committed after inspecting the source code, doing the build and running the APK on 
+a gadget. If testing isn't thorough, add it with the `Build:` parameter `disable=`, 
+as I often do when I get lazy and use the gradle wrapper (`gradlew`).
+
+Pre-built libraries, whether included in `libs/` or pulled from remote maven repos 
+at build time, should have been built by some third party (e.g. the library developers), 
+unless contradicted in the description.
 
 By all means, include in-development apps; if they don't get very far
-we'll add the 'Disabled:' field and eventually delete them.
+we'll add the `Disabled:` field and eventually delete them.
 This is also true for apps that aren't licensed properly or go proprietary.
 
 I'm currently using a recent version of 
 [fdroidserver](https://gitorious.org/f-droid/fdroidserver).
-This implies newer recipes are likely to work but older recipes might not be
+Therefore newer recipes are likely to work but older recipes might not be
 valid any more. Since we only have a couple of builds per package
 we'll get around to revising them all eventually.
 Depending on the distro, there could also be dependency issues for some apps.
 Also the gradle versioning system for non-build server setups is
 dependent on your path to the gradle binary; since I also use the gradle wrapper
-which caches gradle versions in ~/.gradle/wrapper, I store the path to each version 
+which caches gradle versions in `~/.gradle/wrapper`, I store the path to each version 
 in config.py and comment out all but one, depending on the build; I prefer this
-to editing bashrc.
+to editing `.bashrc`.
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
@@ -50,3 +55,4 @@ If you're new to git or Gitorious, look at
 [this](https://f-droid.org/forums/topic/adding-apps-with-git) post
 for help in making contributions.
 
+&mdash; Dave Black
