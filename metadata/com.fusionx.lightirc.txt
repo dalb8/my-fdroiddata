@@ -1,0 +1,21 @@
+Categories:Internet
+License:GPLv3
+Source Code:https://github.com/tilal6991/HoloIRC
+Issue Tracker:https://github.com/tilal6991/HoloIRC/issues
+
+Summary:IRC client
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/tilal6991/HoloIRC.git
+
+Build:2.9.3,37
+    commit=master
+    disable=used gradlew; edited settings.gradle as well as usual build.gradle edits; added build.gradles to three srclibs; all srclibs symlinked to /libraries; Don't use ABS root build.gradle from 4.4.0 because of some bug; AM.xml of NumberPicker needs aligning with ABS to allow manifest merging
+    srclibs=ActionBarSherlock@9598f2bb,SlidingMenu@7343c3cd,Relay@master,NumberPicker-SimonVT@master
+    subdir=HoloIRC
+
+Update Check Mode:None
+Current Version Code:37
+
