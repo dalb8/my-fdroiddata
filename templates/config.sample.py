@@ -1,9 +1,10 @@
 #!/usr/bin/env python2
 
 # For use with F-Droid server: https://gitorious.org/f-droid/froidserver
-# Copy this file (or the sample config from that repo) to config.py, 
+# Copy this file (or the sample config from that repo) to my-fdroiddata/config.py, 
 # then amend the settings below according to your system configuration.
-# Read the F-Droid manual: https://f-droid.org/manual
+# Alternatively, a config will be generated with $fdroid init.
+# Run $fdroid update from my-fdroiddata/ to generate the index.
 
 # Path to the Android SDK, $ANDROID_HOME already set on most systems
 #sdk_path = "/path/to/android-sdk"
@@ -37,8 +38,9 @@ Applications in this repository are built from source code and may behave
 differently to the developers' versions.
 """
 
-## Signing: read https://developer.android.com/tools/publishing/app-signing.html
-# Use the fdroid init command to generate these for you
+# Signing: read https://developer.android.com/tools/publishing/app-signing.html
+# See the first and last parts of https://f-droid.org/manual for help.
+# You'll need Java 1.7 (OpenJDK 7) to build an index: check with $java -version.
 
 #The key (from the keystore defined below) to be used for signing the
 #repository itself. Can be None for an unsigned repository.
