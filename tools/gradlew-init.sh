@@ -1,8 +1,14 @@
-# Warn about some features of a gradle build
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+
+# Report about some features of a gradle build
+
 #! /bin/sh
+
 echo -e "\033[31m   Wrapper:"
 echo -e "\033[0m"
 grep \.zip gradle/wrapper/gradle-wrapper.properties
+find -L . -name build.gradle -print |xargs grep classpath
 
 echo -e "\n\033[31m   Overall:"
 echo -e "\033[0m"
