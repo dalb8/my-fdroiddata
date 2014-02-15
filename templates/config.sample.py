@@ -31,13 +31,14 @@ gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5
 
 repo_url = ""
 repo_name = "My F-Droid"
-repo_icon = "fdroid-icon.png"
+repo_icon = "icon_repo.png"
 repo_description = """
 Applications in this repository are built from source code and may behave
 differently to the developers' versions.
 """
 
 ## Signing: read https://developer.android.com/tools/publishing/app-signing.html
+# Use the fdroid init command to generate these for you
 
 #The key (from the keystore defined below) to be used for signing the
 #repository itself. Can be None for an unsigned repository.
@@ -45,7 +46,7 @@ repo_keyalias = None
 
 #The keystore to use for release keys when building. This needs to be
 #somewhere safe and secure, and backed up!
-keystore = "/home/me/somewhere/my.keystore"
+keystore = "/home/me/.local/share/fdroidserver/keystore.jks"
 
 #The password for the keystore (at least 6 characters).
 keystorepass = "password1"
