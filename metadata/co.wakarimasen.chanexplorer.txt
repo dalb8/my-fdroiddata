@@ -24,19 +24,15 @@ Repo Type:git
 Repo:https://github.com/wakarimasenco/ChanExplorer.git
 
 Build:2.2.3,63
-    commit=33197b1ecbb8
-    rm=libs/boyer.jar
-    extlibs=Boyer.java
+    commit=b0e083ad3c
+    disable=srclibs srclibs broken
     srclibs=1:ActionBarSherlock@9598f2bb;2:SlidingMenu@7343c3cd
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
         cp libs/android-support-v4.jar $$SlidingMenu$$/libs/ && \
-        mkdir -p src/com/mindprod/boyer && \
-        mv libs/Boyer.java src/com/mindprod/boyer/ && \
         sed -i -e 's/extends FragmentActivity implements SlidingActivityBase/extends com.actionbarsherlock.app.SherlockFragmentActivity implements SlidingActivityBase/' $$SlidingMenu$$/src/com/slidingmenu/lib/app/SlidingFragmentActivity.java
     buildjni=jni
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:2.2.3
+Update Check Mode:None
 Current Version Code:63
 
