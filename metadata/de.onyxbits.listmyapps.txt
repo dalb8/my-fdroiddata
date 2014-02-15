@@ -16,13 +16,13 @@ sharing.
 Repo Type:git
 Repo:https://github.com/onyxbits/listmyaps.git
 
-Build:2.3,8
-    commit=v2.3
+Build:2.4,9
+    commit=v2.4
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
 Auto Update Mode:None
-Update Check Mode:Tags
-Current Version:2.3
-Current Version Code:8
+#Update Check Mode:Tags
+Update Check Mode:None
+Current Version Code:9
 

@@ -1,0 +1,14 @@
+Categories:Multimedia
+License:Proprietary
+Web Site:http://arte.tv/guide/fr/plus7
+
+Summary:ARTE on demand
+Description:
+.
+
+Maintainer Notes:
+Get it via Google Play
+.
+
+Current Version Code:211142111
+
