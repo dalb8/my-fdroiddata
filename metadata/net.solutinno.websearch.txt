@@ -35,6 +35,8 @@ Build:1.0.3,6
     commit=8af7
     subdir=WebSearch
     submodules=yes
+    prebuild=sed -i 's/0.5.+/0.7.+/g' build.gradle && \
+             sed -i 's/0.5.+/0.7.+/g' ../lib/android-lib-Solutinno/build.gradle
     gradle=yes
 
 Maintainer Notes:
