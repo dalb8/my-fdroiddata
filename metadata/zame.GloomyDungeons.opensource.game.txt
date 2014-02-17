@@ -30,23 +30,33 @@ Repo Type:git
 Repo:https://github.com/restorer/Gloomy-Dungeons-3D
 
 Build:2013.01.17.1126,1358421967
-    disable=ruby version problems; also ELFs missing at 05e6bb5422
     commit=05e6bb5422
     subdir=.build
-    init=cd .. && \
-        sed -i '54,57d' source/AndroidManifest.xml && \
-        sed -i 's@\$NDKBUILDTOOL@$$NDK$$/ndk-build@g' tools/builder/build-fdroid.sh && \
-        rm source/libs/libGoogleAnalytics.jar && \
+    init=sed -i '54,57d' ../source/AndroidManifest.xml && \
+        sed -i 's@\$NDKBUILDTOOL@$$NDK$$/ndk-build@g' ../tools/builder/build-fdroid.sh
+    update=no
+    rm=source/libs/libGoogleAnalytics.jar;tools/builder/additional-libs
+    build=cd .. && \
         ./f-build opensource
-    srclibs=NoAnalytics@158a4a
-    prebuild=echo "android.library.reference.1=$$NoAnalytics$$" >> project.properties
-    buildjni=no
+    buildjni=../.build
     novcheck=yes
 
+Maintainer Notes:
+I build this by patching fdroidserver to avoid ant clean
+
+Makes use of ruby 1.8, but works for me with 1.9
+
+buildjni=no should be used but the above is a workaround for a bug.
+
+Manifest is patched because network permissions aren't needed.
+
+In Market under zame.GloomyDungeons.fullversion.game & has non-free resources
+
+Version is created based on the date of the build.
+.
+
 Auto Update Mode:None
-#In Market under zame.GloomyDungeons.fullversion.game & has non-free resources
 Update Check Mode:Static
-#Need to fill this with proper value
 Current Version:2013.01.17.1126
-Current Version Code:1358421967
+Current Version Code:20000000000
 
