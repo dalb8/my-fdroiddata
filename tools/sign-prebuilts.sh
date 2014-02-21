@@ -19,5 +19,5 @@ touch unsigned/$PNAME\_0\_src.tar.gz
 cp -n templates/minimal.txt metadata/$PNAME.txt
 fdroid publish $PNAME
 fdroid install $PNAME
-rm unsigned/$PNAME\_0\_src.tar.gz
+rm repo/$PNAME\_0\_src.tar.gz
 cd build/$PNAME
