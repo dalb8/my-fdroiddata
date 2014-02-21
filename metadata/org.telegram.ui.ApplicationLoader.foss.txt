@@ -1,0 +1,48 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
+# See https://gitorious.org/asdgasd/my-fdroiddata
+
+AntiFeatures:NonFreeNet,UpstreamNonFree
+Categories:Phone & SMS
+License:GPL
+Web Site:https://telegram.org
+Source Code:https://github.com/slp/Telegram
+Issue Tracker:https://github.com/slp/Telegram/issues
+
+Summary:Client for the Telegram network
+Description:
+Enter your telephone number and your address book will be
+uploaded to the server allowing you to be connected with those 
+of your contacts who are already on the network: a bit like WhatsApp.
+Then you can message with them in a variety of ways.
+Unlike Whatsapp your message history is stored on the server.
+There is an option to make an end-to-end encrypted message and even
+have messages self-destruct after a while.
+
+This project is a close derivative of one of the official apps, with some proprietary
+libraries removed: GMS for push notifications and one for bug reporting.
+The server project is non-free though it is argued that a clone can
+easily be made since the API is published; there are unofficial clients
+for a variety of platforms, including GNU/Linux and the WWW.
+.
+
+Repo Type:git
+Repo:https://github.com/slp/Telegram.git
+
+Build:1.3.7,131
+    commit=d40a
+    disable=run gradlew again after this to get the native libs in the apk
+    subdir=TMessagesProj
+    gradle=foss
+    prebuild=sed -i '53,54d' build.gradle
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    buildjni=no
+
+Maintainer Notes:
+sed patch removes dependencies on the non-free flavors
+
+.
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version Code:131
+
