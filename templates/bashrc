@@ -17,6 +17,7 @@ alias cdf='cd ~/fdroiddata'
 alias jsign='jarsigner -keystore /home/gerry/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA'
 function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayl() { luakit play.google.com/store/apps/details/?id="$@" ;}
+function fed() { edit ~/fdroiddata/metadata/"$@".txt ;}
 #adb logcat | grep `adb shell ps | grep com.example.package | cut -c10-15`
 
 export ANDROID_HOME=/home/gerry/android-sdk-linux
