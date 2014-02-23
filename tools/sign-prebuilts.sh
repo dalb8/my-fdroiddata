@@ -20,6 +20,6 @@ cp -n templates/minimal.txt metadata/$PNAME.txt
 rm repo/$PNAME\_0.apk
 fdroid publish $PNAME
 rm repo/$PNAME\_0\_src.tar.gz
-adb install -r repo/$PNAME\_0.apk
+#adb install -r repo/$PNAME\_0.apk
 cd build/$PNAME
 

@@ -22,6 +22,10 @@ Build:1.4.4,41
     commit=v41
     subdir=Catlog
 
+Build:1.5.0,42
+    commit=094a3bbd2b
+    subdir=Catlog
+
 Maintainer Notes:
 Tags unreliable
 .
