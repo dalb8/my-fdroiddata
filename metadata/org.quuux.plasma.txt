@@ -23,6 +23,8 @@ Build:1.0.1,2
 Maintainer Notes:
 Can't use gradle 1.10, only 1.9
 Should use a better way of setting the version numbers
+
+For next version https://github.com/markfguerra/GLWallpaperService
 .
 
 Auto Update Mode:None

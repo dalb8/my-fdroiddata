@@ -6,6 +6,7 @@ Web Site:
 Source Code:https://github.com/HannahMitt/Nomophobia
 Issue Tracker:https://github.com/HannahMitt/Nomophobia/issues
 
+Auto Name:Nomophobia
 Summary:Widget to remind about usage
 Description:
 Tells you how long it's been since you last turned on the phone and
@@ -19,9 +20,11 @@ Repo:https://github.com/HannahMitt/Nomophobia.git
 Build:1.0,1
     disable=no license
     commit=v1.0
-    update=.;libs/GraphView
+    update=.,libs/GraphView
     prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties
 
 Auto Update Mode:None
 Update Check Mode:Tags
+Current Version:1.0
+Current Version Code:1
 

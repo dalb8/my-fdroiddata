@@ -25,6 +25,6 @@ Build:0.4.4-alpha,17
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:0.4.4-alpha
-Current Version Code:17
+Current Version:0.5.8
+Current Version Code:28
 

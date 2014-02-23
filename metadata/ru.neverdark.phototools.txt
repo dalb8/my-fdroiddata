@@ -23,12 +23,12 @@ Repo:https://github.com/yankovskiy/PhotoTools.git
 
 Build:0.7.2,51
     commit=v0.7.2
-    srclibs=ActionBarSherlock@4.4.0;WheelWidget@903ef
+    srclibs=ActionBarSherlock@4.4.0,WheelWidget@903ef
     patch=gms_51.patch
     prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:0.7.2
-Current Version Code:51
+Current Version:0.7.6
+Current Version Code:55
 

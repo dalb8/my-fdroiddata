@@ -30,7 +30,7 @@ Build:0.7.1,12
         cp libs/android-support-v4.jar $$aFileChooser$$/libs/android-support-v4.jar
 
 Auto Update Mode:None
-Update Check Mode:None
-Current Version:0.7.1
-Current Version Code:12
+Update Check Mode:Tags
+Current Version:0.8.2
+Current Version Code:15
 

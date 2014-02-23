@@ -22,7 +22,11 @@ Build:1.4,60
     target=android-10
     patch=scoping-fix.patch;handle-no-market.patch;fix-appname.patch;button-name.patch
 
-# 1.7 on gplay
+Maintainer Notes:
+1.7 on gplay
+Has a proprietary "successor", com.seb.SLWP2b
+.
+
 Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.5

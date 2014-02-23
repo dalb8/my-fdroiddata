@@ -29,6 +29,11 @@ Build:3.7,370
     commit=2
     buildjni=yes
 
+Build:4.2a,421
+    commit=3
+    prebuild=sed -i 's/targetSdkVersion="7"/targetSdkVersion="11"/g' AndroidManifest.xml
+    buildjni=yes
+
 Maintainer Notes:
 Grab source archive from website and push it to repo
 .

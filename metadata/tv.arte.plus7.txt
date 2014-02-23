@@ -10,5 +10,6 @@ Maintainer Notes:
 Get it via Google Play
 .
 
+Current Version:v2.1.1
 Current Version Code:211142111
 

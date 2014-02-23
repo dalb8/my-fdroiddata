@@ -28,12 +28,12 @@ Build:1.1,10
     commit=3c2b38f6a47e4c
     subdir=FairphonePeaceOfMind
     gradle=defaultFlavor
+    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar,FairphoneHome,FairphoneUpdater,APK
     srclibs=RootTools-new@3.4
-    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar;FairphoneHome;FairphoneUpdater;APK
     prebuild=sed -i "/^    compile files/d" build.gradle && \
-             sed -i "37 i \ \ \ \ compile project(':RootTools-new')" build.gradle && \
-             echo "include ':RootTools-new'" >> ../settings.gradle && \
-             ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new 
+        sed -i "37 i \ \ \ \ compile project(':RootTools-new')" build.gradle && \
+        echo "include ':RootTools-new'" >> ../settings.gradle && \
+        ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new 
 
 Maintainer Notes:
              sed -i 's/gradle:0.7.+/gradle:0.8.+/g' build.gradle && \
@@ -42,6 +42,6 @@ Maintainer Notes:
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
-Current Version:1.1
-Current Version Code:10
+Current Version:1.2
+Current Version Code:12
 

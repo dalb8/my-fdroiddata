@@ -55,6 +55,6 @@ Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest/prod
-Current Version:3.27
-Current Version Code:148
+Current Version:3.34
+Current Version Code:155
 

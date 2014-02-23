@@ -27,11 +27,10 @@ Build:0.5.47,80
     buildjni=no
 
 Maintainer Notes:
-UCM: Tags too slow; Cross-check CV with gplay!
 .
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:0.6.5
-Current Version Code:86
+Update Check Mode:Tags .*-production
+Current Version:0.6.9a
+Current Version Code:90
 

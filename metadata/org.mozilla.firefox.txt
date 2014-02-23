@@ -17,6 +17,9 @@ implements current and anticipated web standards. Features include: bookmark
 sync, custom search engines,
 support for addons and the ability to enable or disable the search suggestions.
 
+This version is probably only for ARMv7; get the other ABIs via
+the FTP site.
+
 Anti-features: Non-free Addons: The license of the addons/modules on 
 addons.mozilla.org may be seen in the version notes of the addon and often the
 license is Custom or other non-free. 
@@ -31,7 +34,6 @@ Build:25.0,2013102514
 
 Auto Update Mode:None
 Update Check Mode:None
-#Update Check Data:http://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/multi/android_info.txt|buildID=(\d{10})\d{4}|http://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/android/multi/|fennec-([\d.]+)\.multi\.android-arm\.apk
-Current Version:25.0
-Current Version Code:2013102514
+Current Version:27.0
+Current Version Code:2014012813
 

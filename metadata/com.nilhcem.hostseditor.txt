@@ -6,7 +6,7 @@ Web Site:
 Source Code:https://github.com/Nilhcem/hosts-editor-android
 Issue Tracker:https://github.com/Nilhcem/hosts-editor-android/issues
 
-Auto Name:Hosts Editor
+Auto Name:@string/app_name
 Summary:Edit system hosts file
 Description:
 View and freely edit the /system/etc/hosts file on your device.
@@ -22,11 +22,19 @@ Repo:https://github.com/Nilhcem/hosts-editor-android
 
 Build:1.1,2
     commit=ab85d7a8268f3c3
+    rm=contrib,.settings
     srclibs=1:ActionBarSherlock@4.3.1
-    rm=contrib;.settings
+
+Maintainer Notes:
+Build:1.2,3
+    disable=haven't built it yet
+    commit=v1.2
+    subdir=app
+    gradle=yes
+.
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:1.1
-Current Version Code:2
+Update Check Mode:Tags
+Current Version:1.2
+Current Version Code:3
 

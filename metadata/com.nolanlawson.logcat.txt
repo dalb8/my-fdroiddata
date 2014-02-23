@@ -22,8 +22,12 @@ Build:1.4.4,41
     commit=v41
     subdir=Catlog
 
+Maintainer Notes:
+Tags unreliable
+.
+
 Auto Update Mode:None
-Update Check Mode:Tags
-Current Version:1.4.4
-Current Version Code:41
+Update Check Mode:RepoManifest
+Current Version:1.5.0
+Current Version Code:42
 

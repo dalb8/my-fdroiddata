@@ -37,6 +37,6 @@ Build:1.2.7,141
 
 Auto Update Mode:None
 Update Check Mode:Tags
-Current Version:1.2.7
-Current Version Code:141
+Current Version:1.2.9
+Current Version Code:152
 
