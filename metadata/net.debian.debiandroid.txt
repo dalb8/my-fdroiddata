@@ -30,7 +30,7 @@ Build:1.7,12
     prebuild=mv libs/android-support-v4.jar external/actionbarsherlock/actionbarsherlock/libs/
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:1.7
-Current Version Code:12
+Update Check Mode:Tags
+Current Version:1.732
+Current Version Code:16
 

@@ -22,7 +22,7 @@ Repo:https://github.com/wbaumann/SmartReceiptsPro.git
 
 Build:2.2.1,82
     commit=5c9ae8d29
-    srclibs=ActionBarSherlock@4.1.0;AndroidCamera-WB@v2.2.1;Mini-WB@2ff534;1:SmartReceipts@946fd63b4
+    srclibs=ActionBarSherlock@4.1.0,AndroidCamera-WB@v2.2.1,Mini-WB@2ff534,1:SmartReceipts@946fd63b4
     prebuild=cp $$SmartReceipts$$/libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
         cp $$SmartReceipts$$/libs/android-support-v4.jar $$AndroidCamera-WB$$/libs/ && \
         rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java
@@ -30,16 +30,15 @@ Build:2.2.1,82
 Build:3.0.0,86
     disable=missing symblols in SmartReceipts srclib
     commit=v3.0.0
-    srclibs=ActionBarSherlock@4.4.0;AndroidCamera-WB@v3.0.0;Mini-WB@v3.0.0;1:SmartReceipts@v3.0.0
+    srclibs=ActionBarSherlock@4.4.0,AndroidCamera-WB@v3.0.0,Mini-WB@v3.0.0,1:SmartReceipts@v3.0.0
     prebuild=rm $$AndroidCamera-WB$$/src/wb/android/google/camera/util/LinkedNode.java && \
         mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
 Maintainer Notes:
-Tags UCM not working
 .
 
 Auto Update Mode:None
-Update Check Mode:RepoManifest
-Current Version:3.0.0
-Current Version Code:86
+Update Check Mode:Tags
+Current Version:3.1.1
+Current Version Code:94
 
