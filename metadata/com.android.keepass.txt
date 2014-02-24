@@ -15,7 +15,7 @@ major desktop platforms:
 on GNU/Linux KeePassX is a well-established client. Portable editions are
 available if you need to use it
 on a Windows machine. Supports both versions 1
-(kdb) & 2 (kdbx) of the Keepass database. Supports MIPS and x86 natively.
+(kdb) & 2 (kdbx) of the Keepass database.
 .
 
 Repo Type:git
@@ -25,14 +25,18 @@ Build:1.99.10,128
     commit=1.99.10
     target=android-12
     extlibs=keepass/sha2-07-01-07.zip
-    rm=assets
+    init=rm assets/*.key assets/*.kdb assets/*.kdbx
+    rm=tests
     prebuild=unzip libs/sha2-07-01-07.zip -d jni/sha && \
         rm libs/sha2-07-01-07.zip
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
 Maintainer Notes:
+using android-12 because I don't have 11
+
 check jni/prep_build.sh prior to build
+
 once a tag was a beta
 .
 

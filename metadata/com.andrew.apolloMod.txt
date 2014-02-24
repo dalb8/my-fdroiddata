@@ -12,6 +12,9 @@ Description:
 Improvement on Apollo with simpler interface.
 One thing to note is that switching from Now Playing to the queue
 is done by swiping. In an Album view there is also swiping.
+
+Can filter output via [[com.bel.android.dspmanager]],
+which is installed on most custom ROMs.
 .
 
 Repo Type:git
