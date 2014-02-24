@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:GPLv3
-Web Site:https://code.google.com/p/jlyr/
-Source Code:https://code.google.com/p/jlyr/source/checkout
+Web Site:https://code.google.com/p/jlyr
+Source Code:https://code.google.com/p/jlyr/source/list
 Issue Tracker:https://code.google.com/p/jlyr/issues/list
 
 Auto Name:JLyr Lyrics

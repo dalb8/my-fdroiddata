@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:NewBSD
-Web Site:https://code.google.com/p/sendreduced/
+Web Site:https://code.google.com/p/sendreduced
 Source Code:https://code.google.com/p/sendreduced/source/list
 Issue Tracker:https://code.google.com/p/sendreduced/issues/list
 

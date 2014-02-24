@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:GPLv2+
-Web Site:http://xmp.sourceforge.net/
+Web Site:http://xmp.sourceforge.net
 Source Code:http://sourceforge.net/projects/xmp/develop
 Issue Tracker:
 

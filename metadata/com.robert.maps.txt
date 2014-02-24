@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Navigation
 License:GPLv3
 Web Site:http://robertdeveloper.blogspot.com/2009/08/rmaps.html
-Source Code:https://code.google.com/p/robertprojects/source/checkout
+Source Code:https://code.google.com/p/robertprojects/source/list
 Issue Tracker:https://code.google.com/p/robertprojects/issues/list
 
 Auto Name:RMaps

@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
 License:GPLv2
-Web Site:http://andorstrail.com/
-Source Code:https://code.google.com/p/andors-trail/
+Web Site:http://andorstrail.com
+Source Code:https://code.google.com/p/andors-trail
 Issue Tracker:https://code.google.com/p/andors-trail/issues/list
 
 Auto Name:Andor's Trail

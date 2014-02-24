@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:System
 License:GPLv3
-Web Site:https://code.google.com/p/faenza-adw-theme/
+Web Site:https://code.google.com/p/faenza-adw-theme
 Source Code:https://code.google.com/p/faenza-adw-theme/source/list
 Issue Tracker:
 

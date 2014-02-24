@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Reading
 License:GPLv3
-Web Site:https://code.google.com/p/apv/
-Source Code:https://code.google.com/p/apv/source/checkout
+Web Site:https://code.google.com/p/apv
+Source Code:https://code.google.com/p/apv/source/list
 Issue Tracker:https://code.google.com/p/apv/issues/list
 Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LKB59NTKW9QLS
 Bitcoin:1MLdh6uAPymWVJ4bmRde684uTcLJWwumkK

@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Science & Education
 License:GPLv2
-Web Site:http://www.busydoingnothing.co.uk/prevo/
-Source Code:http://git.busydoingnothing.co.uk/cgit.cgi/prevo-android.git/
+Web Site:http://www.busydoingnothing.co.uk/prevo
+Source Code:http://git.busydoingnothing.co.uk/cgit.cgi/prevo-android.git
 Issue Tracker:
 
 Summary:Esperanto dictionary

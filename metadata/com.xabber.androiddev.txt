@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:GPLv3
-Web Site:http://www.xabber.com/
+Web Site:http://www.xabber.com
 Source Code:https://github.com/redsolution/xabber-android
 Issue Tracker:https://github.com/redsolution/xabber-android/issues
 

@@ -8,7 +8,7 @@ License:GPLv2+
 #
 #   Hosted on:
 #   http://sourceforge.net/p/onscripter/code-0/ (earliest upload?)
-#   https://code.google.com/p/onscripter/
+#   https://code.google.com/p/onscripter
 #
 #   Package: cn.natdon.onscripter
 #

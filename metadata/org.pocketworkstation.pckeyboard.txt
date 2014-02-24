@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:
-Source Code:https://code.google.com/p/hackerskeyboard/source/checkout
+Source Code:https://code.google.com/p/hackerskeyboard/source/list
 Issue Tracker:https://code.google.com/p/hackerskeyboard/issues/list
 
 Auto Name:Hacker's Keyboard

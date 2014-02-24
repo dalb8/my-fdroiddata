@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:GPLv3
 Web Site:http://www.sagemath.org
-Source Code:https://code.google.com/p/sage-android/source/checkout
+Source Code:https://code.google.com/p/sage-android/source/list
 Issue Tracker:https://code.google.com/p/sage-android/issues/list
 
 Auto Name:Sage

@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:MPL2
-Web Site:https://code.google.com/p/iptableslog/
+Web Site:https://code.google.com/p/iptableslog
 Source Code:https://code.google.com/p/iptableslog/source
 Issue Tracker:https://code.google.com/p/iptableslog/issues
 

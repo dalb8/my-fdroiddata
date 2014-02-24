@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:Apache2
-Web Site:https://code.google.com/p/connectbot/
+Web Site:https://code.google.com/p/connectbot
 Source Code:https://code.google.com/p/connectbot
 Issue Tracker:https://code.google.com/p/connectbot/issues/list
 

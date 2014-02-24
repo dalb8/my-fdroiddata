@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3
 Web Site:
-Source Code:https://github.com/splondike/polipoid/
+Source Code:https://github.com/splondike/polipoid
 Issue Tracker:https://github.com/splondike/polipoid/issues
 Donate:https://flattr.com/submit/auto?user_id=splondike&amp;url=https://github.com/splondike/polipoid/&amp;title=Polipoid&amp;description=Android%20wrapper%20for%20the%20Polipo%20proxy&amp;language=en_GB&amp;tags=android,proxy&amp;category=software
 Bitcoin:eef5109f143cf9d8c79e01371913c8f7

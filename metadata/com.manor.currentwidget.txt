@@ -2,10 +2,10 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:System
 License:GPLv3
-Web Site:https://code.google.com/p/currentwidget/
+Web Site:https://code.google.com/p/currentwidget
 Source Code:https://code.google.com/p/currentwidget/source/list
 Issue Tracker:https://code.google.com/p/currentwidget/issues/list
-Donate:https://code.google.com/p/currentwidget/
+Donate:https://code.google.com/p/currentwidget
 
 Summary:Battery current draw widget
 Description:

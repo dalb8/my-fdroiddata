@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:System
 License:GPLv3
-Web Site:https://code.google.com/p/dotdash-keyboard-android/
-Source Code:https://code.google.com/p/dotdash-keyboard-android/source/checkout
+Web Site:https://code.google.com/p/dotdash-keyboard-android
+Source Code:https://code.google.com/p/dotdash-keyboard-android/source/list
 Issue Tracker:https://code.google.com/p/dotdash-keyboard-android/issues/list
 
 Auto Name:DotDash Keyboard

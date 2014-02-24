@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
 License:GPLv2+
-Web Site:http://instead.syscall.ru/
-Source Code:http://sourceforge.net/p/instead/code/
+Web Site:http://instead.syscall.ru
+Source Code:http://sourceforge.net/p/instead/code
 Issue Tracker:http://instead.syscall.ru/forum/viewforum.php?id=14
 
 Name:INSTEAD

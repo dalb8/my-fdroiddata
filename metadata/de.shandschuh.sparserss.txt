@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:MIT
-Web Site:https://code.google.com/p/sparserss/
-Source Code:https://code.google.com/p/sparserss/source/checkout
+Web Site:https://code.google.com/p/sparserss
+Source Code:https://code.google.com/p/sparserss/source/list
 Issue Tracker:
 
 Auto Name:Sparse rss

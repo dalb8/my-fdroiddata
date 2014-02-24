@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Science & Education
 License:Apache2
-Web Site:https://code.google.com/p/auroraapp/
-Source Code:https://code.google.com/p/auroraapp/source/checkout
+Web Site:https://code.google.com/p/auroraapp
+Source Code:https://code.google.com/p/auroraapp/source/list
 Issue Tracker:https://code.google.com/p/auroraapp/issues/list
 
 Name:aAuroraApp

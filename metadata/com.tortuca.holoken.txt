@@ -2,8 +2,8 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
 License:GPLv3
-Web Site:https://code.google.com/p/holoken/
-Source Code:https://code.google.com/p/holoken/source/checkout
+Web Site:https://code.google.com/p/holoken
+Source Code:https://code.google.com/p/holoken/source/list
 Issue Tracker:https://code.google.com/p/holoken/issues/list
 
 Auto Name:HoloKen
