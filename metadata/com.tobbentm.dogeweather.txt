@@ -1,0 +1,28 @@
+Categories:Wallpaper
+License:MIT
+Web Site:http://tobbentm.com
+Source Code:https://github.com/TobbenTM/dogeweather
+Issue Tracker:https://github.com/TobbenTM/dogeweather/issues
+
+Summary:Homescreen widget
+Description:
+Displays weather on the widget taken from dogeweather.com.
+
+Relies on a network location provider like GMS or μG.
+
+.
+
+Repo Type:git
+Repo:https://github.com/TobbenTM/dogeweather.git
+
+Build:1.2,12
+    commit=master
+    disable=not ready yet. doesn't seem to get location. should use gradle but no build.gradle; no version in AM.xml
+    subdir=src
+    srclibs=1:Appcompat@thing;1:ASync-http@thing
+
+Auto Update Mode:None
+Update Check Mode:None
+Current Version:1.2
+Current Version Code:12
+
