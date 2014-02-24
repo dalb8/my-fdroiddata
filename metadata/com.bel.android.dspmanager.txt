@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black et al. Licensed as CCBYSA.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:Apache2
@@ -8,6 +8,13 @@ Issue Tracker:https://github.com/CyanogenMod/android_packages_apps_DSPManager/is
 Summary:Audio filters
 Description:
 Handy filters for headphone users.
+
+Does not alter all audio output:
+[[ch.blinkenlights.android.vanilla]] and
+[[com.andrew.apolloMod]] are compatible.
+
+Relies on some system libraries that are usually only found in some custom ROMS.
+They are called libcyanogen-dsp.so/libreverbwrapper.so/libvisualizer.so.
 .
 
 Auto Update Mode:None
