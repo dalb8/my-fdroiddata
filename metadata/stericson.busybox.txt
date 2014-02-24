@@ -26,6 +26,10 @@ The range of applets
 [https://raw2.github.com/linusyang/android-busybox-ndk/master/android_ndk_stericson-like available]
 isn't identical to the upstream version.
 Therefore, the applet manager doesn't have information about all the installed applets.
+
+Note that the symlinks may override pre-existing toolbox programs which may cause
+problems in rare cases; if in doubt, extract the busybox binary and copy that
+to /system/xbin.
 .
 
 Requires Root:Yes
