@@ -11,15 +11,15 @@
 #! /bin/bash
 
 #PNAME=`basename $PWD`
-PNAME="${PWD##*/}"
 #PNAME="com.example.package"
-cp $(find . -name \*.apk) ~/fdroiddata/unsigned/$PNAME\_0.apk
+PNAME="${PWD##*/}"
+export DATE=$(date +%d%m%Y)
+cp $(find . -name \*.apk) ~/fdroiddata/unsigned/$PNAME\_00$DATE.apk
 cd ~/fdroiddata/
-touch unsigned/$PNAME\_0\_src.tar.gz
+#touch unsigned/$PNAME\_00$DATE\_src.tar.gz
 cp -n templates/minimal.txt metadata/$PNAME.txt
-rm repo/$PNAME\_0.apk
 fdroid publish $PNAME
-rm repo/$PNAME\_0\_src.tar.gz
-#adb install -r repo/$PNAME\_0.apk
+#rm repo/$PNAME\_00$DATE\_src.tar.gz
+#adb install -r repo/$PNAME\_00$DATE.apk
 cd build/$PNAME
 
