@@ -27,7 +27,6 @@ Build:1.03,4
     gradle=yes
     prebuild=sed -i 's/minSdkVersion 18/minSdkVersion 17/g' build.gradle
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.03
 Current Version Code:4

@@ -19,7 +19,6 @@ Build:1.2.0,6
     commit=33ef50
     subdir=CpuStats
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.2.0
 Current Version Code:6

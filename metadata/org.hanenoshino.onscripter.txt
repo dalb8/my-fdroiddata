@@ -63,7 +63,6 @@ Build:20120310,20120310
     prebuild=cp -r $$ONScripter$$ jni/application/onscripter-20120310
     buildjni=yes
 
-Auto Update Mode:None
 # Not that it has good chances to be updated anyway..
 # (see https://github.com/shinohane/ONScripter-SAO for blob-filled replacement..)
 Update Check Mode:Static

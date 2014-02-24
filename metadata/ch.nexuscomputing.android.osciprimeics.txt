@@ -23,7 +23,6 @@ Build:Dagobert,14
     buildjni=yes
 
 # grab zip from website
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:Dagobert
 Current Version Code:16

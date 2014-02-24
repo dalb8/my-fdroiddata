@@ -58,7 +58,6 @@ Maintainer Notes:
 code patch necessary due to this open issue: https://code.google.com/p/dashclock/issues/detail?id=495
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.6
 Current Version Code:26

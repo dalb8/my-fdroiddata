@@ -25,7 +25,6 @@ Build:0.3.9,36
     target=android-14
     prebuild=sed -i 's/targetSdkVersion="11"/targetSdkVersion="14"/g' AndroidManifest.xml
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:0.3.9
 Current Version Code:36

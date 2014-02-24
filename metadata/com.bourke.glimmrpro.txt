@@ -26,7 +26,6 @@ Maintainer Notes:
 Need to install the CWAC jars in libs too.
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.22-SNAPSHOT
 Current Version Code:39

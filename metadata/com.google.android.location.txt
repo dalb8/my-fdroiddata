@@ -36,7 +36,6 @@ Build:1.3.2,1302
     subdir=NetworkLocation
     maven=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.3.2
 Current Version Code:1302

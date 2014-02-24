@@ -43,7 +43,6 @@ Maintainer Notes:
 see build.gradle for version name
 .
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:Unknown
 Current Version Code:6

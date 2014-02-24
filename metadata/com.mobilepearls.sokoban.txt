@@ -22,7 +22,6 @@ Build:1.12,13
     disable=not published
     commit=ae80d2feb77
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.12
 Current Version Code:13

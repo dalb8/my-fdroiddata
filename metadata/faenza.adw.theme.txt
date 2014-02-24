@@ -18,7 +18,6 @@ Repo:https://faenza-adw-theme.googlecode.com/svn/trunk/
 Build:1.0,1
     commit=1
 
-Auto Update Mode:None
 Update Check Mode:Static
 Current Version:1.0
 Current Version Code:1

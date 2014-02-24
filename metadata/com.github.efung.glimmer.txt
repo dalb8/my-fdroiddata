@@ -20,7 +20,6 @@ Build:1.1.2,4
     commit=v1.1.2
     submodules=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.1.2
 Current Version Code:4

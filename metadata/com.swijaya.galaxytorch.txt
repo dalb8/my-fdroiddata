@@ -19,7 +19,6 @@ Repo:https://github.com/santa4nt/Galaxy-Torch.git
 Build:1.6.1,29
     commit=1.6.1
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.6.2
 Current Version Code:30

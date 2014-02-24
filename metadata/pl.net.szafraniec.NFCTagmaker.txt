@@ -24,7 +24,6 @@ Repo:https://github.com/mateusz-szafraniec/NFCTagmaker.git
 Build:0.01,1
     commit=v0.01
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.02
 Current Version Code:2

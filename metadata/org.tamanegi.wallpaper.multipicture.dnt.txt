@@ -24,7 +24,6 @@ Build:0.6.11,48
     subdir=variant/dnt
     prebuild=mkdir -p src
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.6.11
 Current Version Code:48

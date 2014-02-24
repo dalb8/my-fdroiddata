@@ -21,7 +21,6 @@ Build:2.4,9
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
-Auto Update Mode:None
 #Update Check Mode:Tags
 Update Check Mode:None
 Current Version Code:9

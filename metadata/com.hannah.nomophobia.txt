@@ -23,7 +23,6 @@ Build:1.0,1
     update=.,libs/GraphView
     prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0
 Current Version Code:1

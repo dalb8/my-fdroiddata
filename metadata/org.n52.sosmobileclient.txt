@@ -23,7 +23,6 @@ Build:1.0.0,12
     commit=f0609f17a677e
     forceversion=yes
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0.0 beta (bugfix1)
 Current Version Code:12

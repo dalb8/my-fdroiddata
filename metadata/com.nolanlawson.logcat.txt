@@ -30,7 +30,6 @@ Maintainer Notes:
 Tags unreliable
 .
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.5.0
 Current Version Code:42

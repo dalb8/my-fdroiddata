@@ -33,7 +33,6 @@ Build:2.3.2,37
     subdir=betterweather
     gradle=yes
 
-Auto Update Mode:None
 Update Check Mode:None
 #Update Check Mode:RepoManifest
 Current Version:2.3.2

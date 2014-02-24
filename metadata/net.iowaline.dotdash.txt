@@ -20,7 +20,6 @@ Repo:https://code.google.com/p/dotdash-keyboard-android/
 Build:1.1.5,12
     commit=95c0f978a724
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.1.5
 Current Version Code:12

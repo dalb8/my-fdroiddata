@@ -43,7 +43,6 @@ theoretically possible:https://github.com/twobigears/Circle-Synth/issues/47.
 The app_license string must be inserted because of Google Play donations mallarkey.
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.0
 Current Version Code:5

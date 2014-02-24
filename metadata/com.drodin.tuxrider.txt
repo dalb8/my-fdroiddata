@@ -30,7 +30,6 @@ Build:1.0.9,11
     prebuild=echo "android.library.reference.1=$$MobAdMob$$" >> project.properties
     buildjni=yes
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0.9
 Current Version Code:11

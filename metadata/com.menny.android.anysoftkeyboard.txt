@@ -59,7 +59,6 @@ Maintainer Notes:
 Tags are at menny/AnySoftKeyboard
 .
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.2.
 Current Version Code:122

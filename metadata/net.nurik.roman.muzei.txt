@@ -30,7 +30,6 @@ Maintainer Notes:
 API releases are tagged.
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:0.5
 Current Version Code:1006

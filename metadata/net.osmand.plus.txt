@@ -58,7 +58,6 @@ Qt in new_core branch
 see https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml 
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.6.5
 Current Version Code:150

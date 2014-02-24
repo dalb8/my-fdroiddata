@@ -22,7 +22,6 @@ Repo:https://github.com/intrications/browser-intercept.git
 Build:1.1,2
     commit=878823bbf01a3e2
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.1
 Current Version Code:2

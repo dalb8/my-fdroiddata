@@ -47,7 +47,6 @@ One of the tests opens a graphical dialog!
 Uses a lot of first-party plugins yet. Should be OK for f-droid.org ;-)
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0
 Current Version Code:1

@@ -32,7 +32,6 @@ Build:1.02,151
         mv $$Scrypt$$/target/libscrypt.so libs/x86/ && \
         $$MVN3$$ clean install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.05
 Current Version Code:155

@@ -30,7 +30,6 @@ Build:Alpha Release #6,6
     init=sed -i '76,79d' build.gradle
     gradle=foss
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:Alpha Release #6
 Current Version Code:6

@@ -24,7 +24,6 @@ Build:0.6.6,30
     commit=0.6.6
     rm=custom_rules.xml
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.6.6
 Current Version Code:30

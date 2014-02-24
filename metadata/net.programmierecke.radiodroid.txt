@@ -19,7 +19,6 @@ Build:0.3,3
     disable=basic and service stays alive
     commit=master
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.3
 Current Version Code:3

@@ -22,7 +22,6 @@ Build:1.1.14,20140118
 Build:1.1.15,20140208
     disable=beta
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.1.15-beta2
 Current Version Code:20140208

@@ -29,7 +29,6 @@ Build:0.7.1,12
     prebuild=echo 'source.dir=src;$$HttpRequest-Sawicki$$' >> ant.properties && \
         cp libs/android-support-v4.jar $$aFileChooser$$/libs/android-support-v4.jar
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.8.2
 Current Version Code:15

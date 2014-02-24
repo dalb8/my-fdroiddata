@@ -40,7 +40,6 @@ Maintainer Notes:
              sed -i 's/gradle:0.7.+/gradle:0.8.+/g' ../RootTools-new/build.gradle
 .
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.2
 Current Version Code:12

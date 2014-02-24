@@ -21,7 +21,6 @@ Build:0.15.0,33
     subdir=ImgurHolo
     gradle=yes
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.19.0
 Current Version Code:42

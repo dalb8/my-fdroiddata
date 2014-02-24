@@ -36,7 +36,6 @@ Build:1.4,13
         printf 'source.dir=src;../bushido-blocks/src' > ant.properties
     scanignore=bushido-blocks-android/libs/armeabi;bushido-blocks-android/libs/armeabi-v7a
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.4
 Current Version Code:13

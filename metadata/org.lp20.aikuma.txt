@@ -36,7 +36,6 @@ Soon to use coud storage: see https://github.com/langtech/aikuma/issues/115, whi
 may require hard-coded keys.
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0.0-beta.13
 Current Version Code:10011

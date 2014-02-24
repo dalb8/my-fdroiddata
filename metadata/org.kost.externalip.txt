@@ -25,7 +25,6 @@ Build:1.2-wtfismyip,5
     patch=change-server_5.patch
     prebuild=sed -i '15s/3/4/g' AndroidManifest.xml
 
-Auto Update Mode:None
 #No revisions in a long time
 Update Check Mode:Static
 Current Version:1.2

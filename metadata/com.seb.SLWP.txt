@@ -27,7 +27,6 @@ Maintainer Notes:
 Has a proprietary "successor", com.seb.SLWP2b
 .
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.5
 Current Version Code:61

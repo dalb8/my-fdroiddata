@@ -49,7 +49,6 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
     buildjni=no
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:2.1.10
 Current Version Code:4

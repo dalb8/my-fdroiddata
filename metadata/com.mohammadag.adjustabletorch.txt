@@ -21,6 +21,5 @@ Build:1.6,7
     srclibs=RootTools@3.4;2:MobAdMob@2d5736
     prebuild=echo 'source.dir=src;$$MobAdMob$$/src;$$RootTools$$/src' >> ant.properties
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 

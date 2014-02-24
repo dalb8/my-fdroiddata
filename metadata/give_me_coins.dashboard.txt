@@ -25,7 +25,6 @@ Repo:https://github.com/Letme/give-me-coinsMonitoringApp.git
 Build:Beta2.6,21
     commit=Beta2.8
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:Beta2.6
 Current Version Code:21

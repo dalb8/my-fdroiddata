@@ -19,7 +19,6 @@ Repo:git://staticfree.info/git/robotfindskitten/
 Build:1.0.701,7
     commit=v1.0.701
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0.701
 Current Version Code:7

@@ -32,7 +32,6 @@ Build:1.2,5
         cd ../../android && \
         NDK_PATH=$$NDK$$ ANDROID_HOME=$$SDK$$ ./build-android-with-native.py --toolchain --lzma --zim --kiwix --strip
 
-Auto Update Mode:None
 # see fdroiddata
 # 1.6 on gplay
 Update Check Mode:None

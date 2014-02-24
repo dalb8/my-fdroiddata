@@ -31,7 +31,6 @@ Build:0.4.1,16
     commit=5eb85badf
     subdir=up666
 
-Auto Update Mode:None
 #Device variable and tags are old
 Update Check Mode:RepoManifest
 Current Version:0.4.1

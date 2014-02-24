@@ -21,7 +21,6 @@ Build:1.0,1
     target=android-17
     prebuild=sed -i '4 i android:versionCode="1"\nandroid:versionName="1.0"' AndroidManifest.xml 
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:1.0
 Current Version Code:1

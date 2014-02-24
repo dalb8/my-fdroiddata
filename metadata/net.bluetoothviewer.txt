@@ -24,7 +24,6 @@ Build:1.0.1,2
     commit=04e06b866d0
     rm=scripts;samples;graphics
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0.1
 Current Version Code:2

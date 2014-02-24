@@ -21,7 +21,6 @@ Build:2.0,2
     prebuild=sed -i '1 s/^\xef\xbb\xbf//' src/net/bobuhiro11/puzzleroad/*.java && \
         find . -type f -print0 | xargs -0 sed -i '/awt/d' 
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.0
 Current Version Code:2

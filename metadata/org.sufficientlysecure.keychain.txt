@@ -31,7 +31,6 @@ Build:2.3.1,23100
     init=sed -i '34,53d' build.gradle
     gradle=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.3.1
 Current Version Code:23100

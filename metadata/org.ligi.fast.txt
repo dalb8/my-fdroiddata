@@ -30,7 +30,6 @@ Build:4.9,49
     build=gradle jar -p $$Tracedroid$$ && \
           mv $$Tracedroid$$/build/libs/Tracedroid-1.1.jar .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:5.0
 Current Version Code:50

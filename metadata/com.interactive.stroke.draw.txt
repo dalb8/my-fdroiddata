@@ -23,6 +23,5 @@ Build:0.1-almost,1
         cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs && \
         cp libs/android-support-v4.jar $$HoloColorPicker$$/libs 
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 

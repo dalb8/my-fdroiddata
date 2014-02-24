@@ -52,7 +52,6 @@ Build:0.6.7,97
     build=./scripts/build-ffmpeg.sh && $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.6.8
 Current Version Code:98

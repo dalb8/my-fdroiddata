@@ -51,7 +51,6 @@ Maintainer Notes:
     rm=res/drawable-xxhdpi;res/drawable-xhdpi;res/drawable-hdpi
 .
 
-Auto Update Mode:None
 Update Check Mode:Static
 Current Version:0.55
 Current Version Code:55

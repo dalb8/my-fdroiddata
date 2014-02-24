@@ -19,7 +19,6 @@ Build:1.0,1
     disable=external/geckoview library full of prebuilts
     commit=master
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

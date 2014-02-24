@@ -23,7 +23,6 @@ Repo:git://git.madore.org/android/UnicodeMap.git
 Build:0.0.4,4
     commit=47f5265e
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.0.4
 Current Version Code:4

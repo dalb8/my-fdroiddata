@@ -19,7 +19,6 @@ Repo:https://github.com/GodsMoon/Flashify.git
 Build:1.1,2
     commit=ee2ee
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.1
 Current Version Code:2

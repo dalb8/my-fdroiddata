@@ -25,7 +25,6 @@ Build:1.04,4
     subdir=aAuroraApp
     target=android-10
 
-Auto Update Mode:None
 #not in the market
 Update Check Mode:RepoManifest
 Current Version:1.04

@@ -43,7 +43,6 @@ Building ffmpeg is possible (for arm/x86) but need to use the script which
 copies lame binaries into NDK.
 .
 
-Auto Update Mode:None
 Update Check Mode:Static
 Current Version:3.5.4
 Current Version Code:75

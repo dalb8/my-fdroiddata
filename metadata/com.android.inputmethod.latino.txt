@@ -47,7 +47,6 @@ not sure what the difference is.
 CM keyboard allow importation of dictionaries
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:4.4.2
 Current Version Code:4424

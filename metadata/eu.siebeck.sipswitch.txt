@@ -24,7 +24,6 @@ Build:1.0.4,5
     commit=1.0.4
 
 # 1.0.7 on gplay
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0.4
 Current Version Code:5

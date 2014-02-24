@@ -68,7 +68,6 @@ Don't use the 2.6r2 tag as it has GMS!
 UCM tags doesn't work because AM.xml is generated.
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 #Vercode Operation:%c + 21100000
 Current Version:2.6r2

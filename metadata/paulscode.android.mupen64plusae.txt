@@ -47,7 +47,6 @@ Maintainer Notes:
 Use 2.4-bugfixes branch
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.4.4
 Current Version Code:363

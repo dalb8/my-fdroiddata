@@ -19,7 +19,6 @@ Build:1.2.0,3
     commit=v1.2.0
     init=cat ant.properties >> project.properties
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.2.0
 Current Version Code:3

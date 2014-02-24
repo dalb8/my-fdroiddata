@@ -66,7 +66,6 @@ Here's the original:
 # increment build number, for updates between router releases.
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:0.9.11-0_b1-API8
 Current Version Code:4741120

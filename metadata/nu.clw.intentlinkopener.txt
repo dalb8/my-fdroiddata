@@ -21,7 +21,6 @@ Build:0.6,6
     commit=d20957f8ac01
     rm=libs/android-support-v4.jar
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.6
 Current Version Code:6

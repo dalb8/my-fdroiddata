@@ -32,7 +32,6 @@ Build:1.0.2.8,1027
     prebuild=sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk
     buildjni=yes
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.0.3.0
 Current Version Code:1030

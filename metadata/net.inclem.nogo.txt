@@ -21,7 +21,6 @@ Build:0.4.2,99999999
     commit=v0.4.2
     kivy=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.4.2
 Current Version Code:99999999

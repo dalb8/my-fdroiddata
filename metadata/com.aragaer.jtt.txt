@@ -36,7 +36,6 @@ Maintainer Notes:
 Uses git submodules
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.4.5pre
 Current Version Code:25

@@ -19,7 +19,6 @@ Build:1.6,7
     commit=Version_1.6
     prebuild=sed -i '/reference/d' project.properties
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.6
 Current Version Code:7

@@ -18,6 +18,5 @@ Build:1.1,2
     disable=basic
     commit=master
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 

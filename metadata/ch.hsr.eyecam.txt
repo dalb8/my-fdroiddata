@@ -31,7 +31,6 @@ Build:0.9-beta,81
     commit=161096295b4d4
     buildjni=yes
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:0.9-beta
 Current Version Code:81

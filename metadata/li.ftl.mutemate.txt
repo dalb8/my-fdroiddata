@@ -19,7 +19,6 @@ Repo:https://github.com/ftlno/MuteMate.git
 Build:1.9,10
     commit=10d68
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.9
 Current Version Code:10

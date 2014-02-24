@@ -21,7 +21,6 @@ Build:0.33-ACRA,15
     commit=f4a5
     forceversion=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.33
 Current Version Code:15

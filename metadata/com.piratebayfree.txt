@@ -28,7 +28,6 @@ Build:1.06,8
     srclibs=1:NoAnalytics@d38ae535b543
     patch=proprietary_8.patch
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.06
 Current Version Code:8

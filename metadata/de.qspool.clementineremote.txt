@@ -41,7 +41,6 @@ Build:8.2,25
         jar xf ../libs/jmdns.jar && \
         jar cfm ../libs/jmdns.jar META-INF/MANIFEST.MF javax/
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:8.5
 Current Version Code:28

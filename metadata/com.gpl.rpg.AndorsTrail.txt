@@ -30,7 +30,6 @@ Build:0.7.0,39
     commit=v0.7.0
     subdir=AndorsTrail
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:0.7.1
 Current Version Code:42

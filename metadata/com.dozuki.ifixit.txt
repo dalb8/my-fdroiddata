@@ -39,7 +39,6 @@ Build:2.0.1,37
         mv $$NoAnalytics$$/src/com/* src/com/ && \
         echo 'ifixitAppId="com.dozuki.ifixit"' > gradle.properties
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.4.0
 Current Version Code:45

@@ -22,7 +22,6 @@ Build:2.6,29
     commit=v2.6
     rm=promo,test,doc
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:2.7.2
 Current Version Code:20702

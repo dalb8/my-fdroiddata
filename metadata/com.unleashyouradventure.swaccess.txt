@@ -31,7 +31,6 @@ Build:014 beta,14
 Maintainer Notes:
 .
 
-Auto Update Mode:None
 Update Check Mode:None
 Current Version:014 beta
 Current Version Code:14

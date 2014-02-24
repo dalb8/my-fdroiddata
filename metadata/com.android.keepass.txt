@@ -36,7 +36,6 @@ check jni/prep_build.sh prior to build
 once a tag was a beta
 .
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.99.10
 Current Version Code:128

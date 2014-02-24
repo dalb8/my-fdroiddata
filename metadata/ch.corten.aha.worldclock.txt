@@ -22,7 +22,6 @@ Build:1.5.11,29
     commit=1.5.11
     subdir=worldclockwidget
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.5.11
 Current Version Code:29

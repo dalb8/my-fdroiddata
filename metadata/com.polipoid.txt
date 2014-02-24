@@ -29,7 +29,6 @@ Build:1.0.1,2
         mv polipo ../assets/
     maven=yes
 
-Auto Update Mode:None
 Update Check Mode:Tags
 Current Version:1.0.1
 Current Version Code:2

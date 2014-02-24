@@ -22,7 +22,6 @@ Build:1.2.1.0,7
     prebuild=cp ../lib-actionbarsherlock/libs/android-support-v4.jar $$ProgressFragment$$/libs/ && \
         sed -i '1 s/^\xef\xbb\xbf//' src/com/nesswit/galbijjimsearcher/DeviceData.java
 
-Auto Update Mode:None
 Update Check Mode:RepoManifest
 Current Version:1.2.1.0
 Current Version Code:7
