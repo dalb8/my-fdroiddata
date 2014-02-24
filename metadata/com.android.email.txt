@@ -1,0 +1,16 @@
+Categories:System
+License:Apache2
+Web Site:
+Source Code:https://android.googlesource.com/platform/packages/apps/Email
+Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=email&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
+
+Summary:Stock email client
+Description:
+Via Cyanogenmod.
+Version corresponds to the Android version.
+They are signed with debug keys so they should install on top of each other.
+.
+
+Current Version:4.4.2
+Current Version Code:50000000
+
