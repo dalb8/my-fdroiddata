@@ -16,8 +16,8 @@ Repo Type:git
 Repo:https://github.com/beegee-tokyo/android_packages_apps_g_Wallpapers.git
 
 Build:1.0,1
-    disable=unknown license
     commit=ics
+    disable=see license
     target=android-17
     prebuild=sed -i '4 i android:versionCode="1"\nandroid:versionName="1.0"' AndroidManifest.xml 
 

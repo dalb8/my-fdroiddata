@@ -20,7 +20,7 @@ Description:
 .
 
 Repo Type:hg
-Repo:https://code.google.com/p/apv/
+Repo:https://code.google.com/p/apv
 
 Build:0.4.0,40000
     commit=69670732537b

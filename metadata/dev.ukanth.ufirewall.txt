@@ -18,6 +18,7 @@ developed.
 * Notify on new installations
 * VPN Support
 * Device Admin support to protect against being uninstalled
+
 Requires root: Yes. iptables must run as root.
 
 [https://github.com/ukanth/afwall/blob/master/Changelog.md Changelog]

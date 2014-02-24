@@ -43,11 +43,13 @@ Repo:https://github.com/mvglasow/satstat.git
 
 Build:1.4,40
     commit=satstat-1.4
-    init=./setbuild.sh
+    init=git update-index --assume-unchanged res/raw/build.txt && \
+      echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
 Build:1.6,60
     commit=satstat-1.6
-    init=./setbuild.sh
+    init=git update-index --assume-unchanged res/raw/build.txt && \
+      echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
 Update Check Mode:Tags
 Current Version:1.6

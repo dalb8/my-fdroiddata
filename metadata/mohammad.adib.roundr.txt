@@ -27,8 +27,7 @@ Build:3.0.1,24
     rm=RoundR.apk
     prebuild=rm -rf RoundR/gen/ StandOutRoundR/gen/
 
-# Can cross-reference with Website, Market or apk in repo
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:3.0.2
 Current Version Code:24
 

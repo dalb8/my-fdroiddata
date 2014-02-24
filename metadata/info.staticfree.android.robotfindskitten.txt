@@ -14,7 +14,7 @@ You are the robot and your goal is to find the kitten
 .
 
 Repo Type:git
-Repo:git://staticfree.info/git/robotfindskitten/
+Repo:git://staticfree.info/git/robotfindskitten
 
 Build:1.0.701,7
     commit=v1.0.701

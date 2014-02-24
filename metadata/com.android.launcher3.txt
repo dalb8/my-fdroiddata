@@ -13,7 +13,6 @@ No description available
 
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/apps/Launcher3
-#Repo:https://github.com/MuddPuddle/packages_apps_Launcher3
 
 Build:1.0,1
     commit=android-4.4_r1.2

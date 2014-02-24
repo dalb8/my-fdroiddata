@@ -19,7 +19,7 @@ Requires root: Yes. iptables must run as root
 Requires Root:Yes
 
 Repo Type:git
-Repo:https://code.google.com/p/iptableslog/
+Repo:https://code.google.com/p/iptableslog
 
 Build:2.21.0-ARMv7,22100
     commit=2.21.0

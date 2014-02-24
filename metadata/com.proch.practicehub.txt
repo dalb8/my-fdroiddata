@@ -14,7 +14,7 @@ drone.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/music-practice-tools/
+Repo:https://code.google.com/p/music-practice-tools
 
 Build:2.0,2
     commit=6e1c575b30d7

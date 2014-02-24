@@ -15,7 +15,7 @@ keyboard, accessible by swiping to the side must be enabled in the settings for 
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/dotdash-keyboard-android/
+Repo:https://code.google.com/p/dotdash-keyboard-android
 
 Build:1.1.5,12
     commit=95c0f978a724

@@ -18,7 +18,7 @@ Not all things will be saved as expected: a webpage will only have it's url save
 .
 
 Repo Type:hg
-Repo:https://code.google.com/p/sendtosd-android/
+Repo:https://code.google.com/p/sendtosd-android
 
 Build:0.3.9,36
     commit=30c17f33485d

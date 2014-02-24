@@ -11,6 +11,8 @@ Summary:Rotating planets wallpaper
 Description:
 Live wallpaper showing photorealistic and daytime-synchronized
 images of Earth and other planets flying thru space.
+
+Probably won't get any updates as there exists a proprietary version.
 .
 
 Repo Type:git-svn
@@ -27,7 +29,7 @@ Maintainer Notes:
 Has a proprietary "successor", com.seb.SLWP2b
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:1.5
 Current Version Code:61
 

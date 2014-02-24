@@ -12,16 +12,16 @@ Description:
 Sqlite functions don't work unless you have sqlite3 busybox applet installed.
 It can be easily compiled using code in the Serval Batphone project.
 
-*Change CPU Governor, I/O Scheduler and Clock Speed
-*Battery information + Fast Charge setting + Battery Life eXtender setting
-*Change Voltages Assigned to each CPU frequency
-*Customize MinFree Task Killer (set the amount of RAM the minfree taskiller will keep)
-*zRam (RAM compression)
-*Customize SD read-ahead
-*VM Settings such as: Dirty Ratio, Dynamic Fsync, Backlight timeout
-*Integrated CPU Spy
-*Linux Kernel, CPU, Memory informations
-*Misc. Tools: Custom shell command, Wipe cache+dalvik cache, build.prop editor etc.
+* Change CPU Governor, I/O Scheduler and Clock Speed
+* Battery information + Fast Charge setting + Battery Life eXtender setting
+* Change Voltages Assigned to each CPU frequency
+* Customize MinFree Task Killer (set the amount of RAM the minfree taskiller will keep)
+* zRam (RAM compression)
+* Customize SD read-ahead
+* VM Settings such as: Dirty Ratio, Dynamic Fsync, Backlight timeout
+* Integrated CPU Spy
+* Linux Kernel, CPU, Memory informations
+* Misc. Tools: Custom shell command, Wipe cache+dalvik cache, build.prop editor etc.
 .
 
 Requires Root:Yes

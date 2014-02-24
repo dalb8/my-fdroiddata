@@ -15,7 +15,7 @@ messaging client.
 .
 
 Repo Type:git-svn
-Repo:https://sendreduced.googlecode.com/svn/trunk/
+Repo:https://sendreduced.googlecode.com/svn/trunk
 
 Build:0.05,5
     commit=7

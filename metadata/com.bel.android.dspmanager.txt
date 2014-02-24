@@ -13,6 +13,7 @@ Does not alter all audio output:
 [[ch.blinkenlights.android.vanilla]] and
 [[com.andrew.apolloMod]] are compatible.
 
+Already found in many custom ROMs.
 Relies on some system libraries that are usually only found in some custom ROMS.
 They are called libcyanogen-dsp.so/libreverbwrapper.so/libvisualizer.so.
 .

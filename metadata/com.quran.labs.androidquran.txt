@@ -24,6 +24,7 @@ Repo:https://github.com/ahmedre/quran_android.git
 
 Build:2.3.1,231
     commit=v2.3.1
+    disable=see license
     subdir=app
     target=android-17
     srclibs=1:ActionBarSherlock@4.1.0

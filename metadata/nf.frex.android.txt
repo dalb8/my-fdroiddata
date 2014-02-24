@@ -13,7 +13,7 @@ No description available
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/frex-app/
+Repo:https://code.google.com/p/frex-app
 
 Build:1.2.2,10
     commit=196d7c

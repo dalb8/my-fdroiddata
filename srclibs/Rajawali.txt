@@ -1,3 +1,4 @@
 Repo Type:git
 Repo:https://github.com/ravenfeld/Rajawali
-Update Project:Yes
+Prepare:mkdir -p libs
+

@@ -1,0 +1,34 @@
+diff --git a/src/fr/ravenfeld/livewallpaper/eye/Renderer.java b/src/fr/ravenfeld/livewallpaper/eye/Renderer.java
+index 108c23d..ced281c 100755
+--- a/src/fr/ravenfeld/livewallpaper/eye/Renderer.java
++++ b/src/fr/ravenfeld/livewallpaper/eye/Renderer.java
+@@ -200,22 +200,14 @@ public class Renderer extends RajawaliRenderer implements
+ 
+     @Override
+     public void onSurfaceDestroyed() {
+-        try {
+-            mEye.surfaceDestroyed();
+             mTextureManager.taskRemove(mEye.getTexture());
+             mMaterialManager.taskRemove(mEye.getMaterial());
+ 
+-            mSprite.surfaceDestroyed();
+             mTextureManager.taskRemove(mSprite.getTexture());
+             mMaterialManager.taskRemove(mSprite.getMaterial());
+ 
+-            mSkin.surfaceDestroyed();
+             mTextureManager.taskRemove(mSkin.getTexture());
+             mMaterialManager.taskRemove(mSkin.getMaterial());
+-
+-        } catch (TextureException e) {
+-            e.printStackTrace();
+-        }
+     }
+ 
+ 
+@@ -242,4 +234,4 @@ public class Renderer extends RajawaliRenderer implements
+         }
+     }
+ 
+-}
+\ No newline at end of file
++}

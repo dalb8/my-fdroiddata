@@ -24,7 +24,7 @@ Many of the graphical resources are CC-licensed; see the
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/andors-trail/
+Repo:https://code.google.com/p/andors-trail
 
 Build:0.7.0,39
     commit=v0.7.0

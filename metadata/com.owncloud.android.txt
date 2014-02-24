@@ -5,7 +5,7 @@ Source Code:https://github.com/owncloud/android
 Issue Tracker:https://github.com/owncloud/android/issues
 
 Auto Name:ownCloud
-Summary:Groupware client
+Summary:Access files on a server
 Description:
 ownCloud is a free software package you can install on a server to manage
 files, contacts, calendars, music, pictures and much more.

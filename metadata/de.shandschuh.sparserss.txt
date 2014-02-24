@@ -16,7 +16,7 @@ feed problems via the address in the about screen.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/sparserss/
+Repo:https://code.google.com/p/sparserss
 
 Build:1.7,87
     commit=4a9c5614d2e7

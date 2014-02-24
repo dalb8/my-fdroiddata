@@ -11,28 +11,28 @@ patches are positively welcomed! Write as many comments as you like!
 
 -------
 We are tolerant of, if not delighted about, obsolete data. 
-Some of the Current Versions are updated automatically and 
-perhaps infrequently, so they could easily be incorrect; likewise any app
-with a manual Update Check Mode.
+Current Versions are updated infrequently and/or automatically, so they could easily be 
+incorrect.
 
 Since faults would otherwise go unnoticed, new builds should only be
 committed after inspecting the source code, doing the build and running the APK on 
 a gadget. If testing isn't thorough, add it with the `Build:` parameter `disable=`, 
 as I often do when I get lazy and use the gradle wrapper (`gradlew`).
+That parameter can also be used if the licence isn't confirmed, though
+ensure that the apk in your repo is renamed otherwise it will get purged.
 
 Pre-built libraries, whether included in `libs/` or pulled from remote maven repos 
 at build time, should have been built by some third party (e.g. the library developers), 
-unless contradicted in the description.
+unless it says differently in the description.
 
-By all means, include in-development apps; if they don't get very far
+By all means, include in-development apps; if they turn out to be flops
 we'll add the `Disabled:` field and eventually delete them.
-This is also true for apps that aren't licensed properly or go proprietary.
 
 I'm currently using a recent version of 
 [fdroidserver](https://gitorious.org/f-droid/fdroidserver).
 Therefore newer recipes are likely to work but older recipes might not be
-valid any more. Since we only have a couple of builds per package
-we'll get around to revising them all eventually.
+valid any more. However we only keep a couple of builds per package so
+we'll get around to revising them eventually.
 Depending on the distro, there could also be dependency issues for some apps.
 Also the gradle versioning system for non-build server setups is
 dependent on your path to the gradle binary; since I also use the gradle wrapper

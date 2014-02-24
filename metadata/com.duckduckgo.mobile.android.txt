@@ -15,7 +15,7 @@ on privacy.
 The app also works like a news reader, showing popular stories from a 
 customizable list of websites, until you enter a query.
 
-Works with [[org.torproject.android]].
+Works with [[org.torproject.android]] (except on Android 4.4).
 .
 
 Repo Type:git
