@@ -1,0 +1,15 @@
+Categories:Office
+License:Apache
+Web Site:http://sites.google.com/site/aquamarinepandora/home/jota-text-editor
+Source Code:http://code.google.com/p/jota-text-editor
+
+Summary:Text editor
+Description:
+This needs AOSP to build so the apk is from the developer.
+There are pro versions that support extensions and all that, which
+likely contain some proprietary code.
+.
+
+Current Version:0.2.31
+Current Version Code:81
+
