@@ -31,7 +31,7 @@ Build:1.1,2
     target=android-17
 
 Auto Update Mode:None
-Update Check Mode:Static
-Current Version:1.1
-Current Version Code:2
+Update Check Mode:Tags
+Current Version:1.1.5
+Current Version Code:9
 
