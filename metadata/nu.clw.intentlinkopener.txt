@@ -1,24 +1,24 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:System
-#see https://github.com/clworld/IntentLinkOpener/issues/1
-License:Unknown
+License:Public Domain
 Web Site:
 Source Code:https://github.com/clworld/IntentLinkOpener
 Issue Tracker:https://github.com/clworld/IntentLinkOpener/issues
 
 Auto Name:IntentLinkOpener
-Summary:
+Summary:Useful utility
 Description:
-No description available
+When opening links Android never shows the result; URLs are truncated
+before they can even be read. By sharing the link to this app,
+the full text can be seen.
 .
 
 Repo Type:git
 Repo:https://github.com/clworld/IntentLinkOpener.git
 
 Build:0.6,6
-    disable=unknown license at master
-    commit=master
+    commit=d20957f8ac01
 
 Auto Update Mode:None
 Update Check Mode:RepoManifest
