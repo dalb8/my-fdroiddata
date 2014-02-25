@@ -16,6 +16,7 @@ Repo Type:srclib
 Repo:AntennapodSP
 
 Build:1.0.0,1
+    disable=missing strings, had to merge from antennapod; fdroid knackers build.gradle
     commit=master
     gradle=yes
     rm=res/values-de
@@ -35,7 +36,6 @@ Build:1.0.0,1
 Maintainer Notes:
 The icons would need a bit of work and don't forget ldpi etc.
 
-    disable=missing strings, had to merge from antennapod; fdroid knackers build.gradle
 Edit the strings according to the language used.
 .
 
