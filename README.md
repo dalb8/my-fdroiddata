@@ -18,8 +18,8 @@ Since faults would otherwise go unnoticed, new builds should only be
 committed after inspecting the source code, doing the build and running the APK on 
 a gadget. If testing isn't thorough, add it with the `Build:` parameter `disable=`, 
 as I often do when I get lazy and use the gradle wrapper (`gradlew`).
-That parameter can also be used if the licence isn't confirmed, though
-ensure that the apk in your repo is renamed otherwise it will get purged.
+That parameter can also be used if the licence isn't confirmed, but make sure
+that the apk in `repo/` is renamed, otherwise it will get purged.
 
 Pre-built libraries, whether included in `libs/` or pulled from remote maven repos 
 at build time, should have been built by some third party (e.g. the library developers), 
