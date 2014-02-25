@@ -28,6 +28,14 @@ echo -e "\n\n\033[31m   Repos:"
 echo -e "\033[0m"
 find -L . -name build.gradle -print |xargs grep -A 2 repositor
 
+echo -e "\n\033[31m   Branches:"
+echo -e "\033[0m"
+git branch -a
+
+echo -e "\n\033[31m   My diffs:"
+echo -e "\033[0m"
+git --no-pager diff
+
 echo -e "\n\n\033[31m   Prebuilts and assets:"
 echo -e "\033[0m"
 find -L . -name \*jar | grep -v 'gradle\|build\|dexed'

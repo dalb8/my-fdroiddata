@@ -16,7 +16,7 @@ PNAME="${PWD##*/}"
 export DATE=$(date +%d%m%Y)
 cp $(find . -name \*.apk) ~/fdroiddata/unsigned/$PNAME\_00$DATE.apk
 cd ~/fdroiddata/
-#touch unsigned/$PNAME\_00$DATE\_src.tar.gz
+touch unsigned/$PNAME\_00$DATE\_src.tar.gz
 cp -n templates/minimal.txt metadata/$PNAME.txt
 fdroid publish $PNAME
 #rm repo/$PNAME\_00$DATE\_src.tar.gz
