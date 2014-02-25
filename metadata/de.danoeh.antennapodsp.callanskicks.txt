@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Multimedia
+License:MIT
+Web Site:https://github.com/danieloeh/AntennaPodSP/wiki
+Source Code:https://github.com/danieloeh/AntennaPodSP
+Issue Tracker:https://github.com/danieloeh/AntennaPodSP/issues
+Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
+
+Summary:App for a single podcast
+Description:
+Callan's Kicks is a weekly half-hour satire on the media and politics in Ireland.
+.
+
+Repo Type:git
+Repo:https://github.com/danieloeh/AntennaPodSP.git
+
+Build:1.0.0,1
+    disable=missing strings, had to merge from antennapod; fdroid knackers build.gradle
+    commit=master
+    gradle=yes
+    rm=res/values-de
+    extlibs=callanskicks-icons.zip
+    prebuild=unzip -o libs/callanskicks-icons.zip && \
+        rm       libs/callanskicks-icons.zip && \
+        export PKG="callanskicks" && \
+        export NAME="Callans Kicks Podcast" && \
+        export URL="http://www.rte.ie/radio1/podcast/podcast_callanskicks.xml" && \
+        export VERSION="0" && \
+        sed -i "s/antennapodsp.custom/antennapodsp.$PKG/g" build.gradle && \
+        sed -i "s/Einschlafen Podcast/$NAME/g" res/values/strings.xml && \
+        sed -i -e 's@\(feedUrls = \).*@\1{"'$URL'"};@' -e 's@EinschlafenPodcastAndroid/1.0@'$PKG'PodcastAndroid/1.0@' -e 's@versionNumber = 0@versionNumber = '$VERSION'@' src/de/danoeh/antennapodsp/AppPreferences.java && \
+        sed -i 's/"theme_color">#F29401/"theme_color">#F29401/g' res/values/colors.xml && \
+        sed -i '44,46d' assets/about.html
+
+Maintainer Notes:
+The icons would need a bit of work and do ldpi etc.
+
+Edit the strings according to the language used.
+.
+
+Update Check Mode:None
+Current Version:1.0
+Current Version Code:1
+

@@ -27,7 +27,7 @@ Build:0.3.1,5
         echo 'APP_CFLAGS += -Wno-error=format-security' >> tesseract-android-tools/jni/Application.mk
     buildjni=../tesseract-android-tools
 
-Maintainer Notes
+Maintainer Notes:
 jni/../external/libjpeg/jidctfst.S: Assembler messages:
 jni/../external/libjpeg/jidctfst.S:66: Error: missing ')'
 jni/../external/libjpeg/jidctfst.S:66: Error: garbage following instruction -- pld (r2,#0)'
