@@ -10,7 +10,7 @@ Donate:http://forum.xda-developers.com/donatetome.php?u=4674443
 Summary:System configuration
 Description:
 Sqlite functions don't work unless you have sqlite3 busybox applet installed.
-It can be easily compiled using code in the Serval Batphone project.
+That can be compiled using code in the Serval Batphone project.
 
 * Change CPU Governor, I/O Scheduler and Clock Speed
 * Battery information + Fast Charge setting + Battery Life eXtender setting
