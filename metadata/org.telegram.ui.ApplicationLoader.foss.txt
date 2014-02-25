@@ -42,12 +42,12 @@ Build:1.3.21,160
     subdir=TMessagesProj
     gradle=yes
     patch=package-name_160.patch
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' && \
-       gradle nativeLibsToJar
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
+    preassemble=nativeLibsToJar
 
 Maintainer Notes:
-patch changes the package name from the upstream version
+patch changes the package name because it is identical to the upstream
 as a result UCM is None
 .
 
