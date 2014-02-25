@@ -1,0 +1,43 @@
+Categories:Office
+License:AGPLv3
+Web Site:
+Source Code:https://git.gitorious.org/character-recognition
+Issue Tracker:
+
+Auto Name:Character Recognition
+Summary:Character Recognition (OCR)
+Description:
+This app utilizes the Tesseract OCR library to perform character
+recognition on images selected from the gallery or captured from
+the camera. Recognition results can be edited or copied for export.
+.
+
+Repo Type:git
+Repo:https://git.gitorious.org/character-recognition/character-recognition.git
+
+Build:0.3.1,5
+    commit=abd2e28
+    disable=errors, see below
+    subdir=TessUI
+    init=rm -rf bin gen ../tesseract-android-tools/obj ../ImageViewer ../tesseract-android-tools-test
+    target=android-8
+    patch=gitmodules.patch,provided-libs.patch,camera-optional.patch,camera-protect.patch
+    prebuild=cd .. && \
+        git submodule update --init && \
+        echo 'APP_CFLAGS += -Wno-error=format-security' >> tesseract-android-tools/jni/Application.mk
+    buildjni=../tesseract-android-tools
+
+Maintainer Notes
+jni/../external/libjpeg/jidctfst.S: Assembler messages:
+jni/../external/libjpeg/jidctfst.S:66: Error: missing ')'
+jni/../external/libjpeg/jidctfst.S:66: Error: garbage following instruction -- pld (r2,#0)'
+jni/../external/libjpeg/jidctfst.S:259: Error: missing ')'
+jni/../external/libjpeg/jidctfst.S:259: Error: garbage following instruction --pld (sp,#32)'
+jni/../external/libjpeg/jidctfst.S:271: Error: missing ')'
+jni/../external/libjpeg/jidctfst.S:271: Error: garbage following instruction -- `pld (ip,#32)
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.3.4
+Current Version Code:9
+

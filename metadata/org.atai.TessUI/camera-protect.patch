@@ -1,0 +1,26 @@
+diff --git a/TessUI/src/org/atai/TessUI/TessUIActivity.java b/TessUI/src/org/atai/TessUI/TessUIActivity.java
+index aa8004b..810fdaa 100644
+--- a/TessUI/src/org/atai/TessUI/TessUIActivity.java
++++ b/TessUI/src/org/atai/TessUI/TessUIActivity.java
+@@ -62,6 +62,7 @@ import android.widget.ProgressBar;
+ import android.widget.Spinner;
+ import android.widget.EditText;
+ import android.widget.TextView;
++import android.widget.Toast;
+ 
+ import android.graphics.Bitmap;
+ import android.graphics.Canvas;
+@@ -153,7 +154,12 @@ public class TessUIActivity extends Activity {
+             @Override
+             public void onClick(View V)
+             {
+-            	startActivityForResult(camera_intent, CAMERA_REQUEST);
++                try {
++                    startActivityForResult(camera_intent, CAMERA_REQUEST);
++                } catch (Exception e) {
++                    Log.e("TessUI", "Cannot capture image", e);
++                    Toast.makeText(V.getContext(), "Cannot capture image", Toast.LENGTH_SHORT).show();
++                }
+             }
+         });
+         recognize_button = (Button) findViewById(R.id.recognize_button);
