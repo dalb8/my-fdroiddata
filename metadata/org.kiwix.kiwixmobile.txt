@@ -13,15 +13,18 @@ Kiwix is an offline content reader which can be used for Wikipedia as well as
 other contents (Ubuntu documentation, WikiLeaks, WikiSource, etc).
 Once you have downloaded the content file (potentially very large), you don't
 need any connection to use it.
-Kiwix is a lightweight software reading ZIM files which you download and store
-on your device or external storage (SD card).
+
+The Wikipedia files are accessible via the mobile [http://kiwix.org/m website];
+the full list is [http://download.kiwix.org/zim here] either over http
+or add '.torrent' to the file name to get a a bittorrent file.
+Wiktionary English is about 800MiB.
 .
 
 Repo Type:git
 Repo:git://git.code.sf.net/p/kiwix/kiwix
 
 Build:1.2,5
-    disable=dependencies at 1.2-on-google-play
+    disable=dependencies (especially on non-Debian) at 1.2-on-google-play
     commit=1.2-on-google-play
     subdir=android
     prebuild=cd .. && \
@@ -32,9 +35,7 @@ Build:1.2,5
         cd ../../android && \
         NDK_PATH=$$NDK$$ ANDROID_HOME=$$SDK$$ ./build-android-with-native.py --toolchain --lzma --zim --kiwix --strip
 
-# see fdroiddata
-# 1.6 on gplay
 Update Check Mode:None
-Current Version:1.1
-Current Version Code:3
+Current Version:1.8
+Current Version Code:13
 
