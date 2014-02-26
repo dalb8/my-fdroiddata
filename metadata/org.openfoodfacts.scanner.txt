@@ -1,0 +1,28 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA 
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Office
+License:MIT
+Web Site:http://openfoodfacts.org
+Source Code:https://github.com/openfoodfacts/openfoodfacts-android
+Issue Tracker:https://github.com/openfoodfacts/openfoodfacts-android/issues
+
+Auto Name:Open Food Facts
+Summary:Look up info about foods
+Description:
+Info about 15000 foods and if the info is incorrect you can change it.
+The barcode scanner may or may not work.
+.
+
+Repo Type:git
+Repo:https://github.com/openfoodfacts/openfoodfacts-android.git
+
+Build:1.3,8
+    commit=454dbf41ed3269
+    subdir=phonegap/Open Food Facts
+    target=android-15
+    prebuild=sed -i '5 i \\t<string name="share_name">share_name<\/string>' res/values/strings.xml
+
+Update Check Mode:RepoManifest
+Current Version:1.3
+Current Version Code:8
+
