@@ -1,27 +1,29 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
-Categories:None
+Categories:Multimedia
 License:Unknown
-Web Site:https://github.com/Teovald/Draw
 Source Code:https://github.com/Teovald/Draw
 Issue Tracker:https://github.com/Teovald/Draw/issues
 
-Summary:
+Auto Name:Draw
+Summary:It’s a drawing app
 Description:
-No description available
 .
 
 Repo Type:git
 Repo:https://github.com/Teovald/Draw.git
 
 Build:0.1-almost,1
-    disable=wip; strange support jar errors
-    commit=master
-    extlibs=android/android-support-v4.jar
-    srclibs=1:Support-v7-gridlayout@android-4.3_r2.1;2:ActionBarSherlock@4.4.0;3:HoloColorPicker@4f509
-    prebuild=cp libs/android-support-v4.jar $$Support-v7-gridlayout$$/libs && \
-        cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs && \
-        cp libs/android-support-v4.jar $$HoloColorPicker$$/libs 
+    disable=ABS errors
+    commit=b243
+    subdir=draw
+    gradle=yes
+    srclibs=HoloColorPicker-Teovald@470c9e,ActionBarSherlock@4.4.0
+    prebuild=ln -s $(readlink -f $$HoloColorPicker-Teovald$$) ../HoloColorPicker && \
+        ln -s $(readlink -f $$ActionBarSherlock$$) ../actionBarSherlock-Gradle && \
+        sed -i 's@../@@' ../settings.gradle
 
 Update Check Mode:RepoManifest
+Current Version:0.1-almost
+Current Version Code:1
 
