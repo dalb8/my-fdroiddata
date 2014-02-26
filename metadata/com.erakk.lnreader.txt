@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Reading
 License:Apache2
@@ -15,14 +15,18 @@ No description available
 Repo Type:git
 Repo:https://github.com/calvinaquino/LNReader-Android.git
 
-Build:1.1.14,20140118
-    commit=master
+Build:1.1.15,20140222
+    commit=03d61400032884
     subdir=LNReader
+    prebuild=sed -i 's/Tahoma/serif/' res/raw/style.css && \
+        sed -i 's/Tahoma/sans-serif-light/' res/raw/style_dark.css && \
+        sed -i '1 s/^\xef\xbb\xbf//' src/com/erakk/lnreader/adapter/PageModelAdapter.java
 
-Build:1.1.15,20140208
-    disable=beta
+Maintainer Notes:
+Can put styles on sdcard too.
+.
 
 Update Check Mode:RepoManifest
-Current Version:1.1.15-beta2
-Current Version Code:20140208
+Current Version:1.1.15
+Current Version Code:20140222
 
