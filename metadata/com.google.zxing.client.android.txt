@@ -19,6 +19,11 @@ http://en.wikibooks.org/w/index.php?search=%s.
 Repo Type:git
 Repo:https://github.com/zxing/zxing.git
 
+Build:4.4.1,92
+    commit=8e1b1a3bb4
+    subdir=android
+    build=$$MVN3$$ package -DskipTests -f ../core/pom.xml
+
 Build:4.6.1,96
     commit=BS-4.6.1
     subdir=android
