@@ -1,0 +1,37 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Internet
+License:GPLv3
+Web Site:
+Source Code:https://github.com/shadowsocks/shadowsocks-android
+Issue Tracker:https://github.com/shadowsocks/shadowsocks-android/issues
+
+Summary:Internet proxy client
+Description:
+Connect to a SOCKS5 proxy.
+Instructions on Shadowsocks server setup are found 
+[http://shadowsocks.org here].
+
+Contains iptables pdnsd redsocks shadowsocks tun2socks.
+.
+
+Repo Type:git
+Repo:https://github.com/shadowsocks/shadowsocks-android
+
+Build:2.1.1,62
+    disable=doesn't build shadowsocks, tunsocks; 1st party ivy artifact repos, admob/analytics
+    commit=master
+    output=target/resources-shadowsocks-release-2.1.1.apk
+    prebuild=echo 'import sbtandroid.AndroidPlugin._\n\ncontainerId := "GTM-XXXX"' > local.sbt && \
+        sed -i -e '5d;7d;10d;12d' -e 's/ndk-build/ndk-build -e "APP_ABI=armeabi-v7a"/' build-ndk.sh 
+    build=./build-ndk.sh && \
+        sbt release
+
+Maintainer Notes:
+Need SBT 0.12.4
+.
+
+Update Check Mode:None
+Current Version:2.1.1
+Current Version Code:62
+
