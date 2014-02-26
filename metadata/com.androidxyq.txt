@@ -1,0 +1,28 @@
+Categories:Games
+License:Apache2
+Web Site:
+Source Code:https://github.com/kylixs/xyqlite
+Issue Tracker:https://github.com/kylixs/xyqlite/issues
+
+Auto Name:xyq-android
+Summary:Chinese-language adventure
+Description:
+Shades of Journey to the West :-).
+.
+
+Repo Type:git
+Repo:https://github.com/kylixs/xyqlite
+
+Build:1.0,1
+    commit=master
+    subdir=v1.0
+    rm=v1.0/libs/LAE-1.1.jar
+    prebuild=echo 'source.dir=src;LAE-1.1' >> ant.properties
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
