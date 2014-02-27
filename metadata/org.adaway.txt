@@ -56,6 +56,6 @@ Build:2.8,47
     preassemble=renameExecutables
 
 #Update Check Mode:Tags
-Current Version:2.8
-Current Version Code:47
+Current Version:2.8.1
+Current Version Code:48
 

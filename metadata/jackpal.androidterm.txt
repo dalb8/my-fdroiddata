@@ -23,6 +23,6 @@ Build:1.0.54,55
     buildjni=no
 
 #Update Check Mode:Tags
-Current Version:1.0.55
-Current Version Code:56
+Current Version:1.0.56
+Current Version Code:57
 

@@ -47,6 +47,6 @@ Build:13.0.4a,69
     build=NDK_BASE=$$NDK$$ make -C external 
 
 #Update Check Mode:RepoManifest
-Current Version:13.0.4a
-Current Version Code:69
+Current Version:13.0.5
+Current Version Code:70
 

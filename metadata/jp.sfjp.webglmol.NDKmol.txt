@@ -25,7 +25,7 @@ Build:0.92,15
     commit=8724f587
     buildjni=yes
 
-#Update Check Mode:RepoManifest/ES1
-Current Version:0.92
-Current Version Code:15
+Update Check Mode:RepoManifest/ES1
+Current Version:0.93
+Current Version Code:16
 
