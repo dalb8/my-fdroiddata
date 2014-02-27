@@ -22,7 +22,7 @@ Repo:https://github.com/dsandler/markers
 Build:1.2.1,52
     commit=8fb6
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.2.3
 Current Version Code:56
 

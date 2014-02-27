@@ -19,7 +19,7 @@ Repo:https://github.com/kaytdek/ColorNamer.git
 Build:2.3,8
     commit=fed05971fc580
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:2.32
 Current Version Code:10
 

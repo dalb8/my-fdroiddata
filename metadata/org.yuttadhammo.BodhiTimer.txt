@@ -19,7 +19,7 @@ Build:3.2.2,49
     commit=a6bc4f6b808663a
     prebuild=echo '-dontobfuscate' > proguard-project.txt
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:3.2.2
 Current Version Code:49
 

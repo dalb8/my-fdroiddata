@@ -21,7 +21,7 @@ Build:0.3.1,4
     init=sed -i '/reference/d' project.properties
     srclibs=2:ActionBarSherlock@90939dc;1:F5@ce9c78497a0cc22a
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.3.1
 Current Version Code:4
 

@@ -65,7 +65,7 @@ Build:0.2.9.10,92
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.2.9.10
 Current Version Code:92
 

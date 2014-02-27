@@ -21,7 +21,7 @@ Build:2.4,9
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:2.4
 Current Version Code:9
 

@@ -23,7 +23,7 @@ Build:0.5,10
     build=$$NDK$$/ndk-build -C $$Sonic$$ && \
         mv $$Sonic$$/libs/armeabi* libs/
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.5
 Current Version Code:10
 

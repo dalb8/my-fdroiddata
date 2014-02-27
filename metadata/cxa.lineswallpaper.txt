@@ -21,7 +21,7 @@ Build:1.1-2,9
     commit=4310949
     subdir=blurredlines
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.2
 Current Version Code:10
 

@@ -35,7 +35,7 @@ Build:1.0,1
         rm -rf ndk-r8e/
     buildjni=no
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.0
 Current Version Code:1
 

@@ -47,8 +47,8 @@ Build:0.1.3-ARMv7,1304
 # +3: ARM
 # +4: ARMv7
 # +5: None (current version)
-Update Check Mode:Tags
-# Update Check Mode:Tags
+#Update Check Mode:Tags
+# #Update Check Mode:Tags
 Vercode Operation:%c + 4
 Current Version:0.1.3
 Current Version Code:1304

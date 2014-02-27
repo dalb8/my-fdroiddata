@@ -50,7 +50,7 @@ Build:2.2.5,60
         mv LinLibertine_BI.ttf assets/FrankRuehl-BoldItalic.otf
     build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:2.2.5
 Current Version Code:60
 

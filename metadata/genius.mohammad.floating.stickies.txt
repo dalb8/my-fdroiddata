@@ -24,7 +24,7 @@ Build:27.0,27
     commit=5a8478752b
     subdir=Floating Stickies
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:27.0
 Current Version Code:27
 

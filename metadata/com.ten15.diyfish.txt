@@ -21,7 +21,7 @@ Build:1.0,2
     target=android-19
     prebuild=echo 'source.dir=java' >ant.properties
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:2
 

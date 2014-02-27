@@ -31,7 +31,7 @@ Maintainer Notes:
 Not published anywhere seemingly
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:2.5
 Current Version Code:12
 

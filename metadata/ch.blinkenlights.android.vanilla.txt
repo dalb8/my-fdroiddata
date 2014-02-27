@@ -23,7 +23,7 @@ Repo:https://github.com/adrian-bl/vanilla.git
 Build:0.9.23,923
     commit=0.9.23
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.9.23
 Current Version Code:923
 

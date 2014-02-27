@@ -53,7 +53,7 @@ Build:1.2,307
           mv external/iptables_arm assets/install/iptables
     buildjni=no
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.2
 Current Version Code:307
 

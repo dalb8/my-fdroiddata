@@ -37,7 +37,7 @@ Build:0.4.0.2,40020
     commit=unknown - see disabled
     subdir=pdfview
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:0.4.0.2
 Current Version Code:40020
 

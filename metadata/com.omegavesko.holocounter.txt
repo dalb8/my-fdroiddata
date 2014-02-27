@@ -21,7 +21,7 @@ Repo:https://github.com/omegavesko/HoloCounter.git
 Build Version:1.0,1,02af73fe2d
 
 #Not on market
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1
 

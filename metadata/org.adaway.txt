@@ -55,7 +55,7 @@ Build:2.8,47
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     preassemble=renameExecutables
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:2.8
 Current Version Code:47
 

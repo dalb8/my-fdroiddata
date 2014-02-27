@@ -27,7 +27,7 @@ Build:2.5,10
 Build:2.6,11
     disable=not published
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:2.6
 Current Version Code:11
 

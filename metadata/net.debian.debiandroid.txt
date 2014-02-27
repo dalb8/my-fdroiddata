@@ -28,7 +28,7 @@ Build:1.7,12
     extlibs=android/android-support-v4.jar
     prebuild=mv libs/android-support-v4.jar external/actionbarsherlock/actionbarsherlock/libs/
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.732
 Current Version Code:16
 

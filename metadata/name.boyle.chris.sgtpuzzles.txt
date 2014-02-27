@@ -28,7 +28,7 @@ I've built binaries for x86 but haven't run it on a device; mips doesn't build w
 One line sed patch is to fix issue #77; shouldn't be needed in next version
 .
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:9561.1
 Current Version Code:72
 

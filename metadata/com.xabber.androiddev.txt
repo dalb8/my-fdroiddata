@@ -25,7 +25,7 @@ Build:0.9.30b,81
     prebuild=sed -i "/debuggable.*true/d" AndroidManifest.xml && \
         echo 'source.dir=src;$$Otr4j$$/src' > ant.properties
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:0.9.30b
 Current Version Code:81
 

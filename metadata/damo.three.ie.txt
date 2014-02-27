@@ -29,7 +29,7 @@ Build:0.9,9
     subdir=PrepayCreditAndroid
     maven=yes
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.9
 Current Version Code:9
 

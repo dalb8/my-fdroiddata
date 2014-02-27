@@ -32,7 +32,7 @@ Maintainer Notes:
 Patch to remove garish green
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.13
 Current Version Code:5
 

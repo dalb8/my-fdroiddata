@@ -18,7 +18,7 @@ Repo:https://github.com/harism/android_wallpaper_flowers.git
 Build:3.2,10
     commit=51d7f9a56
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:3.2
 Current Version Code:10
 

@@ -32,7 +32,7 @@ Build:1.2.7,460
         sed -i '87,108d' build.xml && \
         ant setup
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.2.8
 Current Version Code:472
 

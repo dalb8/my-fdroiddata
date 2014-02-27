@@ -46,7 +46,7 @@ Build:13.0.4a,69
     rm=libs/armeabi;libs/jtorctl.jar
     build=NDK_BASE=$$NDK$$ make -C external 
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:13.0.4a
 Current Version Code:69
 

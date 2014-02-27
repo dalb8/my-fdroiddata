@@ -35,7 +35,7 @@ Build:0.9.8.0,33
     gradle=yes
     prebuild=cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.9.8.0
 Current Version Code:33
 

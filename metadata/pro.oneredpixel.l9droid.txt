@@ -19,7 +19,7 @@ Repo:https://github.com/tsapree/L9Droid.git
 Build:0.5,3
     commit=c5a61
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:0.5
 Current Version Code:3
 

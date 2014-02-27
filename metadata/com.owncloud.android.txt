@@ -18,7 +18,7 @@ Build:1.5.4,105004
     commit=oc-android-1.5.4
     submodules=yes
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.5.4
 Current Version Code:105004
 

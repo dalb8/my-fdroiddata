@@ -25,7 +25,7 @@ Build:2.1.1,52
     commit=v2.1.1
     srclibs=1:NetCipher@4fe34ede3f44d968
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:2.1.2
 Current Version Code:53
 

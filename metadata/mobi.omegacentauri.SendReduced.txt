@@ -22,7 +22,7 @@ Build:0.05,5
     target=android-16
 
 # 0.06 on gplay
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:0.05
 Current Version Code:5
 

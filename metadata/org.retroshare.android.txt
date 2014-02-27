@@ -31,7 +31,7 @@ Build:0.2.4,7
         cd jaramiko-151 && \
         ant jar
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:0.2.4
 Current Version Code:7
 

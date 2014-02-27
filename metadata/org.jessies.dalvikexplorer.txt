@@ -21,7 +21,7 @@ Build:3.7,37
     commit=706
     target=android-18
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:3.9
 Current Version Code:39
 

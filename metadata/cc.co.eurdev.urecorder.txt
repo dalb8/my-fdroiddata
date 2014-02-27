@@ -21,7 +21,7 @@ Build:1.4,5
     commit=acf97f
     subdir=Four Track
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.4
 Current Version Code:5
 

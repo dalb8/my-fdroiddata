@@ -36,7 +36,7 @@ Build:2.1.2-fdroid,2120
     build=make
     buildjni=no
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:Unknown
 Current Version Code:2211
 

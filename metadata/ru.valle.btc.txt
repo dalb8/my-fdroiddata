@@ -35,7 +35,7 @@ zbar libraries are from official binaries on sourceforge. I tried to compile fro
 https://github.com/ZBar/ZBar but was unsuccessful. See trikita.obsqr though.
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:2.2.1
 Current Version Code:221
 

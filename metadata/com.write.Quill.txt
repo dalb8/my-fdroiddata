@@ -40,7 +40,7 @@ Build:10.6,40
     srclibs=1:Color-Picker-2@45ee6554a;2:File-Picker@7
     buildjni=yes
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:10.7
 Current Version Code:41
 

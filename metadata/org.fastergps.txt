@@ -31,7 +31,7 @@ Build:1.10,12
     subdir=FasterGPS
     gradle=fdroid
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.11
 Current Version Code:13
 
