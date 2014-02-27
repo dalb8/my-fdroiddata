@@ -19,6 +19,9 @@ Build:1.0,1
     commit=64d55457728b
     srclibs=1:ColorPickerPreference@15b666
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

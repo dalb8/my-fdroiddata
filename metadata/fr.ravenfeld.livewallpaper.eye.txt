@@ -26,6 +26,9 @@ Build:1.0,1
     prebuild=cp libs/android-support-v4.jar $$Rajawali$$/libs/ && \
         mv libs/android-support-v4.jar $$aFileChooser$$/libs/
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

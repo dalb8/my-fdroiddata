@@ -23,6 +23,9 @@ Build:0.4 Beta,4
         echo 'android.library.reference.4=../libraries/ActionBarSherlock' >> project.properties
     rm=Trafictube/out
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.4 Beta
 Current Version Code:4

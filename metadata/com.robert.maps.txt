@@ -28,6 +28,9 @@ Build:0.9.4,8140
     srclibs=NoAnalytics@158a4a
     prebuild=echo "android.library.reference.1=$$NoAnalytics$$" >> ../RMaps.AppLib/project.properties &&mkdir src
 
+Maintainer Notes:
+.
+
 Update Check Mode:Tags
 Current Version:0.9.4
 Current Version Code:8140

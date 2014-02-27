@@ -20,6 +20,9 @@ Repo:git://git.code.sf.net/p/opencamera/code
 Build:1.5,7
     commit=v1.5
 
+Maintainer Notes:
+.
+
 Update Check Mode:Tags
 Current Version:1.5
 Current Version Code:7

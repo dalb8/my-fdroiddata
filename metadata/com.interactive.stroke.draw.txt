@@ -23,6 +23,9 @@ Build:0.1-almost,1
         ln -s $(readlink -f $$ActionBarSherlock$$) ../actionBarSherlock-Gradle && \
         sed -i 's@../@@' ../settings.gradle
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.1-almost
 Current Version Code:1

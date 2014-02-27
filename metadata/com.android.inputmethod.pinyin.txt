@@ -23,6 +23,9 @@ Build:4.2.1,1
         echo -e 'version.name=4.2.1\nversion.code=1' > ant.properties
     buildjni=yes
 
+Maintainer Notes:
+.
+
 Update Check Mode:None
 Current Version:1.0
 Current Version Code:1

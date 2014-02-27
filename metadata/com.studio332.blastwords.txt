@@ -23,6 +23,9 @@ Build:1.6,6
         echo 'source.dir=../BlastWords/src;src' >> ant.properties
     scanignore=BlastWords-android/libs/armeabi-v7a
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.6
 Current Version Code:6

@@ -22,6 +22,9 @@ Build:3.1-SNAPSHOT,31
     patch=patch_31.patch
     scanignore=i-jetty-server/src/main/java/org/mortbay/ijetty/webapp/AndroidClassLoader.java
 
+Maintainer Notes:
+.
+
 Update Check Mode:None
 Current Version:3.1
 Current Version Code:31

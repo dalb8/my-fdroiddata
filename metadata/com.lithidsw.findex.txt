@@ -18,6 +18,9 @@ Build:1.0,1
     target=android-19
     extlibs=android/android-support-v4.jar
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

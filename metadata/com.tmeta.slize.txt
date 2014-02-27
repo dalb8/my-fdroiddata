@@ -20,6 +20,9 @@ Build:1.1,8
     commit=master
     srclibs=1:AndEngine@GLES2
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.1
 Current Version Code:8

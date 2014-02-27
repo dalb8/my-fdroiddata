@@ -43,6 +43,9 @@ Build:0.9.4r681,26
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
 # Version in res/values/appname.xml; device variable i.e see playmarket for date
+Maintainer Notes:
+.
+
 Update Check Mode:None
 Current Version:0.9.4
 Current Version Code:27

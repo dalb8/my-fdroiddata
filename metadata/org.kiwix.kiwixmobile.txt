@@ -35,6 +35,9 @@ Build:1.2,5
         cd ../../android && \
         NDK_PATH=$$NDK$$ ANDROID_HOME=$$SDK$$ ./build-android-with-native.py --toolchain --lzma --zim --kiwix --strip
 
+Maintainer Notes:
+.
+
 Update Check Mode:None
 Current Version:1.8
 Current Version Code:13

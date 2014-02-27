@@ -32,6 +32,9 @@ Build:0.4.1,16
     subdir=up666
 
 #Device variable and tags are old
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.4.1
 Current Version Code:16

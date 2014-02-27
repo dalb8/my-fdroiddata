@@ -30,6 +30,9 @@ Build:2,10
     subdir=Springs-v2
     srclibs=1:Libpd@b30d6;2:Processing-Multitouch@5f07f8ad884d
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:2
 Current Version Code:10

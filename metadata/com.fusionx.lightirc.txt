@@ -16,6 +16,9 @@ Build:2.9.3,37
     srclibs=ActionBarSherlock@9598f2bb,SlidingMenu@7343c3cd,Relay@master,NumberPicker-SimonVT@master
     subdir=HoloIRC
 
+Maintainer Notes:
+.
+
 Update Check Mode:None
 Current Version Code:37
 

@@ -35,6 +35,9 @@ Build:4.803,20004
     build=$$MVN3$$ package -f HtmlCleaner/pom.xml && \
         mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest/4.8-MAINT
 Current Version:4.803
 Current Version Code:20004

@@ -19,6 +19,9 @@ Build:Better Beta,2
     commit=fe4ef
     extlibs=android/android-support-v4.jar
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:Better Beta
 Current Version Code:2

@@ -31,6 +31,9 @@ Build:3.37,2111600304
     prebuild=sed -i 's/KeysDummy/Keys/g' src/jp/co/kayo/android/localplayer/secret/KeysDummy.java && \
         mv src/jp/co/kayo/android/localplayer/secret/KeysDummy.java src/jp/co/kayo/android/localplayer/secret/Keys.java
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:3.37
 Current Version Code:2111600304

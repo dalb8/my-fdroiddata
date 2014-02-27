@@ -65,6 +65,9 @@ Build:20120310,20120310
 
 # Not that it has good chances to be updated anyway..
 # (see https://github.com/shinohane/ONScripter-SAO for blob-filled replacement..)
+Maintainer Notes:
+.
+
 Update Check Mode:Static
 Current Version:20120310
 Current Version Code:20120310

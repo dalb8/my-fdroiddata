@@ -27,6 +27,9 @@ Build:0.7.2,51
     patch=gms_51.patch
     prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
+Maintainer Notes:
+.
+
 Update Check Mode:Tags
 Current Version:0.7.6
 Current Version Code:55

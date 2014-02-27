@@ -19,6 +19,9 @@ Build:0.01,1
     commit=master
     buildjni=yes
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.01
 Current Version Code:1
