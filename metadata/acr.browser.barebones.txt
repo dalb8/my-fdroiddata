@@ -26,6 +26,7 @@ Build:3.0.5b,67
     prebuild=sed -i 's/MAX_TABS = 5/MAX_TABS = 25/g' src/acr/browser/barebones/utilities/FinalVariables.java
 
 Maintainer Notes:
+Will be branching into two apks for different platforms it seems
 .
 
 #Update Check Mode:RepoManifest
