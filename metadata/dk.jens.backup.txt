@@ -37,6 +37,9 @@ Build:0.2.4,10
     commit=0.2.4
     target=android-17
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.2.7
 Current Version Code:13

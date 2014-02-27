@@ -29,6 +29,9 @@ Repo:https://github.com/handschuh/Slight-backup.git
 Build:0.5.2,19
     commit=v0.5.2
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.5.2
 Current Version Code:19

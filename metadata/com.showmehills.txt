@@ -42,6 +42,9 @@ Build:0.30,30
         sed -i 's/<uses-library android:name="com.google.android.maps" \/>/<uses-library android:name="com.google.android.maps" android:required="false" \/>/g' AndroidManifest.xml
 
 # 0.31 on gplay
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.30
 Current Version Code:30

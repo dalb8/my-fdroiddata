@@ -36,6 +36,9 @@ Build:1.5,6
     prebuild=sed -i 's/gradle:0.6.+/gradle:0.7.+/g' $(find .. -name build.gradle) && \
              sed -i '17,35d' build.gradle
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.5
 Current Version Code:6

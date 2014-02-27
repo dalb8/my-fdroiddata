@@ -26,6 +26,9 @@ Build:1.2.01,7
     extlibs=android/android-support-v4.jar
     srclibs=1:Processing-Multitouch@bb88609
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.2.01
 Current Version Code:7

@@ -35,6 +35,9 @@ Build:1.6.1.9,16109
     buildjni=yes
 
 # 1.9.1.1 on gplay
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.6.1.9
 Current Version Code:16109

@@ -49,6 +49,9 @@ Build:1.9,11
     gradle=fdroid
     prebuild=sed -i '19,37d' build.gradle
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.9
 Current Version Code:11

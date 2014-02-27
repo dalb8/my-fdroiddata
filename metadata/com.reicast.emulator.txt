@@ -29,6 +29,9 @@ Build:0.r5+,6
     patch=omguya.patch
     buildjni=yes
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:0.r5+
 Current Version Code:6

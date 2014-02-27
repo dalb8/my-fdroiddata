@@ -57,6 +57,9 @@ Build:0.5.12,31
     build=$$NDK$$/ndk-build -C ../tess-two
 
 # very tentatively
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:0.5.14
 Current Version Code:33

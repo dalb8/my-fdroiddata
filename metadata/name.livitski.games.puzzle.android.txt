@@ -34,6 +34,9 @@ Build:1.1,2
     commit=v-1.1-2
     target=android-18
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.1
 Current Version Code:2

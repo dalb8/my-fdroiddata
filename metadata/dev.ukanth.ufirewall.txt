@@ -36,6 +36,9 @@ Build:1.2.7,141
     build=make -C external NDK=$$NDK$$
     buildjni=no
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.2.9
 Current Version Code:152

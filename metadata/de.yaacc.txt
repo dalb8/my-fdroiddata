@@ -30,6 +30,9 @@ Build:1.1,2
     subdir=main
     target=android-17
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.1.5-SNAPSHOT
 Current Version Code:9

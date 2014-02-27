@@ -31,6 +31,9 @@ Build:2.5,2500
     build=$$NDK$$/ndk-build -e "APP_ABI=armeabi armeabi-v7a"
     buildjni=no
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:2.5
 Current Version Code:2500

@@ -22,6 +22,9 @@ Build:2.0,2
     srclibs=2:NumberPicker-SimonVT@1da4372;1:ActionBarSherlock@4.1.0
     buildjni=yes
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:2.0
 Current Version Code:2

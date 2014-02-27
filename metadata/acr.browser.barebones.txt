@@ -25,6 +25,9 @@ Build:3.0.5b,67
     target=android-19
     prebuild=sed -i 's/MAX_TABS = 5/MAX_TABS = 25/g' src/acr/browser/barebones/utilities/FinalVariables.java
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:3.0.5b
 Current Version Code:67

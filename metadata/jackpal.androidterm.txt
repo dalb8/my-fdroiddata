@@ -22,6 +22,9 @@ Build:1.0.54,55
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.0.56
 Current Version Code:57

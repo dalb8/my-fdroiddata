@@ -24,6 +24,9 @@ Build:7.1,95
     commit=AndStatus-7.1
     init=rm build.xml custom_rules.xml
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:7.1
 Current Version Code:95

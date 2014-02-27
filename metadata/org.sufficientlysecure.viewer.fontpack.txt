@@ -21,6 +21,9 @@ Build:2.1,2100
     commit=ac9b11451
     subdir=fontpack
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:2.2
 Current Version Code:2200

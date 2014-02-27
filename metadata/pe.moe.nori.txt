@@ -29,6 +29,9 @@ Build:1.2.0,11
     srclibs=2:ActionBarSherlock@4.4.0;1:Volley@android-4.4_r1.2;3:NoAnalytics@c8d7785075
     prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.2.0
 Current Version Code:11

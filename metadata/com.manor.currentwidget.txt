@@ -48,6 +48,9 @@ Build:0.39,38
         mv res/drawable/icon.png ../CurrentWidgetLibrary/res/drawable/ && \
         printf "android.library=true\nandroid.library.reference.1=$$Color-Picker-2$$" >> ../CurrentWidgetLibrary/project.properties
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:0.39a
 Current Version Code:39

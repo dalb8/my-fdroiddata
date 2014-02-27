@@ -63,6 +63,9 @@ Build:0.4.5,10
 # See info.guardianproject.gpg README to build using srclibs=GNUPG
 # external/data/data/info.guardianproject.gpg/app_opt/bin/gpg2-static :
 # mv external/data/data/info.guardianproject.gpg/gpgv2-static ../assets/gpgv
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.4.6
 Current Version Code:11

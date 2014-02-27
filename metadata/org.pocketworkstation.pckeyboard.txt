@@ -35,6 +35,9 @@ Build:v1.37,1037
         mv libs/main_en.dict res/raw/main.dict
     buildjni=yes
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:v1.37
 Current Version Code:1037

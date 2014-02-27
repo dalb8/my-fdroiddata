@@ -31,6 +31,9 @@ Build:1.4.1.4,46
         echo "android.library.reference.2=$$FinfAgent$$" >> project.properties
     scanignore=src/net/robotmedia/acv/logic/FlurryAgentProxy.java
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.4.1.4
 Current Version Code:46

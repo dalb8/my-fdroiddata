@@ -51,6 +51,9 @@ Build:1.6,60
     init=git update-index --assume-unchanged res/raw/build.txt && \
       echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:1.6
 Current Version Code:60

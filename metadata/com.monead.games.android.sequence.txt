@@ -18,6 +18,9 @@ Repo:https://github.com/DaveRead/SequenceHunt.git
 Build:01.07.03,21
     commit=v1.7.3
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:01.07.03
 Current Version Code:21

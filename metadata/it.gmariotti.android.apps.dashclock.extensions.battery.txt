@@ -27,6 +27,9 @@ Build:1.6.4,19
     prebuild=cp -r $$DashClock$$/api/src/com src/
 
 # 1.8.x on gplay
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.6.4
 Current Version Code:19

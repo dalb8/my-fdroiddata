@@ -31,6 +31,9 @@ Build:0.0.7,7
 Build:0.0.8,8
     disable=not published
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.0.8
 Current Version Code:8

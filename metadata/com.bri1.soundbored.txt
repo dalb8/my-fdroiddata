@@ -21,6 +21,9 @@ Build:2.0,3
     commit=42ed
     extlibs=android/android-support-v4.jar
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:2.0
 Current Version Code:3

@@ -19,6 +19,9 @@ Build:2.3,13
     commit=ce2a75c6573c9e02
     prebuild=echo -e 'java.source=1.6\njava.target=1.6' > ant.properties
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:2.3
 Current Version Code:13

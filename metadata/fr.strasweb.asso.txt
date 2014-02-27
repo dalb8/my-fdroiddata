@@ -21,6 +21,9 @@ Build:1.0.1,2
     commit=171
     prebuild=sed -i '37s/true/false' AndroidManifest.xml
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.0.1
 Current Version Code:2

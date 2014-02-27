@@ -48,6 +48,9 @@ Build:3.3.0-beta,1
         ./buildall.sh
     buildjni=../library
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:3.3.0-beta
 Current Version Code:1

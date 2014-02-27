@@ -30,6 +30,9 @@ Build:0.7.0,39
     commit=v0.7.0
     subdir=AndorsTrail
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.7.1
 Current Version Code:42

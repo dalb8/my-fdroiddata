@@ -26,6 +26,9 @@ Build:0.1,12
              cp libs/sqlcipher.jar $$Cacheword$$/libs/
     scanignore=app/libs
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:0.1
 Current Version Code:12

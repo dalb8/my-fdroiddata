@@ -24,6 +24,9 @@ Build:0.1.1,12
     commit=v0.1.1
     maven=yes
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.1.1
 Current Version Code:12

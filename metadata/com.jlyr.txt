@@ -25,6 +25,9 @@ Build:1.5,36
     commit=2531709f8550
     target=android-10
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.5
 Current Version Code:36

@@ -19,6 +19,9 @@ Build:1.2,3
     commit=6
     prebuild=sed -i '/AndroidBinding/d' project.properties
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.2
 Current Version Code:3
