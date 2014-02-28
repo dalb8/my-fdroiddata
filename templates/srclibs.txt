@@ -10,7 +10,8 @@ Subdir:
 Prepare:
 
 # If given "Yes", "android update project -p . -s" will be executed
-Update Project:
+# (Apparently obosolete, since they are auto updated now)
+#Update Project:
 
 # May not work! Must checkout the revision in the metadata
 Srclibs:
