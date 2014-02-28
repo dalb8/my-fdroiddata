@@ -1,0 +1,95 @@
+diff --git a/build.gradle b/build.gradle
+index 33d5973..17df4c2 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -12,16 +12,6 @@ repositories {
+     mavenCentral()
+ }
+ dependencies {
+-    def libsdir = new File('libs');
+-    if (!libsdir.exists()) {
+-        println "Creating libs directory"
+-        libsdir.mkdir()
+-    }
+-    def prestoLib = new File('libs/presto_client-0.8.5.jar')
+-    if (!prestoLib.exists()) {
+-        println "Downloading presto library into libs folder"
+-        new URL('http://www.aocate.com/presto/client/presto_client-0.8.5.jar').withInputStream{ i -> prestoLib.withOutputStream{ it << i }}
+-    }
+ 
+     compile 'com.android.support:appcompat-v7:19.0.+'
+     compile 'org.apache.commons:commons-lang3:3.2.1'
+@@ -33,7 +23,7 @@ dependencies {
+     compile 'commons-io:commons-io:2.4'
+     compile 'com.nineoldandroids:library:2.4.0'
+     compile project(':submodules:dslv:library')
+-    compile files('libs/presto_client-0.8.5.jar')
++    compile project(':submodules:PrestoClient')
+ }
+ 
+ android {
+@@ -47,31 +37,6 @@ android {
+         testInstrumentationRunner "instrumentationTest.de.test.antennapod.AntennaPodTestRunner"
+     }
+ 
+-    signingConfigs {
+-        releaseConfig {
+-            if (project.hasProperty('releaseStoreFile')) {
+-                storeFile file(releaseStoreFile)
+-            } else {
+-                storeFile file('keystore')
+-            }
+-            if (project.hasProperty('releaseStorePassword')) {
+-                storePassword releaseStorePassword
+-            } else {
+-                storePassword "password"
+-            }
+-            if (project.hasProperty('releaseKeyAlias')) {
+-                keyAlias releaseKeyAlias
+-            } else {
+-                keyAlias "alias"
+-            }
+-            if (project.hasProperty('releaseKeyPassword')) {
+-                keyPassword releaseKeyPassword
+-            } else {
+-                keyPassword "password"
+-            }
+-        }
+-    }
+-
+     sourceSets {
+         main {
+             manifest.srcFile 'AndroidManifest.xml'
+@@ -87,11 +52,11 @@ android {
+     buildTypes {
+         debug {
+             packageNameSuffix ".debug"
++            versionNameSuffix "-debug"
+         }
+         release {
+             runProguard true
+             proguardFile 'proguard.cfg'
+-            signingConfig signingConfigs.releaseConfig
+         }
+     }
+ 
+diff --git a/settings.gradle b/settings.gradle
+index 6de43d8..5e6ea46 100644
+--- a/settings.gradle
++++ b/settings.gradle
+@@ -1 +1,2 @@
+ include ':submodules:dslv:library'
++include ':submodules:PrestoClient'
+diff --git a/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example b/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
+index da16069..88fbc3f 100644
+--- a/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
++++ b/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
+@@ -2,6 +2,6 @@ package de.danoeh.antennapod.util.flattr;
+ 
+ /** Contains credentials to access the Flattr API*/
+ public class FlattrConfig {
+-	static final String APP_KEY = "";
+-	static final String APP_SECRET = "";
++	static final String APP_KEY = "1wpjfofGEf6zu9acSYorcFky1QpsGeRx";
++	static final String APP_SECRET = "B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8";
+ }
