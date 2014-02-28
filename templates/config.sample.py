@@ -4,7 +4,7 @@
 # Copy this file (or the sample config from that repo) to my-fdroiddata/config.py, 
 # then amend the settings below according to your system configuration.
 # Alternatively, a config will be generated with $fdroid init.
-# Run $fdroid update from my-fdroiddata/ to generate the index.
+# Run $fdroid update --pretty from my-fdroiddata/ to generate the index.
 
 # Path to the Android SDK, $ANDROID_HOME already set on most systems
 #sdk_path = "/path/to/android-sdk"
@@ -30,21 +30,26 @@ mvn3 = "mvn"
 #gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.9-bin/qtvcssosa3asn4t6njd64fm3i/gradle-1.9/bin/gradle"
 gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle"
 
-repo_url = ""
-repo_name = "My F-Droid"
+#repo_url = "https://gitorious.org/asdgasd"
+#repo_name = "Appz"
+#repo_icon = "icon-fancy_repo.png"
+repo_url = "http://192.168.1.9:3000"
+repo_name = "Appz Local"
 repo_icon = "icon_repo.png"
 repo_description = """
-Applications in this repository are built from source code and may behave
-differently to the developers' versions.
+Android apps.
 """
+
 
 # Signing: read https://developer.android.com/tools/publishing/app-signing.html
 # See the first and last parts of https://f-droid.org/manual for help.
-# You'll need Java 1.7 (OpenJDK 7) to build an index: check with $java -version.
+# You'll need Java 1.7 (OpenJDK 7) to build an index: change it with
+# sudo update-alternatives --config java.
 
 #The key (from the keystore defined below) to be used for signing the
 #repository itself. Can be None for an unsigned repository.
-repo_keyalias = None
+#repo_keyalias = None
+repo_keyalias = 'repokey'
 
 #The keystore to use for release keys when building. This needs to be
 #somewhere safe and secure, and backed up!
