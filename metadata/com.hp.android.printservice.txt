@@ -1,3 +1,4 @@
+Categories:System
 License:Proprietary
 
 Summary:Plugin for HP printers

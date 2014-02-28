@@ -1,0 +1,3 @@
+Repo Type:git
+Repo:https://gitorious.org/asdgasd/prestoclient.git
+
