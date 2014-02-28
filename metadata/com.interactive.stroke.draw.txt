@@ -8,20 +8,23 @@ Issue Tracker:https://github.com/Teovald/Draw/issues
 Auto Name:Draw
 Summary:It’s a drawing app
 Description:
+Features include transparent markers and rotatable canvas.
+
+Status: Alpha
 .
 
 Repo Type:git
 Repo:https://github.com/Teovald/Draw.git
 
 Build:0.1-almost,1
-    disable=ABS errors
-    commit=b243
+    disable=licence
+    commit=e3d7fc2705b8ba
     subdir=draw
     gradle=yes
-    srclibs=HoloColorPicker-Teovald@470c9e,ActionBarSherlock@4.4.0
+    srclibs=HoloColorPicker-Teovald@470c9e
     prebuild=ln -s $(readlink -f $$HoloColorPicker-Teovald$$) ../HoloColorPicker && \
-        ln -s $(readlink -f $$ActionBarSherlock$$) ../actionBarSherlock-Gradle && \
-        sed -i 's@../@@' ../settings.gradle
+        sed -i 's@../HoloColorPicker@HoloColorPicker@' ../settings.gradle && \
+        sed -i '17 i \\tlintOptions {\n\t\tabortOnError false\n\t}' build.gradle
 
 Maintainer Notes:
 .
