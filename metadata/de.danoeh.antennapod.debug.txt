@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:MIT
@@ -26,17 +26,17 @@ Status: BETA
 Repo Type:git
 Repo:https://github.com/danieloeh/AntennaPod.git
 
-Build:0.9.8.1,34
+Build:0.9.8.1-debug,34
     commit=0.9.8.1
-    disable=APK is debuggable so f-droid rejects it
     patch=srclib_34.patch
     srclibs=PrestoClient@3d7444,DragSort-danoeh@1bb29afb91f
     prebuild=ln -s $(readlink -f $$PrestoClient$$) submodules/PrestoClient && \
          ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/library && \
          sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
+         sed -i '55 i \\t\tdebuggable false' build.gradle && \
          cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
     build=gradle assembleDebug && \
-          zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
+        zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
     output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
 
 Maintainer Notes:
