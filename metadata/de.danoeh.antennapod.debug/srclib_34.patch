@@ -64,7 +64,7 @@ index 33d5973..17df4c2 100644
      buildTypes {
          debug {
              packageNameSuffix ".debug"
-+            versionNameSuffix "-debug"
++            versionNameSuffix ""
          }
          release {
              runProguard true
