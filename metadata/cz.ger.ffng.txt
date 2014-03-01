@@ -1,0 +1,12 @@
+License:GPLv2
+Web Site:http://fillets.sourceforge.net
+Source Code:https://github.com/fidlej/ffng-android
+
+Summary:Funny Game
+
+Maintainer Notes:
+.
+
+Current Version:1.0
+Current Version Code:1
+

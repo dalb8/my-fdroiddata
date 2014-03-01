@@ -1,0 +1,17 @@
+Categories:Development
+License:Apache2
+Web Site:
+Source Code:https://code.google.com/p/android-scripting/source/list
+Issue Tracker:https://code.google.com/p/android-scripting/issues
+
+Auto Name:Python for Android
+Summary:Scripting language
+Description:
+Install first [[com.googlecode.android_scripting]].
+
+Hard to build: developer builds for now.
+.
+
+Current Version:4
+Current Version Code:4
+

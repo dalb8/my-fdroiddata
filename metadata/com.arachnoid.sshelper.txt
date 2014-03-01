@@ -1,0 +1,18 @@
+License:GPL
+Web Site:http://arachnoid.com/android/SSHelper
+Source Code:http://arachnoid.com/android/SSHelper/resources
+Issue Tracker:
+
+Summary:Access to phone‘s contents
+Description:
+Hard to build—developer build for now.
+.
+
+Maintainer Notes:
+See website for build instructions
+Rsync etc. not included
+.
+
+Current Version:1.7
+Current Version Code:1.7
+
