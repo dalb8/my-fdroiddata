@@ -34,6 +34,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:5.0
-Current Version Code:50
+Current Version:5.1
+Current Version Code:51
 

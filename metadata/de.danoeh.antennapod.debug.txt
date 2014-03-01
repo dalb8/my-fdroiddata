@@ -44,7 +44,7 @@ Uses submodules
 Make sure the system gradle version matches that of the build.gradle plugin version
 .
 
-#Update Check Mode:Tags
+Update Check Mode:Tags
 Current Version:0.9.8.1
 Current Version Code:34
 
