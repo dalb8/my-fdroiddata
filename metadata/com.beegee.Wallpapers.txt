@@ -22,9 +22,10 @@ Build:1.0,1
     prebuild=sed -i '4 i android:versionCode="1"\nandroid:versionName="1.0"' AndroidManifest.xml 
 
 Maintainer Notes:
+not on gplay
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest/ics
 Current Version:1.0
 Current Version Code:1
 

@@ -29,7 +29,8 @@ Build:0.5.47,80
 Maintainer Notes:
 .
 
-Update Check Mode:Tags .*-production
+#Update Check Mode:Tags .*-production
+Update Check Mode:None
 Current Version:0.6.9a
 Current Version Code:90
 

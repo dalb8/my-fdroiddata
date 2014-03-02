@@ -39,7 +39,7 @@ The icons would need a bit of work and don't forget ldpi etc.
 Edit the strings according to the language used.
 .
 
-Update Check Mode:None
+Update Check Mode:Static
 Current Version:1.0
 Current Version Code:1
 

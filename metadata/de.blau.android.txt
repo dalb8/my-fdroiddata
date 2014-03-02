@@ -47,7 +47,7 @@ Version in res/values/appname.xml
 device variable i.e see gplay for date
 .
 
-Update Check Mode:None
+#Update Check Mode:RepoManifest/0.9
 Current Version:0.9.4
 Current Version Code:27
 

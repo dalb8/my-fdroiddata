@@ -34,7 +34,7 @@ Build:2.2.3,63
 Maintainer Notes:
 .
 
-Update Check Mode:None
+#Update Check Mode:Tags
 Current Version:2.2.3
 Current Version Code:63
 

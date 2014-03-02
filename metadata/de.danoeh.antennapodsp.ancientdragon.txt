@@ -36,7 +36,7 @@ Build:1.0.0,1
 Maintainer Notes:
 .
 
-Update Check Mode:None
+Update Check Mode:Static
 Current Version:1.0.0
 Current Version Code:1
 

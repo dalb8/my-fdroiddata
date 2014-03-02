@@ -19,6 +19,6 @@ Build:2.9.3,37
 Maintainer Notes:
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version Code:37
 
