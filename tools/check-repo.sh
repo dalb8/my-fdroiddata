@@ -1,4 +1,7 @@
 #! /bin/bash
-fdroid checkupdates 2>&1 | tee logs/repo-$(date +%d%m%Y).log
-sed -i '/up to date/d;/Finished/d' logs/repo-$(date +%d%m%Y).log
+for i in $(grep -s -l '^Update Check Mode:RepoMan\|^Update Check Mode:Tags' metadata/*.txt)
+do N=$(basename --suffix=.txt $i)
+   fdroid checkupdates $N 2>&1 | tee -a logs/repo-$(date +%d%m%Y).log
+done
+sed -e '/Reading/d;/up to date/d;/Finished/d' -e 's/^Processing/    Processing/' -i logs/repo-$(date +%d%m%Y).log
 
