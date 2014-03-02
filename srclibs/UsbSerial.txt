@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://code.google.com/p/usb-serial-for-android
+Subdir:UsbSerialLibrary
+

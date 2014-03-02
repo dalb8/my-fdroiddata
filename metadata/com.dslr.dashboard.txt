@@ -1,0 +1,63 @@
+Categories:Multimedia
+License:GPLv3
+Web Site:https://code.google.com/p/dslrdashboard/wiki/DslrDashboard
+Source Code:https://code.google.com/p/dslrdashboard/source/list
+Issue Tracker:https://code.google.com/p/dslrdashboard/issues
+Donate:https://code.google.com/p/dslrdashboard
+Bitcoin:19QGtBbPXQL1Y6dRC2jVoH7t5nHFeK5F5W
+
+Auto Name:DslrDashboard
+Summary:Control a DSLR Camera
+Description:
+Either uses USB or a [https://github.com/hubaiz/DslrDashboardServer server].
+To use USB, you need a USB-OTG adapter and a compatible device.
+
+See the website for lots of info and changelog.
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/dslrdashboard/
+
+Build:0.30.6,21
+    disable=see below
+    commit=a0e4631a10c0
+    subdir=DslrDashboard
+    init=TOOLCHAIN=/tmp/toolchain && \
+        cd ../ && \
+        wget http://www.libraw.org/data/LibRaw-0.16.0.tar.gz && \
+        tar xf LibRaw-0.16.0.tar.gz && \
+        rm     LibRaw-0.16.0.tar.gz && \
+        wget http://www.exiv2.org/exiv2-0.24.tar.gz && \
+        tar xf exiv2-0.24.tar.gz && \
+        rm     exiv2-0.24.tar.gz && \
+        $$NDK$$/build/tools/make-standalone-toolchain.sh --platform=android-19 --install-dir=$TOOLCHAIN && \
+    srclibs=1:UsbSerial@v0.1.0
+    rm=DslrDashboard/obj;DslrDashboard/libs/armeabi-v7a;DslrDashboard/libs/usbseriallibrary.jar
+    scandelete=DslrDashboard/jni
+    build=\
+        cd ../LibRaw-0.16.0/ && \
+        ./configure --host=arm-linux-androideabi && \
+        PATH=$TOOLCHAIN/bin:$PATH CC=arm-linux-androideabi-gcc make && \
+        mv libraw/* ../DslrDashboard/jni/include/libraw/ && \
+        mv lib/.libs/* ../DslrDashboard/jni/libraw/lib/ && \
+        cd ../exiv2-0.24/ && \
+        ./configure --host=arm-linux-androideabi && \
+        PATH=$TOOLCHAIN/bin:$PATH CC=arm-linux-androideabi-gcc make && \
+        mv src/.libs/libexiv2.so.13.0.0 ../DslrDashboard/jni/libexiv2/bin/exiv2 && \
+        mv src/libexiv2.la ../DslrDashboard/jni/libexiv2/lib/ && \
+        mv src/.libs/libexiv2.a ../DslrDashboard/jni/libexiv2/lib/
+    buildjni=yes
+
+Maintainer Notes:
+svn checkout svn://dev.exiv2.org/svn/tags/
+
+ending up with x86 binaries for some reason for libraw and libexiv
+not sure about whether bin/exiv2 is OK
+
+gplay well ahead of source code: 0.30.33
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.30.6
+Current Version Code:21
+
