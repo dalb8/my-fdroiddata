@@ -1,3 +1,12 @@
 #! /bin/bash
 # Since fdroid update -b doesn't work…
-grep 'Build:\|Current Version Code:' metadata/*.txt
+exec > "logs/to-update.log"
+for i in metadata/*.txt
+do 	echo "$(basename -s .txt $i):"
+        echo " "
+	grep -A 1 'Build:' $i
+        echo " "
+	grep -A 0 'Current Version Code:' $i
+        echo " "
+        echo "********** "
+done
