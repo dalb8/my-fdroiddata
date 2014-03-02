@@ -16,8 +16,6 @@ No description available
 Repo Type:git
 Repo:git://nooskewl.com/bobby.git
 
-# allegro seems to be installed for armeabi-v7a not for armeabi
-# problems configuring freetype and getting paths right for cmake
 Build:1.4.1,2
     disable=WIP
     commit= c544e260f
@@ -47,6 +45,8 @@ Build:1.4.1,2
     buildjni=no
 
 Maintainer Notes:
+allegro seems to be installed for armeabi-v7a not for armeabi
+problems configuring freetype and getting paths right for cmake
 .
 
 Update Check Mode:Static

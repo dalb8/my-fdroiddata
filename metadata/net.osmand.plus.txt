@@ -22,7 +22,6 @@ within the app and there is a desktop program available on the website as well
 for creating your own.
 .
 
-# Name srclibs in such a way as to replicate OsmAnd build tree
 Repo Type:srclib
 Repo:android
 
@@ -47,6 +46,8 @@ Build:1.5-ARM,145
     buildjni=no
 
 Maintainer Notes:
+Name srclibs in such a way as to replicate OsmAnd build tree
+
 do another 1.5 update when the branch settles down
 replace GPS Status with SatSat and elaborate description. see 
    https://f-droid.org/forums/topic/update-osmand-and-osmand/page/3/#post-8253 

@@ -25,8 +25,8 @@ Build:1.2-wtfismyip,5
     patch=change-server_5.patch
     prebuild=sed -i '15s/3/4/g' AndroidManifest.xml
 
-#No revisions in a long time
 Maintainer Notes:
+No revisions in a long time so set to Static
 .
 
 Update Check Mode:Static

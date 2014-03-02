@@ -22,8 +22,8 @@ Build:Dagobert,14
     build=cp $$NDK$$/platforms/android-14/arch-arm/usr/lib/liblog.so jni/
     buildjni=yes
 
-# grab zip from website
 Maintainer Notes:
+grab zip from website and upload to bitbucket
 .
 
 Update Check Mode:None

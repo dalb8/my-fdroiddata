@@ -23,8 +23,8 @@ Repo:https://github.com/robert7k/sipswitch.git
 Build:1.0.4,5
     commit=1.0.4
 
-# 1.0.7 on gplay
 Maintainer Notes:
+1.0.7 on gplay
 .
 
 #Update Check Mode:Tags

@@ -41,8 +41,8 @@ Build:0.30,30
         echo "sdk.dir=$$SDK$$" >../ShowMeX/local.properties && \
         sed -i 's/<uses-library android:name="com.google.android.maps" \/>/<uses-library android:name="com.google.android.maps" android:required="false" \/>/g' AndroidManifest.xml
 
-# 0.31 on gplay
 Maintainer Notes:
+0.31 on gplay
 .
 
 #Update Check Mode:Tags

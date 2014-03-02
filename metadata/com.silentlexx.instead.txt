@@ -34,8 +34,8 @@ Build:1.6.1.9,16109
     prebuild=ln -s `readlink -f $$INSTEAD$$` jni/src/instead
     buildjni=yes
 
-# 1.9.1.1 on gplay
 Maintainer Notes:
+1.9.1.1 on gplay
 .
 
 #Update Check Mode:RepoManifest

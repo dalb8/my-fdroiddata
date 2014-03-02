@@ -30,8 +30,8 @@ Build:2.0.2,2
         cp -r $$CwacEndless$$/src/com/commonsware src/com/ && \
         cp -r $$CwacAdapter$$/src/com/commonsware/cwac/adapter src/com/commonsware/cwac/
 
-# version all wrong
 Maintainer Notes:
+version all wrong
 .
 
 Update Check Mode:None

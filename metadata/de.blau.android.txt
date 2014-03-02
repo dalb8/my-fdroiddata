@@ -42,8 +42,9 @@ Build:0.9.4r681,26
     srclibs=1:ActionBarSherlock@4.4.0
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
-# Version in res/values/appname.xml; device variable i.e see playmarket for date
 Maintainer Notes:
+Version in res/values/appname.xml
+device variable i.e see gplay for date
 .
 
 Update Check Mode:None

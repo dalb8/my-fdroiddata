@@ -42,11 +42,10 @@ Build:0.82.1 ALPHA,13
     subdir=Hexiano
     prebuild=rm build.xml custom_rules.xml
 
-#Generic package id in manifest
 Maintainer Notes:
+Generic package id in manifest
 .
 
-#Update Check Mode:Market
 Update Check Mode:None
 Current Version:0.82.1
 Current Version Code:14

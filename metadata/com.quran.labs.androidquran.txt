@@ -29,8 +29,8 @@ Build:2.3.1,231
     target=android-17
     srclibs=1:ActionBarSherlock@4.1.0
 
-# crashlytics in 2.4.8
 Maintainer Notes:
+crashlytics in 2.4.8
 .
 
 Update Check Mode:None

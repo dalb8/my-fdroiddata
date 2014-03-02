@@ -18,20 +18,20 @@ playback, customizable tabs and folder browsing.
 Google Admob was removed before building.
 .
 
-#two branches
 Repo Type:git
 Repo:https://bitbucket.org/yokmama/just-player.git
 
 Build:3.37,2111600304
     commit=e7ba9ce76
     subdir=JUSTPLAYER
-    rm=LibAndroTranslation-1.0.1/build.xml;JUSTPLAYER/.google_apis;JUSTPLAYER/libs/GoogleAdMobAdsSdk-6.2.1.jar
+    rm=LibAndroTranslation-1.0.1/build.xml,JUSTPLAYER/.google_apis,JUSTPLAYER/libs/GoogleAdMobAdsSdk-6.2.1.jar
     extlibs=android/android-support-v4.jar
     srclibs=2:MobAdMob@2d5736
     prebuild=sed -i 's/KeysDummy/Keys/g' src/jp/co/kayo/android/localplayer/secret/KeysDummy.java && \
         mv src/jp/co/kayo/android/localplayer/secret/KeysDummy.java src/jp/co/kayo/android/localplayer/secret/Keys.java
 
 Maintainer Notes:
+Use different branch for Gingerbread and below
 .
 
 Update Check Mode:RepoManifest

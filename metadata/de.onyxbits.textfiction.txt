@@ -29,6 +29,7 @@ Build:2.0,4
     extlibs=android/android-support-v4.jar
 
 Maintainer Notes:
+Tags are behind gplay
 .
 
 Update Check Mode:RepoManifest

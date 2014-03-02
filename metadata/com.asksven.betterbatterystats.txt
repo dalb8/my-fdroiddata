@@ -2,7 +2,6 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 AntiFeatures:UpstreamNonFree
 Categories:System
-# All source files and jars but no licence in README
 License:Apache2
 Web Site:http://asksven.tumblr.com
 Source Code:https://github.com/asksven/BetterBatteryStats
@@ -42,6 +41,7 @@ Build:1.15.0.0_RC8,43
              rm -rf assets/*.apk
 
 Maintainer Notes:
+All source files and jars but no licence in README
 .
 
 Update Check Mode:Tags

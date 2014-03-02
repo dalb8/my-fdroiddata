@@ -11,7 +11,8 @@ Description:
 Live wallpaper that displays a different painting every day, or
 optionally an image from your own gallery. It's dimmed and blurred
 so as not to distract but double tapping free space brings it
-into focus.
+into focus for a couple of seconds.
+The details of it can be viewed from the launcher.
 
 An API exists to make extensions for other collections.
 .

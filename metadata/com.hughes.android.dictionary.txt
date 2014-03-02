@@ -25,8 +25,8 @@ Build:5.0.1,25
         mv jars/icu4j-52_1/icu4j.jar libs/ && \
         mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
-#Cross reference with version of apk in root directory
 Maintainer Notes:
+Cross reference with version of apk in root directory
 .
 
 #Update Check Mode:RepoManifest

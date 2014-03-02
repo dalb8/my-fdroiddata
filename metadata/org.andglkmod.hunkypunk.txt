@@ -63,8 +63,8 @@ Build:0.8,6
     buildjni=no
     antcommand=mod4-release
 
-#None of the methods work
 Maintainer Notes:
+None of the automatic UCM methods work
 .
 
 Update Check Mode:None

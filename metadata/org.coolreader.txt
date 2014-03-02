@@ -37,8 +37,8 @@ Build:3.1.2-35,855
     rm=android/ant.properties
     buildjni=yes
 
-# Too many tags
 Maintainer Notes:
+Too many tags so use RepoManifest
 .
 
 Update Check Mode:RepoManifest

@@ -34,7 +34,7 @@ but the exiv jar has the same namespace as the developer and I can't locate
 source.code.
 .
 
-Update Check Mode:None
+#Update Check Mode:RepoManifest
 Current Version:3.15
 Current Version Code:51
 

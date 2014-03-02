@@ -20,8 +20,8 @@ Repo:https://github.com/yhcting/netmbuddy.git
 Build:1.2.11-1,29
     commit=netmbuddy-v1.2.11-1
 
-# 1.2.12 on gplay
 Maintainer Notes:
+1.2.12 on gplay
 .
 
 #Update Check Mode:Tags

@@ -25,8 +25,8 @@ Build:1.04,4
     subdir=aAuroraApp
     target=android-10
 
-#not in the market
 Maintainer Notes:
+not in the gplay
 .
 
 #Update Check Mode:RepoManifest

@@ -38,7 +38,7 @@ Grab source archive from website and push it to repo
 May need to include extra code from the Windows sources
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:4.2a
 Current Version Code:421
 

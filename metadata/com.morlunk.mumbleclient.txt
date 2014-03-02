@@ -34,7 +34,7 @@ android {
       }
 .
 
-Update Check Mode:RepoManifest
-Current Version:3.0.0-beta3
-Current Version Code:55
+#Update Check Mode:Tags
+Current Version:3.0.0-beta4
+Current Version Code:56
 

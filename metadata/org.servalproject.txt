@@ -39,8 +39,8 @@ Build:0.91,2120
     forceversion=yes
     buildjni=no
 
-# Releases are in master branch, beta in development; run ant version to get version info
 Maintainer Notes:
+Releases are in master branch, beta in development; run ant version to get version info
 .
 
 Update Check Mode:None

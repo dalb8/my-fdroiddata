@@ -28,7 +28,7 @@ Build:0.10,12
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:0.13.2
 Current Version Code:17
 

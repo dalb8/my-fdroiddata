@@ -31,8 +31,8 @@ Build:0.4.1,16
     commit=5eb85badf
     subdir=up666
 
-#Device variable and tags are old
 Maintainer Notes:
+Tags are old
 .
 
 Update Check Mode:RepoManifest
