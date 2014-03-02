@@ -29,13 +29,13 @@ Build:1.0.0-beta.13,10011
     disable=WIP
     commit=v1.0.0-beta.13
     subdir=Aikuma
-    rm=resources;web;Aikuma/test
+    rm=resources,web,Aikuma/test
 
 Maintainer Notes:
 Deciding which storage backend to use: interesting. see https://github.com/langtech/aikuma/issues/115
 .
 
 Update Check Mode:Tags
-Current Version:1.0.0-beta.13
-Current Version Code:10011
+Current Version:1.0.0-beta.17
+Current Version Code:10015
 

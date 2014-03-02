@@ -49,6 +49,8 @@ Build:1.3.21,160
 Maintainer Notes:
 patch changes the package name because it is identical to the upstream
 as a result UCM is None
+
+Use UCM for org.telegram.messenger
 .
 
 Update Check Mode:None

@@ -29,6 +29,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest/ES1
-Current Version:0.93
-Current Version Code:16
+Current Version:0.92
+Current Version Code:15
 

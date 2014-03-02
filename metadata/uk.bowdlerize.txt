@@ -34,6 +34,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:Alpha Release #6
-Current Version Code:6
+Current Version:Alpha Release
+Current Version Code:8
 
