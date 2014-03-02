@@ -23,7 +23,7 @@ Repo:https://robertprojects.googlecode.com/svn;trunk=trunk;tags=tags
 Build:0.9.4,8140
     commit=699
     subdir=RMaps.Free
-    update=.;../RMaps.AppLib
+    update=.,../RMaps.AppLib
     rm=RMaps.AppLib/libs/libGoogleAnalytics.jar
     srclibs=NoAnalytics@158a4a
     prebuild=echo "android.library.reference.1=$$NoAnalytics$$" >> ../RMaps.AppLib/project.properties &&mkdir src
@@ -31,7 +31,7 @@ Build:0.9.4,8140
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
-Current Version:0.9.4
-Current Version Code:8140
+Update Check Mode:RepoManifest
+Current Version:0.10.0.b1
+Current Version Code:8151
 
