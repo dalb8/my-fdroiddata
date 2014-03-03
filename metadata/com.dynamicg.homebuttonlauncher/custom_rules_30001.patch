@@ -1,0 +1,110 @@
+diff --git a/build-release.xml b/build-release.xml
+index 0ebb899..3167f7c 100644
+--- a/build-release.xml
++++ b/build-release.xml
+@@ -1,94 +1,35 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<project name="HomeButtonLauncher" default="main">
++<project name="HomeButtonLauncher">
+ 	
+-	<!-- 
+-=== how to update the build.xml file ===
+-cd /d C:\PROGRA~2\Android\android-sdk\tools
+-android update project -n HomeButtonLauncher -p C:\workspace\androidBookmarkTree\HomeButtonLauncher
+-	--> 
+ 	
+-	<property file="z:/android-keystore/keystore.properties" />
+-	<property name="apkdir" value="D:\ant.tmp\apk" />
+-	<property name="buildDirRoot" value="D:/ant.tmp/build" />
+-	
+-	<property name="workspace" value="${basedir}/.." />
+-	<property name="projectname" value="HomeButtonLauncher" />
+-
+-	<target name=".copysrc">
+-		<delete dir="${buildDirRoot}/${projectname}" />
+-		<copy todir="${buildDirRoot}/${projectname}">
+-			<fileset dir="${workspace}/${projectname}">
+-				<exclude name="**/apk/**" />
+-				<exclude name="**/bin/**" />
+-				<exclude name="**/gen/**" />
+-				<exclude name="**/manifest/**" />
+-				<exclude name="AndroidManifest.xml" />
+-			</fileset>
+-		</copy>
+-	</target>
+-	
+-	<target name=".stripLogging">
+-		<delete file="${buildDirRoot}/${projectname}/src/com/dynamicg/common/Logger.java" failonerror="true" verbose="true" />
++	<target name="stripLogging">
++		<delete file="src/com/dynamicg/common/Logger.java" failonerror="true" verbose="true" />
+ 		
+ 		<replace token="import com.dynamicg.common.Logger" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="private static final Logger log" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.isDebugEnabled" value="false" summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.isTraceEnabled" value="false" summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.trace" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.debug" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.info" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 		<replace token="log.warn" value="// --logging disabled-- " summary="true">
+-			<fileset dir="${buildDirRoot}/${projectname}/src" includes="**/*.java" />
++			<fileset dir="src" includes="**/*.java" />
+ 		</replace>
+ 	</target>
+ 	
+-	<target name=".buildApk">
+-		<property name="buildDirProject" value="${buildDirRoot}/${projectname}" />
+-		
+-		<antcall target=".copysrc" />
+-		<antcall target=".stripLogging" />
+-
+-		<!-- copy final manifest -->
+-		<copy
+-			file="${workspace}/${projectname}/AndroidManifest.xml" 
+-			tofile="${buildDirRoot}/${projectname}/AndroidManifest.xml" 
+-			verbose="true"
+-			failonerror="true"
+-		/>
+-		
+-		<ant antfile="${buildDirRoot}/${projectname}/build.xml" target="release">
+-			<property name="source.absolute.dir" value="${buildDirRoot}/${projectname}/src" />
+-			<property name="gen.absolute.dir" value="${buildDirRoot}/${projectname}/gen" />
+-			<property name="out.dir" value="${buildDirRoot}/${projectname}/bin" />
+-			<property name="manifest.abs.file" value="${buildDirRoot}/${projectname}/AndroidManifest.xml" />
+-		</ant>
+-		
+-		<copy file="${buildDirProject}\bin\${projectname}-release.apk" tofile="${apkdir}/${projectname}.apk" overwrite="true" verbose="true" />
+-	</target>
+-	
+-	<target name="main">
+-		
+-		<!-- api specific apks -->
+-		<antcall target=".buildApk" />
+-		
+-		<!-- show in explorer -->
+-		<exec executable="explorer">
+-			<arg value="${apkdir}"/>
+-		</exec>
+-	</target>
+ 	
+ </project>
