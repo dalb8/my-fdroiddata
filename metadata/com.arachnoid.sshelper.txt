@@ -1,3 +1,4 @@
+Categories:System
 License:GPL
 Web Site:http://arachnoid.com/android/SSHelper
 Source Code:http://arachnoid.com/android/SSHelper/resources

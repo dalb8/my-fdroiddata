@@ -1,3 +1,4 @@
+Categories:Office
 License:Proprietary
 
 Summary:Job finding

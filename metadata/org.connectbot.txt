@@ -2,9 +2,9 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Internet
 License:Apache2
-Web Site:https://code.google.com/p/connectbot
-Source Code:https://code.google.com/p/connectbot
-Issue Tracker:https://code.google.com/p/connectbot/issues/list
+Web Site:http://connectbot.org
+Source Code:https://github.com/connectbot/connectbot
+Issue Tracker:https://github.com/connectbot/connectbot/issues
 
 Auto Name:ConnectBot
 Summary:SSH and local shell client
@@ -14,18 +14,27 @@ Supports multiple sessions, including running them concurrently.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/connectbot.git
+Repo:https://github.com/connectbot/connectbot
 
-Build:22-46-35-snapshot,365
-    commit=716cdaa48
+Build:v1.7.1-127-gd64786d,3651
+    commit=git-master-2014-03-02_12-38-08
+    init=echo 'sdk.dir=$$SDK$$' > local.properties && \
+        ant update-version && \
+        rm build.xml
     forceversion=yes
-    prebuild=sed -i 's/minSdkVersion=\"3\"/minSdkVersion=\"4\"/g' AndroidManifest.xml
-    buildjni=yes
+    forcevercode=yes
+    rm=libs/armeabi,libs/x86
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi'
+    buildjni=no
 
 Maintainer Notes:
+#Issue Tracker:https://code.google.com/p/connectbot/issues/list
+#Issue Tracker:https://review.gerrithub.io/#/q/status:open+project:connectbot/connectbot,n,z
+#Issue Tracker:http://groups.google.com/group/connectbot-commits
 .
 
-Update Check Mode:None
+Update Check Mode:Tags
+Vercode Operation:10*%c + 9
 Current Version:1.7.1
-Current Version Code:323
+Current Version Code:3659
 

@@ -1,3 +1,4 @@
+Categories:Games
 License:GPLv2
 Web Site:http://fillets.sourceforge.net
 Source Code:https://github.com/fidlej/ffng-android
