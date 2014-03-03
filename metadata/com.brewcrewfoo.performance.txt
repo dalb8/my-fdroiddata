@@ -7,6 +7,7 @@ Source Code:https://github.com/erik96/android_packages_apps_PerformanceControl
 Issue Tracker:http://forum.xda-developers.com/devdb/project/?id=600#bugReporter
 Donate:http://forum.xda-developers.com/donatetome.php?u=4674443
 
+Auto Name:Performance Control
 Summary:System configuration
 Description:
 Sqlite functions don't work unless you have sqlite3 busybox applet installed.
@@ -27,12 +28,22 @@ That can be compiled using code in the Serval Batphone project.
 Requires Root:Yes
 
 Repo Type:git
-Repo:https://github.com/horn3t/android_packages_apps_PerformanceControl
+Repo:https://github.com/erik96/android_packages_apps_PerformanceControl
 
-Build:2.1.10,4
+Build:2.1.10,41
     commit=68eae56264b
     target=android-19
+    forcevercode=yes
+    rm=assets/sqlite3
     prebuild=sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
+
+Build:2.1.12,42
+    commit=4d8b0750b10adad
+    target=android-19
+    forcevercode=yes
+    rm=assets/sqlite3
+    prebuild=sed -i '/permission.INTERNET/d' AndroidManifest.xml && \
+       sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
 
 Maintainer Notes:
 sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces 
@@ -47,7 +58,8 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
     buildjni=no
 .
 
-#Update Check Mode:RepoManifest/jb2
-Current Version:2.1.10
-Current Version Code:4
+Update Check Mode:RepoManifest/jb2
+Vercode Operation:10*%c + 9
+Current Version:2.1.12
+Current Version Code:49
 
