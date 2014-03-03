@@ -1,0 +1,25 @@
+Categories:Internet
+License:ISC
+Web Site:http://code.kryo.se/iodine
+Source Code:https://github.com/yvesf/andiodine
+Issue Tracker:https://github.com/yvesf/andiodine/issues
+
+Auto Name:AndIodine
+Summary:DNS Proxy
+Description:
+Tunnel IPv4 over DNS.
+Test it [http://code.kryo.se/iodine/check-it here].
+.
+
+Repo Type:git
+Repo:https://github.com/yvesf/andiodine.git
+
+Build:1.0,1
+    commit=1ae6623962ab
+    buildjni=no
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi'
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
