@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/wildabeast/BarcodeScanner
+Subdir:src/android/LibraryProject
+Update Project:Yes
+
