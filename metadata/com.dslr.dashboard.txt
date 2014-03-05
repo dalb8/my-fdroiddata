@@ -22,7 +22,7 @@ Build:0.30.6,21
     disable=see below
     commit=a0e4631a10c0
     subdir=DslrDashboard
-    init=TOOLCHAIN=/tmp/toolchain && \
+    init=export TOOLCHAIN=/tmp/toolchain && \
         cd ../ && \
         wget http://www.libraw.org/data/LibRaw-0.16.0.tar.gz && \
         tar xf LibRaw-0.16.0.tar.gz && \

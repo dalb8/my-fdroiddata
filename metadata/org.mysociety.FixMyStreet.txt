@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Navigation
 License:Unknown
@@ -18,7 +18,6 @@ instances.
 Repo Type:git
 Repo:https://github.com/mysociety/fixmystreet-mobile.git
 
-#Attempt at building an Irish version
 Build:2.0.1,36
     disable=still in development and no licence
     commit=cd91b8f3b39f5275a0c745d1152dc4434691f7a3
