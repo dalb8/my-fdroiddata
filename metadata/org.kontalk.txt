@@ -10,19 +10,26 @@ FlattrID:1194909
 Bitcoin:14vipppSvCG7VdvoYmbhKZ8DbTfv9U1QfS
 
 Auto Name:Kontalk
-Summary:Community-driven messaging
+Summary:Messaging for the Kontalk network
 Description:
 Distributed messaging system, based on community-maintained infrastructure.
 
 Send and receive messages for free with other Kontalk users.
-Kontalk uses your phone number to identify yourself and automatically adds
+Kontalk uses your phone number to identify your and automatically adds
 other Kontalk users you can talk with by looking in your contact list.
 You can send any text messages and image (other media types coming soon).
+
 Even in server-to-client communication, your phone number is irreversibly
 encrypted, so even the server can't know your phone number: it is used only
 for sending you the verification code, then it will be discarded.
 
+The version here is an alpha release and doesn’t allow key management for
+getting profiles working on multiple devices.
+
 See [https://identi.ca/kontalknet this] site for network status.
+
+Push notifications can only go via GCM so you won’t get them
+if Gapps isn’t installed.
 
 Note: JAR libraries not verified yet.
 .
