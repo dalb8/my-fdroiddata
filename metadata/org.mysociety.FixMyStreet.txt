@@ -1,0 +1,47 @@
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Navigation
+License:Unknown
+Web Site:http://www.fixmystreet.com
+Source Code:https://github.com/mysociety/fixmystreet-mobile
+Issue Tracker:https://github.com/mysociety/fixmystreet-mobile/issues
+Donate:http://www.mysociety.org/donate
+
+Auto Name:FixMyStreet
+Summary:Report street problems
+Description:
+Using this app you can report common street problems, like potholes or
+broken street lights, to councils throughout the UK or other FixMyStreet
+instances.
+.
+
+Repo Type:git
+Repo:https://github.com/mysociety/fixmystreet-mobile.git
+
+#Attempt at building an Irish version
+Build:2.0.1,36
+    disable=still in development and no licence
+    commit=cd91b8f3b39f5275a0c745d1152dc4434691f7a3
+    subdir=Android
+    init=sed -i '/Who built Fix/d;/this app was built by/d' ../src/templates/en/help.html && \
+        mv ../src/js/config.js-example ../src/js/config.js && \
+        sed -e "s/LANGUAGE: '',/LANGUAGE: 'en',/" -e "s/APP_NAME: '',/APP_NAME: 'FixMyStreet UK',/" -e "s/FMS_URL: '',/FMS_URL: 'http:\/\/www.fixmystreet.com',/" -i ../src/js/config.js
+
+Maintainer Notes:
+#Attempt at building an Irish version
+Build:2.0.1,361
+    commit=cd91b8f3b39f5275a0c745d1152dc4434691f7a3
+    subdir=Android
+    init=mkdir -p src/ie/thesociety && \
+        mv src/org/mysociety/* src/ie/thesociety/ && \
+        sed -i 's/org.mysociety/ie.thesociety/' src/ie/thesociety/FixMyStreet/FixMyStreet.java && \
+        sed -i 's/org.mysociety/ie.thesociety/' AndroidManifest.xml && \
+        sed -i '/Who built Fix/d;/this app was built by/d' ../src/templates/en/help.html && \
+        mv ../src/js/config.js-example ../src/js/config.js && \
+        sed -e "s/LANGUAGE: '',/LANGUAGE: 'en',/" -e "s/APP_NAME: '',/APP_NAME: 'FixMyStreet Ireland',/" -e "s/FMS_URL: '',/FMS_URL: 'http:\/\/fixmystreet.ie',/" -i ../src/jsconfig.js
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.0.1
+Current Version Code:36
+
