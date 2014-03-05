@@ -18,8 +18,8 @@ e.g. https://duckduckgo.com/?q=%s or
 http://en.wikibooks.org/w/index.php?search=%s.
 .
 
-Repo Type:git
-Repo:https://github.com/zxing/zxing.git
+Repo Type:srclib
+Repo:Zxing
 
 Build:4.4.1,92
     commit=8e1b1a3bb4
