@@ -53,7 +53,7 @@ Maintainer Notes:
 # possibly https://github.com/madeye/sshtunnel-beta
 .
 
-#Update Check Mode:RepoManifest
-Current Version:1.5.5
-Current Version Code:73
+Update Check Mode:RepoManifest
+Current Version:1.5.6
+Current Version Code:74
 
