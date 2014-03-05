@@ -1,0 +1,49 @@
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Internet
+License:GPLv3
+Web Site:http://www.kontalk.net
+Source Code:https://github.com/kontalk/androidclient
+Issue Tracker:https://github.com/kontalk/androidclient/issues
+Donate:http://www.kontalk.net
+FlattrID:1194909
+Bitcoin:14vipppSvCG7VdvoYmbhKZ8DbTfv9U1QfS
+
+Auto Name:Kontalk
+Summary:Community-driven messaging
+Description:
+Distributed messaging system, based on community-maintained infrastructure.
+
+Send and receive messages for free with other Kontalk users.
+Kontalk uses your phone number to identify yourself and automatically adds
+other Kontalk users you can talk with by looking in your contact list.
+You can send any text messages and image (other media types coming soon).
+Even in server-to-client communication, your phone number is irreversibly
+encrypted, so even the server can't know your phone number: it is used only
+for sending you the verification code, then it will be discarded.
+
+See [https://identi.ca/kontalknet this] site for network status.
+
+Note: JAR libraries not verified yet.
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/kontalk.androidclient
+
+Build:3.0a4,30
+    commit=3.0a4
+    srclibs=1:Appcompat@android-4.4_r1.1
+    extlibs=android/android-support-v4.jar
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
+
+Maintainer Notes:
+Note: JAR libraries not verified yet.
+
+Moving to Github soon.
+.
+
+
+Update Check Mode:None
+Current Version:3.0a4
+Current Version Code:30
+
