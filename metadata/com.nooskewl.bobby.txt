@@ -47,9 +47,11 @@ Build:1.4.1,2
 Maintainer Notes:
 allegro seems to be installed for armeabi-v7a not for armeabi
 problems configuring freetype and getting paths right for cmake
+
+Need to get from an app store or Pay-what-you-want Paypal
 .
 
-Update Check Mode:Static
+Update Check Mode:None
 Current Version:1.4.1
 Current Version Code:2
 
