@@ -1,8 +1,7 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Games
-# Allegro is zlib; Bobby is "choose your licence"
-License:Zlib
+License:Choose!
 Web Site:http://www.nooskewl.com/content/bobby
 Source Code:http://www.nooskewl.com/content/more-open-source
 Issue Tracker:http://www.nooskewl.com/forums/bobby
@@ -48,7 +47,9 @@ Maintainer Notes:
 allegro seems to be installed for armeabi-v7a not for armeabi
 problems configuring freetype and getting paths right for cmake
 
-Need to get from an app store or Pay-what-you-want Paypal
+Pay for APK by Pay-what-you-want with Paypal; otherwise, need to get from a proprietary app store  
+If logged into site, then one can access history
+Can propose alternative method.
 .
 
 Update Check Mode:None

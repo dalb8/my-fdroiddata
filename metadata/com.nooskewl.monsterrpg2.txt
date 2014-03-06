@@ -1,0 +1,21 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Games
+License:Choose!
+Web Site:http://www.monster-rpg.com
+Source Code:http://www.nooskewl.com/content/more-open-source
+Issue Tracker:http://www.nooskewl.com/forums
+
+Auto Name:Monster RPG 2
+Summary:Role-playing game
+
+Maintainer Notes:
+Pay for APK by Pay-what-you-want with Paypal; otherwise need to get from a proprietary app store  
+If logged into site, then one can access history
+Can propose alternative method.
+.
+
+Update Check Mode:None
+Current Version:2.10
+Current Version Code:18
+
