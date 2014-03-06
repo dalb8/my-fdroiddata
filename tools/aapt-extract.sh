@@ -11,8 +11,7 @@ CV=$(echo "$(aapt d badging "$1" |grep -m 1 'version')" | sed "s/.*versionName='
 CVC=$(echo "$(aapt d badging "$1" |grep -m 1 'version')" | sed "s/.*versionCode='\([0-9]*\)'.*/\1/")
 echo "Writing to metadata/$PNAME.txt"
 cp -n templates/minimal.txt metadata/$PNAME.txt
-sed -i '/Repo:/d;/Repo Type:/d;/Build:/d;/commit=/d;/Current Version/d;/Update Check/d' metadata/$PNAME.txt
-sed -i "/Summary:/i Auto Name:$LABEL" metadata/$PNAME.txt
-echo "Current Version:$CV" >> metadata/$PNAME.txt
-echo -e "Current Version Code:$CVC\n" >> metadata/$PNAME.txt
+sed -e "s/^Auto Name:$/Auto Name:$LABEL/" -e '/^Repo Type:$/d' -e '/^Repo:$/,+1d' -e '/^Build:$/d' -e '/^    commit=$/,+1d' -i metadata/$PNAME.txt
+echo "#Current Version:$CV" >> metadata/$PNAME.txt
+echo -e "#Current Version Code:$CVC\n" >> metadata/$PNAME.txt
 

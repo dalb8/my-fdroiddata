@@ -1,12 +1,14 @@
-# Copyright (c) John Doe 1929
+# Copyright (c) 2014 … Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
 AntiFeatures:
-Categories:
+Categories:None
 License:
 Web Site:
 Source Code:
 Issue Tracker:
 Donate:
 
+Auto Name:
 Summary:
 Description:
 .
@@ -20,7 +22,7 @@ Build:
 Maintainer Notes:
 .
 
-Update Check Mode:
+Update Check Mode:None
 Current Version:
-Current Version Code:
+Current Version Code:9999999
 
