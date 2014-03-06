@@ -1,0 +1,21 @@
+Categories:Navigation
+License:Apache2
+Source Code:https://github.com/jarofgreen/Just-A-Damn-Compass
+Issue Tracker:https://github.com/jarofgreen/Just-A-Damn-Compass/issues
+
+Name:Compass
+Auto Name:Just A Damn Compass
+Summary:Simple Compass
+Description:
+A simple compass with no unnecessary extras.
+.
+
+Repo Type:git
+Repo:https://github.com/jarofgreen/Just-A-Damn-Compass.git
+
+Build Version:1.1,2,32e3d60eca,target=android-8
+
+Update Check Mode:RepoManifest
+Current Version:1.1
+Current Version Code:2
+
