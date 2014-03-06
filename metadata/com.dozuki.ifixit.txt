@@ -39,10 +39,29 @@ Build:2.0.1,37
         mv $$NoAnalytics$$/src/com/* src/com/ && \
         echo 'ifixitAppId="com.dozuki.ifixit"' > gradle.properties
 
+Build:2.4.1,46
+    disable=using their own maven repo: see below
+    commit=v2.4.1
+    subdir=App
+    gradle=ifixit
+    srclibs=NoAnalytics@eacdf5bcc9
+    prebuild=rm -f libs/* && \
+        sed -i '14,16d' build.gradle && \
+        mv $$NoAnalytics$$/src/com/* src/com/ && \
+        echo 'ifixitAppId=com.dozuki.ifixit' > ../gradle.properties && \
+        echo 'dozukiAppId=' >> ../gradle.properties && \
+        echo 'accustreamAppId=' >> ../gradle.properties
+
 Maintainer Notes:
+> Could not resolve all dependencies for configuration ':App:_ifixitDebugCompile'.
+   > Could not find com.marczych.androidsectionheaders:androidsectionheaders:1.0.0.
+   > Could not find com.viewpagerindicator:viewpagerindicator:2.4.1.
+   > Could not find com.github.chrisbanes.pulltorefresh:pulltorefresh:2.1.2.
+   > Could not find it.sephiroth.android.library.imagezoom:imagezoom:1.0.0.
+   > Could not find com.mobeta.android.dslv:dslv:0.6.1.
 .
 
 #Update Check Mode:Tags
-Current Version:2.4.0
-Current Version Code:45
+Current Version:2.4.1
+Current Version Code:46
 
