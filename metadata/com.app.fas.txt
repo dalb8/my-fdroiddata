@@ -1,8 +1,16 @@
-Categories:Office
+# Copyright (c) 2014 David Black Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:None
 License:Proprietary
+Web Site:http://www.welfare.ie/en/Pages/Find-a-Job.aspx
 
-Summary:Job finding
+Auto Name:Jobseeker
+Summary:Government job service
 
+Maintainer Notes:
+.
+
+Update Check Mode:None
 Current Version:1.5
 Current Version Code:6
 
