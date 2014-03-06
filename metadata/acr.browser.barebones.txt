@@ -15,14 +15,10 @@ No description available
 Repo Type:git
 Repo:https://github.com/anthonycr/Lightning-Browser.git
 
-Build:2.5.1.4,60
-    commit=a383f8e77871b1
-    target=android-18
-    prebuild=sed -i 's/MAX_TABS = 5/MAX_TABS = 25/g' src/acr/browser/barebones/utilities/FinalVariables.java
-
 Build:3.0.5b,67
     commit=10a18373d3d74b1d32
     target=android-19
+    init=rm *.apk
     prebuild=sed -i 's/MAX_TABS = 5/MAX_TABS = 25/g' src/acr/browser/barebones/utilities/FinalVariables.java
 
 Maintainer Notes:
