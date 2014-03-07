@@ -26,12 +26,12 @@ Status: BETA
 Repo Type:git
 Repo:https://github.com/danieloeh/AntennaPod.git
 
-Build:0.9.8.1,34
-    commit=0.9.8.1
+Build:0.9.8.2,35
+    commit=0.9.8.2
     patch=srclib_34.patch
     srclibs=PrestoClient@3d7444,DragSort-danoeh@1bb29afb91f
     prebuild=ln -s $(readlink -f $$PrestoClient$$) submodules/PrestoClient && \
-         rm submodules/dslv/library && \
+         rm -f submodules/dslv/library && \
          ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
          sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
          sed -e '55 i \\t\tdebuggable false' -e '63 i \\tlintOptions {\n\t\tabortOnError false\n\t}' -i build.gradle && \
@@ -44,10 +44,12 @@ Maintainer Notes:
 Uses submodules
 Make sure the system gradle version matches that of the build.gradle plugin version
 
-Checkupdates via de.danoeh.antennapod
+Reference Package:de.danoeh.antennapod
+
+Remember to sign with debug key!
 .
 
 Update Check Mode:None
-Current Version:0.9.8.1
-Current Version Code:34
+Current Version:0.9.8.2
+Current Version Code:35
 
