@@ -8,7 +8,7 @@ Issue Tracker:http://sourceforge.net/tracker/?group_id=191284
 Donate:http://sourceforge.net/project/project_donations.php?group_id=191284
 
 Auto Name:Cool Reader
-Summary:E-book reader.
+Summary:E-book reader
 Description:
 An e-book reader. Supported formats: FB2, TXT, RTF, TCR, HTML, EPUB, CHM.
 Browse free books online and add your own OPDS shares.
@@ -28,17 +28,18 @@ Build:3.1.2-27,847
     rm=android/ant.properties
     buildjni=yes
 
-Build:3.1.2-35,855
-    disable=build woes
-    commit=cr3gl3.3.2
+Build:3.1.2-39,859
     subdir=android
+    commit=004663ff92ea5698
     init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
-    target=android-17
     rm=android/ant.properties
-    buildjni=yes
+    buildjni=no
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
 
 Maintainer Notes:
 Too many tags so use RepoManifest
+
+Tags a little unreliable
 .
 
 Update Check Mode:RepoManifest
