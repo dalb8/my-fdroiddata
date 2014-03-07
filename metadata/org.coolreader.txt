@@ -29,12 +29,12 @@ Build:3.1.2-27,847
     buildjni=yes
 
 Build:3.1.2-39,859
-    subdir=android
     commit=004663ff92ea5698
+    subdir=android
     init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
     rm=android/ant.properties
-    buildjni=no
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    buildjni=no
 
 Maintainer Notes:
 Too many tags so use RepoManifest
