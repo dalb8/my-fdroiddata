@@ -32,8 +32,8 @@ Build:3.1.2-39,859
     commit=004663ff92ea5698
     subdir=android
     init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
-    rm=android/ant.properties
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    rm=android/build.properties
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
     buildjni=no
 
 Maintainer Notes:
