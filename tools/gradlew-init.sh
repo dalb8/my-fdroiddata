@@ -41,7 +41,7 @@ echo -e "\033[0m"
 find -L . -name \*jar | grep -v 'gradle\|build\|dexed'
 find -L . -name \*zip -o -name \*.a -o -name \*so -o -name \*apk
 echo " "
-ls -R $(find -L . -name assets -o -name raw)
+ls -R $(find -L . -name assets -o -name raw -o -name AndroidManifest.xml)
 
 echo -e "\n\n\033[31m   Scripts:"
 echo -e "\033[0m"
@@ -50,7 +50,7 @@ find -L .  -maxdepth 2 -type f -executable
 echo -e "\n\n\033[31m   Licence:"
 echo -e "\033[0m"
 ls -1 LICENSE* COPYING* | xargs head -n 3 
-#grep -r 'Apache\|GNU\|Copyright' *
+grep  -i 'Apache\|GNU\|Copyright\|GPL\|Lice' $(find . -iname readme*)
 
 echo -e "\n\n\033[31m   Fix:"
 echo -e "\033[0m"

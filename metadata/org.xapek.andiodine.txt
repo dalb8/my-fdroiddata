@@ -3,6 +3,7 @@ License:ISC
 Web Site:http://code.kryo.se/iodine
 Source Code:https://github.com/yvesf/andiodine
 Issue Tracker:https://github.com/yvesf/andiodine/issues
+Bitcoin:114WP9Pnr97ZwgGmBz2g4QYPsqyLz5qRSo
 
 Auto Name:AndIodine
 Summary:DNS Proxy
