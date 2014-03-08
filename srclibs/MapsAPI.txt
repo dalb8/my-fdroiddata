@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/mar-v-in/MapsAPI
+Subdir:com.google.android.maps
+Prepare:echo 'target=android-19' >> project.properties && rm build.xml
