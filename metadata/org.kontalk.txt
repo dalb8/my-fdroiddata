@@ -12,8 +12,8 @@ Bitcoin:14vipppSvCG7VdvoYmbhKZ8DbTfv9U1QfS
 Auto Name:Kontalk
 Summary:Messaging for the Kontalk network
 Description:
-'''v3.x is still in alpha and uses a different network which is incompatible 
-with that used by v2.x.'''
+'''v3.x is still in alpha and uses a different network,'''
+'''which is incompatible with that used by v2.x.'''
 It also doesn’t allow key management for getting it synced on multiple devices.
 
 Distributed messaging system, based on community-maintained infrastructure.
