@@ -12,6 +12,10 @@ Bitcoin:14vipppSvCG7VdvoYmbhKZ8DbTfv9U1QfS
 Auto Name:Kontalk
 Summary:Messaging for the Kontalk network
 Description:
+'''v3.x is still in alpha and uses a different network which is incompatible 
+with that used by v2.x.'''
+It also doesn’t allow key management for getting it synced on multiple devices.
+
 Distributed messaging system, based on community-maintained infrastructure.
 
 Send and receive messages for free with other Kontalk users.
@@ -22,9 +26,6 @@ You can send any text messages and image (other media types coming soon).
 Even in server-to-client communication, your phone number is irreversibly
 encrypted, so even the server can't know your phone number: it is used only
 for sending you the verification code, then it will be discarded.
-
-The version here is an alpha release and doesn’t allow key management for
-getting profiles working on multiple devices.
 
 See [https://identi.ca/kontalknet this] site for network status.
 
@@ -48,7 +49,6 @@ Note: JAR libraries not verified yet.
 
 Moving to Github soon.
 .
-
 
 Update Check Mode:None
 Current Version:3.0a4
