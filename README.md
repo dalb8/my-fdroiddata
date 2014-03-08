@@ -35,10 +35,10 @@ valid any more. However we only keep a couple of builds per package so
 we'll get around to revising them eventually.
 Depending on the distro, there could also be dependency issues for some apps.
 Also the gradle versioning system for non-build server setups is
-dependent on your path to the gradle binary; since I also use the gradle wrapper
+dependent on your path to the gradle binary; since I'd often use the gradle wrapper,
 which caches gradle versions in `~/.gradle/wrapper`, I store the path to each version 
-in config.py and comment out all but one, depending on the build; I prefer this
-to editing `.bashrc`.
+in config.py and comment out all but one, depending on the build; I also make
+symlinks like `~/bin/gradle-1.11` for when I'm not using fdroid.
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
