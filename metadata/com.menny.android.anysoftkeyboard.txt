@@ -60,6 +60,6 @@ Tags are at menny/AnySoftKeyboard
 .
 
 #Update Check Mode:RepoManifest
-Current Version:1.2.
-Current Version Code:122
+Current Version:Unknown
+Current Version Code:123
 
