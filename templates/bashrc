@@ -19,6 +19,9 @@ complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates'
 complete -F _fdroid_checkupdates fcheck
 
+alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle'
+alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle'
+
 function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit ~/fdroiddata/metadata/"$@".txt ;}
@@ -31,8 +34,8 @@ export ANDROID_HOME=/home/gerry/android-sdk-linux
 export ANDROID_NDK=/home/gerry/android-ndk-r9c
 export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
-export GRADLE_HOME=/home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10
-export GRADLE=${GRADLE_HOME}/bin
-export PATH=${PATH}:/home/gerry/android-sdk-linux/platform-tools:/home/gerry/android-sdk-linux/build-tools/19.0.2:/home/gerry/android-sdk-linux/tools:/home/gerry/android-ndk-r9c:/home/gerry/fdroidserver:/sbin:/usr/sbin:${M2}:${GRADLE}
+#export GRADLE_HOME=/home/gerry/.gradle/wrapper/dists/...
+#export GRADLE=${GRADLE_HOME}/bin
+export PATH=${PATH}:/home/gerry/android-sdk-linux/platform-tools:/home/gerry/android-sdk-linux/build-tools/19.0.2:/home/gerry/android-sdk-linux/tools:/home/gerry/android-ndk-r9c:/home/gerry/fdroidserver:/sbin:/usr/sbin:${M2}:${GRADLE}:/home/gerry/fdroiddata/tools
 
 #adb logcat | grep `adb shell ps | grep com.example.package | cut -c10-15`
