@@ -34,11 +34,13 @@ Therefore newer recipes are likely to work but older recipes might not be
 valid any more. However we only keep a couple of builds per package so
 we'll get around to revising them eventually.
 Depending on the distro, there could also be dependency issues for some apps.
-Also the gradle versioning system for non-build server setups is
-dependent on your path to the gradle binary; since I'd often use the gradle wrapper,
-which caches gradle versions in `~/.gradle/wrapper`, I store the path to each version 
-in config.py and comment out all but one, depending on the build; I also make
-symlinks like `~/bin/gradle-1.11` for when I'm not using fdroid.
+One issue is that the non-buildserver fdroid only allows one version of the gradle 
+binary, that which is chosen in `config.py`. 
+There may exist many versions and the only way I know of around this is to edit 
+`config.py` on a build-by-build basis.
+Since the gradle wrapper caches gradle versions in `~/.gradle/wrapper`, I add 
+aliases for all the gradle versions `~/.bashrc` and put those aliases in `config.py`
+(see the templates directory).
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
