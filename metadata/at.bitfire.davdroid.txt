@@ -23,10 +23,13 @@ Repo:https://github.com/rfc2822/davdroid.git
 Build:0.4.4-alpha,17
     commit=v0.4.4-alpha
 
+Build:0.5.9,30
+    commit=v0.5.9-alpha
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.5.8.1
-Current Version Code:29
+Current Version:0.5.9
+Current Version Code:30
 
