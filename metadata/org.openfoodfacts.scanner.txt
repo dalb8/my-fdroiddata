@@ -24,7 +24,7 @@ Build:1.3,9
     target=android-15
     prebuild=sed -i '5 i \\t<string name="share_name">share_name<\/string>' res/values/strings.xml 
     build=echo 'sdk.dir=$$SDK$$' >> $$Wildabeast-BarcodeScanner$$/local.properties && \
-       ant-1.8.2 release -f $$Wildabeast-BarcodeScanner$$/build.xml && \
+       ant release -f $$Wildabeast-BarcodeScanner$$/build.xml && \
        mv $$Wildabeast-BarcodeScanner$$/bin/classes.jar libs/
 
 Maintainer Notes:

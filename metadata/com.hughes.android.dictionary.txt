@@ -21,7 +21,7 @@ Repo:https://code.google.com/p/quickdic-dictionary.dictionary/
 Build:5.0.1,25
     commit=97678ecfbd78a2
     srclibs=1:QuickdicUtil@d57bfc6bcf5be651f;2:ActionBarSherlock@4.4.0
-    build=ant-1.8.2 clean collator transliterator moduleJar -f jars/icu4j-52_1/build.xml && \
+    build=ant clean collator transliterator moduleJar -f jars/icu4j-52_1/build.xml && \
         mv jars/icu4j-52_1/icu4j.jar libs/ && \
         mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 

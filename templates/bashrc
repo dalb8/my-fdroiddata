@@ -23,11 +23,11 @@ complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates'
 complete -F _fdroid_checkupdates fcheck
 
+alias gradle-1.9='~/.gradle/wrapper/dists/gradle-1.9-bin/qtvcssosa3asn4t6njd64fm3i/gradle-1.9/bin/gradle'
 alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle'
 alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle'
-alias mvn-3.1.1='/opt/maven/apache-maven-3.1.1'
-alias ant-1.8.2='/usr/bin/ant'
-alias ant-1.9.3='/opt/ant/apache-ant-1.9.3'
+alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
+alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
 
 function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
@@ -42,6 +42,7 @@ export ANDROID_HOME=/home/gerry/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
 export BUILD_TOOLS_1903=${ANDROID_HOME}/build-tools/19.0.3
 export ANDROID_NDK=/home/gerry/android-ndk-r9c
+export M2=${M2_HOME}/bin
 
-export PATH=${PATH}:/sbin:/usr/sbin:${ANDROID_HOME}/platform-tools:${BUILD_TOOLS_1903}:${ANDROID_HOME}/tools:${ANDROID_NDK}:${FDROIDSERVER}:${MYFDROIDDATA}/tools
+export PATH=${PATH}:/sbin:/usr/sbin:${ANDROID_HOME}/platform-tools:${BUILD_TOOLS_1903}:${ANDROID_HOME}/tools:${ANDROID_NDK}:${FDROIDSERVER}:${MYFDROIDDATA}/tools:${M2}
 

@@ -30,7 +30,7 @@ Build:1.2.7,460
         sed -i 's@executable="android"@executable="$$SDK$$/tools/android"@g' build.xml && \
         sed -i 's@android@$$SDK$$/tools/android@g' tools.sh && \
         sed -i '87,108d' build.xml && \
-        ant-1.8.2 setup
+        ant setup
 
 Maintainer Notes:
 .

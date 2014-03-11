@@ -36,7 +36,7 @@ Build:8.2,25
         mkdir unjar/ && \
         cp -r $$ClementineDeps$$/clementine-remote-android.dep-jmdns/src/javax/ libs/ && \
         rm -rf libs/javax/jmdns/test/
-    build=ant-1.8.2 jar -f libs/jmdns-build.xml && \
+    build=ant jar -f libs/jmdns-build.xml && \
         cd unjar/ && \
         jar xf ../libs/jmdns.jar && \
         jar cfm ../libs/jmdns.jar META-INF/MANIFEST.MF javax/

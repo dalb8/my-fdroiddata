@@ -21,8 +21,7 @@ build_tools = "$BUILD_TOOLS_1903"
 
 # Command for running Ant
 #ant = "/path/to/ant"
-#ant = "ant-1.8.2"
-ant = "ant-1.9.3"
+ant = "ant"
 
 # Command for running maven 3
 #mvn3 = "/path/to/mvn"
