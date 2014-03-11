@@ -43,8 +43,8 @@ Build:1.3.21,160
     gradle=yes
     patch=package-name_160.patch
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+      gradle-1.10 nativeLibsToJar
     buildjni=no
-    preassemble=nativeLibsToJar
 
 Maintainer Notes:
 patch changes the package name because it is identical to the upstream

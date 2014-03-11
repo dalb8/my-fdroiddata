@@ -29,7 +29,7 @@ Build:0.2.4,7
         wget http://lag.net/jaramiko/download/jaramiko-151.zip && \
         unzip jaramiko-151.zip && \
         cd jaramiko-151 && \
-        ant jar
+        ant-1.8.2 jar
 
 Maintainer Notes:
 .

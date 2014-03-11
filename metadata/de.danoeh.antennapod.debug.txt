@@ -36,13 +36,12 @@ Build:0.9.8.2,35
          sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
          sed -e '55 i \\t\tdebuggable false' -e '63 i \\tlintOptions {\n\t\tabortOnError false\n\t}' -i build.gradle && \
          cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
-    build=gradle assembleDebug && \
+    build=gradle-1.10 assembleDebug && \
         zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
     output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
 
 Maintainer Notes:
 Uses submodules
-Make sure the system gradle version matches that of the build.gradle plugin version
 
 Reference Package:de.danoeh.antennapod
 

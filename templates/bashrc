@@ -1,6 +1,9 @@
-source ~/fdroidserver/completion/bash-completion
+export FDROIDDATA=/home/gerry/shroiddata
+export FDROIDSERVER=/home/gerry/fdroidserver
+export MYFDROIDDATA=/home/gerry/fdroiddata
 
-alias cdf='cd $MYFDROIDDATA'
+source $FDROIDSERVER/completion/bash-completion
+
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
@@ -24,6 +27,7 @@ alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns
 alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle'
 alias mvn-3.1.1='/opt/maven/apache-maven-3.1.1'
 alias ant-1.8.2='/usr/bin/ant'
+alias ant-1.9.3='/opt/ant/apache-ant-1.9.3'
 
 function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
@@ -34,9 +38,6 @@ function zipn() { zipalign -f 4 "$@" app.apk ;}
 function badj() { aapt d badging "$@"  |less ;}
 function plogcat() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 
-export FDROIDDATA=/home/gerry/shroiddata
-export FDROIDSERVER=/home/gerry/fdroidserver
-export MYFDROIDDATA=/home/gerry/fdroiddata
 export ANDROID_HOME=/home/gerry/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
 export BUILD_TOOLS_1903=${ANDROID_HOME}/build-tools/19.0.3

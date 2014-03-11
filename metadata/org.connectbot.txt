@@ -19,7 +19,7 @@ Repo:https://github.com/connectbot/connectbot
 Build:v1.7.1-127-gd64786d,3651
     commit=git-master-2014-03-02_12-38-08
     init=echo 'sdk.dir=$$SDK$$' > local.properties && \
-        ant update-version && \
+        ant-1.8.2 update-version && \
         rm build.xml
     forceversion=yes
     forcevercode=yes
