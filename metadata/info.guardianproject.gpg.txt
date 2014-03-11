@@ -19,15 +19,17 @@ and S/MIME.
 Before using gpgcli, be sure to launch the app and let it finish its
 installation process.
 Once it has completed, then you're ready to use it.
+Make sure Allow PATH Extensions option is enabled in Terminal Emulator, so that
+GNUPG's data directory can be added to the PATH.
 
 Status: ALPHA
 .
 
-Repo Type:git
-Repo:https://github.com/guardianproject/gnupg-for-android
+Repo Type:srclib
+Repo:GNUPG
 
-Build:0.2.1,3
-    commit=0.2.1
+Build:0.3,4
+    commit=0.3
     submodules=yes
     rm=external/gnupg-for-java
     build=make NDK_BASE=$$NDK$$ -C external/ distclean clean-assets && \
@@ -38,6 +40,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.2.1
-Current Version Code:3
+Current Version:0.3
+Current Version Code:4
 
