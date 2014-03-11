@@ -5,7 +5,8 @@ alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
 
 alias fdim='fdroid import -v -u'
-alias fup='fdroid publish && fdroid update --pretty'
+alias fub='fdroid publish'
+alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
 
 alias fd='fdroid'
 complete -F _fdroid fd

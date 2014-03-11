@@ -16,8 +16,8 @@ Description:
 Repo Type:
 Repo:
 
-Build:
-    commit=
+Build:1.0,1
+    commit=master
 
 Maintainer Notes:
 .
