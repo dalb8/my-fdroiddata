@@ -1,0 +1,22 @@
+Categories:System
+License:GPLv2
+Web Site:
+Source Code:https://github.com/jerickson314/sdscanner
+Issue Tracker:https://github.com/jerickson314/sdscanner/issues
+
+Auto Name:SD Scanner
+Summary:Initiate a media scan
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/jerickson314/sdscanner.git
+
+Build:1.7,8
+    commit=4befec509fcc
+
+Update Check Mode:RepoManifest
+Current Version:1.7
+Current Version Code:8
+
