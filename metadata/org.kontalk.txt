@@ -36,21 +36,19 @@ Note: JAR libraries not verified yet.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/kontalk.androidclient
+Repo:https://github.com/kontalk/androidclient
 
 Build:3.0a4,30
     commit=3.0a4
-    srclibs=1:Appcompat@android-4.4_r1.1
     extlibs=android/android-support-v4.jar
+    srclibs=1:Appcompat@android-4.4_r1.1
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
 Maintainer Notes:
 Note: JAR libraries not verified yet.
-
-Moving to Github soon.
 .
 
-Update Check Mode:None
-Current Version:3.0a4
-Current Version Code:30
+Update Check Mode:Tags ^((?!a).)*$
+Current Version:2.2.9
+Current Version Code:26
 
