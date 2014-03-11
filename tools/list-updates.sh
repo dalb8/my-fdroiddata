@@ -1,7 +1,7 @@
 #! /bin/bash
 # Since fdroid update -b doesn't work…
-exec > "logs/to-update.log"
-for i in metadata/*.txt
+exec > "$MYFDROIDDATA/logs/to-update.log"
+for i in $MYFDROIDDATA/metadata/*.txt
 do 	echo "$(basename -s .txt $i):"
         echo " "
 	grep -A 1 'Build:' $i

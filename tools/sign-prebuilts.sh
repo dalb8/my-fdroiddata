@@ -12,8 +12,8 @@
 PNAME=$(echo "$(aapt d badging "$1" |grep -m 1 'package')" | awk -F"name='|'" '{print $2}')
 DIR=$PWD
 export DATE=$(date +%d%m%Y)
-cp "$1" ~/fdroiddata/unsigned/$PNAME\_00$DATE.apk
-cd ~/fdroiddata/
+cp "$1" $MYFDROIDDATA/unsigned/$PNAME\_00$DATE.apk
+cd $MYFDROIDDATA
 touch unsigned/$PNAME\_00$DATE\_src.tar.gz
 cp -n templates/minimal.txt metadata/$PNAME.txt
 fdroid publish $PNAME

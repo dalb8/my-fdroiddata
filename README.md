@@ -35,12 +35,13 @@ valid any more. However we only keep a couple of builds per package so
 we'll get around to revising them eventually.
 Depending on the distro, there could also be dependency issues for some apps.
 One issue is that the non-buildserver fdroid only allows one version of the gradle 
-binary, that which is chosen in `config.py`. 
+binary: that which is chosen in `config.py`. 
 There may exist many versions and the only way I know of around this is to edit 
 `config.py` on a build-by-build basis.
 Since the gradle wrapper caches gradle versions in `~/.gradle/wrapper`, I add 
-aliases for all the gradle versions `~/.bashrc` and put those aliases in `config.py`
-(see the templates directory).
+aliases for all the gradle versions `~/.bashrc` and put those aliases in `config.py`.
+The same goes for ant, maven and Android SDK build tools; see the templates directory 
+for more details.
 
 Many of the texts are by the contributors to 
 [fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 

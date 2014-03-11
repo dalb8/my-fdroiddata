@@ -16,18 +16,20 @@ sdk_path = "$ANDROID_HOME"
 ndk_path = "$ANDROID_NDK"
 
 # Build tools version to be used
-build_tools = "19.0.1"
+#build_tools = "$BUILD_TOOLS_1902"
+build_tools = "$BUILD_TOOLS_1903"
 
 # Command for running Ant
 #ant = "/path/to/ant"
-ant = "ant"
+#ant = "ant-1.8.2"
+ant = "ant-1.9.3"
 
 # Command for running maven 3
 #mvn3 = "/path/to/mvn"
-mvn3 = "mvn"
+#mvn3 = "mvn-3.0.8"
+mvn3 = "mvn-3.1.1"
 
 # Command for running Gradle
-#gradle="gradle-1.9"
 #gradle="gradle-1.10"
 gradle="gradle-1.11"
 

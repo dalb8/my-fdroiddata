@@ -55,7 +55,7 @@ grep  -i 'Apache\|GNU\|Copyright\|GPL\|Lice' $(find . -iname readme*)
 echo -e "\n\n\033[31m   Fix:"
 echo -e "\033[0m"
 sed -i 's/-all.zip/-bin.zip/g' gradle/wrapper/gradle-wrapper.properties
-diff ~/fdroiddata/templates/gradlew gradlew
+diff $MYFDROIDDATA/templates/gradlew gradlew
 chmod +x gradlew
 echo " "
 

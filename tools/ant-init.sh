@@ -1,3 +1,3 @@
 #! /bin/bash
-diff build.xml ~/fdroiddata/templates/build.xml
+diff build.xml $MYFDROIDDATA/templates/build.xml
 
