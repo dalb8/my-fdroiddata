@@ -1,0 +1,13 @@
+diff --git a/src/org/openpanodroid/flickrapi/FlickrConstants.java b/src/org/openpanodroid/flickrapi/FlickrConstants.java
+index ddf6a02..4cb62a9 100644
+--- a/src/org/openpanodroid/flickrapi/FlickrConstants.java
++++ b/src/org/openpanodroid/flickrapi/FlickrConstants.java
+@@ -22,7 +22,7 @@ package org.openpanodroid.flickrapi;
+ public class FlickrConstants {
+ 	// TODO: Insert Flickr API key. Apply for one here:
+ 	// http://www.flickr.com/services/apps/create/apply
+-	public final static String API_KEY_PANODROID = "";
++	public final static String API_KEY_PANODROID = "9c865f46a9c218a6c224c02effed1b12";
+ 	public final static String FLICKR_URL = "http://api.flickr.com/services/rest";
+ 	public final static String IMAGE_HOST = "static.flickr.com";
+ }

@@ -1,0 +1,36 @@
+Categories:Multimedia
+License:GPLv3
+Web Site:http://www.frank-durr.de
+Source Code:https://github.com/duerrfk/OpenPanodroid
+Issue Tracker:https://github.com/duerrfk/OpenPanodroid/issues
+
+Auto Name:OpenPanodroid
+Summary:Interactive panorama image viewer
+Description:
+It displays equirectangular panorama images (360 deg x 180 deg spherical 
+panoramas) hosted at Flickr, local images stored on the device, or from any 
+user-defined URL. The user can rotate the view by 360 degrees horizontally and 
+180 degrees vertically. 
+Panodroid supports kinetic rotation and tag-based image queries. 
+It can also act as generic panorama image viewer for other third-party apps.
+
+Google Maps is replaced with OSM.
+.
+
+Repo Type:git
+Repo:https://github.com/duerrfk/OpenPanodroid.git
+
+Build:1.0,1
+    commit=b56451ea99
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+        sed -i 's@\(target=\).*@\1android-12@' project.properties
+    rm=libs,obj,misc,tools
+    srclibs=MapsAPI@102a304431bc5
+    patch=api_1.patch
+    prebuild=echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties
+    buildjni=yes
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
