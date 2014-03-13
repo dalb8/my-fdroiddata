@@ -12,7 +12,7 @@ For some cities in France.
 
 See the official [http://paris.sous-surveillance.net website].
 
-Status: Alpha
+Status: Alpha. Maps not even showing in initial test.
 .
 
 Repo Type:git
