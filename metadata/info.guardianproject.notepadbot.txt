@@ -9,7 +9,9 @@ Issue Tracker:https://github.com/guardianproject/notepadbot/issues
 Auto Name:NoteCipher
 Summary:Notepad with lock
 Description:
-No description available
+Simple app for taking notes that encrypts everything behind a password.
+
+Status: Beta.
 .
 
 Repo Type:git
@@ -18,11 +20,12 @@ Repo:https://github.com/guardianproject/notepadbot.git
 Build:0.1,12
     commit=6f19b975bee9fcb
     subdir=app
-    srclibs=2:ActionBarSherlock@4a79d;3:NumberPicker-SimonVT@b4562;1:Cacheword@e82f412b3f;IOCipher@v0.1
+    srclibs=2:ActionBarSherlock@4a79d,3:NumberPicker-SimonVT@b4562,1:Cacheword@e82f412b3f,IOCipher@v0.1
+    rm=app/libs/x86
     prebuild=cp libs/sqlcipher.jar $$Cacheword$$/libs/ && \
         cp libs/android-support-v4.jar $$Cacheword$$/libs/ && \
         cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
-    scanignore=app/libs/armeabi,app/libs/x86
+    scanignore=app/libs/armeabi
 
 Maintainer Notes:
 .

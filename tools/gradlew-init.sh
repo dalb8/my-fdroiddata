@@ -13,6 +13,7 @@ find -L . -name build.gradle -print |xargs grep classpath
 echo -e "\n\033[31m   Overall:"
 echo -e "\033[0m"
 grep gradle build.gradle
+grep -v '^#' gradle.properties
 
 echo -e "\n\033[31m   Build Tools:"
 echo -e "\033[0m"

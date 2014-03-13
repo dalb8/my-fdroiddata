@@ -42,6 +42,8 @@ export ANDROID_HOME=/home/gerry/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
 export BUILD_TOOLS_1903=${ANDROID_HOME}/build-tools/19.0.3
 export ANDROID_NDK=/home/gerry/android-ndk-r9c
+# Still need to set this for fdroid
+export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
 
 export PATH=${PATH}:/sbin:/usr/sbin:${ANDROID_HOME}/platform-tools:${BUILD_TOOLS_1903}:${ANDROID_HOME}/tools:${ANDROID_NDK}:${FDROIDSERVER}:${MYFDROIDDATA}/tools:${M2}

@@ -1,0 +1,33 @@
+Categories:Phone & SMS
+License:GPLv3
+Web Site:http://forum.xda-developers.com/showthread.php?t=1422969
+Source Code:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector
+Issue Tracker:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector/issues
+
+Auto Name:rawphone
+Summary:Avoid fake phone networks
+Description:
+Submit collected data to 
+[https://opensource.srlabs.de/projects/mobile-network-assessment-tools/wiki gsmmap.org]
+
+Status: Experimental
+
+Google Maps has been replaced with OSM.
+.
+
+Repo Type:git
+Repo:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector.git
+
+Build:0.2.2,3
+    commit=e215ef13c1b46
+    subdir=MERGESOURCE/RawPhone
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+     sed -i 's@\(target=\).*@\1android-8@' project.properties
+    rm=MERGESOURCE/RawPhone/bin,MERGESOURCE/RawPhone/gen
+    srclibs=MapsAPI@102a304431bc5
+    prebuild=echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties
+
+Update Check Mode:RepoManifest
+Current Version:0.2.2
+Current Version Code:3
+

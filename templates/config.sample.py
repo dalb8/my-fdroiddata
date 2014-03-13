@@ -16,21 +16,23 @@ sdk_path = "$ANDROID_HOME"
 ndk_path = "$ANDROID_NDK"
 
 # Build tools version to be used
-#build_tools = "$BUILD_TOOLS_1902"
-build_tools = "$BUILD_TOOLS_1903"
+#build_tools = "19.0.2"
+build_tools = "19.0.3"
 
 # Command for running Ant
 #ant = "/path/to/ant"
-ant = "ant"
+#ant = "/opt/ant/apache-ant-1.8.6/bin/ant"
+ant = "/opt/ant/apache-ant-1.9.3/bin/ant"
 
 # Command for running maven 3
 #mvn3 = "/path/to/mvn"
-#mvn3 = "mvn-3.0.8"
-mvn3 = "mvn-3.1.1"
+#mvn3 = "/opt/maven/apache-maven-3.0.4/bin/mvn"
+mvn3 = "/opt/maven/apache-maven-3.1.1/bin/mvn"
 
 # Command for running Gradle
-#gradle="gradle-1.10"
-gradle="gradle-1.11"
+#gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle"
+gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle"
+
 
 #repo_url = "https://gitorious.org/asdgasd"
 #repo_name = "Appz"
