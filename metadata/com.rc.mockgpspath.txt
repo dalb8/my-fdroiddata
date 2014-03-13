@@ -1,0 +1,31 @@
+AntiFeatures:UpstreamNonFree
+Categories:Development
+License:GPLv3
+Web Site:
+Source Code:https://github.com/Ryan-ZA/MockGPSPath
+Issue Tracker:https://github.com/Ryan-ZA/MockGPSPath/issues
+
+Auto Name:Fake GPS Path
+Summary:Make GPS tracks for testing
+Description:
+Create a path on a map and start it. Then other apps
+will think that's where the phone is.
+
+AdMob proprietary library was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/Ryan-ZA/MockGPSPath.git
+
+Build:1.2.1,4
+    commit=e36f56e5beca
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+        sed -i 's@\(target=\).*@\1android-16@' project.properties
+    rm=libs/GoogleAdMobAdsSdk-4.3.1.jar
+    srclibs=1:MobAdMob@3bd78884,MapsAPI@102a304431bc5
+    prebuild=echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties
+
+Update Check Mode:RepoManifest
+Current Version:1.2.1
+Current Version Code:4
+
