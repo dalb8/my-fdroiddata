@@ -24,6 +24,7 @@ source code.
 Anti-feature: Tracking. Crash reports are sent without interaction, but
 that can be disabled in the settings.
 Google Analytics was removed before building.
+Google Maps has been replaced with OSM.
 .
 
 Repo Type:git
@@ -32,14 +33,13 @@ Repo:https://github.com/ShowMeHills/ShowMeHills.git
 Build:0.30,30
     commit=v0.30
     subdir=ShowMe/ShowMeHills
-    update=no
-    rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar
-    srclibs=NoAnalytics@d38ae535b543
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+     sed -i 's@\(target=\).*@\1android-16@' project.properties
+    srclibs=MapsAPI@102a304431bc5,NoAnalytics@d38ae535b543
+    rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar,ShowMe/ShowMeHills/bin
     prebuild=mkdir src && \
-        echo "sdk.dir=$$SDK$$" >local.properties && \
-        echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \
-        echo "sdk.dir=$$SDK$$" >../ShowMeX/local.properties && \
-        sed -i 's/<uses-library android:name="com.google.android.maps" \/>/<uses-library android:name="com.google.android.maps" android:required="false" \/>/g' AndroidManifest.xml
+        echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties && \
+        echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties
 
 Maintainer Notes:
 0.31 on gplay
