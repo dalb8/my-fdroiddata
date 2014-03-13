@@ -1,0 +1,31 @@
+Categories:Navigation
+License:GPLv3
+Web Site:http://souriez.kernel23.org
+Source Code:https://github.com/kernel23/sous-surveillance-mobile
+Issue Tracker:https://github.com/kernel23/sous-surveillance-mobile/issues
+
+Auto Name:sous-surveillance-mobile
+Name:Sous Surveillance
+Summary:Locate proximate CCTV
+Description:
+For some cities in France.
+
+See the official [http://paris.sous-surveillance.net website].
+
+Status: Alpha
+.
+
+Repo Type:git
+Repo:https://github.com/kernel23/sous-surveillance-mobile.git
+
+Build:1.0,1
+    commit=2d820de746
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+        sed -i 's@\(target=\).*@\1android-10@' project.properties
+    srclibs=MapsAPI@102a304431bc5
+    prebuild=echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
