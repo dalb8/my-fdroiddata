@@ -1,0 +1,32 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Multimedia
+License:GPLv3
+Web Site:http://palatis.blogspot.com
+Source Code:https://github.com/Palatis/danbooru-gallery-android
+Issue Tracker:https://github.com/Palatis/danbooru-gallery-android/issues
+
+Auto Name:Danbooru Gallery
+Summary:Image gallery client
+Description:
+For Danboory, Gelbooru, Moebooru, Shimmie 2 etc.
+Try http://safebooru.org with Gelbooru API.
+.
+
+Repo Type:git
+Repo:https://github.com/Palatis/danbooru-gallery-android.git
+
+Build:0.7.0.20140207,20140207
+    commit=v0.7.0.20130207
+    subdir=DanbooruGallery
+    gradle=yes
+    prebuild=sed -i '/proguard/Id' build.gradle
+
+Maintainer Notes:
+Not on gplay
+.
+
+Update Check Mode:Tags
+Current Version:0.7.0.20140207
+Current Version Code:20140207
+

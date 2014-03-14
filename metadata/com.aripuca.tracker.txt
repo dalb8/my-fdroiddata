@@ -1,0 +1,31 @@
+AntiFeatures:UpstreamNonFree
+Categories:Navigation
+License:Apache2
+Web Site:https://code.google.com/p/aripuca-tracker
+Source Code:https://code.google.com/p/aripuca-tracker/source/list
+Issue Tracker:https://code.google.com/p/aripuca-tracker/issues
+
+Auto Name:Aripuca GPS Tracker
+Summary:GPS tracking
+Description:
+Record tracks, save waypoints, use compass, import/export data to many formats
+and much more!
+
+Google Maps is replaced with OSM in this build.
+Proprietary Google Analytics was removed.
+.
+
+Repo Type:hg
+Repo:https://code.google.com/p/aripuca-tracker
+
+Build:1.3.7,27
+    commit=v.1.3.7
+    init=sed -i 's/android:required="true"/android:required="false"/g' AndroidManifest.xml && \
+     sed -i 's@\(target=\).*@\1android-17@' project.properties
+    rm=libs/libGoogleAnalyticsServices.jar
+    srclibs=2:MapsAPI@323b519,1:NoAnalytics@d38ae535b543
+
+Update Check Mode:Tags
+Current Version:1.3.7
+Current Version Code:27
+

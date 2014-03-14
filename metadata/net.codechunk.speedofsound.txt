@@ -1,0 +1,30 @@
+Categories:Multimedia
+License:GPL
+Web Site:
+Source Code:https://github.com/jpeddicord/speedofsound
+Issue Tracker:https://github.com/jpeddicord/speedofsound/issues
+
+Summary:Adjust volume according to speed
+Description:
+Keep your eyes on the road, not your phone! Speed of Sound automatically
+adjusts your music player’s volume while you’re driving about with your GPS,
+lowering the volume while driving slowly or at a stoplight,
+and cranking it up on the highway.
+
+In this build, Google Maps are replaced with OSM.
+.
+
+Repo Type:git
+Repo:https://github.com/jpeddicord/speedofsound.git
+
+Build:0.8.2,9
+    commit=0.8.2
+    subdir=speedofsound
+    init=sed -i '/uses-library/d' AndroidManifest.xml
+    target=android-15
+    srclibs=2:MapsAPI@323b519
+
+Update Check Mode:Tags
+Current Version:0.8.2
+Current Version Code:9
+
