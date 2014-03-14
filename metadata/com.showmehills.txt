@@ -28,11 +28,11 @@ Build:0.30,30
     subdir=ShowMe/ShowMeHills
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
      sed -i 's@\(target=\).*@\1android-16@' project.properties
-    srclibs=MapsAPI@102a304431bc5,NoAnalytics@d38ae535b543
+    srclibs=MapsAPI@323b519,NoAnalytics@d38ae535b543
     rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar,ShowMe/ShowMeHills/bin
     prebuild=mkdir src && \
-        echo 'source.dir=$$MapsAPI$$/src;src' >>ant.properties && \
-        echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties
+        echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \
+        echo "android.library.reference.2=$$MapsAPI$$" >> ../ShowMeX/project.properties
 
 Maintainer Notes:
 0.31 on gplay
