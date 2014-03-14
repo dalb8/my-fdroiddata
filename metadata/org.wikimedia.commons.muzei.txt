@@ -1,0 +1,31 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Wallpaper
+License:Apache2
+Web Site:https://commons.wikimedia.org/wiki/Main_Page
+Source Code:https://github.com/ebraminio/WikimediaCommonsForMuzei
+Issue Tracker:https://github.com/ebraminio/WikimediaCommonsForMuzei/issues
+
+Auto Name:Wikimedia Commons for Muzei (extension)
+Name:Muzei: Wikimedia Commons
+Summary:Extension for Muzei
+Description:
+Install [[net.nurik.roman.muzei]] first and open it in the launcher
+to change the source of images.
+
+Status: Beta.
+.
+
+Repo Type:git
+Repo:https://github.com/ebraminio/WikimediaCommonsForMuzei.git
+
+Build:1.0,1
+    commit=adc43d217fa3
+    subdir=muzeiextension
+    gradle=defaultFlavor
+    prebuild=sed -i 's/0.6.+/0.7.+/' build.gradle
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
