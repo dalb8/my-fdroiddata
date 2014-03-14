@@ -17,7 +17,7 @@ better than that for the rest of the world.
 Anti-feature: Tracking. Crash reports are sent without interaction, but
 that can be disabled in the settings.
 Google Analytics was removed before building.
-Google Maps has been replaced with OSM.
+Google Maps has been replaced with OSM but they probably won't work.
 .
 
 Repo Type:git
