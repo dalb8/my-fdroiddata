@@ -11,7 +11,8 @@ Eventually submit collected data to
 [https://opensource.srlabs.de/projects/mobile-network-assessment-tools/wiki gsmmap.org].
 XDA [http://forum.xda-developers.com/showthread.php?t=1422969 thread].
 
-Status: Experimental
+Status: Experimental. It was published 4 years ago but source code has
+only recently been uploaded.
 
 Built to use OSM instead of Google Maps.
 .

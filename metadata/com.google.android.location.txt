@@ -12,6 +12,7 @@ Summary:Device location provider
 Description:
 Replacement for network location services, normally existing on
 phones that you buy, but not part of AOSP.
+Also known as NOGAPPS.
 
 '''This version isn't for Android 4.4 and above''':
 use [[com.google.android.gms]] instead.
@@ -26,6 +27,8 @@ but they're now part of the Google Play Services apk (or perhaps another).
 
 Sources are currently limited to Apple Corp's database.
 opencellid is usually working and others are on the way.
+
+Test it by visiting this [http://html5demos.com/geo site] with Firefox.
 .
 
 Repo Type:git
