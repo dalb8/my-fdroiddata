@@ -1,3 +1,5 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA.
+# See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Navigation
 License:GPLv3
 Web Site:http://www.mixare.org
