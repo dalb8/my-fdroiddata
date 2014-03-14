@@ -14,13 +14,14 @@ For some cities in France.
 
 There's a web app at [http://paris.sous-surveillance.net website].
 
-Status: Alpha. Maps not even showing in initial test.
+Status: Alpha.
 .
 
 Repo Type:git
 Repo:https://github.com/kernel23/sous-surveillance-mobile.git
 
 Build:1.0,1
+    disable=non-functional
     commit=2d820de746
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
         sed -i 's@\(target=\).*@\1android-10@' project.properties

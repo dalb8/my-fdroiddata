@@ -4,12 +4,17 @@ Web Site:http://arte.tv/guide/fr/plus7
 
 Summary:ARTE on demand
 Description:
+Franco-German TV channel.
+Only available there and in Switzerland but shows can be downloaded
+with these Python scripts, in [https://github.com/inemajo/arte-plus7-downloader SD] or
+[https://github.com/rg3/youtube-dl HD].
 .
 
 Maintainer Notes:
 Get it via Google Play
 .
 
+Update Check Mode:None
 Current Version:v2.1.1
 Current Version Code:211142111
 
