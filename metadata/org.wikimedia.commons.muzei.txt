@@ -20,12 +20,12 @@ Repo Type:git
 Repo:https://github.com/ebraminio/WikimediaCommonsForMuzei.git
 
 Build:1.0,1
-    commit=adc43d217fa3
+    commit=V1
     subdir=muzeiextension
     gradle=defaultFlavor
     prebuild=sed -i 's/0.6.+/0.7.+/' build.gradle
 
-Update Check Mode:RepoManifest
+Update Check Mode:Tags
 Current Version:1.0
 Current Version Code:1
 
