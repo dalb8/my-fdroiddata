@@ -22,8 +22,9 @@ Build:0.9.2,26
     commit=1bc4d0025ad85ea
     init=rm -f plugins/mixare-library/build.xml && \
       sed -i '/uses-library/d' AndroidManifest.xml
-    srclibs=2:MapsAPI@323b519
+    srclibs=2:MapsAPI@f6dd3410b223
     target=android-10
+    prebuild=sed -i '8 i \\t<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
 
 Maintainer Notes:
 There's a fork that attempts to use OSM, but it doesn't behave much better:

@@ -6,8 +6,8 @@ Web Site:https://commons.wikimedia.org/wiki/Main_Page
 Source Code:https://github.com/ebraminio/WikimediaCommonsForMuzei
 Issue Tracker:https://github.com/ebraminio/WikimediaCommonsForMuzei/issues
 
-Auto Name:Wikimedia Commons for Muzei (extension)
 Name:Muzei: Wikimedia Commons
+Auto Name:Wikimedia Commons for Muzei (extension)
 Summary:Extension for Muzei
 Description:
 Install [[net.nurik.roman.muzei]] first and open it in the launcher

@@ -25,7 +25,11 @@ Build:1.3.7,27
     init=sed -i 's/android:required="true"/android:required="false"/g' AndroidManifest.xml && \
      sed -i 's@\(target=\).*@\1android-17@' project.properties
     rm=libs/libGoogleAnalyticsServices.jar
-    srclibs=2:MapsAPI@323b519,1:NoAnalytics@d38ae535b543
+    srclibs=2:MapsAPI@f6dd3410b223,1:NoAnalytics@d38ae535b543
+
+Maintainer Notes:
+Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
+.
 
 Update Check Mode:Tags
 Current Version:1.3.7

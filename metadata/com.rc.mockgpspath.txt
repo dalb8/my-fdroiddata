@@ -10,8 +10,14 @@ Issue Tracker:https://github.com/Ryan-ZA/MockGPSPath/issues
 Auto Name:Fake GPS Path
 Summary:Make GPS tracks for testing
 Description:
-Create a path on a map and start it. Then other apps
-will think that's where the phone is.
+The app will ask you to enable Mock Locations in Android's Developer 
+Options menu. This must be explictly enabled in recent versions by 
+tapping the Build Number item in Settings/About seven times.
+
+Create a path on a map made up of nodes will be followed
+either as the crow flies or via the nearest roads.
+Press play to start it and you will see that other apps will follow
+the path.
 
 AdMob proprietary library was removed.
 The build replaces Google Maps with OSM.
@@ -25,7 +31,12 @@ Build:1.2.1,4
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
         sed -i 's@\(target=\).*@\1android-16@' project.properties
     rm=libs/GoogleAdMobAdsSdk-4.3.1.jar
-    srclibs=1:MobAdMob@3bd78884,2:MapsAPI@323b519
+    srclibs=1:MobAdMob@3bd78884,2:MapsAPI@f6dd3410b223
+    prebuild=sed -i '16 i \ \ \ \<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
+
+Maintainer Notes:
+Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
+.
 
 Update Check Mode:RepoManifest
 Current Version:1.2.1

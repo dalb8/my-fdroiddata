@@ -19,10 +19,12 @@ Build:1.2.8,19
     commit=402
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
      sed -i 's@\(target=\).*@\1android-16@' project.properties
-    srclibs=1:MapsAPI@323b519
+    srclibs=1:MapsAPI@f6dd3410b223
 
 Maintainer Notes:
 Won't be seeing updates as author is working on a similar proprietary app
+
+Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
 .
 
 Update Check Mode:Static

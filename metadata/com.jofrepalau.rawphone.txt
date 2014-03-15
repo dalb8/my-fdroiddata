@@ -26,7 +26,7 @@ Build:0.2.2,3
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
      sed -i 's@\(target=\).*@\1android-8@' project.properties
     rm=MERGESOURCE/RawPhone/bin,MERGESOURCE/RawPhone/gen
-    srclibs=1:MapsAPI@323b519
+    srclibs=1:MapsAPI@f6dd3410b223
 
 Update Check Mode:RepoManifest
 Current Version:0.2.2

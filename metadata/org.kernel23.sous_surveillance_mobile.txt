@@ -13,8 +13,6 @@ Description:
 For some cities in France.
 
 There's a web app at [http://paris.sous-surveillance.net website].
-
-Status: Alpha.
 .
 
 Repo Type:git
@@ -25,7 +23,11 @@ Build:1.0,1
     commit=2d820de746
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
         sed -i 's@\(target=\).*@\1android-10@' project.properties
-    srclibs=1:MapsAPI@323b519
+    srclibs=1:MapsAPI@f6dd3410b223
+
+Maintainer Notes:
+Not published anywhere. see also org.kernel23.souriezmontpellier
+.
 
 Update Check Mode:RepoManifest
 Current Version:1.0

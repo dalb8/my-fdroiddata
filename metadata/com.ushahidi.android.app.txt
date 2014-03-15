@@ -9,40 +9,33 @@ Issue Tracker:https://github.com/ushahidi/Ushahidi_Android/issues
 Auto Name:Ushahidi
 Summary:Mapping tools
 Description:
+Press the “+” button to find deployments in your vicinity.
+This build replaces Google Maps with OSM.
+It has problems centering the map, so the fragment won't display anything, but
+if you open the MAP tab you can '''find the markers by zooming out''',
+although you'll find it hard to match reports to locations.
+
 Ushahidi is a web and mobile platform that allows you to create, visualize and
 share stories on a map.
 It allows individuals to share their stories on their own terms using the tools
 they already have.
-Sync with any Ushahidi deployment. Send reports with images and location data
-as well as receive
-alerts from others who have sent in reports to the site.
-
-The app supports loading of multiple deployments at one time, quick filtering
-through reports,
-exploring incident locations on the map, viewing report photos, news article,
-media as well as
-sharing reports via email, SMS or Twitter. Once the data has been downloaded,
-the app can function
-without an internet connection, allowing accurate collection of data utilizing
-the device’s camera
-and GPS capabilities
-
-This build replace Google Maps with OSM.
+You can sync with any Ushahidi deployment and send reports with images and 
+location data as well as receive alerts from others who have sent in 
+reports to the site.
 .
 
 Repo Type:git
 Repo:https://github.com/ushahidi/Ushahidi_Android.git
 
-Build:3.1.6,31
-    disable=three errors to do with MapsAPI
-    commit=9e7a519a83d9a7
+Build:3.1.5,30
+    commit=v3.1.5
     subdir=Themes/Ushahidi
-    init=rm ../../Libraries/cwacmerge/build.xml local.properties && \
+    init=rm ../../Libraries/cwacmerge/build.xml local.properties ../../Core/local.properties && \
        mkdir src && \
        sed -i '/uses-library/d' AndroidManifest.xml && \
        sed -i 's@\(target=\).*@\1android-16@' ../../Core/project.properties && \
        sed -i 's@\(target=\).*@\1android-16@' project.properties
-    srclibs=2:MapsAPI@323b519
+    srclibs=2:MapsAPI@f6dd3410b223
     prebuild=echo "android.library.reference.3=../../srclib/MapsAPI/com.google.android.maps" >> ../../Core/project.properties 
 
 Maintainer Notes:
@@ -50,6 +43,6 @@ Later versions use GMS.
 .
 
 Update Check Mode:Static
-Current Version:3.1.6
-Current Version Code:31
+Current Version:3.1.5
+Current Version Code:30
 
