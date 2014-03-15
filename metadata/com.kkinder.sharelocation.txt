@@ -1,0 +1,38 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Navigation
+License:MIT
+Web Site:https://kkinder.com/2011/01/13/gps-share
+Source Code:https://bitbucket.org/kkinder/gpsshare/src
+Issue Tracker:https://bitbucket.org/kkinder/gpsshare/issues
+
+Auto Name:GPS Share
+Summary:Share your location
+Description:
+Share your location via any of the messaging apps.
+If the recipient has [[net.osmand.plus]] installed then they can
+open the location with that.
+
+This build replaces Google Maps with OSM.
+It has problems centering the map, but you can find the position by zooming out.
+.
+
+Repo Type:hg
+Repo:https://bitbucket.org/kkinder/gpsshare
+
+Build:1.4.1,141
+    commit=936cada
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+       echo 'target=android-8' >> project.properties
+    srclibs=1:MapsAPI@f6dd3410b223
+    prebuild=sed -i '25 i <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"><\/uses-permission>' AndroidManifest.xml && \
+       sed -i 's/setSatellite(true)/setSatellite(false)/' src/com/kkinder/sharelocation/Sharelocation.java
+
+Maintainer Notes:
+Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.4.1
+Current Version Code:141
+
