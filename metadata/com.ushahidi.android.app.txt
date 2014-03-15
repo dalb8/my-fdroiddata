@@ -24,6 +24,9 @@ they already have.
 You can sync with any Ushahidi deployment and send reports with images and 
 location data as well as receive alerts from others who have sent in 
 reports to the site.
+
+More recent versions of this use proprietary GMS for maps and Analytics,
+and they can't be patched so easily.
 .
 
 Repo Type:git
