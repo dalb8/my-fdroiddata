@@ -14,7 +14,8 @@ This build replaces Google Maps with OSM.
 It has problems centering the map: on the MAP tab you can 
 find the markers by zooming out;
 To get the Reports tab to show the location properly, 
-press the '''menu item with the blank text'''.
+press the Previous button or the menu item with the blank text 
+to hop to the next report.
 
 Ushahidi is a web and mobile platform that allows you to create, visualize and
 share stories on a map.
