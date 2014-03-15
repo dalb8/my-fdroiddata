@@ -15,6 +15,7 @@ open the location with that.
 
 This build replaces Google Maps with OSM.
 It has problems centering the map, but you can find the position by zooming out.
+Note that Satellite maps are not available.
 .
 
 Repo Type:hg
