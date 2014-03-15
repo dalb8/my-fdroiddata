@@ -1,0 +1,41 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Navigation
+License:GPLv3
+Web Site:http://souriez.kernel23.org
+Source Code:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
+Issue Tracker:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
+
+Auto Name:Souriez-vous-etes-a-Montpellier
+Summary:Locate proximate CCTV
+Description:
+Application qui notifie l’utilisateur via une alerte sonore
+lors d’un passage a proximité d’une camera de videosurveillance a Montpellier
+(Herault, Languedoc Roussillon), si le GPS est en marche.
+
+There's a web app at this [http://paris.sous-surveillance.net website].
+
+The icon is available under CCBYSANC.
+
+The build replaces Google Maps with OSM. It may not centre the map on
+your location, so if you get a blue screen, zoom out to find the landmarks.
+.
+
+Repo Type:git
+Repo:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
+
+Build:1.0,1
+    commit=2fa69c
+    init=sed -i '/uses-library/d' AndroidManifest.xml && \
+        sed -i 's@\(target=\).*@\1android-15@' project.properties
+    srclibs=1:MapsAPI@f6dd3410b223
+    prebuild=sed -i '15 i \ \ \ \<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
+
+Maintainer Notes:
+see also org.kernel23.sous_surveillance_mobile
+.
+
+Update Check Mode:RepoManifest/stable-1
+Current Version:1.0
+Current Version Code:1
+
