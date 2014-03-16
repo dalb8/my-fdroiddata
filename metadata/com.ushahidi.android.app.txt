@@ -25,8 +25,9 @@ You can sync with any Ushahidi deployment and send reports with images and
 location data as well as receive alerts from others who have sent in 
 reports to the site.
 
-More recent versions of this use proprietary GMS for maps and Analytics,
-and they can't be patched so easily.
+More recent versions use the Google Play Services library for the maps:
+it's not yet possible to replace that with an OSM equivalent.
+They also use the Analytics library which is also proprietary.
 .
 
 Repo Type:git

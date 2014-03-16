@@ -10,6 +10,8 @@ Summary:Funny Game
 Maintainer Notes:
 .
 
+#In Repo:1.0,1
 Current Version:1.0
 Current Version Code:1
+
 

@@ -39,6 +39,8 @@ Build:6x03,603
     buildjni=yes
 
 #Update Check Mode:RepoManifest
+#In Repo:6,600
 Current Version:6x03
 Current Version Code:603
+
 

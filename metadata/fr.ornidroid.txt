@@ -1,0 +1,35 @@
+Categories:Science & Education
+License:CCBYNC
+Web Site:http://ornidroid.free.fr/ornidroid
+Source Code:https://github.com/giletvin/ornidroid
+Issue Tracker:https://github.com/giletvin/ornidroid/issues
+
+Auto Name:Ornidroid
+Summary:Bird info
+Description:
+Works online by default but you can copy the files from the repo to the sdcard
+or download them from the web as mentioned on the website.
+.
+
+Repo Type:git
+Repo:https://github.com/giletvin/ornidroid.git
+
+Build:8.0.0,15
+    disable=not tested; non-free licence
+    commit=8.0.0
+    subdir=ornidroid
+    rm=src/test
+
+Maintainer Notes:
+Huge repo: maybe tarball would be smaller although sounds haven't changed in two years.
+
+Maybe extlibs=commons-lang/commons-lang-2.6.jar;commons-io/commons-io-1.4.jar
+
+Delete these from tarball if necessary, but add to the sdcard.
+rm=ornidroid_images,ornidroid_database,ornidroid_audio,ornidroid_icons
+.
+
+Update Check Mode:None
+Current Version:7.0.0
+Current Version Code:9999999
+

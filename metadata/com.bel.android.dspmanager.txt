@@ -22,6 +22,7 @@ Maintainer Notes:
 .
 
 Update Check Mode:None
+#In Repo:2.0,2
 Current Version:2.0
 Current Version Code:2
 

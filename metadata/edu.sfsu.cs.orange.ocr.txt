@@ -56,11 +56,11 @@ Build:0.5.12,31
         cp -r $$TessTwo$$ ../
     build=$$NDK$$/ndk-build -C ../tess-two
 
-# very tentatively
 Maintainer Notes:
+Update this then put back on RM
 .
 
-#Update Check Mode:RepoManifest
-Current Version:0.5.14
-Current Version Code:33
+Update Check Mode:None
+Current Version:0.5.13
+Current Version Code:32
 

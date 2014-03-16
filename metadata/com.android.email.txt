@@ -13,6 +13,8 @@ Version corresponds to the Android version.
 They are signed with debug keys so they should install on top of each other.
 .
 
+#In Repo:4.1,410000
+#In Repo:4.4.2-19aaf5e201,500060
 Current Version:4.4.2
 Current Version Code:50000000
 

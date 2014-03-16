@@ -53,6 +53,7 @@ Can propose alternative method.
 .
 
 Update Check Mode:None
+#In Repo:1.4.1,2
 Current Version:1.4.1
 Current Version Code:2
 

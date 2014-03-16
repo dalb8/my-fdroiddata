@@ -32,9 +32,11 @@ Builds armeabi-v7a by default.
 Lots of native prebuilts in source code that probably have source code
 but the exiv jar has the same namespace as the developer and I can't locate
 source.code.
+
+Can't use UCM:RM
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:3.15
 Current Version Code:51
 

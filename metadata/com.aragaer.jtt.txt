@@ -34,9 +34,11 @@ Build:1.4.4.5-pre,25
 
 Maintainer Notes:
 Uses git submodules
+
+Tags kind of unreliable
 .
 
-#Update Check Mode:Tags
-Current Version:1.4.5pre
-Current Version Code:25
+Update Check Mode:RepoManifest
+Current Version:pre1.5v2
+Current Version Code:27
 

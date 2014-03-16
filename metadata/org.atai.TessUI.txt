@@ -18,8 +18,8 @@ Repo Type:git
 Repo:https://git.gitorious.org/character-recognition/character-recognition.git
 
 Build:0.3.1,5
-    commit=abd2e28
     disable=errors, see below
+    commit=abd2e28
     subdir=TessUI
     init=rm -rf bin gen ../tesseract-android-tools/obj ../ImageViewer ../tesseract-android-tools-test
     target=android-8
@@ -40,6 +40,6 @@ jni/../external/libjpeg/jidctfst.S:271: Error: garbage following instruction -- 
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.3.4
-Current Version Code:9
+Current Version:0.3.4.1
+Current Version Code:10
 

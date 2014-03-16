@@ -35,6 +35,6 @@ android {
 .
 
 #Update Check Mode:Tags
-Current Version:3.0.0-beta4
-Current Version Code:56
+Current Version:3.0.1
+Current Version Code:58
 

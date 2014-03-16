@@ -23,14 +23,14 @@ Google Maps has been replaced with OSM.
 Repo Type:git
 Repo:https://github.com/ShowMeHills/ShowMeHills.git
 
-Build:0.30,30
-    commit=v0.30
+Build:0.31,31
+    commit=9dc018d51709
     subdir=ShowMe/ShowMeHills
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
-     sed -i 's@\(target=\).*@\1android-10@' ../ShowMeX/project.properties && \
-     sed -i 's@\(target=\).*@\1android-10@' project.properties
+        sed -i 's@\(target=\).*@\1android-10@' ../ShowMeX/project.properties && \
+        sed -i 's@\(target=\).*@\1android-10@' project.properties
+    rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar,ShowMe/ShowMeHills/bin,ShowMe/ShowMeHillsUK/bin
     srclibs=2:MapsAPI@f6dd3410b223,NoAnalytics@d38ae535b543
-    rm=ShowMe/ShowMeX/libs/libGoogleAnalyticsV2.jar,ShowMe/ShowMeHills/bin
     prebuild=mkdir src && \
         echo "android.library.reference.1=$$NoAnalytics$$" >> ../ShowMeX/project.properties && \
         echo "android.library.reference.2=$$MapsAPI$$" >> ../ShowMeX/project.properties
@@ -38,10 +38,10 @@ Build:0.30,30
 Maintainer Notes:
 Note MapsAPI needs WRITE_EXTERNAL_STORAGE
 
-0.31 on gplay
+Tags unreliable.
 .
 
-#Update Check Mode:Tags
-Current Version:0.30
-Current Version Code:30
+Update Check Mode:RepoManifest
+Current Version:0.31
+Current Version Code:31
 

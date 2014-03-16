@@ -52,6 +52,7 @@ Maintainer Notes:
 # +5: None (current version)
 #Update Check Mode:Tags
 Vercode Operation:%c + 4
+#In Repo:0.2.0-git,2000
 Current Version:0.1.3
 Current Version Code:1304
 

@@ -12,6 +12,8 @@ There are pro versions that support extensions and all that, which
 likely contain some proprietary code.
 .
 
-Current Version:0.2.31
-Current Version Code:81
+#In Repo:0.2.31,81
+Current Version:0.2.33
+Current Version Code:83
+
 

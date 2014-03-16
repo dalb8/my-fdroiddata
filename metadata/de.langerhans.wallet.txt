@@ -36,6 +36,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:1.05
-Current Version Code:155
+Current Version:1.06
+Current Version Code:156
 

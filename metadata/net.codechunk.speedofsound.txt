@@ -14,6 +14,8 @@ lowering the volume while driving slowly or at a stoplight,
 and cranking it up on the highway.
 
 In this build, Google Maps are replaced with OSM.
+More recent versions use the Google Play Services library for the maps:
+it's not yet possible to replace that with an OSM equivalent.
 .
 
 Repo Type:git
@@ -27,7 +29,11 @@ Build:0.8.2,9
     srclibs=2:MapsAPI@f6dd3410b223
     prebuild=sed -i '14 i \ \ \ \<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
 
-Update Check Mode:Tags
+Maintainer Notes:
+Now using gradle and GMS
+.
+
+Update Check Mode:Static
 Current Version:0.8.2
 Current Version Code:9
 

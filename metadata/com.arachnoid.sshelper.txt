@@ -16,6 +16,8 @@ See website for build instructions
 Rsync etc. not included
 .
 
-Current Version:1.7
-Current Version Code:1.7
+#In Repo:5.0,50
+Current Version:5.0
+Current Version Code:50
+
 
