@@ -1,5 +1,6 @@
 # Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
 # See https://gitorious.org/asdgasd/my-fdroiddata
+AntiFeature:Tracking
 Categories:System
 License:Apache2
 Web Site:
@@ -16,6 +17,8 @@ Description:
 * Message: check dmesg or logcat in real-time.
 
 Requires Root: No, but you can get extra features via a root switch in the settings.
+
+Tracking: The whois queries are all done via ip-api.com regardless of the TLD.
 .
 
 Repo Type:git
@@ -33,6 +36,7 @@ Build:3.0.8.2,53
     buildjni=no
 
 Maintainer Notes:
+Using 2:attenzione/colorpicker and 3:Volley
 .
 
 #Update Check Mode:Tags
