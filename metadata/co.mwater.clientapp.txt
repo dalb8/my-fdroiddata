@@ -21,15 +21,15 @@ Repo:https://github.com/mWater/app-v3.git
 
 Build:3.2.16,3216
     commit=95d5707040f761a37
-    init=npm install grunt --save-dev && \
-        npm install && \
+    init=npm install && \
         ./setup_cordova.sh && \
         sed -i 's/3.0.40/3.2.16/' app/cordova/release/config.xml && \
-        sed -i "s/'0.0.1'/'3.2.16'/;s/'1'/'3216'/"  cordova/platforms/android/AndroidManifest.xml
+        sed -i 's/"0.0.1"/"3.2.16"/;s/"1"/"3216"/'  cordova/platforms/android/AndroidManifest.xml
     output=cordova/platforms/android/bin/mWater-release-unsigned.apk
     rm=cordova/platforms/android/custom_rules.xml,cordova/platforms/android/ant.properties
     scanignore=node_modules,cordova/platforms/android/libs,cordova/plugins/co.mwater.opencvactivityplugin/libs
-    build=echo y | ./build_cordova_release.sh
+    build=cd cordova; grunt cordova_release && \
+       cordova build; ant release -f platforms/android/build.xml
 
 Maintainer Notes:
 install recent npm; set up ~/.npmrc to install packages as user
@@ -46,6 +46,8 @@ Scanignore the opencv blobs; scan takes a long time.
 Can't build 3.1.11 cos a dependency no longer exists.
 
 Version code can't be got anywhere.
+
+Missing icons for some reason.
 .
 
 Update Check Mode:None
