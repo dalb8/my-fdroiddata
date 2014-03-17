@@ -1,0 +1,54 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Science & Education
+License:GPLv3
+Web Site:http://mwater.co
+Source Code:https://github.com/mWater/app-v3
+Issue Tracker:https://github.com/mWater/mWater-Android-App/issues
+
+Auto Name:mWater
+Summary:Tracks water sources
+Description:
+Allows you to record and share water test results.
+The website has a browser version.
+
+You would need an account to submit materials but it's possible
+to use it in demo mode.
+.
+
+Repo Type:git
+Repo:https://github.com/mWater/app-v3.git
+
+Build:3.2.16,3216
+    commit=95d5707040f761a37
+    init=npm install grunt --save-dev && \
+        npm install && \
+        ./setup_cordova.sh && \
+        sed -i 's/3.0.40/3.2.16/' app/cordova/release/config.xml && \
+        sed -i "s/'0.0.1'/'3.2.16'/;s/'1'/'3216'/"  cordova/platforms/android/AndroidManifest.xml
+    output=cordova/platforms/android/bin/mWater-release-unsigned.apk
+    rm=cordova/platforms/android/custom_rules.xml,cordova/platforms/android/ant.properties
+    scanignore=node_modules,cordova/platforms/android/libs,cordova/plugins/co.mwater.opencvactivityplugin/libs
+    build=echo y | ./build_cordova_release.sh
+
+Maintainer Notes:
+install recent npm; set up ~/.npmrc to install packages as user
+npm install -g grunt grunt-cli browserify cordova.
+
+Don't think it's possible to do `npm install -g` to avoid downloading
+dependencies each time.
+
+A few dependencies are pulled in, some with prebuilts and they have to get pulled
+in every time by fdroid.
+
+Scanignore the opencv blobs; scan takes a long time.
+
+Can't build 3.1.11 cos a dependency no longer exists.
+
+Version code can't be got anywhere.
+.
+
+Update Check Mode:None
+Current Version:3.1.11
+Current Version Code:9999999
+
