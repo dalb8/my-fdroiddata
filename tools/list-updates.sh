@@ -4,9 +4,13 @@ exec > "$MYFDROIDDATA/logs/to-update.log"
 for i in $MYFDROIDDATA/metadata/*.txt
 do 	echo "$(basename -s .txt $i):"
         echo " "
-	grep -A 1 'Build:' $i
+	tac $i | grep -m 1 'Build:'
+	grep 'disable=' $i
+	tac $i | grep -m 1 '^#In Repo:'
         echo " "
-	grep -A 0 'Current Version Code:' $i
+	grep '^Update Check Mode:\|^#Update Check Mode:' $i
+	grep '^Vercode Operation:' $i
+	grep -A 1 'Current Version:' $i
         echo " "
         echo "********** "
 done
