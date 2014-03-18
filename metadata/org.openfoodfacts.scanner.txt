@@ -13,25 +13,26 @@ Info about 15000 foods and if the info is incorrect you can change it.
 .
 
 Repo Type:git
-Repo:https://github.com/dalb8/openfoodfacts-android.git
+Repo:https://github.com/openfoodfacts/openfoodfacts-android.git
 
-Build:1.3,9
-    commit=75791cef0278f
-    subdir=cordova/platforms/android
-    extlibs=android/android-support-v4.jar
-    srclibs=Wildabeast-BarcodeScanner@1.0.1
-    rm=cordova/platforms/android/custom_rules.xml
-    prebuild=cd ../../; cordova plugin add ../../srclib/Wildabeast-BarcodeScanner && \
-      cordova prepare
-    build=android update project -p . -s; cd ../../; cordova compile --release
-    output=bin/MainActivity-release-unsigned.apk
+Build:1.3,8
+    commit=244f2ebb4c9bec
+    subdir=phonegap/Open Food Facts
+    target=android-15
+    srclibs=Wildabeast-BarcodeScanner@d9f9f2dc9bf5e
+    prebuild=mv assets/www/barcodescanner.js . && \
+       mv src/com/phonegap/plugins/barcodescanner/BarcodeScanner.java . && \
+       rm res/values-fr/strings.xml && \
+       plugman --platform android --project . --plugin $$Wildabeast-BarcodeScanner$$ && \
+       mv BarcodeScanner.java src/com/phonegap/plugins/barcodescanner/ && \
+       mv barcodescanner.js assets/www
 
 Maintainer Notes:
 cordova create cordova org.openfoodfacts.scanner "Open Food Facts"
 cd cordova; cordova platform add android
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:1.3
 Current Version Code:8
 
