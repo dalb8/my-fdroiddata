@@ -21,7 +21,7 @@ you will be glued to your phone for hours. Watch out for sore fingers!
 * 25 different shooting locations
 * Unlock new weapons, skills and spill more blood
 * Optimized to run even on 1st Gen Android phones
-* All resources are free as in freedom (in f-droid.org version)
+* All resources are free as in freedom (in this version anyway)
 
 Zeemote isn't supported and Google Analytics was removed before building.
 .

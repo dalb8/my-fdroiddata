@@ -23,13 +23,14 @@ Build:1.3,8
     prebuild=mv assets/www/barcodescanner.js . && \
        mv src/com/phonegap/plugins/barcodescanner/BarcodeScanner.java . && \
        rm res/values-fr/strings.xml && \
-       plugman --platform android --project . --plugin $$Wildabeast-BarcodeScanner$$ && \
+       npm install plugman && \
+       ./node_modules/.bin/plugman install --platform android --project . --plugin $$Wildabeast-BarcodeScanner$$ && \
        mv BarcodeScanner.java src/com/phonegap/plugins/barcodescanner/ && \
-       mv barcodescanner.js assets/www
+       mv barcodescanner.js assets/www/
 
 Maintainer Notes:
-cordova create cordova org.openfoodfacts.scanner "Open Food Facts"
-cd cordova; cordova platform add android
+Need npm installed: to cache nodejs modules use npm install -g but to do
+this without root you must edit ~/.npmrc
 .
 
 Update Check Mode:RepoManifest
