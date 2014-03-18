@@ -10,27 +10,28 @@ Auto Name:Open Food Facts
 Summary:Look up info about foods
 Description:
 Info about 15000 foods and if the info is incorrect you can change it.
-
-The barcode scanner won't work.
 .
 
 Repo Type:git
-Repo:https://github.com/openfoodfacts/openfoodfacts-android.git
+Repo:https://github.com/dalb8/openfoodfacts-android.git
 
 Build:1.3,9
-    commit=454dbf41ed3269
-    subdir=phonegap/Open Food Facts
+    commit=75791cef0278f
+    subdir=cordova/platforms/android
+    extlibs=android/android-support-v4.jar
     srclibs=Wildabeast-BarcodeScanner@1.0.1
-    target=android-15
-    prebuild=sed -i '5 i \\t<string name="share_name">share_name<\/string>' res/values/strings.xml 
-    build=echo 'sdk.dir=$$SDK$$' >> $$Wildabeast-BarcodeScanner$$/local.properties && \
-       ant release -f $$Wildabeast-BarcodeScanner$$/build.xml && \
-       mv $$Wildabeast-BarcodeScanner$$/bin/classes.jar libs/
+    rm=cordova/platforms/android/custom_rules.xml
+    prebuild=cd ../../; cordova plugin add ../../srclib/Wildabeast-BarcodeScanner && \
+      cordova prepare
+    build=android update project -p . -s; cd ../../; cordova compile --release
+    output=bin/MainActivity-release-unsigned.apk
 
 Maintainer Notes:
+cordova create cordova org.openfoodfacts.scanner "Open Food Facts"
+cd cordova; cordova platform add android
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:1.3
 Current Version Code:8
 
