@@ -1,0 +1,28 @@
+Categories:Science & Education
+License:Apache2
+Web Site:http://pruss.mobi
+Source Code:http://code.google.com/p/astroobserver/source/list
+Issue Tracker:http://code.google.com/p/astroobserver/issues/list
+
+Auto Name:Open Star Map
+Summary:Identify stars
+Description:
+Fork of Sky Map.
+.
+
+Repo Type:git-svn
+Repo:http://astroobserver.googlecode.com/svn/trunk
+
+Build:1.0.6,6
+    commit=17
+    subdir=app
+    rm=tools,test
+
+Maintainer Notes:
+not on gplay
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.6
+Current Version Code:6
+

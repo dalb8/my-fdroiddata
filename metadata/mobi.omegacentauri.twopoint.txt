@@ -1,0 +1,27 @@
+Categories:
+License:Apache2
+Web Site:http://pruss.mobi
+Source Code:http://code.google.com/p/twopointheight/source/list
+Issue Tracker:http://code.google.com/p/twopointheight/issues/list
+
+Auto Name:Two Point Height
+Summary:Measure the height of things
+Description:
+Quickly measure the heights of buildings, trees, stomp rocket flights, etc., 
+by first pointing the camera at one end of the object and then the other.
+
+For greater precision you should fill in the height at which you hold the 
+device and your distance from the object.
+.
+
+Repo Type:git-svn
+Repo:http://twopointheight.googlecode.com/svn/trunk
+
+Build:0.02,2
+    commit=6
+    srclibs=1:ActionBarSherlock@4.4.0
+
+Update Check Mode:RepoManifest
+Current Version:0.02
+Current Version Code:2
+

@@ -1,0 +1,27 @@
+Categories:
+License:NewBSD
+Web Site:http://pruss.mobi
+Source Code:http://code.google.com/p/tinylaunch/source/list
+Issue Tracker:http://code.google.com/p/tinylaunch/issues/list
+
+Auto Name:TinyLaunch
+Summary:Simple home screen
+Description:
+No description available
+.
+
+Repo Type:git-svn
+Repo:http://tinylaunch.googlecode.com/svn/trunk
+
+Build:0.11,11
+    commit=29
+    target=android-10
+    prebuild=sed -i '9s/3/4/' AndroidManifest.xml
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.11
+Current Version Code:11
+
