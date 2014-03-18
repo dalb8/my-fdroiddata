@@ -6,10 +6,20 @@ source $FDROIDSERVER/completion/bash-completion
 
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias gc='git checkout'
+alias gcm='git checkout master'
+alias gba='git branch -a'
+alias gst='git stash' 
+alias gca='git commit -a' 
+alias gfo='git fetch origin' 
+alias gp='git pull' 
+alias gl='git log' 
+alias glp='git log -p' 
 
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
 alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
+alias fempty="mv tmp/apkcache . && rm tmp/* && mv apkcache tmp/"
 
 alias fd='fdroid'
 complete -F _fdroid fd
@@ -26,6 +36,7 @@ complete -F _fdroid_checkupdates fcheck
 alias gradle-1.9='~/.gradle/wrapper/dists/gradle-1.9-bin/qtvcssosa3asn4t6njd64fm3i/gradle-1.9/bin/gradle'
 alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle'
 alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle'
+# note: use $$MVN3$$ in metadata
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
 alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
 
@@ -33,10 +44,9 @@ function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
-function jsgnd() { jarsigner -keystore /home/gerry/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey ;}
-function zipn() { zipalign -f 4 "$@" app.apk ;}
+function jdi() { echo android | jarsigner -keystore /home/gerry/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey && zipalign -f 4 "$@" app.apk && adb install -r app.apk && rm app.apk ;}
 function badj() { aapt d badging "$@"  |less ;}
-function plogcat() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
+function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 
 export ANDROID_HOME=/home/gerry/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
@@ -46,5 +56,5 @@ export ANDROID_NDK=/home/gerry/android-ndk-r9c
 export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
 
-export PATH=${PATH}:/sbin:/usr/sbin:${ANDROID_HOME}/platform-tools:${BUILD_TOOLS_1903}:${ANDROID_HOME}/tools:${ANDROID_NDK}:${FDROIDSERVER}:${MYFDROIDDATA}/tools:${M2}
+export PATH=${PATH}:/sbin:/usr/sbin:${ANDROID_HOME}/platform-tools:${BUILD_TOOLS_1903}:${ANDROID_HOME}/tools:${ANDROID_NDK}:${FDROIDSERVER}:${MYFDROIDDATA}/tools:${M2}:~/npm/bin
 
