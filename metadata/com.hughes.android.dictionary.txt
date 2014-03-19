@@ -16,7 +16,7 @@ the wiki page on the website.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/quickdic-dictionary.dictionary/
+Repo:https://code.google.com/p/quickdic-dictionary.dictionary
 
 Build:5.0.1,25
     commit=97678ecfbd78a2

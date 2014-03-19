@@ -16,7 +16,7 @@ Apps can be loaded directly from the likes of [[org.coolreader]].
 .
 
 Repo Type:git-svn
-Repo:https://smashwords-access-for-android.googlecode.com/svn/trunk/
+Repo:https://smashwords-access-for-android.googlecode.com/svn/trunk
 
 Build:014 beta,14
     commit=33

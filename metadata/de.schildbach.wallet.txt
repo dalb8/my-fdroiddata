@@ -28,23 +28,13 @@ display for some seconds.
 Repo Type:git
 Repo:https://github.com/schildbach/bitcoin-wallet
 
-Build:3.19,140
-    commit=885f13e01a86
-    subdir=wallet
-    maven=yes@..
-    srclibs=BitcoinJWallet@1134572f61
-    prebuild=sed -i '30,33d' pom.xml && \
-        cp -r $$BitcoinJWallet$$/ . && \
-        rm -rf market/
-    build=$$MVN3$$ clean install -DskipTests -f BitcoinJWallet/pom.xml
-
 Build:3.27,148
     commit=5787167f05b8
     subdir=wallet
     maven=yes@..
-    srclibs=BitcoinJWallet-origin@v0.10.3
+    srclibs=BitcoinJ@v0.10.3
     prebuild=sed -i '73s/3.7.0/3.8.0/g' ../pom.xml
-    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJWallet-origin$$/pom.xml
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
 
 Maintainer Notes:
 This won't build proguard: need to run mvn -Prelease for that.

@@ -28,7 +28,7 @@ Hunky Punk, created by Rafał Rzepecki, which hasn't been updated in a while.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/hunkypunk/
+Repo:https://code.google.com/p/hunkypunk
 
 Build:0.3,1
     commit=14ecc2a0d37c

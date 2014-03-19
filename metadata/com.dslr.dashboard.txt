@@ -18,7 +18,7 @@ See the website for lots of info and changelog.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/dslrdashboard/
+Repo:https://code.google.com/p/dslrdashboard
 
 Build:0.30.6,21
     disable=see below
