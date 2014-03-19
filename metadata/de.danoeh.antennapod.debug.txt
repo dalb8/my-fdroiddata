@@ -28,27 +28,26 @@ Repo:https://github.com/danieloeh/AntennaPod.git
 
 Build:0.9.8.2,35
     commit=0.9.8.2
-    patch=srclib_34.patch
+    output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
     srclibs=PrestoClient@3d7444,DragSort-danoeh@1bb29afb91f
+    patch=srclib_34.patch
     prebuild=ln -s $(readlink -f $$PrestoClient$$) submodules/PrestoClient && \
-         rm -f submodules/dslv/library && \
-         ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
-         sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
-         sed -e '55 i \\t\tdebuggable false' -e '63 i \\tlintOptions {\n\t\tabortOnError false\n\t}' -i build.gradle && \
-         cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
+        rm -f submodules/dslv/library && \
+        ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
+        sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
+        sed -e '55 i \\t\tdebuggable false' -e '63 i \\tlintOptions {\n\t\tabortOnError false\n\t}' -i build.gradle && \
+        cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
     build=gradle-1.10 assembleDebug && \
         zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
-    output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
 
 Maintainer Notes:
 Uses submodules
 
-Reference Package:de.danoeh.antennapod
-
 Remember to sign with debug key!
 .
 
-Update Check Mode:None
+Update Check Mode:Tags
+Update Check Name:de.danoeh.antennapod
 Current Version:0.9.8.2
 Current Version Code:35
 
