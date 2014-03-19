@@ -43,6 +43,7 @@ Build:0.60-test,600
     disable=test
     commit=943005
     submodules=yes
+    patch=default-repo.patch
     update=no
     prebuild=./ant-prepare.sh
 
