@@ -1,7 +1,7 @@
 #! /bin/bash
 # Since fdroid update -b doesn't work…
 exec > "$MYFDROIDDATA/logs/to-update.log"
-for i in $MYFDROIDDATA/metadata/*.txt
+for i in $(grep -L '^Disabled:\|^Update Check Mode:Static' $MYFDROIDDATA/metadata/*.txt)
 do 	echo "$(basename -s .txt $i):"
         echo " "
 	tac $i | grep -m 1 'Build:'
