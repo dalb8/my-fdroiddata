@@ -17,19 +17,16 @@ computer without needing a cable.
 Repo Type:git
 Repo:https://github.com/ppareit/swiftp.git
 
-Build:2.6,29
-    commit=v2.6
+Build:2.8.1,20801
+    commit=v2.8.1
+    subdir=paid
+    init=mkdir -p src
     rm=promo,test,doc
-
-Build:2.7.2,20702
-    commit=v2.7.2
-    rm=promo,test,doc
-    prebuild=sed -i '/library=true/d' project.properties
 
 Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:2.7.2
-Current Version Code:20702
+Current Version:2.8.1
+Current Version Code:20801
 
