@@ -23,6 +23,7 @@ alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
 alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
 alias fempty="mv tmp/apkcache . && rm tmp/* && mv apkcache tmp/"
+alias fcv="grep 'Current Version:' $MYFDROIDDATA/metadata/$(basename $PWD).txt -C 1 -B 1"
 alias fd='fdroid'
 complete -F _fdroid fd
 # For some reason I need to do one completion of `fd` before the others work
@@ -50,8 +51,11 @@ function jdi() { echo android | jarsigner -keystore ~/.android/debug.keystore -d
 function jr() { jarsigner -keystore ~/.local/share/fdroidserver/keystore.jks -digestalg SHA1 -sigalg SHA1withRSA "$1" "$2" ;}
 function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
+function ymca-make() { echo -e "TARGET=$1\nACTIVITY=$(basename $PWD)/$(basename $PWD).$2\nDEVICE=ALL\ninclude YMCA.mk" > Makefile.ymca ;}
+function ymca() { make -f Makefile.ymca -I $MYFDROIDDATA/templates "$1" ;}
 
 export ANDROID_HOME=~/android-sdk-linux
+export ANDROID_SDK=~/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
 export BUILD_TOOLS_1903=${ANDROID_HOME}/build-tools/19.0.3
 export ANDROID_NDK=~/android-ndk-r9c
