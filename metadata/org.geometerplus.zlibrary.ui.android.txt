@@ -16,29 +16,38 @@ online OPDS libraries like Project Gutenberg straight from the app.
 F-Droid.org has two other addon apps that provide text-to-speech functionality 
 and one to support ''local'' OPDS shares.
 
+This version is only for Android 4+, though older platforms are supported.
+
 Anti-features: Addons. While there are some addons for this app that are free, 
 the dictionaries that are suggested are not. However, it does support 
 [[aarddict.android]], as long as that is installed beforehand '''and'''
 you choose it via the Dictionary section of the settings.
+
+Newer versions include proprietary libraries.
 .
 
 Repo Type:git
 Repo:https://github.com/geometer/FBReaderJ.git
 
-Build:1.8.2-Honeycomb+,108022
-    commit=1112df415d
-    forceversion=yes
-    prebuild=mkdir res/drawable && \
-        find icons -iname "*.*" -exec cp {} res/drawable \;
-    buildjni=yes
+Build:1.8.2,108022
+    commit=1.8.2-ics
+    init=rm build.xml && \
+      sed -i 's/android-11/android-12/' third-party/AmbilWarna/project.properties && \
+      echo "APP_CFLAGS+=-Wno-error=format-security" >> jni/Application.mk && \
+      mkdir res/drawable && \
+      find icons -iname "*.*" -exec cp {} res/drawable \;
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
+    buildjni=no
 
 Maintainer Notes:
-Three branches: android-1.5, master and ice-cream-sandwich. Tags can be from any branch
+Three branches can be used: android-1.5, master and ice-cream-sandwich. 
 
-Cross reference tags and website to get the CV
+Now using what look like proprietary libraries:
+    rm=libs/LingvoIntegration_2.5.2.12.jar,libs/open-dictionary-api-1.2.1.jar
 .
 
-Update Check Mode:None
-Current Version:1.9.5.3
-Current Version Code:2000000
+##Update Check Mode:Tags .*-ics
+Update Check Mode:Static
+Current Version:1.8.2
+Current Version Code:108022
 
