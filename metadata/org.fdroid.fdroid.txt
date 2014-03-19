@@ -53,6 +53,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags .*[0-9]$
-Current Version:0.58
-Current Version Code:580
+Current Version:0.59-test
+Current Version Code:590
 
