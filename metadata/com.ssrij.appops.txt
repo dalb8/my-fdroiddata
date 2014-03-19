@@ -10,7 +10,11 @@ Auto Name:AppOps
 Summary:App Ops for post 4.4.2
 Description:
 App Ops compiled from AOSP via theblixguy.
+
 '''Move to /system/priv-app and set permissions to 644 and reboot'''
+Easiest way to do this is via adb: 
+adb root; adb remount; adb push app.apk system/priv-app/; 
+adb shell chmod 644 system/priv-app/app.apk; adb remount; adb reboot
 .
 
 Repo Type:git
