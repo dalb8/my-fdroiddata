@@ -1,11 +1,14 @@
-export FDROIDDATA=/home/gerry/shroiddata
-export FDROIDSERVER=/home/gerry/fdroidserver
-export MYFDROIDDATA=/home/gerry/fdroiddata
+export FDROIDDATA=~/shroiddata
+export FDROIDSERVER=~/fdroidserver
+export MYFDROIDDATA=~/fdroiddata
 
 source $FDROIDSERVER/completion/bash-completion
 
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias gd='git diff'
+alias gt='git tag'
+alias gsh='git show'
 alias gc='git checkout'
 alias gcm='git checkout master'
 alias gba='git branch -a'
@@ -20,7 +23,6 @@ alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
 alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
 alias fempty="mv tmp/apkcache . && rm tmp/* && mv apkcache tmp/"
-
 alias fd='fdroid'
 complete -F _fdroid fd
 # For some reason I need to do one completion of `fd` before the others work
@@ -44,14 +46,15 @@ function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
-function jdi() { echo android | jarsigner -keystore /home/gerry/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey && zipalign -f 4 "$@" app.apk && adb install -r app.apk && rm app.apk ;}
+function jdi() { echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey && zipalign -f 4 "$@" app.apk && adb install -r app.apk && rm app.apk ;}
+function jr() { jarsigner -keystore ~/.local/share/fdroidserver/keystore.jks -digestalg SHA1 -sigalg SHA1withRSA "$1" "$2" ;}
 function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 
-export ANDROID_HOME=/home/gerry/android-sdk-linux
+export ANDROID_HOME=~/android-sdk-linux
 export BUILD_TOOLS_1902=${ANDROID_HOME}/build-tools/19.0.2
 export BUILD_TOOLS_1903=${ANDROID_HOME}/build-tools/19.0.3
-export ANDROID_NDK=/home/gerry/android-ndk-r9c
+export ANDROID_NDK=~/android-ndk-r9c
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
