@@ -21,13 +21,6 @@ section of the Settings.
 Repo Type:git
 Repo:git://crengine.git.sourceforge.net/gitroot/crengine/crengine
 
-Build:3.1.2-27,847
-    commit=cr3-3.1.2-27
-    subdir=android
-    target=android-16
-    rm=android/ant.properties
-    buildjni=yes
-
 Build:3.1.2-39,859
     commit=004663ff92ea5698
     subdir=android

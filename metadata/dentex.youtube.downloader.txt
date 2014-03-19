@@ -4,8 +4,6 @@ AntiFeatures:UpstreamNonFree
 Categories:Multimedia
 License:GPLv3
 Web Site:https://sourceforge.net/projects/ytdownloader
-Source Code:https://github.com/dentex/ytdownloader
-Issue Tracker:https://github.com/dentex/ytdownloader/issues
 
 Auto Name:YouTube Downloader
 Summary:Download files from YouTube
@@ -16,34 +14,22 @@ quality. Optionally,
 you can send it via ssh to another computer. It isn't necessary
 to have the YouTube app: URLs can be shared from the browser.
 
-See the source code page for a changelog.
-
 A proprietary crash reporting library was removed.
 
 Status: There is 
-[http://forum.xda-developers.com/showpost.php?p=49761727&postcount=1270 no source code]for latest versions.
+[http://forum.xda-developers.com/showpost.php?p=49761727&postcount=1270 no source code] 
+for latest versions.
 .
-
-#Repo Type:git
-#Repo:https://github.com/dentex/ytdownloader.git
-
-Build:3.5.4,75
-    commit=3.5.4
-    disable=source code gone; get tarball from f-droid.org
-    subdir=dentex.youtube.downloader
-    prebuild=find .. -type f -print0 | xargs -0 sed -i '/BugSenseHandler/d' && \
-        rm -rf $(find .. -name bugsense-3.6.jar) libs/armeabi* && \
-        mkdir -p ../dentex.youtube.downloader.strings/src && \
-        tar xvf ../FFmpeg_and_lame_sources/liblame.tar.gz && \
-        mv liblame/jni . 
-    buildjni=yes
 
 Maintainer Notes:
 Building ffmpeg is possible (for arm/x86) but need to use the script which
 copies lame binaries into NDK.
+
+Repo disappeared: use local source code or f-droid.org tarballs.
 .
 
 Update Check Mode:Static
+#In Repo:3.5.4,75
 Current Version:3.5.4
 Current Version Code:75
 

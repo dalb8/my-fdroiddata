@@ -17,6 +17,7 @@ Build:1.0.6,6
     commit=17
     subdir=app
     rm=tools,test
+    prebuild=find app/res -type f -print0 | xargs -0 sed -i 's/Google Sky/Open Sky/g'
 
 Maintainer Notes:
 not on gplay

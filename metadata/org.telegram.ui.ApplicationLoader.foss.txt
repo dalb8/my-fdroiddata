@@ -47,9 +47,7 @@ Build:1.3.21,160
     buildjni=no
 
 Maintainer Notes:
-patch changes the package name because it is identical to the upstream
-as a result UCM is None
-
+patch changes the package name because that is identical to the upstream
 .
 
 Update Check Mode:Tags
