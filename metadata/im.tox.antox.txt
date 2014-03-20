@@ -22,9 +22,9 @@ Build:0.6.6-ARMv7,12
     srclibs=Sodium@dbe51e8ff86,Toxcore@9d06e4,JToxcore@v0.5.1,Zxing@zxing-3.0.0
     build=\
         sed -i '/preview/d' src/main/java/im/tox/antox/tox/ToxService.java && \
-        sed -i '/wearable-preview/d;10 i versionNameSuffix -ARMv7' build.gradle && \
+        sed -i '/wearable-preview/d;14 i \\\tversionNameSuffix "-ARMv7"' build.gradle && \
         mkdir -p src/main/jniLibs/armeabi-v7a && \
-        export JAR=$PWD/libs ARM7=$PWD/src/main/jniLibs/armeabi-v7a && \
+        export JAR=$PWD/libs ARM7=$PWD/src/main/jniLibs/armeabi-v7a ZXING_HOME=$(readlink -f $$Zxing$$) && \
         export ANDROID_NDK_HOME=$$NDK$$ JTOXCORE_HOME=$(readlink -f $$JToxcore$$) && \
         export SODIUM_HOME=$(readlink -f $$Sodium$$) TOXCORE_HOME=$(readlink -f $$Toxcore$$) && \
         cd $SODIUM_HOME && \
@@ -44,10 +44,10 @@ Build:0.6.6-ARMv7,12
         mkdir build-android; cd build-android && \
         cmake .. -DCMAKE_TOOLCHAIN_FILE=../arm.cmake -DJNI_H=$TOOLCHAIN_DIR/sysroot/usr/include -DNEED_JNI_MD=n && \
         make && \
-        mv build/src/jToxcore-0.5.1.jar $JAR && \
-        mv build/jni/libjtoxcore.so $ARM7 && \
-        $$MVN3$$ package -DskipTests -f $$Zxing$$/core/pom.xml && \
-        mv $$Zxing$$/android/libs/core-3.0.0.jar $JAR/core.jar 
+        mv src/jToxcore-0.5.1.jar $JAR && \
+        mv jni/libjtoxcore.so $ARM7 && \
+        $$MVN3$$ package -DskipTests -f $ZXING_HOME/core/pom.xml && \
+        mv $ZXING_HOME/android/libs/core-3.0.0.jar $JAR/core.jar 
 
 Maintainer Notes:
 The dist scripts don't seem to be installing the libraries to the correct location;
