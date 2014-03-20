@@ -1,0 +1,64 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Internet
+License:GPLv3
+Web Site:https://tox.im
+Source Code:https://github.com/Astonex/Antox
+Issue Tracker:https://github.com/Astonex/Antox/issues
+
+Summary:Messaging
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/Astonex/Antox.git
+
+Build:0.6.6,12
+    disable=strange error when building with fdroid: later a problem with cmake 
+    commit=master
+    subdir=app
+    gradle=yes
+    rm=app/libs/jToxcore-0.5.1.jar,app/libs/core.jar,app/libs/wearable-preview-support.jar,app/src/main/jniLibs/armeabi/libsodium.so,app/src/main/jniLibs/armeabi/libtoxcore.so,app/src/main/jniLibs/armeabi/libjtoxcore.so
+    srclibs=Sodium@dbe51e8ff86,Toxcore@9d06e4,JToxcore@v0.5.1,Zxing@zxing-3.0.0
+    build=\
+        mkdir -p libs src/main/jniLibs/armeabi-v7a && \
+        export JAR=$PWD/libs; export ARM7=$PWD/src/main/jniLibs/armeabi-v7a && \
+        export ANDROID_NDK_HOME=$$NDK$$ && \
+        cd $(readlink -f $$Sodium$$) && \
+       ./autogen.sh && \
+        sed -i 's/-j3/-j2/' dist-build/android-build.sh && \
+       ./dist-build/android-armv7.sh && \
+        cd $(readlink -f $$Toxcore$$) && \
+       ./autogen.sh && \
+       ./dist-build/android-armv7.sh && \
+        cd $(readlink -f $$JToxcore$$) && \
+        echo -e "SET(CMAKE_SYSTEM_NAME Linux)\nSET(CMAKE_C_COMPILER $TOOLCHAIN_DIR/bin/arm-linux-androideabi-gcc)\nSET(CMAKE_CXX_COMPILER $TOOLCHAIN_DIR/bin/arm-linux-androideabi-g++)\nSET(CMAKE_FIND_ROOT_PATH $TOOLCHAIN_DIR/sysroot)\nSET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)\nSET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)\nSET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)\nadd_definitions(-DANDROID)" > arm.cmake && \
+        mkdir build-android; cd build-android && \
+        cmake .. -DCMAKE_TOOLCHAIN_FILE=../arm.cmake -DJNI_H=$TOOLCHAIN_DIR/sysroot/usr/include -DNEED_JNI_MD=n && \
+        make && \
+        mv build/src/jToxcore-0.5.1.jar $JAR && \
+        mv build/jni/libjtoxcore.so $ARM7 && \
+        mv $(readlink -f $$Sodium$$)/libsodium-android-armv7/lib/libsodium.so $ARM7 && \
+        mv $(readlink -f $$Toxcore$$)/toxcore-android-armv7/lib/libtoxcore.so $ARM7 && \
+        $$MVN3$$ package -DskipTests -f $$Zxing$$/core/pom.xml && \
+        mv $$Zxing$$/android/libs/core-3.0.0.jar $JAR
+
+Maintainer Notes:
+Looks like package name will change soon.
+
+To get all source in a tarball:
+        mkdir ../Toxcore ../JToxcore ../Sodium ../Zxing
+        cp -r $$Toxcore$$/* ../Toxcore && \
+        cp -r $$JToxcore$$/* ../JToxcore && \
+        cp -r $$Sodium$$/* ../Sodium && \
+        cp -r $$Zxing$$/* ../Zxing && \
+        "${ANDROID_NDK_HOME}/build/tools/make-standalone-toolchain.sh" --ndk-dir="${ANDROID_NDK_HOME}" --toolchain=arm-linux-androideabi-4.6 --system=linux-x86 --install-dir=$PWD/../Toolchain --platform=android-9 && \
+        export TOOLCHAIN_DIR=$PWD/Toolchain && \
+    extlibs=jsoup/jsoup-1.7.2.jar
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.6.6
+Current Version Code:9999999
+

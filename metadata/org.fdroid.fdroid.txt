@@ -39,15 +39,19 @@ Build:0.55,550
     srclibs=1:ImageLoader@v1.9.0
     patch=play_53.patch
 
-Build:0.60-test,600
+Build:0.61-test,610
     disable=test
-    commit=943005
+    commit=0.61-test
     submodules=yes
     patch=default-repo.patch
     update=no
     prebuild=./ant-prepare.sh
 
 Maintainer Notes:
+    init=sed -i "60 i \\\tdefaultConfig{packageName 'org.appz.fdroid'}" build.gradle && \
+      sed -i 's/compileSdkVersion 7/compileSdkVersion  8/' extern/MemorizingTrustManager/build.gradle && \
+      sed -i 's/0.4.2/0.7.+/;38,41d' extern/AndroidPinning/build.gradle 
+
     patch=play_570.patch
 
     rm=res/drawable-xxhdpi;res/drawable-xhdpi;res/drawable-hdpi
