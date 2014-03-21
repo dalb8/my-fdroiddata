@@ -5,6 +5,8 @@ License:GPLv2
 Web Site:http://www.busydoingnothing.co.uk/prevo
 Source Code:http://git.busydoingnothing.co.uk/cgit.cgi/prevo-android.git
 Issue Tracker:
+Bitcoin:16mQGTBWHx5wT2XX5YEGsU2sDqwSiP2wBn
+FlattrID:2653025
 
 Summary:Esperanto dictionary
 Description:
