@@ -1,0 +1,40 @@
+# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# See https://gitorious.org/asdgasd/my-fdroiddata
+AntiFeatures:Tracking,NonFreeNet
+Categories:Navigation
+License:Apache2
+Web Site:
+Source Code:https://github.com/microg/AppleWifiNlpBackend
+Issue Tracker:https://github.com/microg/AppleWifiNlpBackend/issues
+
+Summary:Plugin for Nlp
+Description:
+A  provider for
+[https://github.com/microg/android_packages_apps_UnifiedNlp Nlp]
+that uses Apple Corporation's database of WiFi access points 
+to make your current location available to other apps. 
+
+Location calculation is done on-device and WiFi locations are cached to 
+minimize data usage.
+
+Nlp (not yet available)
+needs to be installed already as System app.
+.
+
+Repo Type:git
+Repo:https://github.com/microg/AppleWifiNlpBackend.git
+
+Build:1.0.0,1000
+    commit=v1.0.0
+    target=android-19
+    srclibs=1:Nlp@v1.0.0,2:MapsAPI@v0.5,Wire@wire-1.2.0
+    prebuild=echo 'source.dir=$$Wire$$/src/main/java;src' >> ant.properties 
+
+Maintainer Notes:
+Neither the main app, MapsAPI nor NlpAPI have targets
+.
+
+#Update Check Mode:Tags
+Current Version:1.0.0
+Current Version Code:1000
+

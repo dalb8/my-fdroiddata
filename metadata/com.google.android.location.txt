@@ -42,6 +42,7 @@ Build:1.3.2,1302
     maven=yes
 
 Maintainer Notes:
+Moving to https://github.com/microg/android_packages_apps_UnifiedNlp
 .
 
 Update Check Mode:Tags
