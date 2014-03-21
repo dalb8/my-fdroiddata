@@ -16,17 +16,14 @@ Repo Type:git
 Repo:https://github.com/OnlyInAmerica/OpenSpritz-Android.git
 
 Build:1.0,1
-    commit=c7eea6b3c6f
+    commit=5bf4e8
     subdir=app
     gradle=yes
-    init=sed -i 's/30sp/24sp/' src/main/res/layout/fragment_spritz.xml && \
-      sed -i 's/35sp/24sp/' src/main/res/layout-w300dp-h400dp/fragment_spritz.xml && \
-      sed -i 's/50sp/24sp/' src/main/res/layout-w500dp/fragment_spritz.xml
+    init=sed -i 's/"spritzer_text_view_text_size">35sp/"spritzer_text_view_text_size">28sp/' src/main/res/values-w300dp-h400dp/dimens.xml
     rm=app/libs/epublib-core-latest.jar
     srclibs=Epublib@ff14999c509e6e3
     prebuild=$$MVN3$$ package -DskipTests -f $$Epublib$$/pom.xml && \
-        mv $$Epublib$$/target/epublib-core-3.1.jar libs/ && \
-        sed -i '12 i enforceUniquePackageName false' build.gradle
+        mv $$Epublib$$/target/epublib-core-3.1.jar libs/
 
 Update Check Mode:RepoManifest
 Current Version:1.0
