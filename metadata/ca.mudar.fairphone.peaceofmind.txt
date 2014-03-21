@@ -15,7 +15,7 @@ a phone that's made from ethically-sourced materials.
 Would you like to disconnect, if only for a moment? 
 Your phone will go silent and disconnect from the world: no e-mail, no status 
 updates, no SMS and no phone calls. 
-Choose how long you wish to disconnect (up to 3 hours).
+Choose how long you wish to disconnect (up to 12 hours).
 
 Requires root on Android 4.2+ to put the phone in Airplane Mode; if 
 the request is declined only Silent Mode will be enabled instead.
@@ -24,20 +24,18 @@ the request is declined only Silent Mode will be enabled instead.
 Repo Type:git
 Repo:https://github.com/mudar/Fairphone
 
-Build:1.1,10
-    commit=3c2b38f6a47e4c
+Build:1.2,12
+    commit=3c8548675fd8df
     subdir=FairphonePeaceOfMind
-    gradle=defaultFlavor
-    rm=FairphonePeaceOfMind/libs/RootTools-3.3.jar,FairphoneHome,FairphoneUpdater,APK
-    srclibs=RootTools-new@3.4
-    prebuild=sed -i "/^    compile files/d" build.gradle && \
-        sed -i "37 i \ \ \ \ compile project(':RootTools-new')" build.gradle && \
-        echo "include ':RootTools-new'" >> ../settings.gradle && \
-        ln -s $(readlink -f $$RootTools-new$$) ../RootTools-new 
+    gradle=fdroidFlavor
+    rm=FairphonePeaceOfMind/libs/RootTools-3.4.jar,FairphoneHome,FairphoneUpdater,APK
+    srclibs=RootTools-new@fe7568833ff4
+    prebuild=\
+        mkdir -p  ../RootToolsSubmodule/RootTools && \
+        ln -s $(readlink -f $$RootTools-new$$) ../RootToolsSubmodule/RootTools/RootTools
 
 Maintainer Notes:
-             sed -i 's/gradle:0.7.+/gradle:0.8.+/g' build.gradle && \
-             sed -i 's/gradle:0.7.+/gradle:0.8.+/g' ../RootTools-new/build.gradle
+Using submodules
 .
 
 Update Check Mode:RepoManifest
