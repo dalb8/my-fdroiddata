@@ -1,11 +1,9 @@
-export FDROIDDATA=~/shroiddata
-export FDROIDSERVER=~/fdroidserver
-export MYFDROIDDATA=~/fdroiddata
-
 source $FDROIDSERVER/completion/bash-completion
 
+alias cdm='cd $MYFDROIDDATA'
+alias cdfd='cd $FDROIDDATA'
 alias aup='android update project -p . -s'
-alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/'"
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/' |less"
 alias gd='git diff'
 alias gt='git tag'
 alias gsh='git show'
@@ -31,14 +29,14 @@ alias fbld='fdroid build -l'
 complete -F _fdroid_build fbld
 alias fbldv='fdroid build -l -v'
 complete -F _fdroid_build fbldv
-alias fbldi='fdroid install -l -v'
+alias fdi='fdroid install -l -v'
 complete -F _fdroid_install fbldi
-alias fcheck='fdroid checkupdates'
+alias fcheck='fdroid checkupdates -v'
 complete -F _fdroid_checkupdates fcheck
 
-alias gradle-1.9='~/.gradle/wrapper/dists/gradle-1.9-bin/qtvcssosa3asn4t6njd64fm3i/gradle-1.9/bin/gradle'
-alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle'
-alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle'
+alias gradle-1.9='~/.gradle/wrapper/dists/gradle-1.9-bin/*/gradle-1.9/bin/gradle'
+alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/*/gradle-1.10/bin/gradle'
+alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/*/gradle-1.11/bin/gradle'
 # note: use $$MVN3$$ in metadata
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
 alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
@@ -49,6 +47,7 @@ function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
 function jdi() { echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey && zipalign -f 4 "$@" app.apk && adb install -r app.apk && rm app.apk ;}
 function jr() { jarsigner -keystore ~/.local/share/fdroidserver/keystore.jks -digestalg SHA1 -sigalg SHA1withRSA "$1" "$2" ;}
+function zipn() { zipalign -f 4 "$@" app.apk ;}
 function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 function ymca-make() { echo -e "TARGET=$1\nACTIVITY=$(basename $PWD)/$(basename $PWD).$2\nDEVICE=ALL\ninclude YMCA.mk" > Makefile.ymca ;}
