@@ -20,7 +20,7 @@ alias glp='git log -p'
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
 alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
-alias fempty="mv tmp/apkcache . && rm tmp/* && mv apkcache tmp/"
+alias fempty="mv tmp/apkcache . && rm tmp/* unsigned/* && mv apkcache tmp/"
 alias fcv="grep 'Current Version:' $MYFDROIDDATA/metadata/$(basename $PWD).txt -C 1 -B 1"
 alias fd='fdroid'
 complete -F _fdroid fd
@@ -29,7 +29,7 @@ alias fbld='fdroid build -l'
 complete -F _fdroid_build fbld
 alias fbldv='fdroid build -l -v'
 complete -F _fdroid_build fbldv
-alias fdi='fdroid install -l -v'
+alias fdi='fdroid install -v'
 complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates -v'
 complete -F _fdroid_checkupdates fcheck

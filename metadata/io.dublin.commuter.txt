@@ -1,0 +1,44 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Navigation
+License:None
+Web Site:http://dublin.io
+Source Code:https://github.com/amorroxic/DublinCommuter
+Issue Tracker:https://github.com/amorroxic/DublinCommuter/issues
+
+Auto Name:Dublin Commuter
+Summary:Timetable for the Luas
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/amorroxic/DublinCommuter
+
+Build:1.0.6,106
+    commit=8adf14
+    init=cordova create Cordova io.dublin.commuter DublinIO && \
+      cd Cordova && \
+      cordova platform add android && \
+      rm -rf www platforms/android/assets/www && \
+      rm $(find platforms/android/res -name icon.png) platforms/android/custom_rules.xml && \
+      cp ../online/icon.png platforms/android/res/drawable/ && \
+      cp ../online/config.xml . && \
+      sed -i '33 i \ \ \ <content src="index.html" \/>\n<access origin="*" \/>' config.xml && \
+      sed -i 's/"0.0.1"/"1.0.6"/;s/"1"/"106"/'  platforms/android/AndroidManifest.xml && \
+      mv ../online www && \
+      cordova -d prepare
+    build=cd Cordova; cordova compile --release
+    output=Cordova/platforms/android/bin/DublinIO-release-unsigned.apk
+
+Maintainer Notes:
+Typical way to convert a web app
+However had to hack on config.xml to get it to load data ?!
+Not sure why AndroidManifest.xml needs to be hacked on too
+
+Touch icon not loading on mdpi?
+.
+
+Update Check Mode:None
+Current Version:1.0.6
+Current Version Code:106
+
