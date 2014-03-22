@@ -13,7 +13,7 @@ echo "Writing to $MYFDROIDDATA/metadata/$PNAME.txt"
 cp -n $MYFDROIDDATA/templates/minimal.txt $MYFDROIDDATA/metadata/$PNAME.txt
 sed -e "s/^Auto Name:$/Auto Name:$LABEL/" -e '/^Repo Type:$/d' -e '/^Repo:$/,+1d' -e '/^Build:$/d' -e '/^    commit=$/,+1d' -i $MYFDROIDDATA/metadata/$PNAME.txt
 sed -i "/^Current Version:/i #In Repo:$CV,$CVC" $MYFDROIDDATA/metadata/$PNAME.txt
-vim $MYFDROIDDATA/metadata/$PNAME.txt
+edit $MYFDROIDDATA/metadata/$PNAME.txt
 
 #echo "#Current Version:$CV" >> $MYFDROIDDATA/metadata/$PNAME.txt
 #echo -e "#Current Version Code:$CVC\n" >> $MYFDROIDDATA/metadata/$PNAME.txt

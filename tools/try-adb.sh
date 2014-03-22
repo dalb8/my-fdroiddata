@@ -27,6 +27,7 @@ adb uninstall $PNAME
 adb shell am start -a android.intent.action.MAIN -c android.intent.category.HOME
 echo "Add to repo? (Press Enter)"
 read
+cp -n templates/minimal.txt metadata/$PNAME.txt
 mv tmp/$PNAME\_00$DATE.apk unsigned/
 touch unsigned/$PNAME\_00$DATE\_src.tar.gz
 fdroid publish $PNAME
