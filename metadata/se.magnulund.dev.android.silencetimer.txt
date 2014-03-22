@@ -14,18 +14,16 @@ a notification will appear telling you when the phone will go
 back to the previous mode, or optionally, the normal mode.
 The length of time or the time of day is also configurable at 
 which it reverts is configurable, as well as the default length.
-
-Hasn't been tested widely and minSdkVersion has been lowered.
 .
 
 Repo Type:git
 Repo:https://github.com/guzno/SilenceTimer.git
 
-Build:1.03,4
-    commit=0df638e971fd
+Build:1.04,5
+    commit=a754699c3b8bc832f
     subdir=SilenceTimer/silencetimer
-    gradle=yes
-    prebuild=sed -i 's/minSdkVersion 18/minSdkVersion 17/g' build.gradle
+    gradle=lite
+    prebuild=sed -i 's/"Google Inc.:Google APIs:19"/19/g' build.gradle
 
 Maintainer Notes:
 .
