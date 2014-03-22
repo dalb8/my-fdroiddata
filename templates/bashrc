@@ -45,7 +45,6 @@ function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
-function jdi() { echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$@" androiddebugkey && zipalign -f 4 "$@" app.apk && adb install -r app.apk && rm app.apk ;}
 function jr() { jarsigner -keystore ~/.local/share/fdroidserver/keystore.jks -digestalg SHA1 -sigalg SHA1withRSA "$1" "$2" ;}
 function zipn() { zipalign -f 4 "$@" app.apk ;}
 function badj() { aapt d badging "$@"  |less ;}
