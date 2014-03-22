@@ -1,0 +1,33 @@
+Categories:Office
+License:GPLv3
+Web Site:http://quickmsg.vreeken.net
+Source Code:http://quickmsg.vreeken.net
+Issue Tracker:
+
+Auto Name:QuickMSG
+Summary:Encrypted messaging
+Description:
+QuickMSG is a secure messaging format and an app of the same name. 
+With it you can send messages either to other contacts directly or to groups. 
+Its aim is to combine the ease of use that messaging apps give with the 
+security of encrypted email. 
+Any IMAP email server can be used.
+
+JARs not verified yet.
+.
+
+Repo Type:git
+Repo:http://quickmsg.vreeken.net/QuickMSG.git
+
+Build:1.0,1
+    commit=20140322
+    init=rm build.xml
+
+Maintainer Notes:
+The usual mail JARs and spongy castle:not verified yet.
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
