@@ -1,0 +1,26 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Science
+License:GPLv3
+Web Site:
+Source Code:https://github.com/ppareit/GameOfLife
+Issue Tracker:https://github.com/ppareit/GameOfLife/issues
+
+Auto Name:Game Of Life (Demo)
+Name:Game Of Life
+Summary:Cellular automaton
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/ppareit/GameOfLife.git
+
+Build:1.4,5
+    commit=v1.4
+    srclibs=1:aFileChooser@bd54b
+
+Update Check Mode:Tags
+Current Version:1.4
+Current Version Code:5
+
