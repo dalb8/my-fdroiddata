@@ -1,0 +1,31 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Internet
+License:GPLv2
+Web Site:
+Source Code:https://code.google.com/p/rsyncdroid/source/list
+Issue Tracker:https://code.google.com/p/rsyncdroid/issues/list
+
+Auto Name:RsyncDroid
+Summary:Synchronise files over SSH
+Description:
+No description available
+.
+
+Repo Type:git-svn
+Repo:http://rsyncdroid.googlecode.com/svn/trunk
+
+Build:0.4,4
+    disable=too basic
+    commit=8
+    srclibs=Rsync@c1704
+    prebuild=ln -s $$Rsync$$ jni
+    scanignore=res/raw/rsync
+    build=$$NDK$$/ndk-build && \
+        mv libs/armeabi/rsync res/raw/rsync
+    buildjni=no
+
+Update Check Mode:RepoManifest
+Current Version:0.4
+Current Version Code:4
+
