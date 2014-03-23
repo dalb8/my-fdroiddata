@@ -16,6 +16,8 @@ alias gfo='git fetch origin'
 alias gp='git pull' 
 alias gl='git log' 
 alias glp='git log -p' 
+alias ga='git add' 
+alias s='less' 
 
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
@@ -51,6 +53,9 @@ function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 function ymca-make() { echo -e "TARGET=$1\nACTIVITY=$(basename $PWD)/$(basename $PWD).$2\nDEVICE=ALL\ninclude YMCA.mk" > Makefile.ymca ;}
 function ymca() { make -f Makefile.ymca -I $MYFDROIDDATA/templates "$1" ;}
+function ghuser() { gnome-open https://github.com/"$1"?tab=repositories ;}
+function gpsearch() { gnome-open https://play.google.com/store/search?q="$1" ;}
+function gsha1() { echo "Copying latest commit number to clipboard..." && echo $(git --no-pager log -1 --pretty=format:%H) |xsel -b ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux

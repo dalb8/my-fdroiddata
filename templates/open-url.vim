@@ -1,6 +1,6 @@
 " Vim function to open URLs
 " via http://vim.wikia.com/wiki/VimTip306. Author: Kartik Agaram
-let $PATH = $PATH . '/usr/bin/firefox'
+let $PATH = $PATH . '/usr/bin/gnome-open'
 " Evoke a web browser
 function! Browser ()
   let line0 = getline (".")
@@ -15,6 +15,6 @@ function! Browser ()
   ":if line==""
   " let line = "\"" . (expand("%:p")) . "\""
   ":endif
-  exec ':silent !firefox ' . "\"" . line . "\"" | redraw!
+  exec ':silent !gnome-open ' . "\"" . line . "\"" | redraw!
 endfunction
 nmap <leader>z :call Browser ()<CR>
