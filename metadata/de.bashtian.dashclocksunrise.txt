@@ -1,0 +1,27 @@
+Categories:Wallpaper
+License:Apache2
+Source Code:https://github.com/bashtian/dashclock-sunrise
+Issue Tracker:https://github.com/bashtian/dashclock-sunrise/issues
+
+Name:DashClock: Sunrise
+Auto Name:DashClock Sunrise Extension
+Summary:Times of sunrise on home screen
+Description:
+Sunrise and Sunset extension for [[net.nurik.roman.dashclock]].
+
+Requires Network Location as manually locations aren't possible.
+.
+
+Repo Type:git
+Repo:https://github.com/bashtian/dashclock-sunrise.git
+
+Build:1.2,3
+    commit=efa76
+    srclibs=DashClock@v1.2;SunriseSunset@77c8d62dbd
+    prebuild=\
+      echo 'source.dir=$$DashClock$$/api/src;$$SunriseSunset$$/src/main;src' >> ant.properties
+
+Update Check Mode:RepoManifest
+Current Version:1.2
+Current Version Code:3
+
