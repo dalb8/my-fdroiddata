@@ -1,0 +1,38 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+AntiFeatures:UpstreamNonFree
+Categories:System
+License:Apache2
+Web Site:
+Source Code:https://github.com/AOKP/external_jbirdvegas_mGerrit
+Issue Tracker:https://github.com/AOKP/external_jbirdvegas_mGerrit/issues
+
+Auto Name:mGerrit
+Summary:Keep track of ROM developments
+Description:
+
+Google Analytics was removed.
+A lot of jars still need checking out.
+.
+
+Repo Type:git
+Repo:https://github.com/AOKP/external_jbirdvegas_mGerrit.git
+
+Build:2.07.000,207000
+    commit=5657a341de12dedad1cf3136eb7cea28db448a2e
+    gradle=yes
+    rm=assets/market,libs/libGoogleAnalyticsServices.jar
+    srclibs=NoAnalytics@v0.3.1
+    prebuild=sed -i '/GoogleAnalytics/d' build.gradle && \
+        cp -a $$NoAnalytics$$/src/com/google src/com/
+
+Maintainer Notes:
+A lot of jars still need checking out
+
+Uses tags but they're ROM milestones
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.07.000
+Current Version Code:207000
+
