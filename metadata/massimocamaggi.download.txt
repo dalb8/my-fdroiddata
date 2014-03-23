@@ -1,0 +1,21 @@
+Categories:None
+License:None
+Web Site:
+Source Code:https://github.com/massimocamaggi/download
+Issue Tracker:https://github.com/massimocamaggi/download/issues
+
+Summary:Download manager
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/massimocamaggi/download.git
+
+Build:3,3
+    disable=have to mkdir res and add an icon
+    commit=032beb300b65c5e2c4c5d6d672993c374744f4b6
+
+Update Check Mode:RepoManifest
+Current Version:3
+Current Version Code:3
+
