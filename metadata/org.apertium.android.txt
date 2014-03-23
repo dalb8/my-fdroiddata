@@ -1,0 +1,46 @@
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
+# See https://gitorious.org/asdgasd/my-fdroiddata
+Categories:Office
+License:GPLv2+
+Web Site:http://wiki.apertium.org/wiki/Main_Page
+Source Code:https://apertium.svn.sourceforge.net/viewvc/apertium/trunk/apertium-mobile/apertium-android
+Issue Tracker:https://lists.sourceforge.net/lists/listinfo/apertium-stuff
+
+Auto Name:Apertium
+Summary:Offline natural language translation
+Description:
+In this version you have to download language pairs via the app; the
+internet isn't used otherwise.
+On smaller phones you are advised to start out installing just one language pair.
+
+You can mark text in e.g. the web browser, and "Share" with Apertium to 
+put it into the translator.
+
+The first translation you do will be probably be slow, on older phones it can take up to a minute.
+The subsequent translations will be faster.
+
+Status: first version
+.
+
+Repo Type:git-svn
+Repo:https://svn.code.sf.net/p/apertium/svn/trunk/apertium-mobile/apertium-android
+
+Build:0.98,98
+    commit=42179
+    rm=libs/bugsense3.0.7.jar,lttoolbox.jar,custom_rules.xml,tests
+    srclibs=Lttoolbox@51126
+    prebuild=find $PWD/src -type f -print0 | xargs -0 sed -i '/bugsense/Id'  && \
+        $$MVN3$$ package -DskipTests -f $$Lttoolbox$$/pom.xml && \
+        mv $$Lttoolbox$$/target/lttoolbox-java-3.2.0-SNAPSHOT.jar libs/lttoolbox.jar && \
+        sed -i '49,54d' src/org/apertium/android/App.java && \
+        sed -i '/proguard.config/d' project.properties
+    scanignore=src/org/apertium
+
+Maintainer Notes:
+Scan finds dexclassloaders
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.981
+Current Version Code:98
+
