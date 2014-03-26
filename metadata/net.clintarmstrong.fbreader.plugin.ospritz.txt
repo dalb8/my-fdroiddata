@@ -1,0 +1,32 @@
+Categories:Reading
+License:MIT
+Web Site:
+Source Code:https://github.com/clinta/FB-Ospritz
+Issue Tracker:https://github.com/clinta/FB-Ospritz/issues
+
+Auto Name:OpenSpritz Plugin
+Summary:Spritz for FBReader
+Description:
+This version only supports Android 3+ but there's another package
+for older platforms.
+
+This has nothing to do with Spritz Inc.
+.
+
+Repo Type:git
+Repo:https://github.com/clinta/FB-Ospritz.git
+
+Build:1.5,13
+    commit=ea8ee62707cbc220f467b2f9c2e2abaecc86d789
+    subdir=net.clintarmstrong.fbreader.plugin.ospritz
+    init=sed -i "20 i configurations.all {\n\ \ \ \ transitive = false\n}" build.gradle 
+    gradle=yes
+
+Maintainer Notes:
+There's another project with Gingerbread support
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.5
+Current Version Code:13
+
