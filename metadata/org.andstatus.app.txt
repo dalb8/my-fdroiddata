@@ -28,6 +28,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:7.1
-Current Version Code:95
+Current Version:8.0
+Current Version Code:96
 

@@ -39,6 +39,7 @@ git --no-pager diff
 
 echo -e "\n\n\033[31m   Prebuilts and assets:"
 echo -e "\033[0m"
+find -L . -name build
 find -L . -name \*jar | grep -v 'gradle\|build\|dexed'
 find -L . -name \*zip -o -name \*.a -o -name \*so -o -name \*apk
 echo " "

@@ -25,7 +25,7 @@ Maintainer Notes:
 Slightly unreliable, tag-wise
 .
 
-Update Check Mode:RepoManifest
-Current Version:3.1
-Current Version Code:11
+#Update Check Mode:Tags
+Current Version:3.2
+Current Version Code:12
 
