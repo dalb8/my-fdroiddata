@@ -9,6 +9,8 @@ Issue Tracker:https://github.com/renard314/textfairy/issues
 Auto Name:Text Fairy
 Summary:Optical character recognition
 Description:
+'''The starred version is for ARMv7, the one below is for ARM'''
+
 * Edit and copy extracted text
 * Convert images to pdf
 * Recognize text in images

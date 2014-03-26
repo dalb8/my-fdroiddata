@@ -5,10 +5,12 @@ Source Code:https://github.com/clinta/FB-Ospritz
 Issue Tracker:https://github.com/clinta/FB-Ospritz/issues
 
 Auto Name:OpenSpritz Plugin
+Name:FBReader: OpenSpritz
 Summary:Spritz for FBReader
 Description:
 This version only supports Android 3+ but there's another package
 for older platforms.
+Install [[org.geometerplus.zlibrary.ui.android]] first.
 
 This has nothing to do with Spritz Inc.
 .
