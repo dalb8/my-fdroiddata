@@ -1,6 +1,6 @@
 my-fdroiddata  
 ==
-*Recipes for building Android apps from source code*
+*For making an index of a collection of APKs (and for building the latter from source)*
 
 It's the same format used to make the packages on [f-droid.org](https://f-droid.org).
 While they have over 1000 different apps (and serve two-million APKs a month), here are
@@ -10,16 +10,11 @@ So we can try a less industrial approach; rambling descriptions and device-speci
 patches are positively welcomed! Write as many comments as you like!
 
 -------
-We are tolerant of, if not delighted about, obsolete data. 
-Current Versions are updated infrequently and/or automatically, so they could easily be 
-incorrect.
-
 Since faults would otherwise go unnoticed, new builds should only be
 committed after inspecting the source code, doing the build and running the APK on 
-a gadget. If testing isn't thorough, add it with the `Build:` parameter `disable=`, 
-as I often do when I get lazy and use the gradle wrapper (`gradlew`).
-That parameter can also be used if the licence isn't confirmed, but make sure
-that the apk in `repo/` is renamed, otherwise it will get purged.
+a gadget. If testing wasn't thorough, add it with the `Build:` parameter `disable=`, 
+(as I often do when I get lazy and use the gradle wrapper), but make sure
+that the APK you have in `repo/` is renamed, otherwise it will get purged.
 
 Pre-built libraries, whether included in `libs/` or pulled from remote maven repos 
 at build time, should have been built by some third party (e.g. the library developers), 
@@ -37,23 +32,14 @@ Depending on the distro, there could also be dependency issues for some apps.
 One issue is that the non-buildserver fdroid only allows one version of the gradle 
 binary: that which is chosen in `config.py`. 
 There may exist many versions and the only way I know of around this is to edit 
-`config.py` on a build-by-build basis.
-Since the gradle wrapper caches gradle versions in `~/.gradle/wrapper`, I add 
-aliases for all the gradle versions `~/.bashrc` and put those aliases in `config.py`.
-The same goes for ant, maven and Android SDK build tools; see the templates directory 
-for more details.
+`config.py` on a build-by-build basis. See the templates/ directory for details.
 
-Many of the texts are by the contributors to 
-[fdroiddata](https://gitorious.org/f-droid/fdroiddata) and those are under the AGPLv3. 
-Other texts can be covered by any free licence and you are encouraged 
-to add your own copyright headers.
-
-If you're distributing APKs try to have a recent version and to
-mention any significant modifications in the APK and description. If that's
-not possible, you should change the package name following the custom\_rules.xml 
+If you're distributing APKs please try to provide updates for new versions 
+and to mention any significant modifications in the APK and description. 
+If it looks like that could be hard, change the package name following the custom\_rules.xml 
 template, via the build.gradle or with the script in tools/.
 
-Currently this git repo is about 18MiB in size.
+Currently this git repo is about 20MiB in size.
 If you're new to git or Gitorious, look at 
 [this](https://f-droid.org/forums/topic/adding-apps-with-git) post
 for help in making contributions.
