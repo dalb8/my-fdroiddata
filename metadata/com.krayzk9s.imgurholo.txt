@@ -8,7 +8,7 @@
 
 Categories:Internet
 # +must ask devs permission to publish on gplay
-License:Apache2
+License:Apache
 Web Site:
 Source Code:https://github.com/Krayzk9s/imgur-holo/commits
 Issue Tracker:https://github.com/Krayzk9s/imgur-holo/issues

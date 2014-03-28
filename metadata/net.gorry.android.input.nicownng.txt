@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Office
-License:Apache2
+License:Apache
 Web Site:http://gorry.haun.org/android/nicownng
 Source Code:https://bitbucket.org/dalb8/nicownng/commits
 Issue Tracker:

@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Development
-License:Apache2
+License:Apache
 Web Site:http://sourceforge.net/projects/textwarrior
 Source Code:http://textwarrior.svn.sourceforge.net
 Issue Tracker:http://sourceforge.net/tracker/?group_id=347589

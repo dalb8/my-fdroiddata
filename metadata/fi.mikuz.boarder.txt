@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Multimedia
-License:Apache2
+License:Apache
 Web Site:http://forum.xda-developers.com/showthread.php?p=23224859
 Source Code:https://github.com/Mikuz/Boarder/commits
 Issue Tracker:https://github.com/Mikuz/Boarder/issues

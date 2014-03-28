@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Development
-License:Apache2
+License:Apache
 Web Site:
 Source Code:https://code.google.com/p/android-scripting/source/list
 Issue Tracker:https://code.google.com/p/android-scripting/issues

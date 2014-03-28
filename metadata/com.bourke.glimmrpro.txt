@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Multimedia
-License:Apache2
+License:Apache
 Web Site:http://brk3.github.io
 Source Code:https://github.com/brk3/glimmr/commits
 Issue Tracker:https://github.com/brk3/glimmr/issues

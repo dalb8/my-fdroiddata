@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Navigation
-License:Apache2
+License:Apache
 Web Site:https://code.google.com/p/osmeditor4android
 Source Code:https://code.google.com/p/osmeditor4android/source/list
 Issue Tracker:https://code.google.com/p/osmeditor4android/issues/list

@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Multimedia
-License:Apache2
+License:Apache
 Web Site:http://sourceforge.net/projects/servestream
 Source Code:http://sourceforge.net/p/servestream/code/commit_browser
 Issue Tracker:http://sourceforge.net/tracker/?group_id=361303

@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Wallpaper
-License:Apache2
+License:Apache
 Web Site:https://commons.wikimedia.org/wiki/Main_Page
 Source Code:https://github.com/ebraminio/WikimediaCommonsForMuzei/commits
 Issue Tracker:https://github.com/ebraminio/WikimediaCommonsForMuzei/issues

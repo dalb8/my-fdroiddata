@@ -8,7 +8,7 @@
 
 AntiFeatures:UpstreamNonFree
 Categories:Wallpaper
-License:Apache2
+License:Apache
 Web Site:https://code.google.com/p/dashclock
 Source Code:https://code.google.com/p/dashclock/source/list
 Issue Tracker:https://code.google.com/p/dashclock/issues/list

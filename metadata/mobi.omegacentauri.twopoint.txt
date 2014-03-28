@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:
-License:Apache2
+License:Apache
 Web Site:http://pruss.mobi
 Source Code:http://code.google.com/p/twopointheight/source/list
 Issue Tracker:http://code.google.com/p/twopointheight/issues/list

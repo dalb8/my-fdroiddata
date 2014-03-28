@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Internet
-License:Apache2
+License:Apache
 Web Site:https://code.google.com/p/k9mail
 Source Code:https://github.com/k9mail/k-9/commits/4.8-MAINT
 Issue Tracker:https://code.google.com/p/k9mail/issues/list
