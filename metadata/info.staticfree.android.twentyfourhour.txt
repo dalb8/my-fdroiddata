@@ -1,0 +1,35 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://staticfree.info/projects/24h_clock
+Source Code:https://staticfree.info/git/24hAnalogWidget.git
+Issue Tracker:https://github.com/xxv/24hAnalogWidget/issues
+FlattrID:86174
+
+Name:24h Analog Clock
+Auto Name:24h Analog Clock Widget
+Summary:Clock Widget
+Description:
+A widget that provides a resizable 24 hour analog clock, with noon at
+the top and midnight at the bottom.
+The widget passively accesses the phone's location and if it gets a fix,
+will display sunrise, sunset, and twilight times on the clock face.
+.
+
+Repo Type:git
+Repo:https://staticfree.info/git-ro/24hAnalogWidget.git
+
+Build:0.4.2,8
+    commit=0.4.2
+
+#Update Check Mode:Tags
+Current Version:0.4.2
+Current Version Code:8
+
