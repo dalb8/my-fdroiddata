@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
+# Copyright (c) 2014 David Black. Licensed as CCBYSA
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Office
 License:Apache2
@@ -12,9 +12,7 @@ Description:
 Based-on a widget that comes with the [http://fairphone.com Fairphone],
 a phone that's made from ethically-sourced materials.
 
-Would you like to disconnect, if only for a moment? 
-Your phone will go silent and disconnect from the world: no e-mail, no status 
-updates, no SMS and no phone calls. 
+This widget turns off the radios temporarily.
 Choose how long you wish to disconnect (up to 12 hours).
 
 Requires root on Android 4.2+ to put the phone in Airplane Mode; if 

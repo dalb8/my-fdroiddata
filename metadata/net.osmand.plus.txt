@@ -1,5 +1,11 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
-# See https://gitorious.org/asdgasd/my-fdroiddata
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Navigation
 License:GPLv3
 Web Site:http://osmand.net
