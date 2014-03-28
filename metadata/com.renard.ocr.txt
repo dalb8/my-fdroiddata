@@ -9,8 +9,6 @@ Issue Tracker:https://github.com/renard314/textfairy/issues
 Auto Name:Text Fairy
 Summary:Optical character recognition
 Description:
-'''The starred version is for ARMv7, the one below is for ARM'''
-
 * Edit and copy extracted text
 * Convert images to pdf
 * Recognize text in images
@@ -25,33 +23,39 @@ Status: In development.
 Repo Type:git
 Repo:https://github.com/renard314/textfairy.git
 
-Build:1.1.19,124
+Build:1.1.19-ARM,124
     commit=53da9b174b2cd1e4e9d0cb810c7e7d2007a0ddf9
-    subdir=textfairy
     submodules=yes
-    gradle=aV5
+    subdir=textfairy
     rm=OCRTest/xv
     prebuild=sed -i 's@ndkDir = .*@ndkDir = $$NDK$$@' ../gradle.properties && \
         sed -i 's/armeabi-v7a armeabi x86/armeabi/' jni/Application.mk && \
         sed -i -e 's@com.android.tools.build:gradle:0.7.+@com.android.tools.build:gradle:0.9.+@g' ../Android-ViewPagerIndicator/library/build.gradle && \
-        sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle && \
-        sed -i "/clean\.dependsOn 'nativeArmV5LibsToJar'/d" build.gradle
+        sed -i '/wearable-preview/d;14 i \\\tversionNameSuffix "-ARMv7"' build.gradle && \
+        sed -i '73 i \\t\tversionNameSuffix "-ARM"' build.gradle && \
+        sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle
     buildjni=no
+    preassemble=nativeArmV5LibstoJar
+    gradle=aV5
 
-Build:1.1.19,224
+Build:1.1.19-ARMv7,224
     commit=53da9b174b2cd1e4e9d0cb810c7e7d2007a0ddf9
-    subdir=textfairy
     submodules=yes
-    gradle=aV7
+    subdir=textfairy
     rm=OCRTest/xv
     prebuild=sed -i 's@ndkDir = .*@ndkDir = $$NDK$$@' ../gradle.properties && \
         sed -i 's/armeabi-v7a armeabi x86/armeabi-v7a/' jni/Application.mk && \
         sed -i -e 's@com.android.tools.build:gradle:0.7.+@com.android.tools.build:gradle:0.9.+@g' ../Android-ViewPagerIndicator/library/build.gradle && \
-        sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle && \
-        sed -i "/clean\.dependsOn 'nativeArmV5LibsToJar'/d" build.gradle
+        sed -i '73 i \\t\tversionNameSuffix "-ARMv7"' build.gradle && \
+        sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle
     buildjni=no
+    preassemble=nativeArmV7LibstoJar
+    gradle=aV7
 
 Maintainer Notes:
+Like Telegram, libstojar needs to be run ''twice''.
+
+        sed -i "/clean\.dependsOn 'nativeArmV5LibsToJar'/d" build.gradle
 Uses private submodules. Therefore you'd need Github SSH keys.
 
 Prepend 6 at to the vercode in Vercode Operation to mark the
