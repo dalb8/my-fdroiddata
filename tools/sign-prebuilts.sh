@@ -6,6 +6,8 @@
 # Note the fdroid otherwise deletes APKs that don't have a
 # metadata file.
 
+# TODO: behave nicely when the apk already exists in repo/
+
 #! /bin/bash
 
 #PNAME="${PWD##*/}"

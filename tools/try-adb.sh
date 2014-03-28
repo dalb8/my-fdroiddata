@@ -1,6 +1,7 @@
 # Like sign-prebuilts.sh but more for new apps that we want to try out.
 # For signing and running any self-built APK of debug or release type.
 # First argument is the APK, second is the activity
+# TODO: behave nicely when the apk already exists in repo/
 #! /bin/bash
 
 PNAME=$(echo "$(aapt d badging "$1" |grep -m 1 'package')" | awk -F"name='|'" '{print $2}')

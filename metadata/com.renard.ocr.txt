@@ -31,11 +31,10 @@ Build:1.1.19-ARM,124
     prebuild=sed -i 's@ndkDir = .*@ndkDir = $$NDK$$@' ../gradle.properties && \
         sed -i 's/armeabi-v7a armeabi x86/armeabi/' jni/Application.mk && \
         sed -i -e 's@com.android.tools.build:gradle:0.7.+@com.android.tools.build:gradle:0.9.+@g' ../Android-ViewPagerIndicator/library/build.gradle && \
-        sed -i '/wearable-preview/d;14 i \\\tversionNameSuffix "-ARMv7"' build.gradle && \
         sed -i '73 i \\t\tversionNameSuffix "-ARM"' build.gradle && \
         sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle
     buildjni=no
-    preassemble=nativeArmV5LibstoJar
+    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle nativeArmV5LibstoJar
     gradle=aV5
 
 Build:1.1.19-ARMv7,224
@@ -49,14 +48,12 @@ Build:1.1.19-ARMv7,224
         sed -i '73 i \\t\tversionNameSuffix "-ARMv7"' build.gradle && \
         sed -i 's/ViewPager3d/ViewPager3D/g' ../settings.gradle build.gradle
     buildjni=no
-    preassemble=nativeArmV7LibstoJar
+    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle nativeArmV7LibstoJar
     gradle=aV7
 
 Maintainer Notes:
-Like Telegram, libstojar needs to be run ''twice''.
-
-        sed -i "/clean\.dependsOn 'nativeArmV5LibsToJar'/d" build.gradle
-Uses private submodules. Therefore you'd need Github SSH keys.
+N.B. Like Telegram, libstojar needs to be run ''twice'': via build= and
+via main gradle task.
 
 Prepend 6 at to the vercode in Vercode Operation to mark the
 highest jni flavour.
@@ -67,7 +64,7 @@ highest jni flavour.
 .
 
 #Update Check Mode:Tags
-Vercode Operation:6%c
+Vercode Operation:2%c
 Current Version:1.1.19
-Current Version Code:624
+Current Version Code:224
 
