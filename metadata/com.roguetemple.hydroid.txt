@@ -3,7 +3,7 @@
 Categories:Games
 License:GPLv2
 Web Site:http://www.roguetemple.com/z/hydroid.php
-Source Code:https://bitbucket.org/dalb8/hydra-slayer
+Source Code:https://bitbucket.org/dalb8/hydra-slayer/commits
 Issue Tracker:
 Donate:http://www.roguetemple.com/z/hydroid.php
 

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Apache2
 Web Site:
-Source Code:https://github.com/rishubil/GalbijjimSearcher
+Source Code:https://github.com/rishubil/GalbijjimSearcher/commits
 Issue Tracker:https://github.com/rishubil/GalbijjimSearcher/issues
 
 Auto Name:Galbijjim Searcher

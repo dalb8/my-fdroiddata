@@ -3,7 +3,7 @@
 Categories:Internet
 License:Apache2
 Web Site:
-Source Code:https://github.com/intrications/browser-intercept
+Source Code:https://github.com/intrications/browser-intercept/commits
 Issue Tracker:https://github.com/intrications/browser-intercept/issues
 
 Name:Browser Intercept

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Apache2
 Web Site:http://forum.xda-developers.com/showthread.php?p=23224859
-Source Code:https://github.com/Mikuz/Boarder
+Source Code:https://github.com/Mikuz/Boarder/commits
 Issue Tracker:https://github.com/Mikuz/Boarder/issues
 Donate:http://forum.xda-developers.com/donatetome.php?u=2863486
 

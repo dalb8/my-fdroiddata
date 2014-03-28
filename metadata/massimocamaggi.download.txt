@@ -3,7 +3,7 @@
 Categories:None
 License:None
 Web Site:
-Source Code:https://github.com/massimocamaggi/download
+Source Code:https://github.com/massimocamaggi/download/commits
 Issue Tracker:https://github.com/massimocamaggi/download/issues
 
 Summary:Download manager

@@ -3,7 +3,7 @@
 Categories:None
 License:None
 Web Site:https://github.com/theblixguy/AppOps
-Source Code:https://github.com/theblixguy/AppOps
+Source Code:https://github.com/theblixguy/AppOps/commits
 Issue Tracker:https://github.com/theblixguy/AppOps/issues
 
 Auto Name:AppOps

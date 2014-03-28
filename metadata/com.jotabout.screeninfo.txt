@@ -3,7 +3,7 @@
 Categories:Development
 License:MIT
 Web Site:http://digitaldumptruck.jotabout.com
-Source Code:https://github.com/mportuesisf/ScreenInfo
+Source Code:https://github.com/mportuesisf/ScreenInfo/commits
 Issue Tracker:https://github.com/mportuesisf/ScreenInfo/issues
 
 Auto Name:ScreenInfo

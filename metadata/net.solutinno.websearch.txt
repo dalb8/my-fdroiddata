@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:http://balesz.github.io/android-WebSearch
-Source Code:https://github.com/balesz/android-WebSearch
+Source Code:https://github.com/balesz/android-WebSearch/commits
 Issue Tracker:https://github.com/balesz/android-WebSearch/issues
 
 Auto Name:WebSearch

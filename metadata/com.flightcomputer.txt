@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:
-Source Code:https://github.com/takyonxxx/Flight-Computer-Android
+Source Code:https://github.com/takyonxxx/Flight-Computer-Android/commits
 Issue Tracker:https://github.com/takyonxxx/Flight-Computer-Android/issues
 
 Auto Name:FlightComputer

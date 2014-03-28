@@ -3,7 +3,7 @@
 Categories:Games,Science
 License:GPLv3
 Web Site:
-Source Code:https://bitbucket.org/przemekr/game_of_life_agg/src
+Source Code:https://bitbucket.org/przemekr/game_of_life_agg/commits
 Issue Tracker:https://bitbucket.org/przemekr/game_of_life_agg/issues
 
 Auto Name:Game of Life

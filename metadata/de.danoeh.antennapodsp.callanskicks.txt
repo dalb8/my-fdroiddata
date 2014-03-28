@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:MIT
 Web Site:https://github.com/danieloeh/AntennaPodSP/wiki
-Source Code:https://github.com/danieloeh/AntennaPodSP
+Source Code:https://github.com/danieloeh/AntennaPodSP/commits
 Issue Tracker:https://github.com/danieloeh/AntennaPodSP/issues
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 

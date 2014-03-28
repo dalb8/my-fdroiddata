@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Development
 License:Apache2
 Web Site:
-Source Code:https://github.com/damonkohler/sl4a
+Source Code:https://github.com/damonkohler/sl4a/commits
 Issue Tracker:https://code.google.com/p/android-scripting/issues
 
 Auto Name:SL4A

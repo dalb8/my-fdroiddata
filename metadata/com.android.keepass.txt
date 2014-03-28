@@ -3,7 +3,7 @@
 Categories:Office
 License:GPLv3
 Web Site:http://www.keepassdroid.com
-Source Code:https://github.com/bpellin/keepassdroid
+Source Code:https://github.com/bpellin/keepassdroid/commits
 Issue Tracker:https://code.google.com/p/keepassdroid/issues/list
 Donate:http://www.keepassdroid.com
 

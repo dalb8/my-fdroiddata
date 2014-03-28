@@ -3,7 +3,7 @@
 Categories:Office
 License:MIT
 Web Site:
-Source Code:https://github.com/okfn/product-browser-android
+Source Code:https://github.com/okfn/product-browser-android/commits
 Issue Tracker:https://github.com/okfn/product-browser-android/issues
 
 Auto Name:Product Open Data

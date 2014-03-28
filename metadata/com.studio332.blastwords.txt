@@ -3,7 +3,7 @@
 Categories:Games
 License:Apache2
 Web Site:http://studio332apps.com
-Source Code:https://github.com/louffoster/BlastWords
+Source Code:https://github.com/louffoster/BlastWords/commits
 Issue Tracker:https://github.com/louffoster/BlastWords/issues
 
 Auto Name:Blastwords

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Public Domain
 Web Site:
-Source Code:https://github.com/prrt714/Kaleidoscope
+Source Code:https://github.com/prrt714/Kaleidoscope/commits
 Issue Tracker:https://github.com/prrt714/Kaleidoscope/issues
 
 Auto Name:Kaleidoscope

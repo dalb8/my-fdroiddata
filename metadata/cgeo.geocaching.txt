@@ -3,7 +3,7 @@
 Categories:Navigation
 License:Apache2
 Web Site:http://www.cgeo.org
-Source Code:https://github.com/cgeo/c-geo-opensource
+Source Code:https://github.com/cgeo/c-geo-opensource/commits
 Issue Tracker:https://github.com/cgeo/c-geo-opensource/issues
 Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=cgeo%40cgeo%2eorg&item_name=Donate%20to%20CGeo%20via%20F-droid
 

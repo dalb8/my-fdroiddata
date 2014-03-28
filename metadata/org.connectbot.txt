@@ -3,7 +3,7 @@
 Categories:Internet
 License:Apache2
 Web Site:http://connectbot.org
-Source Code:https://github.com/connectbot/connectbot
+Source Code:https://github.com/connectbot/connectbot/commits
 Issue Tracker:https://github.com/connectbot/connectbot/issues
 
 Auto Name:ConnectBot

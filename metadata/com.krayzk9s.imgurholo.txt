@@ -4,7 +4,7 @@ Categories:Internet
 # +must ask devs permission to publish on gplay
 License:Apache2
 Web Site:
-Source Code:https://github.com/Krayzk9s/imgur-holo
+Source Code:https://github.com/Krayzk9s/imgur-holo/commits
 Issue Tracker:https://github.com/Krayzk9s/imgur-holo/issues
 
 Auto Name:imgur Holo

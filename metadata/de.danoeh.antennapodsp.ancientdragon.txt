@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:MIT
 Web Site:http://ancientdragon.org
-Source Code:https://github.com/danieloeh/AntennaPodSP
+Source Code:https://github.com/danieloeh/AntennaPodSP/commits
 Issue Tracker:https://github.com/danieloeh/AntennaPodSP/issues
 Donate:http://www.ancientdragon.org/sangha/supporter
 

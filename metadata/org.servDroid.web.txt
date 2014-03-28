@@ -3,7 +3,7 @@
 Categories:Development
 License:Apache2
 Web Site:https://github.com/joanpuigsanz/servdroid/wiki
-Source Code:https://github.com/joanpuigsanz/servdroid
+Source Code:https://github.com/joanpuigsanz/servdroid/commits
 Issue Tracker:https://github.com/joanpuigsanz/servdroid/issues
 
 Auto Name:ServDroid

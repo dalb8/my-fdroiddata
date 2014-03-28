@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Apache2
 Web Site:http://yhcting.tistory.com
-Source Code:https://github.com/yhcting/netmbuddy
+Source Code:https://github.com/yhcting/netmbuddy/commits
 Issue Tracker:https://github.com/yhcting/netmbuddy/issues
 
 Auto Name:NetMBuddy

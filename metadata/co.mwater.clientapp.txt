@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:GPLv3
 Web Site:http://mwater.co
-Source Code:https://github.com/mWater/app-v3
+Source Code:https://github.com/mWater/app-v3/commits
 Issue Tracker:https://github.com/mWater/mWater-Android-App/issues
 
 Auto Name:mWater

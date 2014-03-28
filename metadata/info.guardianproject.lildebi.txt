@@ -3,7 +3,7 @@
 Categories:Development
 License:GPLv3
 Web Site:https://github.com/guardianproject/lildebi/wiki
-Source Code:https://github.com/guardianproject/lildebi
+Source Code:https://github.com/guardianproject/lildebi/commits
 Issue Tracker:https://github.com/guardianproject/lildebi/issues
 Bitcoin:1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk
 

@@ -3,7 +3,7 @@
 Categories:None
 License:GPLv3
 Web Site:http://supportrr.net
-Source Code:https://github.com/rootzoll/supporttr
+Source Code:https://github.com/rootzoll/supporttr/commits
 Issue Tracker:https://github.com/rootzoll/supporttr/issues
 Donate:http://supportrr.net
 

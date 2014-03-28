@@ -3,7 +3,7 @@
 Categories:System
 License:MIT
 Web Site:http://trikita.co/#obsqr
-Source Code:https://bitbucket.org/trikita/obsqr/src
+Source Code:https://bitbucket.org/trikita/obsqr/commits
 Issue Tracker:https://bitbucket.org/trikita/obsqr/issues?status=new&status=open
 
 Auto Name:Obsqr

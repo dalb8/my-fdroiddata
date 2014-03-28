@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:New BSD
 Web Site:http://blogs.yahoo.co.jp/chototsu_moushinp
-Source Code:https://github.com/chototsu/mikumikustudio-gdx
+Source Code:https://github.com/chototsu/mikumikustudio-gdx/commits
 
 Summary:Dancing girl
 Description:

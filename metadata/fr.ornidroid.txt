@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:CCBYNC
 Web Site:http://ornidroid.free.fr/ornidroid
-Source Code:https://github.com/giletvin/ornidroid
+Source Code:https://github.com/giletvin/ornidroid/commits
 Issue Tracker:https://github.com/giletvin/ornidroid/issues
 
 Auto Name:Ornidroid

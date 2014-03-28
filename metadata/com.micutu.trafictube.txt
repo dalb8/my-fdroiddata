@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:GPL
 Web Site:https://github.com/micku7zu/trafictube
-Source Code:https://github.com/micku7zu/trafictube
+Source Code:https://github.com/micku7zu/trafictube/commits
 Issue Tracker:https://github.com/micku7zu/trafictube/issues
 
 Auto Name:Trafictube

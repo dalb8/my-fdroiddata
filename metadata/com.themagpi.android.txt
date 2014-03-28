@@ -3,7 +3,7 @@
 Categories:Reading
 License:MIT
 Web Site:
-Source Code:https://github.com/themagpimag/magpi-android
+Source Code:https://github.com/themagpimag/magpi-android/commits
 Issue Tracker:https://github.com/themagpimag/magpi-android/issues
 
 Auto Name:The MagPi

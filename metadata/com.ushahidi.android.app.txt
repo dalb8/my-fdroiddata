@@ -3,7 +3,7 @@
 Categories:Navigation
 License:LGPL
 Web Site:http://ushahidi.com
-Source Code:https://github.com/ushahidi/Ushahidi_Android
+Source Code:https://github.com/ushahidi/Ushahidi_Android/commits
 Issue Tracker:https://github.com/ushahidi/Ushahidi_Android/issues
 
 Auto Name:Ushahidi

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:LGPL
 Web Site:
-Source Code:https://github.com/TheRealFalcon/Prestissimo
+Source Code:https://github.com/TheRealFalcon/Prestissimo/commits
 Issue Tracker:https://github.com/TheRealFalcon/Prestissimo/issues
 
 Auto Name:Prestissimo

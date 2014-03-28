@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Internet
 License:GPLv3
 Web Site:https://code.google.com/p/sshtunnel
-Source Code:https://bitbucket.org/madeye/sshtunnel
+Source Code:https://bitbucket.org/madeye/sshtunnel/commits
 Issue Tracker:https://code.google.com/p/sshtunnel/issues/list
 
 Auto Name:SSHTunnel

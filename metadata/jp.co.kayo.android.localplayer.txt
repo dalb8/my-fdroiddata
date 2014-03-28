@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Multimedia
 License:GPLv3
 Web Site:http://justplayer-dev.blogspot.jp
-Source Code:https://bitbucket.org/yokmama/just-player/src
+Source Code:https://bitbucket.org/yokmama/just-player/commits
 Issue Tracker:https://bitbucket.org/yokmama/just-player/issues
 
 Name:Just Player

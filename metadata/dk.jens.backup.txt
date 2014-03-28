@@ -3,7 +3,7 @@
 Categories:System
 License:MIT
 Web Site:
-Source Code:https://github.com/jensstein/oandbackup
+Source Code:https://github.com/jensstein/oandbackup/commits
 Issue Tracker:https://github.com/jensstein/oandbackup/issues
 
 Auto Name:oandbackup

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:http://palatis.blogspot.com
-Source Code:https://github.com/Palatis/danbooru-gallery-android
+Source Code:https://github.com/Palatis/danbooru-gallery-android/commits
 Issue Tracker:https://github.com/Palatis/danbooru-gallery-android/issues
 
 Auto Name:Danbooru Gallery

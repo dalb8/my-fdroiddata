@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3
 Web Site:https://owncloud.org
-Source Code:https://github.com/owncloud/android
+Source Code:https://github.com/owncloud/android/commits
 Issue Tracker:https://github.com/owncloud/android/issues
 
 Auto Name:ownCloud

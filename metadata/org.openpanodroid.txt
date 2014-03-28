@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:http://www.frank-durr.de
-Source Code:https://github.com/duerrfk/OpenPanodroid
+Source Code:https://github.com/duerrfk/OpenPanodroid/commits
 Issue Tracker:https://github.com/duerrfk/OpenPanodroid/issues
 
 Auto Name:OpenPanodroid

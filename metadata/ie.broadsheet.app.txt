@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Reading
 License:MIT
 Web Site:http://karlmonaghan.com
-Source Code:https://github.com/kmonaghan/Broadsheet.ie-Android
+Source Code:https://github.com/kmonaghan/Broadsheet.ie-Android/commits
 Issue Tracker:https://github.com/kmonaghan/Broadsheet.ie-Android/issues
 
 Auto Name:Broadsheet.ie

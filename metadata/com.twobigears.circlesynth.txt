@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Multimedia
 License:GPL
 Web Site:http://twobigears.com
-Source Code:https://github.com/twobigears/Circle-Synth
+Source Code:https://github.com/twobigears/Circle-Synth/commits
 Issue Tracker:https://github.com/twobigears/Circle-Synth/issues
 
 Auto Name:Circle Synth

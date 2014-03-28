@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Navigation
 License:MIT
 Web Site:
-Source Code:https://github.com/Wavesonics/TMinus
+Source Code:https://github.com/Wavesonics/TMinus/commits
 Issue Tracker:https://github.com/Wavesonics/TMinus/issues
 
 Auto Name:TMinus

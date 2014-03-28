@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Apache2
 Web Site:
-Source Code:https://github.com/CyanogenMod/android_packages_apps_Camera2
+Source Code:https://github.com/CyanogenMod/android_packages_apps_Camera2/commits
 Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=camera&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
 Summary:Stock camera

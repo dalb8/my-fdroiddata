@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:
-Source Code:https://github.com/LithidSoftware/android_Findex
+Source Code:https://github.com/LithidSoftware/android_Findex/commits
 Issue Tracker:https://github.com/LithidSoftware/android_Findex/issues
 
 Auto Name:Findex

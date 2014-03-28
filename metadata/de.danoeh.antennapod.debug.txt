@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:MIT
 Web Site:
-Source Code:https://github.com/danieloeh/AntennaPod
+Source Code:https://github.com/danieloeh/AntennaPod/commits
 Issue Tracker:https://github.com/danieloeh/AntennaPod/issues
 FlattrID:745609
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg

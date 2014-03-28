@@ -3,7 +3,7 @@
 Categories:Wallpaper
 License:Apache2
 Web Site:
-Source Code:https://github.com/ravenfeld/LiveWallpaperEye
+Source Code:https://github.com/ravenfeld/LiveWallpaperEye/commits
 Issue Tracker:https://github.com/ravenfeld/LiveWallpaperEye/issues
 
 Auto Name:LiveWallpaper Eye

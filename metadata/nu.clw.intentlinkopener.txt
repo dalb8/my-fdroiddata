@@ -3,7 +3,7 @@
 Categories:System
 License:Public Domain
 Web Site:
-Source Code:https://github.com/clworld/IntentLinkOpener
+Source Code:https://github.com/clworld/IntentLinkOpener/commits
 Issue Tracker:https://github.com/clworld/IntentLinkOpener/issues
 
 Auto Name:IntentLinkOpener

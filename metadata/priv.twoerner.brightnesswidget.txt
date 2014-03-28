@@ -3,7 +3,7 @@
 Categories:System
 License:MIT
 Web Site:
-Source Code:https://github.com/tillwoerner/BrightnessWidget
+Source Code:https://github.com/tillwoerner/BrightnessWidget/commits
 Issue Tracker:https://github.com/tillwoerner/BrightnessWidget/issues
 
 Auto Name:Brightness Widget

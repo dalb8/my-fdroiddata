@@ -3,7 +3,7 @@
 Categories:Office
 License:MIT
 Web Site:http://openfoodfacts.org
-Source Code:https://github.com/openfoodfacts/openfoodfacts-android
+Source Code:https://github.com/openfoodfacts/openfoodfacts-android/commits
 Issue Tracker:https://github.com/openfoodfacts/openfoodfacts-android/issues
 
 Auto Name:Open Food Facts

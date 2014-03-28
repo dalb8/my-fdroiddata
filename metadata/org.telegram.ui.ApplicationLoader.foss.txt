@@ -4,7 +4,7 @@ AntiFeatures:NonFreeNet,UpstreamNonFree
 Categories:Phone & SMS
 License:GPL
 Web Site:https://telegram.org
-Source Code:https://github.com/slp/Telegram
+Source Code:https://github.com/slp/Telegram/commits
 Issue Tracker:https://github.com/slp/Telegram/issues
 
 Auto Name:Telegram

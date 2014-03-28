@@ -3,7 +3,7 @@
 Categories:Development
 License:GPLv3
 Web Site:http://blog.ecomobilecitizen.com/android/bluetoothviewer
-Source Code:https://github.com/janosgyerik/bluetoothviewer
+Source Code:https://github.com/janosgyerik/bluetoothviewer/commits
 Issue Tracker:https://github.com/janosgyerik/bluetoothviewer/issues
 Donate:https://github.com/janosgyerik/bluetoothviewer#Donations
 

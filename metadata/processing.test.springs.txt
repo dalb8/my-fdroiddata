@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:MIT
 Web Site:
-Source Code:https://github.com/b2renger/Springs
+Source Code:https://github.com/b2renger/Springs/commits
 Issue Tracker:https://github.com/b2renger/Springs/issues
 
 Auto Name:Springs

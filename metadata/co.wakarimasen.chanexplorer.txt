@@ -4,7 +4,7 @@ AntiFeatures:NonFreeNet
 Categories:Internet
 License:MIT
 Web Site:http://chanexplorer.wakarimasen.co
-Source Code:https://github.com/wakarimasenco/chanexplorer
+Source Code:https://github.com/wakarimasenco/chanexplorer/commits
 Issue Tracker:https://github.com/wakarimasenco/chanexplorer/issues
 
 Summary:For the 4chan.org image board

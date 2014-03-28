@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3+
 Web Site:http://sufficientlysecure.org/index.php/openpgp-keychain
-Source Code:https://github.com/dschuermann/openpgp-keychain
+Source Code:https://github.com/dschuermann/openpgp-keychain/commits
 Issue Tracker:https://github.com/dschuermann/openpgp-keychain/issues
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 

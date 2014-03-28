@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:
-Source Code:https://github.com/koush/Superuser
+Source Code:https://github.com/koush/Superuser/commits
 Issue Tracker:https://github.com/koush/Superuser/issues
 
 Auto Name:Superuser

@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:
-Source Code:https://github.com/qorron/666up
+Source Code:https://github.com/qorron/666up/commits
 Issue Tracker:https://github.com/qorron/666up/issues
 
 Auto Name:666up!

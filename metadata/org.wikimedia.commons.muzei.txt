@@ -3,7 +3,7 @@
 Categories:Wallpaper
 License:Apache2
 Web Site:https://commons.wikimedia.org/wiki/Main_Page
-Source Code:https://github.com/ebraminio/WikimediaCommonsForMuzei
+Source Code:https://github.com/ebraminio/WikimediaCommonsForMuzei/commits
 Issue Tracker:https://github.com/ebraminio/WikimediaCommonsForMuzei/issues
 
 Name:Muzei: Wikimedia Commons

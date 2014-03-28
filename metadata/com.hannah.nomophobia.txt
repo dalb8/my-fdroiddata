@@ -3,7 +3,7 @@
 Categories:System
 License:None
 Web Site:
-Source Code:https://github.com/HannahMitt/Nomophobia
+Source Code:https://github.com/HannahMitt/Nomophobia/commits
 Issue Tracker:https://github.com/HannahMitt/Nomophobia/issues
 
 Auto Name:Nomophobia

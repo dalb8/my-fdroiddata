@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:GPL
 Web Site:
-Source Code:https://github.com/jpeddicord/speedofsound
+Source Code:https://github.com/jpeddicord/speedofsound/commits
 Issue Tracker:https://github.com/jpeddicord/speedofsound/issues
 
 Summary:Adjust volume according to speed

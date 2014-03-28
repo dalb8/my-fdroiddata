@@ -3,7 +3,7 @@
 Categories:System
 License:GPLv3
 Web Site:http://forum.xda-developers.com/showthread.php?t=2401988
-Source Code:https://github.com/erik96/android_packages_apps_PerformanceControl
+Source Code:https://github.com/erik96/android_packages_apps_PerformanceControl/commits
 Issue Tracker:http://forum.xda-developers.com/devdb/project/?id=600#bugReporter
 Donate:http://forum.xda-developers.com/donatetome.php?u=4674443
 

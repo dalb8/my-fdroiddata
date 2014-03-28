@@ -3,7 +3,7 @@
 Categories:Wallpaper
 License:None
 Web Site:
-Source Code:https://github.com/efung/glimmer
+Source Code:https://github.com/efung/glimmer/commits
 Issue Tracker:https://github.com/efung/glimmer/issues
 
 Auto Name:Glimmer

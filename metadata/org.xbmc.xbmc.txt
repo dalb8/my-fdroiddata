@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:GPLv2
 Web Site:http://xbmc.org
-Source Code:https://github.com/xbmc/xbmc
+Source Code:https://github.com/xbmc/xbmc/commits
 Issue Tracker:http://trac.xbmc.org
 Donate:http://xbmc.org/contribute/donate
 

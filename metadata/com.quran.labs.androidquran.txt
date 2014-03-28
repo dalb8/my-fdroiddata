@@ -4,7 +4,7 @@ Categories:Reading
 #See README
 License:Custom
 Web Site:https://github.com/ahmedre/quran_android
-Source Code:https://github.com/ahmedre/quran_android
+Source Code:https://github.com/ahmedre/quran_android/commits
 Issue Tracker:https://github.com/ahmedre/quran_android/issues
 
 Auto Name:Quran

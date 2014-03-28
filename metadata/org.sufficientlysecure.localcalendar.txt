@@ -3,7 +3,7 @@
 Categories:Office
 License:GPLv3
 Web Site:http://sufficientlysecure.org/index.php/android-apps/#offline
-Source Code:https://github.com/dschuermann/local-calendar
+Source Code:https://github.com/dschuermann/local-calendar/commits
 Issue Tracker:https://github.com/dschuermann/local-calendar/issues
 Donate:http://sufficientlysecure.org/index.php/android-apps/#offline
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j

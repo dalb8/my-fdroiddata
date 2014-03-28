@@ -4,7 +4,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Internet
 License:GPL
 Web Site:http://tpbapp.com
-Source Code:https://github.com/tpbapp/Pirate-Proxy
+Source Code:https://github.com/tpbapp/Pirate-Proxy/commits
 Issue Tracker:https://github.com/tpbapp/Pirate-Proxy/issues
 Bitcoin:1KeBs4HBQzkdHC2ou3gpyGHqcL7aKzwTve
 

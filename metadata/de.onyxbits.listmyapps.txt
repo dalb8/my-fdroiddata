@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:
-Source Code:https://github.com/onyxbits/listmyaps
+Source Code:https://github.com/onyxbits/listmyaps/commits
 Issue Tracker:https://github.com/onyxbits/listmyaps/issues
 
 Auto Name:List My Apps

@@ -3,7 +3,7 @@
 Categories:Office
 License:Apache2
 Web Site:
-Source Code:https://github.com/ftlno/MuteMate
+Source Code:https://github.com/ftlno/MuteMate/commits
 Issue Tracker:https://github.com/ftlno/MuteMate/issues
 
 Auto Name:MuteMate

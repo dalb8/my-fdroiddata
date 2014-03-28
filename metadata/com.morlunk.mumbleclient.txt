@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3
 Web Site:https://morlunk.com
-Source Code:https://github.com/Morlunk/Plumble
+Source Code:https://github.com/Morlunk/Plumble/commits
 Issue Tracker:https://github.com/Morlunk/Plumble/issues
 
 Auto Name:Plumble

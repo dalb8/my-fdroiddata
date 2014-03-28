@@ -3,7 +3,7 @@
 Categories:Wallpaper
 License:MIT
 Web Site:http://tobbentm.com
-Source Code:https://github.com/TobbenTM/dogeweather
+Source Code:https://github.com/TobbenTM/dogeweather/commits
 Issue Tracker:https://github.com/TobbenTM/dogeweather/issues
 
 Summary:Homescreen widget

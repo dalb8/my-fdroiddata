@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:http://souriez.kernel23.org
-Source Code:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
+Source Code:https://github.com/tvass/Souriez-vous-etes-a-Montpellier/commits
 Issue Tracker:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
 
 Auto Name:Souriez-vous-etes-a-Montpellier

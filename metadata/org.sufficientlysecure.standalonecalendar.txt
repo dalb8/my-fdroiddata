@@ -3,7 +3,7 @@
 Categories:Office
 License:Apache2
 Web Site:https://github.com/dschuermann/standalone-calendar
-Source Code:https://github.com/dschuermann/standalone-calendar
+Source Code:https://github.com/dschuermann/standalone-calendar/commits
 Issue Tracker:https://github.com/dschuermann/standalone-calendar/issues
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 

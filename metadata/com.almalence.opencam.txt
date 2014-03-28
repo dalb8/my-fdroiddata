@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:MPLv1.1
 Web Site:http://almalence.com/mobile-applications#abc
-Source Code:https://github.com/almalence/OpenCamera
+Source Code:https://github.com/almalence/OpenCamera/commits
 Issue Tracker:https://github.com/almalence/OpenCamera/issues
 
 Summary:Highly configurable camera

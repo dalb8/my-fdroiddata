@@ -3,7 +3,7 @@
 Categories:System
 License:Apache2
 Web Site:http://www.openintents.org
-Source Code:https://github.com/openintents/filemanager
+Source Code:https://github.com/openintents/filemanager/commits
 Issue Tracker:https://code.google.com/p/openintents/issues/list
 Donate:http://www.openintents.org/en/contribute
 

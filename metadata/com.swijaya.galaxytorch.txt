@@ -3,7 +3,7 @@
 Categories:System
 License:MIT
 Web Site:
-Source Code:https://github.com/santa4nt/Galaxy-Torch
+Source Code:https://github.com/santa4nt/Galaxy-Torch/commits
 Issue Tracker:https://github.com/santa4nt/Galaxy-Torch/issues
 
 Auto Name:Torch

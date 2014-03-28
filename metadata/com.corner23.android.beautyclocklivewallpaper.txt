@@ -3,7 +3,7 @@
 Categories:Wallpaper
 License:MIT
 Web Site:
-Source Code:https://github.com/shakalaca/BeautyClockLiveWallpaper
+Source Code:https://github.com/shakalaca/BeautyClockLiveWallpaper/commits
 Issue Tracker:https://github.com/shakalaca/BeautyClockLiveWallpaper/issues
 
 Auto Name:Beauty Clock

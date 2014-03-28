@@ -3,7 +3,7 @@
 Categories:Daydream
 License:MIT
 Web Site:
-Source Code:https://github.com/awilliams/fish
+Source Code:https://github.com/awilliams/fish/commits
 Issue Tracker:https://github.com/awilliams/fish/issues
 
 Auto Name:Fish

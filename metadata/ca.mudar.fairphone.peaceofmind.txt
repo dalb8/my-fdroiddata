@@ -3,7 +3,7 @@
 Categories:Office
 License:Apache2
 Web Site:http://fairphone.mudar.ca
-Source Code:https://github.com/mudar/Fairphone
+Source Code:https://github.com/mudar/Fairphone/commits
 Issue Tracker:https://github.com/mudar/Fairphone/issues
 
 Auto Name:Peace of Mind+

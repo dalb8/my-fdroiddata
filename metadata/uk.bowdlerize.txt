@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3
 Web Site:http://bowdlerize.co.uk
-Source Code:https://github.com/openrightsgroup/Android-Probe
+Source Code:https://github.com/openrightsgroup/Android-Probe/commits
 Issue Tracker:https://github.com/openrightsgroup/Android-Probe/issues
 Donate:https://www.openrightsgroup.org/donate
 

@@ -3,7 +3,7 @@
 Categories:Games
 License:Proprietary
 Web Site:https://github.com/GreedyGame/Aam-Aadmi-Runner
-Source Code:https://github.com/GreedyGame/Aam-Aadmi-Runner
+Source Code:https://github.com/GreedyGame/Aam-Aadmi-Runner/commits
 Issue Tracker:https://github.com/GreedyGame/Aam-Aadmi-Runner/issues
 
 Auto Name:Aam Runner

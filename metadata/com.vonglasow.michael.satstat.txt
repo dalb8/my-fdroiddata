@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3+
 Web Site:https://github.com/mvglasow/satstat/wiki
-Source Code:https://github.com/mvglasow/satstat
+Source Code:https://github.com/mvglasow/satstat/commits
 Issue Tracker:https://github.com/mvglasow/satstat/issues
 
 Auto Name:SatStat

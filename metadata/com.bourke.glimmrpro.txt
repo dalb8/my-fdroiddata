@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:Apache2
 Web Site:http://brk3.github.io
-Source Code:https://github.com/brk3/glimmr
+Source Code:https://github.com/brk3/glimmr/commits
 Issue Tracker:https://github.com/brk3/glimmr/issues
 
 Auto Name:Glimmr-L

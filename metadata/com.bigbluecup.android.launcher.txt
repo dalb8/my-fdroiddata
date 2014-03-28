@@ -3,7 +3,7 @@
 Categories:Games
 License:GPLv2+
 Web Site:http://www.adventuregamestudio.co.uk/site/ags
-Source Code:https://github.com/adventuregamestudio/ags
+Source Code:https://github.com/adventuregamestudio/ags/commits
 Issue Tracker:https://github.com/adventuregamestudio/ags/issues
 Donate:http://www.adventuregamestudio.co.uk/site/community/donate
 

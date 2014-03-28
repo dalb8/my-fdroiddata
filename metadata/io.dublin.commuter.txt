@@ -3,7 +3,7 @@
 Categories:Navigation
 License:None
 Web Site:http://dublin.io
-Source Code:https://github.com/amorroxic/DublinCommuter
+Source Code:https://github.com/amorroxic/DublinCommuter/commits
 Issue Tracker:https://github.com/amorroxic/DublinCommuter/issues
 
 Auto Name:Dublin Commuter

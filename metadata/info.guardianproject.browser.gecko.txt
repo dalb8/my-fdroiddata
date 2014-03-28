@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv2
 Web Site:
-Source Code:https://github.com/guardianproject/Orfox
+Source Code:https://github.com/guardianproject/Orfox/commits
 Issue Tracker:https://github.com/guardianproject/Orfox/issues
 
 Auto Name:Orfox

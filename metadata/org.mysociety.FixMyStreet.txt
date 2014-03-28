@@ -3,7 +3,7 @@
 Categories:Navigation
 License:Unknown
 Web Site:http://www.fixmystreet.com
-Source Code:https://github.com/mysociety/fixmystreet-mobile
+Source Code:https://github.com/mysociety/fixmystreet-mobile/commits
 Issue Tracker:https://github.com/mysociety/fixmystreet-mobile/issues
 Donate:http://www.mysociety.org/donate
 

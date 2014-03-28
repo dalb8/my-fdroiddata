@@ -3,7 +3,7 @@
 Categories:Internet
 License:MIT
 Web Site:
-Source Code:https://github.com/nicolassmith/urlevaluator
+Source Code:https://github.com/nicolassmith/urlevaluator/commits
 Issue Tracker:https://github.com/nicolassmith/urlevaluator/issues
 
 Auto Name:Short URL Evaluator

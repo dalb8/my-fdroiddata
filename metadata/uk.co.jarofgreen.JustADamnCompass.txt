@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Navigation
 License:Apache2
-Source Code:https://github.com/jarofgreen/Just-A-Damn-Compass
+Source Code:https://github.com/jarofgreen/Just-A-Damn-Compass/commits
 Issue Tracker:https://github.com/jarofgreen/Just-A-Damn-Compass/issues
 
 Name:Compass

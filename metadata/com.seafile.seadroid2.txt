@@ -3,7 +3,7 @@
 Categories:Internet
 License:Apache2
 Web Site:http://seafile.com/en/download
-Source Code:https://github.com/haiwen/seadroid
+Source Code:https://github.com/haiwen/seadroid/commits
 Issue Tracker:https://github.com/haiwen/seadroid
 
 Auto Name:Seafile

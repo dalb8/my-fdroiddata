@@ -2,7 +2,7 @@
 # See https://gitorious.org/asdgasd/my-fdroiddata
 Categories:Multimedia
 License:Apache2
-Source Code:https://github.com/CyanogenMod/android_packages_apps_DSPManager
+Source Code:https://github.com/CyanogenMod/android_packages_apps_DSPManager/commits
 Issue Tracker:https://github.com/CyanogenMod/android_packages_apps_DSPManager/issues
 
 Summary:Audio filters

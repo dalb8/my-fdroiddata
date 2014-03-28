@@ -3,7 +3,7 @@
 Categories:System
 License:GPLv3
 Web Site:http://upm.sourceforge.net
-Source Code:https://github.com/adrian/upm-android
+Source Code:https://github.com/adrian/upm-android/commits
 Issue Tracker:https://github.com/adrian/upm-android/issues
 
 Auto Name:UPM

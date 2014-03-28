@@ -1,7 +1,7 @@
 Categories:Reading
 License:MIT
 Web Site:
-Source Code:https://github.com/clinta/FB-Ospritz
+Source Code:https://github.com/clinta/FB-Ospritz/commits
 Issue Tracker:https://github.com/clinta/FB-Ospritz/issues
 
 Auto Name:OpenSpritz Plugin

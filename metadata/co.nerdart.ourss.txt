@@ -3,7 +3,7 @@
 Categories:None
 License:None
 Web Site:https://github.com/dubyajaysmith/OURSS
-Source Code:https://github.com/dubyajaysmith/OURSS
+Source Code:https://github.com/dubyajaysmith/OURSS/commits
 Issue Tracker:https://github.com/dubyajaysmith/OURSS/issues
 
 Auto Name:OURSS

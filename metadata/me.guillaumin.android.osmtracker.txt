@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:https://code.google.com/p/osmtracker-android
-Source Code:https://github.com/nguillaumin/osmtracker-android
+Source Code:https://github.com/nguillaumin/osmtracker-android/commits
 Issue Tracker:https://code.google.com/p/osmtracker-android/issues/list
 
 Name:OSMTracker

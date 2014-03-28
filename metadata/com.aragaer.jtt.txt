@@ -3,7 +3,7 @@
 Categories:System
 License:MIT
 Web Site:http://aragaer.github.com/jtt_android
-Source Code:https://github.com/aragaer/jtt_android
+Source Code:https://github.com/aragaer/jtt_android/commits
 Issue Tracker:https://github.com/aragaer/jtt_android/issues
 
 Auto Name:Japanese Traditional Time

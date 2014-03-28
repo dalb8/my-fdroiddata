@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:http://osmand.net
-Source Code:https://github.com/osmandapp/Osmand
+Source Code:https://github.com/osmandapp/Osmand/commits
 Issue Tracker:https://code.google.com/p/osmand/issues/list
 Donate:https://code.google.com/p/osmand/#Please_support_the_project
 

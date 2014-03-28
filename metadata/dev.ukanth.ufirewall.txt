@@ -3,7 +3,7 @@
 Categories:Internet
 License:GPLv3
 Web Site:https://github.com/ukanth/afwall/wiki
-Source Code:https://github.com/ukanth/afwall
+Source Code:https://github.com/ukanth/afwall/commits
 Issue Tracker:https://github.com/ukanth/afwall/issues
 Donate:http://forum.xda-developers.com/donatetome.php?u=3249429
 

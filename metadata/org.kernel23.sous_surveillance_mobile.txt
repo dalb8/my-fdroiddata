@@ -3,7 +3,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:http://souriez.kernel23.org
-Source Code:https://github.com/kernel23/sous-surveillance-mobile
+Source Code:https://github.com/kernel23/sous-surveillance-mobile/commits
 Issue Tracker:https://github.com/kernel23/sous-surveillance-mobile/issues
 
 Auto Name:sous-surveillance-mobile

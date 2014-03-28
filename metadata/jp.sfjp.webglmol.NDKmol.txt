@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:LGPL
 Web Site:http://webglmol.sourceforge.jp
-Source Code:https://github.com/biochem-fan/NDKmol
+Source Code:https://github.com/biochem-fan/NDKmol/commits
 Issue Tracker:http://sourceforge.jp/projects/webglmol/forums
 
 Auto Name:NDKmol

@@ -3,7 +3,7 @@
 Categories:Office
 License:Proprietary
 Web Site:http://blog.dacer.im/myapps
-Source Code:https://github.com/dacer/SimplePomdoro
+Source Code:https://github.com/dacer/SimplePomdoro/commits
 Issue Tracker:https://github.com/dacer/SimplePomdoro/issues
 
 Auto Name:Simple Pomodoro

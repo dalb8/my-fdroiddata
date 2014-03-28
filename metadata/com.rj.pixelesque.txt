@@ -3,7 +3,7 @@
 Categories:Multimedia
 License:NewBSD
 Web Site:https://github.com/rjmarsan/Pixelesque
-Source Code:https://github.com/rjmarsan/Pixelesque
+Source Code:https://github.com/rjmarsan/Pixelesque/commits
 Issue Tracker:https://github.com/rjmarsan/Pixelesque/issues
 
 Auto Name:DevmilColor

@@ -3,7 +3,7 @@
 Categories:Science & Education
 License:MIT
 Web Site:http://lp20.org/aikuma
-Source Code:https://github.com/langtech/aikuma
+Source Code:https://github.com/langtech/aikuma/commits
 Issue Tracker:https://github.com/langtech/aikuma/issues
 
 Auto Name:Aikuma

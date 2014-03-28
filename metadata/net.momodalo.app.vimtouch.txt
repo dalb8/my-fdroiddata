@@ -3,7 +3,7 @@
 Categories:Development
 License:Apache2/GPL
 Web Site:
-Source Code:https://github.com/momodalo/vimtouch
+Source Code:https://github.com/momodalo/vimtouch/commits
 Issue Tracker:https://github.com/momodalo/vimtouch/issues
 
 Auto Name:Vi IMproved Touch

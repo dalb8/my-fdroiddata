@@ -3,7 +3,7 @@
 Categories:Phone & SMS
 License:GPLv3
 Web Site:
-Source Code:https://github.com/robert7k/sipswitch
+Source Code:https://github.com/robert7k/sipswitch/commits
 Issue Tracker:https://github.com/robert7k/sipswitch/issues
 
 Auto Name:SIP Switch

@@ -3,7 +3,7 @@
 Categories:System
 License:GPLv3
 Web Site:http://sufficientlysecure.org/index.php/android-apps/#ntpsync
-Source Code:https://github.com/dschuermann/ntp-sync
+Source Code:https://github.com/dschuermann/ntp-sync/commits
 Issue Tracker:https://github.com/dschuermann/ntp-sync/issues
 Donate:http://sufficientlysecure.org/index.php/android-apps/#ntpsync
 FlattrID:669294
