@@ -19,7 +19,7 @@ Auto Name:c:geo
 Summary:Geocaching client
 Description:
 Geocaching is a sport where people hide things and you go and find them. This
-is an unnofficial client to access geocaching.com's list of caches, search and
+is an unofficial client to access geocaching.com's list of caches, search and
 save them to the device.
 
 This build has no Google Maps keys, but OSM maps (Mapnik and

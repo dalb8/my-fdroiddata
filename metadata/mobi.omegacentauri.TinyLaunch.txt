@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:
-License:NewBSD
+License:New BSD
 Web Site:http://pruss.mobi
 Source Code:http://code.google.com/p/tinylaunch/source/list
 Issue Tracker:http://code.google.com/p/tinylaunch/issues/list

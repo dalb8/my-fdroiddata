@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Multimedia
-License:NewBSD
+License:New BSD
 Web Site:http://pruss.mobi
 Source Code:https://code.google.com/p/sendreduced/source/list
 Issue Tracker:https://code.google.com/p/sendreduced/issues/list

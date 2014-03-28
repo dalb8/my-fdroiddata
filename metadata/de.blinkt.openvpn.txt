@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Internet
-License:NewBSD/GPLv2
+License:GPL
 Web Site:https://code.google.com/p/ics-openvpn
 Source Code:https://code.google.com/p/ics-openvpn/source/list
 Issue Tracker:https://code.google.com/p/ics-openvpn/issues/list
@@ -16,8 +16,7 @@ Auto Name:OpenVPN for Android
 Summary:OpenVPN without root
 Description:
 With the VPNService in Android 4.0+ it is possible to create a VPN that doesn't
-need root access. The GUI is licensed under BSD while the OpenVPN core is licensed
-under the GPL.
+need root access.
 .
 
 Repo Type:hg

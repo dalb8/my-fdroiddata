@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:System
-License:NewBSD
+License:New BSD
 Web Site:http://mobile.thauvin.net/android/#noussd
 Source Code:https://github.com/ethauvin/NoUSSD/commits
 Issue Tracker:https://github.com/ethauvin/NoUSSD/issues
