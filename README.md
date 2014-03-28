@@ -44,4 +44,11 @@ If you're new to git or Gitorious, look at
 [this](https://f-droid.org/forums/topic/adding-apps-with-git) post
 for help in making contributions.
 
+The repo icon is taken from the Android SDK.
+The files in build/extlib are free jars, libraries and whatnot, except for 
+a few zip files which have icons that are modifications of other free icons, and
+word lists for use in dictionaries, whose licences are mentioned in the 
+corresponding metadata files if not inside the archive itself.
+
 &mdash; Dave Black
+

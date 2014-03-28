@@ -1,3 +1,10 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+
 # Like sign-prebuilts.sh but more for new apps that we want to try out.
 # For signing and running any self-built APK of debug or release type.
 # First argument is the APK, second is the activity
