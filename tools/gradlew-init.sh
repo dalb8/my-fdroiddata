@@ -1,5 +1,10 @@
-# Copyright (c) 2014 David Black. Licensed as CCBYSA
-# See https://gitorious.org/asdgasd/my-fdroiddata
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata.
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
 
 # Report about some features of a gradle build
 

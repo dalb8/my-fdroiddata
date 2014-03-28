@@ -1,6 +1,12 @@
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata.
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+
 #! /bin/bash
-# Copyright (c) 2014 David Black. Licensed as CCBYSA
-# See https://gitorious.org/asdgasd/my-fdroiddata
 
 # Extract some useful info from an APK and write it to a metadata file
 # Would use instead of fdroid update -c

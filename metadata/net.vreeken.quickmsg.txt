@@ -1,6 +1,6 @@
 Categories:Office
 License:GPLv3
-Web Site:http://quickmsg.vreeken.net
+Web Site:
 Source Code:http://quickmsg.vreeken.net
 Issue Tracker:
 

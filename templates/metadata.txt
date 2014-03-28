@@ -1,6 +1,13 @@
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata.
+# Copyright (c) 2014 ...
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+
 ## For extra fields see https://f-droid.org/manual 
 
-# Copyright (c) John Doe 1929
 Disabled: (if an app must vanish from the repo)
 AntiFeatures: (comma-separated) (possible values hard-coded in fdroidserver)
 Categories: (comma-separated)
