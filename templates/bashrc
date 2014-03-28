@@ -58,6 +58,7 @@ function gpsearch() { gnome-open https://play.google.com/store/search?q="$1" ;}
 function gsha1() { echo "Copying latest commit number to clipboard..." && echo $(git --no-pager log -1 --pretty=format:%H) |xsel -b ;}
 function header-permissive () {( cat $MYFDROIDDATA/templates/permissive-header.txt; cat "$1"; ) > /tmp/out && mv /tmp/out "$1" ;}
 function header-agplv3 () {( cat $MYFDROIDDATA/templates/agplv3-header.txt; cat "$1"; ) > /tmp/out && mv /tmp/out "$1" ;}
+function mnotes () { sed -i '/Update Check Mode:/i Maintainer Notes:\n.\n' "$1" ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux

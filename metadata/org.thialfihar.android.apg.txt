@@ -1,0 +1,44 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:Apache
+Web Site:http://thialfihar.org/projects/apg
+Source Code:https://github.com/thialfihar/apg/commits
+Issue Tracker:https://github.com/thialfihar/apg/issues
+FlattrID:164412
+
+Auto Name:APG
+Summary:Encrypt email and files
+Description:
+APG is a port of OpenPGP for Android. Use it to encrypt and decrypt files;
+in conjunction with [[com.fsck.k9]] it can encrypt and
+decrypt emails, as well as verify digital signatures.
+
+This version borrows a lot from [[org.sufficientlysecure.keychain]] so
+may not work like previous versions.
+.
+
+Repo Type:git
+Repo:https://github.com/thialfihar/apg.git
+
+Build:1.1.1,11199
+    commit=v1.1.1
+    submodules=yes
+    subdir=apg
+    init=sed -i '28,53d' build.gradle
+    gradle=yes
+
+Maintainer Notes:
+android.sdk not found by proguard; signing properties patched wrong by fdroid
+.
+
+#Update Check Mode:Tags
+Current Version:1.1.1
+Current Version Code:11199
+
