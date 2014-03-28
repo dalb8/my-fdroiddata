@@ -10,7 +10,7 @@ Categories:Games
 License:GPLv3
 Web Site:http://staticfree.info/projects/rfk
 Source Code:https://staticfree.info/git/robotfindskitten.git
-Issue Tracker:
+Issue Tracker:https://github.com/xxv/robotfindskitten/issues
 FlattrID:633876
 
 Auto Name:robotfindskitten
@@ -20,10 +20,10 @@ You are the robot and your goal is to find the kitten
 .
 
 Repo Type:git
-Repo:git://staticfree.info/git/robotfindskitten
+Repo:https://staticfree.info/git-ro/robotfindskitten.git
 
 Build:1.0.701,7
-    commit=v1.0.701
+    commit=5b6ca5
 
 Maintainer Notes:
 .
