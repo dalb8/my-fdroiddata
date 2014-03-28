@@ -1,5 +1,3 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
-# See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
 index 901b638..a85f6b1 100644
 --- a/AndroidManifest.xml

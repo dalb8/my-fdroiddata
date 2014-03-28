@@ -1,5 +1,3 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
-# See https://gitorious.org/asdgasd/my-fdroiddata
 diff --git a/custom_rules.xml b/custom_rules.xml
 new file mode 100644
 index 0000000..25fc1eb

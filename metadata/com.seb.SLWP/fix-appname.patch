@@ -1,5 +1,3 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
-# See https://gitorious.org/asdgasd/my-fdroiddata
 Use consistent appname which is used on website: http://code.google.com/p/earth-live-wallpaper/
 
 diff --git a/res/values-es/strings.xml b/res/values-es/strings.xml

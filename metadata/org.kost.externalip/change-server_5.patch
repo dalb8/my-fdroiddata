@@ -1,5 +1,3 @@
-# Copyright (c) 2014 David Black et al. Licensed as AGPLv3.
-# See https://gitorious.org/asdgasd/my-fdroiddata
 diff -r 431da48bfb10 -r c7c8c7aa3f67 src/org/kost/externalip/ExternalIP.java
 --- a/src/org/kost/externalip/ExternalIP.java	Thu Jun 09 01:11:36 2011 +0200
 +++ b/src/org/kost/externalip/ExternalIP.java	Fri Nov 26 14:25:52 2013 +0100
