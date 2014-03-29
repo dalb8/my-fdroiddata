@@ -12,6 +12,7 @@ Web Site:
 Source Code:https://android.googlesource.com/platform/packages/inputmethods/LatinIME
 Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=keyboard&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
+Auto Name:AOSP Keyboard
 Summary:Android keyboard
 Description:
 Comes with English, Spanish, French dictionaries.

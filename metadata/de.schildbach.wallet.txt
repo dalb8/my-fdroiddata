@@ -13,6 +13,7 @@ Source Code:https://github.com/schildbach/bitcoin-wallet/tree/prod/commits
 Issue Tracker:https://code.google.com/p/bitcoin-wallet/issues/list
 Bitcoin:1HkX6X8EakdsgAysL93oKrWiXGPbFiG1xV
 
+Auto Name:
 Summary:Store digital currency
 Description:
 * No cloud server or web service needed: this wallet works peer to peer

@@ -12,6 +12,7 @@ Web Site:
 Source Code:https://code.google.com/p/i-jetty
 Issue Tracker:https://code.google.com/p/i-jetty/issues/list
 
+Auto Name:
 Summary:Port of the Jetty web container
 Description:
 Having a "personal" webserver on your phone opens up a world of possibilities, 

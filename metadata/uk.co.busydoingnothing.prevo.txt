@@ -14,6 +14,7 @@ Issue Tracker:
 Bitcoin:16mQGTBWHx5wT2XX5YEGsU2sDqwSiP2wBn
 FlattrID:2653025
 
+Auto Name:Prevo
 Summary:Esperanto dictionary
 Description:
 PReVo is a portable version of Reta Vortaro (the free and libre Esperanto

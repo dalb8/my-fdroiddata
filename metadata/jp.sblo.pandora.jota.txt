@@ -13,6 +13,7 @@ License:Apache
 Web Site:http://sites.google.com/site/aquamarinepandora/home/jota-text-editor
 Source Code:http://code.google.com/p/jota-text-editor
 
+Auto Name:Jota Text Editor
 Summary:Text editor
 Description:
 This needs AOSP to build so the apk is from the developer.

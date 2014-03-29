@@ -11,6 +11,7 @@ License:GPLv3
 Web Site:https://gitorious.org/openlink
 Source Code:https://gitorious.org/openlink/openlink/source
 
+Auto Name:Easy Open Link
 Summary:Open URLs via select and share
 Description:
 Easy Open Link makes it easy to open links from text documents via 

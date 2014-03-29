@@ -13,6 +13,7 @@ License:Apache
 Source Code:https://github.com/CyanogenMod/android_packages_apps_DSPManager/commits
 Issue Tracker:https://github.com/CyanogenMod/android_packages_apps_DSPManager/issues
 
+Auto Name:DSP Manager
 Summary:Audio filters
 Description:
 Handy filters for headphone users.

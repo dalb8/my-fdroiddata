@@ -13,6 +13,7 @@ Web Site:http://mobile.zame-dev.org/gloomy
 Source Code:https://github.com/restorer/Gloomy-Dungeons-3D/commits
 Issue Tracker:https://github.com/restorer/Gloomy-Dungeons-3D/issues
 
+Auto Name:Gloomy Dungeons 3D
 Summary:First-person shooter
 Description:
 If you loved Doom and Wolfenstein 3D and want to go to back to gaming in the

@@ -14,6 +14,7 @@ Web Site:http://arachnoid.com/android/SSHelper
 Source Code:http://arachnoid.com/android/SSHelper/resources
 Issue Tracker:
 
+Auto Name:SSHelper
 Summary:Access to phone‘s contents
 Description:
 Hard to build—developer build for now.

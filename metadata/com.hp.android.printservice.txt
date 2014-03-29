@@ -11,6 +11,7 @@
 Categories:System
 License:Proprietary
 
+Auto Name:HP Print Service Plugin
 Summary:Plugin for HP printers
 Description:
 .

@@ -13,6 +13,7 @@ License:New BSD
 Web Site:http://blogs.yahoo.co.jp/chototsu_moushinp
 Source Code:https://github.com/chototsu/mikumikustudio-gdx/commits
 
+Auto Name:Tiny AR
 Summary:Dancing girl
 Description:
 Not clear how to build as the site's in Japanese—developer-only build for now.

@@ -8,11 +8,12 @@
 
 Categories:System
 License:GPLv3
-Web Site:https://code.google.com/p/currentwidget
+Web Site:
 Source Code:https://code.google.com/p/currentwidget/source/list
 Issue Tracker:https://code.google.com/p/currentwidget/issues/list
 Donate:https://code.google.com/p/currentwidget
 
+Auto Name:CurrentWidget
 Summary:Battery current draw widget
 Description:
 Displays how much electric current the device is using from the battery or 
@@ -36,7 +37,7 @@ this in the battery driver or in the hardware.
 
 [https://code.google.com/p/currentwidget/wiki/ChangeLog Changelog]
 
-N.B Latest code uses GMS
+N.B Latest code use proprietary libraries.
 .
 
 Repo Type:git-svn
@@ -55,6 +56,7 @@ Build:0.39,38
         printf "android.library=true\nandroid.library.reference.1=$$Color-Picker-2$$" >> ../CurrentWidgetLibrary/project.properties
 
 Maintainer Notes:
+N.B Latest code uses GMS
 .
 
 #Update Check Mode:RepoManifest

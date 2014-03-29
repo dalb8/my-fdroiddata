@@ -12,6 +12,7 @@ Categories:Multimedia
 License:Proprietary
 Web Site:http://arte.tv/guide/fr/plus7
 
+Auto Name:ARTE
 Summary:ARTE on demand
 Description:
 Franco-German TV channel.
@@ -25,6 +26,7 @@ Get it via Google Play
 .
 
 Update Check Mode:None
+#In Repo:v2.1.1,211142111
 Current Version:v2.1.1
 Current Version Code:211142111
 

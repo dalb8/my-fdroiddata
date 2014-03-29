@@ -15,6 +15,7 @@ Web Site:http://chanexplorer.wakarimasen.co
 Source Code:https://github.com/wakarimasenco/chanexplorer/commits
 Issue Tracker:https://github.com/wakarimasenco/chanexplorer/issues
 
+Auto Name:ChanExplorer
 Summary:For the 4chan.org image board
 Description:
 * Auto updater

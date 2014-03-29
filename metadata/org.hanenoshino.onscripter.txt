@@ -8,6 +8,37 @@
 
 Categories:Games
 License:GPLv2+
+Web Site:http://onscripter.sourceforge.jp/android/android.html
+Source Code:https://code.google.com/p/onscripter
+Issue Tracker:http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&action=top
+
+Auto Name:ONScripter
+Summary:Visual Novel player
+Description:
+Only English ONScripter games are known to be supported. This port uses upstream ONScripter engine, but 
+any Android-specific issues should be reported to port developer (see source code link).
+
+[http://narcissu.insani.org Narcissu] is a free English game; download the Linux edition
+and extract to the sdcard.
+.
+
+Repo Type:git
+Repo:https://github.com/shinohane/onscripter
+
+Build:20120310,20120310
+    commit=eaf9848c79
+    init=echo "APP_CFLAGS += -DENABLE_1BYTE_CHAR -DFORCE_1BYTE_CHAR" > jni/Application.mk && \
+        rm -r jni/sdl_ttf/VisualC*
+    target=android-17
+    srclibs=ONScripter@28b4b185ba
+    patch=jpeg.patch
+    prebuild=cp -r $$ONScripter$$ jni/application/onscripter-20120310
+    buildjni=yes
+
+Maintainer Notes:
+UCM:Static. Not good chances to be updated 
+(see https://github.com/shinohane/ONScripter-SAO for blob-filled replacement..)
+
 #
 # Following Android ports can be found on Internet:
 # 1 Older version of Natdon's, already unbuildable; original focus of most non-JP efforts.
@@ -30,6 +61,7 @@ License:GPLv2+
 #
 # 4 http://onscripter.sourceforge.jp/android/android.html - upstream Japanese attempt. Also happens to 
 #   be upstream for engine core. Use tarballs for publishing, but developer of #3 tracks them on Github.
+#   APKs published in Dec 2013; there are a couple of extra features but the fonts are off.
 #
 #   Hosted on:
 #   http://onscripter.sourceforge.jp/onscripter.html#package-source (core tarballs)
@@ -39,39 +71,9 @@ License:GPLv2+
 #
 #   package: jp.ogapee.onscripter
 #
-Web Site:http://onscripter.sourceforge.jp/android/android.html
-# See also http://onscripter.sourceforge.jp/android/android.html#sdk
-# (hardcore Japanese developers don't use VCS!)
-Source Code:https://code.google.com/p/onscripter/
-# All other trackers are empty..
-Issue Tracker:http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&action=top
 
-Name:ONScripter
-Summary:Visual Novel player
-Description:
-Only English ONScripter games are known to be supported. This port uses upstream ONScripter engine, but 
-any Android-specific issues should be reported to port developer (see source code link).
-
-[http://narcissu.insani.org/ Narcissu] is a free English game; download the linux edition
-and extract to the sdcard.
-.
-
-Repo Type:git
-Repo:https://github.com/shinohane/onscripter
-
-Build:20120310,20120310
-    commit=eaf9848c79
-    init=echo "APP_CFLAGS += -DENABLE_1BYTE_CHAR -DFORCE_1BYTE_CHAR" > jni/Application.mk && \
-        rm -r jni/sdl_ttf/VisualC*
-    target=android-17
-    srclibs=ONScripter@28b4b185ba
-    patch=jpeg.patch
-    prebuild=cp -r $$ONScripter$$ jni/application/onscripter-20120310
-    buildjni=yes
-
-# Not that it has good chances to be updated anyway..
-# (see https://github.com/shinohane/ONScripter-SAO for blob-filled replacement..)
-Maintainer Notes:
+See also http://onscripter.sourceforge.jp/android/android.html#sdk
+(hardcore Japanese developers don't use VCS!)
 .
 
 Update Check Mode:Static

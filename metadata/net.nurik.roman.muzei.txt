@@ -14,6 +14,7 @@ Web Site:http://muzei.co
 Source Code:https://github.com/romannurik/muzei/commits
 Issue Tracker:https://github.com/romannurik/muzei/issues
 
+Auto Name:Muzei
 Summary:Arty wallpaper
 Description:
 Live wallpaper that displays a different painting every day, or

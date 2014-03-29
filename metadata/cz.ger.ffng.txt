@@ -13,6 +13,7 @@ License:GPLv2
 Web Site:http://fillets.sourceforge.net
 Source Code:https://github.com/fidlej/ffng-android/commits
 
+Auto Name:Fish Fillets
 Summary:Funny Game
 
 Maintainer Notes:

@@ -14,6 +14,7 @@ Issue Tracker:http://trac.i2p2.de
 Donate:http://www.i2p2.de/donate
 Bitcoin:1HkJCceXf7of1sTNRVJbXiZHfDTLL71Siy
 
+Auto Name:I2P
 Summary:I2P anonymous network
 Description:
 I2P is an anonymizing network, offering a simple layer that identity-sensitive

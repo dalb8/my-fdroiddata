@@ -12,6 +12,7 @@ Web Site:http://quuux.org
 Source Code:https://github.com/mdellavo/plasma/commits
 Issue Tracker:https://github.com/mdellavo/plasma/issues
 
+Auto Name:
 Summary:Plasma wallpaper
 Description:
 .

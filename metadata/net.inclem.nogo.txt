@@ -12,6 +12,7 @@ Web Site:
 Source Code:https://github.com/inclement/noGo/commits
 Issue Tracker:https://github.com/inclement/noGo/issues
 
+Auto Name:
 Summary:SGF Viewer/Editor
 Description:
 noGo is an SGF viewer and editor. It includes ~1100 games covering mostly

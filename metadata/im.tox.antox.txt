@@ -14,6 +14,7 @@ Web Site:https://tox.im
 Source Code:https://github.com/Astonex/Antox/commits
 Issue Tracker:https://github.com/Astonex/Antox/issues
 
+Auto Name:
 Summary:Peer-to-peer messaging
 Description:
 No description available

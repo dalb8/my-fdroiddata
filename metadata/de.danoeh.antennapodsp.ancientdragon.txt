@@ -15,6 +15,7 @@ Source Code:https://github.com/danieloeh/AntennaPodSP/commits
 Issue Tracker:https://github.com/danieloeh/AntennaPodSP/issues
 Donate:http://www.ancientdragon.org/sangha/supporter
 
+Auto Name:ADZG Dharma Talks
 Summary:App for a single podcast
 Description:
 Talks about the Buddha Dharma.

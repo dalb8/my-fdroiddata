@@ -14,6 +14,7 @@ Web Site:
 Source Code:https://android.googlesource.com/platform/packages/apps/Email
 Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=email&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
+Auto Name:Email
 Summary:Stock email client
 Description:
 Via Cyanogenmod.

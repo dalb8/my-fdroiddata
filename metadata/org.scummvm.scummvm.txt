@@ -13,6 +13,7 @@ Source Code:https://github.com/scummvm/scummvm/commits
 Issue Tracker:http://sourceforge.net/tracker/?group_id=37116&atid=418820
 Donate:http://sourceforge.net/donate/index.php?group_id=37116
 
+Auto Name:ScummVM
 Summary:Adventure game player
 Description:
 ScummVM is a program which allows you to run certain classic graphical point-and-click adventure 

@@ -15,6 +15,7 @@ Source Code:https://github.com/danieloeh/AntennaPodSP/commits
 Issue Tracker:https://github.com/danieloeh/AntennaPodSP/issues
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 
+Auto Name:Callan's Kicks
 Summary:App for a single podcast
 Description:
 Callan's Kicks is a weekly half-hour satire on the media and politics in Ireland.
