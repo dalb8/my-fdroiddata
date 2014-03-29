@@ -8,13 +8,13 @@
 
 Categories:Office
 License:GPLv3
-Web Site:https://code.google.com/p/bitcoin-wallet
-Source Code:https://github.com/schildbach/bitcoin-wallet/tree/prod/commits
-Issue Tracker:https://code.google.com/p/bitcoin-wallet/issues/list
+Web Site:
+Source Code:https://github.com/schildbach/bitcoin-wallet/commits/prod
+Issue Tracker:https://github.com/schildbach/bitcoin-wallet/issues
 Bitcoin:1HkX6X8EakdsgAysL93oKrWiXGPbFiG1xV
 
-Auto Name:
-Summary:Store digital currency
+Auto Name:Bitcoin
+Summary:Wallet for digital currency
 Description:
 * No cloud server or web service needed: this wallet works peer to peer
 * Display of wallet balance in Bitcoin and various other currencies
@@ -30,6 +30,8 @@ A few tens of MiB must be downloaded to set up the blockchain and a couple
 more per month subsequently to keep it updated.
 When run for the first time, it can happen that the app shows only a white 
 display for some seconds.
+
+[https://github.com/schildbach/bitcoin-wallet/raw/prod/wallet/CHANGES Changelog]
 .
 
 Repo Type:git
@@ -43,10 +45,17 @@ Build:3.27,148
     prebuild=sed -i '73s/3.7.0/3.8.0/g' ../pom.xml
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
 
+Build:3.41,162
+    commit=f254a38ffc
+    subdir=wallet
+    srclibs=BitcoinJ@v0.11.1
+    prebuild=sed -i '73s/3.7.0/3.8.0/g' ../pom.xml
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
+    maven=yes@..
+
 Maintainer Notes:
 This won't build proguard: need to run mvn -Prelease for that.
 
-See wallet/{README,CHANGES} or git log for info about what BitcoinJ tag to use.
 Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
 .
 
