@@ -30,6 +30,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.5.4
-Current Version Code:105004
+Current Version:1.5.5
+Current Version Code:105005
 
