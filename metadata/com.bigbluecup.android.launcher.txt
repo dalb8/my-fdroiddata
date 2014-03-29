@@ -29,9 +29,18 @@ and many other.
 A lot of free (as in beer) games can be downloaded from the 
 [http://www.adventuregamestudio.co.uk/site/games/ project site].
 
-[https://github.com/adventuregamestudio/ags/blob/master/Android/README.md#adding-games-to-the-game-list Android README]
+The [https://github.com/adventuregamestudio/ags/blob/master/Android/README.md#adding-games-to-the-game-list Android README] 
+explains controls and where to put the games: by default they should be extracted
+into the <EXTERN>/ags/<GAME NAME>/.
 
-It's quite possible music might not work.
+* Finger movement: Moving the mouse cursor
+* Single finger tap: Perform a left click
+* Tap with two fingers: Perform a right click
+* Longclick: Hold down the left mouse button until tapping the screen again
+* MENU button: Opens a menu for key input and quitting the game
+* MENU button longpress: Opens and closes the onscreen keyboard
+* BACK button: Sends ESC key command to the game
+* BACK button longpress: "Quit game" dialog
 
 Status: BETA
 .
@@ -39,13 +48,12 @@ Status: BETA
 Repo Type:git
 Repo:https://github.com/adventuregamestudio/ags.git
 
-Build:3.3.0-ARM+,1158
+Build:1.0-ARM+,1
     disable=allegro and dumb patches need overriding; can't build vorbis native engine #144
     commit=v.3.3.0-hotfix
     submodules=yes
     subdir=Android/launcher_list
     forceversion=yes
-    forcevercode=yes
     init=sed -i 's/android-4/android-8/' ../library/default.properties && \
        sed -i 's/x86 mips//' ../buildlibs/buildall.sh 
     rm=Android/nativelibs,Windows,PSP,Plugins/agslua/agslua/zlib/zlib.lib
@@ -61,6 +69,7 @@ The buildall script calls a bunch of scripts; the scripts download archives over
 .
 
 Update Check Mode:None
-Current Version:3.3.0
-Current Version Code:1158
+#In Repo:1.0,1
+Current Version:1.0
+Current Version Code:1
 
