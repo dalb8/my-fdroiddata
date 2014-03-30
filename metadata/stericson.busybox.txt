@@ -1,11 +1,14 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
+AntiFeatures:NonFreeAdd
 Categories:System
 License:Apache
 Web Site:
@@ -16,15 +19,23 @@ Auto Name:BusyBox Free
 Name:Busybox Installer
 Summary:System tools installer
 Description:
-Interface to install one version only of BusyBox (1.21.1) and its symlinks.
-For now, the binary is only for ARM architecture as the others couldn't be built.
-
+Interface to install one version only of BusyBox (1.21.1) and its symlinks
+to /system: for that the gadget needs to be rooted.
 BusyBox combines tiny versions of many common UNIX utilities into a single
-small executable. It provides replacements for most of the utilities you
-usually find in GNU fileutils, shellutils, etc. 
-Android comes with a very limited multi-tool called Toolbox
-and sometimes it is crippled even more, so a standard Busybox is often needed
-by root apps that need to do different jobs.
+small executable.
+
+BusyBox is often used by scripts that manipulate /system
+as the standard Android multi-tool (called ToolBox) is very limited.
+However, BusyBox itself can be useful without root: extract it from
+assets/ in the APK and copy it to /data/local/tmp on the gadget; set it
+to be executable and you can e.g. replace the strange ToolBox [code]mv[/code]
+with [code]/data/local/tmp/busybox mv[/code].
+
+Note that the symlinks will override pre-existing ToolBox programs which may cause
+problems in rare cases; again, you can just extract the BusyBox 
+binary from the APK and copy that to /system/xbin or /data/local/tmp, but
+at the risk that other apps that rely on BusyBox might not work.
+
 If you run a custom ROM you probably have most of the applets
 that you would ever need, though this binary has a few more.
 
@@ -33,12 +44,16 @@ The range of applets
 isn't identical to the upstream version.
 Therefore, the applet manager doesn't have information about all the installed applets.
 
-Note that the symlinks may override pre-existing toolbox programs which may cause
-problems in rare cases; if in doubt, extract the busybox binary and copy that
-to /system/xbin.
-.
+There are alternatives to BusyBox, like [http://www.landley.net/toybox ToyBox]
+[http://kevinboone.net/kbox2_downloads.html KBox]; a version of GNU CoreUtils 
+for Android can even be obtained from the Internet.
 
-Requires Root:Yes
+Anti-features: Addons. There is a 'pro' version with extra features but
+the source code is published less often.
+
+Theoretically it's possible to build binaries for architectures other than
+ARM but in practice it's not as simple.
+.
 
 Repo Type:git
 Repo:https://github.com/Stericson/busybox-free
@@ -48,9 +63,9 @@ Build:10.9,157
     init=sed -i 's@\(reference.1=\).*@\1view_pager_JW@' project.properties 
     target=android-18
     rm=assets/busybox1.21.1.png;assets/busybox1.22.1.png;assets/reboot.png;build;out;view_pager_JW/build;RootTools.jar
-    srclibs=RootTools@3.4;BusyboxConfigs-linusyang@63dc
+    srclibs=RootTools-new@3.4;BusyboxConfigs-linusyang@63dc
     extlibs=toolbox
-    prebuild=cp -r $$RootTools$$/src/com/ src/ && \
+    prebuild=cp -r $$RootTools-new$$/src/main/java/com/ src/ && \
         sed -i 's/"Busybox 1.22.1", //g' src/stericson/busybox/Constants.java && \
         mv libs/toolbox assets/toolbox.png && \
         cp -r $$BusyboxConfigs-linusyang$$ BB && \
