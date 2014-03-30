@@ -1,0 +1,54 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:MIT
+Web Site:http://hitchwiki.org
+Source Code:https://github.com/Hitchwiki/Phrasebook
+Issue Tracker:https://github.com/Hitchwiki/Phrasebook/issues
+
+Auto Name:Hitchwiki Phrasebook
+Summary:Phrasebook for hitchikers
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/Hitchwiki/Phrasebook
+
+Build:1.0.1,2
+    commit=f11b87d8fb077
+    init=cordova create Cordova com.hitchwiki.phrasebook Hitchwiki && \
+      cd Cordova && \
+      cordova platform add android && \
+      rm -rf www platforms/android/assets/www && \
+      rm $(find platforms/android/res -name icon.png) platforms/android/custom_rules.xml && \
+      cp ../www/res/icon/android/icon-96-xhdpi.png platforms/android/res/drawable-xhdpi/icon.png && \
+      cp ../www/res/icon/android/icon-72-hdpi.png platforms/android/res/drawable-hdpi/icon.png && \
+      cp ../www/res/icon/android/icon-48-mdpi.png platforms/android/res/drawable/icon.png && \
+      rm -rf ../www/res/icon ../www/res/screen && \
+      sed -i 's/"0.0.1"/"1.0.1"/;s/"1"/"2"/'  platforms/android/AndroidManifest.xml && \
+      cp ../www/config.xml . && \
+      mv ../www . && \
+      cordova -d prepare
+    build=cd Cordova; cordova compile --release
+    output=Cordova/platforms/android/bin/Hitchwiki-release-unsigned.apk
+
+Maintainer Notes:
+Remove the splash screen, they don't seem to be used.
+
+Need to muck about with versionCode: https://issues.apache.org/jira/browse/CB-5093
+
+version in config.xml, but no versionCode.
+.
+
+Update Check Mode:None
+Current Version:1.0.1
+Current Version Code:2
+
