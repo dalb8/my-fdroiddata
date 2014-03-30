@@ -1,3 +1,4 @@
+Proposed Categories:
 Communications
 System & Connectivity
 Reading & Media
@@ -9,3 +10,11 @@ Finance & Productivity
 Travel & Location
 Widgets & Personalization
 Science & Education
+
+(Fixed) AntiFeatures:
+NonFreeAd—addons, paid versions without source code
+Ads—advertisements, or in case of AB+, refusal to block some
+Tracking—any reporting upstream without interaction, also apps that require authentication
+UpstreamNonFree—patching required to keep it free
+NonFreeNet—SAAS, unless it's possible to alter the app to connect to a clone
+NonFreeDep—redundant, used to apply to apps that had system library dependencies
