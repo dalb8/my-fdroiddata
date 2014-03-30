@@ -1,0 +1,44 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:Apache
+Web Site:
+Source Code:https://github.com/michalrus/agh-mindmap
+Issue Tracker:https://github.com/michalrus/agh-mindmap/issues
+
+Auto Name:agh-mindmap
+Summary:Mind mapping
+Description:
+Status: Proof of concept.
+.
+
+Repo Type:git
+Repo:https://github.com/michalrus/agh-mindmap.git
+
+Build:0.1,1
+    disable=doesn't have release plugin
+    commit=39f94618d9d5a
+    subdir=android
+    prebuild=sed -i 's/"0"/"1"/' src/main/AndroidManifest.xml
+    build=sbt run
+    output=target/android-bin/agh-mindmap-debug.apk
+
+Maintainer Notes:
+Need to patch with this to get release builds:
+https://github.com/sbt/sbt-release
+    output=target/agh-mindmap-release-0.1.apk
+.
+
+Update Check Mode:None
+#In Repo:0.1,1
+Current Version:0.1
+Current Version Code:1
+
