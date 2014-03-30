@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2013 Carlos Rafael Gimenes das Neves. All rights reserved.
+# Licensed under two-clause FreeBSD license
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:New BSD
+Web Site:http://carlosrafaelgn.com.br
+Source Code:https://github.com/carlosrafaelgn/FPlayAndroid
+Issue Tracker:https://github.com/carlosrafaelgn/FPlayAndroid/issues
+
+Auto Name:FPlay
+Summary:Simple music player
+Description:
+Music player based on lists and directories.
+Respects WCAG 2.0 accessibility guidelines for colors and contrast, 
+being friendly for color blind people, people with a few types of dyslexia, 
+as well as for people with mild visual impairments.
+
+The player also has these other features:
+* Color and theme customization
+* Native support for dyslexia-friendly typeface (improved readability)
+* Ability to send track information via A2DP / AVRCP Bluetooth (tested on Android 4.0+)
+* Ability to play streams from the Internet
+* Volume fade in when returning from calls and from pause
+* Real-time spectrum analyzer
+* Fully controllable via keyboard
+* Controllable via Bluetooth audio devices (tested on Android 4.0+)
+* Low latency between consecutive track changes on Android 4.1+
+* Full control from the notification area
+.
+
+Repo Type:git
+Repo:https://github.com/carlosrafaelgn/FPlayAndroid.git
+
+Build:0.90,22
+    commit=471ea7537d7a0d3
+
+Update Check Mode:RepoManifest
+Current Version:0.90
+Current Version Code:22
+
