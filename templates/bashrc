@@ -59,6 +59,8 @@ function gsha1() { echo "Copying latest commit number to clipboard..." && echo $
 function header-permissive () {( cat $MYFDROIDDATA/templates/permissive-header.txt; cat "$1"; ) > /tmp/out && mv /tmp/out "$1" ;}
 function header-agplv3 () {( cat $MYFDROIDDATA/templates/agplv3-header.txt; cat "$1"; ) > /tmp/out && mv /tmp/out "$1" ;}
 function mnotes () { sed -i '/Update Check Mode:/i Maintainer Notes:\n.\n' "$1" ;}
+function lsm () { ls metadata/*.txt | grep "$1" ;}
+function lsa () { grep -i "^Auto Name:.*"$1"" metadata/*.txt ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
