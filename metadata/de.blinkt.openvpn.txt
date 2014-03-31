@@ -8,7 +8,7 @@
 
 Categories:Internet
 License:GPL
-Web Site:https://code.google.com/p/ics-openvpn
+Web Site:
 Source Code:https://code.google.com/p/ics-openvpn/source/list
 Issue Tracker:https://code.google.com/p/ics-openvpn/issues/list
 
@@ -20,7 +20,7 @@ need root access.
 .
 
 Repo Type:hg
-Repo:https://code.google.com/p/ics-openvpn/
+Repo:https://code.google.com/p/ics-openvpn
 
 Build:0.5.47,80
     commit=v0.5.47
@@ -29,12 +29,22 @@ Build:0.5.47,80
         sed -i '/google-breakpad/d' jni/Android.mk && \
         sed -i 's/-j 8/-j 2/g' misc/build-native.sh && \
         ./misc/build-native.sh
+
+Build:0.6.11,94
+    disable=google breakpad probs
+    commit=v0.6.11-production
+    subdir=main
+    gradle=armv7
+    rm=vpndialogxposed
+    prebuild=sed -i 's/ndk-build $@/ndk-build -e "APP_ABI=armeabi-v7a" -j 2/g' misc/build-native.sh
+    build=./misc/build-native.sh USE_BREAKPAD=0
     buildjni=no
 
 Maintainer Notes:
 .
 
-#Update Check Mode:Tags .*-production
+##Update Check Mode:Tags .*-production
+Update Check Mode:None
 Current Version:0.6.11
-Current Version Code:92
+Current Version Code:94
 
