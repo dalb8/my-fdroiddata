@@ -9,7 +9,7 @@
 Categories:Games
 License:GPLv2+
 Web Site:http://instead.syscall.ru
-Source Code:http://sourceforge.net/p/instead/code
+Source Code:https://instead-android.googlecode.com/svn/trunk
 Issue Tracker:http://instead.syscall.ru/forum/viewforum.php?id=14
 
 Auto Name:INSTEAD
@@ -21,8 +21,6 @@ quests.
 
 The package includes interpreter and interactive fiction manager, capable of downloading games in 
 choosen language.
-
-[http://sf.net/p/instead/wiki/ChangeLog/ Changelog]
 .
 
 Repo Type:git-svn
@@ -41,10 +39,11 @@ Build:1.6.1.9,16109
     buildjni=yes
 
 Maintainer Notes:
-1.9.1.1 on gplay
+1.9.1.1 on gplay.
+Srclib moved to github but Android code hasn't been updated in a while.
 .
 
-#Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:1.6.1.9
 Current Version Code:16109
 

@@ -1,3 +1,4 @@
-# The repo is blob-heavy, so no git-svn
+# Repo is blob-heavy
 Repo Type:svn
 Repo:https://svn.code.sf.net/p/instead/code/trunk
+# Now at: Repo:https://github.com/instead-hub/instead
