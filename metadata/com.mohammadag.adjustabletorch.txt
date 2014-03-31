@@ -25,10 +25,9 @@ Admob was removed.
 Repo Type:git
 Repo:https://github.com/MohammadAG/android-AdjustableTorch.git
 
-Build:1.6,7
-    commit=69a82f84d2cec3072
+Build:1.7,8
+    commit=f133eb809262
     srclibs=1:RootTools@3.4,2:MobAdMob@2d5736
-    prebuild=sed -i '62,67d' src/com/mohammadag/adjustabletorch/Utils.java
 
 Maintainer Notes:
 sed patch required to fix the build
