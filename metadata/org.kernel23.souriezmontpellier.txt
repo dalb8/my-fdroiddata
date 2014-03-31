@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Navigation
-License:GPLv3
+License:GPLv3*
 Web Site:http://souriez.kernel23.org
 Source Code:https://github.com/tvass/Souriez-vous-etes-a-Montpellier/commits
 Issue Tracker:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
@@ -23,7 +23,7 @@ lors d’un passage a proximité d’une camera de videosurveillance a Montpelli
 
 There's a web app at this [http://paris.sous-surveillance.net website].
 
-The icon is available under CCBYSANC.
+*The icon is available under CCBYSANC.
 
 The build replaces Google Maps with OSM. It may not centre the map on
 your location, so if you get a blue screen, zoom out to find the landmarks.
