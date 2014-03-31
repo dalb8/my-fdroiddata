@@ -1,0 +1,35 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Web Site:
+Source Code:https://bitbucket.org/npaul/mdreader/commits
+Issue Tracker:https://bitbucket.org/npaul/mdreader/issues
+
+Auto Name:MdReader
+Summary:Editor with Markdown
+Description:
+Supports *.md and text extensions.
+Render to html.
+.
+
+Repo Type:git
+Repo:https://bitbucket.org/npaul/mdreader.git
+
+Build:1.1,3
+    commit=f4f5c9aa9eeaf16
+    subdir=MdReader
+    init=rm -rf bin gen
+
+Update Check Mode:RepoManifest
+Current Version:1.1
+Current Version Code:3
+
