@@ -11,13 +11,13 @@ License:GPLv3
 Web Site:
 Source Code:https://github.com/splondike/polipoid/commits
 Issue Tracker:https://github.com/splondike/polipoid/issues
-Donate:https://flattr.com/submit/auto?user_id=splondike&amp;url=https://github.com/splondike/polipoid/&amp;title=Polipoid&amp;description=Android%20wrapper%20for%20the%20Polipo%20proxy&amp;language=en_GB&amp;tags=android,proxy&amp;category=software
+FlattrID:2064131
 Bitcoin:eef5109f143cf9d8c79e01371913c8f7
 
 Auto Name:Polipoid
 Summary:Allow for browsing offline
 Description:
-A wrapper for the 'polipo' HTTP(S) proxy. Allows for offline browsing via
+A wrapper for the Polipo HTTP(S) proxy. Allows for offline browsing via
 polipo's cache, and should also speed browsing somewhat. Will be automatically
 switched to offline browsing mode when the network is disconnected.
 .
