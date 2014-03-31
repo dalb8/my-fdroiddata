@@ -9,7 +9,7 @@
 Categories:Development
 License:Apache
 Web Site:http://sourceforge.net/projects/textwarrior
-Source Code:http://textwarrior.svn.sourceforge.net
+Source Code:http://sourceforge.net/p/textwarrior/code/commit_browser
 Issue Tracker:http://sourceforge.net/tracker/?group_id=347589
 
 Auto Name:TextWarrior

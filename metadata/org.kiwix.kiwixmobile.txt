@@ -9,7 +9,7 @@
 Categories:Internet
 License:GPLv3+
 Web Site:http://www.kiwix.org/wiki/Main_Page
-Source Code:http://sourceforge.net/p/kiwix/kiwix
+Source Code:http://sourceforge.net/p/kiwix/kiwix/commit_browser
 Issue Tracker:http://sourceforge.net/p/kiwix/bugs
 
 Auto Name:Kiwix

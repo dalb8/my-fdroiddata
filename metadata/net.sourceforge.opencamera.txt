@@ -9,7 +9,7 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:http://opencamera.sourceforge.net
-Source Code:http://sourceforge.net/p/opencamera/code
+Source Code:http://sourceforge.net/p/opencamera/code/commit_browser
 Issue Tracker:http://sourceforge.net/p/opencamera/tickets
 Donate:http://sourceforge.net/donate/?user_id=439017
 Bitcoin:LKCFto9SQGqtcvqZxHkqDPqNjSnfMmsow

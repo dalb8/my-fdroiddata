@@ -9,7 +9,7 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:http://www.yaacc.de
-Source Code:http://sourceforge.net/p/yaacc/code/ci/master/tree
+Source Code:http://sourceforge.net/p/yaacc/code/commit_browser
 Issue Tracker:http://sourceforge.net/p/yaacc/tickets
 
 Name:Yaacc

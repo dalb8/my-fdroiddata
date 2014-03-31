@@ -9,7 +9,7 @@
 Categories:Multimedia
 License:GPLv2+
 Web Site:http://xmp.sourceforge.net
-Source Code:http://sourceforge.net/projects/xmp/develop
+Source Code:http://sourceforge.net/p/xmp/xmp-android/commit_browser
 Issue Tracker:
 
 Auto Name:Xmp for Android
