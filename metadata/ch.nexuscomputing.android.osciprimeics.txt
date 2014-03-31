@@ -22,9 +22,10 @@ sale from the website.
 Repo Type:hg
 Repo:https://bitbucket.org/dalb8/osciiprime
 
-Build:Dagobert,14
-    commit=0
+Build:Dagobert,16
+    commit=1
     extlibs=android/android-support-v4.jar
+    rm=jni/liblog.so
     build=cp $$NDK$$/platforms/android-14/arch-arm/usr/lib/liblog.so jni/
     buildjni=yes
 
