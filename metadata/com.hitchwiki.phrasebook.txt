@@ -34,11 +34,18 @@ Build:1.0.1,2
       cp ../www/res/icon/android/icon-48-mdpi.png platforms/android/res/drawable/icon.png && \
       rm -rf ../www/res/icon ../www/res/screen && \
       sed -i 's/"0.0.1"/"1.0.1"/;s/"1"/"2"/'  platforms/android/AndroidManifest.xml && \
+      sed -i 's/name>Phrasebook/name>Hitchwiki Phrasebook/' ../www/config.xml && \
       cp ../www/config.xml . && \
       mv ../www . && \
       cordova -d prepare
     build=cd Cordova; cordova compile --release
     output=Cordova/platforms/android/bin/Hitchwiki-release-unsigned.apk
+
+Build:2.0,999999
+    disable=WIP
+    commit=v2
+    init=npm install; npm install phonegap -g
+    build=grunt build; grunt phonegap:build:android
 
 Maintainer Notes:
 Remove the splash screen, they don't seem to be used.
@@ -46,6 +53,8 @@ Remove the splash screen, they don't seem to be used.
 Need to muck about with versionCode: https://issues.apache.org/jira/browse/CB-5093
 
 version in config.xml, but no versionCode.
+
+Will use grunt in v2 branch.
 .
 
 Update Check Mode:None
