@@ -41,11 +41,22 @@ Build:3.0.8.2,53
         mv libs/armeabi/osmcore assets/osmcore_arm
     buildjni=no
 
+Build:3.0.9.0,54
+    commit=3.0.9.0
+    subdir=OSMonitor
+    rm=OSMonitor/assets/osmcore_arm
+    extlibs=android/android-support-v4.jar
+    srclibs=1:Appcompat@android-4.4_r1.1,2:ColorPicker-eolwral@788621da0c,3:Volley@android-4.4_r1.2
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+        mkdir -p assets
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi" && \
+        mv libs/armeabi/osmcore assets/osmcore_arm
+    buildjni=no
+
 Maintainer Notes:
-Using 2:attenzione/colorpicker and 3:Volley
 .
 
 #Update Check Mode:Tags
-Current Version:3.0.8.2
-Current Version Code:53
+Current Version:3.0.9.0
+Current Version Code:54
 
