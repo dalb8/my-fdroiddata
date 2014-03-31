@@ -1,0 +1,33 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:
+Source Code:https://github.com/FireFart/Permissions
+Issue Tracker:https://code.google.com/p/androidpermissions/issues
+
+Auto Name:Permissions
+Summary:Lists permissions in use
+Description:
+This application shows all the available permissions on your phone in a big
+list, highlighting those it considers dangerous. You can expand any of the
+entries in the list to see what applications are using that particular
+permission.
+.
+
+Repo Type:git
+Repo:https://github.com/FireFart/Permissions.git
+
+Build:1.2,3
+    commit=c2b651a63
+
+#Update Check Mode:RepoManifest
+Current Version:1.2
+Current Version Code:3
+
