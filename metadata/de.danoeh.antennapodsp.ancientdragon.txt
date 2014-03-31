@@ -27,8 +27,7 @@ Repo:AntennapodSP
 Build:1.0.1,2
     commit=288bf
     gradle=yes
-    rm=res/values-de,libs/presto_client-0.8.5.jar
-    srclibs=PrestoClient@3d7444
+    rm=res/values-de
     extlibs=ancientdragon-icons.zip
     prebuild=unzip -o libs/ancientdragon-icons.zip && \
         rm libs/ancientdragon-icons.zip && \
@@ -39,15 +38,12 @@ Build:1.0.1,2
         export VERSION="0" && \
         sed -i "s/antennapodsp.einschlafenpodcast/antennapodsp.$PKG/g" build.gradle && \
         sed -i "s/Einschlafen Podcast/$NAME/g" res/values/strings.xml && \
-        sed -i -e 's@\(feedUrls = \).*@\1{"'$URL'"};@' -e 's@EinschlafenPodcastAndroid/1.0@'$PKG'PodcastAndroid/1.0@' -e 's@versionNumber = 0@versionNumber = '$VERSION'@' src/de/danoeh/antennapodsp/AppPreferences.java && \
-        ln -s $(readlink -f $$PrestoClient$$) dep/PrestoClient && \
-        echo "include ':dep:PrestoClient'" >> settings.gradle && \
-        sed -i "s/files('libs\/presto_client-0.8.5.jar')/project(':dep:PrestoClient')/" build.gradle
+        sed -i -e 's@\(feedUrls = \).*@\1{"'$URL'"};@' -e 's@EinschlafenPodcastAndroid/1.0@'$PKG'PodcastAndroid/1.0@' -e 's@versionNumber = 0@versionNumber = '$VERSION'@' src/de/danoeh/antennapodsp/AppPreferences.java
 
 Maintainer Notes:
 Upstream Repo:https://github.com/danieloeh/AntennaPodSP.git
 
-Note that only lines 6,13 of the build entry need modification to support a different feed.
+Note that only lines 5,12 of the build entry need modification to support a different feed.
 .
 
 Update Check Mode:None
