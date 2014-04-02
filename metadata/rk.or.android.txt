@@ -1,0 +1,33 @@
+# Copyright (c) 2014 David Black
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:None
+Source Code:https://github.com/RemiKoutcherawy/OriSim3D-Android
+Issue Tracker:https://github.com/RemiKoutcherawy/OriSim3D-Android/issues
+
+Auto Name:OriSim3D
+Summary:Folding paper simulator
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/RemiKoutcherawy/OriSim3D-Android.git
+
+Build:OriSim3D-1.4,4
+    commit=1
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:1.4
+Current Version Code:4
+
