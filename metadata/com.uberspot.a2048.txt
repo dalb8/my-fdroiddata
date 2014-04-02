@@ -27,7 +27,11 @@ Build:1.2,3
     commit=87fbd98f64aa1
     submodules=yes
 
+Build:1.8,9
+    commit=v1.8
+    submodules=yes
+
 Update Check Mode:RepoManifest
-Current Version:1.2
-Current Version Code:3
+Current Version:1.8
+Current Version Code:9
 
