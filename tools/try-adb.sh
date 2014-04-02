@@ -8,21 +8,20 @@
 # Like sign-prebuilts.sh but more for new apps that we want to try out.
 # For signing and running any self-built APK of debug or release type.
 # First argument is the APK, second is the activity
-# TODO: behave nicely when the apk already exists in repo/
 #! /bin/bash
 
 PNAME=$(echo "$(aapt d badging "$1" |grep -m 1 'package')" | awk -F"name='|'" '{print $2}')
 NAME=$(echo "$(aapt d badging "$1" |grep 'application:')")
 PERMISSIONS=$(echo "$(aapt d badging "$1" |grep 'uses-permission:')")
-DATE=$(date +%d%m%Y)
+VERCODE=$(echo "$(aapt d badging "$1" |grep -m 1 'version')" | sed "s/.*versionCode='\([0-9]*\)'.*/\1/")
 
 echo "Installing $PNAME"
-mv "$1" $MYFDROIDDATA/tmp/$PNAME\_00$DATE.apk
+cp "$1" $MYFDROIDDATA/tmp/$PNAME\_$VERCODE.apk
 cd $MYFDROIDDATA
-cp tmp/$PNAME\_00$DATE.apk tmp/temp.apk
+cp tmp/$PNAME\_$VERCODE.apk tmp/signed.apk
 echo "Signing with debug key:"
-echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA tmp/temp.apk androiddebugkey
-zipalign -f 4 tmp/temp.apk tmp/aligned.apk
+echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA tmp/signed.apk androiddebugkey
+zipalign -f 4 tmp/signed.apk tmp/aligned.apk
 adb install -r tmp/aligned.apk
 echo -e "Uses Permissions:\n$PERMISSIONS"
 echo "Run? (Press Enter)"
@@ -35,9 +34,13 @@ adb uninstall $PNAME
 adb shell am start -a android.intent.action.MAIN -c android.intent.category.HOME
 echo "Add to repo? (Press Enter)"
 read
-cp -n templates/minimal.txt metadata/$PNAME.txt
-zip -d tmp/$PNAME\_00$DATE.apk META-INF/*
-mv tmp/$PNAME\_00$DATE.apk unsigned/
-touch unsigned/$PNAME\_00$DATE\_src.tar.gz
-fdroid publish $PNAME
+if [ -e $MYFDROIDDATA/repo/$PNAME\_$VERCODE.apk ]; then
+	echo The repo already has an APK with that name.
+else
+        zip -d tmp/$PNAME\_$VERCODE.apk META-INF/*
+        mv tmp/$PNAME\_$VERCODE.apk unsigned/
+        touch unsigned/$PNAME\_$VERCODE\_src.tar.gz
+        cp -n templates/minimal.txt metadata/$PNAME.txt
+        fdroid publish $PNAME
+fi
 

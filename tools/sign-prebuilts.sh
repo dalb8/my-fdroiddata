@@ -11,17 +11,18 @@
 # Note the fdroid otherwise deletes APKs that don't have a
 # metadata file.
 
-# TODO: behave nicely when the apk already exists in repo/
-
 #! /bin/bash
 
-#PNAME="${PWD##*/}"
 PNAME=$(echo "$(aapt d badging "$1" |grep -m 1 'package')" | awk -F"name='|'" '{print $2}')
-export DATE=$(date +%d%m%Y)
-cp "$1" $MYFDROIDDATA/unsigned/$PNAME\_00$DATE.apk
-cd $MYFDROIDDATA
-touch unsigned/$PNAME\_00$DATE\_src.tar.gz
-cp -n templates/minimal.txt metadata/$PNAME.txt
-fdroid publish $PNAME
-#adb install -r repo/$PNAME\_00$DATE.apk
+VERCODE=$(echo "$(aapt d badging "$1" |grep -m 1 'version')" | sed "s/.*versionCode='\([0-9]*\)'.*/\1/")
+
+if [ -e $MYFDROIDDATA/repo/$PNAME\_$VERCODE.apk ]; then
+	echo The repo already has an APK with that name.
+else
+        cp "$1" $MYFDROIDDATA/unsigned/$PNAME\_$VERCODE.apk
+        cd $MYFDROIDDATA
+        touch unsigned/$PNAME\_$VERCODE\_src.tar.gz
+        cp -n templates/minimal.txt metadata/$PNAME.txt
+        fdroid publish $PNAME
+fi
 
