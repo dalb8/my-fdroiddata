@@ -23,9 +23,6 @@ a small amount of bitcoins (a Satoshi) to a made-up address.
 If you ever need to prove that the damage was before a certain time,
 the app can check the history of the Bitcoin network to verify that 
 the photo was indeed taken at that time.
-
-For some unknown reason there are x86 shared objects in the APK, thus
-marking the APK as incompatible.
 .
 
 Repo Type:git
@@ -35,18 +32,25 @@ Build:0.5,5
     commit=0.5
     subdir=android
     init=sed -i '13 i mavenLocal()' build.gradle && \
-        sed -i '14,16d' build.gradle && \
-        sed -i 's/19.1.0/19.0.0/' build.gradle 
-    gradle=yes
-    srclibs=BitcoinJ@v0.11.1,Tracedroid@2740c,AXT@0.25
-    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
+        sed -i '14,16d' build.gradle
+    srclibs=BitcoinJ@v0.11.1,Tracedroid@2740c,AXT@0.25,Scrypt@1.3.3
+    build=\
+        rm -rf $$Scrypt$$/src/main/resources/lib && \
+        sed -i '61,74d;105,118d' $$Scrypt$$/pom.xml && \
+        $$MVN3$$ install -DskipTests=true -f $$Scrypt$$/pom.xml && \
+        SHA1=$(sha1sum $$Scrypt$$/target/scrypt-1.3.3.jar) && \
+        sed -i "s/06d6813de41e177189e1722717979b4fb5454b1d/$SHA1/" $$BitcoinJ$$/core/pom.xml && \
+        $$MVN3$$ install -DskipTests=true -f $$BitcoinJ$$/core/pom.xml && \
+        /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
         $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=tracedroid -Dversion=1.1 -Dpackaging=jar -Dfile=$$Tracedroid$$/build/libs/Tracedroid-1.1.jar && \
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$AXT$$ && \
-        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=AXT -Dversion=0.25 -Dpackaging=jar -Dfile=$$AXT$$/build/libs/AXT-0.25.jar && \
-        $$MVN3$$ install -DskipTests=true -f $$BitcoinJ$$/core/pom.xml
+        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=AXT -Dversion=0.25 -Dpackaging=jar -Dfile=$$AXT$$/build/libs/AXT-0.25.jar 
+    gradle=yes
 
 Maintainer Notes:
-Note the strange x86_4 ELFs in the APK.
+The strange x86_64 ELFs in the APK are via the scrypt.jar.
+While the libscrypt.so can be built it's not clear how to get them into the jar,
+but it's not even necessary for this app.
 .
 
 Update Check Mode:Tags
