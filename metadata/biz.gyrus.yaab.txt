@@ -28,8 +28,8 @@ behind the operation.
 Repo Type:hg
 Repo:https://bitbucket.org/gyrussolutions/yaab
 
-Build:1.9.8,22
-    commit=release1.9.8
+Build:1.9.9,23
+    commit=release1.9.9
 
 Maintainer Notes:
 .

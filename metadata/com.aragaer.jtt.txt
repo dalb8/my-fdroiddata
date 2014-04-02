@@ -35,8 +35,11 @@ Build:1.4.4.2,24
     init=sed -i '/reference.1/d' project.properties
     srclibs=1:SunriseSunset-aragaer@aee96f
 
-Build:1.4.4.5-pre,25
-    disable=not published
+Build:pre1.5v2,27
+    commit=610cfe
+    extlibs=android/android-support-v4.jar
+    srclibs=1:SunriseSunset-aragaer@aee96f,2:Appcompat@android-4.4_r1.1
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
 Maintainer Notes:
 Uses git submodules

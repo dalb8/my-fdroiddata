@@ -22,8 +22,8 @@ Set colours to wallpaper.
 Repo Type:git
 Repo:https://github.com/kaytdek/ColorNamer.git
 
-Build:2.3,8
-    commit=fed05971fc580
+Build:2.32,10
+    commit=54eb756
 
 Maintainer Notes:
 .

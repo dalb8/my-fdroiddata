@@ -21,14 +21,14 @@ This is the camera2 package which is a new package in Android 4.4.
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/apps/Camera2
 
-Build:4.4.2,1
+Build:4.4.2,4420
     commit=android-sdk-4.4.2_r1
     target=android-19
     extlibs=android/android-support-v13.jar
     srclibs=Xmp@android-4.4.2_r1
     patch=custom_rules.xml_1.patch
     prebuild=cp -r $$Xmp$$ . && \
-        echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=1' >> ant.properties && \
+        echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=4420' >> ant.properties && \
         echo 'APP_ABI := armeabi-v7a' >> jni/Application.mk
     buildjni=yes
 
@@ -38,6 +38,6 @@ See version.mk for their version scheme
 .
 
 Update Check Mode:None
-Current Version:4.2.1
-Current Version Code:1
+Current Version:4.4.2
+Current Version Code:4420
 

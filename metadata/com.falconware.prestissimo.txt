@@ -1,11 +1,9 @@
 # Copyright (c) 2014 David Black.
 # Copyright (c) 2010-2014 the Fdroiddata contributors.
 # Licensed under the GNU AGPLv3.
-
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
-
 Categories:Multimedia
 License:LGPL
 Web Site:
@@ -26,14 +24,16 @@ Build:1.0,11
     commit=18b6e9
     target=android-17
     srclibs=Sonic@637de
+    rm=libs/armeabi,libs/armeabi-v7a
     build=$$NDK$$/ndk-build -C $$Sonic$$ && \
         mv $$Sonic$$/libs/armeabi* libs/
+    buildjni=no
 
 Maintainer Notes:
 Tags unreliable
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.5
-Current Version Code:10
+Current Version:1.0
+Current Version Code:11
 

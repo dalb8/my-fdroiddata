@@ -26,8 +26,8 @@ Default source for weather is [http://openweathermap.org Open Weather Map].
 Repo Type:git
 Repo:https://github.com/arminha/worldclockwidget.git
 
-Build:1.5.11,29
-    commit=1.5.11
+Build:1.5.12,30
+    commit=1.5.12
     subdir=worldclockwidget
 
 Maintainer Notes:
