@@ -37,6 +37,7 @@ Build:2.2.3,63
     srclibs=1:ActionBarSherlock@9598f2bb;2:SlidingMenu@7343c3cd
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
         cp libs/android-support-v4.jar $$SlidingMenu$$/libs/ && \
+        android update project -p $$SlidingMenu$$ -t android-14 -l ../../ActionBarSherlock/library && \
         sed -i -e 's/extends FragmentActivity implements SlidingActivityBase/extends com.actionbarsherlock.app.SherlockFragmentActivity implements SlidingActivityBase/' $$SlidingMenu$$/src/com/slidingmenu/lib/app/SlidingFragmentActivity.java && \
         rm $$SlidingMenu$$/src/com/slidingmenu/lib/app/SlidingMapActivity.java $$SlidingMenu$$/libs/actionbarsherlock-plugin-maps-4.1.0.jar
     buildjni=jni

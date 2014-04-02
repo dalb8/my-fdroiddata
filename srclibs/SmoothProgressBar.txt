@@ -1,5 +1,4 @@
 Repo Type:git
 Repo:https://github.com/castorflex/SmoothProgressBar
 Subdir:library/src/main
-Prepare:echo -e 'android.library=true\ntarget=android-19\nsource.dir=java' >> project.properties
-Update Project:Yes
+Prepare:[ -f project.properties ] || echo 'source.dir=java' >> ant.properties && echo -e 'android.library=true\ntarget=android-19' > project.properties

@@ -2,6 +2,5 @@ Repo Type:git
 Repo:https://github.com/mariotaku/RefreshNow
 
 Subdir:library
-Prepare:sed -i 's@\(reference.1=\).*@\1../../SmoothProgressBar/library/src/main@' project.properties
-Update Project:Yes
+Srclibs:SmoothProgressBar
 

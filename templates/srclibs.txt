@@ -13,6 +13,6 @@ Prepare:
 # (Apparently obosolete, since they are auto updated now)
 #Update Project:
 
-# May not work! Must checkout the revision in the metadata
+# Must checkout the revision in the metadata
 Srclibs:
 

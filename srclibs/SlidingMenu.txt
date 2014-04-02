@@ -3,7 +3,3 @@ Repo:https://github.com/jfeinstein10/SlidingMenu
 
 Subdir:library
 
-#Srclibs:ActionBarSherlock
-
-Prepare:android update project -p . -t android-14 -l ../../ActionBarSherlock/library
-

@@ -60,7 +60,7 @@ Build:0.2.9.12,94
     commit=0.2.9.12
     init=sed -i '899d' src/org/mariotaku/twidere/activity/support/HomeActivity.java
     patch=google-services_94.patch
-    srclibs=1:RefreshNow@3090bc,2:DragSort@0.6.1,ActionBarSherlock@4.2.0,3:SlidingMenu@7ebe32772,4:HoloAccent@v0.9,5:MenuComponent@2caf41,6:StaggeredGrid@1.0.4,SmoothProgressBar@0.3.3,7:ViewPagerIndicator@2.4.1
+    srclibs=SmoothProgressBar@0.3.3,1:RefreshNow@3090bc,2:DragSort@0.6.1,ActionBarSherlock@4.2.0,3:SlidingMenu@7ebe32772,4:HoloAccent@v0.9,5:MenuComponent@2caf41,6:StaggeredGrid@1.0.4,7:ViewPagerIndicator@2.4.1
     prebuild=sed -i 's/sans-serif-condensed/serif/g' src/org/mariotaku/twidere/constant/SharedPreferenceConstants.java && \
         cp $$HoloAccent$$/libs/android-support-v4.jar $$DragSort$$/libs/ && \
         cp $$HoloAccent$$/libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/ && \
