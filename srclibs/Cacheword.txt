@@ -1,7 +1,5 @@
 Repo Type:git
 Repo:https://github.com/guardianproject/cacheword
 Subdir:cachewordlib
-Prepare:rm libs/iocipher.jar && android update project -p . -l ../../IOCipher
-#Srclibs:IOCipher
-#&& echo 'source.dir=../../IOCipher/src;src' >> ant.properties
-#Update Project:Yes
+Prepare:rm libs/iocipher.jar
+Srclibs:IOCipher
