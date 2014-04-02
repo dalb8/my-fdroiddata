@@ -59,11 +59,15 @@ repo_keyalias = 'repokey'
 #somewhere safe and secure, and backed up!
 keystore = "/home/me/.local/share/fdroidserver/keystore.jks"
 
-#The password for the keystore (at least 6 characters).
+# The password for the keystore (at least 6 characters).  If this password is
+# different than the keypass below, it can be OK to store the password in this
+# file for real use.  But in general, sensitive passwords should not be stored
+# in text files!
 keystorepass = "password1"
 
-#The password for keys - the same is used for each auto-generated key
-#as well as for the repository key.
+# The password for keys - the same is used for each auto-generated key as well
+# as for the repository key.  You should not normally store this password in a
+# file since it is a sensitive password.
 keypass = "password2"
 
 #The distinguished name used for all keys.
