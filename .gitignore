@@ -10,3 +10,5 @@
 /misc/
 /templates/installedList-DB*
 /metadata/de.danoeh.antennapod.debug/flattr.patch
+/.fdroid.keypass.txt
+/.fdroid.keystorepass.txt
