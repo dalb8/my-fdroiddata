@@ -28,7 +28,7 @@ Build:3.2,32
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:3.2
 Current Version Code:32
 

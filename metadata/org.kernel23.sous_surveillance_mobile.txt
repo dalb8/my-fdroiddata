@@ -37,7 +37,7 @@ Maintainer Notes:
 Not published anywhere. see also org.kernel23.souriezmontpellier
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:1.0
 Current Version Code:1
 

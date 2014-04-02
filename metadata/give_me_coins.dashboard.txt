@@ -34,7 +34,7 @@ Build:Beta2.6,21
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
+Update Check Mode:None
 Current Version:Beta2.6
 Current Version Code:21
 

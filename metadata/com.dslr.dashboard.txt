@@ -67,7 +67,7 @@ not sure about whether bin/exiv2 is OK
 gplay well ahead of source code: 0.30.33
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:0.30.6
 Current Version Code:21
 
