@@ -30,11 +30,11 @@ Repo:https://github.com/ligi/FAST.git
 Build:5.1,51
     commit=5.1
     subdir=android
-    gradle=forFDroid
-    srclibs=Tracedroid@2740c
     patch=build.gradle_51.patch
-    build=gradle jar -p $$Tracedroid$$ && \
+    srclibs=Tracedroid@2740c
+    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
           mv $$Tracedroid$$/build/libs/Tracedroid-1.1.jar .
+    gradle=forFDroid
 
 Maintainer Notes:
 Watch out build=gradle will use system version of gradle, not the one in config.py

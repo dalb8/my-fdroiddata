@@ -1,6 +1,8 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
@@ -12,7 +14,7 @@ Web Site:
 Source Code:https://github.com/ligi/SatoshiProof/commits
 Issue Tracker:https://github.com/ligi/SatoshiProof/issues
 
-Auto Name:
+Auto Name:Satoshi Proof
 Summary:Prove chronology of events
 Description:
 Use the Bitcoin network like a notary.
@@ -26,23 +28,24 @@ the photo was indeed taken at that time.
 Repo Type:git
 Repo:https://github.com/ligi/SatoshiProof.git
 
-Build:0.4,4
-    disable=WIP at 0195c
-    commit=0195c
+Build:0.5,5
+    commit=0.5
     subdir=android
+    init=sed -i '13 i mavenLocal()' build.gradle && \
+        sed -i '14,16d' build.gradle && \
+        sed -i 's/19.1.0/19.0.0/' build.gradle 
     gradle=yes
-    srclibs=BitcoinJWallet@1134572f61;tracedroid@cac666;axt@80da
-    patch=source_4.patch
-    prebuild=cd .. && \
-        ln -s ../srclib/tracedroid && \
-        ln -s ../srclib/axt
-    build=$$MVN3$$ package -DskipTests=true -f $$BitcoinJWallet$$/core/pom.xml && \
-        mv $$BitcoinJWallet$$/core/target/bitcoinj-0.10.1.jar libs/
+    srclibs=BitcoinJ@v0.11.1,Tracedroid@2740c,AXT@0.25
+    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
+        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=tracedroid -Dversion=1.1 -Dpackaging=jar -Dfile=$$Tracedroid$$/build/libs/Tracedroid-1.1.jar && \
+        /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$AXT$$ && \
+        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=AXT -Dversion=0.25 -Dpackaging=jar -Dfile=$$AXT$$/build/libs/AXT-0.25.jar && \
+        $$MVN3$$ install -DskipTests=true -f $$BitcoinJ$$/core/pom.xml
 
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
-Current Version:0.4
-Current Version Code:4
+Update Check Mode:Tags
+Current Version:0.5
+Current Version Code:5
 
