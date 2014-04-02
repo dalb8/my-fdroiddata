@@ -34,8 +34,8 @@ Build:2.0,4
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
-Build:2.0,4
-    commit=v2.0
+Build:2.2,6
+    commit=v2.2
     rm=custom_rules.xml
     extlibs=android/android-support-v4.jar
 
@@ -43,7 +43,7 @@ Maintainer Notes:
 Tags are behind gplay
 .
 
-Update Check Mode:RepoManifest
-Current Version:2.1
-Current Version Code:5
+#Update Check Mode:Tags
+Current Version:2.2
+Current Version Code:6
 
