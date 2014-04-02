@@ -45,9 +45,8 @@ Build:0.55,550
     srclibs=1:ImageLoader@v1.9.0
     patch=play_53.patch
 
-Build:0.61-test,610
-    disable=test
-    commit=0.61-test
+Build:0.62,620
+    commit=0.62
     submodules=yes
     patch=default-repo.patch
     update=no
