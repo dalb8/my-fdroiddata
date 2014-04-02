@@ -23,6 +23,9 @@ a small amount of bitcoins (a Satoshi) to a made-up address.
 If you ever need to prove that the damage was before a certain time,
 the app can check the history of the Bitcoin network to verify that 
 the photo was indeed taken at that time.
+
+For some unknown reason there are x86 shared objects in the APK, thus
+marking the APK as incompatible.
 .
 
 Repo Type:git
@@ -43,6 +46,7 @@ Build:0.5,5
         $$MVN3$$ install -DskipTests=true -f $$BitcoinJ$$/core/pom.xml
 
 Maintainer Notes:
+Note the strange x86_4 ELFs in the APK.
 .
 
 Update Check Mode:Tags
