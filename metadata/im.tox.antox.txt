@@ -14,7 +14,7 @@ Web Site:https://tox.im
 Source Code:https://github.com/Astonex/Antox/commits
 Issue Tracker:https://github.com/Astonex/Antox/issues
 
-Auto Name:
+Auto Name:Antox
 Summary:Peer-to-peer messaging
 Description:
 No description available
@@ -29,22 +29,21 @@ Build:0.6.6-ARMv7,12
     gradle=yes
     rm=app/libs/wearable-preview-support.jar,app/src/main/jniLibs/armeabi
     srclibs=Sodium@dbe51e8ff86,Toxcore@9d06e4,JToxcore@v0.5.1,Zxing@zxing-3.0.0
-    build=\
-        sed -i '/preview/d' src/main/java/im/tox/antox/tox/ToxService.java && \
-        sed -i '/wearable-preview/d;14 i \\tversionNameSuffix "-ARMv7"' build.gradle && \
+    build=sed -i '/preview/d' src/main/java/im/tox/antox/tox/ToxService.java && \
+        sed -i '/wearable-preview/d;14 i \\\tversionNameSuffix "-ARMv7"' build.gradle && \
         mkdir -p src/main/jniLibs/armeabi-v7a && \
         export JAR=$PWD/libs ARM7=$PWD/src/main/jniLibs/armeabi-v7a ZXING_HOME=$(readlink -f $$Zxing$$) && \
         export ANDROID_NDK_HOME=$$NDK$$ JTOXCORE_HOME=$(readlink -f $$JToxcore$$) && \
         export SODIUM_HOME=$(readlink -f $$Sodium$$) TOXCORE_HOME=$(readlink -f $$Toxcore$$) && \
         cd $SODIUM_HOME && \
-       ./autogen.sh && \
+        ./autogen.sh && \
         sed -i 's/-j3/-j2/' dist-build/android-build.sh && \
-       ./dist-build/android-armv7.sh && \
+        ./dist-build/android-armv7.sh && \
         cp libsodium-android-armv7/lib/libsodium.so $ARM7 && \
         cd $TOXCORE_HOME && \
         export TOOLCHAIN_DIR=$SODIUM_HOME/android-toolchain-armv7 && \
-       ./autogen.sh && \
-       ./dist-build/android-armv7.sh && \
+        ./autogen.sh && \
+        ./dist-build/android-armv7.sh && \
         cp toxcore-android-armv7/lib/libtoxcore.so $ARM7 && \
         cp toxcore-android-armv7/lib/libtoxcore.so $TOOLCHAIN_DIR/sysroot/usr/lib/ && \
         cd $JTOXCORE_HOME && \
@@ -58,29 +57,27 @@ Build:0.6.6-ARMv7,12
         $$MVN3$$ package -DskipTests -f $ZXING_HOME/core/pom.xml && \
         mv $ZXING_HOME/android/libs/core-3.0.0.jar $JAR/core.jar 
 
-Build:0.7.2-ARMv7,13
-    disable=couple of java errors
-    commit=656414ec40de5
+Build:0.8.1-ARMv7,14
+    commit=v0.8.1-alpha
     subdir=app
     gradle=yes
     rm=app/libs/wearable-preview-support.jar
-    srclibs=Sodium@dbe51e8ff86,Toxcore@9d06e4,JToxcore@v0.5.1,Zxing@zxing-3.0.0
-    build=\
-        sed -i '/preview/d' src/main/java/im/tox/antox/tox/ToxService.java && \
+    srclibs=Sodium@dbe51e8ff86,Toxcore@9d06e4,JToxcore@77182a03dc6,Zxing@zxing-3.0.0
+    build=sed -i '/preview/d' src/main/java/im/tox/antox/tox/ToxService.java && \
         sed -i '/wearable-preview/d;14 i \\\tversionNameSuffix "-ARMv7"' build.gradle && \
         mkdir -p src/main/jniLibs/armeabi-v7a && \
         export JAR=$PWD/libs ARM7=$PWD/src/main/jniLibs/armeabi-v7a ZXING_HOME=$(readlink -f $$Zxing$$) && \
         export ANDROID_NDK_HOME=$$NDK$$ JTOXCORE_HOME=$(readlink -f $$JToxcore$$) && \
         export SODIUM_HOME=$(readlink -f $$Sodium$$) TOXCORE_HOME=$(readlink -f $$Toxcore$$) && \
         cd $SODIUM_HOME && \
-       ./autogen.sh && \
+        ./autogen.sh && \
         sed -i 's/-j3/-j2/' dist-build/android-build.sh && \
-       ./dist-build/android-armv7.sh && \
+        ./dist-build/android-armv7.sh && \
         cp libsodium-android-armv7/lib/libsodium.so $ARM7 && \
         cd $TOXCORE_HOME && \
         export TOOLCHAIN_DIR=$SODIUM_HOME/android-toolchain-armv7 && \
-       ./autogen.sh && \
-       ./dist-build/android-armv7.sh && \
+        ./autogen.sh && \
+        ./dist-build/android-armv7.sh && \
         cp toxcore-android-armv7/lib/libtoxcore.so $ARM7 && \
         cp toxcore-android-armv7/lib/libtoxcore.so $TOOLCHAIN_DIR/sysroot/usr/lib/ && \
         cd $JTOXCORE_HOME && \
@@ -99,7 +96,8 @@ The dist scripts don't seem to be installing the libraries to the correct locati
 See the methods outlined here: https://github.com/Tox/jToxcore/blob/master/Android.md
         "${ANDROID_NDK_HOME}/build/tools/make-standalone-toolchain.sh" --ndk-dir="${ANDROID_NDK_HOME}" --toolchain=arm-linux-androideabi-4.6 --system=linux-x86 --install-dir=$PWD/../Toolchain --platform=android-9 && \
         export TOOLCHAIN_DIR=$PWD/Toolchain && \
-See that link for commits to use.
+See that link for commits to use or see README to see the date of the reference binaries:
+http://jenkins.tox.im/job/jToxcore_Android
 
 Looks like package name will change soon.
 
@@ -111,7 +109,7 @@ To get all source in a tarball:
         cp -r $$Zxing$$/* ../Zxing && \
 .
 
-Update Check Mode:RepoManifest
-Current Version:0.7.2
-Current Version Code:13
+Update Check Mode:Tags
+Current Version:0.8.1
+Current Version Code:16
 
