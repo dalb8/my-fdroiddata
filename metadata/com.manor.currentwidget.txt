@@ -46,17 +46,14 @@ Repo:https://currentwidget.googlecode.com/svn/trunk
 Build:0.39,38
     commit=283
     subdir=CurrentWidget
-    target=android-17
-    update=.;../CurrentWidgetLibrary
     srclibs=Color-Picker-2@45ee6554a1db
-    prebuild=printf "android.library.reference.1=../CurrentWidgetLibrary" >> project.properties && \
-        mkdir -p src/ && \
-        rm -rf ../CurrentWidgetLibrary/bin && \
-        mv res/drawable/icon.png ../CurrentWidgetLibrary/res/drawable/ && \
-        printf "android.library=true\nandroid.library.reference.1=$$Color-Picker-2$$" >> ../CurrentWidgetLibrary/project.properties
+    prebuild=\
+        sed -i 's@\(reference.1=\).*@\1$$Color-Picker-2$$@' ../CurrentWidgetLibrary/project.properties
+
+Build:0.39a,39
+    disable=GMS
 
 Maintainer Notes:
-N.B Latest code uses GMS
 .
 
 #Update Check Mode:RepoManifest
