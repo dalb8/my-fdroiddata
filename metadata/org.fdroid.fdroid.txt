@@ -29,6 +29,8 @@ but there are many good reasons for using a client/repository setup:
 * Stay safe by checking repo index signatures and apk hashes
 
 [http://f-droid.org/posts/category/changelog Changelog]
+
+Version 0.55 is better for small screens.
 .
 
 Repo Type:git
@@ -53,16 +55,16 @@ Build:0.62,620
     prebuild=./ant-prepare.sh
 
 Maintainer Notes:
+Don't forget the patch:
+    patch=play_570.patch
+
+WIP gradle:
     init=sed -i "60 i \\\tdefaultConfig{packageName 'org.appz.fdroid'}" build.gradle && \
       sed -i 's/compileSdkVersion 7/compileSdkVersion  8/' extern/MemorizingTrustManager/build.gradle && \
       sed -i 's/0.4.2/0.7.+/;38,41d' extern/AndroidPinning/build.gradle 
-
-    patch=play_570.patch
-
-    rm=res/drawable-xxhdpi;res/drawable-xhdpi;res/drawable-hdpi
 .
 
 Update Check Mode:None
-Current Version:0.55
-Current Version Code:550
+Current Version:0.62
+Current Version Code:620
 
