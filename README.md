@@ -24,7 +24,7 @@ By all means, include in-development apps; if they turn out to be flops
 we'll add the `Disabled:` field and eventually delete them.
 
 I'm currently using a recent version of 
-[fdroidserver](https://gitorious.org/f-droid/fdroidserver).
+[fdroidserver](https://gitlab.com/fdroid/fdroidserver).
 Therefore newer recipes are likely to work but older recipes might not be
 valid any more. However we only keep a couple of builds per package so
 we'll get around to revising them eventually.

@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 
-# For use with F-Droid server: https://gitorious.org/f-droid/froidserver
+# For use with F-Droid server: https://gitlab.com/fdroid/froidserver
 # Copy this file (or the sample config from that repo) to my-fdroiddata/config.py, 
 # then amend the settings below according to your system configuration.
 # Alternatively, a config will be generated with $fdroid init.

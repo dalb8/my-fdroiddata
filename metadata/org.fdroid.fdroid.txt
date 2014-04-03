@@ -9,7 +9,7 @@
 Categories:System
 License:GPLv3+
 Web Site:https://f-droid.org
-Source Code:https://gitorious.org/f-droid/fdroidclient
+Source Code:https://gitlab.com/fdroid/fdroidclient
 Issue Tracker:https://f-droid.org/repository/issues
 Donate:https://f-droid.org/about
 FlattrID:343053
@@ -34,7 +34,7 @@ Version 0.55 is better for small screens.
 .
 
 Repo Type:git
-Repo:https://gitorious.org/f-droid/fdroidclient.git
+Repo:https://gitlab.com/fdroid/fdroidclient.git
 
 Build:0.53-test,53
     commit=0.53-test
