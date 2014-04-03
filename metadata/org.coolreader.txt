@@ -28,17 +28,14 @@ Repo Type:git
 Repo:git://crengine.git.sourceforge.net/gitroot/crengine/crengine
 
 Build:3.1.2-39,859
-    commit=004663ff92ea5698
+    commit=cr3-3.1.2-39-market
     subdir=android
-    init=sed -i 's/minSdkVersion="3"/minSdkVersion="4"/g' AndroidManifest.xml
     rm=android/build.properties
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
     buildjni=no
 
 Maintainer Notes:
 Too many tags so use RepoManifest
-
-Tags a little unreliable
 .
 
 Update Check Mode:RepoManifest
