@@ -27,8 +27,6 @@ could matter, read
 Requires root: Yes. To write gps.conf file to /system partition.
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/dschuermann/faster-gps.git
 

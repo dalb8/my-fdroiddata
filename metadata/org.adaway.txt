@@ -33,8 +33,6 @@ Requires root: Yes. The hosts files is located in /system which is normally
 read-only.
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/dschuermann/ad-away.git
 

@@ -30,8 +30,6 @@ try enabling the socks proxy and Global proxy.
 A proprietary analytics library was removed.
 .
 
-Requires Root:Yes
-
 Repo Type:hg
 Repo:https://bitbucket.org/madeye/sshtunnel
 

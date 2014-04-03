@@ -34,8 +34,6 @@ seem to work if you restore to a package installed that's been
 signed with a different key :-\)
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/jensstein/oandbackup.git
 

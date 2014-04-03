@@ -31,8 +31,6 @@ Requires root: Yes. iptables must run as root.
 [https://github.com/ukanth/afwall/blob/master/Changelog.md Changelog]
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/ukanth/afwall.git
 

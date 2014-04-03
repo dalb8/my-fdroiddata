@@ -31,8 +31,6 @@ That can be compiled using code in the Serval Batphone project.
 * Misc. Tools: Custom shell command, Wipe cache+dalvik cache, build.prop editor etc.
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/erik96/android_packages_apps_PerformanceControl
 

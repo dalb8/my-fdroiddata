@@ -22,8 +22,6 @@ network connections, and provides statistics about those app connections.
 Requires root: Yes. iptables must run as root
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://code.google.com/p/iptableslog
 

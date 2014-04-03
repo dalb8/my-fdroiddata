@@ -26,20 +26,20 @@ as a su/Superuser substitute if you are gaining an initial root.
 Once the install is completed you can disable or remove the old app.
 .
 
-Requires Root:Yes
-
 Repo Type:git
 Repo:https://github.com/koush/Superuser.git
 
-Build:1.0.2.8,1027
-    commit=74363eaa79
+Build:1.0.3.0,1030
+    commit=b0bfdbc11071
     subdir=Superuser
     init=rm -f build.xml
     srclibs=1:KoushWidgets@2cc45f3
-    prebuild=sed -i 's/x86 armeabi mips/armeabi/g' jni/Application.mk
-    buildjni=yes
+    prebuild=mv jni jni_
+    build=mv jni_ jni && \
+     $$NDK$$/ndk-build -e 'APP_ABI=armeabi'
 
 Maintainer Notes:
+Changing package name has a slight twist; see git log for recipe.
 .
 
 #Update Check Mode:RepoManifest

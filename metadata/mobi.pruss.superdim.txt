@@ -20,8 +20,6 @@ Description:
 Requires Root:Yes
 .
 
-Requires Root:Yes
-
 Repo Type:git-svn
 Repo:https://superdim.googlecode.com/svn/trunk
 
