@@ -24,12 +24,12 @@ Status: Alpha. Not very polished but functional and stable.
 .
 
 Repo Type:git-svn
-Repo:https://auroraapp.googlecode.com/svn;trunk=trunk;tags=tags
+Repo:https://auroraapp.googlecode.com/svn
 
 Build:1.04,4
     commit=9
-    subdir=aAuroraApp
-    target=android-10
+    init=rm -rf bin
+    subdir=trunk/aAuroraApp
 
 Maintainer Notes:
 not in the gplay

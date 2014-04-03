@@ -21,10 +21,12 @@ Based on the desktop software, also called Juggling lab.
 Repo Type:git-svn
 Repo:https://jugglinglab.googlecode.com/svn/trunk
 
-Build:1.1,3
-    commit=251
-    init=echo 'target=android-16' >> project.properties
-    srclibs=1:GreenDroid@greendroid-0.2;2:SuperDryColorPicker@5c488
+Build:1.3,5
+    commit=260
+    init=rm -rf bin && \
+      mv lib libs && \
+      echo 'target=android-16' >> project.properties
+    srclibs=1:GreenDroid@greendroid-0.2,2:ColorPickerPreference@15b66
 
 Maintainer Notes:
 .

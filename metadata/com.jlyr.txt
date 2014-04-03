@@ -33,8 +33,6 @@ Build:1.5,36
 
 Build:1.5.1,41
     disable=not published
-    commit=baaf945f8d86
-    target=android-10
 
 Maintainer Notes:
 .

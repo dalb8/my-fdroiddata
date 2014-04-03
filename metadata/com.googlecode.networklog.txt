@@ -37,8 +37,10 @@ Build:2.21.0-ARMv7,22100
              unzip libs/iptables-script_1.4.20.zip && \
              rm libs/iptables-script_1.4.20.zip && \
              sed -i 's/arm x86 mips/arm/;s/armeabi/armeabi-v7a/' external/Makefile && \
-             mkdir -p res/raw 
-    build=make -C external NDK=$$NDK$$ && \
+             mkdir -p res/raw && \
+             mv jni jni_
+    build=mv jni_ jni && \
+        make -C external NDK=$$NDK$$ && \
         mv     external/iptables_arm  external/iptables && \
         zip -j res/raw/iptables.zip   external/iptables && \
         $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' && \
@@ -49,7 +51,6 @@ Build:2.21.0-ARMv7,22100
         touch iptables_armv5.zip iptables_x86.zip iptables_mips.zip && \
         touch nflog_armv5.zip    nflog_x86.zip    nflog_mips.zip && \
         touch grep_armv5.zip     grep_x86.zip     grep_mips.zip
-    buildjni=no
 
 Maintainer Notes:
 .

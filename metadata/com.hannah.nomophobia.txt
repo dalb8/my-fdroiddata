@@ -24,15 +24,15 @@ Repo Type:git
 Repo:https://github.com/HannahMitt/Nomophobia.git
 
 Build:1.0,1
-    disable=see license
     commit=v1.0
     update=.,libs/GraphView
-    prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties
+    prebuild=sed -i 's@../phone-addict-widget/@@g' project.properties && \
+      cp assets/Ubuntu-Title.ttf assets/Market_Deco.ttf
 
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
+Update Check Mode:None
 Current Version:1.0
 Current Version Code:1
 

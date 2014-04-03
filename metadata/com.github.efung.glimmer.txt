@@ -22,14 +22,16 @@ Repo Type:git
 Repo:https://github.com/efung/glimmer.git
 
 Build:1.1.2,4
-    disable=no license
     commit=v1.1.2
     submodules=yes
+    rm=AndEngine/libs
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a' -C AndEngine
+    buildjni=no
 
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
+Update Check Mode:None
 Current Version:1.1.2
 Current Version Code:4
 

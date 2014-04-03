@@ -27,8 +27,8 @@ Works with [[org.torproject.android]] (except on Android 4.4).
 Repo Type:git
 Repo:https://github.com/duckduckgo/android.git
 
-Build:2.1.1,52
-    commit=v2.1.1
+Build:2.1.3,54
+    commit=v2.1.3
     srclibs=1:NetCipher@4fe34ede3f44d968
 
 Maintainer Notes:
