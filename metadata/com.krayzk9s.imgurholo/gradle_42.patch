@@ -1,0 +1,111 @@
+diff --git a/ImgurHolo/build.gradle b/ImgurHolo/build.gradle
+index 8305ade..ea09ed7 100644
+--- a/ImgurHolo/build.gradle
++++ b/ImgurHolo/build.gradle
+@@ -1,24 +1,18 @@
+ buildscript {
+     repositories {
+         mavenCentral()
+-        maven { url 'http://download.crashlytics.com/maven' }
+ 
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:0.8.+'
+-        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+-
+     }
+ }
+ apply plugin: 'android'
+-apply plugin: 'crashlytics'
+ 
+ repositories {
+     mavenCentral()
+     mavenLocal()
+     mavenRepo urls:"http://maven.mashape.com/releases"
+-    maven { url 'C:\\Users\\Ellen\\.m2\\repository' }
+-    maven { url 'http://download.crashlytics.com/maven' }
+ }
+ 
+ 
+@@ -36,13 +30,47 @@ dependencies {
+     compile 'com.google.code.gson:gson:2.2.4'
+     compile files('libs/scribe-1.3.5.jar')
+     compile files('libs/ion.jar')
++    compile project(':DragSort')
+     compile files('libs/android-async.jar')
+-    compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1-SNAPSHOT-AAR'
+     compile files('libs/android-support-v13.jar')
+-    compile 'com.crashlytics.android:crashlytics:1.+'
+ 
+ }
+ 
++project(':DragSort') {
++    buildscript {
++       repositories {
++         mavenCentral()
++      }
++
++      dependencies {
++        classpath 'com.android.tools.build:gradle:0.7.+'
++      }
++    }
++
++    apply plugin: 'android-library'
++
++    dependencies {
++      compile 'com.android.support:support-v4:18.0.+'
++    }
++
++    android {
++      compileSdkVersion 8
++      buildToolsVersion '19.0.1'
++
++      repositories {
++        mavenCentral()
++      }
++
++      sourceSets {
++        main {
++          manifest.srcFile 'AndroidManifest.xml'
++          java.srcDirs = ['src']
++          res.srcDirs = ['res']
++        }
++      }
++    }
++}
++
+ android {
+     compileSdkVersion 19
+     buildToolsVersion "19.0.1"
+diff --git a/ImgurHolo/src/main/AndroidManifest.xml b/ImgurHolo/src/main/AndroidManifest.xml
+index 441419b..63b0aa6 100644
+--- a/ImgurHolo/src/main/AndroidManifest.xml
++++ b/ImgurHolo/src/main/AndroidManifest.xml
+@@ -155,7 +155,6 @@
+         </activity>
+         <service android:name="com.krayzk9s.imgurholo.services.UploadService" />
+         <service android:name="com.krayzk9s.imgurholo.services.DownloadService" />
+-        <meta-data android:name="com.crashlytics.ApiKey" android:value="83ec4d6737e0b139ec006da8f1c6afe9b5eb36c4"/>
+     </application>
+ 
+ </manifest>
+diff --git a/ImgurHolo/src/main/java/com/krayzk9s/imgurholo/activities/MainActivity.java b/ImgurHolo/src/main/java/com/krayzk9s/imgurholo/activities/MainActivity.java
+index ebfe457..3c316ad 100644
+--- a/ImgurHolo/src/main/java/com/krayzk9s/imgurholo/activities/MainActivity.java
++++ b/ImgurHolo/src/main/java/com/krayzk9s/imgurholo/activities/MainActivity.java
+@@ -45,7 +45,6 @@ import android.widget.ListView;
+ import android.widget.TextView;
+ import android.widget.Toast;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.krayzk9s.imgurholo.R;
+ import com.krayzk9s.imgurholo.services.UploadService;
+ import com.krayzk9s.imgurholo.tools.ApiCall;
+@@ -72,7 +71,6 @@ public class MainActivity extends ImgurHoloActivity implements GetData {
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        Crashlytics.start(this);
+ 
+         setContentView(R.layout.activity_main);
+         updateMenu();
