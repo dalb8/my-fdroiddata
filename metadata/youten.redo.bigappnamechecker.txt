@@ -18,8 +18,10 @@ Auto Name:BigAppNameChecker
 Summary:Protection from a vulnerability
 Description:
 Android will be a security risk if the name of an app is more
-than 380,000 characters. This app tells you how many characters
-are in the app's name.
+than 380,000 characters. 
+When an app is installed or updated a notification is presented showing the app's
+package name as well as how many characters are in the app's name.
+Works even if the app is installed silently.
 .
 
 Repo Type:git
