@@ -59,7 +59,6 @@ Build:13.0.5,70
     build=NDK_BASE=$$NDK$$ make -C external 
 
 Build:13.0.6,71
-    disable=broken
     commit=a309cece79d304d25
     submodules=yes
     rm=libs/jtorctl.jar
