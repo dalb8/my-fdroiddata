@@ -38,8 +38,8 @@ Build:1.11,11
     commit=v1.11
 
 Build:1.13,13
-    disable=not done yet
     commit=v1.13
+    init=sed -i 's/0.5.+/0.9.1/' build.gradle
     gradle=yes
 
 Maintainer Notes:
