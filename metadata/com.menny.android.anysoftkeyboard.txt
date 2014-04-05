@@ -11,7 +11,7 @@ License:Apache
 Web Site:https://code.google.com/p/softkeyboard
 Source Code:https://github.com/AnySoftKeyboard/AnySoftKeyboard/commits
 Issue Tracker:https://github.com/AnySoftKeyboard/AnySoftKeyboard/issues
-Donate:https://code.google.com/p/softkeyboard
+Donate:https://anysoftkeyboard.github.io
 
 Auto Name:AnySoftKeyboard
 Summary:Alternative keyboard
@@ -39,34 +39,34 @@ Build:20130709,106
     prebuild=sed -i 's@..\/AnySoftKeyboardTools@$$AnySoftKeyboardTools$$@g' build.xml
     buildjni=yes
 
-Build:1.2.20140120,121
-    commit=d32820749d475a4d78f
-    disable=only assemble in debug mode because the version name needs entering: see https://github.com/AnySoftKeyboard/AnySoftKeyboard/issues/305
-    gradle=yes
-    rm=src/main/res/raw/words_1.dict;libs/native_libs.jar
-    extlibs=ASK-jni_f1ba2de.zip;ASK-build.gradle_121;words.xml.gz
-    srclibs=AnySoftKeyboard-API@496a4453cfd77;AnySoftKeyboardTools@73e9a09496;FrankenRobot@442db
-    prebuild=mv libs/ASK-build.gradle_121 build.gradle && \
-             mkdir -p src/main/dict && \
-             gunzip -c libs/words.xml.gz > src/main/dict/words.xml && \
-             unzip libs/ASK-jni_f1ba2de.zip && \
-             rm libs/words.xml.gz libs/ASK-jni_f1ba2de.zip && \
-             echo -e "include ':AnySoftKeyboard-API'\nproject(':AnySoftKeyboard-API').projectDir = new File('$(readlink -f $$AnySoftKeyboard-API$$)')" >> settings.gradle && \
-             echo -e "include ':FrankenRobot'\nproject(':FrankenRobot').projectDir = new File('$(readlink -f $$FrankenRobot$$)')" >> settings.gradle
-    build=cd src/main/ && \
-          java -jar ../../../srclib/AnySoftKeyboardTools/makedict/makedict.jar && \
-          cd ../../ && \
-          $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' && \
-          mkdir -p lib && \
-          mv libs/* lib/ && \
-          zip -r libs/native_libs.jar lib/*
+Build:1.2.2,122
+    disable=missing resources; can't build native libs
+    commit=v122
+    patch=gradle_122.patch
+    rm=src/main/res/raw/words_1.dict,libs/native_libs.jar
+    extlibs=words.xml.gz
+    srclibs=AnySoftKeyboard-API@51a2be888b9,AnySoftKeyboardTools@73e9a09496,FrankenRobot@442db
+    prebuild=\
+        mkdir -p src/main/dict src/main/jniLibs/ && \
+        gunzip -c libs/words.xml.gz > src/main/dict/words.xml; rm libs/words.xml.gz && \
+        echo -e "include ':AnySoftKeyboard-API'\nproject(':AnySoftKeyboard-API').projectDir = new File('$(readlink -f $$AnySoftKeyboard-API$$)')" >> settings.gradle && \
+        echo -e "include ':FrankenRobot'\nproject(':FrankenRobot').projectDir = new File('$(readlink -f $$FrankenRobot$$)')" >> settings.gradle
+    build=TOOLS=$(readlink -f $$AnySoftKeyboardTools$$) && \
+      (cd src/main/ ; java -jar $TOOLS/makedict/makedict.jar) && \
+      $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi' && \
+      mv libs/armeabi* src/main/jniLibs/
     buildjni=no
+    gradle=yes
 
 Maintainer Notes:
-Tags are at menny/AnySoftKeyboard
+Keep an eye out for new word list
+
+       mkdir -p lib && \
+       mv libs/* lib/ && \
+       zip -r libs/native_libs.jar lib/*
 .
 
-#Update Check Mode:RepoManifest
+Update Check Mode:Tags
 Current Version:Unknown
-Current Version Code:123
+Current Version Code:122
 
