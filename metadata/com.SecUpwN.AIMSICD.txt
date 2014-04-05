@@ -14,14 +14,9 @@ Web Site:http://secupwn.github.io/Android-IMSI-Catcher-Detector
 Source Code:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector/commits
 Issue Tracker:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector/issues
 
-Auto Name:rawphone
+Auto Name:AIMSICD
 Summary:Avoid fake phone networks
 Description:
-XDA [http://forum.xda-developers.com/showthread.php?t=1422969 thread].
-
-Status: Experimental. It was published 4 years ago but source code has
-only recently been uploaded.
-
 Built to use OSM instead of Google Maps.
 .
 
@@ -29,14 +24,15 @@ Repo Type:git
 Repo:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector.git
 
 Build:0.2.2,3
-    commit=e215ef13c1b46
-    subdir=MERGESOURCE/RawPhone
+    commit=733116742e114ba787ab2f515f41535f6bbc04a0
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
-     sed -i 's@\(target=\).*@\1android-8@' project.properties
-    rm=MERGESOURCE/RawPhone/bin,MERGESOURCE/RawPhone/gen
-    srclibs=1:MapsAPI@f6dd3410b223
+        sed -i 's@\(target=\).*@\1android-10@' project.properties
+    rm=bin,MERGESOURCE
+    extlibs=android/android-support-v4.jar
+    srclibs=1:MapsAPI@f6dd3410b223,2:Appcompat@android-4.4_r1.1
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:0.2.2
 Current Version Code:3
 
