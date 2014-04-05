@@ -6,6 +6,7 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
+AntiFeatures:UpstreamNonFree
 Categories:Reading
 #See README
 License:Custom
@@ -23,23 +24,24 @@ Translation, tafsir and Arabic data come from
 [http://tanzil.net tanzil] and King Saud University.
 Audio from Every Ayah. Images from
 [https://github.com/quran/quran.com-images quran images project].
+
+A proprietary crash library was removed.
 .
 
 Repo Type:git
 Repo:https://github.com/ahmedre/quran_android.git
 
-Build:2.3.1,231
-    disable=see license
-    commit=v2.3.1
+Build:2.5.0,250
+    commit=v2.5.1
     subdir=app
-    target=android-17
-    srclibs=1:ActionBarSherlock@4.1.0
+    patch=crashlytics_250.patch
+    gradle=yes@..
 
 Maintainer Notes:
-crashlytics in 2.4.8
+version was bumped just after the tag.
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:2.5.1
 Current Version Code:251
 

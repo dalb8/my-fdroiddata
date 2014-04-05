@@ -25,6 +25,7 @@ Repo:https://code.google.com/p/music-practice-tools
 Build:2.0,2
     commit=6e1c575b30d7
     target=android-16
+    rm=obj,libs/armeabi
     srclibs=2:NumberPicker-SimonVT@1da4372;1:ActionBarSherlock@4.1.0
     buildjni=yes
 
