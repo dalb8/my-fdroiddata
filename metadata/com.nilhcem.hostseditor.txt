@@ -24,14 +24,15 @@ read-only.
 Repo Type:git
 Repo:https://github.com/Nilhcem/hosts-editor-android
 
-Build:1.1,2
-    commit=ab85d7a8268f3c3
-    rm=contrib,.settings
-    srclibs=1:ActionBarSherlock@4.3.1
-
 Build:1.2,3
     commit=v1.2
     subdir=app
+    srclibs=RootTools-new@3.4
+    prebuild=\
+        sed -i -e '/fileTree/d' -e "38 i \ \ \ \ compile project(':RootTools')" build.gradle && \
+        ln -s $(readlink -f $$RootTools-new$$) ../RootTools && \
+        sed -i 's/0.7.+/0.6.+/' ../RootTools/build.gradle && \
+        echo "include ':RootTools'" >> ../settings.gradle
     gradle=yes
 
 Maintainer Notes:

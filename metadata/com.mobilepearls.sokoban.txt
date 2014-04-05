@@ -21,12 +21,8 @@ Push the jewels in to the green zones, but don't corner yourself!
 Repo Type:git
 Repo:https://github.com/mobilepearls/com.mobilepearls.sokoban.git
 
-Build:1.11,12
-    commit=48e1976f9d9881adb70e
-
 Build:1.12,13
-    disable=not published
-    commit=ae80d2feb77
+    commit=ae80d2feb77bac8805c
 
 Maintainer Notes:
 .
