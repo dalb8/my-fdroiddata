@@ -1,0 +1,340 @@
+diff --git a/app/build.gradle b/app/build.gradle
+index f27908e..cc20307 100644
+--- a/app/build.gradle
++++ b/app/build.gradle
+@@ -1,50 +1,35 @@
+ buildscript {
+     repositories {
+         mavenCentral()
+-        maven { url 'http://download.crashlytics.com/maven' }
+     }
+     dependencies {
+         classpath 'com.android.tools.build:gradle:0.7.+'
+-        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
+     }
+ }
+ apply plugin: 'android'
+-//apply plugin: 'crashlytics'
+ 
+ repositories {
+     mavenCentral()
+-    maven { url 'http://download.crashlytics.com/maven' }
+ }
+ 
+ android {
+     compileSdkVersion 19
+-    buildToolsVersion "19.0.0"
++    buildToolsVersion "19.0.3"
+ 
+     defaultConfig {
+         minSdkVersion 7
+         targetSdkVersion 19
+     }
+ 
+-    signingConfigs {
+-        release {
+-            storeFile file("release.keystore")
+-            storePassword "password"
+-            keyAlias "alias"
+-            keyPassword "password"
+-        }
+-    }
+-
+     buildTypes {
+       release {
+          runProguard true
+          proguardFile 'proguard.cfg'
+-         signingConfig signingConfigs.release
++         }
+       }
+-    }
+ }
+ 
+ dependencies {
+     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+     compile 'com.android.support:support-v4:18.0.0'
+-    compile 'com.crashlytics.android:crashlytics:1.+'
+ }
+diff --git a/app/src/main/java/com/quran/labs/androidquran/QuranApplication.java b/app/src/main/java/com/quran/labs/androidquran/QuranApplication.java
+index f4c1567..84c0d24 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/QuranApplication.java
++++ b/app/src/main/java/com/quran/labs/androidquran/QuranApplication.java
+@@ -6,7 +6,6 @@ import android.content.res.Configuration;
+ import android.content.res.Resources;
+ import android.preference.PreferenceManager;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.data.Constants;
+ 
+ import java.util.Locale;
+@@ -19,9 +18,6 @@ public class QuranApplication extends Application {
+   @Override
+   public void onCreate() {
+     super.onCreate();
+-    if (Constants.CRASH_REPORTING_ENABLED) {
+-      Crashlytics.start(this);
+-    }
+     refreshLocale(false);
+   }
+ 
+diff --git a/app/src/main/java/com/quran/labs/androidquran/QuranPreferenceActivity.java b/app/src/main/java/com/quran/labs/androidquran/QuranPreferenceActivity.java
+index 3f57d4b..7f6810e 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/QuranPreferenceActivity.java
++++ b/app/src/main/java/com/quran/labs/androidquran/QuranPreferenceActivity.java
+@@ -15,7 +15,6 @@ import android.util.Log;
+ import android.widget.Toast;
+ 
+ import com.actionbarsherlock.app.SherlockPreferenceActivity;
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.data.Constants;
+ import com.quran.labs.androidquran.util.QuranFileUtils;
+ import com.quran.labs.androidquran.util.QuranScreenInfo;
+@@ -88,7 +87,6 @@ public class QuranPreferenceActivity extends SherlockPreferenceActivity
+       mStorageList = StorageUtils
+         .getAllStorageLocations(getApplicationContext());
+     } catch (Exception e){
+-      Crashlytics.logException(e);
+       mStorageList = new ArrayList<StorageUtils.Storage>();
+     }
+ 
+diff --git a/app/src/main/java/com/quran/labs/androidquran/data/QuranDataProvider.java b/app/src/main/java/com/quran/labs/androidquran/data/QuranDataProvider.java
+index f938e5d..ca75f57 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/data/QuranDataProvider.java
++++ b/app/src/main/java/com/quran/labs/androidquran/data/QuranDataProvider.java
+@@ -15,7 +15,6 @@ import android.provider.BaseColumns;
+ import android.text.TextUtils;
+ import android.util.Log;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.R;
+ import com.quran.labs.androidquran.common.TranslationItem;
+ import com.quran.labs.androidquran.database.DatabaseHandler;
+@@ -124,7 +123,6 @@ public class QuranDataProvider extends ContentProvider {
+     }
+ 
+     try {
+-      Crashlytics.log("couldn't find database, searching for another..");
+       TranslationsDBAdapter adapter =
+         new TranslationsDBAdapter(getContext());
+       List<TranslationItem> items = adapter.getTranslations();
+@@ -133,7 +131,7 @@ public class QuranDataProvider extends ContentProvider {
+             .getDefaultTranslation(getContext(), items);
+       }
+     } catch (Exception e){
+-      Crashlytics.logException(e);
++      return null;
+     }
+     return null;
+ 	}
+diff --git a/app/src/main/java/com/quran/labs/androidquran/database/DatabaseHandler.java b/app/src/main/java/com/quran/labs/androidquran/database/DatabaseHandler.java
+index a681613..af60440 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/database/DatabaseHandler.java
++++ b/app/src/main/java/com/quran/labs/androidquran/database/DatabaseHandler.java
+@@ -5,7 +5,6 @@ import android.database.Cursor;
+ import android.database.SQLException;
+ import android.database.sqlite.SQLiteDatabase;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.R;
+ import com.quran.labs.androidquran.util.QuranFileUtils;
+ 
+@@ -38,13 +37,10 @@ public class DatabaseHandler {
+     String base = QuranFileUtils.getQuranDatabaseDirectory(context);
+     if (base == null) return;
+     String path = base + File.separator + databaseName;
+-    Crashlytics.log("opening database file: " + path);
+     try {
+       mDatabase = SQLiteDatabase.openDatabase(path, null,
+         SQLiteDatabase.NO_LOCALIZED_COLLATORS);
+     } catch (SQLException se){
+-      Crashlytics.log("database file " + path +
+-          (new File(path).exists()? " exists" : " doesn't exist"));
+       throw se;
+     }
+ 
+@@ -207,17 +203,14 @@ public class DatabaseHandler {
+     String qtext = "select " + COL_SURA + ", " + COL_AYAH +
+         ", " + whatTextToSelect + " from " + table + " where " + COL_TEXT +
+         operator + " ? " + " limit 150";
+-    Crashlytics.log("search query: " + qtext + ", query: " + query);
+ 
+     try {
+       Cursor c = mDatabase.rawQuery(qtext, new String[]{query});
+       return c;
+     } catch (Exception e){
+       if (withSnippets && useFullTextIndex){
+-        Crashlytics.log("error querying, trying again without snippets...");
+         return search(q, table, false);
+       } else {
+-        Crashlytics.logException(e);
+         return null;
+       }
+     }
+diff --git a/app/src/main/java/com/quran/labs/androidquran/database/SuraTimingDatabaseHandler.java b/app/src/main/java/com/quran/labs/androidquran/database/SuraTimingDatabaseHandler.java
+index ed8c97f..a433323 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/database/SuraTimingDatabaseHandler.java
++++ b/app/src/main/java/com/quran/labs/androidquran/database/SuraTimingDatabaseHandler.java
+@@ -4,8 +4,6 @@ import android.database.Cursor;
+ import android.database.SQLException;
+ import android.database.sqlite.SQLiteDatabase;
+ 
+-import com.crashlytics.android.Crashlytics;
+-
+ import java.io.File;
+ 
+ public class SuraTimingDatabaseHandler {
+@@ -44,13 +42,10 @@ public class SuraTimingDatabaseHandler {
+   }
+ 
+   private SuraTimingDatabaseHandler(String path) throws SQLException {
+-    Crashlytics.log("opening gapless data file, " + path);
+     try {
+       mDatabase = SQLiteDatabase.openDatabase(path, null,
+           SQLiteDatabase.NO_LOCALIZED_COLLATORS);
+     } catch (SQLException se) {
+-      Crashlytics.log("database at " + path +
+-          (new File(path).exists() ? " exists" : " doesn't exist"));
+       throw se;
+     }
+   }
+diff --git a/app/src/main/java/com/quran/labs/androidquran/service/AudioService.java b/app/src/main/java/com/quran/labs/androidquran/service/AudioService.java
+index 018b3f4..dab8f9b 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/service/AudioService.java
++++ b/app/src/main/java/com/quran/labs/androidquran/service/AudioService.java
+@@ -44,7 +44,6 @@ import android.support.v4.content.LocalBroadcastManager;
+ import android.util.Log;
+ import android.util.SparseArray;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.R;
+ import com.quran.labs.androidquran.common.QuranAyah;
+ import com.quran.labs.androidquran.data.QuranInfo;
+@@ -797,8 +796,6 @@ public class AudioService extends Service implements OnCompletionListener,
+          try {
+             mPlayer.setDataSource(url);
+          } catch (IllegalStateException ie){
+-           Crashlytics.log("IllegalStateException() while " +
+-               "setting data source, trying to reset...");
+            mPlayer.reset();
+            mPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+            mPlayer.setDataSource(url);
+diff --git a/app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageWorker.java b/app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageWorker.java
+index 2ff2700..34f127f 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageWorker.java
++++ b/app/src/main/java/com/quran/labs/androidquran/ui/helpers/QuranPageWorker.java
+@@ -10,7 +10,6 @@ import android.support.v4.util.LruCache;
+ import android.util.Log;
+ import android.widget.ImageView;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.util.AsyncTask;
+ import com.quran.labs.androidquran.util.QuranScreenInfo;
+ 
+@@ -39,8 +38,6 @@ public class QuranPageWorker {
+             Context.ACTIVITY_SERVICE)).getMemoryClass();
+       final int cacheSize = 1024 * 1024 * memClass / 8;
+       final int maxMemory = (int) (Runtime.getRuntime().maxMemory() / 1024);
+-      Crashlytics.log(Log.DEBUG, TAG, "memory class: " + memClass +
+-         ", cache size: " + cacheSize + ", max memory: " + maxMemory);
+       mMemoryCache = new LruCache<String, BitmapDrawable>(cacheSize){
+          @Override
+          protected void entryRemoved(boolean evicted, String key,
+@@ -58,16 +55,10 @@ public class QuranPageWorker {
+                  return bitmap.getByteCount();
+              }
+ 
+-             Crashlytics.log(Log.DEBUG, TAG, "row bytes: " +
+-                  bitmap.getRowBytes() + ", height: " +
+-                  bitmap.getHeight() + ", " + (bitmap.getRowBytes() *
+-                        bitmap.getHeight()));
+              return bitmap.getRowBytes() * bitmap.getHeight();
+          }
+       };
+ 
+-      Crashlytics.log(Log.DEBUG, TAG,
+-          "initial LruCache size: " + (memClass/8));
+    }
+    
+    private void addBitmapToCache(String key, BitmapDrawable drawable) {
+@@ -76,12 +67,8 @@ public class QuranPageWorker {
+             ((RecyclingBitmapDrawable)drawable).setIsCached(true);
+          }
+          mMemoryCache.put(key, drawable);
+-         Crashlytics.log(Log.DEBUG, TAG, "cache size: " + mMemoryCache.size());
+       }
+       
+-      Crashlytics.log(Log.DEBUG, TAG, "cache: number of puts: " +
+-          mMemoryCache.putCount() +
+-            ", number of evicts: " + mMemoryCache.evictionCount());
+    }
+ 
+    private BitmapDrawable getBitmapFromCache(String key) {
+@@ -125,28 +112,17 @@ public class QuranPageWorker {
+             bitmap = QuranDisplayHelper.getQuranPage(
+                  mContext, mWidthParam, data);
+          } catch (OutOfMemoryError me){
+-           Crashlytics.log(Log.WARN, TAG,
+-               "out of memory exception loading page " +
+-               data + ", " + mWidthParam);
+            oom = me;
+          }
+ 
+          if (bitmap == null){
+-           Crashlytics.log(Log.WARN, TAG, "cache memory: " +
+-               mMemoryCache.size() + " vs " + mMemoryCache.maxSize());
+             if (QuranScreenInfo.getInstance().isTablet(mContext)){
+-               Crashlytics.log(Log.WARN, TAG,
+-                   "tablet got bitmap null, trying alternate width...");
+                String param = QuranScreenInfo.getInstance().getWidthParam();
+                if (param.equals(mWidthParam)){
+                   param = QuranScreenInfo.getInstance().getTabletWidthParam();
+                }
+                bitmap = QuranDisplayHelper.getQuranPage(mContext, param, data);
+-               if (bitmap == null){
+-                  Crashlytics.log(Log.WARN, TAG, "bitmap still null, giving up...");
+-               }
+             }
+-            Crashlytics.log(Log.WARN, TAG, "got bitmap back as null...");
+          }
+ 
+          BitmapDrawable drawable = null;
+diff --git a/app/src/main/java/com/quran/labs/androidquran/util/QuranFileUtils.java b/app/src/main/java/com/quran/labs/androidquran/util/QuranFileUtils.java
+index ba1320a..49b8f5a 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/util/QuranFileUtils.java
++++ b/app/src/main/java/com/quran/labs/androidquran/util/QuranFileUtils.java
+@@ -6,7 +6,6 @@ import android.graphics.BitmapFactory;
+ import android.os.Environment;
+ import android.util.Log;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.data.QuranDataProvider;
+ 
+ import java.io.File;
+@@ -206,7 +205,6 @@ public class QuranFileUtils {
+         return decodeBitmapStream(is);
+       } catch (Exception e) {
+         // failed to save the image, try to decode
+-        Crashlytics.logException(e);
+         return decodeBitmapStream(is);
+       } finally {
+         try {
+diff --git a/app/src/main/java/com/quran/labs/androidquran/util/StorageUtils.java b/app/src/main/java/com/quran/labs/androidquran/util/StorageUtils.java
+index 703d5c8..5c9814b 100644
+--- a/app/src/main/java/com/quran/labs/androidquran/util/StorageUtils.java
++++ b/app/src/main/java/com/quran/labs/androidquran/util/StorageUtils.java
+@@ -6,7 +6,6 @@ import android.os.Environment;
+ import android.os.StatFs;
+ import android.util.Log;
+ 
+-import com.crashlytics.android.Crashlytics;
+ import com.quran.labs.androidquran.R;
+ 
+ import java.io.File;
+@@ -221,7 +220,6 @@ public class StorageUtils {
+     }
+ 
+     private void computeSpace() {
+-      Crashlytics.log("computeSpace() for " + mountPoint);
+       StatFs stat = new StatFs(mountPoint);
+       long totalBytes = (long) stat.getBlockCount() *
+           (long) stat.getBlockSize();
