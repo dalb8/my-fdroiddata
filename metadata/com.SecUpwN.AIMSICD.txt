@@ -24,6 +24,7 @@ Repo Type:git
 Repo:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector.git
 
 Build:0.2.2,3
+    disable=needs to be signed by ROM key because it shares user id of phone app
     commit=733116742e114ba787ab2f515f41535f6bbc04a0
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
         sed -i 's@\(target=\).*@\1android-10@' project.properties
@@ -31,6 +32,10 @@ Build:0.2.2,3
     extlibs=android/android-support-v4.jar
     srclibs=1:MapsAPI@f6dd3410b223,2:Appcompat@android-4.4_r1.1
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
+
+Maintainer Notes:
+Can be built with framework and telephony jars from a ROM or from source
+.
 
 Update Check Mode:None
 Current Version:0.2.2
