@@ -16,7 +16,6 @@ Issue Tracker:https://github.com/slapperwan/gh4a/issues
 Auto Name:OctoDroid
 Summary:GitHub client
 Description:
-Use this app to interact with many of your favourite f-droid.org projects!
 Supports all the basic Github.com features, such as:
 
 * Watch/unwatch repositories
@@ -29,8 +28,6 @@ Supports all the basic Github.com features, such as:
 
 Uses OAuth2: your password is used to generate a key and is then
 destroyed. The key can be revoked any time by visiting github.com.
-Formerly known as GH4A. This application is currently in BETA: please
-report any issues to the issue tracker.
 
 A proprietary crash reporting library was removed.
 .
