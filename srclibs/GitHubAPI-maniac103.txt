@@ -1,5 +1,5 @@
 Repo Type:git
-Repo:https://github.com/eclipse/egit-github
+Repo:https://github.com/maniac103/egit-github
 
 Subdir:org.eclipse.egit.github.core
 

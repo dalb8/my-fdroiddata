@@ -1,0 +1,57 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Development
+License:Apache2
+Web Site:
+Source Code:https://github.com/slapperwan/gh4a/commits
+Issue Tracker:https://github.com/slapperwan/gh4a/issues
+
+Auto Name:OctoDroid
+Summary:GitHub client
+Description:
+Use this app to interact with many of your favourite f-droid.org projects!
+Supports all the basic Github.com features, such as:
+
+* Watch/unwatch repositories
+* View branches/tags, pull requests etc. in each repo
+* View and comment on issues
+* Home page feed of recent actions and news
+* Search for repositories
+* Diff viewer with colorized HTML
+* Trending repos (today, week, month, forever)
+
+Uses OAuth2: your password is used to generate a key and is then
+destroyed. The key can be revoked any time by visiting github.com.
+Formerly known as GH4A. This application is currently in BETA: please
+report any issues to the issue tracker.
+
+A proprietary crash reporting library was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/slapperwan/gh4a.git
+
+Build:3.3,33
+    commit=v3.4
+    srclibs=1:ActionBarSherlock@4.2.0,2:ViewPagerIndicator@65457e,3:SherlockProgressFragment@1.4.0,4:HoloColorPicker@57890dca081c,GitHubAPI-maniac103@53ba34fb4df76
+    init=find src -type f -print0 | xargs -0 sed -i '/bugsense/Id'
+    rm=libs/android-support-v4.jar,libs/bugsense-3.6.jar
+    prebuild=\
+       cp $$ActionBarSherlock$$/libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/ && \
+       $$MVN3$$ package -f $$GitHubAPI-maniac103$$/pom-jar.xml && \
+       mv $$GitHubAPI-maniac103$$/target/org.eclipse.egit.github.core-3.2.0-SNAPSHOT.jar libs/
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:3.4
+Current Version Code:34
+
