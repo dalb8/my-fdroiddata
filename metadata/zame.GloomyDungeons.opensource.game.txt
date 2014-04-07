@@ -38,21 +38,16 @@ Repo:https://github.com/restorer/Gloomy-Dungeons-3D
 
 Build:2014.02.24.1822,1393266173
     commit=1a4d7b91abf609
-    subdir=.build
-    init=sed -i '54,57d' ../source/AndroidManifest.xml && \
-        sed -i 's@\$NDKBUILDTOOL@$$NDK$$/ndk-build@g' ../tools/builder/build-fdroid.sh
+    init=sed -i '54,57d' source/AndroidManifest.xml
     update=no
-    rm=source/libs/libGoogleAnalytics.jar;tools/builder/additional-libs
-    build=cd .. && \
-        ./f-build opensource
+    rm=source/libs/libGoogleAnalytics.jar,tools/builder/additional-libs
+    build=NDKBUILDTOOL=$$NDK$$/ndk-build ./f-build opensource && \
+      ant release -f .build/build.xml
     buildjni=no
     novcheck=yes
+    output=.build/bin/GloomyDungeons-release-unsigned.apk
 
 Maintainer Notes:
-I build this by patching fdroidserver to avoid ant clean
-
-Makes use of ruby 1.8, but works for me with 1.9
-
 Manifest is patched because network permissions aren't needed.
 
 In Market under zame.GloomyDungeons.fullversion.game & has non-free resources
