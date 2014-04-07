@@ -26,12 +26,13 @@ The non-free Google Analytics library has been removed.
 Repo Type:git-svn
 Repo:https://robertprojects.googlecode.com/svn/trunk
 
-Build:0.9.4.1,8141
+Build:0.9.4.1,8140
     commit=703
     subdir=RMaps.Free
     rm=RMaps.AppLib/libs/libGoogleAnalytics.jar
     srclibs=NoAnalytics@158a4a
-    prebuild=android update project -p ../RMaps.AppLib -l $$NoAnalytics$$
+    prebuild=mkdir -p src && \
+      android update project -p ../RMaps.AppLib -l $$NoAnalytics$$
 
 Build:0.10.0.1,8151
     disable=not published
