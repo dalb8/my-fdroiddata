@@ -1,5 +1,5 @@
 diff --git a/ImgurHolo/build.gradle b/ImgurHolo/build.gradle
-index 8305ade..ea09ed7 100644
+index 8305ade..6511ea7 100644
 --- a/ImgurHolo/build.gradle
 +++ b/ImgurHolo/build.gradle
 @@ -1,24 +1,18 @@
@@ -10,9 +10,10 @@ index 8305ade..ea09ed7 100644
  
      }
      dependencies {
-         classpath 'com.android.tools.build:gradle:0.8.+'
+-        classpath 'com.android.tools.build:gradle:0.8.+'
 -        classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
 -
++        classpath 'com.android.tools.build:gradle:0.8.1'
      }
  }
  apply plugin: 'android'
@@ -27,60 +28,40 @@ index 8305ade..ea09ed7 100644
  }
  
  
-@@ -36,13 +30,47 @@ dependencies {
+@@ -36,16 +30,16 @@ dependencies {
      compile 'com.google.code.gson:gson:2.2.4'
      compile files('libs/scribe-1.3.5.jar')
      compile files('libs/ion.jar')
 +    compile project(':DragSort')
      compile files('libs/android-async.jar')
 -    compile 'com.mobeta.android.dslv:drag-sort-listview:0.6.1-SNAPSHOT-AAR'
-     compile files('libs/android-support-v13.jar')
+-    compile files('libs/android-support-v13.jar')
 -    compile 'com.crashlytics.android:crashlytics:1.+'
++    compile 'com.android.support:support-v13:19.1.0'
  
  }
  
-+project(':DragSort') {
-+    buildscript {
-+       repositories {
-+         mavenCentral()
-+      }
-+
-+      dependencies {
-+        classpath 'com.android.tools.build:gradle:0.7.+'
-+      }
-+    }
-+
-+    apply plugin: 'android-library'
-+
-+    dependencies {
-+      compile 'com.android.support:support-v4:18.0.+'
-+    }
-+
-+    android {
-+      compileSdkVersion 8
-+      buildToolsVersion '19.0.1'
-+
-+      repositories {
-+        mavenCentral()
-+      }
-+
-+      sourceSets {
-+        main {
-+          manifest.srcFile 'AndroidManifest.xml'
-+          java.srcDirs = ['src']
-+          res.srcDirs = ['res']
-+        }
-+      }
-+    }
-+}
 +
  android {
      compileSdkVersion 19
-     buildToolsVersion "19.0.1"
+-    buildToolsVersion "19.0.1"
++    buildToolsVersion "19.0.3"
+ 
+     defaultConfig {
+         minSdkVersion 14
 diff --git a/ImgurHolo/src/main/AndroidManifest.xml b/ImgurHolo/src/main/AndroidManifest.xml
-index 441419b..63b0aa6 100644
+index 441419b..061dbaf 100644
 --- a/ImgurHolo/src/main/AndroidManifest.xml
 +++ b/ImgurHolo/src/main/AndroidManifest.xml
+@@ -14,7 +14,7 @@
+         android:allowBackup="true"
+         android:icon="@drawable/icon"
+         android:label="imgur Holo"
+-        android:debuggable="false"
++        
+             >
+         <activity
+             android:name="com.krayzk9s.imgurholo.activities.SettingsActivity"
 @@ -155,7 +155,6 @@
          </activity>
          <service android:name="com.krayzk9s.imgurholo.services.UploadService" />
@@ -109,3 +90,45 @@ index ebfe457..3c316ad 100644
  
          setContentView(R.layout.activity_main);
          updateMenu();
+
+diff --git a/build.gradle b/build.gradle
+index f3d8cd8..8a4a2cc 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -1,4 +1,31 @@
+-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+-dependencies {
+-    project(":ImgurHolo")
+-}
+\ No newline at end of file
++buildscript {
++    repositories {
++        mavenCentral()
++    }
++    dependencies {
++        classpath 'com.android.tools.build:gradle:0.8.1'
++    }
++}   
++
++
++project(':DragSort') {
++ 
++    apply plugin: 'android-library'
++
++    dependencies {
++      compile 'com.android.support:support-v4:19.1.0'
++    }
++
++    android {
++      compileSdkVersion 8
++      buildToolsVersion "19.0.3"
++
++      sourceSets {
++        main {
++          manifest.srcFile 'AndroidManifest.xml'
++          java.srcDirs = ['src']
++          res.srcDirs = ['res']
++        }
++      }
++    }
++}

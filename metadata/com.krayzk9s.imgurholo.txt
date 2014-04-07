@@ -19,15 +19,17 @@ Description:
 Status:Beta
 
 *Except one must ask devs permission to publish on gplay.
+
+A proprietary crash reporting library was removed.
 .
 
 Repo Type:git
 Repo:https://github.com/Krayzk9s/imgur-holo.git
 
 Build:0.19.0,42
-    disable=WIP
     commit=b62f740138
     subdir=ImgurHolo
+    init=sed -i '148d' src/main/java/com/krayzk9s/imgurholo/dialogs/SubredditDialogFragment.java
     patch=gradle_42.patch
     srclibs=DragSort@0.6.1
     prebuild=echo -e "\ninclude ':DragSort'\nproject(':DragSort').projectDir = new File('DragSort/$$DragSort$$')" >> ../settings.gradle
