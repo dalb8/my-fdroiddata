@@ -35,8 +35,9 @@ Build:0.9.2,18
     srclibs=MarkdownView@0ecf5d8,NewQuickAction3D-haiwen@92d917
     prebuild=cp -R $$MarkdownView$$/src/com/petebevin src/com/ && \
        cp -R $$MarkdownView$$/src/us src/
-    build=$$MVN3$$ install -DskipTests -f $$NewQuickAction3D-haiwen$$/pom.xml
-    maven=yes
+    build=$$MVN3$$ install -DskipTests -f $$NewQuickAction3D-haiwen$$/pom.xml && \
+       $$MVN3$$ package -Dandroid.sign.debug=false -Dmaven.test.skip=true -Dandroid.release=true
+    output=target/seadroid.apk
 
 Maintainer Notes:
 Wasn't able to find the artifact itself:
