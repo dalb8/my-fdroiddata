@@ -1,13 +1,15 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:Phone & SMS
-License:GPLv3
+Categories:Science & Education
+License:GPL*
 Web Site:http://www.servalproject.org
 Source Code:https://github.com/servalproject/batphone/commits
 Issue Tracker:https://github.com/servalproject/batphone/issues
@@ -30,26 +32,34 @@ communicate with other Android phones running Serval Mesh within WiFi range.
 
 Requires root: No. Basic Android still doesn't allow WiFi in AdHoc mode,
 so the app will ask for root if you try to enable adhoc mode. 
+However, the app can function without root by using Hotspot mode.
 
-The Java/XML part is distributable under the GNU GPLv3 while the serval-dna
+*The Java/XML part is distributable under the GNU GPLv3 while the serval-dna
 (distributed number architecture) project is GPLv2.
 .
 
 Repo Type:git
 Repo:https://github.com/servalproject/batphone.git
 
-Build:0.91,2120
-    commit=0.91
+# not exact! pre-release; assets missing
+Build:0.92,2237
+    commit=ea6e4c219503e44f
     submodules=yes
+    init=echo -e 'ndk.dir=$$NDK$$\nversion.name=0.92' >> local.properties && \
+      sed -i 's/depends="-args-release,-check-pandoc,-keystore-properties,-check-manifest,generate-html,android_rules.release,-play-apk,-create-manifest,-remove-instance"/depends="android_rules.release,-create-manifest"/' build.xml
     rm=jni/opus/celt/tests;gdbserver
-    forceversion=yes
     buildjni=no
 
 Maintainer Notes:
-Releases are in master branch, beta in development; run ant version to get version info
+Note Haskell is needed to achieve the generate-html target; the html help
+files are currently included in the repo, but some of the markdown files are missing.
+
+Releases are in their own branch but will be tagged too; beta in development
+
+Run ant version to get version info
 .
 
 Update Check Mode:None
-Current Version:0.91
-Current Version Code:2120
+Current Version:0.92
+Current Version Code:2237
 
