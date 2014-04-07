@@ -19,6 +19,8 @@ Unofficial app for smashwords.com, a purveyor of DRM-free and gratis ebooks
 You can sign into your account to access books you've already purchased.
 
 Apps can be loaded directly from the likes of [[org.coolreader]].
+
+Status: Beta.
 .
 
 Repo Type:git-svn
@@ -29,15 +31,14 @@ Build:014 beta,14
     subdir=SmashwordsAccess
     srclibs=1:ActionBarSherlock@4.4.0;Smashwords-API@58;ImageLoader-Novoda@imageloader-parent-1.5.8
     rm=SmashwordsAccess/libs/imageloader-core-1.5.8.jar
-    prebuild=cp -r $$ImageLoader-Novoda$$/src/main/java/com/novoda/ src/com/ && \
-             sed -i "2d;5s/:/=/g;13,14d;s/compile 'com.google.code.gson:gson:2.2.1'/compile group: 'com.google.code.gson', name: 'gson', version: '2.2.1'/g;s/compile 'org.projectlombok:lombok:1.12.2'/compile group: 'org.projectlombok', name: 'lombok', version: '1.12.2'/g;26,28d" $$Smashwords-API$$/build.gradle
-    build=gradle jar -p $$Smashwords-API$$ && \
-          mv $$Smashwords-API$$/build/libs/SmashwordsAPI-1.0-SNAPSHOT.jar libs/
+    prebuild=cp -r $$ImageLoader-Novoda$$/src/main/java/com/novoda/ src/com/ 
+    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Smashwords-API$$ && \
+        mv $$Smashwords-API$$/build/libs/SmashwordsAPI-1.0-SNAPSHOT.jar libs/
 
 Maintainer Notes:
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:014 beta
 Current Version Code:14
 

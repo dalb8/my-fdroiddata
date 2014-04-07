@@ -21,8 +21,8 @@ Read summaries of issues, download PDFs of magazines and read news about it.
 Repo Type:git
 Repo:https://github.com/themagpimag/magpi-android.git
 
-Build:1.0-rc1,1
-    commit=d4d6a95fee0730e5dfd8a0aa1dc109dc41b105b2
+Build:1.1,2
+    commit=d9d3c2d0f64ccf3b0d185001b5
     extlibs=android/android-support-v4.jar
     srclibs=1:ActionBarSherlock@4.4.0,2:ImageLoader@v1.9.0,3:RSS-ahorn@7763a4374c802,4:AsynCache@2e1f27c42f56,5:Async-http@1.4.4
     prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
@@ -31,7 +31,7 @@ Build:1.0-rc1,1
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:None
 Current Version:1.1
 Current Version Code:2
 

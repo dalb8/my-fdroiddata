@@ -1,3 +1,5 @@
 Repo Type:git-svn
 Repo:https://smashwordsapi.googlecode.com/svn/trunk
 Subdir:SmashwordsAPI
+#N.B fdroid deletes the comments before this is executed
+Prepare:sed -i "2d;5s/:/=/g;12,13d;s/compile 'com.google.code.gson:gson:2.2.1'/compile group: 'com.google.code.gson', name: 'gson', version: '2.2.1'/g;s/compile 'org.projectlombok:lombok:1.12.2'/compile group: 'org.projectlombok', name: 'lombok', version: '1.12.2'/g;25,27d" build.gradle
