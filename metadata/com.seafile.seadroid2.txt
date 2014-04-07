@@ -30,15 +30,22 @@ Repo Type:git
 Repo:https://github.com/haiwen/seadroid.git
 
 Build:0.9.2,18
-    disable=no pom.xml for NQA3D
+    disable=still not working
     commit=0.9.2
-    init=sed -i '13,19d;73,78d' pom.xml
-    srclibs=MarkdownView@0ecf5d8,NewQuickAction3D-haiwen@265ce2e63
+    init=sed -i -e '13,19d;73,78d' -e 's/19.0.1/19.1.0/' pom.xml
+    srclibs=MarkdownView@0ecf5d8,NewQuickAction3D-haiwen@7162187a1e3699
     prebuild=cp -R $$MarkdownView$$/src/com/petebevin src/com/ && \
-       cp -R $$MarkdownView$$/src/us src/
+       cp -R $$MarkdownView$$/src/us src/ && \
+       sed -i 's/com.github.lorensiuswlt/net.londatiga.android/' $$NewQuickAction3D-haiwen$$/pom.xml && \
+       sed -i 's/com.github.lorensiuswlt/net.londatiga.android/' pom.xml
+    build=$$MVN3$$ install -DskipTests -f $$NewQuickAction3D-haiwen$$/pom.xml
     maven=yes
 
 Maintainer Notes:
+Wasn't able to find the artifact itself:
+mvn-3.1.1 install:install-file -DgroupId=com.google.android \
+-DartifactId=support-v4 -Dversion=r19.1.0 -Dpackaging=jar \
+-Dfile=/home/gerry/android-sdk-linux/extras/android/support/v4/android-support-v4.jar
 .
 
 #Update Check Mode:Tags
