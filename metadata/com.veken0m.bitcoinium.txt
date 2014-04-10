@@ -1,11 +1,14 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
+AntiFeatures:UpstreamNonFree
 Categories:Office
 License:Apache
 Web Site:
@@ -20,39 +23,29 @@ Description:
 * Mt. Gox prices can be displayed in various currencies
 * Notifications and alarms
 * Graphs
+
+A non-free Analytics library was removed.
 .
 
 Repo Type:git
 Repo:https://github.com/veken0m/bitcoinium.git
 
-Build:1.6.0,33
-    commit=v1.6.0
-    srclibs=XChange@xchange-1.7.0,ActionBarSherlock@4.2.0,ColorPickerPreference@a6ffb91b1
-    prebuild=rm -f libs/xchange* && \
-        sed -i 's@\(reference.2=\).*@\1$$ColorPickerPreference$$@' project.properties && \
-        sed -i 's@\(reference.1=\).*@\1$$ActionBarSherlock$$@' project.properties
-    build=sed -i '253,280d' $$XChange$$/pom.xml && \
-        $$MVN3$$ clean package -f $$XChange$$/pom.xml && \
-        mv $(find $$XChange$$ -name \*.jar) libs/
-
-Build:1.8.2,47
-    commit=v1.8.2
-    srclibs=XChange@xchange-1.10.0,1:ActionBarSherlock@4.4.0,2:ColorPickerPreference@a6ffb91b1
-    prebuild=rm -f libs/xchange*
-    build=$$MVN3$$ clean package -DskipTests -f $$XChange$$/pom.xml && \
-        mv $(find $$XChange$$ -name \*0.jar) libs/
-
-Maintainer Notes:
-Build this by setting gradle to use local jars
-Build:1.9.1,51
-    disable=not built yet; GAnalytics in use
+Build:1.10.0,53
+    commit=v1.10.0
     subdir=bitcoinium
+    init=sed -i 's/maven\ .*/mavenLocal()/;s/Version = "2.0.0-SNAPSHOT"/Version = "2.0.0"/;/libGoogleAnalytics/d' build.gradle
+    srclibs=NoAnalytics@d38ae535b543b,XChange@xchange-2.0.0
+    rm=bitcoinium/libs/libGoogleAnalyticsServices.jar
+    prebuild=cp -R $$NoAnalytics$$/src/com/google src/main/java/com/ 
+    build=$$MVN3$$ install -DskipTests -f $$XChange$$/pom.xml
     gradle=yes
 
-Switch to UCM:Tags once done
+Maintainer Notes:
+This don't work:
+    init=sed -i 's/useXChangeFromMaven = true/' build.gradle
 .
 
-Update Check Mode:None
-Current Version:1.9.1
-Current Version Code:51
+Update Check Mode:Tags
+Current Version:1.10.0
+Current Version Code:53
 
