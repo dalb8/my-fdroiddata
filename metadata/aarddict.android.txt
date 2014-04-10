@@ -31,8 +31,9 @@ on the website.
 Repo Type:git
 Repo:https://github.com/aarddict/android.git
 
-Build:1.6.8,23
-    commit=1.6.8
+Build:1.6.9,24
+    commit=1.6.9
+    init=sed -i '20,29d' AndroidManifest.xml
     target=android-19
 
 Maintainer Notes:
