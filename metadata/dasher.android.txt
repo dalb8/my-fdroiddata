@@ -1,0 +1,44 @@
+# Copyright (c) 2013,2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Web Site:http://www.inference.phy.cam.ac.uk/dasher/MobileDasher.html
+Source Code:https://github.com/acl33/AndroidDasher
+Issue Tracker:https://github.com/acl33/AndroidDasher/issues
+
+Auto Name:Dasher
+Summary:Text input method (IME)
+Description:
+Dasher is an information-efficient, text-entry interface, driven by a natural
+continuous steering of the cursor into boxes representing the letter you
+want to input.
+
+Dasher is especially useful for text-entry wherever a full-size keyboard
+cannot be used — for example,
+
+* when operating a computer one-handed, by joystick, touchscreen, trackball, or mouse;
+* when operating a computer with zero hands (i.e., by head-mouse or by eyetracker);
+* on a palmtop computer;
+* on a wearable computer.
+.
+
+Repo Type:git
+Repo:https://github.com/acl33/AndroidDasher.git
+
+Build:2.5,9
+    commit=c2be104189
+    srclibs=1:TeclaAccess@0.7.1-beta
+    rm=src/dasher/applet
+
+#Update Check Mode:RepoManifest
+Current Version:2.5
+Current Version Code:9
+
