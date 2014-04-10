@@ -1,0 +1,24 @@
+Categories:Office
+License:Apache2
+Web Site:
+Source Code:https://github.com/alterechtschreibung/MonthCalendarWidget2FOSS
+Issue Tracker:https://github.com/alterechtschreibung/MonthCalendarWidget2FOSS/issues
+
+Auto Name:Month Calendar Widget
+Summary:Calendar on home screen
+Description:
+Month Calendar Widget is a simplistic, cute widget
+that delivers you a quick overview of the respective month.
+.
+
+Repo Type:git
+Repo:https://github.com/alterechtschreibung/MonthCalendarWidget2FOSS.git
+
+Build:1.1.4,4
+    commit=1.1.4
+    target=android-19
+
+#Update Check Mode:Tags
+Current Version:1.1.4
+Current Version Code:4
+
