@@ -44,7 +44,7 @@ Repo:https://code.google.com/p/android-quill
 Build:10.7,41
     commit=0ce7700839
     srclibs=1:Color-Picker-2@45ee6554a;2:File-Picker@7
-    rm=libs/armeabi,obj
+    rm=libs/armeabi,obj,jni/libhpdf-2.3.0RC2/demo
     buildjni=yes
 
 Maintainer Notes:
