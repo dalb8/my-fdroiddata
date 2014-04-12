@@ -1,0 +1,35 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:Apache
+Web Site:
+Source Code:https://github.com/nadam/nfc-reader/commits
+Issue Tracker:https://github.com/nadam/nfc-reader/issues
+
+Auto Name:NFC Reader
+Summary:Read NFC tag info
+Description:
+Simple app for reading and displaying various tags (NDEF, RFID, FeliCa, ISO 14443, etc)
+using NFC (Near Field Communication). The app also supports basic NDEF Push (Android Beam)
+for people who don't have any tag to read but happen to have two NFC enabled phones.
+.
+
+Repo Type:git
+Repo:https://github.com/nadam/nfc-reader.git
+
+Build:0.13,13
+    commit=ac621c
+    target=android-19
+
+#Update Check Mode:RepoManifest
+Current Version:0.13
+Current Version Code:13
+
