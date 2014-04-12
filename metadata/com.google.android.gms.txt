@@ -37,7 +37,8 @@ but they're part of the Google Play Services apk (or perhaps another)
 since Android 4.4, hence this package has the same name as that.
 
 Sources are currently limited to Apple Corp's database.
-opencellid is usually working and others are on the way.
+Future updates will be known as Nlp and will allow other sources via plugins 
+(backends).
 
 Test it by visiting this [http://html5demos.com/geo site] with Firefox.
 .
@@ -55,7 +56,7 @@ Maintainer Notes:
 Get CV from the other package
 
 Development moving to https://github.com/microg/android_packages_apps_UnifiedNlp
-Not sure how they're related
+See other package for build WIP.
 .
 
 Update Check Mode:None

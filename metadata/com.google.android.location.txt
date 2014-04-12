@@ -36,7 +36,8 @@ Network location services were found in NetworkLocation.apk in older Android ver
 but they're now part of the Google Play Services apk (or perhaps another).
 
 Sources are currently limited to Apple Corp's database.
-opencellid is usually working and others are on the way.
+Future updates will be known as Nlp and will allow other sources via plugins 
+(backends).
 
 Test it by visiting this [http://html5demos.com/geo site] with Firefox.
 .
@@ -52,6 +53,13 @@ Build:1.3.2,1302
 
 Maintainer Notes:
 Moving to https://github.com/microg/android_packages_apps_UnifiedNlp
+
+Build:1.0.0,10000
+    disable=currently needs android.location from framework
+    commit=v1.0.0
+    target=android-19
+    prebuild=echo 'source.dir=api/src;src' >> ant.properties && \
+       sed -i -e 's/android:minSdkVersion="14"/android:maxSdkVersion="18"/' AndroidManifest.xml
 .
 
 Update Check Mode:Tags

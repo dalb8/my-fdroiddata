@@ -32,7 +32,7 @@ Repo Type:git
 Repo:https://github.com/microg/AppleWifiNlpBackend.git
 
 Build:1.0.1,1010
-    commit=v1.1.0
+    commit=v1.0.1
     target=android-19
     srclibs=1:Nlp@0b2f855,2:MapsAPI@v0.5,Wire@wire-1.2.0
     prebuild=echo 'source.dir=$$Wire$$/src/main/java;src' >> ant.properties 
