@@ -24,14 +24,13 @@ Minimalistic design allows you to access QR content with a single tap.
 Repo Type:hg
 Repo:https://bitbucket.org/trikita/obsqr
 
-Build:2.5,10
-    commit=4c6ad70039ba
-    target=android-16
-    prebuild=bash fetch-zbar.sh
-    buildjni=yes
-
 Build:2.6,11
-    disable=not published
+    commit=0b81963
+    init=sed -i '/SEARCH_LONG_PRESS/d' AndroidManifest.xml
+    target=android-19
+    prebuild=bash fetch-zbar.sh
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi'
+    buildjni=no
 
 Maintainer Notes:
 .

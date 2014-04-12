@@ -27,8 +27,8 @@ including very popular Mifare Ultralight or Sony SmartTag.
 Repo Type:git
 Repo:https://github.com/mateusz-szafraniec/NFCTagmaker.git
 
-Build:0.01,1
-    commit=v0.01
+Build:0.14,14
+    commit=v0.14
 
 Maintainer Notes:
 .

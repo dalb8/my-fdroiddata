@@ -44,8 +44,8 @@ Note: JAR libraries not verified yet.
 Repo Type:git
 Repo:https://github.com/kontalk/androidclient
 
-Build:3.0a4,30
-    commit=3.0a4
+Build:3.0a5,31
+    commit=3.0a5
     extlibs=android/android-support-v4.jar
     srclibs=1:Appcompat@android-4.4_r1.1
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/

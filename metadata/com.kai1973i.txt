@@ -28,8 +28,9 @@ Repo:https://auroraapp.googlecode.com/svn
 
 Build:1.04,4
     commit=9
-    init=rm -rf bin
     subdir=trunk/aAuroraApp
+    init=rm -rf bin
+    prebuild=sed -i 's/aAuroraApp (Alpha)/aAuroraApp/' res/values/strings.xml
 
 Maintainer Notes:
 not in the gplay

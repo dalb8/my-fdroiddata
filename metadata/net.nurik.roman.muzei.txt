@@ -41,6 +41,6 @@ API releases are tagged.
 .
 
 Update Check Mode:None
-Current Version:0.5
-Current Version Code:1006
+Current Version:1.0.1
+Current Version Code:1008
 
