@@ -14,7 +14,7 @@ Source Code:https://github.com/microg/AppleWifiNlpBackend/commits
 Issue Tracker:https://github.com/microg/AppleWifiNlpBackend/issues
 
 Auto Name:AppleWifiNlpBackend
-Summary:Plugin for Nlp
+Summary:Location backend
 Description:
 A  provider for
 [https://github.com/microg/android_packages_apps_UnifiedNlp Nlp]
@@ -31,10 +31,10 @@ needs to be installed already as System app.
 Repo Type:git
 Repo:https://github.com/microg/AppleWifiNlpBackend.git
 
-Build:1.0.0,1000
-    commit=v1.0.0
+Build:1.0.1,1010
+    commit=v1.1.0
     target=android-19
-    srclibs=1:Nlp@v1.0.0,2:MapsAPI@v0.5,Wire@wire-1.2.0
+    srclibs=1:Nlp@0b2f855,2:MapsAPI@v0.5,Wire@wire-1.2.0
     prebuild=echo 'source.dir=$$Wire$$/src/main/java;src' >> ant.properties 
 
 Maintainer Notes:
@@ -42,6 +42,6 @@ Neither the main app, MapsAPI nor NlpAPI have targets
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.0
-Current Version Code:1000
+Current Version:1.0.1
+Current Version Code:1010
 
