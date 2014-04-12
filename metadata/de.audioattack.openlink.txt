@@ -10,6 +10,7 @@ Categories:System
 License:GPLv3
 Web Site:https://gitorious.org/openlink
 Source Code:https://gitorious.org/openlink/openlink/source
+Issue Tracker:http://bugtracker.audioattack.de
 
 Auto Name:Easy Open Link
 Summary:Open URLs via select and share
