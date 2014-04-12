@@ -41,9 +41,10 @@ the [https://code.google.com/p/android-quill/wiki/SupportedDevices wiki] for mor
 Repo Type:hg
 Repo:https://code.google.com/p/android-quill
 
-Build:10.6,40
-    commit=257
+Build:10.7,41
+    commit=0ce7700839
     srclibs=1:Color-Picker-2@45ee6554a;2:File-Picker@7
+    rm=libs/armeabi,obj
     buildjni=yes
 
 Maintainer Notes:
