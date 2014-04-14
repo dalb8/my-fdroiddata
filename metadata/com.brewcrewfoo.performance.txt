@@ -49,7 +49,7 @@ Build:2.1.12,42
     prebuild=sed -i '/permission.INTERNET/d' AndroidManifest.xml && \
        sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
 
-Build:2.1.12,42
+Build:2.1.13,43
     commit=bb949663899ea9b8521
     target=android-19
     forcevercode=yes
@@ -72,6 +72,6 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
 
 Update Check Mode:RepoManifest/jb2
 Vercode Operation:10*%c + 9
-Current Version:2.1.12
+Current Version:2.1.13
 Current Version Code:49
 
