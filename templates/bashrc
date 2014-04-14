@@ -5,6 +5,7 @@ alias cdfd='cd $FDROIDDATA'
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/' |less"
 alias gd='git diff'
+alias gsd='git submodule foreach --recursive git diff'
 alias gt='git log --tags --simplify-by-decoration --pretty="format:%ai %d"'
 alias gsh='git show'
 alias gch='git checkout'
