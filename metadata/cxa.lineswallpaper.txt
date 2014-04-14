@@ -9,8 +9,8 @@
 Categories:Wallpaper
 License:MIT
 Web Site:http://alexanderfedora.blogspot.com
-Source Code:https://github.com/ghisguth/blurred-lines-live/commits
-Issue Tracker:https://github.com/ghisguth/blurred-lines-live/issues
+Source Code:https://github.com/ghisguth/sunlight/commits/master/blurredlines
+Issue Tracker:https://github.com/ghisguth/sunlight/issues
 
 Name:Blurred Lines
 Auto Name:Blurred Lines Live Wallpaper
@@ -23,12 +23,12 @@ Website is in Russian.
 Repo Type:git
 Repo:https://github.com/ghisguth/sunlight
 
-Build:1.1-2,9
-    disable=subdir here for UCM
-    commit=4310949
+Build:1.2,10
+    commit=9457a7ebd586b6aa00159fd1c7ac11
     subdir=blurredlines
 
 Maintainer Notes:
+There's also a Sun wallpaper (coronas flares etc.) under sun/.
 .
 
 Update Check Mode:RepoManifest
