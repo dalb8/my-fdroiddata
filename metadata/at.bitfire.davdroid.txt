@@ -36,6 +36,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.5.11
-Current Version Code:34
+Current Version:0.5.12-alpha
+Current Version Code:35
 
