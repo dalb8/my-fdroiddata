@@ -29,7 +29,6 @@ Repo:https://github.com/arnowelzel/periodical
 
 Build:0.14,14
     commit=0.14
-    rm=publish,assets
 
 Maintainer Notes:
 .

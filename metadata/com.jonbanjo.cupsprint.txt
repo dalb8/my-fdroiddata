@@ -1,0 +1,31 @@
+# Copyright (c) 2014 David Black
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:MIT
+Web Site:http://mobd.jonbanjo.com/jfcupsprint/default.php
+Source Code:http://mobd.jonbanjo.com/jfcupsprint/licence.php
+
+Auto Name:JfCupsPrint
+Summary:Printing via CUPS
+Description:
+Status: No longer developed.
+.
+
+Maintainer Notes:
+Download source code archive from website.
+See https://f-droid.org/forums/topic/cups-print-app
+.
+
+Update Check Mode:Static
+#In Repo:0.62,22
+Current Version:0.62
+Current Version Code:22
+
