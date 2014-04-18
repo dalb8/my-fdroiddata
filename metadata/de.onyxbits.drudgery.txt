@@ -51,9 +51,10 @@ every fifth round you manage to avoiding 'boss encounters'.
 Repo Type:git
 Repo:https://github.com/onyxbits/Drudgery.git
 
-Build:1.1,2
-    commit=v1.1
-    extlibs=android/android-support-v4r13.jar
+Build:1.3,4
+    commit=v1.3
+    extlibs=android/android-support-v4.jar
+    target=android-18
     srclibs=DashClock@ecb5a191880
     prebuild=rm custom_rules.xml && \
         echo 'source.dir=src;$$DashClock$$/api/src/main/java;$$DashClock$$/api/src/main/aidl' >> project.properties
