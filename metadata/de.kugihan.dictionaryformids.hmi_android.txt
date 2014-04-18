@@ -9,7 +9,7 @@
 Categories:Office
 License:GPLv2+
 Web Site:http://dictionarymid.sourceforge.net/android.html
-Source Code:http://dictionarymid.sourceforge.net/android.html
+Source Code:http://sourceforge.net/p/dictionarymid/code/commit_browser
 Issue Tracker:http://dictionarymid.german-fighters.com/forum/index.php?board=12.0
 
 Auto Name:DictionaryForMIDs
@@ -33,9 +33,14 @@ the section dictionaries for download of the website.
 Repo Type:git-svn
 Repo:https://svn.code.sf.net/p/dictionarymid/code;trunk=trunk;tags=tags
 
+Build:0.92.2,103
+    commit=Android_0_92_2_release
+    subdir=Android
+    prebuild=mv -f ../DictionaryForMIDs/src/de/kugihan/dictionaryformids/* src/de/kugihan/
+
 Build:0.92.3,103
-    disable=build woes
-    commit=664
+    disable=missing core project, build file needs hacking
+    commit=Android_0_92_3_release
     subdir=Android
     gradle=yes
 

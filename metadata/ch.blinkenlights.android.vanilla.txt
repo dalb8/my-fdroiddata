@@ -26,13 +26,13 @@ Can filter output via [[com.bel.android.dspmanager]].
 Repo Type:git
 Repo:https://github.com/adrian-bl/vanilla.git
 
-Build:0.9.23,923
-    commit=0.9.23
+Build:0.9.24,924
+    commit=0.9.24
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.9.23
-Current Version Code:923
+Current Version:0.9.24
+Current Version Code:924
 
