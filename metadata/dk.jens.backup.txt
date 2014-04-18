@@ -37,8 +37,8 @@ signed with a different key :-\)
 Repo Type:git
 Repo:https://github.com/jensstein/oandbackup.git
 
-Build:0.2.4,10
-    commit=0.2.4
+Build:0.2.8,14
+    commit=0.2.8
     target=android-17
 
 Maintainer Notes:

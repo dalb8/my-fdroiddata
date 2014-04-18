@@ -26,17 +26,20 @@ Features:
 * UPNP Client
 * UPNP Controller
 * Control multiple media receivers at once
+
+N.B. Contains a lot of custom prebuilt JAR libraries.
 .
 
 Repo Type:git
 Repo:git://git.code.sf.net/p/yaacc/code
 
-Build:1.1,2
-    commit=release-1.1
+Build:1.1.4,8
+    commit=RELEASE-1.1.4
     subdir=main
-    target=android-17
+    target=android-19
 
 Maintainer Notes:
+LOTS of jars.
 .
 
 #Update Check Mode:Tags

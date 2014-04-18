@@ -8,7 +8,7 @@
 
 Categories:Office
 License:Apache
-Web Site:
+Web Site:http://www.rmtheis.com
 Source Code:https://github.com/rmtheis/android-ocr/commits
 Issue Tracker:https://github.com/rmtheis/android-ocr/issues
 
@@ -29,8 +29,7 @@ The default single-shot capture runs OCR on a snapshot image that's captured
 when you click the shutter button, like a regular photo.
 When the "continuous preview" checkbox is checked, the app shows a dynamic,
 real-time display of what the device is recognizing right beside the camera
-viewfinder. The continuous preview mode works best on a fast device. The
-app supports x86 natively.
+viewfinder. The continuous preview mode works best on a fast device.
 
 # Point the device at some text and touch the on-screen shutter button to start OCR
 # To copy text to the clipboard or share text, long-press on the text after pressing the shutter button
@@ -41,11 +40,6 @@ RECOGNITION ACCURACY
 * Hold the device steady, and be sure the picture is in focus
 * If you need to scan a large block of text or an entire document, consider using a flatbed document scanner
 
-Supported languages for OCR: Arabic, Bulgarian, Catalan, Chinese (Simplified),
-Chinese (Traditional), Czech, Danish, Dutch, English, Finnish, French, German,
-Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean, Latvian,
-Lithuanian, Polish, Portuguese, Romanian, Russian, Serbian (Latin), Slovak,
-Slovenian, Spanish, Swedish, Tagalog, Thai, Turkish, Ukrainian, and Vietnamese.
 Arabic OCR requires a large amount of RAM. If your device doesn't have enough
 RAM, the app will quit during OCR. The preferred language can be chosen in
 the settings.
@@ -54,19 +48,19 @@ the settings.
 Repo Type:git
 Repo:https://github.com/rmtheis/android-ocr.git
 
-Build:0.5.12,31
-    commit=5ca566e5
+Build:0.5.13,32
+    commit=10c6621452be6f2
     subdir=android
-    srclibs=TessTwo@cbfa61eff0
-    prebuild=sed -i 's@\(rence.1=\).*@\1../tess-two@' project.properties && \
-        cp -r $$TessTwo$$ ../
-    build=$$NDK$$/ndk-build -C ../tess-two
+    srclibs=1:TessTwo@8f63ae2058
+    prebuild=sed -i '/preferExternal/d' AndroidManifest.xml
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' -C $$TessTwo$$
+    buildjni=no
 
 Maintainer Notes:
-Update this then put back on RM
+Appear to bump version just after release.
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:0.5.13
 Current Version Code:32
 
