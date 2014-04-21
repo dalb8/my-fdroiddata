@@ -10,8 +10,8 @@
 
 Categories:Multimedia
 License:Apache
-Source Code:https://github.com/CyanogenMod/android_packages_apps_DSPManager/commits
-Issue Tracker:https://github.com/CyanogenMod/android_packages_apps_DSPManager/issues
+Source Code:https://github.com/omnirom/android_packages_apps_DSPManager/commits
+Issue Tracker:https://github.com/omnirom/android_packages_apps_DSPManager/issues
 
 Auto Name:DSP Manager
 Summary:Audio filters
@@ -28,10 +28,20 @@ They are called libcyanogen-dsp.so/libreverbwrapper.so/libvisualizer.so.
 .
 
 Maintainer Notes:
+Repo Type:git
+Repo:https://github.com/omnirom/android_packages_apps_DSPManager
+
+Builds but doesn't work.
+Build:2.1,4
+    commit=cm-11.0
+    forcevercode=yes
+    patch=stereo_4.patch
+    extlibs=android/android-support-v13.jar
+    target=android-19
 .
 
 Update Check Mode:None
 #In Repo:2.0,2
-Current Version:2.0
-Current Version Code:2
+Current Version:2.1
+Current Version Code:4
 
