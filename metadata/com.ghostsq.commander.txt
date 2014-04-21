@@ -39,9 +39,8 @@ Build:1.51b7,224
     commit=402
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
-Build:1.51.2,227
-    disable=Build fails - missing R.drawable.plugins
-    commit=405
+Build:1.52b1,240
+    commit=421
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
 Maintainer Notes:
@@ -53,6 +52,6 @@ The scanignore is for the dex class loading which is used for loading plugins.
 .
 
 Update Check Mode:None
-Current Version:1.51.2
-Current Version Code:227
+Current Version:1.51.4
+Current Version Code:229
 

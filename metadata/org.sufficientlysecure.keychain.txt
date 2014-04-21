@@ -43,10 +43,17 @@ Build:2.5,25000
     init=sed -i '55,82d' build.gradle
     gradle=yes@..
 
+Build:2.6,26000
+    commit=v2.6
+    submodules=yes
+    subdir=OpenKeychain
+    init=sed -i '55,82d' build.gradle
+    gradle=yes
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:2.5
-Current Version Code:25000
+Current Version:2.6
+Current Version Code:26000
 

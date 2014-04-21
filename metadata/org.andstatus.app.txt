@@ -25,14 +25,14 @@ Messages can be stored on the local storage indefinitely.
 Repo Type:git
 Repo:https://github.com/andstatus/andstatus.git
 
-Build:8.2,98
-    commit=AndStatus-8.2
+Build:8.4,100
+    commit=AndStatus-8.4
     init=rm build.xml custom_rules.xml
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:8.2
-Current Version Code:98
+Current Version:8.4
+Current Version Code:100
 

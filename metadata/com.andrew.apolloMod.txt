@@ -18,8 +18,6 @@ Auto Name:Apollo Mod
 Summary:Music Player
 Description:
 Improvement on Apollo with simpler interface.
-One thing to note is that switching from Now Playing to the queue
-is done by swiping. In an Album view there is also swiping.
 
 Can filter output via [[com.bel.android.dspmanager]],
 which is installed on most custom ROMs.
@@ -32,6 +30,14 @@ Build:1.0,1
     commit=f3af6
     rm=libs/android-support-v4.jar
     prebuild=sed -i '/proguard/d' project.properties
+
+Build:1.5,2
+    commit=2.0
+    forcevercode=yes
+    init=sed -i '/proguard/d' project.properties
+    srclibs=2:DragSort@0.6.1,1:SlidingUpPanel@5a482
+    prebuild=cp libs/android-support-v4.jar $$SlidingUpPanel$$/libs/ && \
+       cp libs/android-support-v4.jar $$DragSort$$/libs/
 
 Maintainer Notes:
 .

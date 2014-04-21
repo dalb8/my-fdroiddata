@@ -16,7 +16,7 @@ Auto Name:Impeller
 Summary:Client for the Pump.io network
 Description:
 A client for [http://pump.io pump.io], 
-a stream server for distributed social networking and microblogging. 
+which is a server for distributed social networking and microblogging. 
 Register a [http://pump.io/tryit.html free account] at a participating website
 and follow some [https://static.jpope.org/users.html people], 
 before using the app.
@@ -28,14 +28,15 @@ following people or viewing their profiles.
 Repo Type:git
 Repo:https://github.com/oshepherd/Impeller.git
 
-Build:0.8.2,8002
-    commit=v0.8.2
+Build:0.9b,9002
+    commit=v0.9b
+    submodules=yes
     gradle=yes
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.8.7
-Current Version Code:8007
+Current Version:0.9b
+Current Version Code:9002
 
