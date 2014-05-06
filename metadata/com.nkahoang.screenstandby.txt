@@ -1,0 +1,46 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Multimedia
+License:GPL
+Web Site:http://screenstandby.com
+Source Code:https://github.com/nkahoang/screenstandby
+Issue Tracker:https://github.com/nkahoang/screenstandby/issues
+Donate:http://www.screenstandby.com/#donate
+
+Auto Name:Screen Standby
+Summary:Keep screen off while mirroring
+Description:
+Can make the screen dark without turning it off so that HDMI mirroring
+will still work.
+
+Some prebuilt binaries in assets/ were removed, but it still seems to work.
+
+Requires root: Yes, but there is a non-root method available which
+is less effective.
+
+AdMob was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/nkahoang/screenstandby.git
+
+Build:2.0 Open Source,13
+    commit=2.0
+    rm=libs/GoogleAdMobAdsSdk-6.3.1.jar,assets/volkey,assets/screenstandby,bin,gen
+    srclibs=MobAdMob@2d5736
+    prebuild=cp -a $$MobAdMob$$/src/com/google src/com/
+    gradle=yes
+
+Update Check Mode:Tags
+Current Version:2.0 Open Source
+Current Version Code:13
+
