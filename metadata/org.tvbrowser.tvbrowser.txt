@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:Apache
+Web Site:http://android.tvbrowser.org
+Source Code:https://github.com/ds10git/tvbrowserandroid
+Issue Tracker:https://github.com/ds10git/tvbrowserandroid/issues
+
+Auto Name:TV-Browser
+Summary:TV planner
+Description:
+EPG (planner) for TV channels in many European countries.
+.
+
+Repo Type:git
+Repo:https://github.com/ds10git/tvbrowserandroid.git
+
+Build:0.2.0.1,173
+    commit=release_0.2.0.1
+    subdir=TV-Browser
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:0.2.0.1
+Current Version Code:173
+
