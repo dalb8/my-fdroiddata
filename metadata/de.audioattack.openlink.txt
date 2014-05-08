@@ -29,14 +29,14 @@ Easy Open Link also allows you to open several links at the same time.
 Repo Type:git
 Repo:https://gitorious.org/openlink/openlink.git
 
-Build:1.1,4
-    commit=r1.1
+Build:1.2,5
+    commit=r1.2
     prebuild=sed -i '/android.intent.category.LAUNCHER/d' AndroidManifest.xml
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.1
-Current Version Code:4
+Current Version:1.2
+Current Version Code:5
 
