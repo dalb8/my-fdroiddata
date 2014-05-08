@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://github.com/BoD/android-activitylifecyclecallbacks-compat
+Subdir:library
+Prepare:mkdir libs
+

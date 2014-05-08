@@ -1,0 +1,50 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree,Tracking
+Categories:Wallpaper
+License:GPLv3
+Web Site:http://jraf.org/android
+Source Code:https://github.com/BoD/HelloMundo
+Issue Tracker:https://github.com/BoD/HelloMundo/issues
+
+Auto Name:HelloMundo
+Summary:Webcam wallpaper
+Description:
+Wallpaper that displays a different picture from webcams around the 
+world every thirty minutes.
+
+Anti-features: Crash reporting is probably done without user interaction; 
+Two proprietary libraries were removed.
+.
+
+Repo Type:git
+Repo:https://github.com/BoD/HelloMundo.git
+
+Build:3.1.0,255
+    commit=171bd29
+    init=wget http://lubek.b.free.fr/data7.csv -P res/raw
+    rm=libs/GoogleAdMobAdsSdk-6.2.1.jar,libs/libGoogleAnalyticsV2_2.0beta4.jar
+    extlibs=android/android-support-v4.jar
+    srclibs=1:ActivityLifeCycle@112ed1,2:SunriseSunset-BoD@bee87e,3:SwitchBackport@v1.3.1,4:NineOldAndroids@2.4.0,5:ActionBarSherlock@4.4.0,6:JrafUtils@72d251,7:MobAdMob@2d5736,8:NoAnalytics@d38ae
+    prebuild=sed -i -e 's/\${versionName}/3.1.0/' -e '6 i android:versionCode="255"' AndroidManifest.xml && \
+      sed -i '/proguard/d' project.properties && \
+      cp libs/android-support-v4.jar $$JrafUtils$$/libs/ && \
+      cp libs/android-support-v4.jar $$ActivityLifeCycle$$/libs && \
+      cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs
+
+Maintainer Notes:
+Ignore updates because they'll likely involve GMS.
+.
+
+Update Check Mode:Static
+Current Version:3.1.0
+Current Version Code:255	
+

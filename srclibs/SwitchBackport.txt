@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/BoD/android-switch-backport
+Subdir:library
+
