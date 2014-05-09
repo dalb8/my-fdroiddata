@@ -13,7 +13,6 @@ Source Code:https://github.com/osmandapp/Osmand/commits
 Issue Tracker:https://code.google.com/p/osmand/issues/list
 Donate:https://code.google.com/p/osmand/#Please_support_the_project
 
-Name:OsmAnd~
 Auto Name:OsmAnd~
 Summary:Maps & navigation; online and off
 Description:
@@ -51,21 +50,24 @@ Build:1.5-ARM,145
         ant build -f ../OsmAnd-java/build.xml
     buildjni=no
 
+Build:1.7.5,170
+    disable=not sure about native parts
+    commit=5df6b3caf2
+    subdir=OsmAnd
+    init=rm ../SherlockBar/build.xml ant.properties
+    srclibs=core@6c857f6c25387,resources@58c2bb3a1d
+    prebuild=sed -i 's/app_version">[^<]*/app_version">1.7.5/' res/values/no_translate.xml
+    build=ANDROID_SDK=$$SDK$$ ANDROID_NDK=$$NDK$$ ./full-ndk-build.sh 
+    buildjni=no
+
 Maintainer Notes:
-Name srclibs in such a way as to replicate OsmAnd build tree
-
-do another 1.5 update when the branch settles down
-replace GPS Status with SatSat and elaborate description. see 
-   https://f-droid.org/forums/topic/update-osmand-and-osmand/page/3/#post-8253 
-add parking patch (already committed).
-
+Needs plenty of disk space, but the app can be run without native code
 Could build gnu-trove via srclib
-Don't really understand what the other build.xmls do: they don't appear to put jars in classpath
 Qt in new_core branch
 see https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml 
 .
 
 Update Check Mode:None
-Current Version:1.6.5
-Current Version Code:150
+Current Version:1.7.5
+Current Version Code:170
 

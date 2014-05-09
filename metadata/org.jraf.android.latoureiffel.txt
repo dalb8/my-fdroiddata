@@ -46,5 +46,5 @@ Ignore updates because they'll likely involve GMS.
 
 Update Check Mode:Static
 Current Version:3.1.0
-Current Version Code:255	
+Current Version Code:255
 
