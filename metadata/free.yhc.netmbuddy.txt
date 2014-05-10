@@ -23,14 +23,14 @@ play and pause audio in the background.
 Repo Type:git
 Repo:https://github.com/yhcting/netmbuddy.git
 
-Build:1.2.11-1,29
-    commit=netmbuddy-v1.2.11-1
+Build:1.2.12,30
+    commit=a906ec0925f73
 
 Maintainer Notes:
-1.2.12 on gplay
+Tags unreliable
 .
 
-#Update Check Mode:Tags
-Current Version:1.2.11-1
-Current Version Code:29
+Update Check Mode:RepoManifest
+Current Version:1.2.12
+Current Version Code:30
 
