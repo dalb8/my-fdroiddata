@@ -19,23 +19,19 @@ with something like `#not exact` (as I often do when I get lazy and use the
 gradle wrapper).
 
 Pre-built libraries, whether included in `libs/` or pulled from remote maven
-repos at build time, should have been built by some third party (e.g. the
-library developers), unless it says differently in the description.
+repos at build time, should have been built by some third party who has no
+relation to the app developers, unless it says differently in the description.
 
 By all means, include in-development apps; if they turn out to be flops
 we'll add the `Disabled:` field and eventually delete them.
 
-I'm currently using a recent version of 
+The bulk of these builds were done at the April 4 2014 commit of 
 [fdroidserver](https://gitlab.com/fdroid/fdroidserver).
-Therefore newer recipes are likely to work but older recipes might not be
-valid any more. However we only keep a couple of builds per package so
-we'll get around to revising them eventually.
-Depending on the distro, there could also be dependency issues for some apps.
-One issue is that the non-buildserver fdroid only allows one version of the gradle 
-binary: that which is chosen in `config.py`. 
-There may exist many versions and the only way I know of around this is to edit 
-`config.py` on a build-by-build basis. See the templates/ directory for 
-a template.
+Depending on the distro and the app, you could have dependency issues.
+Also non-buildserver fdroid only allows one version of the gradle binary: that which
+is chosen in `config.py`.  There may exist many versions and the only way I
+know of around this is to edit `config.py` on a build-by-build basis. See the
+templates/ directory for a template.
 
 If you're distributing APKs please try to provide updates for new versions and
 to mention any significant modifications in the APK and description.  If it

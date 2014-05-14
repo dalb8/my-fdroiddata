@@ -24,7 +24,7 @@ Repo:https://github.com/rorist/android-network-discovery.git
 Build:0.3.5,43
     commit=e89a9791a64
     target=android-8
-    rm=build.properties
+    rm=build.properties,build.xml
 
 Maintainer Notes:
 .
