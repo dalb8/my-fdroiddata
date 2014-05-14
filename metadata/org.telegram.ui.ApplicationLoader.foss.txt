@@ -48,7 +48,8 @@ Build:1.3.21,160
 Build:1.4.9,219
     commit=v1.4.9c
     subdir=TMessagesProj
-    init=sed -i '82 i \ \ \ \ packageName "org.telegram.ui.ApplicationLoader.foss"' build.gradle
+    init=sed -i '82 i \ \ \ \ packageName "org.telegram.ui.ApplicationLoader.foss"' build.gradle && \
+      sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
     build=$$NDK$$/ndk-build -C jni -e 'APP_ABI=armeabi-v7a' && \
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle nativeLibsToJar
     buildjni=no
