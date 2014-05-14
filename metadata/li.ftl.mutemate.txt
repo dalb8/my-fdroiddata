@@ -15,8 +15,7 @@ Issue Tracker:https://github.com/ftlno/MuteMate/issues
 Auto Name:MuteMate
 Summary:Mute the phone for a while
 Description:
-This app allows you to mute the phone for a set
-period of time so that you don't forget to unmute.
+(Description provided via APK in F-Droid 0.69)
 .
 
 Repo Type:git
@@ -24,6 +23,9 @@ Repo:https://github.com/ftlno/MuteMate.git
 
 Build:1.9,10
     commit=10d68
+    init=sed -i '4 i \ \ \ \ android:description="@string/app_description"' AndroidManifest.xml && \
+      sed -i '4 i \ \ \ \ <string name="app_description">This app allows you to mute the phone for a set period of time so that you don’t forget to unmute.</string>' res/values/strings.xml
+
 
 Maintainer Notes:
 .
