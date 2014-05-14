@@ -27,12 +27,20 @@ Google Admob was removed before building.
 Repo Type:git
 Repo:https://bitbucket.org/yokmama/just-player.git
 
+Build:3.37b,2071400330
+    commit=aee93a80c
+    subdir=JUSTPLAYER
+    rm=LibAndroTranslation-1.0.1/build.xml,JUSTPLAYER/.google_apis,JUSTPLAYER/libs/GoogleAdMobAdsSdk-6.2.1.jar
+    srclibs=1:ActionBarSherlock@4.4.0,2:MobAdMob@2d5736
+    prebuild=sed -i 's/KeysDummy/Keys/g' src/jp/co/kayo/android/localplayer/secret/KeysDummy.java && \
+        mv src/jp/co/kayo/android/localplayer/secret/KeysDummy.java src/jp/co/kayo/android/localplayer/secret/Keys.java
+
 Build:3.37,2111600304
     commit=e7ba9ce76
     subdir=JUSTPLAYER
     rm=LibAndroTranslation-1.0.1/build.xml,JUSTPLAYER/.google_apis,JUSTPLAYER/libs/GoogleAdMobAdsSdk-6.2.1.jar
     extlibs=android/android-support-v4.jar
-    srclibs=2:MobAdMob@2d5736
+    srclibs=1:MobAdMob@2d5736
     prebuild=sed -i 's/KeysDummy/Keys/g' src/jp/co/kayo/android/localplayer/secret/KeysDummy.java && \
         mv src/jp/co/kayo/android/localplayer/secret/KeysDummy.java src/jp/co/kayo/android/localplayer/secret/Keys.java
 
