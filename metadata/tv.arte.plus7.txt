@@ -19,9 +19,7 @@ See what programmes are on and watch live TV.
 Live TV screen may be removed shortly after first use if you aren't in the right 
 country.
 Note that only programmes with the "+7" badge can be watched on demand and there's no
-way of knowing in advance which will have it.
-
-Only available there and in Switzerland but shows can be downloaded
+way of knowing in advance which will have it; those shows can also be downloaded
 with these Python scripts, in [https://github.com/inemajo/arte-plus7-downloader SD] or
 [https://github.com/rg3/youtube-dl HD].
 .
