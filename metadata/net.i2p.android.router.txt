@@ -53,27 +53,34 @@ Build:0.9.11-0_b1-API8,4741120
         tar xjvf gmp-5.* -C ./i2p.i2p/core/c/jbigi/ && \
         rm ./gmp-5.*
 
-Maintainer Notes:
-Need to force GCC 4.6 for NDK r9
-
-Trying https://gmplib.org/download/gmp/gmp-5.1.3.tar.bz2 instead
-of insecure ftp.
-Here's the original:
-        wget ftp://ftp.gmplib.org/pub/gmp-4.3.2/gmp-4.3.2.tar.bz2 && \
+Build:0.9.12-0_b2-API8,4743169
+    commit=8d4f1b174dcedc9db5772d4f874471e9202e896c
+    extlibs=android/android-support-v4.jar
+    srclibs=I2P@90cd68900e75dfb8ae1fd7c3255393aea09d5ceb,2:Appcompat@android-4.4.2_r2
+    prebuild=cp -R $$I2P$$ ./i2p.i2p && \
+        mv libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+        echo -e "sdk.dir=$$SDK$$\ni2psrc=./i2p.i2p" >> ./local.properties && \
+        echo -e "sdk.dir=$$SDK$$\nndk.dir=$$NDK$$\ni2psrc=./../i2p.i2p" >> ./routerjars/local.properties && \
+        wget https://gmplib.org/download/gmp/gmp-4.3.2.tar.bz2 && \
         tar xjvf gmp-4.* -C ./i2p.i2p/core/c/jbigi/ && \
-        rm ./gmp-4.*
+        rm ./gmp-4.* && \
+        ant incrementBuild
+    scandelete=i2p.i2p,routerjars/jni
 
+Maintainer Notes:
 # Android version code is an integer. So we have 31 bits.
 # MAJOR         4 bits 0-15
 # MINOR         8 bits 0-255
 # RELEASE       8 bits 0-255
 # ROUTERBUILD   7 bits 0-127
 # ANDROIDBUILD  4 bits 0-15
-# see custom_rules.xml
-# increment build number, for updates between router releases.
+
+See custom_rules.xml
+
+Increment build number with 'ant incrementBuild' for updates between router releases. (see ./custom_rules.xml)
 .
 
 Update Check Mode:None
-Current Version:0.9.11-0_b1-API8
-Current Version Code:4741120
+Current Version:0.9.12-0_b2-API8
+Current Version Code:4743169
 
