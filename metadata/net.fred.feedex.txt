@@ -26,10 +26,15 @@ Build:1.5.3,39
     commit=v1.5.3
     prebuild=sed -i 's/font-family: sans-serif-light;/line-height:200%; font-family: serif;/g' src/net/fred/feedex/view/EntryView.java 
 
+Build:1.6.1,42
+    commit=v1.6.1
+    rm=res/values-ca
+    prebuild=sed -i 's/font-family: sans-serif-light;/line-height:200%; font-family: serif;/g' src/net/fred/feedex/view/EntryView.java 
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.6.0
-Current Version Code:41
+Current Version:1.6.1
+Current Version Code:42
 

@@ -27,10 +27,9 @@ and on pending bugs for those packages, etc.
 Repo Type:git
 Repo:https://github.com/uberspot/DebianDroid.git
 
-Build:1.7,12
-    commit=5708e25c80969e
+Build:1.732,16
+    commit=v1.732
     submodules=yes
-    init=sed -i 's/StorageUtils/storageutils/g' project.properties 
     extlibs=android/android-support-v4.jar
     prebuild=mv libs/android-support-v4.jar external/actionbarsherlock/actionbarsherlock/libs/
 
