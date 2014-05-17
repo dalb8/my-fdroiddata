@@ -1,0 +1,38 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:GPLv3
+Web Site:https://floens.github.io/Clover
+Source Code:https://github.com/Floens/Clover
+Issue Tracker:https://github.com/Floens/Clover/issues
+Donate:https://floens.github.io/Clover
+Bitcoin:1N7VtcNh8L8u4tF9CJ38GjnPbmxM4Vixi6
+
+Auto Name:Clover
+Summary:4Chan.org client
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/Floens/Clover.git
+
+Build:v1.0.2,20
+    commit=v1.0.2
+    subdir=Clover
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:v1.0.2
+Current Version Code:20
+
