@@ -1,0 +1,46 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:http://smc.org.in
+Source Code:https://github.com/smc/Indic-Keyboard
+Issue Tracker:https://github.com/smc/Indic-Keyboard/issues
+
+Auto Name:Indic Keyboard
+Summary:AOSP keyboard for more scripts
+Description:
+Supports 15 Indic languages depending on the fonts available to the system,
+either by direct input or transliteration.
+
+Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Oriya,
+Punjabi, Sanskrit, Sinhalese, Tamil, Telugu, Urdu.
+.
+
+Repo Type:git
+Repo:https://github.com/smc/Indic-Keyboard.git
+
+Build:1.0.2,12
+    commit=42ef7d48b8f6e0001fdfdaca192552713bd0f774
+    subdir=java
+    init=git submodule update --init && \
+        echo 'src.dir=../morelangs/src;src' >> ant.properties
+    rm=java/libs/armeabi.jar
+    patch=custom_rules.xml_12.patch
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi" -e "APP_CFLAGS += -w" -C ../native; mv ../native/libs/* libs/
+
+Maintainer Notes:
+Could use gradle
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.2
+Current Version Code:12
+
