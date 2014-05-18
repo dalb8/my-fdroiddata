@@ -1,0 +1,52 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Source Code:https://github.com/ligi/PassAndroid
+Issue Tracker:https://github.com/ligi/PassAndroid/issues
+
+Summary:Display digital tickets
+Description:
+For showing Passbook (pkpass) files and their barcodes: boarding passes, coupons, event
+tickets, store cards etc.
+
+To view maps in this version, don't press the button on the action bar, but rather press 
+'navigation' which will open [[net.osmand.plus]] etc.
+.
+
+Repo Type:git
+Repo:https://github.com/ligi/PassAndroid.git
+
+Build:2.2.0,220
+    commit=e038e1d872760e
+    init=sed -i -e '17 i mavenLocal()' -e '18,20d' build.gradle
+    srclibs=Tracedroid@2740c,AXT@0.25,Zxing@1ce4516d00385bac6
+    build=\
+        $$MVN3$$ package -DskipTests -f $$Zxing$$/core/pom.xml && \
+        mv $$Zxing$$/android/libs/core-2.3.0-SNAPSHOT.jar libs/zxing-core-2.3.0-SNAPSHOT.jar && \
+        /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
+        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=tracedroid -Dversion=1.1 -Dpackaging=jar -Dfile=$$Tracedroid$$/build/libs/Tracedroid-1.1.jar && \
+        /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$AXT$$ && \
+        $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=AXT -Dversion=0.25 -Dpackaging=jar -Dfile=$$AXT$$/build/libs/AXT-0.25.jar && \
+        /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleNoMapsNoAnalyticsForFDroidRelease
+    output=build/org.ligi.passandroid/build/apk/org.ligi.passandroid-noMaps-noAnalytics-forFDroid-release-unsigned.apk
+
+Maintainer Notes:
+Tags unreliable.
+
+Zxing has to be built from a snapshot in 2.2.0 because latest tags don't 
+work so well for Aztec.
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.2.1
+Current Version Code:221
+
