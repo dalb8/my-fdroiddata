@@ -1,0 +1,37 @@
+Categories:Navigation
+License:GPLv3
+Web Site:http://m.cyclestreets.net
+Source Code:https://github.com/cyclestreets/android
+Issue Tracker:https://github.com/cyclestreets/android/issues
+Donate:http://www.cyclestreets.net/donate
+
+Auto Name:CycleStreets
+Summary:UK cycling navigation
+Description:
+Plan routes from A to B anywhere in the UK, with a choice of four routing modes
+to suit a range of cyclists from beginner to regular commuter.
+And the Photomap lets you submit photos of infrastructure problems or good
+practice around the UK.
+Routes for cyclists using OpenStreetMap/OpenCycleMap maps that can be cached
+in advance of the journey.
+
+[https://github.com/cyclestreets/android/raw/master/assets/whatsnew.html Changelog]
+.
+
+Repo Type:git
+Repo:https://github.com/cyclestreets/android.git
+
+Build:2.2,18
+    commit=RELEASE_2_2
+    subdir=cyclestreets
+    build=cd ../ && /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleRelease
+    output=build/net.cyclestreets/cyclestreets/build/apk/cyclestreets-release-unsigned.apk
+
+Maintainer Notes:
+Version info in config.properties.
+.
+
+Update Check Mode:None
+Current Version:2.2
+Current Version Code:18
+
