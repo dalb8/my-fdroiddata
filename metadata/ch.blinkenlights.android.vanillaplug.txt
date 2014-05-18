@@ -1,0 +1,23 @@
+Categories:Multimedia
+License:GPLv3
+Web Site:
+Source Code:https://github.com/adrian-bl/vanilla-headphone-detector/commits
+Issue Tracker:https://github.com/adrian-bl/vanilla-headphone-detector/issues
+
+Auto Name:Headphone detector for Vanilla Music
+Summary:Launch music player
+Description:
+Plugin for [[ch.blinkenlights.android.vanilla]].
+.
+
+Repo Type:git
+Repo:https://github.com/adrian-bl/vanilla-headphone-detector.git
+
+Build:1.1,110
+    commit=4a6be5
+    target=android-16
+
+Update Check Mode:RepoManifest
+Current Version:1.1
+Current Version Code:110
+
