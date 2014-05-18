@@ -1,0 +1,39 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:MIT
+Web Site:http://drumber.net
+Source Code:https://github.com/drumber-1/NestedTicTacToe
+Issue Tracker:https://github.com/drumber-1/NestedTicTacToe/issues
+
+Auto Name:Nested Tic Tac Toe
+Summary:Variant of Noughts & Crosses
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/drumber-1/NestedTicTacToe.git
+
+Build:1.0.1,2
+    commit=99ef383dda2c27d0a8687fd922caef14
+    subdir=NestedTicTacToeAndroid
+    prebuild=cp -r ../NestedTicTacToe/src/net/drumber/nestedtictactoe/* src/net/drumber/ && \
+        mv ../NestedTicTacToe/libs/gdx.jar libs/
+    scanignore=NestedTicTacToeAndroid/libs
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.1
+Current Version Code:2
+
