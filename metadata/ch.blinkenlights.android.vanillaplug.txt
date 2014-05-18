@@ -5,6 +5,7 @@ Source Code:https://github.com/adrian-bl/vanilla-headphone-detector/commits
 Issue Tracker:https://github.com/adrian-bl/vanilla-headphone-detector/issues
 
 Auto Name:Headphone detector for Vanilla Music
+Name:Vanilla Music Detector
 Summary:Launch music player
 Description:
 Plugin for [[ch.blinkenlights.android.vanilla]].
