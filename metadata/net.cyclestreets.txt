@@ -1,7 +1,7 @@
 Categories:Navigation
 License:GPLv3
 Web Site:http://m.cyclestreets.net
-Source Code:https://github.com/cyclestreets/android
+Source Code:https://github.com/cyclestreets/android/commits
 Issue Tracker:https://github.com/cyclestreets/android/issues
 Donate:http://www.cyclestreets.net/donate
 

@@ -12,10 +12,13 @@ Web Site:
 Source Code:https://android.googlesource.com/platform/packages/apps/Launcher3
 Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=launcher&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
-Auto Name:
+Auto Name:Launcher3
 Summary:Home screen
 Description:
-No description available
+The AOSP launcher. 
+It differs from the proprietary Google Launcher in that
+it has an extra row and column, the Settings button doesn't work, widgets can
+only be deleted in portrait mode and it doesn't have the Google Now panel.
 .
 
 Repo Type:git
