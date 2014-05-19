@@ -1,0 +1,40 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Development
+License:Unknown
+Web Site:
+Source Code:https://github.com/osiris86/TracDroid
+Issue Tracker:https://github.com/osiris86/TracDroid/issues
+
+Auto Name:TracDroid
+Summary:Connect to Trac instances
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/osiris86/TracDroid.git
+
+Build:1.0.3.35,5
+    disable=no licence
+    commit=master
+    subdir=TracDroid
+    rm=TracDroid/custom_rules.xml
+    srclibs=1:ActionBarSherlock@4.4.0
+    prebuild=mv libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
+        echo 'source.dir=../TracDroidCommunications/src;src' >> ant.properties
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.3.35
+Current Version Code:5
+
