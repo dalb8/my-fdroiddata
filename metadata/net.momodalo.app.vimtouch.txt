@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Development
-License:Apache2/GPL
+License:Apache/GPL
 Web Site:
 Source Code:https://github.com/momodalo/vimtouch/commits
 Issue Tracker:https://github.com/momodalo/vimtouch/issues
@@ -30,7 +30,7 @@ Description:
 * Customizable VIM runtime (ex: can install syntax, doc, plugins)
 * Crashy though
 
-Iconv is GPL licensed but the main app is Apache2.
+Iconv is GPL licensed but the main app is Apache.
 .
 
 Repo Type:git
