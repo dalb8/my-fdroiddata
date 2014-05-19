@@ -12,25 +12,19 @@ Web Site:https://code.google.com/p/hunkypunk
 Source Code:https://code.google.com/p/hunkypunk/source/list
 Issue Tracker:https://code.google.com/p/hunkypunk/issues/list
 
-Auto Name:Hunky Punk
+Auto Name:Son of Hunky Punk
 Summary:Interactive fiction player
 Description:
-HunkyMod is an interactive fiction manager and interpreter, aiming to be a
-comprehensive multi-interpreter similar to Gargoyle, with metadata
-and story management support.
+Son of Hunky Punk is an interactive fiction manager and interpreter, aiming to
+be a comprehensive multi-interpreter similar to Gargoyle, with metadata and
+story management support.
 
-Scrolling works by tapping the screen at the top or bottom and
-if you experience problems try using the stock keyboard.
-
-* preloaded with stories
-* metadata and covers are fetched from IFDb
+* Preloaded with stories
+* Metadata and covers are fetched from IFDb
 * Tads support (Tads 2.5.14, 3.0.18)
-* improved Z-code support (Frotz 2.50)
-* blorb support
-* font preference
-
-HunkyMod is a fork/mod of the [http://hunkypunk.sourceforge.net original]
-Hunky Punk, created by Rafał Rzepecki, which hasn't been updated in a while.
+* Improved Z-code support (Frotz 2.50)
+* Blorb support
+* Font preference
 .
 
 Repo Type:git
@@ -49,25 +43,24 @@ Build:0.3,1
 
 Build:0.8,5
     commit=744b8c26032
+    forcevercode=yes
+    init=sed -i '139,140d' build.xml && \
+      echo -e 'sdk.dir=$$SDK$$\nndk.dir=$$NDK$$\nbash-location=/bin/bash' > local.properties
     rm=ant.properties
-    prebuild=sed -i '139,140d' build.xml && \
-        echo "bash-location=/bin/bash" >> local.properties 
-    build=ln -s alt-apk/mod/bin . && \
-        cd jni/nitfol && \
-        bison -o inform.c inform.y 
+    build=(cd jni/nitfol && bison -o inform.c inform.y) && \
+       ant mod-release
     buildjni=no
-    antcommand=mod-release
+    output=alt-apk/mod/bin/HunkyPunk-release-unsigned.apk
 
 Build:0.8,6
     commit=744b8c26032
+    init=sed -i '139,140d' build.xml && \
+      echo -e 'sdk.dir=$$SDK$$\nndk.dir=$$NDK$$\nbash-location=/bin/bash' > local.properties
     rm=ant.properties
-    prebuild=sed -i '139,140d' build.xml && \
-        echo "bash-location=/bin/bash" >> local.properties 
-    build=ln -s alt-apk/mod4/bin . && \
-        cd jni/nitfol && \
-        bison -o inform.c inform.y 
+    build=(cd jni/nitfol && bison -o inform.c inform.y) && \
+       ant mod4-release
     buildjni=no
-    antcommand=mod4-release
+    output=alt-apk/mod4/bin/HunkyPunk-release-unsigned.apk
 
 Maintainer Notes:
 None of the automatic UCM methods work

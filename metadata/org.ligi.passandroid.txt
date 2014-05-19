@@ -37,7 +37,7 @@ Build:2.2.0,220
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$AXT$$ && \
         $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=AXT -Dversion=0.25 -Dpackaging=jar -Dfile=$$AXT$$/build/libs/AXT-0.25.jar && \
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleNoMapsNoAnalyticsForFDroidRelease
-    output=build/org.ligi.passandroid/build/apk/org.ligi.passandroid-noMaps-noAnalytics-forFDroid-release-unsigned.apk
+    output=build/apk/org.ligi.passandroid-noMaps-noAnalytics-forFDroid-release-unsigned.apk
 
 Maintainer Notes:
 Tags unreliable.
