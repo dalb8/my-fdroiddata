@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv3
+Web Site:http://spokenpic.com
+Source Code:https://github.com/gallir/SpokenPic
+Issue Tracker:https://github.com/gallir/SpokenPic/issues
+
+Auto Name:SpokenPic
+Summary:Attach audio to camera pics
+Description:
+Take pictures and add an audio commentary.
+Can upload to a website if desired.
+.
+
+Repo Type:git
+Repo:https://github.com/gallir/SpokenPic.git
+
+Build:1.0.1 Treasure,26
+    commit=52e293b3db631d2eb5b8b5d8f57a
+    init=sed -i '/reference.2/d' project.properties && \
+        sed -i '/exifRotate/d' src/com/spokenpic/utils/ImageUtils.java
+    rm=res/LICENSE
+    srclibs=ImageLoader@22ba0555664960be
+    prebuild=echo 'source.dir=$$ImageLoader$$/src;external;src' >> ant.properties
+    buildjni=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.1 Treasure
+Current Version Code:26
+
