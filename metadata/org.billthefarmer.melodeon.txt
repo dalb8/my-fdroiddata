@@ -30,7 +30,7 @@ Repo Type:git
 Repo:https://github.com/billthefarmer/melodeon
 
 Build:1.01,101
-    commit=201b0b1dfdb7f8387
+    commit=v1.01
     extlibs=arch-arm/libsonivox.so
     scanignore=libs/libsonivox.so
     build=mkdir -p ndk/toolchains/ && \
@@ -42,10 +42,9 @@ Build:1.01,101
     buildjni=no
 
 Maintainer Notes:
-Tags unreliable.
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Tags
 Current Version:1.01
 Current Version Code:101
 
