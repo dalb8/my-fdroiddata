@@ -29,22 +29,23 @@ Uses undocumented built in Sonivox midi synthesizer for midi audio output.
 Repo Type:git
 Repo:https://github.com/billthefarmer/melodeon
 
-Build:1.0,1
-    commit=v1.0
+Build:1.01,101
+    commit=201b0b1dfdb7f8387
     extlibs=arch-arm/libsonivox.so
     scanignore=libs/libsonivox.so
-    build=mkdir -p ndk-r8e/toolchains/ && \
-        find $$NDK$$ -maxdepth 1 -mindepth 1 -not -name toolchains -print0 |        xargs -0 cp -r -t ndk-r8e/ && \
-        cp -r $$NDK$$/toolchains/arm-linux-androideabi-4.6/ ndk-r8e/toolchains/ && \
-        mv libs/libsonivox.so ndk-r8e/platforms/android-14/arch-arm/usr/lib/ && \
-        ./ndk-r8e/ndk-build && \
-        rm -rf ndk-r8e/
+    build=mkdir -p ndk/toolchains/ && \
+        find $$NDK$$ -maxdepth 1 -mindepth 1 -not -name toolchains -print0 | xargs -0 cp -r -t ndk/ && \
+        cp -r $$NDK$$/toolchains/arm-linux-androideabi-4.6/ ndk/toolchains/ && \
+        mv libs/libsonivox.so ndk/platforms/android-17/arch-arm/usr/lib/ && \
+        ./ndk/ndk-build -e 'APP_ABI=armeabi armeabi-v7a' && \
+        rm -rf ndk/
     buildjni=no
 
 Maintainer Notes:
+Tags unreliable.
 .
 
-#Update Check Mode:Tags
-Current Version:1.0
-Current Version Code:1
+Update Check Mode:RepoManifest
+Current Version:1.01
+Current Version Code:101
 
