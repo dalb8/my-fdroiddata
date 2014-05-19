@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPL
+Web Site:
+Source Code:https://github.com/Tortel/SysLog/commits
+Issue Tracker:https://github.com/Tortel/SysLog/issues
+
+Auto Name:SysLog
+Summary:Record system logs
+Description:
+Archives kmsg, dmsg etc. with optional grep for immediate uploading.
+
+Requires root: Unless you have a custom ROM, Yes.
+.
+
+Repo Type:git
+Repo:https://github.com/Tortel/SysLog.git
+
+Build:1.6.0,15
+    commit=v1.6.0
+    srclibs=2:ActionBarSherlock@4a79d53,1:Libsuperuser-chainfire@185868f
+    prebuild=sed -i 's/minSdkVersion="10"/minSdkVersion="16"/' AndroidManifest.xml
+
+Maintainer Notes:
+Uses submodules
+
+Could work on GB but not worth me testing.
+.
+
+Update Check Mode:Tags
+Current Version:1.6.0
+Current Version Code:15
+
