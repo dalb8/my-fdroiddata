@@ -52,12 +52,14 @@ Build:2.3,42
         cp android-libs/Donations/ant-templates/other/DonationsConfig.java android-libs/Donations/src/org/donations/
     buildjni=yes
 
-Build:2.8,47
-    commit=v2.8
+Build:2.8.1,48
+    commit=v2.8.1
     subdir=AdAway
-    gradle=yes@..
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
-    preassemble=renameExecutables
+    init=sed -i '21,48d' build.gradle
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' && \
+      cd ..; ~/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle renameExecutables assembleRelease
+    buildjni=no
+    output=build/apk/AdAway-release-unsigned.apk
 
 Maintainer Notes:
 .
