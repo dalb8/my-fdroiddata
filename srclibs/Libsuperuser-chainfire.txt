@@ -1,5 +1,6 @@
 Repo Type:git
 Repo:https://github.com/Chainfire/libsuperuser
 
+Prepare:sed -i 's/android-4/android-8/' project.properties
 Subdir:libsuperuser
 

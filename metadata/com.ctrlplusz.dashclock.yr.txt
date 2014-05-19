@@ -1,0 +1,40 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Wallpaper
+License:Apache
+Web Site:
+Source Code:https://github.com/hanspeide/dashclock-yr-extension
+Issue Tracker:https://github.com/hanspeide/dashclock-yr-extension/issues
+
+Auto Name:Dashclock Yr Extension
+Summary:Weather info on the lockscreen
+Description:
+This project contains an extension to [[net.nurik.roman.dashclock]]. The
+extension is a clone of the Weather extension that comes included with
+Dashclock, with the difference that this app pulls data from the Norwegian
+Metorological Institute (yr.no), along with some other minor improvements.
+
+Requires network/battery-saving location backend/provider.
+.
+
+Repo Type:git
+Repo:https://github.com/hanspeide/dashclock-yr-extension
+
+Build:0.11,2
+    commit=v1.02
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:0.11
+Current Version Code:2
+
