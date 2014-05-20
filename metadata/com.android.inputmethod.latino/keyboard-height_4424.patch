@@ -1,0 +1,86 @@
+diff --git a/java/res/values-land/dimens.xml b/java/res/values-land/dimens.xml
+index b874d48..a2c331c 100644
+--- a/java/res/values-land/dimens.xml
++++ b/java/res/values-land/dimens.xml
+@@ -21,8 +21,8 @@
+ <resources>
+     <!-- Preferable keyboard height in absolute scale: 1.100in -->
+     <!-- This keyboardHeight value should match with keyboard-heights.xml -->
+-    <dimen name="keyboardHeight">176.0dp</dimen>
+-    <fraction name="minKeyboardHeight">45%p</fraction>
++    <dimen name="keyboardHeight">165.0dp</dimen>
++    <fraction name="minKeyboardHeight">38%p</fraction>
+     <!-- key_height + key_bottom_gap = popup_key_height -->
+     <dimen name="popup_key_height">44.8dp</dimen>
+ 
+diff --git a/java/res/values-land/keyboard-heights.xml b/java/res/values-land/keyboard-heights.xml
+index 670be33..d57f96b 100644
+--- a/java/res/values-land/keyboard-heights.xml
++++ b/java/res/values-land/keyboard-heights.xml
+@@ -33,7 +33,5 @@
+     <!-- Preferable keyboard height in absolute scale: 45.0mm -->
+         <!-- Xoom -->
+         <item>HARDWARE=stingray,265.4378</item>
+-    <!-- Default value for unknown device: empty string -->
+-        <item>,</item>
+     </string-array>
+ </resources>
+diff --git a/java/res/values/dimens.xml b/java/res/values/dimens.xml
+index 18cb262..3f07055 100644
+--- a/java/res/values/dimens.xml
++++ b/java/res/values/dimens.xml
+@@ -21,9 +21,9 @@
+ <resources>
+     <!-- Preferable keyboard height in absolute scale: 1.285in -->
+     <!-- This keyboardHeight value should match with keyboard-heights.xml -->
+-    <dimen name="keyboardHeight">205.6dp</dimen>
+-    <fraction name="maxKeyboardHeight">46%p</fraction>
+-    <fraction name="minKeyboardHeight">-61.8%p</fraction>
++    <dimen name="keyboardHeight">180dp</dimen>
++    <fraction name="maxKeyboardHeight">25%p</fraction>
++    <fraction name="minKeyboardHeight">-15.8%p</fraction>
+ 
+     <dimen name="popup_key_height">52.8dp</dimen>
+ 
+@@ -33,12 +33,12 @@
+     <fraction name="keyboard_right_padding">0%p</fraction>
+ 
+     <fraction name="keyboard_top_padding_gb">1.556%p</fraction>
+-    <fraction name="keyboard_bottom_padding_gb">4.669%p</fraction>
++    <fraction name="keyboard_bottom_padding_gb">0%p</fraction>
+     <fraction name="key_bottom_gap_gb">6.495%p</fraction>
+     <fraction name="key_horizontal_gap_gb">1.971%p</fraction>
+ 
+     <fraction name="keyboard_top_padding_ics">2.335%p</fraction>
+-    <fraction name="keyboard_bottom_padding_ics">4.669%p</fraction>
++    <fraction name="keyboard_bottom_padding_ics">0.0%p</fraction>
+     <fraction name="key_bottom_gap_ics">6.127%p</fraction>
+     <fraction name="key_horizontal_gap_ics">1.739%p</fraction>
+ 
+diff --git a/java/res/values/keyboard-heights.xml b/java/res/values/keyboard-heights.xml
+index c651a89..8be8dbe 100644
+--- a/java/res/values/keyboard-heights.xml
++++ b/java/res/values/keyboard-heights.xml
+@@ -33,7 +33,9 @@
+     <!-- Preferable keyboard height in absolute scale: 48.0mm -->
+         <!-- Xoom -->
+         <item>HARDWARE=stingray,283.1337</item>
+-    <!-- Default value for unknown device: empty string -->
+-        <item>,</item>
++    <!-- custom -->
++        <item>HARDWARE=p990,180</item>
++        <item>HARDWARE=p999,180</item>
++        <item>HARDWARE=star,180</item>
+     </string-array>
+ </resources>
+diff --git a/java/res/values/themes-common.xml b/java/res/values/themes-common.xml
+index 3760771..663d7ad 100644
+--- a/java/res/values/themes-common.xml
++++ b/java/res/values/themes-common.xml
+@@ -128,4 +128,4 @@
+         <item name="android:windowEnterAnimation">@anim/more_keys_keyboard_fadein</item>
+         <item name="android:windowExitAnimation">@anim/more_keys_keyboard_fadeout</item>
+     </style>
+-</resources>
+\ No newline at end of file
++</resources>

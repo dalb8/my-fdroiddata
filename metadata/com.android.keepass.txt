@@ -27,8 +27,8 @@ on a Windows machine. Supports both versions 1
 Repo Type:git
 Repo:https://github.com/bpellin/keepassdroid.git
 
-Build:1.99.10,128
-    commit=1.99.10
+Build:1.99.11,129
+    commit=v1.99.11
     target=android-12
     extlibs=keepass/sha2-07-01-07.zip
     init=rm assets/*.key assets/*.kdb assets/*.kdbx

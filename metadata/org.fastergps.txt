@@ -24,15 +24,16 @@ process of getting a GPS fix. For more details on why NTP Server choice
 could matter, read
 [http://stackoverflow.com/questions/8308412/gps-how-ntp-time-injection-works this].
 
-Requires root: Yes. To write gps.conf file to /system partition.
+Requires root: Yes, to write gps.conf file to /system partition.
 .
 
 Repo Type:git
 Repo:https://github.com/dschuermann/faster-gps.git
 
-Build:1.10,12
-    commit=v1.10
+Build:1.11,13
+    commit=v1.11
     subdir=FasterGPS
+    init=sed -i '19,45d' build.gradle
     gradle=fdroid
 
 Maintainer Notes:
