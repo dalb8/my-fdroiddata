@@ -26,8 +26,11 @@ Repo:git://git.code.sf.net/p/opencamera/code
 Build:1.5,7
     commit=v1.5
 
+Build:1.9,11
+    commit=v1.9
+
 Build:1.11,13
-    commit=v1.11
+    disable=crashy
 
 Maintainer Notes:
 .
