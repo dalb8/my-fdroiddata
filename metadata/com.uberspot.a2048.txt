@@ -33,6 +33,6 @@ Build:1.87,12
     prebuild=mv $$2048$$/* assets/2048/
 
 Update Check Mode:RepoManifest
-Current Version:1.8
-Current Version Code:9
+Current Version:1.87
+Current Version Code:12
 
