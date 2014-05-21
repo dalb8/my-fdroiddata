@@ -28,8 +28,8 @@ following people or viewing their profiles.
 Repo Type:git
 Repo:https://github.com/oshepherd/Impeller.git
 
-Build:0.9b,9002
-    commit=v0.9b
+Build:0.9.1,9010
+    commit=v0.9.1
     submodules=yes
     gradle=yes
 
@@ -37,6 +37,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.9b
-Current Version Code:9002
+Current Version:0.9.1
+Current Version Code:9010
 
