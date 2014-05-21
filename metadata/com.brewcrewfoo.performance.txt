@@ -70,7 +70,7 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
     buildjni=no
 .
 
-Update Check Mode:RepoManifest/jb2
+Update Check Mode:RepoManifest/kk
 Vercode Operation:10*%c + 9
 Current Version:2.1.13
 Current Version Code:49
