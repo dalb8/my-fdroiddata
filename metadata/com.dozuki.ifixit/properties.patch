@@ -1,0 +1,31 @@
+diff --git a/gradle.properties.base b/gradle.properties.base
+index 7e1bd3e..a23a546 100644
+--- a/gradle.properties.base
++++ b/gradle.properties.base
+@@ -2,20 +2,11 @@
+ 
+ devServer=www.ifixit.com
+ 
+-ifixitAppId=0123456789ABCDEF0123456789ABCDEF
+-ifixitGAPropertyId=GAPropertyId
+-ifixitKeyAlias=keyalias
+-ifixitStorePassword=storepassword
+-ifixitKeyPassword=keypassword
++ifixitAppId=com.dozuki.ifixit
++ifixitGAPropertyId=
+ 
+-dozukiAppId=0123456789ABCDEF0123456789ABCDEF
+-dozukiGAPropertyId=GAPropertyId
+-dozukiKeyAlias=keyalias
+-dozukiStorePassword=storepassword
+-dozukiKeyPassword=keypassword
++dozukiAppId=
++dozukiGAPropertyId=
+ 
+-accustreamAppId=0123456789ABCDEF0123456789ABCDEF
+-accustreamGAPropertyId=GAPropertyId
+-accustreamKeyAlias=keyalias
+-accustreamStorePassword=storepassword
+-accustreamKeyPassword=keypassword
++accustreamAppId=
++accustreamGAPropertyId=

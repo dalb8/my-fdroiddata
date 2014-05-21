@@ -59,6 +59,16 @@ Build:2.4.1,46
         echo 'dozukiAppId=' >> ../gradle.properties && \
         echo 'accustreamAppId=' >> ../gradle.properties
 
+Build:2.6.0,49
+    commit=v2.6.0
+    patch=properties.patch
+    subdir=App
+    srclibs=NoAnalytics@eacdf5bcc9
+    prebuild=rm -f libs/* && \
+        mv $$NoAnalytics$$/src/com/* src/com/ && \
+        mv ../gradle.properties.base ../gradle.properties
+    gradle=ifixit
+
 Maintainer Notes:
 Following artifacts are in 1st-party repo:
         sed -i '14,16d' build.gradle && \
@@ -68,9 +78,11 @@ Following artifacts are in 1st-party repo:
    > Could not find com.github.chrisbanes.pulltorefresh:pulltorefresh:2.1.2.
    > Could not find it.sephiroth.android.library.imagezoom:imagezoom:1.0.0.
    > Could not find com.mobeta.android.dslv:dslv:0.6.1.
+
+The build.gradle is nice for white-labelling.
 .
 
 #Update Check Mode:Tags
-Current Version:2.5.0
-Current Version Code:48
+Current Version:2.6.0
+Current Version Code:49
 

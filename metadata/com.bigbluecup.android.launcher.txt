@@ -50,7 +50,7 @@ Repo:https://github.com/adventuregamestudio/ags.git
 
 Build:1.0-ARM+,1
     disable=allegro and dumb patches need overriding; can't build vorbis native engine #144
-    commit=v.3.3.0-hotfix
+    commit=v.3.3.0-hotfix2
     submodules=yes
     subdir=Android/launcher_list
     forceversion=yes
