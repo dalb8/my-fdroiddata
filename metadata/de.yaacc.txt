@@ -33,9 +33,10 @@ N.B. Contains a lot of custom prebuilt JAR libraries.
 Repo Type:git
 Repo:git://git.code.sf.net/p/yaacc/code
 
-Build:1.1.4,8
-    commit=RELEASE-1.1.4
+Build:1.1.5,9
+    commit=release-1.1.5
     subdir=main
+    forceversion=yes
     target=android-19
 
 Maintainer Notes:
