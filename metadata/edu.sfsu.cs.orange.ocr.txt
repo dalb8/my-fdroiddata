@@ -48,19 +48,19 @@ the settings.
 Repo Type:git
 Repo:https://github.com/rmtheis/android-ocr.git
 
-Build:0.5.13,32
-    commit=10c6621452be6f2
+Build:0.5.14,33
+    commit=8e33ed3bb6e7d68ed4190
     subdir=android
     srclibs=1:TessTwo@8f63ae2058
     prebuild=sed -i '/preferExternal/d' AndroidManifest.xml
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' -C $$TessTwo$$
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi' -C $$TessTwo$$
     buildjni=no
 
 Maintainer Notes:
-Appear to bump version just after release.
+Sometimes updates version just after a release.
 .
 
-Update Check Mode:RepoManifest
-Current Version:0.5.13
-Current Version Code:32
+Update Check Mode:None
+Current Version:0.5.14
+Current Version Code:33
 
