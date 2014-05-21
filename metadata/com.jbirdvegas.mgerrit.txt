@@ -26,13 +26,14 @@ A lot of jars still need checking out.
 Repo Type:git
 Repo:https://github.com/AOKP/external_jbirdvegas_mGerrit.git
 
-Build:2.07.000,207000
-    commit=5657a341de12dedad1cf3136eb7cea28db448a2e
-    gradle=yes
+Build:2.10.004,210004
+    commit=81dd06db528e791edc0f92345f8237982975cef3
     rm=assets/market,libs/libGoogleAnalyticsServices.jar
     srclibs=NoAnalytics@v0.3.1
     prebuild=sed -i '/GoogleAnalytics/d' build.gradle && \
-        cp -a $$NoAnalytics$$/src/com/google src/com/
+        cp -a $$NoAnalytics$$/src/com/google src/com/ && \
+        sed -i 's/48dp/36dp/' res/layout/header.xml
+    gradle=yes
 
 Maintainer Notes:
 A lot of jars still need checking out
@@ -41,6 +42,6 @@ Uses tags but they're ROM milestones
 .
 
 Update Check Mode:RepoManifest
-Current Version:2.07.000
-Current Version Code:207000
+Current Version:2.10.004
+Current Version Code:210004
 
