@@ -1,0 +1,2 @@
+Repo Type:git
+Repo:https://github.com/gabrielecirulli/2048.git

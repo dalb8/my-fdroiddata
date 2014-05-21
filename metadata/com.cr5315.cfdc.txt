@@ -15,6 +15,7 @@ Source Code:https://github.com/cr5315/countdown-for-dashclock
 Issue Tracker:https://github.com/cr5315/countdown-for-dashclock/issues
 
 Auto Name:Countdown for DashClock
+Auto Name:DashClock: Countdown
 Summary:Countdown on the lock screen
 Description:
 Extension for [[net.nurik.roman.dashclock]] that displays the time

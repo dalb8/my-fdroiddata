@@ -27,9 +27,10 @@ Build:1.2,3
     commit=87fbd98f64aa1
     submodules=yes
 
-Build:1.8,9
-    commit=v1.8
-    submodules=yes
+Build:1.87,12
+    commit=v1.87
+    srclibs=2048@538546423f9321
+    prebuild=mv $$2048$$/* assets/2048/
 
 Update Check Mode:RepoManifest
 Current Version:1.8

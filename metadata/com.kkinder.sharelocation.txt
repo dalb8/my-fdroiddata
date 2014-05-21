@@ -40,7 +40,7 @@ Maintainer Notes:
 Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.4.1
 Current Version Code:141
 
