@@ -30,10 +30,17 @@ Build:0.1.1,12
     commit=v0.1.1
     maven=yes
 
+Build:0.2,20
+    commit=v0.2
+    prebuild=$$MVN3$$ install:install-file -DgroupId=android -DartifactId=android -Dversion=4.4.2_r3 -Dpackaging=jar -Dfile=$$SDK$$/platforms/android-19/android.jar
+    maven=yes
+
 Maintainer Notes:
+20: SDK maven repo doesn't download jars; there is a script in .utilities to do it via 
+sdk-deployer.
 .
 
 #Update Check Mode:Tags
-Current Version:0.1.1
-Current Version Code:12
+Current Version:0.2
+Current Version Code:20
 
