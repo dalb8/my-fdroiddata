@@ -43,11 +43,11 @@ Build:2.1.3,23
     buildjni=yes
 
 Build:2.4.4 (debug),36
-    commit=76f4285f0c2c6e6
+    commit=eaa1965af9687b4fb7fef231
     srclibs=1:Mupen64Dummy-ouya@300d;2:Mupen64Dummy-bda@300d
     rm=libs/ouya-sdk.jar;libs/ouya-sdk.jar.properties;libs/ouya-sdk.jar.dummy;libs/com.bda.controller.jar;libs/com.bda.controller.jar.dummy
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-7a'
-    buildjni=no
+    prebuild=sed -i 's/armeabi armeabi-v7a x86/armeabi-v7a/' jni/Application.mk
+    buildjni=yes
 
 Maintainer Notes:
 Use 2.4-bugfixes branch
