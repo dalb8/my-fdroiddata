@@ -34,7 +34,13 @@ Build:0.5,1006
     subdir=main
     gradle=yes
     prebuild=echo "sdk.dir=$$SDK$$" > ../local.properties && \
-        sed -i '28s/muzei/main/' build.gradle
+
+Build:1.0.1,1008
+    commit=e79861f01f98b1258a57c446
+    subdir=main
+    gradle=yes
+    prebuild=echo sdk.dir=$$SDK$$ >> ../local.properties && \
+        sed -i 's/archivesBaseName = "muzei"/archivesBaseName = "main"/' build.gradle
 
 Maintainer Notes:
 API releases are tagged.
