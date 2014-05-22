@@ -25,20 +25,21 @@ browse /sdcard/mod from the app and sites that distribute more are listed on the
 Repo Type:git
 Repo:git://git.code.sf.net/p/xmp/xmp-android
 
-Build:3.6.0,39
-    commit=android-3.6.0
-    target=android-17
-    srclibs=Libxmp@libxmp-4.1.0
-    prebuild=sed -i 's/android:minSdkVersion="3"/android:minSdkVersion="4"/g;/supports-screens/d' AndroidManifest.xml && \
-        cd jni && \
-        cp -r ../../extlib/Libxmp . && \
-        ln -fs Libxmp/include include && \
-        ln -fs Libxmp/src src && \
-        sed -i 's/..\/..\/libxmp/Libxmp/g' Android.mk && \
-        cd Libxmp && \
+Build:3.8.0,50
+    commit=android-3.8.0
+    srclibs=Libxmp@libxmp-4.2.7,1:Appcompat@android-4.4_r1.1
+    extlibs=android/android-support-v4.jar
+    prebuild=\
+        mv libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+        ln -s $(readlink -f $$Libxmp$$/include) jni/ && \
+        ln -s $(readlink -f $$Libxmp$$/src) jni/ && \
+        sed -i 's@../../libxmp@$$Libxmp$$@g' jni/Android.mk && \
+        cd $$Libxmp$$ && \
         autoconf && \
         ./configure
-    buildjni=yes
+    buildjni=no
+    build=$$NDK$$/ndk-build -C $$Libxmp$$ -e 'APP_ABI=armeabi-v7a armeabi' && \
+      $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi'
 
 Maintainer Notes:
 See res/values/strings.xml to determine Libxmp version
