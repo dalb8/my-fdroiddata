@@ -33,8 +33,6 @@ single processor core while it's doing this.
 In other words, it's a piano, except the keys are laid out in a hexagonal grid. The are still many
 features unimplemented yet, so the app is considered alpha.
 
-Hexiano™ is a fork of IsoKeys 0.76 originally by David A. Randolph.
-
 If anyone can help out with MIDI support please check out:
 [https://sourceforge.net/p/isokeys/tickets/45 https://sourceforge.net/p/isokeys/tickets/45]
 .
@@ -43,13 +41,14 @@ Repo Type:git
 Repo:https://gitorious.org/hexiano/hexiano.git
 
 Build:0.82.1 ALPHA,13
-    disable=needs fixing now that bindir is no longer available
     commit=a2dad34
     subdir=Hexiano
-    prebuild=rm build.xml custom_rules.xml
+    prebuild=echo -e 'sdk.dir=$$SDK$$\napp.packagename=org.gitorious.jamesjrh.isokeys' >> local.properties && \
+      ant filter-package
+    build=ant release
+    output=build/bin/Hexiano-release-unsigned.apk
 
 Maintainer Notes:
-Generic package id in manifest
 .
 
 Update Check Mode:None
