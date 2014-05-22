@@ -1,6 +1,0 @@
-Repo Type:git
-Repo:https://github.com/wbaumann/Smart-Receipts
-
-Srclibs:ActionBarSherlock,Mini-WB,AndroidCamera-WB
-Update Project:Yes
-
