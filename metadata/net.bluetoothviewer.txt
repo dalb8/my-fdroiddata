@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Development
+License:GPLv3
+Web Site:http://blog.ecomobilecitizen.com/android/bluetoothviewer
+Source Code:https://github.com/janosgyerik/bluetoothviewer
+Issue Tracker:https://github.com/janosgyerik/bluetoothviewer/issues
+Donate:https://github.com/janosgyerik/bluetoothviewer#Donations
+
+Auto Name:Bluetooth Viewer (LITE)
+Name:Bluetooth Viewer
+Summary:Bluetooth connection debugging tool
+Description:
+* Connect to any Bluetooth device
+* Display incoming raw data
+* Send raw data to the Bluetooth device
+* You can confirm successful pairing, monitor incoming raw data and see exactly what is being transmitted from the Bluetooth device
+.
+
+Repo Type:git
+Repo:https://github.com/janosgyerik/bluetoothviewer.git
+
+Build:1.0.2,3
+    commit=24167d735f46fa4ab14c867f6fd71bd
+    subdir=bluetoothviewer
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.2
+Current Version Code:3
+
