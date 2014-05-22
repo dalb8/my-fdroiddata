@@ -28,8 +28,7 @@ Repo:https://android.googlesource.com/platform/packages/apps/Music.git
 Build:4.2.2,1
     commit=android-4.2.2_r1.2
     target=android-17
-    rm=tests
-    prebuild=sed -i '18 i android:versionCode="1"\nandroid:versionName="android-4.2.2_r1.2"' AndroidManifest.xml
+    prebuild=sed -i '18 i android:versionCode="1"\nandroid:versionName="4.2.2"' AndroidManifest.xml
 
 Maintainer Notes:
 .

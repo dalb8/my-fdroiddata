@@ -28,8 +28,9 @@ the preferences section, which is disabled by default.
 Repo Type:git
 Repo:https://github.com/velazcod/Tinfoil-Facebook
 
-Build:1.2.1,20130726
-    commit=v1.2.1
+Build:1.3,20140104
+    commit=v1.3
+    subdir=Tinfoil-for-Facebook
     gradle=yes
 
 Maintainer Notes:
