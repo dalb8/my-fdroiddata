@@ -19,7 +19,7 @@ HTML5 client for the Sensor Observation Network by 52north.
 Most sensors are in Germany and Belgium though there are 
 some in Asia.
 
-Status: Beta.
+Status: No longer updated.
 .
 
 Repo Type:git
@@ -32,7 +32,7 @@ Build:1.0.0,12
 Maintainer Notes:
 .
 
-#Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:1.0.0 beta (bugfix1)
 Current Version Code:12
 
