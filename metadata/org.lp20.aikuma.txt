@@ -31,17 +31,15 @@ Status:Beta
 Repo Type:git
 Repo:https://github.com/langtech/aikuma.git
 
-Build:1.0.0-beta.13,10011
-    disable=WIP
-    commit=v1.0.0-beta.13
+Build:1.0.0-rc.4,10019
+    commit=v1.0.0-rc.4
     subdir=Aikuma
     rm=resources,web,Aikuma/test
 
 Maintainer Notes:
-Deciding which storage backend to use: interesting. see https://github.com/langtech/aikuma/issues/115
 .
 
 Update Check Mode:Tags
-Current Version:1.0.0-beta.17
-Current Version Code:10015
+Current Version:1.0.0-rc.4
+Current Version Code:10019
 
