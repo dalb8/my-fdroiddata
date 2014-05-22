@@ -11,22 +11,18 @@
 Categories:Reading
 License:MIT
 Web Site:
-Source Code:https://github.com/clinta/FB-Ospritz/commits
-Issue Tracker:https://github.com/clinta/FB-Ospritz/issues
 
 Auto Name:OpenSpritz Plugin
 Name:FBReader: OpenSpritz
 Summary:Spritz for FBReader
 Description:
-This version only supports Android 3+ but there's another package
-for older platforms.
 Install [[org.geometerplus.zlibrary.ui.android]] first.
 
-This has nothing to do with Spritz Inc.
+Status: Repo disappeared.
 .
 
-Repo Type:git
-Repo:https://github.com/clinta/FB-Ospritz.git
+#Repo Type:git
+#Repo:https://github.com/clinta/FB-Ospritz.git
 
 Build:1.5,13
     commit=ea8ee62707cbc220f467b2f9c2e2abaecc86d789
@@ -35,10 +31,9 @@ Build:1.5,13
     gradle=yes
 
 Maintainer Notes:
-There's another project with Gingerbread support
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:1.5
 Current Version Code:13
 
