@@ -1,4 +1,4 @@
 Repo Type:git
 Repo:https://github.com/guardianproject/OnionKit.git
-Subdir:libonionkit
+Subdir:libonionkit,libnetcipher
 Update Project:Yes

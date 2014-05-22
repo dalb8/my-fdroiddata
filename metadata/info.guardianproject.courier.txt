@@ -1,0 +1,47 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPL
+Web Site:https://guardianproject.info
+Source Code:https://github.com/guardianproject/securereader
+Issue Tracker:https://github.com/guardianproject/securereader/issues
+
+Auto Name:Courier
+Summary:Secure news reader
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/guardianproject/securereader.git
+
+Build:0.1.6,12
+    disable=wait till next tag
+    commit=master
+    subdir=app
+    extlibs=android/android-support-v4.jar
+    srclibs=IOCipher@v0.1,NetCipher@19e104,1:Tbchat@6e1735,3:Cacheword@e82f41,2:SecureReader@b9c505,4:Appcompat@b19bf0
+    prebuild=cp libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+        cp libs/android-support-v4.jar $$Cacheword$$/libs/ && \
+        cp libs/android-support-v4.jar $$NetCipher$$/libs/ && \
+        cp $$Cacheword$$/libs/sqlcipher.jar $$SecureReader$$/libs/ && \
+        cp $$SecureReader$$/libs/guava-11.0.2.jar $$Tbchat$$/libs/ && \
+        cp $$SecureReader$$/libs/guava-11.0.2.jar $$Cacheword$$/libs/ && \
+        rm -f $$TbChat$$/libs/guava-r09.jar $$CacheWord$$/libs/guava-r09.jar
+
+Maintainer Notes:
+Check the git modules
+.
+
+#Update Check Mode:Tags
+Current Version:0.1.7
+Current Version Code:13
+
