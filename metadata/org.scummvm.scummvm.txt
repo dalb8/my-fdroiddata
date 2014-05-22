@@ -41,6 +41,7 @@ Repo Type:git
 Repo:https://github.com/scummvm/scummvm.git
 
 Build:1.5.0,6
+    disable=needs fixing; wait till 1.7.0
     commit=v1.5.0
     init=echo -e '<project>\n<target name="Creating scummvm.apk for release..."/>\n</project>' > build.xml
     update=no
