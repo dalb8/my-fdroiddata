@@ -23,8 +23,9 @@ palette.
 Repo Type:git
 Repo:https://github.com/Mikuz/Boarder.git
 
-Build:0.33-ACRA,15
-    commit=f4a5
+# not exact!
+Build:0.33-SNAPSHOT,15
+    commit=06471c04657aa55709c854f5b
     forceversion=yes
 
 Maintainer Notes:
