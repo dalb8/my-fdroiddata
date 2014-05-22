@@ -23,9 +23,9 @@ java.util.Locales, or java.util.TimeZones are available to your app on a specifi
 Repo Type:git-svn
 Repo:https://enh.googlecode.com/svn/trunk/dalvik-explorer
 
-Build:3.7,37
-    commit=706
-    target=android-18
+Build:3.9,39
+    commit=716
+    target=android-19
 
 Maintainer Notes:
 .
