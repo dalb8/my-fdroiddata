@@ -23,17 +23,16 @@ Fork of Sky Map.
 Repo Type:git-svn
 Repo:http://astroobserver.googlecode.com/svn/trunk
 
-Build:1.0.6,6
-    commit=17
+Build:1.0.7,7
+    commit=19
     subdir=app
-    rm=tools,test
-    prebuild=find app/res -type f -print0 | xargs -0 sed -i 's/Google Sky/Open Sky/g'
+    prebuild=find res -type f -print0 | xargs -0 sed -i 's/Google Sky/Open Sky/g'
 
 Maintainer Notes:
 not on gplay
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.0.6
-Current Version Code:6
+Current Version:1.0.7
+Current Version Code:7
 
