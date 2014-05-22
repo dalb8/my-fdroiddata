@@ -19,7 +19,14 @@ Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 Auto Name:AntennaPod
 Summary:Listen to audio feeds
 Description:
-Debug version of Antennapod.
+AntennaPod is a podcast manager for Android 2.3.3 and above. It offers all the
+basic features you expect
+from a podcatcher, like streaming and downloading episodes, refreshing all
+feeds automatically or adding them
+to a queue to listen to them later. The Miro directory can be searched and
+browsed for shows.
+
+[https://raw.github.com/danieloeh/AntennaPod/master/CHANGELOG.md Changelog]
 .
 
 Repo Type:git
@@ -27,25 +34,18 @@ Repo:https://github.com/danieloeh/AntennaPod.git
 
 Build:0.9.8.3,36
     commit=0.9.8.3
-    init=sed -e '83 i \\t\tdebuggable false' -i build.gradle 
     patch=flattr.patch
     srclibs=DragSort-danoeh@1bb29afb91f
     prebuild=rm -f submodules/dslv/library && \
         ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
         sed -i 's/19.0.0/19.0.1/g' submodules/dslv/library/build.gradle && \
         cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
-    build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleDebug && \
-        zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
-    output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
+    gradle=yes
 
 Maintainer Notes:
-Uses submodules
-
-Remember to sign with debug key!
 .
 
-Update Check Mode:Tags
-Update Check Name:de.danoeh.antennapod
+#Update Check Mode:Tags
 Current Version:0.9.8.3
 Current Version Code:36
 

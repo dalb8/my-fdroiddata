@@ -3,11 +3,9 @@
 # are permitted in any medium without royalty provided the copyright
 # notice and this notice are preserved.  This file is offered as-is,
 # without any warranty.
-
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
-
 Categories:Office
 License:GPLv3
 Web Site:
@@ -24,22 +22,19 @@ Many currency. So amaze. Wow.
 Repo Type:git
 Repo:https://github.com/langerhans/dogecoin-wallet-new
 
-Build:1.06,156
-    disable=not sure which dogecoinj to use
-    commit=1.06
+Build:1.07,157
+    commit=1.07
     subdir=wallet
     init=sed -i '/sample-integration/d;s/3.7.0/3.8.0/g' ../pom.xml && \
-        sed -i '124,126d;161,163d;166,190d' pom.xml
+        sed -i '139,141d;176,178d;181,205d' pom.xml
     maven=yes@..
     rm=wallet/test,wallet/libs/armeabi/libscrypt.so,wallet/libs/x86/libscrypt.so
-    srclibs=Dogecoinj-new@5b74ea5c7bd9f2,Scrypt@1.4.0
+    srclibs=Dogecoinj-new@8cf2b249bde3,Scrypt@1.4.0
     build=TARGET=android PATH=$PATH:$$NDK$$/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86/bin NDK_ROOT=$$NDK$$ make -C $$Scrypt$$ && \
         mv $$Scrypt$$/target/libscrypt.so libs/armeabi/ && \
         $$MVN3$$ install -Dmaven.test.skip=true -f $$Dogecoinj-new$$/pom.xml
 
 Maintainer Notes:
-Not sure which DogecoinJ version to use
-
 For x86:
         make -C $$Scrypt$$ clean && \
         sed -i 's/arm-linux-androideabi-gcc/i686-linux-android-gcc/g;s/arch-arm/arch-x86/g' Makefile && \
@@ -47,7 +42,7 @@ For x86:
         mv $$Scrypt$$/target/libscrypt.so libs/x86/ && \
 .
 
-Update Check Mode:Tags
-Current Version:1.06
-Current Version Code:156
+Update Check Mode:Tags ^1
+Current Version:1.07
+Current Version Code:157
 

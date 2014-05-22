@@ -1,3 +1,4 @@
 Repo Type:git
 Repo:https://github.com/langerhans/dogecoinj-new
+Prepare:sed -i '/module>examples</d' pom.xml
 
