@@ -12,25 +12,24 @@ Web Site:http://quuux.org
 Source Code:https://github.com/mdellavo/plasma/commits
 Issue Tracker:https://github.com/mdellavo/plasma/issues
 
-Auto Name:
+Auto Name:Plasme
 Summary:Plasma wallpaper
 Description:
+Status: Beta.
 .
 
 Repo Type:git
 Repo:https://github.com/mdellavo/plasma.git
 
-Build:1.0.1,2
-    commit=09c68aef83b45
+Build:1.0.2,3
+    commit=1e73a9
     subdir=plasma
-    patch=build.gradle_1.patch
-    prebuild=echo -e 'ndk.dir=$$NDK$$\nsdk.dir=$$SDK$$' > ../local.properties
+    prebuild=echo -e 'ndk.dir=$$NDK$$\nsdk.dir=$$SDK$$' > ../local.properties && \
+      echo -e 'versionName=1.0.2\nversionCode=3' > ../gradle.properties
+    buildjni=src/main
     gradle=yes
 
 Maintainer Notes:
-Can't use gradle 1.10, only 1.9
-Should use a better way of setting the version numbers
-
 For next version https://github.com/markfguerra/GLWallpaperService
 .
 

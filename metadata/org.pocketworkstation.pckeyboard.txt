@@ -39,7 +39,8 @@ Build:v1.37,1037
         sed -i "s/Hg-ident/hg ident/" AutoVersion.sh && \
         ./AutoVersion.sh && \
         mv libs/main_en.dict res/raw/main.dict
-    buildjni=yes
+    buildjni=no
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi'
 
 Maintainer Notes:
 .
