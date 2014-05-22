@@ -21,14 +21,13 @@ VT-100 compatible terminal emulator.
 Repo Type:git
 Repo:https://github.com/jackpal/Android-Terminal-Emulator.git
 
-Build:1.0.58,59
-    commit=v1.0.58
+Build:1.0.59,60
+    commit=v1.0.60
     target=android-12
-    update=.;libraries/emulatorview
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
-    buildjni=no
+    buildjni=yes
 
 Maintainer Notes:
+Both terminal and emulator view libraries use android-11
 .
 
 #Update Check Mode:Tags
