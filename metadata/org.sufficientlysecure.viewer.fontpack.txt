@@ -23,8 +23,8 @@ Academy, Academy Old, FreeFonts, URW Symbol and Free Nimbus L.
 Repo Type:git
 Repo:https://github.com/dschuermann/document-viewer-fontpack
 
-Build:2.1,2100
-    commit=ac9b11451
+Build:2.2,2200
+    commit=v2.2
     subdir=fontpack
 
 Maintainer Notes:

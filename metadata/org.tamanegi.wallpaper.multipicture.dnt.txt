@@ -28,7 +28,8 @@ Repo:https://github.com/lllllT/MultiPictureLiveWallpaper.git
 Build:0.6.11,48
     commit=v0.6.11
     subdir=variant/dnt
-    prebuild=mkdir -p src
+    prebuild=mkdir -p src && \
+      sed -i 's/android-11/android-12/' project.properties
 
 Maintainer Notes:
 .
