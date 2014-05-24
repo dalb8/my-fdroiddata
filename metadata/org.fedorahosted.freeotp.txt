@@ -1,0 +1,43 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:https://fedorahosted.org/freeotp
+Source Code:https://fedorahosted.org/freeotp/browser/android
+Issue Tracker:https://fedorahosted.org/freeotp/report
+
+Auto Name:FreeOTP
+Summary:Two-factor authentication
+Description:
+FreeOTP is a two-factor authentication (2FA) application for systems utilizing
+one-time password protocols (OTP).
+Tokens can be added easily by scanning a QR-code or by manually entering in the
+token configuration.
+
+FreeOTP implements open standards. This means that no proprietary server-side
+component is necessary: use any server-side component that implements
+these standards - for example [http://www.freeipa.org FreeIPA], which uses TOTP.
+Any standards-compliant implementation will work. Currently, FreeOTP provides
+implementations of HOTP (RFC 4226) and TOTP (RFC 6238).
+.
+
+Repo Type:git
+Repo:git://git.fedorahosted.org/freeotp/android.git
+
+Build:1.4,13
+    commit=18b6b6c115a03b1c93942c
+
+Maintainer Notes:
+Tags unreliable.
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.4
+Current Version Code:13
+
