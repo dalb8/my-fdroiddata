@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:GPLv3
+Web Site:
+Source Code:https://github.com/siacs/Conversations/commits
+Issue Tracker:https://github.com/siacs/Conversations/issues
+
+Auto Name:Conversations
+Summary:XMPP client
+Description:
+* End-to-end encryption with either OTR or openPGP
+* Holo UI
+* Syncs with your desktop client
+* Group chats
+* Address Book integration
+* Multiple accounts / unified inbox
+* Keeps the session going with short network outages
+.
+
+Repo Type:git
+Repo:https://github.com/siacs/Conversations.git
+
+Build:0.2.3,14
+    commit=0.2.3
+    submodules=yes
+    srclibs=Otr4j-jitsi@30fbaea93886,BouncyCastle@r1rv50
+    build=ant -f $$BouncyCastle$$/ant/jdk15+.xml build-provider && \
+        mv $$BouncyCastle$$/build/artifacts/jdk1.5/jars/bcprov-jdk15on-150.jar libs/ && \
+        $$MVN3$$ package -DskipTests -f $$Otr4j-jitsi$$/pom.xml && \
+        mv $$Otr4j-jitsi$$/target/otr4j-0.10.jar libs/
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.2.3
+Current Version Code:14
+
