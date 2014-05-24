@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:https://code.google.com/p/eyes-free
+Source Code:https://code.google.com/p/eyes-free/source
+Issue Tracker:https://code.google.com/p/eyes-free/issues
+
+Auto Name:Eyes-Free keyboard
+Summary:Keyboard
+Description:
+Variation on Android keyboard with some accessibility features.
+
+See the
+[https://eyes-free.googlecode.com/svn/trunk/documentation/android_access/index.html FAQ]
+or
+the [http://eyes-free.blogspot.com Eyes-Free blog] for more on Android accessibility.
+.
+
+Repo Type:srclib
+Repo:EyesFree
+
+Build:1.1.2,4
+    commit=742
+    subdir=ime/latinime
+    rm=archived,tts/espeak-tts/libs,samplecode
+    init=sed -i -e 's@\(reference.1=\).*@\1../../libraries/commandslib@' ../aimelib/default.properties
+    build=ndk-build APP_ABI='armeabi armeabi-v7a'
+    buildjni=no
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:1.1.2
+Current Version Code:4
+
