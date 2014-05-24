@@ -18,6 +18,8 @@ Auto Name:eSpeak
 Summary:Text to speech engine
 Description:
 Port of eSpeak engine: the version name corresponds to that.
+It's a bit more robotic than the Pico TTS that usually comes with AOSP.
+It supports 60+ languages, with both male or female voices and choice of pitch.
 
 See the
 [https://eyes-free.googlecode.com/svn/trunk/documentation/android_access/index.html FAQ]
