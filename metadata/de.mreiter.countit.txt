@@ -1,0 +1,35 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Web Site:
+Source Code:https://bitbucket.org/m_reiter/countit/src
+Issue Tracker:https://bitbucket.org/m_reiter/countit/issues
+
+Auto Name:Count It!
+Summary:Multiple counters on a secreen
+Description:
+CountIt is a simple counter app that provides up to 16 counters, implemented
+as a grid of Buttons. Each button shows the counter's value and an optional
+label. Pressing the button increases the counter by 1.
+.
+
+Repo Type:hg
+Repo:https://bitbucket.org/m_reiter/countit
+
+Build:1.0.1,2
+    commit=1.0.1
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.0.1
+Current Version Code:2
+
