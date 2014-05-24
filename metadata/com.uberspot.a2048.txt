@@ -23,19 +23,16 @@ No description available
 Repo Type:git
 Repo:https://github.com/uberspot/2048-android.git
 
-Build:1.2,3
-    commit=87fbd98f64aa1
-    submodules=yes
-
-Build:1.87,12
-    commit=v1.87
+Build:1.89,15
+    commit=e76560
     srclibs=2048@538546423f9321
-    prebuild=mv $$2048$$/* assets/2048/
+    prebuild=rm -rf assets/2048/*; mv $$2048$$/* assets/2048/
 
 Maintainer Notes:
+Check the submodules, althought sometimes they're wrong.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.87
-Current Version Code:12
+Current Version:1.89
+Current Version Code:15
 
