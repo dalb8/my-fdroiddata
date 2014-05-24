@@ -1,0 +1,46 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:Apache
+Web Site:http://www.onyxbits.de/geobookmark
+Source Code:https://github.com/onyxbits/geobookmark/commits
+Issue Tracker:https://github.com/onyxbits/geobookmark/issues
+Donate:http://www.onyxbits.de/geobookmark
+
+Auto Name:Geo Bookmark
+Summary:Save timestamped geo-bookmarks
+Description:
+A simple home-screen or DashClock widget that allows you to record
+your current whereabouts quickly.
+
+Bookmarks are color coded. Blue icons represent exact locations, red icons
+mean that the widget could not get a GPS fix within 40 seconds and therefore
+recorded the last known GPS location.
+
+In order to view a bookmark, a suitable maps application needs to be installed
+(e.g. [[net.osmand.plus]]).
+.
+
+Repo Type:git
+Repo:https://github.com/onyxbits/geobookmark.git
+
+Build:1.2,3
+    commit=v1.2
+    extlibs=android/android-support-v4r13.jar
+    srclibs=DashClock@ecb5a191880
+    prebuild=rm custom_rules.xml && \
+        echo 'source.dir=src;$$DashClock$$/api/src/main/java;$$DashClock$$/api/src/main/aidl' >> project.properties
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.2
+Current Version Code:3
+
