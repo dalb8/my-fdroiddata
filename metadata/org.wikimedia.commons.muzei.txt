@@ -16,7 +16,7 @@ Issue Tracker:https://github.com/ebraminio/WikimediaCommonsForMuzei/issues
 
 Name:Muzei: Wikimedia Commons
 Auto Name:Wikimedia Commons for Muzei (extension)
-Summary:Extension for Muzei
+Summary:Extension for Wallpaper app
 Description:
 Install [[net.nurik.roman.muzei]] first and open it in the launcher
 to change the source of images.

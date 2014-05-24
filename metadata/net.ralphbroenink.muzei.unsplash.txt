@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:MIT
+Web Site:
+Source Code:https://github.com/ralphje/muzei-unsplash/commits
+Issue Tracker:https://github.com/ralphje/muzei-unsplash/issues
+
+Auto Name:Unsplash (Muzei plugin)
+Name:Muzei: Unsplash.com
+Summary:Extension for Wallpaper app
+Description:
+Uses Unsplash.com CC0-licensed pictures in [[net.nurik.roman.muzei]].
+.
+
+Repo Type:git
+Repo:https://github.com/ralphje/muzei-unsplash.git
+
+Build:1.0.1,2
+    commit=4c41e5adf98a4e66352be7f8f8b7efd1299e7d9c
+    subdir=main
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.0.1
+Current Version Code:2
+
