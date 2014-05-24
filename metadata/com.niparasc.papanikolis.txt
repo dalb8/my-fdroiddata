@@ -1,0 +1,41 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:GPLv3
+Web Site:http://niparasc.blogspot.com
+Source Code:https://github.com/niparasc/papanikolis-submarine/commits
+Issue Tracker:https://github.com/niparasc/papanikolis-submarine/issues
+
+Auto Name:Papanikolis Submarine
+Summary:Multiplayer 2-D game
+Description:
+Steer the submarine through the caverns. Can be played with a friend
+via bluetooth.
+.
+
+Repo Type:git
+Repo:https://github.com/niparasc/papanikolis-submarine.git
+
+Build:1.0,1
+    commit=06140e
+    subdir=papanikolis-android
+    init=mv ../papanikolis/libs/* libs/ && \
+        rm libs/*sources.jar && \
+        echo 'source.dir=src;../papanikolis/src' > ant.properties
+    scanignore=papanikolis-android/libs
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:1
+
