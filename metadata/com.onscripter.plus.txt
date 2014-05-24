@@ -1,0 +1,43 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:GPL
+Web Site:https://matthewn4444.github.io/onscripter-plus-android
+Source Code:https://github.com/matthewn4444/onscripter-plus-android/commits
+Issue Tracker:https://github.com/matthewn4444/onscripter-plus-android/issues
+
+Auto Name:ONScripter Plus
+Summary:Interactive novel player
+Description:
+[http://onscripter.sourceforge.jp/android/android.html ONScripter] player.
+[http://narcissu.insani.org Narcissu] is a free English game.
+
+See also [[org.hanenoshino.onscripter]].
+.
+
+Repo Type:git
+Repo:https://github.com/matthewn4444/onscripter-plus-android.git
+
+Build:1.1.6,15
+    commit=93e101ffb9206a
+    init=sed -i 's@\(android.library.reference.1=\).*@\1libs/actionbarsherlock@' project.properties && \
+        rm -r jni/sdl_ttf/VisualC* && \
+        mv libs/android-support-v4.jar libs/actionbarsherlock/libs
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    buildjni=no
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.1.6
+Current Version Code:15
+

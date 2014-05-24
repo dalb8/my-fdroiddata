@@ -36,11 +36,7 @@ Build:20120310,20120310
     buildjni=yes
 
 Maintainer Notes:
-UCM:Static. Not good chances to be updated 
-(see https://github.com/shinohane/ONScripter-SAO for blob-filled replacement..)
-
-#
-# Following Android ports can be found on Internet:
+# Not likely to be updated but other ports can be found on Internet:
 # 1 Older version of Natdon's, already unbuildable; original focus of most non-JP efforts.
 #
 #   Hosted on:
@@ -71,9 +67,10 @@ UCM:Static. Not good chances to be updated
 #
 #   package: jp.ogapee.onscripter
 #
-
-See also http://onscripter.sourceforge.jp/android/android.html#sdk
-(hardcore Japanese developers don't use VCS!)
+# 5 http://matthewn4444.github.io/onscripter-plus-android. 
+#
+# See also http://onscripter.sourceforge.jp/android/android.html#sdk
+# (hardcore Japanese developers don't use VCS!)
 .
 
 Update Check Mode:Static
