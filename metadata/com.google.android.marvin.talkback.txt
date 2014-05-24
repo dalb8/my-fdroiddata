@@ -1,0 +1,57 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:https://code.google.com/p/eyes-free
+Source Code:https://code.google.com/p/eyes-free/source
+Issue Tracker:https://code.google.com/p/eyes-free/issues
+
+Auto Name:TalkBack
+Summary:Accessibility improvements
+Description:
+TalkBack is an Accessibility Service that helps blind and vision-impaired
+users interact with their devices more easily.
+This application adds spoken, audible, and vibration feedback to your device.
+
+It comes pre-installed on many devices
+so you won't be able to install this if that is the case.
+Developer-built apks can be downloaded from the website if the
+version that was pre-installed needs updating.
+
+It's only activated if you explicitly turn on Accessibility:
+# Go to Settings
+# Select Accessibility
+# (Android 3.2 and earlier) Enable Accessibility checkbox
+# Enable TalkBack checkboxes
+# (Android 4.0 and later) Enable explore-by-touch
+
+See the
+[https://eyes-free.googlecode.com/svn/trunk/documentation/android_access/index.html FAQ]
+or
+the [http://eyes-free.blogspot.com Eyes-Free blog] for more on Android accessibility.
+.
+
+Repo Type:srclib
+Repo:EyesFree
+
+Build:3.5.1,107
+    commit=821
+    subdir=accessibilityServices/talkback
+    rm=archived,tts/espeak-tts/libs,samplecode
+    init=sed -i -e 's@\(reference.1=\).*@\1../../libraries/utils@' -e 's@\(reference.2=\).*@\1../../libraries/compatutils@' -e 's@\(reference.3=\).*@\1../../libraries/widgets/radial_menu@' project.properties
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:3.5.1
+Current Version Code:107
+
