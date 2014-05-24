@@ -1,0 +1,49 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:https://code.google.com/p/eyes-free
+Source Code:https://code.google.com/p/eyes-free/source
+Issue Tracker:https://code.google.com/p/eyes-free/issues
+
+Auto Name:eSpeak
+Summary:Text to speech engine
+Description:
+Port of eSpeak engine: the version name corresponds to that.
+
+See the
+[https://eyes-free.googlecode.com/svn/trunk/documentation/android_access/index.html FAQ]
+or
+the [http://eyes-free.blogspot.com Eyes-Free blog] for more on Android accessibility.
+.
+
+Repo Type:srclib
+Repo:EyesFree
+
+Build:1.46.02_r7,7
+    commit=771
+    subdir=tts/espeak-tts
+    rm=archived,tts/espeak-tts/libs,samplecode
+    init=cd jni/ttsespeak && \
+      wget http://surfnet.dl.sourceforge.net/project/espeak/espeak/espeak-1.46/espeak-1.46.02-source.zip && \
+      unzip espeak-1.46.02-source.zip && \
+      rm -rf espeak-source; mv espeak-1.46.02-source espeak-source && \
+      rm -rf espeak-source/platforms/windows espeak-source/linux_32bit
+    build=ndk-build APP_ABI='armeabi armeabi-v7a'
+    buildjni=no
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:1.46.02_r7
+Current Version Code:7
+
