@@ -1,0 +1,47 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Phone & SMS
+License:GPLv3
+Web Site:
+Source Code:https://github.com/felixb/smsdroid
+Issue Tracker:https://code.google.com/p/websmsdroid/issues
+
+Auto Name:SMSdroid
+Summary:Send and receive SMS messages
+Description:
+N.B. No MMS on Android 4.4.
+
+SMSdroid lets you read text messages and send messages with any other
+messaging app. 
+
+The proprietary 'admob' library has been replaced with a dummy.
+.
+
+Repo Type:git
+Repo:https://github.com/felixb/smsdroid.git
+
+Build:1.6.1,7161001
+    commit=SMSdroid-1.6.1
+    subdir=SMSdroid
+    rm=SMSdroid/libs/GoogleAdMobAdsSdk-6.3.1.jar,SMSdroid/libs/ub0rlib.jar
+    srclibs=ub0rlib@45e82765a537e,MobAdMob@2d5736
+    prebuild=cp -R $$MobAdMob$$/src/com src/main/java/ && \
+        cp -R $$ub0rlib$$/src/de/ub0r/android/lib src/main/java/de/ub0r/android/
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:1.6.1
+Current Version Code:7161001
+
