@@ -81,6 +81,9 @@ keyaliases['com.example.app'] = 'example'
 #the @ prefix.
 keyaliases['com.example.another.plugin'] = '@com.example.another'
 
+#To add PGP signatures alongside each APK
+gpgkey = '1234ABCD'
+
 # The full path to the root of the repository.  It must be specified in
 # rsync/ssh format for a remote host/path. This is used for syncing a locally
 # generated repo to the server that is it hosted on.  It must end in the
