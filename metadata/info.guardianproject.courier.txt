@@ -39,6 +39,9 @@ Build:0.1.6,12
 
 Maintainer Notes:
 Check the git modules
+
+Note that IOCipher is deleted in Cacheword and SecureReader and that
+the latter depends on the former.
 .
 
 #Update Check Mode:Tags

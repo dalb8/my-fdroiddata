@@ -54,9 +54,9 @@ function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
+# to sign with debug key, use the try-adb.sh script
 function jr() { jarsigner -keystore ~/.local/share/fdroidserver/keystore.jks -digestalg SHA1 -sigalg SHA1withRSA "$1" "$2" ;}
 function zipn() { zipalign -f 4 "$@" app.apk ;}
-function jd() { echo android | jarsigner -keystore ~/.android/debug.keystore -digestalg SHA1 -sigalg SHA1withRSA "$1" androiddebugkey ;}
 function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 function ymca-make() { echo -e "TARGET=$1\nACTIVITY=$(basename $PWD)/$(basename $PWD).$2\nDEVICE=ALL\ninclude YMCA.mk" > Makefile.ymca ;}
