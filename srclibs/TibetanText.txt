@@ -1,0 +1,5 @@
+Repo Type:git
+Repo:https://code.google.com/p/bho
+Subdir:TibetanTextLibrary
+#Prepare:rm libs/guava-r09.jar
+
