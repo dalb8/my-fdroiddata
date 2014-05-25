@@ -23,18 +23,15 @@ No description available
 Repo Type:git
 Repo:https://github.com/guardianproject/securereader.git
 
-Build:0.1.6,12
-    disable=wait till tag; wrong package id
-    commit=0dde19397908676c769d2c601655
+Build:0.1.8,14
+    commit=ebbb4268b1047
     subdir=app
-    init=sed -i '/mPrefs/d' src/info/guardianproject/securereaderinterface/SettingsUI.java
     extlibs=android/android-support-v4.jar
-    srclibs=IOCipher@v0.1,NetCipher@19e104,1:TibetanText@6e1735,3:Cacheword@dc23b9e6,2:SecureReader@b9c505,4:Appcompat@b19bf0
-    prebuild=cp libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+    srclibs=IOCipher@v0.1,NetCipher@19e104,1:TibetanText@6e1735,3:Cacheword@adb6b76e10d34c802,2:SecureReader@4e5c307,4:ActionBarSherlock@4a79d
+    prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/ && \
         cp libs/android-support-v4.jar $$Cacheword$$/libs/ && \
         cp libs/android-support-v4.jar $$NetCipher$$/libs/ && \
         cp $$Cacheword$$/libs/sqlcipher.jar $$SecureReader$$/libs/ && \
-        cp $$SecureReader$$/libs/guava-11.0.2.jar $$TibetanText$$/libs/ && \
         cp $$SecureReader$$/libs/guava-11.0.2.jar $$Cacheword$$/libs/ 
 
 Maintainer Notes:
