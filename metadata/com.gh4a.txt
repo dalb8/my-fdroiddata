@@ -45,10 +45,20 @@ Build:3.3,33
        $$MVN3$$ package -f $$GitHubAPI-maniac103$$/pom-jar.xml && \
        mv $$GitHubAPI-maniac103$$/target/org.eclipse.egit.github.core-3.2.0-SNAPSHOT.jar libs/
 
+Build:3.6,36
+    commit=v3.6
+    srclibs=1:ActionBarSherlock@4.2.0,2:ViewPagerIndicator@65457e,3:SherlockProgressFragment@1.4.0,4:HoloColorPicker@57890dca081c,GitHubAPI-maniac103@53ba34fb4df76
+    init=find src -type f -print0 | xargs -0 sed -i '/bugsense/Id'
+    rm=libs/android-support-v4.jar,libs/bugsense-3.6.jar
+    prebuild=\
+       cp $$ActionBarSherlock$$/libs/android-support-v4.jar $$ViewPagerIndicator$$/libs/ && \
+       $$MVN3$$ package -f $$GitHubAPI-maniac103$$/pom-jar.xml && \
+       mv $$GitHubAPI-maniac103$$/target/org.eclipse.egit.github.core-3.2.0-SNAPSHOT.jar libs/
+
 Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:3.4
-Current Version Code:34
+Current Version:3.6
+Current Version Code:36
 
