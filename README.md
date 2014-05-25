@@ -25,7 +25,7 @@ relation to the app developers, unless it says differently in the description.
 By all means, include in-development apps; if they turn out to be flops
 we'll add the `Disabled:` field and eventually delete them.
 
-The bulk of these builds were done at the April 4 2014 commit of 
+The bulk of these builds were done at the April 4, 7f822b01bf75 commit of
 [fdroidserver](https://gitlab.com/fdroid/fdroidserver).
 Depending on the distro and the app, you could have dependency issues.
 Also non-buildserver fdroid only allows one version of the gradle binary: that which
