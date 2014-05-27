@@ -25,8 +25,8 @@ in your pocket.
 Repo Type:git
 Repo:https://github.com/anandbibek/notify_me.git
 
-Build:2.1.2,212
-    commit=c1444a9549e9814bd
+Build:2.1.7,217
+    commit=755f74a9b50ce
     subdir=notifyApp
     gradle=yes
 
@@ -34,6 +34,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:2.1.2
-Current Version Code:212
+Current Version:2.1.7
+Current Version Code:217
 
