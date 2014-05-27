@@ -15,9 +15,9 @@ Source Code:https://github.com/calvinaquino/LNReader-Android/commits
 Issue Tracker:https://github.com/calvinaquino/LNReader-Android/issues
 
 Auto Name:BakaReader EX
-Summary:Read Japanese novels
+Summary:Read novels
 Description:
-No description available
+Read Japanese-style novels which are translated into a variety of languages.
 .
 
 Repo Type:git

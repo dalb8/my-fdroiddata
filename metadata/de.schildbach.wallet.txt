@@ -24,12 +24,10 @@ Description:
 * Manages blockchain on your device
 * System notifications for Bitcoin connectivity and received coins
 * App widget for Bitcoin balance 
-* Back up private keys to local storage encrypted with a password
+* Back up wallet to local storage encrypted with a password
 
 A few tens of MiB must be downloaded to set up the blockchain and a couple
 more per month subsequently to keep it updated.
-When run for the first time, it can happen that the app shows only a white 
-display for some seconds.
 
 [https://github.com/schildbach/bitcoin-wallet/raw/prod/wallet/CHANGES Changelog]
 .

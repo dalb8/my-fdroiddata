@@ -21,7 +21,7 @@ Description:
 * Group chats
 * Address Book integration
 * Multiple accounts / unified inbox
-* Keeps the session going with short network outages
+* Keeps the session going with short network outages (if server supports XEP0198: Stream Management)
 .
 
 Repo Type:git

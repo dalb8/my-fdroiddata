@@ -20,8 +20,10 @@ Summary:Send and receive SMS messages
 Description:
 N.B. No MMS on Android 4.4.
 
-SMSdroid lets you read text messages and send messages with any other
-messaging app. 
+SMSdroid was designed as a basic SMS reader which would offload SMS sending to another
+app. Since Android 4.4 however, there is a central SMS database with only one
+app allowed access to it. SMSDroid still works for reading and writing SMS
+but on Android 4.4 it can't write ''MMS''.
 
 The proprietary 'admob' library has been replaced with a dummy.
 .
@@ -39,6 +41,7 @@ Build:1.6.1,7161001
     gradle=yes
 
 Maintainer Notes:
+Future development may be moved to WebSMS by same author
 .
 
 Update Check Mode:Tags
