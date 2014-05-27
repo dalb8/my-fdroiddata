@@ -8,7 +8,7 @@
 
 Categories:Internet
 License:GPLv3+
-Web Site:http://sufficientlysecure.org/index.php/openpgp-keychain
+Web Site:https://open-keychain.github.io
 Source Code:https://github.com/dschuermann/openpgp-keychain/commits
 Issue Tracker:https://github.com/dschuermann/openpgp-keychain/issues
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
@@ -16,9 +16,6 @@ Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 Auto Name:OpenPGP Keychain
 Summary:Manage OpenPGP keys
 Description:
-OpenPGP implementation for Android. The development began as a fork of Android
-Privacy Guard (APG).
-
 Features:
 * All basic OpenPGP operations: encrypt/decrypt/sign/verify
 * NFC/QR code key exchange
@@ -31,20 +28,8 @@ Features:
 Repo Type:git
 Repo:https://github.com/dschuermann/openpgp-keychain.git
 
-Build:2.3.1,23100
-    commit=v2.3.1
-    subdir=OpenPGP-Keychain
-    init=sed -i '34,53d' build.gradle
-    gradle=yes
-
-Build:2.5,25000
-    commit=v2.5
-    subdir=OpenPGP-Keychain
-    init=sed -i '55,82d' build.gradle
-    gradle=yes@..
-
-Build:2.6,26000
-    commit=v2.6
+Build:2.7,27000
+    commit=v2.7
     submodules=yes
     subdir=OpenKeychain
     init=sed -i '55,82d' build.gradle
@@ -54,6 +39,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:2.6
-Current Version Code:26000
+Current Version:2.7
+Current Version Code:27000
 
