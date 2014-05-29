@@ -9,7 +9,7 @@
 Categories:System
 License:GPLv3
 Web Site:http://forum.xda-developers.com/showthread.php?t=2401988
-Source Code:https://github.com/erik96/android_packages_apps_PerformanceControl/commits
+Source Code:https://github.com/horn3t/android_packages_apps_PerformanceControl/commits
 Issue Tracker:http://forum.xda-developers.com/devdb/project/?id=600#bugReporter
 Donate:http://forum.xda-developers.com/donatetome.php?u=4674443
 
@@ -32,25 +32,18 @@ That can be compiled using code in the Serval Batphone project.
 .
 
 Repo Type:git
-Repo:https://github.com/erik96/android_packages_apps_PerformanceControl
+Repo:https://github.com/horn3t/android_packages_apps_PerformanceControl
 
-Build:2.1.10,41
-    commit=68eae56264b
-    target=android-19
-    forcevercode=yes
-    rm=assets/sqlite3
-    prebuild=sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
-
-Build:2.1.12,42
-    commit=4d8b0750b10adad
+Build:2.1.13,43
+    commit=bb949663899ea9b8521
     target=android-19
     forcevercode=yes
     rm=assets/sqlite3
     prebuild=sed -i '/permission.INTERNET/d' AndroidManifest.xml && \
        sed -i 's@m.softutil.ro/pc/@127.0.0.1@g' src/com/brewcrewfoo/performance/util/Constants.java
 
-Build:2.1.13,43
-    commit=bb949663899ea9b8521
+Build:2.1.19,2119
+    commit=ca00d73e9f777dc909110ffda8b3f1b95e7b3fa8
     target=android-19
     forcevercode=yes
     rm=assets/sqlite3
@@ -70,8 +63,7 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
     buildjni=no
 .
 
-Update Check Mode:RepoManifest/kk
-Vercode Operation:10*%c + 9
-Current Version:2.1.13
-Current Version Code:49
+Update Check Mode:RepoManifest/jb2
+Current Version:2.1.19
+Current Version Code:2119
 
