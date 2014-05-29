@@ -1,0 +1,38 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://magistry.fr
+Source Code:https://github.com/a-tsioh/TaigIME-android
+Issue Tracker:https://github.com/a-tsioh/TaigIME-android/issues
+
+Auto Name:TaigIME
+Summary:Taiwanese keyboard
+Description:
+Input Taiwanese with Bopomo using the actual Taiwanese pronunciation.
+.
+
+Repo Type:git
+Repo:https://github.com/a-tsioh/TaigIME-android.git
+
+Build:0.8.1,11
+    commit=0a579d00e2e9eb53
+    subdir=app
+    init=echo "include ':app'" >> ../settings.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:0.8.1
+Current Version Code:11
+
