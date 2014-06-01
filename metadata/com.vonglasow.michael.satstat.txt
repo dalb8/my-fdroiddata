@@ -47,13 +47,13 @@ Known limitations:
 Repo Type:git
 Repo:https://github.com/mvglasow/satstat.git
 
-Build:1.4,40
-    commit=satstat-1.4
+Build:1.6,60
+    commit=satstat-1.6
     init=git update-index --assume-unchanged res/raw/build.txt && \
       echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
-Build:1.6,60
-    commit=satstat-1.6
+Build:1.8,80
+    commit=satstat-1.8
     init=git update-index --assume-unchanged res/raw/build.txt && \
       echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
