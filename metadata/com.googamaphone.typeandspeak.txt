@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Science & Education
+License:Apache
+Web Site:https://code.google.com/p/typeandspeak/commits
+Source Code:https://code.google.com/p/typeandspeak/source
+Issue Tracker:https://code.google.com/p/typeandspeak/issues
+
+Auto Name:Type and Speak
+Summary:Text to speech
+Description:
+Type and Speak makes your phone say out loud whatever you type! 
+Save speech to use as ringtones and alarms.
+Works via the share menu so you can have entire articles read out loud
+and even choose the language.
+
+Need to have TTS Engine installed such as [[com.reecedunn.espeak]] or
+Pico (which comes with AOSP).
+.
+
+Repo Type:git
+Repo:https://code.google.com/p/typeandspeak
+
+Build:1.4.8,36
+    commit=44fe67acc70a
+    prebuild=mkdir -p typeandspeak-libs/src
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.4.8
+Current Version Code:36
+
