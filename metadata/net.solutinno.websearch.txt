@@ -1,6 +1,8 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
@@ -37,19 +39,16 @@ For example, Wikipedia English is:
 Repo Type:git
 Repo:https://github.com/balesz/android-WebSearch.git
 
-Build:1.0.3,6
-    commit=8af7
-    subdir=WebSearch
+Build:1.0.7,10
+    commit=5bb98ce059a2fc5311a24c0a
     submodules=yes
-    prebuild=sed -i 's/0.5.+/0.7.+/g' build.gradle && \
-             sed -i 's/0.5.+/0.7.+/g' ../lib/android-lib-Solutinno/build.gradle
+    subdir=WebSearch
     gradle=yes
 
 Maintainer Notes:
-see build.gradle for version name
 .
 
 #Update Check Mode:RepoManifest
-Current Version:Unknown
-Current Version Code:6
+Current Version:1.0.7
+Current Version Code:10
 
