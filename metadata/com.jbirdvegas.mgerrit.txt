@@ -13,11 +13,12 @@ Categories:System
 License:Apache
 Web Site:
 Source Code:https://github.com/AOKP/external_jbirdvegas_mGerrit/commits
-Issue Tracker:https://github.com/AOKP/external_jbirdvegas_mGerrit/issues
+Issue Tracker:
 
 Auto Name:mGerrit
 Summary:Keep track of ROM developments
 Description:
+See source code page for list of implemented keywords (for narrowing searches).
 
 Google Analytics was removed.
 A lot of jars still need checking out.
@@ -42,6 +43,6 @@ Uses tags but they're ROM milestones
 .
 
 Update Check Mode:RepoManifest
-Current Version:2.10.004
-Current Version Code:210004
+Current Version:2.10.005
+Current Version Code:210005
 
