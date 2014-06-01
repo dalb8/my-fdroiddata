@@ -1,0 +1,56 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://reecedunn.co.uk/espeak-for-android
+Source Code:https://github.com/rhdunn/espeak/commits
+Issue Tracker:https://github.com/rhdunn/espeak/issues
+Donate:https://github.com/rhdunn/espeak
+
+Auto Name:eSpeak
+Name:eSpeak (Cainteoir)
+Summary:Text-to-speech engine
+Description:
+Improvement on [[com.googlecode.eyesfree.espeak]], which hasn't been 
+updated in quite a while and possibly won't given that Google now publish
+their own proprietary TTS engine.
+.
+
+Repo Type:git
+Repo:https://github.com/rhdunn/espeak.git
+
+# not exact: could find wxwidgets package for openSUSE; also this is latest commit
+Build:1.47.12,17
+    commit=0008e7d7d11e6c1df0
+    submodules=yes
+    subdir=android
+    scanignore=platforms
+    build=cd ..; ./autogen.sh; ./configure && \
+        make espeakdata && \
+        ndk-build APP_ABI="armeabi armeabi-v7a"
+    buildjni=no
+    gradle=yes
+
+Maintainer Notes:
+Code is on android branch.
+
+GPLv3 according to the website, even though licence headers say Apache.
+
+Need wxwidgets-dev packages to build the espeak data.
+Should be easy enough on Debian distros.
+Alternatively, use prebuilt data by zipping the espeak-data directory in
+wget http://sourceforge.net/projects/espeak/files/espeak/espeak-1.47/espeak-1.47.11-source.zip/download -O espeak.zip
+.
+
+Update Check Mode:Tags
+Current Version:1.47.12
+Current Version Code:17
+
