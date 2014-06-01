@@ -49,5 +49,9 @@ that are modifications of other free icons, and word lists for use in
 dictionaries, whose licences are mentioned in the corresponding metadata files
 if not inside the archive itself.
 
+If `Update Check Mode:` is preceded by a `#` then it just means that fdroiddata
+has the file too and uses the same mode so I can track their current version
+instead of checking it myself.
+
 &mdash; Dave Black
 
