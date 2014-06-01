@@ -57,6 +57,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:14.0.0-ALPHA-3
-Current Version Code:92
+Current Version:13.0.7
+Current Version Code:86
 

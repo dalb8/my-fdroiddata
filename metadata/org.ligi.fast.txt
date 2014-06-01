@@ -41,6 +41,6 @@ Watch out build=gradle will use system version of gradle, not the one in config.
 .
 
 #Update Check Mode:Tags
-Current Version:5.1
-Current Version Code:51
+Current Version:5.3
+Current Version Code:53
 

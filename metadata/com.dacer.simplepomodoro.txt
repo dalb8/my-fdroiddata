@@ -22,7 +22,7 @@ MIT licensed but contains usual suspects Umeng and GMS
 .
 
 #Update Check Mode:RepoManifest
-Current Version:2.2
-Current Version Code:33
+Current Version:2.0.1
+Current Version Code:32
 
 

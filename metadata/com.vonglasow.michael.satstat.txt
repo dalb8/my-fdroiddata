@@ -61,6 +61,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.6
-Current Version Code:60
+Current Version:1.8
+Current Version Code:80
 
