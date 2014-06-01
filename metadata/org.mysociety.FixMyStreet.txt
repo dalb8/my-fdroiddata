@@ -9,35 +9,37 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Navigation
-License:Unknown
+License:AGPLv3
 Web Site:http://www.fixmystreet.com
 Source Code:https://github.com/mysociety/fixmystreet-mobile/commits
 Issue Tracker:https://github.com/mysociety/fixmystreet-mobile/issues
 Donate:http://www.mysociety.org/donate
 
 Auto Name:FixMyStreet
-Summary:Report street problems
+Summary:Report street problems in U.K.
 Description:
 Using this app you can report common street problems, like potholes or
-broken street lights, to councils throughout the UK or other FixMyStreet
-instances.
+broken street lights, to councils throughout the U.K.
+
+You shouldn't need to have an account to provide a report but you will have
+to supply an email (Ed: guessing this based on website: the app wouldn't let 
+me get that far because it couldn't tell if I was in a genuine location).
 .
 
 Repo Type:git
 Repo:https://github.com/mysociety/fixmystreet-mobile.git
 
 Build:2.0.1,36
-    disable=still in development and no licence
-    commit=cd91b8f3b39f5275a0c745d1152dc4434691f7a3
+    commit=9936df91
     subdir=Android
     init=sed -i '/Who built Fix/d;/this app was built by/d' ../src/templates/en/help.html && \
         mv ../src/js/config.js-example ../src/js/config.js && \
         sed -e "s/LANGUAGE: '',/LANGUAGE: 'en',/" -e "s/APP_NAME: '',/APP_NAME: 'FixMyStreet UK',/" -e "s/FMS_URL: '',/FMS_URL: 'http:\/\/www.fixmystreet.com',/" -i ../src/js/config.js
 
 Maintainer Notes:
-#Attempt at building an Irish version
-Build:2.0.1,361
-    commit=cd91b8f3b39f5275a0c745d1152dc4434691f7a3
+#WIP attempt at building an Irish version; maps would need changing from OS!
+Build:2.0.2,361
+    commit=9936df91
     subdir=Android
     init=mkdir -p src/ie/thesociety && \
         mv src/org/mysociety/* src/ie/thesociety/ && \
@@ -45,10 +47,10 @@ Build:2.0.1,361
         sed -i 's/org.mysociety/ie.thesociety/' AndroidManifest.xml && \
         sed -i '/Who built Fix/d;/this app was built by/d' ../src/templates/en/help.html && \
         mv ../src/js/config.js-example ../src/js/config.js && \
-        sed -e "s/LANGUAGE: '',/LANGUAGE: 'en',/" -e "s/APP_NAME: '',/APP_NAME: 'FixMyStreet Ireland',/" -e "s/FMS_URL: '',/FMS_URL: 'http:\/\/fixmystreet.ie',/" -i ../src/jsconfig.js
+        sed -e "s/LANGUAGE: '',/LANGUAGE: 'en',/" -e "s/APP_NAME: '',/APP_NAME: 'FixMyStreet Ireland',/" -e "s/FMS_URL: '',/FMS_URL: 'http:\/\/fixmystreet.ie',/" -i ../src/js/config.js
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:2.0.1
 Current Version Code:36
 
