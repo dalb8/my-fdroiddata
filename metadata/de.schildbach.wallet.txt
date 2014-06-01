@@ -30,18 +30,13 @@ A few tens of MiB must be downloaded to set up the blockchain and a couple
 more per month subsequently to keep it updated.
 
 [https://github.com/schildbach/bitcoin-wallet/raw/prod/wallet/CHANGES Changelog]
+
+There exists another version that uses the Testnet blockchain and allows
+debuggable wallets: this one is for real Bitcoins!
 .
 
 Repo Type:git
 Repo:https://github.com/schildbach/bitcoin-wallet
-
-Build:3.27,148
-    commit=5787167f05b8
-    subdir=wallet
-    maven=yes@..
-    srclibs=BitcoinJ@v0.10.3
-    prebuild=sed -i '73s/3.7.0/3.8.0/g' ../pom.xml
-    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
 
 Build:3.41,162
     commit=f254a38ffc
@@ -51,10 +46,24 @@ Build:3.41,162
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
+Build:3.49,170
+    disable=wait for push
+    commit=...
+    subdir=wallet
+    srclibs=BitcoinJ@v0.11.2
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
+    maven=yes@..
+
 Maintainer Notes:
-This won't build proguard: need to run mvn -Prelease for that.
+Even though BitcoinJ is taken from Maven Central build it anyway.
+
+This won't build proguard: need to run mvn -Prelease for that
+and use output= to get the final APK.
 
 Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
+
+Use maven 3.0.4 otherwise:
+    prebuild=sed -i '73s/3.7.0/3.8.2/g' ../pom.xml
 .
 
 #Update Check Mode:RepoManifest/prod
