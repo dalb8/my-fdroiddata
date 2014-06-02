@@ -33,6 +33,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:Static
-Current Version:1.0.0 beta (bugfix1)
+Current Version:1.0.0
 Current Version Code:12
 

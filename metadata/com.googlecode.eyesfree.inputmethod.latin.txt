@@ -37,9 +37,12 @@ Build:1.1.2,4
     buildjni=no
 
 Maintainer Notes:
+1.1.6 on gplay.
+Repo last updated in 12/2011 so looks unlikely that we'll see source code for 
+the current version.
 .
 
 Update Check Mode:None
-Current Version:1.1.2
-Current Version Code:4
+Current Version:1.1.6
+Current Version Code:8
 

@@ -11,8 +11,8 @@ License:GPLv2
 Web Site:http://www.busydoingnothing.co.uk/prevo
 Source Code:http://git.busydoingnothing.co.uk/cgit/prevo-android.git
 Issue Tracker:
-Bitcoin:16mQGTBWHx5wT2XX5YEGsU2sDqwSiP2wBn
 FlattrID:2653025
+Bitcoin:16mQGTBWHx5wT2XX5YEGsU2sDqwSiP2wBn
 
 Auto Name:Prevo
 Summary:Esperanto dictionary
@@ -40,7 +40,7 @@ sed -i '/AS_ALL_LINGUAS/d' configure.ac && \
 aclocal; autoheader; automake -a; autoconf; ./configure 
 .
 
-#Update Check Mode:Tags
-Current Version:0.9
-Current Version Code:9
+Update Check Mode:Tags
+Current Version:0.10
+Current Version Code:10
 

@@ -26,10 +26,12 @@ with these Python scripts, in [https://github.com/inemajo/arte-plus7-downloader 
 
 Maintainer Notes:
 Get it via Google Play
+
+Beware the 9-digit version code.
 .
 
 Update Check Mode:None
 #In Repo:v2.1.1,211142111
-Current Version:v2.1.1
-Current Version Code:211142111
+Current Version:v2.2.0
+Current Version Code:999999999
 

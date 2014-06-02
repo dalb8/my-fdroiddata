@@ -31,15 +31,20 @@ Build:0.r5+,6
     subdir=reicast/android/
     init=echo "APP_CFLAGS+=-Wno-error=format-security" >> jni/Application.mk && \
         find .. -regex ".+\.\(a\|dll\|so\|exe\|lib\)" -type f -delete
+    patch=omguya.patch
     target=android-17
     rm=reicast/android/libs/ouya-sdk.jar
-    patch=omguya.patch
     buildjni=yes
+
+Build:0.r6+,7
+    commit=?
+    subdir=shell/android
+    forcevercode=yes
 
 Maintainer Notes:
 .
 
-#Update Check Mode:RepoManifest
-Current Version:0.r5+
+Update Check Mode:RepoManifest
+Current Version:0.r6+
 Current Version Code:6
 

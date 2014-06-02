@@ -29,10 +29,16 @@ Build:v1.0.2,20
     commit=v1.0.2
     subdir=Clover
 
+Build:v1.0.2,21
+    commit=v1.0.2
+    subdir=Clover/app
+    gradle=yes
+
 Maintainer Notes:
+version supposed to be in app/version.properties
 .
 
-Update Check Mode:Tags
-Current Version:v1.0.2
-Current Version Code:20
+Update Check Mode:None
+Current Version:v1.1
+Current Version Code:9999999
 

@@ -61,6 +61,7 @@ Build:2.2.5,60
     build=$$MVN3$$ install -f $$HtmlSpanner$$/pom.xml
 
 Maintainer Notes:
+In gplay as ….pro and ….ads.
 .
 
 #Update Check Mode:Tags

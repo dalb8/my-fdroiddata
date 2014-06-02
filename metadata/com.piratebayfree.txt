@@ -35,6 +35,7 @@ Build:1.06,8
     patch=proprietary_8.patch
 
 Maintainer Notes:
+1.62 on gplay
 .
 
 #Update Check Mode:Tags
