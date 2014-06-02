@@ -25,29 +25,20 @@ the camera. Recognition results can be edited or copied for export.
 Repo Type:git
 Repo:https://git.gitorious.org/character-recognition/character-recognition.git
 
-Build:0.3.1,5
-    disable=errors, see below
-    commit=abd2e28
+Build:0.3.6,12
+    commit=3a15d11
+    submodules=yes
     subdir=TessUI
     init=rm -rf bin gen ../tesseract-android-tools/obj ../ImageViewer ../tesseract-android-tools-test
-    target=android-8
-    patch=gitmodules.patch,provided-libs.patch,camera-optional.patch,camera-protect.patch
-    prebuild=cd .. && \
-        git submodule update --init && \
-        echo 'APP_CFLAGS += -Wno-error=format-security' >> tesseract-android-tools/jni/Application.mk
     buildjni=../tesseract-android-tools
 
 Maintainer Notes:
-jni/../external/libjpeg/jidctfst.S: Assembler messages:
-jni/../external/libjpeg/jidctfst.S:66: Error: missing ')'
-jni/../external/libjpeg/jidctfst.S:66: Error: garbage following instruction -- pld (r2,#0)'
-jni/../external/libjpeg/jidctfst.S:259: Error: missing ')'
-jni/../external/libjpeg/jidctfst.S:259: Error: garbage following instruction --pld (sp,#32)'
-jni/../external/libjpeg/jidctfst.S:271: Error: missing ')'
-jni/../external/libjpeg/jidctfst.S:271: Error: garbage following instruction -- `pld (ip,#32)
+Optional: patch=provided-libs.patch,camera-optional.patch,camera-protect.patch
+
+        echo 'APP_CFLAGS += -Wno-error=format-security' >> tesseract-android-tools/jni/Application.mk
 .
 
-Update Check Mode:None
-Current Version:0.3.4.1
-Current Version Code:10
+#Update Check Mode:RepoManifest
+Current Version:0.3.7
+Current Version Code:13
 
