@@ -21,13 +21,13 @@ Find the sequence of colours by trial and error.
 Repo Type:git
 Repo:https://github.com/DaveRead/SequenceHunt.git
 
-Build:01.07.03,21
-    commit=v1.7.3
+Build:01.07.05,25
+    commit=1f7bd4
 
 Maintainer Notes:
 .
 
-#Update Check Mode:Tags
-Current Version:01.07.03
-Current Version Code:21
+Update Check Mode:RepoManifest
+Current Version:01.07.05
+Current Version Code:23
 
