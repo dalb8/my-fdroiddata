@@ -30,10 +30,13 @@ Repo:https://github.com/mateusz-szafraniec/NFCTagmaker.git
 Build:0.14,14
     commit=v0.14
 
+Build:0.15,15
+    commit=v0.15
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.14
-Current Version Code:14
+Current Version:0.15
+Current Version Code:15
 
