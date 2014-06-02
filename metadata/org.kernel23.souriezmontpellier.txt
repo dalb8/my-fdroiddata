@@ -32,18 +32,19 @@ your location, so if you get a blue screen, zoom out to find the landmarks.
 Repo Type:git
 Repo:https://github.com/tvass/Souriez-vous-etes-a-Montpellier
 
-Build:1.0,1
-    commit=2fa69c
-    init=sed -i '/uses-library/d' AndroidManifest.xml && \
-        sed -i 's@\(target=\).*@\1android-15@' project.properties
+Build:1.3,5
+    commit=595d355
+    init=sed -i '/uses-library/d' AndroidManifest.xml
     srclibs=1:MapsAPI@f6dd3410b223
     prebuild=sed -i '15 i \ \ \ \<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
 
 Maintainer Notes:
 see also org.kernel23.sous_surveillance_mobile
+
+supposed to push stable versions to stable-1 branch but it's not true.
 .
 
-Update Check Mode:RepoManifest/stable-1
-Current Version:1.0
-Current Version Code:1
+Update Check Mode:RepoManifest
+Current Version:1.3
+Current Version Code:5
 
