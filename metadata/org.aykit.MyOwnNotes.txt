@@ -30,6 +30,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:1.1
-Current Version Code:2
+Current Version:1.2
+Current Version Code:3
 

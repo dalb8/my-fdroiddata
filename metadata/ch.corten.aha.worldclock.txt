@@ -34,6 +34,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:1.5.12
-Current Version Code:30
+Current Version:1.6.0
+Current Version Code:32
 

@@ -49,6 +49,6 @@ Tags unreliable.
 .
 
 Update Check Mode:RepoManifest
-Current Version:3.0.9.8
-Current Version Code:60
+Current Version:3.0.9.9
+Current Version Code:61
 

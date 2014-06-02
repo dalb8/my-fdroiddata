@@ -38,6 +38,6 @@ The usual mail JARs and spongy castle:not verified yet.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.0
-Current Version Code:1
+Current Version:20140530
+Current Version Code:9
 

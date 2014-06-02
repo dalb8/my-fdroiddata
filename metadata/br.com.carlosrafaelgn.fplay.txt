@@ -40,6 +40,6 @@ Build:0.90,22
     commit=471ea7537d7a0d3
 
 Update Check Mode:RepoManifest
-Current Version:0.90
-Current Version Code:22
+Current Version:0.96
+Current Version Code:28
 

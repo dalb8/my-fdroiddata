@@ -32,6 +32,6 @@ Build:0.02,2
     srclibs=1:ActionBarSherlock@4.4.0
 
 Update Check Mode:RepoManifest
-Current Version:0.02
-Current Version Code:2
+Current Version:0.05
+Current Version Code:5
 

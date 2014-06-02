@@ -46,6 +46,6 @@ This don't work:
 .
 
 Update Check Mode:Tags
-Current Version:1.10.0
-Current Version Code:53
+Current Version:1.10.1
+Current Version Code:56
 
