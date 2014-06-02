@@ -4,8 +4,6 @@
 # notice and this notice are preserved.  This file is offered as-is,
 # without any warranty.
 
-# TODO: fix metadata.py removing spaces from headers
-
 #! /bin/bash
 for i in $(grep -s -l '^Update Check Mode:RepoMan\|^Update Check Mode:Tags' metadata/*.txt)
 do N=$(basename --suffix=.txt $i)
