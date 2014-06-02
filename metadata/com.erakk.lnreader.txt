@@ -32,12 +32,13 @@ Build:1.1.15,20140222
 
 Build:1.1.16-beta,20140306
     disable=beta
+    subdir=LNReader
 
 Maintainer Notes:
 Can put styles on sdcard too.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.1.16-beta
-Current Version Code:20140306
+Current Version:1.1.17b
+Current Version Code:20140527
 
