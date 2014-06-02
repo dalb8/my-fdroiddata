@@ -1,14 +1,17 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
+AntiFeatures:UpstreamNonFree
 Categories:System
 License:GPLv3
-Web Site:
+Web Site:http://rmdroider.wordpress.com
 Source Code:https://code.google.com/p/currentwidget/source/list
 Issue Tracker:https://code.google.com/p/currentwidget/issues/list
 Donate:https://code.google.com/p/currentwidget
@@ -37,7 +40,7 @@ this in the battery driver or in the hardware.
 
 [https://code.google.com/p/currentwidget/wiki/ChangeLog Changelog]
 
-N.B Latest code use proprietary libraries.
+Google Play Services library was removed.
 .
 
 Repo Type:git-svn
@@ -48,15 +51,22 @@ Build:0.39,38
     subdir=CurrentWidget
     srclibs=Color-Picker-2@45ee6554a1db
     prebuild=\
+        mkdir -p src && \
         sed -i 's@\(reference.1=\).*@\1$$Color-Picker-2$$@' ../CurrentWidgetLibrary/project.properties
 
-Build:0.39a,39
-    disable=GMS
+Build:0.4,42
+    commit=308
+    subdir=CurrentWidget
+    patch=plusone_42.patch
+    srclibs=Color-Picker-2@45ee6554a1db
+    prebuild=\
+        mkdir -p src && \
+        sed -i 's@\(reference.1=\).*@\1$$Color-Picker-2$$@' ../CurrentWidgetLibrary/project.properties
 
 Maintainer Notes:
 .
 
-#Update Check Mode:RepoManifest
-Current Version:0.39a
-Current Version Code:39
+Update Check Mode:RepoManifest
+Current Version:0.4
+Current Version Code:42
 

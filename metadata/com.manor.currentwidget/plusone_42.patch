@@ -1,0 +1,86 @@
+diff --git a/CurrentWidgetLibrary/project.properties b/CurrentWidgetLibrary/project.properties
+index 2527ab7..ad257a5 100644
+--- a/CurrentWidgetLibrary/project.properties
++++ b/CurrentWidgetLibrary/project.properties
+@@ -11,4 +11,3 @@ android.library=true
+ # Project target.
+ target=android-19
+ android.library.reference.1=..\\..\\..\\..\\Projects\\android-color-picker\\AmbilWarna
+-android.library.reference.2=../../../../android-sdk-windows/extras/google/google_play_services/libproject/google-play-services_lib
+diff --git a/CurrentWidgetLibrary/res/layout/plusone_pref.xml b/CurrentWidgetLibrary/res/layout/plusone_pref.xml
+deleted file mode 100644
+index e6288f9..0000000
+--- a/CurrentWidgetLibrary/res/layout/plusone_pref.xml
++++ /dev/null
+@@ -1,11 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<com.google.android.gms.plus.PlusOneButton xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:plus="http://schemas.android.com/apk/lib/com.google.android.gms.plus"
+-    android:id="@+id/plus_one_button"
+-    android:layout_width="wrap_content"
+-    android:layout_height="wrap_content"
+-    android:layout_gravity="center_vertical"
+-    android:focusable="false"
+-    android:descendantFocusability="blocksDescendants"
+-    plus:size="standard" 
+-    plus:annotation="bubble"/>
+diff --git a/CurrentWidgetLibrary/res/xml/prefs.xml b/CurrentWidgetLibrary/res/xml/prefs.xml
+index f7cb8a3..ed51bf7 100644
+--- a/CurrentWidgetLibrary/res/xml/prefs.xml
++++ b/CurrentWidgetLibrary/res/xml/prefs.xml
+@@ -216,12 +216,6 @@
+         </PreferenceScreen>
+     </PreferenceCategory>
+     <PreferenceCategory android:title="About" >
+-        <com.manor.currentwidget.library.PlusOnePreference
+-            android:key="rate"
+-            android:selectable="true"
+-            android:title="Rate CurrentWidget"
+-            android:widgetLayout="@layout/plusone_pref" />
+-
+         <Preference
+             android:key="moreApps"
+             android:summary="Browse for more applications"
+@@ -300,4 +294,4 @@
+         </PreferenceScreen>
+     </PreferenceCategory>
+ 
+-</PreferenceScreen>
+\ No newline at end of file
++</PreferenceScreen>
+diff --git a/CurrentWidgetLibrary/src/com/manor/currentwidget/library/PlusOnePreference.java b/CurrentWidgetLibrary/src/com/manor/currentwidget/library/PlusOnePreference.java
+deleted file mode 100644
+index 3401fd8..0000000
+--- a/CurrentWidgetLibrary/src/com/manor/currentwidget/library/PlusOnePreference.java
++++ /dev/null
+@@ -1,30 +0,0 @@
+-package com.manor.currentwidget.library;
+-
+-import android.content.Context;
+-import android.preference.Preference;
+-import android.util.AttributeSet;
+-import android.view.View;
+-
+-import com.google.android.gms.plus.PlusOneButton;
+-
+-public class PlusOnePreference extends Preference { 
+-
+-	public PlusOnePreference(Context context) {
+-		super(context);		
+-	}
+-	
+-	public PlusOnePreference(Context context, AttributeSet attrs) {
+-		super(context, attrs);
+-	}
+-	
+-	public PlusOnePreference(Context context, AttributeSet attrs, int defStyle) {
+-		super(context, attrs, defStyle);
+-	}
+-
+-	@Override
+-	protected void onBindView(View view) {
+-		super.onBindView(view);
+-		PlusOneButton plusOneButton = (PlusOneButton)view.findViewById(R.id.plus_one_button);
+-		plusOneButton.initialize(CurrentWidgetConfigure.URL, CurrentWidgetConfigure.PLUS_ONE_REQUEST_CODE);
+-	}
+-}
