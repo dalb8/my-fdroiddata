@@ -29,9 +29,8 @@ me get that far because it couldn't tell if I was in a genuine location).
 Repo Type:git
 Repo:https://github.com/mysociety/fixmystreet-mobile.git
 
-Build:2.0.1,36
-    disable=not working; need to compare with devleloper APK
-    commit=9936df91
+Build:2.0.3,38
+    commit=ff70d936494966c04577378aaf736bebe5fe96
     subdir=Android
     init=sed -i '/Who built Fix/d;/this app was built by/d' ../src/templates/en/help.html && \
         mv ../src/js/config.js-example ../src/js/config.js && \
@@ -52,6 +51,6 @@ Build:2.0.2,361
 .
 
 #Update Check Mode:RepoManifest
-Current Version:2.0.1
-Current Version Code:36
+Current Version:2.0.3
+Current Version Code:38
 
