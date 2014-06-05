@@ -58,10 +58,7 @@ Maintainer Notes:
 Don't forget the patch:
     patch=play_570.patch
 
-WIP gradle:
     init=sed -i "60 i \\\tdefaultConfig{packageName 'org.appz.fdroid'}" build.gradle && \
-      sed -i 's/compileSdkVersion 7/compileSdkVersion  8/' extern/MemorizingTrustManager/build.gradle && \
-      sed -i 's/0.4.2/0.7.+/;38,41d' extern/AndroidPinning/build.gradle 
 .
 
 Update Check Mode:None

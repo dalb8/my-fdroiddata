@@ -13,7 +13,7 @@ License:GPLv3
 Web Site:https://floens.github.io/Clover
 Source Code:https://github.com/Floens/Clover/commits
 Issue Tracker:https://github.com/Floens/Clover/issues
-Donate:https://floens.github.io/Clover
+Donate:https://floens.github.io/Clover#donate
 Bitcoin:1N7VtcNh8L8u4tF9CJ38GjnPbmxM4Vixi6
 
 Auto Name:Clover
@@ -29,8 +29,8 @@ Build:v1.0.2,20
     commit=v1.0.2
     subdir=Clover
 
-Build:v1.0.2,21
-    commit=v1.0.2
+Build:v1.1.1,25
+    commit=v1.1.1
     subdir=Clover/app
     gradle=yes
 
@@ -39,6 +39,6 @@ version supposed to be in app/version.properties
 .
 
 Update Check Mode:None
-Current Version:v1.1
+Current Version:v1.1.1
 Current Version Code:9999999
 

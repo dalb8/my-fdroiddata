@@ -27,17 +27,16 @@ Works as a normal app or a launcher.
 Repo Type:git
 Repo:https://github.com/ligi/FAST.git
 
-Build:5.1,51
-    commit=5.1
+Build:5.3,53
+    commit=5.3
     subdir=android
-    patch=build.gradle_51.patch
+    patch=build.gradle_53.patch
     srclibs=Tracedroid@2740c
     build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
-          mv $$Tracedroid$$/build/libs/Tracedroid-1.1.jar .
+          mkdir libs; mv $$Tracedroid$$/build/libs/Tracedroid-1.1.jar libs/
     gradle=forFDroid
 
 Maintainer Notes:
-Watch out build=gradle will use system version of gradle, not the one in config.py
 .
 
 #Update Check Mode:Tags

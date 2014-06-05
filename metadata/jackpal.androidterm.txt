@@ -27,11 +27,17 @@ Build:1.0.60,61
     buildjni=no
     build=ndk-build APP_ABI='armeabi armeabi-v7a'
 
+Build:1.0.61,62
+    commit=v1.0.61
+    target=android-12
+    buildjni=no
+    build=ndk-build APP_ABI='armeabi armeabi-v7a'
+
 Maintainer Notes:
 Both terminal and emulator view libraries use android-11
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.60
-Current Version Code:61
+Current Version:1.0.61
+Current Version Code:62
 

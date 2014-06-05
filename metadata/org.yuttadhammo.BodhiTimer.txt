@@ -25,6 +25,11 @@ Build:3.2.2,49
     commit=a6bc4f6b808663a
     prebuild=echo '-dontobfuscate' > proguard-project.txt
 
+Build:3.3.1,51
+    commit=e6c855483f5a9c11
+    init=sed -i "95s/'/’/" res/values-fr/strings.xml
+    prebuild=echo '-dontobfuscate' > proguard-project.txt
+
 Maintainer Notes:
 .
 

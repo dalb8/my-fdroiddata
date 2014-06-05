@@ -36,9 +36,12 @@ which surround him before being blocked yourself.
 Repo Type:git
 Repo:https://github.com/valos/Isolmoa.git
 
-Build:1.0,1
-    commit=v1.0
+Build:1.1,2
+    commit=v1.1
     subdir=android
+
+Maintainer Notes:
+.
 
 #Update Check Mode:Tags
 Current Version:1.1

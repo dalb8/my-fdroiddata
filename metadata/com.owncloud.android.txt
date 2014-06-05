@@ -26,10 +26,15 @@ Build:1.5.4,105004
     commit=oc-android-1.5.4
     submodules=yes
 
+Build:1.5.7,105007
+    commit=oc-android-1.5.7
+    submodules=yes
+    prebuild=cp third_party/android-support-library/android-support-v4.jar actionbarsherlock/library/libs/android-support-v4.jar
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.5.6
-Current Version Code:105006
+Current Version:1.5.7
+Current Version Code:105007
 
