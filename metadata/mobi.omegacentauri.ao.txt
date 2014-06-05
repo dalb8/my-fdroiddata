@@ -24,9 +24,10 @@ Repo Type:git-svn
 Repo:http://astroobserver.googlecode.com/svn/trunk
 
 Build:1.0.7,7
+    disable=doesn't rotate
     commit=19
     subdir=app
-    prebuild=find res -type f -print0 | xargs -0 sed -i 's/Google Sky/Open Sky/g'
+    prebuild=find res -type f -print0 | xargs -0 sed -i 's/Google Sky/Open Star/g'
 
 Maintainer Notes:
 not on gplay

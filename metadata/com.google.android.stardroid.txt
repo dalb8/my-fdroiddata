@@ -1,0 +1,50 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Navigation
+License:Apache
+Web Site:
+Source Code:https://code.google.com/p/stardroid/source/list
+Issue Tracker:https://code.google.com/p/stardroid/issues
+
+Auto Name:Sky Map
+Summary:Sky Map to explore the skies
+Description:
+Point your phone at the sky, and Sky Map will show the stars, planets,
+constellations, and more to help you identify the celestial objects in view.
+You can also browse the skies in manual mode.
+
+Uses Network Location (or GPS if chosen in settings), but you can choose manual 
+locations in the settings.
+
+The app has been built without the non-free Google Analytics library.
+.
+
+Repo Type:git-svn
+Repo:https://stardroid.googlecode.com/svn/trunk
+
+Build:1.6.4,1112
+    commit=3
+    subdir=app
+    rm=app/libs/libGoogleAnalytics.jar
+    srclibs=1:NoAnalytics@v0.3.1
+    prebuild=find res -type f -print0 | xargs -0 sed -i 's/Google Sky/Sky/g'
+
+Build:1.6.5,1113
+    commit=?
+    disable=not published
+    subdir=app
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.6.5
+Current Version Code:1113
+
