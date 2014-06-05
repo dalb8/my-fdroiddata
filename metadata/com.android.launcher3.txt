@@ -1,6 +1,8 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
@@ -16,9 +18,6 @@ Auto Name:Launcher3
 Summary:Home screen
 Description:
 The AOSP launcher. 
-It differs from the proprietary Google Launcher in that
-it has an extra row and column, the Settings button doesn't work, widgets can
-only be deleted in portrait mode and it doesn't have the Google Now panel.
 .
 
 Repo Type:git
@@ -32,10 +31,21 @@ Build:1.0,1
     extlibs=android/android-support-v4.jar
     patch=manifest-minsdk_1.patch
 
+Build:4.4.3,4430
+    commit=android-4.4.3_r1.1
+    init=sed -i '/LauncherBackup/d' src/com/android/launcher3/LauncherProvider.java && \
+        rm src/com/android/launcher3/LauncherBackup* src/com/android/launcher3/LauncherPreferencesBackup* && \
+        sed -i '19d' src/com/android/launcher3/IconCache.java && \
+        sed -i '22 i android:versionName="4.4.3" android:versionCode="4430"' AndroidManifest.xml && \
+        echo -e 'android.library.reference.1=WallpaperPicker\ntarget=android-19\nproguard.config=$$SDK$$/tools/proguard/proguard-android.txt:proguard.flags' >  project.properties && \
+        echo -e 'android.library=true\ntarget=android-19' >  WallpaperPicker/project.properties
+    extlibs=android/android-support-v13.jar
+    prebuild=mkdir WallpaperPicker/libs; mv libs/android-support-v13.jar WallpaperPicker/libs
+
 Maintainer Notes:
 .
 
 Update Check Mode:None
-Current Version:1.0
-Current Version Code:1
+Current Version:4.4.3
+Current Version Code:4430
 
