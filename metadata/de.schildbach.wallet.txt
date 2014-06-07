@@ -46,11 +46,11 @@ Build:3.41,162
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
-Build:3.49,170
-    disable=wait for push
-    commit=...
+Build:3.50,171
+    disable=no tag for this
+    commit=bff2e1f560d79d6e0af8c35505
     subdir=wallet
-    srclibs=BitcoinJ@v0.11.2
+    srclibs=BitcoinJ@v0.11.3
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
@@ -67,6 +67,6 @@ Use maven 3.0.4 otherwise:
 .
 
 #Update Check Mode:RepoManifest/prod
-Current Version:3.48
-Current Version Code:169
+Current Version:3.50
+Current Version Code:171
 
