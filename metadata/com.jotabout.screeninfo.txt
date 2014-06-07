@@ -30,7 +30,8 @@ applications, or to assist them in customer support scenarios.
 Repo Type:git
 Repo:https://github.com/mportuesisf/ScreenInfo.git
 
-Build Version:1.0.6,106,e1f70635
+Build:1.0.6,106
+    commit=e1f70635
 
 #Update Check Mode:RepoManifest
 Current Version:1.0.6

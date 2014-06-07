@@ -32,8 +32,8 @@ browsed for shows.
 Repo Type:git
 Repo:https://github.com/danieloeh/AntennaPod.git
 
-Build:0.9.8.3,36
-    commit=0.9.8.3
+Build:0.9.9.0,37
+    commit=0.9.9.0
     patch=flattr.patch
     srclibs=DragSort-danoeh@1bb29afb91f
     prebuild=rm -f submodules/dslv/library && \

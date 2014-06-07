@@ -50,21 +50,24 @@ Build:1.5-ARM,145
         ant build -f ../OsmAnd-java/build.xml
     buildjni=no
 
-Build:1.7.5,170
-    disable=not sure about native parts
+# not exact! should use legacy_core branch of $$core$$ but it's missing a external/build.sh
+Build:1.7.5_armv7-neon,170
     commit=5df6b3caf2
     subdir=OsmAnd
     init=rm ../SherlockBar/build.xml ant.properties
-    srclibs=core@6c857f6c25387,resources@58c2bb3a1d
-    prebuild=sed -i 's/app_version">[^<]*/app_version">1.7.5/' res/values/no_translate.xml
-    build=ANDROID_SDK=$$SDK$$ ANDROID_NDK=$$NDK$$ ./full-ndk-build.sh 
+    srclibs=core@master,resources@master
+    prebuild=sed -i 's/app_version">[^<]*/app_version">1.7.5_armv7-neon/' res/values/no_translate.xml
+    build=ANDROID_SDK=$$SDK$$ ANDROID_NDK=$$NDK$$ OSMAND_ARCHITECTURES_SET=armv7-neon ./full-ndk-build.sh 
     buildjni=no
 
 Maintainer Notes:
+see https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml
+
 Needs plenty of disk space, but the app can be run without native code
+
 Could build gnu-trove via srclib
-Qt in new_core branch
-see https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml 
+
+Qt in qtcore branch
 .
 
 Update Check Mode:None

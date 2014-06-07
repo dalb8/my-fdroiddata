@@ -43,6 +43,6 @@ Uses tags but they're ROM milestones
 .
 
 Update Check Mode:RepoManifest
-Current Version:2.10.005
-Current Version Code:210005
+Current Version:2.10.006
+Current Version Code:210006
 

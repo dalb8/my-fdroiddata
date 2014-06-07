@@ -21,7 +21,7 @@ Based on the weather extension included with [[net.nurik.roman.dashclock]].
 It also contains more weather status icons than the original extension 
 (Thunderstorms, Mostly Cloudy, Hail, etc.) and 
 multiple icon themes (Climacons, Weathercons and Chameleon icon packs).
-Forecast is courtesy of Yahoo''!''
+Forecast is courtesy of Yahoo''!'' or optionally OpenWeatherMap.
 
 Full feature list includes:
 * Manual or automatic location;
@@ -36,11 +36,16 @@ Full feature list includes:
 Repo Type:git
 Repo:https://github.com/MarcDufresne/BetterWeather.git
 
+# not exact: built with gradlew
 Build:2.3.3,38
-    disable=built with gradlew
     commit=42ef6b9e0ec37
     subdir=betterweather
     init=sed -i '24 i lintOptions {\n    abortOnError false\n}' -i build.gradle
+    gradle=yes
+
+Build:3.0.4b,44
+    commit=aed4ece3
+    subdir=betterweather
     gradle=yes
 
 Maintainer Notes:
