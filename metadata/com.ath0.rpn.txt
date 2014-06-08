@@ -25,13 +25,18 @@ such as setting the number of decimal points, swapping items on the stack and th
 Repo Type:git
 Repo:https://github.com/lpar/RPN.git
 
-Build:2.0.3,17
-    commit=ad0277c167
+Build:1.8.1,10
+    commit=199a87f7319b685e59d6847f1ff2417613f69c6e
+
+Build:2.0.4,18
+    commit=a8b4622
+    init=sed -i 's/0.5.+/0.9.+/' build.gradle
+    gradle=yes
 
 Maintainer Notes:
 .
 
-#Update Check Mode:Tags
-Current Version:2.0.3
-Current Version Code:17
+Update Check Mode:RepoManifest
+Current Version:2.0.4
+Current Version Code:18
 
