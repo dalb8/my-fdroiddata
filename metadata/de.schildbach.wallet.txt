@@ -47,10 +47,10 @@ Build:3.41,162
     maven=yes@..
 
 Build:3.50,171
-    disable=no tag for this
     commit=bff2e1f560d79d6e0af8c35505
     subdir=wallet
     srclibs=BitcoinJ@v0.11.3
+    prebuild=sed -i '73s/3.7.0/3.8.2/g' ../pom.xml
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
@@ -61,9 +61,6 @@ This won't build proguard: need to run mvn -Prelease for that
 and use output= to get the final APK.
 
 Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
-
-Use maven 3.0.4 otherwise:
-    prebuild=sed -i '73s/3.7.0/3.8.2/g' ../pom.xml
 .
 
 #Update Check Mode:RepoManifest/prod
