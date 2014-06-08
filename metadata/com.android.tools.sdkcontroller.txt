@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Development
+License:Apache
+Source Code:https://android.googlesource.com/platform/sdk/+/android-4.4.3_r1/apps/SdkController
+
+Auto Name:SdkController
+Summary:Control emulator with a device
+Description:
+Allows you to send multi-touch events to the emulator over adb.
+.
+
+Repo Type:git
+Repo:https://android.googlesource.com/platform/sdk
+
+Build:1.0,1
+    commit=android-4.4.3_r1
+    subdir=apps/SdkController
+    init=rm -rf bin
+
+Maintainer Notes:
+Rather large repo: prebuilt is in the bin directory.
+.
+
+Update Check Mode:None
+Current Version:1.0
+Current Version Code:1
+

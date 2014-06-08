@@ -50,7 +50,7 @@ Build:14.0.0,100
     commit=14.0.0
     submodules=yes
     init=sed -i 's/Google Inc.:Google APIs:17/android-17/' external/superuser-commands/RootCommands-Library/project.properties 
-    rm=external/superuser-commands/RootCommands-Demo/libs/armeabi
+    rm=external/superuser-commands/RootCommands-Demo
     build=NDK_BASE=$$NDK$$ make -C external
 
 Maintainer Notes:
