@@ -53,5 +53,9 @@ If `Update Check Mode:` is preceded by a `#` then it just means that fdroiddata
 has the file too and uses the same mode so I can track their current version
 instead of checking it myself.
 
+The aim is to keep builds that work on Android 2.3. Most of the builds here are 
+only done for armeabi-v7a though the APP\_ABI flag can be removed in order to 
+build for all architectures.
+
 &mdash; Dave Black
 
