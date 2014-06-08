@@ -26,6 +26,9 @@ Build:3,3
     disable=have to mkdir res and add an icon
     commit=032beb300b65c5e2c4c5d6d672993c374744f4b6
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:3
 Current Version Code:3

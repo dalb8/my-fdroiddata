@@ -27,6 +27,9 @@ Repo:https://github.com/FireFart/Permissions.git
 Build:1.2,3
     commit=c2b651a63
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.2
 Current Version Code:3

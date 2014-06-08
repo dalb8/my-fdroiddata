@@ -29,6 +29,9 @@ Repo:https://staticfree.info/git-ro/24hAnalogWidget.git
 Build:0.4.2,8
     commit=0.4.2
 
+Maintainer Notes:
+.
+
 #Update Check Mode:Tags
 Current Version:0.4.2
 Current Version Code:8

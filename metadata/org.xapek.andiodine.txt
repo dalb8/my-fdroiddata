@@ -30,6 +30,9 @@ Build:1.0,1
     buildjni=no
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi'
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

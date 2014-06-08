@@ -33,6 +33,9 @@ Build:0.4,4
         mv libs/armeabi/rsync res/raw/rsync
     buildjni=no
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.4
 Current Version Code:4

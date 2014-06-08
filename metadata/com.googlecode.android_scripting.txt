@@ -44,6 +44,9 @@ Build:6x03,603
     scanignore=android/Utils/src/com/googlecode/android_scripting/interpreter/ExternalClassLoader.java
     buildjni=yes
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 #In Repo:6,600
 Current Version:6x03

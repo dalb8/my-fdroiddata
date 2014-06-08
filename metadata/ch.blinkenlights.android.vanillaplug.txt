@@ -18,6 +18,9 @@ Build:1.1,110
     commit=4a6be5
     target=android-16
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.1
 Current Version Code:110

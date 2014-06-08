@@ -29,6 +29,9 @@ Build:0.13,13
     commit=ac621c
     target=android-19
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:0.13
 Current Version Code:13

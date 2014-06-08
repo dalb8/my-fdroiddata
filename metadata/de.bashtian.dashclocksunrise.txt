@@ -31,6 +31,9 @@ Build:1.2,3
     prebuild=\
       echo 'source.dir=$$DashClock$$/api/src;$$SunriseSunset$$/src/main;src' >> ant.properties
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.2
 Current Version Code:3

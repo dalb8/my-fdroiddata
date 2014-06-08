@@ -29,6 +29,9 @@ Repo:https://github.com/pryds/ve.git
 Build:0.1.4,8
     commit=v0.1.4
 
+Maintainer Notes:
+.
+
 Update Check Mode:Tags
 Current Version:0.1.4
 Current Version Code:8

@@ -38,6 +38,9 @@ Build:2.5,9
     srclibs=1:TeclaAccess@0.7.1-beta
     rm=src/dasher/applet
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:2.5
 Current Version Code:9

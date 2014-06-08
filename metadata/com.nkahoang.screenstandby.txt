@@ -40,6 +40,9 @@ Build:2.0 Open Source,13
     prebuild=cp -a $$MobAdMob$$/src/com/google src/com/
     gradle=yes
 
+Maintainer Notes:
+.
+
 Update Check Mode:Tags
 Current Version:2.0 Open Source
 Current Version Code:13

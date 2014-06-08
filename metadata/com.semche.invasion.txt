@@ -25,6 +25,9 @@ Build:1.0,1
     srclibs=1:AndEngine@GLES2
     rm=libs/andengine.jar
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

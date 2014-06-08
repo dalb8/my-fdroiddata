@@ -33,6 +33,9 @@ Repo:https://github.com/mportuesisf/ScreenInfo.git
 Build:1.0.6,106
     commit=e1f70635
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.0.6
 Current Version Code:106

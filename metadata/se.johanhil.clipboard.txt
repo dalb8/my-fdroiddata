@@ -30,6 +30,9 @@ Build:1.0,2
     commit=c6c466770fb7215d957118216c2414ae69ca1bc8
     target=android-8
 
+Maintainer Notes:
+.
+
 #Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:2

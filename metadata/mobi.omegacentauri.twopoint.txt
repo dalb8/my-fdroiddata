@@ -35,6 +35,9 @@ Build:0.05,5
     commit=10
     srclibs=1:ActionBarSherlock@4.4.0
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:0.05
 Current Version Code:5

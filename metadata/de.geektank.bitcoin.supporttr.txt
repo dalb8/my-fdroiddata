@@ -32,6 +32,9 @@ Build:1.0,1
     maven=yes@..
     prebuild=sed -i 's/3.7.0/3.8.0/' ../pom.xml
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1

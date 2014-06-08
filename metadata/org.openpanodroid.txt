@@ -40,6 +40,9 @@ Build:1.0,1
     prebuild=sed -i '7 i \ \ \ \<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" \/>' AndroidManifest.xml
     buildjni=yes
 
+Maintainer Notes:
+.
+
 Update Check Mode:RepoManifest
 Current Version:1.0
 Current Version Code:1
