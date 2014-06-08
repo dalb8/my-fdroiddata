@@ -15,6 +15,7 @@ Source Code:https://github.com/MarcDufresne/BetterWeather/commits
 Issue Tracker:https://github.com/MarcDufresne/BetterWeather/issues
 
 Auto Name:BetterWeather
+Name:DashClock: BetterWeather
 Summary:DashClock extension
 Description:
 Based on the weather extension included with [[net.nurik.roman.dashclock]].
