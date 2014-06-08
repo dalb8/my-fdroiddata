@@ -47,6 +47,7 @@ Build:0.2.3.23-rc-1.0.11-RC5-test2,51
     build=NDK_BASE=$$NDK$$ PATH=$PATH:$$NDK$$/toolchain/bin make -C external
 
 Build:14.0.0,100
+    disable=seems broken
     commit=14.0.0
     submodules=yes
     init=sed -i 's/Google Inc.:Google APIs:17/android-17/' external/superuser-commands/RootCommands-Library/project.properties 
