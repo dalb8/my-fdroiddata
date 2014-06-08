@@ -46,17 +46,18 @@ Build:0.2.3.23-rc-1.0.11-RC5-test2,51
         touch iptables_n1 iptables_g1
     build=NDK_BASE=$$NDK$$ PATH=$PATH:$$NDK$$/toolchain/bin make -C external
 
-Build:14.0.0-ALPHA-3,92
-    commit=14.0.0-ALPHA-3
+Build:14.0.0,100
+    commit=14.0.0
     submodules=yes
     init=sed -i 's/Google Inc.:Google APIs:17/android-17/' external/superuser-commands/RootCommands-Library/project.properties 
-    rm=res/raw/tor.mp3,res/raw/obfsclient.mp3,res/raw/polipo.mp3,res/raw/xtables.mp3,libs/armeabi,libs/jtorctl.jar,external/superuser-commands/RootCommands-Demo/libs/armeabi
+    rm=external/superuser-commands/RootCommands-Demo/libs/armeabi
     build=NDK_BASE=$$NDK$$ make -C external
 
 Maintainer Notes:
+Watch out for prebuilts in res/raw
 .
 
 #Update Check Mode:Tags
-Current Version:13.0.7
-Current Version Code:86
+Current Version:14.0.0
+Current Version Code:100
 
