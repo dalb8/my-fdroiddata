@@ -1,0 +1,146 @@
+diff --git a/source/jni/Application.mk b/source/jni/Application.mk
+index 77428f3..3abd3b4 100644
+--- a/source/jni/Application.mk
++++ b/source/jni/Application.mk
+@@ -2,7 +2,7 @@
+ APP_PLATFORM    := android-9
+ 
+ # we support 3 ABIs, but we'll perform some magic later
+-APP_ABI         := armeabi armeabi-v7a x86
++APP_ABI         := armeabi armeabi-v7a
+ 
+ # Release by default
+ APP_OPTIM       := release
+diff --git a/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractHTML5Benchmark.java b/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractHTML5Benchmark.java
+index db248e0..4ee73ff 100644
+--- a/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractHTML5Benchmark.java
++++ b/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractHTML5Benchmark.java
+@@ -34,7 +34,6 @@ package org.codeaurora.vellamo.benchmarks.html5;
+ 
+ import java.lang.ref.WeakReference;
+ 
+-import android.annotation.TargetApi;
+ import android.app.Activity;
+ import android.content.Context;
+ import android.os.Build;
+@@ -136,7 +135,6 @@ public abstract class AbstractHTML5Benchmark extends AbstractBenchmark implement
+         removeRunnableFromQueue(mWatchdogTimer);
+     }
+ 
+-    @TargetApi(11)
+     protected void disableWebViewHwAccel() {
+         if (testIsRunning() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)
+             mWebView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+diff --git a/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractNetworkedBenchmark.java b/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractNetworkedBenchmark.java
+index 549d4f5..03dd510 100644
+--- a/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractNetworkedBenchmark.java
++++ b/source/src/org/codeaurora/vellamo/benchmarks/html5/AbstractNetworkedBenchmark.java
+@@ -41,10 +41,7 @@ import java.util.ArrayList;
+ import java.util.HashMap;
+ import java.util.Map;
+ 
+-import android.annotation.SuppressLint;
+ import android.app.Activity;
+-import android.webkit.WebView;
+-import android.webkit.WebViewClient;
+ 
+ import org.codeaurora.vellamo.utils.FileUtils;
+ import org.codeaurora.vellamo.utils.Logger;
+@@ -97,20 +94,6 @@ public abstract class AbstractNetworkedBenchmark extends AbstractHTML5Benchmark
+ 		}
+ 	}
+ 
+-	/**
+-	 * NOTE: if an error is detected on the URL (must be on our server) quit the benchmark to avoid hangs
+-	 * re-implement this function to ignore errors - the default implementation quits the test
+-	 *
+-	 * @see org.codeaurora.vellamo.benchmarks.html5.AbstractHTML5Benchmark#onWebPageError(android.webkit.WebView, int, java.lang.String, java.lang.String)
+-	 */
+-	public void onWebPageError(WebView view, int errorCode, String description, String failingUrl) {
+-		if (errorCode == WebViewClient.ERROR_CONNECT) {
+-			Logger.warn("Cannot connect to the internal server. Quitting the test.");
+-			html5BenchFailed(BenchmarkResult.FC_SANITY, "Internal Web Server Error");
+-			return;
+-		}
+-		super.onWebPageError(view, errorCode, description, failingUrl);
+-	}
+ 
+ 	/***
+ 	 * Wrappers to safely start the server and check the status for consistency.
+@@ -170,7 +153,6 @@ public abstract class AbstractNetworkedBenchmark extends AbstractHTML5Benchmark
+ 	 * Get available ports.
+ 	 * @return null if can't find available ports, otherwise it will return a map <oldPort,newPort>
+ 	 */
+-	@SuppressLint("UseSparseArrays")
+ 	protected HashMap<Integer,Integer> getAvailablePorts() {
+ 		ArrayList<Integer> selectedPorts = new ArrayList<Integer>();
+ 		// Port mapping as a result: <OldPort, NewPort>
+diff --git a/source/src/org/codeaurora/vellamo/benchmarks/html5/AutoWebView.java b/source/src/org/codeaurora/vellamo/benchmarks/html5/AutoWebView.java
+index 055467c..2594495 100644
+--- a/source/src/org/codeaurora/vellamo/benchmarks/html5/AutoWebView.java
++++ b/source/src/org/codeaurora/vellamo/benchmarks/html5/AutoWebView.java
+@@ -32,8 +32,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ 
+ package org.codeaurora.vellamo.benchmarks.html5;
+ 
+-import android.annotation.SuppressLint;
+-import android.annotation.TargetApi;
+ import android.content.Context;
+ import android.graphics.Bitmap;
+ import android.graphics.Canvas;
+@@ -54,7 +52,6 @@ import org.codeaurora.vellamo.utils.FpsCounter;
+ import org.codeaurora.vellamo.utils.Logger;
+ 
+ 
+-@SuppressLint("SetJavaScriptEnabled")
+ public class AutoWebView extends WebView {
+ 
+ 	public interface Listener {
+@@ -286,7 +283,6 @@ public class AutoWebView extends WebView {
+ 		mDisplayFrozenBitmap = null;
+ 	}
+ 
+-	@TargetApi(9)
+ 	@Override
+ 	public boolean onTouchEvent(MotionEvent ev) {
+ 		// eat the touch events
+diff --git a/source/src/org/codeaurora/vellamo/benchmarks/html5/InlineVideo.java b/source/src/org/codeaurora/vellamo/benchmarks/html5/InlineVideo.java
+index 155b7ec..d1f03be 100644
+--- a/source/src/org/codeaurora/vellamo/benchmarks/html5/InlineVideo.java
++++ b/source/src/org/codeaurora/vellamo/benchmarks/html5/InlineVideo.java
+@@ -36,7 +36,6 @@ import java.lang.reflect.Method;
+ import java.util.ArrayList;
+ import java.util.List;
+ 
+-import android.annotation.TargetApi;
+ import android.app.Activity;
+ import android.content.Context;
+ import android.graphics.Canvas;
+@@ -52,7 +51,6 @@ import org.codeaurora.vellamo.benchmarks.html5.AutoWebView.ZoomMode;
+ import org.codeaurora.vellamo.benchmarks.html5.NetworkPerformance.State;
+ import org.codeaurora.vellamo.shared.VCategory;
+ 
+-@TargetApi(14)
+ public class InlineVideo extends AbstractNetworkedBenchmark {
+ 	static private final boolean DEBUG_ON = false;
+ 
+diff --git a/source/src/org/codeaurora/vellamo/benchmarks/html5/WebZoomerBase.java b/source/src/org/codeaurora/vellamo/benchmarks/html5/WebZoomerBase.java
+index dc64ac8..630a9b5 100644
+--- a/source/src/org/codeaurora/vellamo/benchmarks/html5/WebZoomerBase.java
++++ b/source/src/org/codeaurora/vellamo/benchmarks/html5/WebZoomerBase.java
+@@ -36,7 +36,6 @@ import java.util.ArrayList;
+ import java.util.Date;
+ import java.util.List;
+ 
+-import android.annotation.TargetApi;
+ import android.app.Activity;
+ import android.content.Context;
+ import android.graphics.Canvas;
+@@ -56,7 +55,6 @@ import org.codeaurora.vellamo.benchmarks.html5.AutoWebView.ZoomMode;
+ /**
+  * The base for zooming classes
+  */
+-@TargetApi(14)
+ public abstract class WebZoomerBase extends AbstractNetworkedBenchmark {
+ 	static final int DEFAULT_NUM_REPEAT = 8;
+ 	static final int PAUSE_BEFORE_ZOOMING = 2000; // milliseconds

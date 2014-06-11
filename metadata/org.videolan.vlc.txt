@@ -47,6 +47,18 @@ Build:0.9.0-ARMv7,9004
     buildjni=no
     output=bin/VLC-release-unsigned.apk
 
+Build:0.9.4-ARMv7,9404
+    commit=0.9.4
+    subdir=vlc-android
+    forceversion=yes
+    forcevercode=yes
+    srclibs=VLC@e363420
+    prebuild=ln -s vlc-android/$$VLC$$ ../vlc
+    build=cd ../ && \
+        ANDROID_ABI=armeabi-v7a ANDROID_SDK=$$SDK$$ ANDROID_NDK=$$NDK$$ ./compile.sh release
+    buildjni=no
+    output=bin/VLC-release-unsigned.apk
+
 Maintainer Notes:
 Get VLC commit from compile.sh
 
@@ -61,6 +73,6 @@ remove buildjni=no later
 # +5: None (current version)
 #Update Check Mode:Tags
 Vercode Operation:%c + 4
-Current Version:0.9.3
-Current Version Code:9304
+Current Version:0.9.4
+Current Version Code:9404
 

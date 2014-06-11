@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:MIT
+Web Site:https://www.codeaurora.org/vellamo-open
+Source Code:https://www.codeaurora.org/cgit/quic/vellamo/open/tree/source
+Issue Tracker:
+
+Auto Name:VellamoShell
+Summary:Benchmarking tests
+Description:
+There is a more developed version available on gplay.
+For more information on the [http://www.quicinc.com/vellamo/test-descriptions tests], 
+though it's probably out-dated.
+.
+
+Repo Type:git
+Repo:git://codeaurora.org/quic/vellamo/open
+
+Build:2.0.2 S,2002
+    commit=ef19e0889fcfab
+    subdir=source
+    patch=fix-build_2002.patch
+    build=ant release; cd jni; ./vellamo_build_native.sh; git stash
+    buildjni=no
+
+Maintainer Notes:
+Version 4 on gplay under com.quicinc.vellamo; just one commit so far to this repo.
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.0.2 S
+Current Version Code:2002
+
