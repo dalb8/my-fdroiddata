@@ -43,7 +43,7 @@ Maintainer Notes:
 .
 
 Update Check Mode:None
-#In Repo:28.0,2014031421
-Current Version:28.0
-Current Version Code:2014031421
+#In Repo:30.0,2014060517
+Current Version:30.0
+Current Version Code:9999999999
 
