@@ -34,10 +34,18 @@ Build:1.1.6,15
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
+Build:1.1.8,17
+    commit=6321b48673ac25d520c5afc4f8
+    init=sed -i 's@\(android.library.reference.1=\).*@\1libs/actionbarsherlock@' project.properties && \
+        rm -r jni/sdl_ttf/VisualC* && \
+        mv libs/android-support-v4.jar libs/actionbarsherlock/libs
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    buildjni=no
+
 Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.1.7
-Current Version Code:16
+Current Version:1.1.8
+Current Version Code:17
 
