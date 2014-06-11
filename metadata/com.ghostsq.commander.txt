@@ -19,6 +19,7 @@ Description:
 Dual panel file manager, like Norton Commander, Midnight Commander or
 Total Commander. Unlike regular file managers, it copies and moves
 files between its two panels.
+May allow you to edit secondary storage on Android 4.4.
 
 The file manager can also create or extract ZIP archives and transfer
 files to/from FTP servers.
@@ -39,8 +40,8 @@ Build:1.51b7,224
     commit=402
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
-Build:1.52b1,240
-    commit=421
+Build:1.52.2,250
+    commit=445
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
 Maintainer Notes:
@@ -52,6 +53,6 @@ The scanignore is for the dex class loading which is used for loading plugins.
 .
 
 Update Check Mode:None
-Current Version:1.52.1
-Current Version Code:229
+Current Version:1.52.2
+Current Version Code:250
 
