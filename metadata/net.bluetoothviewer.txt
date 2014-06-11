@@ -19,10 +19,19 @@ Auto Name:Bluetooth Viewer (LITE)
 Name:Bluetooth Viewer
 Summary:Bluetooth connection debugging tool
 Description:
+Features:
 * Connect to any Bluetooth device
 * Display incoming raw data
 * Send raw data to the Bluetooth device
 * You can confirm successful pairing, monitor incoming raw data and see exactly what is being transmitted from the Bluetooth device
+
+Limitations:
+* Devices that work in *server mode* i.e. devices that listen to and accept incoming Bluetooth connections.
+* Devices that accept connections on *channel=1*
+* Devices that don't require a specific UUID during connection.
+* Devices that can be paired.
+* Data is only displayed in ASCII.
+* Some devices need an "activation signal" first before they would start sending data.
 .
 
 Repo Type:git
