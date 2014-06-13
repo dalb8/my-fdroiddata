@@ -3,7 +3,7 @@ new file mode 100644
 index 0000000..25fc1eb
 --- /dev/null
 +++ b/custom_rules.xml
-@@ -0,0 +1,119 @@
+@@ -0,0 +1,120 @@
 +<?xml version="1.0" encoding="UTF-8"?>
 +<project name="Camera2" default="help">
 +
@@ -89,6 +89,7 @@ index 0000000..25fc1eb
 +                    resourcefilter="${aapt.resource.filter}"
 +                    libraryResFolderPathRefid="project.library.res.folder.path"
 +                    libraryPackagesRefid="project.library.packages"
++                    manifestpackage="${package.name}"
 +                    previousBuildType="${build.last.target}"
 +                    buildType="${build.target}"
 +                    libraryRFileRefid="project.library.bin.r.file.path"

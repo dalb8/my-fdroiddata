@@ -1,6 +1,8 @@
 # Copyright (c) 2014 David Black.
-# Copyright (c) 2010-2014 the Fdroiddata contributors.
-# Licensed under the GNU AGPLv3.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
 
 ## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
 ##   build recipes might rely on other files found there.
@@ -9,7 +11,7 @@
 Categories:Multimedia
 License:Apache
 Web Site:
-Source Code:https://github.com/CyanogenMod/android_packages_apps_Camera2/commits
+Source Code:https://android.googlesource.com/platform/packages/apps/Camera2
 Issue Tracker:https://code.google.com/p/android/issues/list?can=2&q=camera&colspec=ID+Type+Status+Owner+Summary+Stars&cells=tiles
 
 Auto Name:Camera
@@ -21,23 +23,21 @@ This is the camera2 package which is a new package in Android 4.4.
 Repo Type:git
 Repo:https://android.googlesource.com/platform/packages/apps/Camera2
 
-Build:4.4.2,4420
-    commit=android-sdk-4.4.2_r1
+Build:4.4.3,4430
+    commit=android-4.4.3_r1.1
     target=android-19
     extlibs=android/android-support-v13.jar
-    srclibs=Xmp@android-4.4.2_r1
+    srclibs=Xmp@android-4.4.3_r1.1
     patch=custom_rules.xml_1.patch
     prebuild=cp -r $$Xmp$$ . && \
-        echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.2\nversion.code=4420' >> ant.properties && \
-        echo 'APP_ABI := armeabi-v7a' >> jni/Application.mk
+        echo -e 'source.dir=src_pd;src_pd_gcam;src;Xmp/XMPCore/src\nversion.name=4.4.3\nversion.code=4430\npackage.name=com.android.camera2aosp' >> ant.properties && \
+        echo 'APP_ABI := armeabi-v7a armeabi' >> jni/Application.mk
     buildjni=yes
 
 Maintainer Notes:
-You could alway switch this to Cyanogenmod or OmniROM but at the moment they are very similar
-See version.mk for their version scheme
 .
 
 Update Check Mode:None
-Current Version:4.4.2
-Current Version Code:4420
+Current Version:4.4.3
+Current Version Code:4430
 
