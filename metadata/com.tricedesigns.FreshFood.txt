@@ -1,0 +1,56 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:MIT
+Web Site:http://www.tricedesigns.com/fresh-food-finder
+Source Code:https://github.com/Vincex137/Fresh-Food-Finder-master/commits
+Issue Tracker:https://github.com/Vincex137/Fresh-Food-Finder-master/issues
+
+Auto Name:Fresh Food Finder
+Summary:Find farmers' markets in U.S.A.
+Description:
+Data is provided from the USDA data feed and locations are displayed
+on an OSM map.
+.
+
+Repo Type:git
+Repo:https://github.com/Vincex137/Fresh-Food-Finder-master
+
+# not exact: need to create config.xml in Cordova/
+Build:1.3,13
+    commit=d216b88d37c3db68124
+    init=cordova create Cordova com.tricedesigns.FreshFood FreshFood && \
+      cd Cordova && \
+      cordova platform add android && \
+      rm -rf www platforms/android/assets/www && \
+      rm $(find platforms/android/res -name icon.png) platforms/android/custom_rules.xml && \
+      touch platforms/android/res/drawable/icon.png && \
+      sed -i 's/"0.0.1"/"1.3"/;s/"1"/"13"/'  platforms/android/AndroidManifest.xml && \
+      mv ../www . && \
+      cordova -d prepare
+    build=cd Cordova; cordova compile --release
+    output=Cordova/platforms/android/bin/FreshFood-release-unsigned.apk
+
+Maintainer Notes:
+Need to make a config.xml for Cordova to build an APK.
+
+No icons in APK.
+
+Can add manifest.webapp and use mozilla-apk-cli to create a testing APK very 
+easily (https://github.com/mozilla/apk-factory-service) 
+but making a release APK includes more faff:
+https://github.com/mozilla/apk-factory-service.
+.
+
+Update Check Mode:None
+Current Version:1.3
+Current Version Code:13
+
