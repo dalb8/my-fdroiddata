@@ -14,7 +14,8 @@ Web Site:https://matthewn4444.github.io/onscripter-plus-android
 Source Code:https://github.com/matthewn4444/onscripter-plus-android/commits
 Issue Tracker:https://github.com/matthewn4444/onscripter-plus-android/issues
 
-Auto Name:ONScripter Plus
+Auto Name:ONScripter Plus (Ad Free)
+Name:ONScripter Plus
 Summary:Interactive novel player
 Description:
 [http://onscripter.sourceforge.jp/android/android.html ONScripter] player.
