@@ -7,7 +7,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Internet
-License:MPL2
+License:MPLv2
 Web Site:https://code.google.com/p/iptableslog
 Source Code:https://code.google.com/p/iptableslog/source
 Issue Tracker:https://code.google.com/p/iptableslog/issues
