@@ -17,13 +17,11 @@ Issue Tracker:https://github.com/clworld/IntentLinkOpener/issues
 Auto Name:IntentLinkOpener
 Summary:Useful utility
 Description:
-Android often doesn’t tell you where a link points to and
-if it does then it doesn’t show the full URL.
-For example, to find the source code URL for this app (from F-Droid)
-you have to open a browser to find out.
-
-The workaround is to open the link with 
-[[com.intrications.android.sharebrowser]] then open it with this app.
+Android has a useful share menu, but one still can't see what's
+being shared: this can be annoying on small screens where URLs and
+long texts are truncated. This app adds an item to list of share destinations
+so the object can be seen.
+Works well with [[com.intrications.android.sharebrowser]].
 
 The app can also serve to open certain files in different ways e.g.
 to stream an OGG file via VLC instead of downloading it.
