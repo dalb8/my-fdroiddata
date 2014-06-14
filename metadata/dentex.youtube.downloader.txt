@@ -20,6 +20,10 @@ quality. Optionally,
 you can send it via ssh to another computer. It isn't necessary
 to have the YouTube app: URLs can be shared from the browser.
 
+There is a Firefox
+[https://github.com/ispedals/Enable-Youtube-Player-Mobile extension]
+that changes the user agent for youtube.com only. 
+
 A proprietary crash reporting library was removed.
 
 Status: There is 
