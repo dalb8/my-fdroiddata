@@ -1,0 +1,133 @@
+diff --git a/proxy-settings/build.gradle b/proxy-settings/build.gradle
+index cbb11bb..8c37063 100644
+--- a/proxy-settings/build.gradle
++++ b/proxy-settings/build.gradle
+@@ -1,9 +1,5 @@
+ apply plugin: 'android'
+ 
+-repositories {
+-    maven { url 'http://www.bugsense.com/gradle/' }
+-}
+-
+ android {
+     compileSdkVersion 19
+     buildToolsVersion '19.0.3'
+@@ -21,17 +17,6 @@ android {
+         versionName "2.14"
+     }
+ 
+-    signingConfigs {
+-        releaseSigning {
+-
+-            storeFile file(android_keystore)
+-            storePassword android_keystore_password
+-
+-            keyAlias android_key_alias
+-            keyPassword android_key_password
+-
+-        }
+-    }
+ 
+     buildTypes {
+         release {
+@@ -41,9 +26,6 @@ android {
+ 
+             debuggable false
+ 
+-            buildConfigField "String", "BUGSENSE_LICENSE", "\"" + bugsense_release + "\""
+-
+-            signingConfig signingConfigs.releaseSigning
+         }
+         debug {
+ 
+@@ -75,9 +57,7 @@ dependencies {
+ //    compile 'com.github.tony19:logback-android-core:1.0.7-1'
+ //    compile 'com.github.tony19:logback-android-classic:1.0.7-1'
+ 
+-    compile 'com.bugsense.trace:bugsense:3.6'
+     compile 'de.keyboardsurfer.android.widget:crouton:1.8.4'
+     compile fileTree(dir: 'libs', include: ['*.jar'])
+-    compile files('libs/libGoogleAnalyticsV2.jar')
+     compile project(':android-proxy-library')
+ }
+diff --git a/proxy-settings/src/main/java/com/lechucksoftware/proxy/proxysettings/utils/EventReportingUtils.java b/proxy-settings/src/main/java/com/lechucksoftware/proxy/proxysettings/utils/EventReportingUtils.java
+index d3f78f3..acca491 100644
+--- a/proxy-settings/src/main/java/com/lechucksoftware/proxy/proxysettings/utils/EventReportingUtils.java
++++ b/proxy-settings/src/main/java/com/lechucksoftware/proxy/proxysettings/utils/EventReportingUtils.java
+@@ -4,7 +4,6 @@ import android.content.Context;
+ import android.content.pm.PackageInfo;
+ import android.text.TextUtils;
+ 
+-import com.bugsense.trace.BugSenseHandler;
+ import com.google.analytics.tracking.android.EasyTracker;
+ import com.google.analytics.tracking.android.MapBuilder;
+ import com.lechucksoftware.proxy.proxysettings.App;
+@@ -45,29 +44,6 @@ public class EventReportingUtils implements IEventReporting
+     public static void setup(Context ctx)
+     {
+         getInstance().context = ctx;
+-        getInstance().setupBugSense(ctx);
+-    }
+-
+-    private void setupBugSense(Context ctx)
+-    {
+-        String key = null;
+-
+-        key = BuildConfig.BUGSENSE_LICENSE;
+-
+-        if (key == null || key.length() != 8)
+-        {
+-            CharSequence text = "No valid BugSense keyfile found";
+-//            int duration = Toast.LENGTH_LONG;
+-//            Toast toast = Toast.makeText(ctx, text, duration);
+-//            toast.show();
+-            App.getLogger().e(TAG, text.toString());
+-        }
+-        else
+-        {
+-            App.getLogger().i(TAG, String.format("BugSense setup [%s]", key));
+-            BugSenseHandler.initAndStartSession(ctx, key);
+-            setupDone = true;
+-        }
+     }
+ 
+     public static void sendException(Exception e)
+@@ -80,26 +56,11 @@ public class EventReportingUtils implements IEventReporting
+         App.getLogger().e(TAG, "Handled exception message: " + e.getMessage());
+         App.getLogger().e(TAG, "Handled exception stack trace: " + TextUtils.join("\n", e.getStackTrace()));
+ 
+-        if (setupDone)
+-        {
+-            // Bugsense
+             HashMap<String, String> map = new HashMap<String, String>();
+             PackageInfo appInfo = Utils.getAppInfo(context);
+ 
+-            try
+-            {
+                 map.put("versionName", String.valueOf(appInfo.versionName));
+                 map.put("versionCode", String.valueOf(appInfo.versionCode));
+-            }
+-            catch (Exception internalEx)
+-            {
+-                BugSenseHandler.sendException(internalEx);
+-            }
+-
+-            if (map != null)
+-                BugSenseHandler.sendExceptionMap(map,e);
+-            else
+-                BugSenseHandler.sendException(e);
+ 
+             // Google Analytics
+ //            DetailedExceptionParser sep = new DetailedExceptionParser();
+@@ -107,11 +68,6 @@ public class EventReportingUtils implements IEventReporting
+ //            Map<String, String> map = MapBuilder.createException(exceptionDescription, false).build();
+ //            EasyTracker.getInstance(getInstance().context).send(map);
+         }
+-        else
+-        {
+-            setupBugSense(App.getInstance().getApplicationContext());
+-        }
+-    }
+ 
+     public static void sendEvent(String s)
+     {

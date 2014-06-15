@@ -1,0 +1,48 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Internet
+License:Apache
+Web Site:http://shouldit.be
+Source Code:https://github.com/shouldit/android-proxy
+Issue Tracker:https://github.com/shouldit/android-proxy/issues
+
+Auto Name:Proxy Settings
+Summary:Use proxy servers
+Description:
+Allows the configuration of proxy servers on when on WiFi; doesn't work
+for GSM.
+For example, you can use 127.0.0.1 on port 8118 to proxy traffic apps
+through [[org.torproject.android]].
+
+Bugsense and Google Analytics were removed.
+.
+
+Repo Type:git
+Repo:https://github.com/shouldit/android-proxy.git
+
+Build:2.14,13002145
+    commit=2.14.5
+    subdir=proxy-settings
+    patch=libs_13002145.patch
+    srclibs=NoAnalytics@v0.3.1
+    rm=proxy-settings/libs/libGoogleAnalyticsServices.jar
+    prebuild=cp -R $$NoAnalytics$$/src/com/* src/main/java/com/ && \
+        sed -i '31d' build.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:2.14
+Current Version Code:13002145
+
