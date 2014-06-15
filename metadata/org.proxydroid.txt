@@ -1,0 +1,60 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Internet
+License:GPLv3
+Web Site:
+Source Code:https://github.com/madeye/proxydroid
+Issue Tracker:https://github.com/madeye/proxydroid/issues
+
+Auto Name:ProxyDroid
+Summary:Make traffic go through a proxy
+Description:
+Requires root.
+
+Admob and Flurry libraries were removed.
+.
+
+Repo Type:git
+Repo:https://github.com/madeye/proxydroid.git
+
+Build:2.7.0,53
+    disable=still need to build stunnel , tproxy and cntlm
+    commit=3d11130c1bee0c6b229f54c695
+    patch=pom_53.patch
+    extlibs=iptables-script_1.4.20.zip
+    srclibs=FinfAgent@v0.1,MobAdMob@3bd78884
+    prebuild=mv $$MobAdMob$$/src/com/google com/ && \
+        mv $$FinfAgent$$/src/com/flurry com/ && \
+        unzip libs/iptables-script_1.4.20.zip && \
+        sed -i 's/arm x86 mips/arm/g' external/Makefile && \
+        rm libs/iptables-script_1.4.20.zip && \
+        wget https://www.stunnel.org/downloads/stunnel-5.02.tar.gz && \
+        tar xf stunnel-5.02.tar.gz && \
+        cd stunnel-5.02; build_openssl && \
+        ./configure; ./build-android.sh; mv src/stunnel ../assets/ && \
+        wget http://downloads.sourceforge.net/project/cntlm/cntlm/cntlm%200.92.3/cntlm-0.92.3.tar.gz && \
+        Build_and_move_cntlm_to_assets && \
+        same for http://sourceforge.net/projects/transproxy
+    build=ndk-build APP_ABI=armeabi && \
+        mv libs/armeabi/redsocks assets/ && \
+        mv libs/armeabi/shadowsocks assets/ && \
+        mv libs/armeabi/shrpx assets/ && \
+        make -C external NDK=$$NDK$$ && \
+        mv external/iptables_arm assets/iptables
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:2.7.0
+Current Version Code:53
+

@@ -1,0 +1,61 @@
+diff --git a/pom.xml b/pom.xml
+index f1814ca..5514a1f 100755
+--- a/pom.xml
++++ b/pom.xml
+@@ -8,19 +8,6 @@
+   <packaging>apk</packaging>
+   <name>ProxyDroid</name>
+ 
+-  <repositories>
+-    <repository>
+-      <id>madeye-maven-repository</id>
+-      <url>https://github.com/madeye/maven-repository/raw/master</url>
+-      <releases>
+-        <enabled>true</enabled>
+-      </releases>
+-      <snapshots>
+-        <enabled>false</enabled>
+-      </snapshots>
+-    </repository>
+-  </repositories>
+-
+   <properties>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+   </properties>
+@@ -35,18 +22,6 @@
+     </dependency>
+ 
+     <dependency>
+-      <groupId>com.google.android.admob</groupId>
+-      <artifactId>admob</artifactId>
+-      <version>6.1.0-r7</version>
+-    </dependency>
+-
+-    <dependency>
+-      <groupId>com.flurry</groupId>
+-      <artifactId>flurry</artifactId>
+-      <version>2.2.5</version>
+-    </dependency>
+-
+-    <dependency>
+       <groupId>com.j256.ormlite</groupId>
+       <artifactId>ormlite-core</artifactId>
+       <version>4.41</version>
+@@ -88,7 +63,7 @@
+     <dependency>
+         <groupId>org.mozilla</groupId>
+         <artifactId>rhino</artifactId>
+-        <version>1.7R2_android</version>
++        <version>1.7R4</version>
+     </dependency>
+ 
+ </dependencies>
+@@ -104,7 +79,7 @@
+             <plugin>
+                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+                 <artifactId>android-maven-plugin</artifactId>
+-                <version>3.3.0</version>
++                <version>3.8.0</version>
+                 <extensions>true</extensions>
+             </plugin>
+         </plugins>
