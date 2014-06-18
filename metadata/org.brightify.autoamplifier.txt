@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv3
+Web Site:http://brightify.org
+Source Code:https://github.com/brightify/autoamplifier
+Issue Tracker:https://github.com/brightify/autoamplifier/issues
+
+Auto Name:AutoAmplifier
+Summary:Adjust audio volume
+Description:
+Adjusts audio volume depending on ambient noise.
+.
+
+Repo Type:git
+Repo:https://github.com/brightify/autoamplifier.git
+
+Build:1.0.2,3
+    commit=aa1cc941fbc1aaee2e47506bd43
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0.2
+Current Version Code:3
+
