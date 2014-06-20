@@ -23,13 +23,13 @@ Need an ownCloud instance running a recent version with the Notes app installed.
 Repo Type:git
 Repo:https://github.com/aykit/myownnotes-android.git
 
-Build:1.1,2
-    commit=1.1.0
+Build:1.2,3
+    commit=1.2.0
 
 Maintainer Notes:
 .
 
-Update Check Mode:Tags
+#Update Check Mode:Tags
 Current Version:1.2
 Current Version Code:3
 

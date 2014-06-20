@@ -25,12 +25,13 @@ No description available
 Repo Type:git
 Repo:https://github.com/Floens/Clover.git
 
-Build:v1.0.2,20
-    commit=v1.0.2
-    subdir=Clover
-
 Build:v1.1.1,25
     commit=v1.1.1
+    subdir=Clover/app
+    gradle=yes
+
+Build:v1.1.2,26
+    commit=v1.1.2
     subdir=Clover/app
     gradle=yes
 
@@ -39,6 +40,6 @@ version supposed to be in app/version.properties
 .
 
 Update Check Mode:None
-Current Version:v1.1.1
+Current Version:v1.1.2
 Current Version Code:9999999
 

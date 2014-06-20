@@ -19,8 +19,8 @@ Quite a few jars, which haven't been verified yet.
 Repo Type:git
 Repo:https://github.com/abaker/tasks.git
 
-Build:4.6.15,329
-    commit=4.6.15
+Build:4.6.16,330
+    commit=0d30
     subdir=astrid
     gradle=yes
 
@@ -29,6 +29,6 @@ Quite a few jars, which haven't been verified yet.
 .
 
 #Update Check Mode:Tags
-Current Version:4.6.15
-Current Version Code:329
+Current Version:4.6.16
+Current Version Code:330
 
