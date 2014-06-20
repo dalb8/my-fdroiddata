@@ -21,16 +21,20 @@ Description:
 Repo Type:git
 Repo:https://github.com/tilal6991/HoloIRC.git
 
-Build:2.9.3,37
-    commit=master
-    disable=used gradlew; edited settings.gradle as well as usual build.gradle edits; added build.gradles to three srclibs; all srclibs symlinked to /libraries; Don't use ABS root build.gradle from 4.4.0 because of some bug; AM.xml of NumberPicker needs aligning with ABS to allow manifest merging
-    srclibs=ActionBarSherlock@9598f2bb,SlidingMenu@7343c3cd,Relay@master,NumberPicker-SimonVT@master
+Build:3.1.2,43
+    commit=f47f6728320b90e7432982d24
     subdir=HoloIRC
+    init=sed -i "/^def Properties/,\$d" build.gradle
+    srclibs=Relay@master,Bus-tilal@ffbd26e4c803aa62,SlidingUp-tilal@master
+    prebuild=cd ..; mkdir -p libraries; cd libraries && \
+      ln -s $(readlink -f $$Relay$$) relay; ln -s $(readlink -f $$Bus-tilal$$) Bus; ln -s $(readlink -f $$SlidingUp-tilal$$) AndroidSlidingUpPanel
+    gradle=yes
 
 Maintainer Notes:
+Tags are unreliable.
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:3.1.2
-Current Version Code:
+Current Version Code:43
 

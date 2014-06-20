@@ -1,3 +1,3 @@
 Repo Type:git
-Repo:https://github.com/tilal6991/Relay
+Repo:https://github.com/tilal6991/Bus
 Prepare:sed -i "/^android.libraryVariants/,\$d" library/build.gradle
