@@ -1,0 +1,42 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:None
+Web Site:
+Source Code:https://github.com/don/phonegap-nfc-reader/commits
+Issue Tracker:https://github.com/don/phonegap-nfc-reader/issues
+
+Auto Name:NFC Reader
+Summary:Basic app to read NFC tags
+Description:
+The app will open when a tag with a Mime Media Record of type 
+"text/pg" is scanned; otherwise the app must be launched first.
+.
+
+Repo Type:git
+Repo:https://github.com/don/phonegap-nfc-reader
+
+Build:0.0.1,1
+    commit=033f11092bb25ee957675eb2da69f75
+    prebuild=\
+      rm -rf platforms/android/assets/www && \
+      cp -R www platforms/android/assets/ && \
+      cordova -d prepare android
+    build=cordova compile --release android
+    output=platforms/android/bin/NfcReader-release-unsigned.apk
+
+Maintainer Notes:
+.
+
+Update Check Mode:None
+Current Version:0.0.1
+Current Version Code:1
+

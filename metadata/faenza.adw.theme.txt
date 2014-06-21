@@ -6,7 +6,7 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:System
+Categories:Themes
 License:GPLv3
 Web Site:https://code.google.com/p/faenza-adw-theme
 Source Code:https://code.google.com/p/faenza-adw-theme/source/list

@@ -1,0 +1,218 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index b704d10..2228fd3 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -21,9 +21,6 @@
+         android:label="@string/app_name"
+         android:theme="@style/AppTheme" >
+         
+-        <meta-data android:name="com.google.android.gms.version"
+-                android:value="@integer/google_play_services_version"/>
+-        
+         <activity
+             android:name="com.chromium.fontinstaller.MainActivity"
+             android:label="@string/app_name" >
+@@ -100,8 +97,6 @@
+          android:name="com.chromium.fontinstaller.AboutEE"  
+          android:screenOrientation="portrait" />
+         
+-        <activity android:name="com.google.android.gms.ads.AdActivity"
+-             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+     </application>
+ 
+-</manifest>
+\ No newline at end of file
++</manifest>
+diff --git a/bin/FontInstaller.apk b/bin/FontInstaller.apk
+deleted file mode 100644
+index 5810675..0000000
+Binary files a/bin/FontInstaller.apk and /dev/null differ
+diff --git a/project.properties b/project.properties
+index fa4c245..b2c20cd 100644
+--- a/project.properties
++++ b/project.properties
+@@ -12,5 +12,4 @@
+ 
+ # Project target.
+ target=android-19
+-android.library.reference.1=..\\appcompat_v7
+-android.library.reference.2=..\\..\\workspace\\google-play-services_lib
++android.library.reference.1=../srclib/Appcompat/v7/appcompat
+diff --git a/res/layout/backup_restore.xml b/res/layout/backup_restore.xml
+index ec5f40e..d52fc22 100644
+--- a/res/layout/backup_restore.xml
++++ b/res/layout/backup_restore.xml
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" >
+@@ -37,13 +36,4 @@
+             android:text="@string/delete_backup_button" />
+     </LinearLayout>
+ 
+-    <com.google.android.gms.ads.AdView
+-        android:id="@+id/adView"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentBottom="true"
+-        android:layout_centerHorizontal="true"
+-        ads:adSize="BANNER"
+-        ads:adUnitId="ca-app-pub-8798644144122718/6263923171" />
+-
+-</RelativeLayout>
+\ No newline at end of file
++</RelativeLayout>
+diff --git a/res/layout/font_list.xml b/res/layout/font_list.xml
+index 5380402..0b1980a 100644
+--- a/res/layout/font_list.xml
++++ b/res/layout/font_list.xml
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" >
+@@ -8,7 +7,6 @@
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:layout_above="@+id/adView"
+         android:orientation="vertical" >
+ 
+         <ListView
+@@ -22,13 +20,4 @@
+         </ListView>
+     </LinearLayout>
+ 
+-    <com.google.android.gms.ads.AdView
+-        android:id="@+id/adView"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentBottom="true"
+-        android:layout_centerHorizontal="true"
+-        ads:adSize="BANNER"
+-        ads:adUnitId="ca-app-pub-8798644144122718/6263923171" />
+-
+-</RelativeLayout>
+\ No newline at end of file
++</RelativeLayout>
+diff --git a/res/layout/main_card.xml b/res/layout/main_card.xml
+index a2c054f..dd14cd7 100644
+--- a/res/layout/main_card.xml
++++ b/res/layout/main_card.xml
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+@@ -54,13 +53,4 @@
+             android:textColor="#ff666666" />
+     </LinearLayout>
+ 
+-    <com.google.android.gms.ads.AdView
+-        android:id="@+id/adView"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentBottom="true"
+-        android:layout_centerHorizontal="true"
+-        ads:adSize="BANNER"
+-        ads:adUnitId="ca-app-pub-8798644144122718/6263923171" />
+-
+-</RelativeLayout>
+\ No newline at end of file
++</RelativeLayout>
+diff --git a/src/com/chromium/fontinstaller/BackupRestore.java b/src/com/chromium/fontinstaller/BackupRestore.java
+index 2cb9f04..739247f 100644
+--- a/src/com/chromium/fontinstaller/BackupRestore.java
++++ b/src/com/chromium/fontinstaller/BackupRestore.java
+@@ -19,9 +19,6 @@ package com.chromium.fontinstaller;
+ import java.io.File;
+ import java.io.IOException;
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-
+ import android.app.Activity;
+ import android.app.Dialog;
+ import android.app.ProgressDialog;
+@@ -41,15 +38,6 @@ public class BackupRestore extends Activity {
+ 		super.onCreate(savedInstanceState);
+ 		setContentView(R.layout.backup_restore);
+ 
+-		// Look up the AdView as a resource and load a request.
+-		AdView adView = (AdView) findViewById(R.id.adView);
+-		AdRequest adRequest = new AdRequest.Builder()
+-		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+-		.addTestDevice("2797F5D9304B6B3A15771A0519A4F687")  // HTC Desire
+-		.addTestDevice("D674E5DF79F70B01D8866A5F99A2ACBA") // Samsung i9000
+-		.build();
+-		adView.loadAd(adRequest);
+-
+ 		/**
+ 		 * Listens for user click on 'Backup' button.
+ 		 * First a confirmation dialog is shown, and once
+diff --git a/src/com/chromium/fontinstaller/FontList.java b/src/com/chromium/fontinstaller/FontList.java
+index afa5c9d..ccf56ea 100644
+--- a/src/com/chromium/fontinstaller/FontList.java
++++ b/src/com/chromium/fontinstaller/FontList.java
+@@ -22,9 +22,6 @@ import java.io.IOException; //imports java.io.IOException
+ import java.io.InputStreamReader; //imports java.io.InputStreamreader
+ import java.util.ArrayList; //imports java.util.ArrayList
+ 
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+-
+ import android.content.Intent; //imports android.content.Intent
+ import android.app.ActionBar;
+ import android.app.Activity; //imports android.app.Acticity
+@@ -81,15 +78,6 @@ public class FontList extends Activity  {
+ 		setContentView(R.layout.font_list);
+ 		prefs = getSharedPreferences("com.chromium.fontinstaller.fontlist", MODE_PRIVATE);
+ 
+-		// Look up the AdView as a resource and load a request.
+-		AdView adView = (AdView) findViewById(R.id.adView);
+-		AdRequest adRequest = new AdRequest.Builder()
+-		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+-		.addTestDevice("2797F5D9304B6B3A15771A0519A4F687")  // HTC Desire
+-		.addTestDevice("D674E5DF79F70B01D8866A5F99A2ACBA") // Samsung i9000
+-		.build();
+-		adView.loadAd(adRequest);
+-
+ 		fontDest = "/system/fonts"; //change path to /system/fonts when releasing
+ 
+ 		lv = (ListView) findViewById(R.id.listView1);
+diff --git a/src/com/chromium/fontinstaller/MainActivity.java b/src/com/chromium/fontinstaller/MainActivity.java
+index e400634..6ef72df 100644
+--- a/src/com/chromium/fontinstaller/MainActivity.java
++++ b/src/com/chromium/fontinstaller/MainActivity.java
+@@ -17,8 +17,6 @@
+ package com.chromium.fontinstaller;
+ 
+ import java.io.IOException;
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.AdView;
+ import android.support.v7.app.ActionBarActivity;
+ import android.app.DownloadManager;
+ import android.content.Context;
+@@ -64,15 +62,6 @@ public class MainActivity extends ActionBarActivity {
+ 	    	win.setFlags (WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+ 	    }
+ 		
+-		// Look up the AdView as a resource and load a request.
+-		AdView adView = (AdView) findViewById(R.id.adView);
+-		AdRequest adRequest = new AdRequest.Builder()
+-		.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)        // All emulators
+-		.addTestDevice("2797F5D9304B6B3A15771A0519A4F687")  // HTC Desire
+-		.addTestDevice("D674E5DF79F70B01D8866A5F99A2ACBA") // Samsung i9000
+-		.build();
+-		adView.loadAd(adRequest);	
+-
+ 		// Open Install a font
+ 		openFontList = (Button)findViewById(R.id.installFont);
+ 		openFontList.setOnClickListener(new View.OnClickListener() {
