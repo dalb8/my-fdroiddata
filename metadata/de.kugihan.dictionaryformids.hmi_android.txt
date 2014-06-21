@@ -38,7 +38,7 @@ Build:0.92.2,103
     subdir=Android
     prebuild=mv -f ../DictionaryForMIDs/src/de/kugihan/dictionaryformids/* src/de/kugihan/
 
-Build:0.92.3,103
+Build:0.92.3,9999999
     disable=missing core project, build file needs hacking
     commit=Android_0_92_3_release
     subdir=Android

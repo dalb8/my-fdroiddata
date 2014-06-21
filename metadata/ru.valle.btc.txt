@@ -15,13 +15,21 @@ Issue Tracker:https://github.com/ValleZ/Paper-Wallet/issues
 Auto Name:Paper Wallet
 Summary:Back up bitcoins
 Description:
-Generates a bitcoin address and corresponding private key in 'mini' format. 
+Generates a bitcoin address and corresponding private key in 'mini' format,
+or optionally the more standard WIP format.
 Write down the private key and address then send bitcoins to that address.
+If you lose the paper with this key (or if it gets wet!) you lose the bitcoins.
+
+(Official description says:
 You can securely and OFFLINE SPEND coins from your paper wallet 
 without revealing your private key.
-Full instructions within.
-
 Check your balance via blockchain.info.
+
+Seems more like the private key must be imported (swept) into Bitcoin Qt or
+some online wallet like Blockchain.info. The latter also supports the encrypted
+key option. see [https://bitcoinpaperwallet.com/wallet-tutorial-add-withdraw-funds this].)
+
+ᶘᵒᴥᵒᶅ
 .
 
 Repo Type:git

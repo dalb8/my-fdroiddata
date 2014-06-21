@@ -8,7 +8,7 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-AntiFeatures:NonFreeNet,UpstreamNonFree
+AntiFeatures:NonFreeNet
 Categories:Phone & SMS
 License:GPL
 Web Site:https://telegram.org
@@ -26,8 +26,6 @@ Unlike Whatsapp your message history is stored on the server.
 There is an option to make an end-to-end encrypted message and even
 have messages self-destruct after a while.
 
-This project is a close derivative of one of the official apps, with some proprietary
-libraries removed: GMS for push notifications and one for bug reporting.
 The server project is non-free though it is argued that a clone can
 easily be made since the API is published; there are unofficial clients
 for a variety of platforms, including GNU/Linux and the WWW.
@@ -36,15 +34,7 @@ for a variety of platforms, including GNU/Linux and the WWW.
 Repo Type:git
 Repo:https://github.com/slp/Telegram-FOSS.git
 
-Build:1.3.21,160
-    commit=v1.3.21a
-    subdir=TMessagesProj
-    patch=package-name_160.patch
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a' && \
-        /home/gerry/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle nativeLibsToJar
-    buildjni=no
-    gradle=yes
-
+# not exact: this is from slp
 Build:1.4.9,219
     commit=v1.4.9c
     subdir=TMessagesProj
@@ -55,12 +45,21 @@ Build:1.4.9,219
     buildjni=no
     gradle=yes
 
+# not exact: this still contains GMS; use build.gradle from dev branch
+Build:1.5.0,250
+    commit=master
+    subdir=TMessagesProj
+    init=sed -i 's/org.telegram.messenger/org.telegram.ui.ApplicationLoader.foss/' config/foss/AndroidManifest.xml && \
+       sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
+    rm=TMessagesProj/libs/*/*.so
+    build=ndk-build -C jni APP_ABI=armeabi-v7a
+    buildjni=no
+    gradle=Foss
+
 Maintainer Notes:
-patch changes the package name because that is identical to the upstream
 .
 
-Update Check Mode:Tags
-Update Check Name:org.telegram.messenger
-Current Version:1.4.9
-Current Version Code:219
+Update Check Mode:None
+Current Version:1.5.0
+Current Version Code:250
 

@@ -1,5 +1,11 @@
-# Copyright (c) 2014 David Black
-# See https://gitorious.org/asdgasd/my-fdroiddata
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Office
 License:GPLv3
 Web Site:
@@ -11,24 +17,32 @@ FlattrID:2308341
 Auto Name:Tasks
 Summary:Task Manager
 Description:
-Based on last version of Astrid. Auto back-up is enabled in settings.
+This app is built on the same code as the original Astrid app but differs in
+several ways:
 
-Quite a few jars, which haven't been verified yet.
+* No sharing or assigning tasks
+* No iOS or web interface
+* Third party apps need to update their code to support Tasks
+
+Tasks is not affiliated with Yahoo! or Todoroo.
+
+There's no syncing option currently, outside that of Google.
+You can export data to primary storage but you'll need to move that somewhere
+safe.
 .
 
 Repo Type:git
 Repo:https://github.com/abaker/tasks.git
 
-Build:4.6.16,330
-    commit=0d30
+Build:4.6.16,331
+    commit=4.6.16
     subdir=astrid
     gradle=yes
 
 Maintainer Notes:
-Quite a few jars, which haven't been verified yet.
 .
 
 #Update Check Mode:Tags
 Current Version:4.6.16
-Current Version Code:330
+Current Version Code:331
 
