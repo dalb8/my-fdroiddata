@@ -1,0 +1,39 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv3
+Web Site:
+Source Code:https://github.com/MohammadAG/Android-SoundRecorder
+Issue Tracker:https://github.com/MohammadAG/Android-SoundRecorder/issues
+
+Auto Name:Sound Recorder
+Summary:Better looking dictaphone
+Description:
+Record and keep track of recordings easily.
+Records files to sdcard/SoundRecorder in uncompressed wav format.
+.
+
+Repo Type:git
+Repo:https://github.com/MohammadAG/Android-SoundRecorder.git
+
+Build:1.0.2,3
+    commit=1.0.2
+    srclibs=Appcompat@android-4.4.4_r1,1:ListViewAnimations@2.5.0,2:UndoBar@5c00c7
+    extlibs=android/android-support-v4.jar
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:1.0.2
+Current Version Code:3
+
