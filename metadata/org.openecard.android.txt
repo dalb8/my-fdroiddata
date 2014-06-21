@@ -20,16 +20,14 @@ related international standards, such as ISO/IEC 24727.
 NFC is required in this app but there are Java apps for the desktop platforms too.
 It would be intended for ID cards, primarily in Germany for now as 
 an alternative to AusweisApp.
-
-Status: Not officially published!
 .
 
 Repo Type:git
 Repo:https://github.com/ecsec/open-ecard.git
 
 Build:1.0,1
-    disable=build failure with ndk-r9c
-    commit=8168f3812d2cf2a826
+    disable=1.1.0 should be publishable
+    commit=16a0f8f
     subdir=clients/android
     submodules=yes
     init=export ANDROID_NDK_HOME=$$NDK$$ && \
@@ -43,9 +41,6 @@ Build:1.0,1
     novcheck=yes
 
 Maintainer Notes:
-Fails with, 'the module, org.openecard.ifd.scio-backend:android-pcsc:apklib:1.1.0-pre1 can't be found',
-because ndk-build fails.
-
 pom.xml hacked to remove first-party ''artifact'' repositories,
 but hopefully everything needed is in the repo except scapi.
 
