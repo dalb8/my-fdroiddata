@@ -16,11 +16,13 @@ Name:Browser Intercept
 Auto Name:Browser Intercept - Share URL
 Summary:Peek at urls
 Description:
-When opening a web URL from an app, Android never shows the address,
-only a choice of browsers or opens the default browser.
-This app allows you to share the URL, so you can at least see what domain it is.
-You can install [[com.nightshadelabs.anotherbrowser]] to give an option
-to return to a browser option.
+When opening a web URL from an app Android only lets you open it in a browser.
+By opening the URL instead with this app, you can have it open in other types
+of apps.
+
+[[nu.clw.intentlinkopener]] is a useful companion which can display
+the full text of the URL, which in turn can be touched to give an option
+to return to a browser.
 .
 
 Repo Type:git

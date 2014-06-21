@@ -18,7 +18,7 @@ Summary:Audio filters
 Description:
 Handy filters for headphone users.
 
-Does not alter all audio output:
+Does not alter audio output unless the app implements the audioeffects API;
 [[ch.blinkenlights.android.vanilla]] and
 [[com.andrew.apolloMod]] are compatible.
 
@@ -27,17 +27,18 @@ Relies on some system libraries that are usually only found in some custom ROMS.
 They are called libcyanogen-dsp.so/libreverbwrapper.so/libvisualizer.so.
 .
 
-Maintainer Notes:
 Repo Type:git
 Repo:https://github.com/omnirom/android_packages_apps_DSPManager
 
-Builds but doesn't work.
+# Builds but doesn't work.
 Build:2.1,4
     commit=cm-11.0
     forcevercode=yes
     patch=stereo_4.patch
     extlibs=android/android-support-v13.jar
     target=android-19
+
+Maintainer Notes:
 .
 
 Update Check Mode:None

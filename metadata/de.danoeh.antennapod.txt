@@ -42,10 +42,19 @@ Build:0.9.9.0,37
         cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
     gradle=yes
 
+Build:0.9.9.1,38
+    commit=0.9.9.1
+    patch=flattr.patch
+    srclibs=DragSort-danoeh@1bb29afb91f
+    prebuild=rm -f submodules/dslv/library && \
+        ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
+        cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
+    gradle=yes
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.9.9.0
-Current Version Code:37
+Current Version:0.9.9.1
+Current Version Code:38
 

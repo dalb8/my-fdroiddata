@@ -1,0 +1,13 @@
+diff --git a/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example b/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
+index da16069..88fbc3f 100644
+--- a/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
++++ b/src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example
+@@ -2,6 +2,6 @@ package de.danoeh.antennapod.util.flattr;
+ 
+ /** Contains credentials to access the Flattr API*/
+ public class FlattrConfig {
+-	static final String APP_KEY = "";
+-	static final String APP_SECRET = "";
++	static final String APP_KEY = "1wpjfofGEf6zu9acSYorcFky1QpsGeRx";
++	static final String APP_SECRET = "B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8";
+ }

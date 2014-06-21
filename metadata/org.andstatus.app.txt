@@ -29,6 +29,10 @@ Build:8.4,100
     commit=AndStatus-8.4
     init=rm build.xml custom_rules.xml
 
+Build:9.0-SNAPSHOT,102
+    commit=623f928ca8b5c1b248bccdf93540070ff2
+    init=rm build.xml custom_rules.xml
+
 Maintainer Notes:
 .
 

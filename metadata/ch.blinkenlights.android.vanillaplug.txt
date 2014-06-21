@@ -1,14 +1,26 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Multimedia
 License:GPLv3
 Web Site:
 Source Code:https://github.com/adrian-bl/vanilla-headphone-detector/commits
 Issue Tracker:https://github.com/adrian-bl/vanilla-headphone-detector/issues
 
-Auto Name:Headphone detector for Vanilla Music
 Name:Vanilla Music Detector
 Summary:Launch music player
 Description:
-Plugin for [[ch.blinkenlights.android.vanilla]].
+Start or stop music via [[ch.blinkenlights.android.vanilla]]
+whenever headphones are plugged in or out.
+
+The app needs to be launched once for the trick to work.
 .
 
 Repo Type:git
