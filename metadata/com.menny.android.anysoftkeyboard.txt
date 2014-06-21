@@ -39,31 +39,28 @@ Build:20130709,106
     prebuild=sed -i 's@..\/AnySoftKeyboardTools@$$AnySoftKeyboardTools$$@g' build.xml
     buildjni=yes
 
-Build:1.2.2,122
-    disable=missing resources; can't build native libs
-    commit=v122
-    patch=gradle_122.patch
-    rm=src/main/res/raw/words_1.dict,libs/native_libs.jar
+# not exact: jni doesn't build. not published
+Build:1.2.3,123
+    commit=05a992013979b5ef2f3f
+    patch=gradle_123.patch
+    rm=res/raw/words_1.dict
     extlibs=words.xml.gz
-    srclibs=AnySoftKeyboard-API@51a2be888b9,AnySoftKeyboardTools@73e9a09496,FrankenRobot@442db
+    srclibs=AnySoftKeyboard-API@a3d1e0,AnySoftKeyboardTools@73e9a09496,FrankenRobot@8d637
     prebuild=\
-        mkdir -p src/main/dict src/main/jniLibs/ && \
-        gunzip -c libs/words.xml.gz > src/main/dict/words.xml; rm libs/words.xml.gz && \
-        echo -e "include ':AnySoftKeyboard-API'\nproject(':AnySoftKeyboard-API').projectDir = new File('$(readlink -f $$AnySoftKeyboard-API$$)')" >> settings.gradle && \
-        echo -e "include ':FrankenRobot'\nproject(':FrankenRobot').projectDir = new File('$(readlink -f $$FrankenRobot$$)')" >> settings.gradle
-    build=TOOLS=$(readlink -f $$AnySoftKeyboardTools$$) && \
-      (cd src/main/ ; java -jar $TOOLS/makedict/makedict.jar) && \
-      $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi' && \
-      mv libs/armeabi* src/main/jniLibs/
-    buildjni=no
+        echo -e "include ':AnySoftKeyboard-API'\nproject(':AnySoftKeyboard-API').projectDir = new File('$$AnySoftKeyboard-API$$')" >> settings.gradle && \
+        echo -e "include ':FrankenRobot'\nproject(':FrankenRobot').projectDir = new File('$$FrankenRobot$$')" >> settings.gradle && \
+        mkdir -p dict && \
+        gunzip -c libs/words.xml.gz > dict/words.xml
+    scanignore=src/main/jniLibs
+    build=java -jar $$AnySoftKeyboardTools$$/makedict/makedict.jar
     gradle=yes
 
 Maintainer Notes:
 Keep an eye out for new word list
 
-       mkdir -p lib && \
-       mv libs/* lib/ && \
-       zip -r libs/native_libs.jar lib/*
+    buildjni=no
+        ndk-build APP_ABI=armeabi-v7a armeabi && \
+        mv libs/armeabi* src/main/jniLibs/
 .
 
 Update Check Mode:Tags
