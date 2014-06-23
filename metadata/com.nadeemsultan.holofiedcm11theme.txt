@@ -1,0 +1,22 @@
+Categories:Themes
+License:Apache
+Web Site:
+Source Code:https://github.com/nadeemsultan/HolofiedCM11Theme
+Issue Tracker:https://github.com/nadeemsultan/HolofiedCM11Theme/issues
+
+Auto Name:Holofied CM11 Theme
+Summary:CyanogenMod-compatible theme
+Description:
+Reverts some CyanogenMod tweaks to AOSP.
+.
+
+Repo Type:git
+Repo:https://github.com/nadeemsultan/HolofiedCM11Theme
+
+Build:1.3.1,5
+    commit=14fb1300029a87f8049f1a0256
+
+Update Check Mode:RepoManifest
+Current Version:1.3.1
+Current Version Code:5
+
