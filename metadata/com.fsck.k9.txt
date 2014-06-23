@@ -43,6 +43,18 @@ Build:4.803,20004
     build=$$MVN3$$ package -f HtmlCleaner/pom.xml && \
         mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
 
+Build:4.804,20005
+    commit=4.804
+    rm=libs/jzlib-1.0.7.jar;libs/htmlcleaner-2.2.jar;libs/jutf7-1.0.1-SNAPSHOT.jar;tests
+    extlibs=jzlib/jzlib-1.0.7.tar.gz
+    srclibs=Jutf7@20
+    prebuild=unzip libs/htmlcleaner-2.2-all.zip && \
+        tar xzf libs/jzlib-1.0.7.tar.gz && \
+        echo 'source.dir=src;$$Jutf7$$/src;jzlib-1.0.7' >> ant.properties && \
+        rm libs/jzlib-1.0.7.tar.gz libs/htmlcleaner-2.2-all.zip
+    build=$$MVN3$$ package -f HtmlCleaner/pom.xml && \
+        mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
+
 Build:4.904,21007
     commit=4.904
     rm=libs/jzlib-1.0.7.jar;libs/htmlcleaner-2.2.jar;libs/jutf7-1.0.1-SNAPSHOT.jar;tests
@@ -59,6 +71,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest/4.8-MAINT
-Current Version:4.803
-Current Version Code:20004
+Current Version:4.804
+Current Version Code:20005
 
