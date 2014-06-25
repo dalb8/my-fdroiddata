@@ -1,0 +1,2379 @@
+diff --git a/app/src/dacer/settinghelper/SettingUtility.java b/app/src/dacer/settinghelper/SettingUtility.java
+index 281bb2b..feea7d3 100644
+--- a/app/src/dacer/settinghelper/SettingUtility.java
++++ b/app/src/dacer/settinghelper/SettingUtility.java
+@@ -7,7 +7,6 @@ import android.graphics.Color;
+ import android.widget.Toast;
+ 
+ import com.dacer.simplepomodoro.R;
+-import com.google.api.services.tasks.Tasks;
+ 
+ import dacer.google.task.TaskWebUtils;
+ import dacer.utils.GlobalContext;
+diff --git a/app/src/dacer/adapters/MyPagerAdapter.java b/app/src/dacer/adapters/MyPagerAdapter.java
+index c7ae63a..8646068 100755
+--- a/app/src/dacer/adapters/MyPagerAdapter.java
++++ b/app/src/dacer/adapters/MyPagerAdapter.java
+@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentPagerAdapter;
+ import com.dacer.simplepomodoro.MainFragment;
+ import com.dacer.simplepomodoro.RecordFragment;
+ 
+-import dacer.google.task.TaskListFragment;
+ import dacer.settinghelper.SettingUtility;
+ 
+ /**
+@@ -30,7 +29,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
+ 			Fragment fragment = new RecordFragment();
+ 			return fragment;
+ 		} else {
+-			Fragment fragment = new TaskListFragment();
++			Fragment fragment = new RecordFragment();
+ 			return fragment;
+ 		}
+ 
+diff --git a/app/AndroidManifest.xml b/app/AndroidManifest.xml
+index a544fd5..f060f42 100755
+--- a/app/AndroidManifest.xml
++++ b/app/AndroidManifest.xml
+@@ -99,7 +99,6 @@
+                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+             </intent-filter>
+         </receiver>
+-		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+     </application>
+ 
+ </manifest>
+diff --git a/app/src/dacer/google/task/CommonAsyncTask.java b/app/src/dacer/google/task/CommonAsyncTask.java
+deleted file mode 100755
+index 5fbd327..0000000
+--- a/app/src/dacer/google/task/CommonAsyncTask.java
++++ /dev/null
+@@ -1,91 +0,0 @@
+-/*
+- * Copyright (c) 2012 Google Inc.
+- * 
+- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+- * in compliance with the License. You may obtain a copy of the License at
+- * 
+- * http://www.apache.org/licenses/LICENSE-2.0
+- * 
+- * Unless required by applicable law or agreed to in writing, software distributed under the License
+- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+- * or implied. See the License for the specific language governing permissions and limitations under
+- * the License.
+- */
+-
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-
+-import android.opengl.Visibility;
+-import android.os.AsyncTask;
+-import android.view.View;
+-import android.widget.ImageButton;
+-import android.widget.ListView;
+-import android.widget.ProgressBar;
+-
+-import com.dacer.simplepomodoro.R;
+-import com.google.api.client.googleapis.extensions.android.gms.auth.GooglePlayServicesAvailabilityIOException;
+-import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+-
+-/**
+- * Asynchronous task that also takes care of common needs, such as displaying progress,
+- * authorization, exception handling, and notifying UI when operation succeeded.
+- * 
+- * @author Yaniv Inbar
+- */
+-abstract class CommonAsyncTask extends AsyncTask<Void, Void, Boolean> {
+-
+-  final TaskListFragment mFragment;
+-  final com.google.api.services.tasks.Tasks client;
+-  private final ListView listView;
+-  private final ImageButton refreshBtn;
+-  private final ProgressBar progressBar;
+-
+-  CommonAsyncTask(TaskListFragment fragment) {
+-	mFragment = fragment;
+-    client = fragment.service;
+-    listView = (ListView) fragment.rootView.findViewById(R.id.list_task);
+-    refreshBtn = (ImageButton) fragment.rootView.findViewById(R.id.btn_add_task);
+-    progressBar = (ProgressBar) fragment.rootView.findViewById(R.id.progressBar1);
+-  }
+-
+-  @Override
+-  protected void onPreExecute() {
+-    super.onPreExecute();
+-    mFragment.numAsyncTasks++;
+-    refreshBtn.setVisibility(View.GONE);
+-    progressBar.setVisibility(View.VISIBLE);
+-  }
+-
+-  @Override
+-  protected final Boolean doInBackground(Void... ignored) {
+-    try {
+-      doInBackground();
+-      return true;
+-    } catch (final GooglePlayServicesAvailabilityIOException availabilityException) {
+-    	mFragment.showGooglePlayServicesAvailabilityErrorDialog(
+-          availabilityException.getConnectionStatusCode());
+-    } catch (UserRecoverableAuthIOException userRecoverableException) {
+-    	mFragment.startActivityForResult(
+-          userRecoverableException.getIntent(), TaskListFragment.REQUEST_AUTHORIZATION);
+-    } catch (IOException e) {
+-      Utils.logAndShow(mFragment.getActivity(), TaskListFragment.TAG, e);
+-    }
+-    return false;
+-  }
+-
+-  @Override
+-  protected final void onPostExecute(Boolean success) {
+-    super.onPostExecute(success);
+-    if (0 == --mFragment.numAsyncTasks) {
+-//      listView.onRefreshComplete();
+-        refreshBtn.setVisibility(View.VISIBLE);
+-        progressBar.setVisibility(View.GONE);
+-    }
+-    if (success) {
+-    	mFragment.refreshView();
+-    }
+-  }
+-
+-  abstract protected void doInBackground() throws IOException;
+-}
+diff --git a/app/src/dacer/google/task/FragmentAsyncTask.java b/app/src/dacer/google/task/FragmentAsyncTask.java
+deleted file mode 100755
+index 0997fb9..0000000
+--- a/app/src/dacer/google/task/FragmentAsyncTask.java
++++ /dev/null
+@@ -1,96 +0,0 @@
+-/*
+- * Copyright (c) 2012 Google Inc.
+- * 
+- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+- * in compliance with the License. You may obtain a copy of the License at
+- * 
+- * http://www.apache.org/licenses/LICENSE-2.0
+- * 
+- * Unless required by applicable law or agreed to in writing, software distributed under the License
+- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+- * or implied. See the License for the specific language governing permissions and limitations under
+- * the License.
+- */
+-
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-
+-import android.opengl.Visibility;
+-import android.os.AsyncTask;
+-import android.view.View;
+-import android.widget.ImageButton;
+-import android.widget.ListView;
+-import android.widget.ProgressBar;
+-
+-import com.dacer.simplepomodoro.R;
+-import com.google.api.client.googleapis.extensions.android.gms.auth.GooglePlayServicesAvailabilityIOException;
+-import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+-
+-import dacer.settinghelper.SettingUtility;
+-import dacer.utils.GlobalContext;
+-
+-/**
+- * Asynchronous task that also takes care of common needs, such as displaying progress,
+- * authorization, exception handling, and notifying UI when operation succeeded.
+- * 
+- * @author Yaniv Inbar
+- * Modified by Dacer
+- */
+-public class FragmentAsyncTask extends AsyncTask<Void, Void, Boolean> {
+-
+-  final TaskListFragment mFragment;
+-  final com.google.api.services.tasks.Tasks client;
+-//  private final ProgressBar progressBar;
+-
+-  FragmentAsyncTask(TaskListFragment fragment) {
+-	mFragment = fragment;
+-    client = fragment.service;
+-//    progressBar = (ProgressBar) fragment.rootView.findViewById(R.id.progressBar1);
+-  }
+-
+-  @Override
+-  protected void onPreExecute() {
+-    super.onPreExecute();
+-    mFragment.numAsyncTasks++;
+-//    progressBar.setVisibility(View.VISIBLE);
+-  }
+-
+-  @Override
+-  protected final Boolean doInBackground(Void... ignored) {
+-    try {
+-      doInBackground();
+-      return true;
+-    } catch (final GooglePlayServicesAvailabilityIOException availabilityException) {
+-    	mFragment.showGooglePlayServicesAvailabilityErrorDialog(
+-          availabilityException.getConnectionStatusCode());
+-    } catch (UserRecoverableAuthIOException userRecoverableException) {
+-    	mFragment.startActivityForResult(
+-          userRecoverableException.getIntent(), TaskListFragment.REQUEST_AUTHORIZATION);
+-    } catch (IOException e) {
+-      Utils.logAndShow(mFragment.getActivity(), TaskListFragment.TAG, e);
+-    }
+-    return false;
+-  }
+-
+-  @Override
+-  protected final void onPostExecute(Boolean success) {
+-    super.onPostExecute(success);
+-    if (0 == --mFragment.numAsyncTasks) {
+-    	mFragment.listView.onRefreshComplete();
+-//        progressBar.setVisibility(View.GONE);
+-    }
+-    if (success) {
+-    	mFragment.refreshView();
+-    }
+-  }
+-
+-  private void doInBackground() throws IOException{
+-	  TaskUtils.updateDB(SettingUtility.getTaskListId(),GlobalContext.getInstance(),client);
+-  }
+-
+-  static void run(TaskListFragment listFragment) {
+-    new FragmentAsyncTask(listFragment).execute();
+-  }
+-  
+-}
+diff --git a/app/src/dacer/google/task/SwipeDismissListViewTouchListener.java b/app/src/dacer/google/task/SwipeDismissListViewTouchListener.java
+deleted file mode 100755
+index 30b693a..0000000
+--- a/app/src/dacer/google/task/SwipeDismissListViewTouchListener.java
++++ /dev/null
+@@ -1,359 +0,0 @@
+-// THIS IS A BETA! I DON'T RECOMMEND USING IT IN PRODUCTION CODE JUST YET
+-
+-/*
+- * Copyright 2012 Roman Nurik
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *     http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package dacer.google.task;
+-
+-import static com.nineoldandroids.view.ViewHelper.setAlpha;
+-import static com.nineoldandroids.view.ViewHelper.setTranslationX;
+-import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
+-
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.List;
+-
+-import android.graphics.Rect;
+-import android.view.MotionEvent;
+-import android.view.VelocityTracker;
+-import android.view.View;
+-import android.view.ViewConfiguration;
+-import android.view.ViewGroup;
+-import android.widget.AbsListView;
+-import android.widget.ListView;
+-
+-import com.nineoldandroids.animation.Animator;
+-import com.nineoldandroids.animation.AnimatorListenerAdapter;
+-import com.nineoldandroids.animation.ValueAnimator;
+-
+-/**
+- * A {@link android.view.View.OnTouchListener} that makes the list items in a {@link ListView}
+- * dismissable. {@link ListView} is given special treatment because by default it handles touches
+- * for its list items... i.e. it's in charge of drawing the pressed state (the list selector),
+- * handling list item clicks, etc.
+- *
+- * <p>After creating the listener, the caller should also call
+- * {@link ListView#setOnScrollListener(android.widget.AbsListView.OnScrollListener)}, passing
+- * in the scroll listener returned by {@link #makeScrollListener()}. If a scroll listener is
+- * already assigned, the caller should still pass scroll changes through to this listener. This will
+- * ensure that this {@link SwipeDismissListViewTouchListener} is paused during list view
+- * scrolling.</p>
+- *
+- * <p>Example usage:</p>
+- *
+- * <pre>
+- * SwipeDismissListViewTouchListener touchListener =
+- *         new SwipeDismissListViewTouchListener(
+- *                 listView,
+- *                 new SwipeDismissListViewTouchListener.OnDismissCallback() {
+- *                     public void onDismiss(ListView listView, int[] reverseSortedPositions) {
+- *                         for (int position : reverseSortedPositions) {
+- *                             adapter.remove(adapter.getItem(position));
+- *                         }
+- *                         adapter.notifyDataSetChanged();
+- *                     }
+- *                 });
+- * listView.setOnTouchListener(touchListener);
+- * listView.setOnScrollListener(touchListener.makeScrollListener());
+- * </pre>
+- *
+- * <p>This class Requires API level 12 or later due to use of {@link
+- * android.view.ViewPropertyAnimator}.</p>
+- *
+- * <p>For a generalized {@link android.view.View.OnTouchListener} that makes any view dismissable,
+- * see {@link SwipeDismissTouchListener}.</p>
+- *
+- * @see SwipeDismissTouchListener
+- */
+-public class SwipeDismissListViewTouchListener implements View.OnTouchListener {
+-    // Cached ViewConfiguration and system-wide constant values
+-    private int mSlop;
+-    private int mMinFlingVelocity;
+-    private int mMaxFlingVelocity;
+-    private long mAnimationTime;
+-
+-    // Fixed properties
+-    private ListView mListView;
+-    private OnDismissCallback mCallback;
+-    private int mViewWidth = 1; // 1 and not 0 to prevent dividing by zero
+-
+-    // Transient properties
+-    private List<PendingDismissData> mPendingDismisses = new ArrayList<PendingDismissData>();
+-    private int mDismissAnimationRefCount = 0;
+-    private float mDownX;
+-    private boolean mSwiping;
+-    private VelocityTracker mVelocityTracker;
+-    private int mDownPosition;
+-    private View mDownView;
+-    private boolean mPaused;
+-
+-    /**
+-     * The callback interface used by {@link SwipeDismissListViewTouchListener} to inform its client
+-     * about a successful dismissal of one or more list item positions.
+-     */
+-    public interface OnDismissCallback {
+-        /**
+-         * Called when the user has indicated they she would like to dismiss one or more list item
+-         * positions.
+-         *
+-         * @param listView               The originating {@link ListView}.
+-         * @param reverseSortedPositions An array of positions to dismiss, sorted in descending
+-         *                               order for convenience.
+-         */
+-        void onDismiss(ListView listView, int[] reverseSortedPositions);
+-    }
+-
+-    /**
+-     * Constructs a new swipe-to-dismiss touch listener for the given list view.
+-     *
+-     * @param listView The list view whose items should be dismissable.
+-     * @param callback The callback to trigger when the user has indicated that she would like to
+-     *                 dismiss one or more list items.
+-     */
+-    public SwipeDismissListViewTouchListener(ListView listView, OnDismissCallback callback) {
+-        ViewConfiguration vc = ViewConfiguration.get(listView.getContext());
+-        mSlop = vc.getScaledTouchSlop();
+-        mMinFlingVelocity = vc.getScaledMinimumFlingVelocity();
+-        mMaxFlingVelocity = vc.getScaledMaximumFlingVelocity();
+-        mAnimationTime = listView.getContext().getResources().getInteger(
+-                android.R.integer.config_shortAnimTime);
+-        mListView = listView;
+-        mCallback = callback;
+-    }
+-
+-    /**
+-     * Enables or disables (pauses or resumes) watching for swipe-to-dismiss gestures.
+-     *
+-     * @param enabled Whether or not to watch for gestures.
+-     */
+-    public void setEnabled(boolean enabled) {
+-        mPaused = !enabled;
+-    }
+-
+-    /**
+-     * Returns an {@link android.widget.AbsListView.OnScrollListener} to be added to the
+-     * {@link ListView} using
+-     * {@link ListView#setOnScrollListener(android.widget.AbsListView.OnScrollListener)}.
+-     * If a scroll listener is already assigned, the caller should still pass scroll changes
+-     * through to this listener. This will ensure that this
+-     * {@link SwipeDismissListViewTouchListener} is paused during list view scrolling.</p>
+-     *
+-     * @see {@link SwipeDismissListViewTouchListener}
+-     */
+-    public AbsListView.OnScrollListener makeScrollListener() {
+-        return new AbsListView.OnScrollListener() {
+-            @Override
+-            public void onScrollStateChanged(AbsListView absListView, int scrollState) {
+-                setEnabled(scrollState != AbsListView.OnScrollListener.SCROLL_STATE_TOUCH_SCROLL);
+-            }
+-
+-            @Override
+-            public void onScroll(AbsListView absListView, int i, int i1, int i2) {
+-            }
+-        };
+-    }
+-
+-    @Override
+-    public boolean onTouch(View view, MotionEvent motionEvent) {
+-        if (mViewWidth < 2) {
+-            mViewWidth = mListView.getWidth();
+-        }
+-
+-        switch (motionEvent.getActionMasked()) {
+-            case MotionEvent.ACTION_DOWN: {
+-                if (mPaused) {
+-                    return false;
+-                }
+-
+-                // TODO: ensure this is a finger, and set a flag
+-
+-                // Find the child view that was touched (perform a hit test)
+-                Rect rect = new Rect();
+-                int childCount = mListView.getChildCount();
+-                int[] listViewCoords = new int[2];
+-                mListView.getLocationOnScreen(listViewCoords);
+-                int x = (int) motionEvent.getRawX() - listViewCoords[0];
+-                int y = (int) motionEvent.getRawY() - listViewCoords[1];
+-                View child;
+-                for (int i = 0; i < childCount; i++) {
+-                    child = mListView.getChildAt(i);
+-                    child.getHitRect(rect);
+-                    if (rect.contains(x, y)) {
+-                        mDownView = child;
+-                        break;
+-                    }
+-                }
+-
+-                if (mDownView != null) {
+-                    mDownX = motionEvent.getRawX();
+-                    mDownPosition = mListView.getPositionForView(mDownView);
+-                    mVelocityTracker = VelocityTracker.obtain();
+-                    mVelocityTracker.addMovement(motionEvent);
+-                }
+-                view.onTouchEvent(motionEvent);
+-                return true;
+-            }
+-
+-            case MotionEvent.ACTION_UP: {
+-                if (mVelocityTracker == null) {
+-                    break;
+-                }
+-
+-                float deltaX = motionEvent.getRawX() - mDownX;
+-                mVelocityTracker.addMovement(motionEvent);
+-                mVelocityTracker.computeCurrentVelocity(1000);
+-                float velocityX = mVelocityTracker.getXVelocity(); //!!delete Math.abs for only right swipe by Dacer.
+-                float velocityY = Math.abs(mVelocityTracker.getYVelocity());
+-                boolean dismiss = false;
+-                boolean dismissRight = false;
+-                if (Math.abs(deltaX) > mViewWidth / 2) {
+-                    dismiss = true;
+-                    dismissRight = deltaX > 0;
+-                } else if (mMinFlingVelocity <= velocityX && velocityX <= mMaxFlingVelocity
+-                        && velocityY < velocityX) {
+-                    dismiss = true;
+-                    dismissRight = mVelocityTracker.getXVelocity() > 0;
+-                }
+-                if (dismiss) {
+-                    // dismiss
+-                    final View downView = mDownView; // mDownView gets null'd before animation ends
+-                    final int downPosition = mDownPosition;
+-                    ++mDismissAnimationRefCount;
+-                    animate(mDownView)
+-                            .translationX(dismissRight ? mViewWidth : -mViewWidth)
+-                            .alpha(0)
+-                            .setDuration(mAnimationTime)
+-                            .setListener(new AnimatorListenerAdapter() {
+-                                @Override
+-                                public void onAnimationEnd(Animator animation) {
+-                                    performDismiss(downView, downPosition);
+-                                }
+-                            });
+-                } else {
+-                    // cancel
+-                    animate(mDownView)
+-                            .translationX(0)
+-                            .alpha(1)
+-                            .setDuration(mAnimationTime)
+-                            .setListener(null);
+-                }
+-                mVelocityTracker = null;
+-                mDownX = 0;
+-                mDownView = null;
+-                mDownPosition = ListView.INVALID_POSITION;
+-                mSwiping = false;
+-                break;
+-            }
+-
+-            case MotionEvent.ACTION_MOVE: {
+-                if (mVelocityTracker == null || mPaused) {
+-                    break;
+-                }
+-
+-                mVelocityTracker.addMovement(motionEvent);
+-                float deltaX = motionEvent.getRawX() - mDownX;
+-                if (deltaX > mSlop) {   //!!delete Math.abs for only right swipe by Dacer.
+-                    mSwiping = true;
+-                    mListView.requestDisallowInterceptTouchEvent(true);
+-
+-                    // Cancel ListView's touch (un-highlighting the item)
+-                    MotionEvent cancelEvent = MotionEvent.obtain(motionEvent);
+-                    cancelEvent.setAction(MotionEvent.ACTION_CANCEL |
+-                            (motionEvent.getActionIndex()
+-                                    << MotionEvent.ACTION_POINTER_INDEX_SHIFT));
+-                    mListView.onTouchEvent(cancelEvent);
+-                }
+-
+-                if (mSwiping) {
+-                    setTranslationX(mDownView, deltaX);
+-                    setAlpha(mDownView, Math.max(0f, Math.min(1f,
+-                            1f - 2f * Math.abs(deltaX) / mViewWidth)));
+-                    return true;
+-                }
+-                break;
+-            }
+-        }
+-        return false;
+-    }
+-
+-    class PendingDismissData implements Comparable<PendingDismissData> {
+-        public int position;
+-        public View view;
+-
+-        public PendingDismissData(int position, View view) {
+-            this.position = position;
+-            this.view = view;
+-        }
+-
+-        @Override
+-        public int compareTo(PendingDismissData other) {
+-            // Sort by descending position
+-            return other.position - position;
+-        }
+-    }
+-
+-    private void performDismiss(final View dismissView, final int dismissPosition) {
+-        // Animate the dismissed list item to zero-height and fire the dismiss callback when
+-        // all dismissed list item animations have completed. This triggers layout on each animation
+-        // frame; in the future we may want to do something smarter and more performant.
+-
+-        final ViewGroup.LayoutParams lp = dismissView.getLayoutParams();
+-        final int originalHeight = dismissView.getHeight();
+-
+-        ValueAnimator animator = ValueAnimator.ofInt(originalHeight, 1).setDuration(mAnimationTime);
+-
+-        animator.addListener(new AnimatorListenerAdapter() {
+-            @Override
+-            public void onAnimationEnd(Animator animation) {
+-                --mDismissAnimationRefCount;
+-                if (mDismissAnimationRefCount == 0) {
+-                    // No active animations, process all pending dismisses.
+-                    // Sort by descending position
+-                    Collections.sort(mPendingDismisses);
+-
+-                    int[] dismissPositions = new int[mPendingDismisses.size()];
+-                    for (int i = mPendingDismisses.size() - 1; i >= 0; i--) {
+-                        dismissPositions[i] = mPendingDismisses.get(i).position;
+-                    }
+-                    mCallback.onDismiss(mListView, dismissPositions);
+-
+-                    ViewGroup.LayoutParams lp;
+-                    for (PendingDismissData pendingDismiss : mPendingDismisses) {
+-                        // Reset view presentation
+-                        setAlpha(pendingDismiss.view, 1f);
+-                        setTranslationX(pendingDismiss.view, 0);
+-                        lp = pendingDismiss.view.getLayoutParams();
+-                        lp.height = originalHeight;
+-                        pendingDismiss.view.setLayoutParams(lp);
+-                    }
+-
+-                    mPendingDismisses.clear();
+-                }
+-            }
+-        });
+-
+-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+-            @Override
+-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+-                lp.height = (Integer) valueAnimator.getAnimatedValue();
+-                dismissView.setLayoutParams(lp);
+-            }
+-        });
+-
+-        mPendingDismisses.add(new PendingDismissData(dismissPosition, dismissView));
+-        animator.start();
+-    }
+-}
+diff --git a/app/src/dacer/google/task/SwipeDismissTouchListener.java b/app/src/dacer/google/task/SwipeDismissTouchListener.java
+deleted file mode 100755
+index ca3c354..0000000
+--- a/app/src/dacer/google/task/SwipeDismissTouchListener.java
++++ /dev/null
+@@ -1,245 +0,0 @@
+-// THIS IS A BETA! I DON'T RECOMMEND USING IT IN PRODUCTION CODE JUST YET
+-
+-/*
+- * Copyright 2012 Roman Nurik
+- *
+- * Licensed under the Apache License, Version 2.0 (the "License");
+- * you may not use this file except in compliance with the License.
+- * You may obtain a copy of the License at
+- *
+- *     http://www.apache.org/licenses/LICENSE-2.0
+- *
+- * Unless required by applicable law or agreed to in writing, software
+- * distributed under the License is distributed on an "AS IS" BASIS,
+- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+- * See the License for the specific language governing permissions and
+- * limitations under the License.
+- */
+-
+-package dacer.google.task;
+-
+-import android.view.MotionEvent;
+-import android.view.VelocityTracker;
+-import android.view.View;
+-import android.view.ViewConfiguration;
+-import android.view.ViewGroup;
+-import com.nineoldandroids.animation.Animator;
+-import com.nineoldandroids.animation.AnimatorListenerAdapter;
+-import com.nineoldandroids.animation.ValueAnimator;
+-
+-import static com.nineoldandroids.view.ViewHelper.setAlpha;
+-import static com.nineoldandroids.view.ViewHelper.setTranslationX;
+-import static com.nineoldandroids.view.ViewPropertyAnimator.animate;
+-
+-/**
+- * A {@link android.view.View.OnTouchListener} that makes any {@link View} dismissable when the
+- * user swipes (drags her finger) horizontally across the view.
+- *
+- * <p><em>For {@link android.widget.ListView} list items that don't manage their own touch events
+- * (i.e. you're using
+- * {@link android.widget.ListView#setOnItemClickListener(android.widget.AdapterView.OnItemClickListener)}
+- * or an equivalent listener on {@link android.app.ListActivity} or
+- * {@link android.app.ListFragment}, use {@link SwipeDismissListViewTouchListener} instead.</em></p>
+- *
+- * <p>Example usage:</p>
+- *
+- * <pre>
+- * view.setOnTouchListener(new SwipeDismissTouchListener(
+- *         view,
+- *         null, // Optional token/cookie object
+- *         new SwipeDismissTouchListener.OnDismissCallback() {
+- *             public void onDismiss(View view, Object token) {
+- *                 parent.removeView(view);
+- *             }
+- *         }));
+- * </pre>
+- *
+- * <p>This class Requires API level 12 or later due to use of {@link
+- * android.view.ViewPropertyAnimator}.</p>
+- *
+- * @see SwipeDismissListViewTouchListener
+- */
+-public class SwipeDismissTouchListener implements View.OnTouchListener {
+-    // Cached ViewConfiguration and system-wide constant values
+-    private int mSlop;
+-    private int mMinFlingVelocity;
+-    private int mMaxFlingVelocity;
+-    private long mAnimationTime;
+-
+-    // Fixed properties
+-    private View mView;
+-    private OnDismissCallback mCallback;
+-    private int mViewWidth = 1; // 1 and not 0 to prevent dividing by zero
+-
+-    // Transient properties
+-    private float mDownX;
+-    private boolean mSwiping;
+-    private Object mToken;
+-    private VelocityTracker mVelocityTracker;
+-    private float mTranslationX;
+-
+-    /**
+-     * The callback interface used by {@link SwipeDismissTouchListener} to inform its client
+-     * about a successful dismissal of the view for which it was created.
+-     */
+-    public interface OnDismissCallback {
+-        /**
+-         * Called when the user has indicated they she would like to dismiss the view.
+-         *
+-         * @param view  The originating {@link View} to be dismissed.
+-         * @param token The optional token passed to this object's constructor.
+-         */
+-        void onDismiss(View view, Object token);
+-    }
+-
+-    /**
+-     * Constructs a new swipe-to-dismiss touch listener for the given view.
+-     *
+-     * @param view     The view to make dismissable.
+-     * @param token    An optional token/cookie object to be passed through to the callback.
+-     * @param callback The callback to trigger when the user has indicated that she would like to
+-     *                 dismiss this view.
+-     */
+-    public SwipeDismissTouchListener(View view, Object token, OnDismissCallback callback) {
+-        ViewConfiguration vc = ViewConfiguration.get(view.getContext());
+-        mSlop = vc.getScaledTouchSlop();
+-        mMinFlingVelocity = vc.getScaledMinimumFlingVelocity();
+-        mMaxFlingVelocity = vc.getScaledMaximumFlingVelocity();
+-        mAnimationTime = view.getContext().getResources().getInteger(
+-                android.R.integer.config_shortAnimTime);
+-        mView = view;
+-        mToken = token;
+-        mCallback = callback;
+-    }
+-
+-    @Override
+-    public boolean onTouch(View view, MotionEvent motionEvent) {
+-        // offset because the view is translated during swipe
+-        motionEvent.offsetLocation(mTranslationX, 0);
+-
+-        if (mViewWidth < 2) {
+-            mViewWidth = mView.getWidth();
+-        }
+-
+-        switch (motionEvent.getActionMasked()) {
+-            case MotionEvent.ACTION_DOWN: {
+-                // TODO: ensure this is a finger, and set a flag
+-                mDownX = motionEvent.getRawX();
+-                mVelocityTracker = VelocityTracker.obtain();
+-                mVelocityTracker.addMovement(motionEvent);
+-                view.onTouchEvent(motionEvent);
+-                return false;
+-            }
+-
+-            case MotionEvent.ACTION_UP: {
+-                if (mVelocityTracker == null) {
+-                    break;
+-                }
+-
+-                float deltaX = motionEvent.getRawX() - mDownX;
+-                mVelocityTracker.addMovement(motionEvent);
+-                mVelocityTracker.computeCurrentVelocity(1000);
+-                float velocityX = Math.abs(mVelocityTracker.getXVelocity());
+-                float velocityY = Math.abs(mVelocityTracker.getYVelocity());
+-                boolean dismiss = false;
+-                boolean dismissRight = false;
+-                if (Math.abs(deltaX) > mViewWidth / 2) {
+-                    dismiss = true;
+-                    dismissRight = deltaX > 0;
+-                } else if (mMinFlingVelocity <= velocityX && velocityX <= mMaxFlingVelocity
+-                        && velocityY < velocityX) {
+-                    dismiss = true;
+-                    dismissRight = mVelocityTracker.getXVelocity() > 0;
+-                }
+-                if (dismiss) {
+-                    // dismiss
+-                    animate(mView)
+-                            .translationX(dismissRight ? mViewWidth : -mViewWidth)
+-                            .alpha(0)
+-                            .setDuration(mAnimationTime)
+-                            .setListener(new AnimatorListenerAdapter() {
+-                                @Override
+-                                public void onAnimationEnd(Animator animation) {
+-                                    performDismiss();
+-                                }
+-                            });
+-                } else {
+-                    // cancel
+-                    animate(mView)
+-                            .translationX(0)
+-                            .alpha(1)
+-                            .setDuration(mAnimationTime)
+-                            .setListener(null);
+-                }
+-                mVelocityTracker = null;
+-                mTranslationX = 0;
+-                mDownX = 0;
+-                mSwiping = false;
+-                break;
+-            }
+-
+-            case MotionEvent.ACTION_MOVE: {
+-                if (mVelocityTracker == null) {
+-                    break;
+-                }
+-
+-                mVelocityTracker.addMovement(motionEvent);
+-                float deltaX = motionEvent.getRawX() - mDownX;
+-                if (Math.abs(deltaX) > mSlop) {
+-                    mSwiping = true;
+-                    mView.getParent().requestDisallowInterceptTouchEvent(true);
+-
+-                    // Cancel listview's touch
+-                    MotionEvent cancelEvent = MotionEvent.obtain(motionEvent);
+-                    cancelEvent.setAction(MotionEvent.ACTION_CANCEL |
+-                        (motionEvent.getActionIndex() << MotionEvent.ACTION_POINTER_INDEX_SHIFT));
+-                    mView.onTouchEvent(cancelEvent);
+-                }
+-
+-                if (mSwiping) {
+-                    mTranslationX = deltaX;
+-                    setTranslationX(mView, deltaX);
+-                    // TODO: use an ease-out interpolator or such
+-                    setAlpha(mView, Math.max(0f, Math.min(1f,
+-                            1f - 2f * Math.abs(deltaX) / mViewWidth)));
+-                    return true;
+-                }
+-                break;
+-            }
+-        }
+-        return false;
+-    }
+-
+-    private void performDismiss() {
+-        // Animate the dismissed view to zero-height and then fire the dismiss callback.
+-        // This triggers layout on each animation frame; in the future we may want to do something
+-        // smarter and more performant.
+-
+-        final ViewGroup.LayoutParams lp = mView.getLayoutParams();
+-        final int originalHeight = mView.getHeight();
+-
+-        ValueAnimator animator = ValueAnimator.ofInt(originalHeight, 1).setDuration(mAnimationTime);
+-
+-        animator.addListener(new AnimatorListenerAdapter() {
+-            @Override
+-            public void onAnimationEnd(Animator animation) {
+-                mCallback.onDismiss(mView, mToken);
+-                // Reset view presentation
+-                setAlpha(mView, 1f);
+-                setTranslationX(mView, 0);
+-                lp.height = originalHeight;
+-                mView.setLayoutParams(lp);
+-            }
+-        });
+-
+-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+-            @Override
+-            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+-                lp.height = (Integer) valueAnimator.getAnimatedValue();
+-                mView.setLayoutParams(lp);
+-            }
+-        });
+-
+-        animator.start();
+-    }
+-}
+diff --git a/app/src/dacer/google/task/SyncDBTasks.java b/app/src/dacer/google/task/SyncDBTasks.java
+deleted file mode 100755
+index 2356ab0..0000000
+--- a/app/src/dacer/google/task/SyncDBTasks.java
++++ /dev/null
+@@ -1,55 +0,0 @@
+-/*
+- * Copyright (c) 2012 Google Inc.
+- * 
+- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+- * in compliance with the License. You may obtain a copy of the License at
+- * 
+- * http://www.apache.org/licenses/LICENSE-2.0
+- * 
+- * Unless required by applicable law or agreed to in writing, software distributed under the License
+- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+- * or implied. See the License for the specific language governing permissions and limitations under
+- * the License.
+- */
+-
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-import java.util.List;
+-
+-import android.util.Log;
+-
+-import dacer.settinghelper.SettingUtility;
+-import dacer.utils.GlobalContext;
+-
+-/**
+- * Asynchronously load the tasks.
+- * 
+- * @author Yaniv Inbar
+- * modified by Dacer
+- */
+-class SyncDBTasks extends CommonAsyncTask {
+-  String TAG = "AsyncLoadTask--->";
+-  private TaskLocalUtils tLocalUtils;
+-  
+-  SyncDBTasks(TaskListFragment listFragment) {
+-    super(listFragment);
+-    tLocalUtils = new TaskLocalUtils(GlobalContext.getInstance());
+-  }
+-
+-  @Override
+-  protected void doInBackground() throws IOException {
+-	  Log.e(TAG, "Running");
+-    TaskUtils.updateDB(SettingUtility.getTaskListId(),GlobalContext.getInstance(),client);
+-    List<String> result = tLocalUtils.getTasksTitleFromDB();
+-    mFragment.tasksList = result;
+-  }
+-
+-  static void run(TaskListFragment listFragment) {
+-    new SyncDBTasks(listFragment).execute();
+-  }
+-  
+-  
+-  
+-
+-}
+diff --git a/app/src/dacer/google/task/TaskDialogFragment.java b/app/src/dacer/google/task/TaskDialogFragment.java
+deleted file mode 100755
+index 4d0fb8b..0000000
+--- a/app/src/dacer/google/task/TaskDialogFragment.java
++++ /dev/null
+@@ -1,149 +0,0 @@
+-package dacer.google.task;
+-
+-import java.util.Timer;
+-import java.util.TimerTask;
+-
+-import android.app.AlertDialog;
+-import android.app.Dialog;
+-import android.content.Context;
+-import android.content.DialogInterface;
+-import android.graphics.Color;
+-import android.os.Bundle;
+-import android.support.v4.app.DialogFragment;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.View.OnClickListener;
+-import android.view.inputmethod.InputMethodManager;
+-import android.widget.EditText;
+-import android.widget.TextView;
+-import android.widget.Toast;
+-
+-import com.dacer.simplepomodoro.R;
+-
+-import dacer.interfaces.DialogDismissListener;
+-import dacer.settinghelper.SettingUtility;
+-import dacer.utils.ColorChanger;
+-
+-public class TaskDialogFragment extends DialogFragment {
+-
+-//	private final static String TAG = "TaskDialogFragment";
+-	private DialogDismissListener mListener = null;
+-	private String mTitle = null;
+-	private EditText ET_title;
+-	private Boolean isEditing = false;
+-	private int db_id;
+-
+-	public TaskDialogFragment() {
+-	}
+-
+-	// void database locked!!!
+-	public void initDialog(DialogDismissListener listener) {
+-		mListener = listener;
+-	}
+-
+-	public void setIsEditing(int line_id) {
+-		isEditing = true;
+-		db_id = line_id;
+-		mTitle = new TaskLocalUtils(getActivity()).getTitleById(db_id);
+-	}
+-	
+-	public void setIsEditing(int db_id_input, String title){
+-		isEditing = true;
+-		db_id = db_id_input;
+-		mTitle = title;
+-	}
+-
+-	@Override
+-	public Dialog onCreateDialog(Bundle savedInstanceState) {
+-		// super.onCreateDialog(savedInstanceState);
+-		AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+-		final LayoutInflater inflater = getActivity().getLayoutInflater();
+-		final View dialogView = inflater.inflate(
+-				R.layout.dialog_edit_task_fragment, null);
+-		final TextView tv_dialog_title = (TextView) dialogView
+-				.findViewById(R.id.tv_dialog_title);
+-
+-		ET_title = (EditText) dialogView.findViewById(R.id.title);
+-		
+-		final View line = dialogView.findViewById(R.id.line_2);
+-		if(SettingUtility.isLightTheme()){
+-//			line.setAlpha(0);
+-			line.setBackgroundColor(Color.argb(0, 0, 0, 0));
+-			tv_dialog_title.setTextColor(Color.parseColor("#fffffb"));
+-		}
+-		
+-		String title_color = ColorChanger.getCurrentColor(getActivity());
+-		tv_dialog_title.setBackgroundColor(Color.parseColor(title_color));
+-		
+-		tv_dialog_title.setOnClickListener(new OnClickListener() {
+-
+-			@Override
+-			public void onClick(View arg0) {
+-				// TODO Auto-generated method stub
+-				ColorChanger.clickToChange(getActivity());
+-				String title_color = ColorChanger
+-						.getCurrentColor(getActivity());
+-				tv_dialog_title.setBackgroundColor(Color
+-						.parseColor(title_color));
+-				mListener.OnDialogDismiss();
+-			}
+-		});
+-
+-		ET_title.setText(mTitle);
+-		if (isEditing) {
+-			// set the title of edit dialog
+-			tv_dialog_title.setText(getActivity().getString(R.string.edit_task));
+-		}
+-		   Timer timer = new Timer();
+-	        timer.schedule(new TimerTask()
+-	        {
+-	            
+-	            @Override
+-				public void run(){
+-	            ((InputMethodManager)getActivity().
+-	            		getSystemService(Context.INPUT_METHOD_SERVICE))
+-	            		.showSoftInput(ET_title, 0);
+-	            }
+-	            
+-	        },
+-	            150);
+-		
+-		builder.setView(dialogView)
+-				.setPositiveButton(R.string.ok,
+-						new DialogInterface.OnClickListener() {
+-							@Override
+-							public void onClick(DialogInterface dialog, int id) {
+-								if (ET_title.getText().toString().equals("")) {
+-									Toast.makeText(getActivity(), 
+-											getString(R.string.the_title_can_not_be_empty),
+-											Toast.LENGTH_SHORT).show();
+-								} else {
+-									if (isEditing) {
+-										new TaskLocalUtils(getActivity()).setTitleById(db_id, ET_title.getText()
+-												.toString());
+-										if (mListener != null) {
+-											mListener.OnDialogDismiss();
+-										}
+-									} else {
+-										new TaskLocalUtils(getActivity()).addNewTask(ET_title.getText()
+-													.toString());
+-										if (mListener != null) {
+-											mListener.OnDialogDismiss();
+-										}
+-									}
+-								}
+-							}
+-						})
+-				.setNegativeButton(R.string.cancel,
+-						new DialogInterface.OnClickListener() {
+-							@Override
+-							public void onClick(DialogInterface dialog, int id) {
+-								TaskDialogFragment.this.getDialog().cancel();
+-
+-							}
+-						});
+-
+-		return builder.create();
+-	}
+-
+-}
+diff --git a/app/src/dacer/google/task/TaskListFragment.java b/app/src/dacer/google/task/TaskListFragment.java
+deleted file mode 100644
+index ea5083d..0000000
+--- a/app/src/dacer/google/task/TaskListFragment.java
++++ /dev/null
+@@ -1,364 +0,0 @@
+-package dacer.google.task;
+-
+-import java.util.ArrayList;
+-import java.util.Collections;
+-import java.util.List;
+-import java.util.logging.Level;
+-import java.util.logging.Logger;
+-
+-import android.accounts.AccountManager;
+-import android.app.Activity;
+-import android.app.AlertDialog;
+-import android.app.Dialog;
+-import android.content.DialogInterface;
+-import android.content.Intent;
+-import android.database.Cursor;
+-import android.graphics.Color;
+-import android.graphics.Typeface;
+-import android.os.Bundle;
+-import android.support.v4.app.Fragment;
+-import android.util.Log;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.View.OnClickListener;
+-import android.view.View.OnLongClickListener;
+-import android.view.ViewGroup;
+-import android.view.WindowManager;
+-import android.widget.AdapterView;
+-import android.widget.AdapterView.OnItemLongClickListener;
+-import android.widget.ImageButton;
+-import android.widget.ListView;
+-import android.widget.SimpleCursorAdapter;
+-import android.widget.TextView;
+-import android.widget.Toast;
+-
+-import com.dacer.simplepomodoro.FinishScreenActivity;
+-import com.dacer.simplepomodoro.R;
+-import com.google.android.gms.common.ConnectionResult;
+-import com.google.android.gms.common.GooglePlayServicesUtil;
+-import com.google.api.client.extensions.android.http.AndroidHttp;
+-import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
+-import com.google.api.client.http.HttpTransport;
+-import com.google.api.client.json.JsonFactory;
+-import com.google.api.client.json.gson.GsonFactory;
+-import com.google.api.services.tasks.TasksScopes;
+-
+-import dacer.interfaces.DialogDismissListener;
+-import dacer.service.CDService;
+-import dacer.settinghelper.SettingUtility;
+-import dacer.utils.GlobalContext;
+-import dacer.utils.MyUtils;
+-import eu.erikw.PullToRefreshListView;
+-import eu.erikw.PullToRefreshListView.OnRefreshListener;
+-/**
+- * Author:dacer
+- * Date  :Sep 10, 2013
+- */
+-public class TaskListFragment extends Fragment implements DialogDismissListener{
+-	private static final String KEY_CONTENT = "MainFragment:Content";
+-	private String mContent = "???";
+-	View rootView;
+-	//Google Task
+-	private static final Level LOGGING_LEVEL = Level.OFF;
+-	static final String TAG = "TaskListFragment";
+-	static final int REQUEST_GOOGLE_PLAY_SERVICES = 0;
+-	static final int REQUEST_AUTHORIZATION = 1;
+-	static final int REQUEST_ACCOUNT_PICKER = 2;
+-	final HttpTransport transport = AndroidHttp.newCompatibleTransport();
+-	final JsonFactory jsonFactory = new GsonFactory();
+-	GoogleAccountCredential credential;
+-	List<String> tasksList;
+-	com.google.api.services.tasks.Tasks service;
+-	int numAsyncTasks;
+-	PullToRefreshListView listView;
+-	ArrayList<String> mTitles;
+-    ArrayList<Integer> mIds;
+-    private Cursor cr;
+-	  
+-	@Override
+-    public void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-        if ((savedInstanceState != null) && savedInstanceState.containsKey(KEY_CONTENT)) {
+-            mContent = savedInstanceState.getString(KEY_CONTENT);
+-        }
+-    }
+-	@Override
+-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+-			Bundle savedInstanceState) {
+-		rootView = inflater.inflate(R.layout.fragment_task, container,
+-				false);
+-//		SettingUtility.removeAD(true);
+-		if(SettingUtility.isFirstStart()){
+-			TaskUtils.initLocalList(getActivity());
+-			if(MyUtils.isMiPhone()){
+-				showXiaoMiAlertDialog();
+-			}
+-		}
+-		initView();
+-		refreshView();
+-		if(SettingUtility.enableGTask()){
+-			initGoogleTask();	
+-		}return rootView;
+-	}
+-
+-	
+-	private void initView(){
+-		TextView tv_title = (TextView)rootView.findViewById(R.id.tv_title_task);
+-		ImageButton addTaskBTN = (ImageButton)rootView.findViewById(R.id.btn_add_task);
+-		listView = (PullToRefreshListView) rootView.findViewById(R.id.list_task);
+-		listView.setOnRefreshListener(new OnRefreshListener() {
+-
+-		    @Override
+-		    public void onRefresh() {
+-		    	if(SettingUtility.enableGTask()){
+-			        syncTask();
+-		    	}else{
+-		    		Toast.makeText(getActivity(), 
+-		    				getActivity().getString(
+-		    						R.string.Sync_with_google_task_is_not_enabled),
+-		    				Toast.LENGTH_LONG).show();
+-		    		listView.onRefreshComplete();
+-		    	}
+-		    }
+-		});
+-		
+-		Typeface roboto = Typeface.createFromAsset(getActivity()
+-				.getAssets(), "fonts/Roboto-Thin.ttf");
+-//		tv_record.setText(Html.fromHtml("<u>"+"To be continued"+"</u>"));
+-		tv_title.setTypeface(roboto);
+-		tv_title.setText("Task");
+-        Boolean isLightTheme = SettingUtility.isLightTheme();
+-        if(isLightTheme){
+-    		tv_title.setTextColor(Color.BLACK);
+-    		rootView.setBackgroundColor(Color.WHITE);
+-    		
+-    		addTaskBTN.setBackgroundColor(Color.argb(1, 0, 0, 0));
+-    		addTaskBTN.setImageResource(R.drawable.new_btn_gray);
+-        }
+-        addTaskBTN.setOnClickListener(new OnClickListener() {
+-			
+-			@Override
+-			public void onClick(View v) {
+-				// TODO Auto-generated method stub
+-				TaskDialogFragment dialog = new TaskDialogFragment();
+-				dialog.initDialog(TaskListFragment.this);
+-				dialog.show(getFragmentManager(), "");
+-			}
+-		});
+-        	addTaskBTN.setOnLongClickListener(new OnLongClickListener() {
+-    			
+-    			@Override
+-    			public boolean onLongClick(View arg0) {
+-    				// TODO Auto-generated method stub
+-
+-    		        if(SettingUtility.enableGTask()){
+-    		        	chooseAccount();}
+-    		        else{
+-    		        	Toast.makeText(getActivity(), 
+-    		    				getActivity().getString(
+-    		    						R.string.Sync_with_google_task_is_not_enabled),
+-    		    				Toast.LENGTH_LONG).show();
+-    				}
+-    				return true;
+-    			}
+-    		});
+-        
+-        
+-        
+-        SwipeDismissListViewTouchListener touchListener =
+-                new SwipeDismissListViewTouchListener(
+-                        listView,
+-                        new SwipeDismissListViewTouchListener.OnDismissCallback() {
+-                            @Override
+-                            public void onDismiss(ListView listView, int[] reverseSortedPositions) {
+-                                for (int position : reverseSortedPositions) {
+-//                                    mAdapter.remove(mAdapter.getItem(position));
+-                                	new TaskLocalUtils(GlobalContext.getInstance()).
+-                                	setCompletedByID(mIds.get(position-1),true);//position begin with 1,ArrayList begin with 0!
+-                                	
+-                                }
+-//                                mAdapter.notifyDataSetChanged();
+-                                refreshView();//Temporary solution for mAdapter do not have remove void 
+-                                			//delete the tasks in cursor && adapter to replace it.
+-                            }
+-                        });
+-        listView.setOnTouchListener(touchListener);
+-        listView.setOnScrollListener(touchListener.makeScrollListener());
+-        listView.setOnItemLongClickListener (new OnItemLongClickListener() {
+-        	  public boolean onItemLongClick(AdapterView parent, View view, int position, long id) {
+-        		TaskDialogFragment dialog = new TaskDialogFragment();
+-  				dialog.initDialog(TaskListFragment.this);
+-  				dialog.setIsEditing(mIds.get(position), mTitles.get(position));
+-  				dialog.show(getFragmentManager(), "");
+-				return false;
+-        	  }
+-        });
+-	}
+-
+-	private void initGoogleTask(){
+-		Logger.getLogger("com.google.api.client").setLevel(LOGGING_LEVEL);
+-		credential =
+-		        GoogleAccountCredential.usingOAuth2(getActivity(), Collections.singleton(TasksScopes.TASKS));
+-		credential.setSelectedAccountName(SettingUtility.getAccountName());
+-		// Tasks client
+-		service =
+-		        new com.google.api.services.tasks.Tasks.Builder(transport, jsonFactory, credential)
+-		            .setApplicationName("SimplePomodoro").build();
+-		checkGooglePlayServicesAvailable();
+-//		}
+-	}
+-	
+-	  void refreshView() {
+-		TaskLocalUtils tLocalUtils = new TaskLocalUtils(GlobalContext.getInstance());
+-	    cr = tLocalUtils.getAllCursorInMainList();
+-	    mTitles = getAllTitlesOfCurosr(cr);
+-	    mIds = getAllIdFromCursor(cr);
+-//	    final TaskListCursorAdapter mAdapter = new TaskListCursorAdapter(getActivity(), R.layout.my_task_list, 
+-//					cr,
+-//					new String[] { TaskRecorder.KEY_TITLE },
+-//					new int[] { R.id.tvLarger }, 2, getFragmentManager(), this);
+-	    final SimpleCursorAdapter mAdapter = new SimpleCursorAdapter(getActivity(), 
+-	    		R.layout.my_task_list, cr, new String[] { TaskRecorder.KEY_TITLE },
+-	    		new int[] { R.id.tvLarger });
+-		listView.setAdapter(mAdapter);
+-		
+-		
+-	  }
+-
+-	  @Override
+-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+-	    super.onActivityResult(requestCode, resultCode, data);
+-	    switch (requestCode) {
+-	      case REQUEST_GOOGLE_PLAY_SERVICES:
+-	        if (resultCode == Activity.RESULT_OK) {
+-	          syncTask();
+-	        } else {
+-	          checkGooglePlayServicesAvailable();
+-	        }
+-	        break;
+-	      case REQUEST_AUTHORIZATION:
+-	        if (resultCode == Activity.RESULT_OK) {
+-	          FragmentAsyncTask.run(this);
+-	        } else {
+-	          chooseAccount();
+-	        }
+-	        break;
+-	      case REQUEST_ACCOUNT_PICKER:
+-	        if (resultCode == Activity.RESULT_OK && data != null && data.getExtras() != null) {
+-	          String accountName = data.getExtras().getString(AccountManager.KEY_ACCOUNT_NAME);
+-	          if (accountName != null) {
+-	            credential.setSelectedAccountName(accountName);
+-	            SettingUtility.setAccountName(accountName);
+-	            FragmentAsyncTask.run(this);
+-	          }
+-	        }
+-	        break;
+-	    }
+-	  }
+-	  
+-	  
+-		
+-		void showGooglePlayServicesAvailabilityErrorDialog(final int connectionStatusCode) {
+-		    getActivity().runOnUiThread(new Runnable() {
+-		      public void run() {
+-		        Dialog dialog =
+-		            GooglePlayServicesUtil.getErrorDialog(connectionStatusCode, getActivity(),
+-		                REQUEST_GOOGLE_PLAY_SERVICES);
+-		        dialog.show();
+-		      }
+-		    });
+-		  }
+-		
+-	  /** Check that Google Play services APK is installed and up to date. */
+-	  private boolean checkGooglePlayServicesAvailable() {
+-//	    final int connectionStatusCode = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
+-//	    if (GooglePlayServicesUtil.isUserRecoverableError(connectionStatusCode)) {
+-//	      showGooglePlayServicesAvailabilityErrorDialog(connectionStatusCode);
+-//	      return false;
+-//	    }
+-	 // Check status of Google Play Services
+-	    int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getActivity());
+-
+-	    // Check Google Play Service Available
+-	    try {
+-	        if (status != ConnectionResult.SUCCESS) {
+-	            GooglePlayServicesUtil.getErrorDialog(status, getActivity(), status).show();
+-	        }
+-	    } catch (Exception e) {
+-	        Log.e("Error: GooglePlayServiceUtil: ", "" + e);
+-	    }
+-	    return true;
+-	  }
+-
+-	  private void syncTask() {
+-	    // check if there is already an account selected
+-	    if (credential.getSelectedAccountName() == null) {
+-	      chooseAccount();
+-	    } else {
+-	    	FragmentAsyncTask.run(this);
+-	    }
+-	  }
+-
+-	  private void chooseAccount() {
+-	    startActivityForResult(credential.newChooseAccountIntent(), REQUEST_ACCOUNT_PICKER);
+-	  }
+-	  
+-	  
+-	@Override
+-    public void onSaveInstanceState(Bundle outState) {
+-        super.onSaveInstanceState(outState);
+-        outState.putString(KEY_CONTENT, mContent);
+-    }
+-	@Override
+-	public void OnDialogDismiss() {
+-		// TODO Auto-generated method stub
+-		refreshView();
+-		
+-	}
+-
+-	private ArrayList<Integer> getAllIdFromCursor(Cursor cursor){
+-		int idIndex = cursor.getColumnIndex(TaskRecorder.KEY_ID);
+-		ArrayList<Integer> mPosition_id = new ArrayList<Integer>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			int tempInt = cursor.getInt(idIndex);
+-			Integer integer = tempInt;
+-			mPosition_id.add(integer);
+-		}
+-		return mPosition_id;
+-	}
+-	
+-	 private ArrayList<String> getAllTitlesOfCurosr(Cursor cursor) {
+-		int idIndex = cursor.getColumnIndex(TaskRecorder.KEY_TITLE);
+-		ArrayList<String> mPosition_id = new ArrayList<String>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			String temp = cursor.getString(idIndex);
+-			mPosition_id.add(temp);
+-		}
+-		return mPosition_id;
+-	}
+-	
+-	 private void showXiaoMiAlertDialog(){
+-		 	SettingUtility.setXiaoMiMode(true);
+-			AlertDialog d = new AlertDialog.Builder(getActivity())
+-	        .setTitle(getActivity().getString(R.string.detect_is_miphone))
+-	        .setMessage(getActivity().getString(R.string.miphone_message))
+-	        .setPositiveButton(R.string.ok, new android.content.DialogInterface.OnClickListener() {
+-				
+-				@Override
+-				public void onClick(DialogInterface dialog, int which) {
+-					// TODO Auto-generated method stub
+-					
+-					
+-				}
+-			})
+-	      	.create();
+-			d.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
+-			d.show();
+-		}
+-	 @Override
+-		public void onDestroy(){
+-			super.onDestroy();
+-			cr.close();
+-		}
+-		
+-}
+diff --git a/app/src/dacer/google/task/TaskLocalUtils.java b/app/src/dacer/google/task/TaskLocalUtils.java
+deleted file mode 100644
+index 0b55bb1..0000000
+--- a/app/src/dacer/google/task/TaskLocalUtils.java
++++ /dev/null
+@@ -1,182 +0,0 @@
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-import java.text.SimpleDateFormat;
+-import java.util.ArrayList;
+-import java.util.Date;
+-import java.util.HashMap;
+-import java.util.List;
+-import java.util.TimeZone;
+-
+-import android.content.Context;
+-import android.database.Cursor;
+-
+-import com.google.api.client.util.DateTime;
+-import com.google.api.services.tasks.model.Task;
+-
+-/**
+- * Author:dacer
+- * Date  :Sep 13, 2013
+- */
+-public class TaskLocalUtils {
+-
+-	private TaskRecorder recorder;
+-
+-	public TaskLocalUtils(Context c) {
+-		// TODO Auto-generated constructor stub
+-		recorder = new TaskRecorder(c);
+-	}
+-	
+-	
+-//  public ArrayList<Task> getTasksFromDB(){
+-//	  ArrayList<Task> tList = new ArrayList<Task>();
+-//	  Task t = new Task();
+-//	  
+-//  }
+-  public void addNewTask(String title){
+-	  recorder.putTask(title, "", nowStringRfc3339(), "0",false,false);
+-  }
+-  
+-  public void updateTaskLocal(Task t){
+-	  if(recorder.identifierExist(t.getId())){
+-		  boolean deleted;
+-		  boolean completed =!(t.getCompleted() == null);
+-		  String updateTime = t.getUpdated().toStringRfc3339();
+-		  if(t.getDeleted() == null){
+-			  deleted = false;
+-		  }else{
+-			  deleted = t.getDeleted();
+-		  }
+-		  String identifier = t.getId();
+-		  recorder.setTaskCompleted(completed, identifier);
+-		  recorder.setTaskDeletedFlag(deleted, identifier);
+-		  recorder.setTaskTitle(t.getTitle(), identifier);
+-		  recorder.setUpdateTime(updateTime, identifier);
+-	  }else{
+-		  throw new IllegalArgumentException("The Task Not Exist!");
+-	  }
+-  }
+-  
+-  public void putTasksToDB(List<Task> tList){
+-	  for (Task t : tList){
+-		  boolean deleted;
+-		  boolean completed =!(t.getCompleted() == null);
+-		  if(t.getDeleted() == null){
+-			  deleted = false;
+-		  }else{
+-			  deleted = t.getDeleted();
+-		  }
+-		  recorder.putTask(t.getTitle(), 
+-				  t.getNotes(), 
+-				  t.getUpdated().toStringRfc3339(), 
+-				  t.getId(), 
+-				  deleted,
+-				  completed);
+-	  }
+-  }
+-  
+-  public HashMap<Integer, Task> getLocalNewTaskMap(){
+-	  ArrayList<Integer> allNewId = recorder.getAllNewId();
+-	  HashMap<Integer, Task> result = new HashMap<Integer, Task>();
+-	  if(!allNewId.isEmpty()){
+-		  for(int id : allNewId){
+-			  Task t = new Task();
+-			  boolean completed  = recorder.getTaskCompletedByID(id);
+-			  boolean deleted = recorder.getTaskDeleteByID(id);
+-			  DateTime updateTime = DateTime.parseRfc3339(recorder.getUpdateTimeByID(id));
+-			  String identifier = recorder.getTaskIdentifierByID(id);
+-			  String title = recorder.getTaskTitleByID(id);
+-			  t.setDeleted(deleted);
+-			  t.setTitle(title);
+-			  if(completed){
+-				  t.setStatus("completed");// Fuck!!! Why MUST use it instead of setCompleted!!!!
+-			  }
+-			  t.setUpdated(updateTime);
+-			  t.setId(identifier);
+-			  result.put(id, t);
+-		  }
+-	  }
+-	  return result;
+-  }
+-
+-  public List<Task> getTasksFromDB(){
+-	  ArrayList<Integer> allId = recorder.getAllId();
+-	  List<Task> listTask = new ArrayList<Task>();
+-	  for (Integer id : allId){
+-		  Task t = new Task();
+-		  boolean completed  = recorder.getTaskCompletedByID(id);
+-		  boolean deleted = recorder.getTaskDeleteByID(id);
+-		  DateTime updateTime = DateTime.parseRfc3339(recorder.getUpdateTimeByID(id));
+-		  String identifier = recorder.getTaskIdentifierByID(id);
+-		  String title = recorder.getTaskTitleByID(id);
+-		  t.setDeleted(deleted);
+-		  t.setTitle(title);
+-		  if(completed){
+-			  t.setStatus("completed");// Fuck!!! Why MUST use it instead of setCompleted!!!!
+-		  }
+-		  t.setUpdated(updateTime);
+-		  t.setId(identifier);
+-		  listTask.add(t);
+-	  }
+-	  return listTask;
+-  }
+-  
+-//  public void refreshUpdateTime(Task task) throws ParseException{
+-//	  DateTime dt = new DateTime(nowUTCDate());
+-//	  task.setUpdated(dt);
+-//  }
+-//  
+-  public void deleteTaskInDBFlagByID(int id){
+-	  recorder.setTaskDeletedFlagByID(true, id);
+-	  recorder.setUpdateTimeByID(nowStringRfc3339(), id);
+-	  
+-  }
+-  
+-  public void deleteTaskInDBTrue(int db_id){
+-	  recorder.deleteTaskTrueByDBID(db_id);
+-  }
+-  
+-  public boolean getTaskCompleted(Task task){
+-	  return (task.getCompleted()==null? false:true);
+-  }
+-
+-  public void setCompletedByID(int id, boolean completed){
+-	  recorder.setTaskCompletedByID(completed, id);
+-	  recorder.setUpdateTimeByID(nowStringRfc3339(), id);
+-  }
+-  public String getTitleById(int id){
+-	  return recorder.getTaskTitleByID(id);
+-  }
+-  public void setTitleById(int id, String title){
+-	  recorder.setTaskTitleByID(title, id);
+-	  recorder.setUpdateTimeByID(nowStringRfc3339(), id);
+-  }
+-  public void deleteList(){
+-	  recorder.deleteList();
+-  }
+-  public Cursor getAllCursorInMainList(){
+-	  return recorder.getCursorWithoutDeletedandCompleted();
+-  }
+-  
+-  
+-  public List<String> getTasksTitleFromDB() throws IOException{
+-		List<String> result = new ArrayList<String>();
+-		List<Task> tasks = getTasksFromDB();
+-		if (tasks != null) {
+-		  for (Task task : tasks) {
+-		    result.add(task.getTitle());
+-		  }
+-		} else {
+-		  result.add("No tasks.");
+-		}
+-		return result;
+-	  }
+-  public void closeDB(){
+-	  recorder.closeDB();
+-  }
+-  private  String nowStringRfc3339() {
+-	SimpleDateFormat formatUTC = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'.000Z'");
+-	formatUTC.setTimeZone(TimeZone.getTimeZone("UTC"));
+-	return formatUTC.format(new Date());
+-  }
+-}
+diff --git a/app/src/dacer/google/task/TaskRecorder.java b/app/src/dacer/google/task/TaskRecorder.java
+deleted file mode 100644
+index 86b8e24..0000000
+--- a/app/src/dacer/google/task/TaskRecorder.java
++++ /dev/null
+@@ -1,349 +0,0 @@
+-package dacer.google.task;
+-
+-import java.util.ArrayList;
+-
+-import android.content.ContentValues;
+-import android.content.Context;
+-import android.database.Cursor;
+-import android.database.sqlite.SQLiteDatabase;
+-import android.database.sqlite.SQLiteOpenHelper;
+-
+-import com.google.api.client.util.DateTime;
+-
+-/**
+- * Author:dacer
+- * Date  :Sep 10, 2013
+- */
+-
+-public class TaskRecorder {
+-	private SQLiteDatabase db;
+-	private final ContentValues cv = new ContentValues();
+-	private Context mContext;
+-	private SQLHelper mSQLHelper;
+-	public static String KEY_ID = "_id";
+-	public static String KEY_TITLE = "title";
+-	public static String KEY_NOTES = "notes";
+-	public static String KEY_UPDATE_TIME = "update_time";
+-	public static String KEY_DELETED = "deleted";
+-	public static String KEY_GOOGLE_TASK_IDENTIFIER = "google_task_identifier";
+-	public static String KEY_COMPLETED = "completed";//0 => false 1=> true
+-	public static final String TASKS_TABLE_NAME = "tasks";
+-	
+-	public TaskRecorder(Context c) {
+-		mContext = c;
+-		mSQLHelper = new SQLHelper(mContext);
+-	}
+-	
+-	public void putTask(String title, String notes, String rfc3339String, String identifier,
+-			boolean deleted, boolean completed){
+-		db = mSQLHelper.getWritableDatabase();
+-		cv.put(KEY_TITLE, title);
+-		cv.put(KEY_NOTES, notes);
+-		cv.put(KEY_COMPLETED, completed? 1:0);
+-		cv.put(KEY_DELETED, deleted? 1:0);
+-		cv.put(KEY_UPDATE_TIME, rfc3339String);
+-		cv.put(KEY_GOOGLE_TASK_IDENTIFIER, identifier);
+-		long res = db.insert(TASKS_TABLE_NAME, null, cv);
+-		// res = -1:failed
+-		// res = 0 :success
+-	}
+-	
+-	public boolean setUpdateTime(String time, String identifier){
+-		int id = getIdByIdentifier(identifier);
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_UPDATE_TIME, time);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;	
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setUpdateTimeByID(String time, int id){
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_UPDATE_TIME, time);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;	
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setTaskCompleted(boolean completed, String identifier){
+-		int id = getIdByIdentifier(identifier);
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_COMPLETED, completed? 1:0);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;   //-----------------------
+-		return resultBoolean;
+-	}
+-
+-	public boolean setTaskCompletedByID(boolean completed, int id){
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_COMPLETED, completed? 1:0);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;   //-----------------------
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setTaskDeletedFlag(boolean deleted, String identifier){
+-		int id = getIdByIdentifier(identifier);
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_DELETED, deleted? 1:0);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;
+-				
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setTaskDeletedFlagByID(boolean deleted, int id){
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_DELETED, deleted? 1:0);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;
+-				
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setTaskTitle(String title, String identifier){
+-		int id = getIdByIdentifier(identifier);
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_TITLE, title);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;
+-		
+-		return resultBoolean;
+-	}
+-	
+-	public boolean setTaskTitleByID(String title, int id){
+-		db = mSQLHelper.getWritableDatabase();
+-		ContentValues args = new ContentValues();
+-		args.put(KEY_TITLE, title);
+-		Boolean resultBoolean = db.update(TASKS_TABLE_NAME,
+-				args, KEY_ID + "=" + id, null) > 0;
+-				
+-		return resultBoolean;
+-	}
+-	
+-	public String getUpdateTime(String identifier){
+-		return getInfo(identifier, KEY_UPDATE_TIME);
+-	}
+-	public String getTaskIdentifier(String identifier){
+-		return getInfo(identifier, KEY_GOOGLE_TASK_IDENTIFIER);
+-	}
+-	public String getTaskTitle(String identifier){
+-		return getInfo(identifier, KEY_TITLE);
+-	}
+-	public boolean getTaskCompleted(String identifier){
+-		return getInfo(identifier, KEY_COMPLETED).equals("1");
+-	}
+-	public boolean getTaskDelete(String identifier){
+-		return getInfo(identifier, KEY_DELETED).equals("1");
+-	}
+-	
+-	
+-	public String getUpdateTimeByID(int id){
+-		return getInfoByID(id, KEY_UPDATE_TIME);
+-	}
+-	public String getTaskIdentifierByID(int id){
+-		return getInfoByID(id, KEY_GOOGLE_TASK_IDENTIFIER);
+-	}
+-	public String getTaskTitleByID(int id){
+-		return getInfoByID(id, KEY_TITLE);
+-	}
+-	public boolean getTaskCompletedByID(int id){
+-		return getInfoByID(id, KEY_COMPLETED).equals("1");
+-	}
+-	public boolean getTaskDeleteByID(int id){
+-		return getInfoByID(id, KEY_DELETED).equals("1");
+-	}
+-	
+-	
+-	public ArrayList<Integer> getAllId(){
+-		db = mSQLHelper.getReadableDatabase();
+-		Cursor cursor;
+-		cursor = db.query(TASKS_TABLE_NAME, null, null,
+-					null, null, null, null);
+-
+-		int idIndex = cursor.getColumnIndex(KEY_ID);
+-		ArrayList<Integer> mPosition_id = new ArrayList<Integer>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			int tempInt = cursor.getInt(idIndex);
+-			Integer integer = tempInt;
+-			mPosition_id.add(integer);
+-		}
+-		return mPosition_id;
+-	}
+-	
+-	public ArrayList<Integer> getAllNewId(){
+-		db = mSQLHelper.getReadableDatabase();
+-		Cursor cursor;
+-		String selection = KEY_GOOGLE_TASK_IDENTIFIER + "=?";
+-		String[] selectionArgs = { "0" };
+-		cursor = db.query(TASKS_TABLE_NAME, null, selection,
+-				selectionArgs, null, null, null);
+-
+-		int idIndex = cursor.getColumnIndex(KEY_ID);
+-		ArrayList<Integer> mPosition_id = new ArrayList<Integer>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			int tempInt = cursor.getInt(idIndex);
+-			Integer integer = tempInt;
+-			mPosition_id.add(integer);
+-		}
+-		return mPosition_id;
+-	}
+-	
+-	
+-	private String getInfo(String identifier, String KEY){
+-		db = mSQLHelper.getReadableDatabase();
+-		String selection = KEY_GOOGLE_TASK_IDENTIFIER + "=?";
+-		String[] selectionArgs = { identifier };
+-		Cursor cursor = db.query(TASKS_TABLE_NAME, null,
+-				selection, selectionArgs, null, null, null);
+-		int index = cursor.getColumnIndex(KEY);
+-		if(cursor.isNull(index)){
+-			return "0";
+-		}
+-		ArrayList<String> list = new ArrayList<String>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			if(KEY.equals(KEY_COMPLETED) || KEY.equals(KEY_DELETED)){
+-				list.add(String.valueOf(cursor.getInt(index)));
+-			}else{
+-				list.add(cursor.getString(index));
+-			}
+-		}
+-		cursor.close();
+-		return list.get(0);
+-	}
+-	
+-	private String getInfoByID(int id, String KEY){
+-		db = mSQLHelper.getReadableDatabase();
+-		String selection = KEY_ID + "=?";
+-		String[] selectionArgs = { String.valueOf(id) };
+-		Cursor cursor = db.query(TASKS_TABLE_NAME, null,
+-				selection, selectionArgs, null, null, null);
+-		int index = cursor.getColumnIndex(KEY);
+-		if(cursor.getCount() == 0){
+-			return "0";
+-		}
+-		ArrayList<String> list = new ArrayList<String>();
+-		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-			if(KEY.equals(KEY_COMPLETED) || KEY.equals(KEY_DELETED)){
+-				list.add(String.valueOf(cursor.getInt(index)));
+-			}else{
+-				list.add(cursor.getString(index));
+-			}
+-		}
+-		cursor.close();
+-		return list.get(0);
+-	}
+-	
+-	public boolean identifierExist(String identifier){
+-		db = mSQLHelper.getReadableDatabase();
+-		String selection = KEY_GOOGLE_TASK_IDENTIFIER + "=?";
+-		String[] selectionArgs = { identifier };
+-		Cursor cursor = db.query(TASKS_TABLE_NAME, null,
+-				selection, selectionArgs, null, null, null);
+-		if(cursor.getCount() == 0){
+-			return false;
+-		}else {
+-			return true;
+-		}
+-	}
+-	
+-	public int getIdByIdentifier(String identifier){
+-		db = mSQLHelper.getReadableDatabase();
+-		String selection = KEY_GOOGLE_TASK_IDENTIFIER + "=?";
+-		String[] selectionArgs = { identifier };
+-		Cursor cursor = db.query(TASKS_TABLE_NAME, null,
+-				selection, selectionArgs, null, null, null);
+-		int index = cursor.getColumnIndex(KEY_ID);
+-		if(cursor.getCount() == 0){
+-			return 0000;
+-		}else {
+-			cursor.moveToFirst(); 
+-			return cursor.getInt(index);
+-		}
+-	}
+-//	public List<String> getAllTasksTitle(){
+-//		db = mSQLHelper.getReadableDatabase();
+-//		Cursor cursor;
+-//		cursor = db.query(TASKS_TABLE_NAME, null, null,
+-//					null, null, null, null);
+-//		int idIndex = cursor.getColumnIndex(KEY_TITLE);
+-//		List<String> mTitles = new ArrayList<String>();
+-//		for (cursor.moveToFirst(); !(cursor.isAfterLast()); cursor.moveToNext()) {
+-//			String tempS = cursor.getString(idIndex);
+-//			String s = tempS;
+-//			mTitles.add(s);
+-//		}
+-//		return mTitles;
+-//	}
+-	
+-	public void closeDB(){
+-		db.close();
+-	}
+-	
+-	public Cursor getCursorWithoutDeletedandCompleted() {
+-		// Log.e("getCursor", "start");
+-		db = mSQLHelper.getReadableDatabase();
+-		String selection = KEY_DELETED + "=? AND " + KEY_COMPLETED +"=?";
+-		String[] selectionArgs = { "0","0" };
+-		Cursor cursor;
+-		cursor = db.query(TASKS_TABLE_NAME, null, selection,
+-				selectionArgs, null, null, KEY_UPDATE_TIME+" DESC");
+-		return cursor;
+-	}
+-	
+-	public int deleteTaskTrueByDBID(int db_id) {
+-		db = mSQLHelper.getWritableDatabase();
+-		String[] args = { String.valueOf(db_id) };
+-		return db.delete(TASKS_TABLE_NAME, KEY_ID
+-				+ "=?", args);
+-	}
+-	
+-	
+-	public void deleteList(){
+-		db = mSQLHelper.getWritableDatabase();
+-		db.execSQL("DELETE FROM "+ TASKS_TABLE_NAME);
+-		db.execSQL("DELETE FROM sqlite_sequence WHERE name='"+ TASKS_TABLE_NAME+"'");		
+-	}
+-	
+-	private class SQLHelper extends SQLiteOpenHelper {
+-		
+-		private static final int DATABASE_VERSION = 2;
+-		private static final String DATABASE_NAME = "tasks.db";
+-		private SQLiteDatabase mDatabase;
+-		
+-		private final String TODOLIST_TABLE_CREATE = "CREATE TABLE "
+-				+ TASKS_TABLE_NAME + " (" + KEY_ID
+-				+ " INTEGER PRIMARY KEY AUTOINCREMENT, " + KEY_TITLE + " TEXT, "
+-				+ KEY_NOTES + " TEXT, "+ KEY_GOOGLE_TASK_IDENTIFIER + " TEXT, " 
+-				+ KEY_UPDATE_TIME + " TEXT, "+ KEY_DELETED +" NUMERIC, "
+-				+ KEY_COMPLETED + " NUMERIC);";
+-		
+-		public SQLHelper(Context context) {
+-			super(context, DATABASE_NAME, null, DATABASE_VERSION);
+-			// mContext = context;
+-		}
+-
+-		@Override
+-		public void onCreate(SQLiteDatabase db) {
+-			mDatabase = db;
+-			mDatabase.execSQL(TODOLIST_TABLE_CREATE);
+-		}
+-
+-		@Override
+-		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+-			// TODO Auto-generated method stub
+-//			Log.w(TAG, "Upgrading database from version " + oldVersion + " to "
+-//					+ newVersion + ", which will destroy all old data");
+-			db.execSQL("DROP TABLE IF EXISTS " + TASKS_TABLE_NAME);
+-			onCreate(db);
+-		}
+-
+-	}
+-}
+diff --git a/app/src/dacer/google/task/TaskUtils.java b/app/src/dacer/google/task/TaskUtils.java
+deleted file mode 100644
+index b09e667..0000000
+--- a/app/src/dacer/google/task/TaskUtils.java
++++ /dev/null
+@@ -1,115 +0,0 @@
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-import java.util.ArrayList;
+-import java.util.HashMap;
+-import java.util.Iterator;
+-import java.util.List;
+-
+-import android.content.Context;
+-
+-import com.dacer.simplepomodoro.R;
+-import com.google.api.services.tasks.Tasks;
+-import com.google.api.services.tasks.model.Task;
+-
+-import dacer.settinghelper.SettingUtility;
+-
+-/**
+- * Author:dacer
+- * Date  :Sep 13, 2013
+- * Used to deal with data between local and web
+- */
+-public class TaskUtils {
+-	public static final String LIST_NAME = "SimplePomodoro";
+-
+-	public static void initWebList(Context c,Tasks tasks) throws IOException{
+-		TaskWebUtils tWebUtils;
+-		tWebUtils = new TaskWebUtils(tasks, c);
+-		TaskLocalUtils tLocalUtils = new TaskLocalUtils(c);
+-		if(tWebUtils.listExistOnWeb(LIST_NAME)){
+-			tLocalUtils.deleteList();
+-			String listId = tWebUtils.getListIdFromWeb(LIST_NAME);
+-			SettingUtility.setTaskListId(listId);
+-		}else{
+-			tLocalUtils.deleteList();
+-			tWebUtils.addTaskListToWeb(LIST_NAME);
+-			String listId = tWebUtils.getListIdFromWeb(LIST_NAME);
+-			SettingUtility.setTaskListId(listId);
+-			addTaskByTitle(c.getString(R.string.i_from_web), tWebUtils, listId);
+-		}
+-	  }
+-	
+-	public static void initLocalList(Context c){
+-		TaskLocalUtils tLocalUtils = new TaskLocalUtils(c);
+-		tLocalUtils.addNewTask(c.getString(R.string.swipe_right_to_finish));
+-		tLocalUtils.addNewTask(c.getString(R.string.click_plus_to_add_task));
+-		tLocalUtils.addNewTask(c.getString(R.string.hold_plus_to_change_account));
+-		tLocalUtils.addNewTask(c.getString(R.string.pull_to_sync));
+-		SettingUtility.setFirstStart(false);
+-	}
+-	
+-	public static void addTaskByTitle(String title,TaskWebUtils tWebUtils,String listId) throws IOException{
+-		Task t = new Task();
+-		t.setTitle(title);
+-		tWebUtils.addTaskToWeb(listId, t);
+-	}
+-	public static void updateDB(String listId,Context c,Tasks tasks) throws IOException{
+-		//Read http://idacer.tk/?p=42
+-		  
+-		TaskLocalUtils tLocalUtils;
+-		TaskWebUtils tWebUtils;
+-		tLocalUtils = new TaskLocalUtils(c);
+-		tWebUtils = new TaskWebUtils(tasks, c);
+-		
+-		//FIRST Push and delete new tasks(identifrer == 0) in local and delete in DB
+-		HashMap<Integer, Task> localNewTaskMap =  tLocalUtils.getLocalNewTaskMap();
+-		Iterator<Integer> keySetIterator = localNewTaskMap.keySet().iterator();
+-	    while(keySetIterator.hasNext()){
+-	    	Integer db_id = keySetIterator.next();
+-	    	Task t = localNewTaskMap.get(db_id);
+-	    	t.setId(null);
+-	    	tWebUtils.addTaskToWeb(listId, t);//may receive invalid listId
+-	    	tLocalUtils.deleteTaskInDBTrue(db_id);
+-	    	listId = SettingUtility.getTaskListId();//add it because listid maybe updated in this loop
+-	    }
+-	    
+-	    //SECOND
+-	    List<Task> localTaskList = tLocalUtils.getTasksFromDB();
+-	    List<Task> webTaskList = tWebUtils.getTasksFromWeb(listId);//may receive invalid listId
+-	    List<Task> waitAddToLocalDB = new ArrayList<Task>();
+-	    if(!webTaskList.isEmpty()){
+-	    	for(Task t : webTaskList){
+-		    	boolean exist = false;
+-		    	for(Task tLocal : localTaskList){
+-		    		if(tLocal.getId().equals(t.getId())){
+-		    			exist = true;
+-		    		}
+-		    	}
+-		    	if(!exist){
+-		    		waitAddToLocalDB.add(t);
+-		    	}
+-		    }
+-	    } 
+-	    if(!waitAddToLocalDB.isEmpty()){
+-		    tLocalUtils.putTasksToDB(waitAddToLocalDB);
+-		    }
+-	    
+-	    //THIRD
+-	    localTaskList = tLocalUtils.getTasksFromDB();
+-	    for(Task tLocal : localTaskList){
+-	    	for(Task tWeb : webTaskList){
+-	    		if(tLocal.getId().equals(tWeb.getId())){
+-	    			long tLocalUpdateTime = tLocal.getUpdated().getValue();
+-	    			long tWebUpdateTime = tWeb.getUpdated().getValue();
+-	    			if(tLocalUpdateTime > tWebUpdateTime){
+-	    				//update tLocal to web
+-	    				tWebUtils.updateTasktoWeb(listId, tLocal);
+-	    			}else if(tLocalUpdateTime < tWebUpdateTime){
+-	    				//update tWeb to local db
+-	    				tLocalUtils.updateTaskLocal(tWeb);
+-	    			}
+-	    		}
+-	    	}
+-	    }
+-	  }
+-}
+diff --git a/app/src/dacer/google/task/TaskWebUtils.java b/app/src/dacer/google/task/TaskWebUtils.java
+deleted file mode 100644
+index f6074b5..0000000
+--- a/app/src/dacer/google/task/TaskWebUtils.java
++++ /dev/null
+@@ -1,151 +0,0 @@
+-package dacer.google.task;
+-
+-import java.io.IOException;
+-import java.text.ParseException;
+-import java.text.SimpleDateFormat;
+-import java.util.ArrayList;
+-import java.util.Date;
+-import java.util.List;
+-import java.util.TimeZone;
+-
+-import android.content.Context;
+-import android.util.Log;
+-
+-import com.google.api.client.util.DateTime;
+-import com.google.api.services.tasks.Tasks;
+-import com.google.api.services.tasks.model.Task;
+-import com.google.api.services.tasks.model.TaskList;
+-import com.google.api.services.tasks.model.TaskLists;
+-
+-import dacer.settinghelper.SettingUtility;
+-
+-/**
+- * Author:dacer
+- * Date  :Sep 10, 2013
+- */
+-public class TaskWebUtils {
+-  private Tasks client;
+-  private Context mContext;
+-  
+-  public TaskWebUtils(Tasks task, Context cc) {
+-	client = task;
+-	mContext = cc;
+-  }
+-  
+-  
+-
+-
+-//API actions-------------
+-//  public List<String> getTasksTitleFromWeb(String TaskListId) throws IOException{
+-//	List<String> result = new ArrayList<String>();
+-//	List<Task> tasks =
+-//	        client.tasks().list(TaskListId).setFields("items/title").execute().getItems();
+-//	if (tasks != null) {
+-//	  for (Task task : tasks) {
+-//	    result.add(task.getTitle());
+-//	  }
+-//	} else {
+-//	  result.add("No tasks.");
+-//	}
+-//	return result;
+-//  }
+-  
+-  public void addTaskToWeb(String listId, Task task) throws IOException{	
+-	  if(SettingUtility.getTaskListId().equals("0")){ //Get web list id and save to local
+-		  TaskUtils.initWebList(mContext, client);
+-		  listId = SettingUtility.getTaskListId();
+-	  }
+-	  try {
+-		client.tasks().insert(listId, task).execute();
+-	  } catch (IOException e) {
+-			// TODO Auto-generated catch block
+-		e.printStackTrace();
+-		Log.e("addTaskError--->", e.getMessage());
+-		if(is404error(e.getMessage())){
+-			TaskUtils.initWebList(mContext,client);  //[webListId error]Update web list id 
+-			addTaskToWeb(SettingUtility.getTaskListId(), task);
+-		}else {
+-			throw e;
+-		}
+-	}
+-  }
+-  
+-  public void updateTasktoWeb(String listId,Task t) throws IOException{
+-//	  Log.e("updateTask----->",".");
+-//	  Log.e("ID-->",t.getId());
+-//	  Log.e("listid-->",listId);
+-//	  Log.e("completed-->",t.getCompleted().toStringRfc3339());
+-//	  Log.e("deleted-->",String.valueOf(t.getDeleted()));
+-//	  Log.e("UpdateTime-->",t.getUpdated().toStringRfc3339());
+-	  client.tasks().update(listId, t.getId(),t).execute();
+-  }
+-  
+-  public List<Task> getTasksFromWeb(String listId) throws IOException{
+-	if(SettingUtility.getTaskListId().equals("0")){ //Get web list id and save to local
+-	  TaskUtils.initWebList(mContext, client);
+-	  listId = SettingUtility.getTaskListId();
+-	}
+-	com.google.api.services.tasks.model.Tasks tasks = new 
+-			com.google.api.services.tasks.model.Tasks();
+-	try {
+-		tasks = client.tasks().list(listId)
+-		.setShowDeleted(true)
+-		.setShowCompleted(true)
+-		.setShowHidden(false).execute();
+-	} catch (IOException e) {  // Draw snake and add feet(chinese proverbs XD)
+-		// TODO Auto-generated catch block
+-		e.printStackTrace();
+-		Log.e("getTask----->", e.getMessage());
+-		if(is404error(e.getMessage())){
+-			Log.e("getTasksError--->", e.getMessage());
+-			TaskUtils.initWebList(mContext,client);
+-			return getTasksFromWeb(SettingUtility.getTaskListId());
+-		}else{
+-			throw e;
+-		}
+-	}
+-    return tasks.getItems();
+-  }
+-	  
+-  public void addTaskListToWeb(String listName) throws IOException{
+-	TaskList guideList = new TaskList();
+-	guideList.setTitle(listName);
+-	client.tasklists().insert(guideList).execute();
+-  }
+-  
+-  
+-  
+-  //It seems google task api only can upload single task once,F*CK!!!
+-//  public void addTasksToWeb(String listId, List<Task> taskList) throws IOException{	
+-//	for(Task t : taskList){
+-//		client.tasks().insert(listId, t).execute();
+-//	}
+-//  }
+-  
+-  public boolean listExistOnWeb(String listName) throws IOException{
+-	TaskLists taskLists = client.tasklists().list().execute();
+-	boolean spListExist = false;
+-	for (TaskList taskList : taskLists.getItems()) {
+-		if(taskList.getTitle().equals(TaskUtils.LIST_NAME)){
+-			spListExist = true;
+-		}
+-	}
+-	return spListExist;
+-  }
+-	  
+-  public String getListIdFromWeb(String listName) throws IOException{
+-	TaskLists taskLists = client.tasklists().list().execute();
+-	for (TaskList taskList : taskLists.getItems()) {
+-      if(taskList.getTitle().equals(listName)){
+-	    return taskList.getId();
+-	  }
+-	}
+-	return "";
+-  }	  
+-
+-  
+-  
+-  private static boolean is404error(String str){ 
+-	    return str.contains("404"); 
+-	} 
+-}
+diff --git a/app/src/dacer/google/task/Utils.java b/app/src/dacer/google/task/Utils.java
+deleted file mode 100755
+index 67eab55..0000000
+--- a/app/src/dacer/google/task/Utils.java
++++ /dev/null
+@@ -1,94 +0,0 @@
+-/*
+- * Copyright (c) 2012 Google Inc.
+- * 
+- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+- * in compliance with the License. You may obtain a copy of the License at
+- * 
+- * http://www.apache.org/licenses/LICENSE-2.0
+- * 
+- * Unless required by applicable law or agreed to in writing, software distributed under the License
+- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+- * or implied. See the License for the specific language governing permissions and limitations under
+- * the License.
+- */
+-
+-package dacer.google.task;
+-
+-import android.app.Activity;
+-import android.content.res.Resources;
+-import android.util.Log;
+-import android.widget.Toast;
+-
+-import com.dacer.simplepomodoro.R;
+-import com.google.android.gms.auth.GoogleAuthException;
+-import com.google.api.client.googleapis.json.GoogleJsonError;
+-import com.google.api.client.googleapis.json.GoogleJsonResponseException;
+-
+-/**
+- * Common utilities.
+- * 
+- * @author Yaniv Inbar
+- */
+-public class Utils {
+-
+-  /**
+-   * Logs the given throwable and shows an error alert dialog with its message.
+-   * 
+-   * @param activity activity
+-   * @param tag log tag to use
+-   * @param t throwable to log and show
+-   */
+-  public static void logAndShow(Activity activity, String tag, Throwable t) {
+-    Log.e(tag, "Error", t);
+-    String message = t.getMessage();
+-    if (t instanceof GoogleJsonResponseException) {
+-      GoogleJsonError details = ((GoogleJsonResponseException) t).getDetails();
+-      if (details != null) {
+-        message = details.getMessage();
+-      }
+-    } else if (t.getCause() instanceof GoogleAuthException) {
+-      message = ((GoogleAuthException) t.getCause()).getMessage();
+-    }
+-    showError(activity, message);
+-  }
+-
+-  /**
+-   * Logs the given message and shows an error alert dialog with it.
+-   * 
+-   * @param activity activity
+-   * @param tag log tag to use
+-   * @param message message to log and show or {@code null} for none
+-   */
+-  public static void logAndShowError(Activity activity, String tag, String message) {
+-    String errorMessage = getErrorMessage(activity, message);
+-    Log.e(tag, errorMessage);
+-    showErrorInternal(activity, errorMessage);
+-  }
+-
+-  /**
+-   * Shows an error alert dialog with the given message.
+-   * 
+-   * @param activity activity
+-   * @param message message to show or {@code null} for none
+-   */
+-  public static void showError(Activity activity, String message) {
+-    String errorMessage = getErrorMessage(activity, message);
+-    showErrorInternal(activity, errorMessage);
+-  }
+-
+-  private static void showErrorInternal(final Activity activity, final String errorMessage) {
+-    activity.runOnUiThread(new Runnable() {
+-      public void run() {
+-        Toast.makeText(activity, errorMessage, Toast.LENGTH_LONG).show();
+-      }
+-    });
+-  }
+-
+-  private static String getErrorMessage(Activity activity, String message) {
+-    Resources resources = activity.getResources();
+-    if (message == null) {
+-      return resources.getString(R.string.error);
+-    }
+-    return resources.getString(R.string.error_format, message);
+-  }
+-}
+diff --git a/app/src/dacer/settinghelper/SettingUtility.java b/app/src/dacer/settinghelper/SettingUtility.java
+index 281bb2b..40243a0 100644
+--- a/app/src/dacer/settinghelper/SettingUtility.java
++++ b/app/src/dacer/settinghelper/SettingUtility.java
+@@ -9,7 +9,6 @@ import android.widget.Toast;
+ import com.dacer.simplepomodoro.R;
+ import com.google.api.services.tasks.Tasks;
+ 
+-import dacer.google.task.TaskWebUtils;
+ import dacer.utils.GlobalContext;
+ import dacer.utils.MyUtils;
+ 

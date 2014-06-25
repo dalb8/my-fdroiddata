@@ -1,0 +1,47 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:Office
+License:MIT
+Web Site:http://blog.dacer.im/myapps
+Source Code:https://github.com/dacer/SimplePomodoro/commits
+Issue Tracker:
+
+Auto Name:Simple Pomodoro
+Summary:Track time spent
+Description:
+Start the Pomodoro by pressing the widget or swipe to the right to see your
+record. Press the back button to stop the Pomodoro.
+
+Google Play Services library was removed, along with the task manager.
+.
+
+Repo Type:git
+Repo:https://github.com/dacer/SimplePomodoro
+
+Build:2.2,33
+    commit=fd2efe3a7cf6e6b8c26a85ff0e
+    subdir=app
+    patch=gms_33.patch
+    rm=app/libs/google*
+    srclibs=1:ViewPagerIndicator@2.4.1,2:PullToRefresh@v2.1.1
+    prebuild=sed -i '/reference.3/d' project.properties && \
+       sed -i 's/83sp/48sp/' res/layout/fragment_record.xml
+
+Maintainer Notes:
+Project is abandoned.
+.
+
+Update Check Mode:Static
+Current Version:2.2
+Current Version Code:33
+
+
