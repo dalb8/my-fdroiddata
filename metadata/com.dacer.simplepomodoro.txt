@@ -30,8 +30,8 @@ Repo:https://github.com/dacer/SimplePomodoro
 Build:2.2,33
     commit=fd2efe3a7cf6e6b8c26a85ff0e
     subdir=app
-    patch=gms_33.patch
-    rm=app/libs/google*
+    patch=theme_33.patch,gms_33.patch
+    rm=app/libs/google*,app/libs/jsr*
     srclibs=1:ViewPagerIndicator@2.4.1,2:PullToRefresh@v2.1.1
     prebuild=sed -i '/reference.3/d' project.properties && \
        sed -i 's/83sp/48sp/' res/layout/fragment_record.xml
