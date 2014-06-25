@@ -39,7 +39,7 @@ Build:1.8,9
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest/cm-11.0
+#Update Check Mode:RepoManifest/cm-11.0
 Current Version:1.8
 Current Version Code:9
 

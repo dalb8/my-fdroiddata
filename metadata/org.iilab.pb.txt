@@ -1,0 +1,37 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Phone & SMS
+License:GPLv3
+Web Site:https://panicbutton.io
+Source Code:https://github.com/iilab/PanicButton
+Issue Tracker:https://github.com/iilab/PanicButton/issues
+
+Auto Name:Calculate!
+Summary:Set one-click emergency options
+Description:
+Set up emergency plans like whom to text in case of intimidation. When
+in danger, rapidly press the power button and the secret alarm gets
+triggered. The app is disguised as a calculator.
+.
+
+Repo Type:git
+Repo:https://github.com/iilab/PanicButton
+
+Build:1.2.8,128
+    commit=a121b9d97fe771dd8d2dde2f768525f5711e6041
+    rm=libs/crashlytics.jar
+    maven=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.2.8
+Current Version Code:128
+

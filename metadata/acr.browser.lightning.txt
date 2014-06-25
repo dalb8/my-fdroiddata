@@ -40,7 +40,7 @@ but latest version does have drawer.
 Use later commit for 66 to avoid crashes.
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:3.1.1a
 Current Version Code:66
 
