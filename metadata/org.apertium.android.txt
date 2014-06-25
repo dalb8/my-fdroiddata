@@ -44,8 +44,19 @@ Build:0.98,98
         sed -i '/proguard.config/d' project.properties
     scanignore=src/org/apertium
 
+Build:1,100
+    commit=52521
+    rm=libs/bugsense3.0.7.jar,lttoolbox.jar,custom_rules.xml,tests
+    srclibs=Lttoolbox@51126
+    prebuild=find $PWD/src -type f -print0 | xargs -0 sed -i '/bugsense/Id'  && \
+        $$MVN3$$ package -DskipTests -f $$Lttoolbox$$/pom.xml && \
+        mv $$Lttoolbox$$/target/lttoolbox-java-3.2.0-SNAPSHOT.jar libs/lttoolbox.jar && \
+        sed -i '44,49d' src/org/apertium/android/App.java && \
+        sed -i '/proguard.config/d' project.properties
+    scanignore=src/org/apertium
+
 Maintainer Notes:
-Scan finds dexclassloaders
+Scan finds dexclassloaders.
 .
 
 Update Check Mode:RepoManifest
