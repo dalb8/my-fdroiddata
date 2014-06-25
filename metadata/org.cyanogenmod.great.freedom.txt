@@ -9,7 +9,7 @@
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 Categories:Themes
-License:None
+License:Apache*
 Web Site:http://elelinux.org
 Source Code:https://github.com/elelinux/GreatFreedom
 Issue Tracker:https://github.com/elelinux/GreatFreedom/issues
@@ -17,19 +17,29 @@ Issue Tracker:https://github.com/elelinux/GreatFreedom/issues
 Auto Name:Great Freedom
 Summary:CyanogenMod-compatible theme
 Description:
+Changes alarms, fonts, lockscreen, notifications, ringtones and wallpapers.
+
+The icons have been removed since most of the icons are for 
+apps we don't have; they may be pointed to other apps later.
+There's no replacement for Roboto Condensed.
+
+Note the Android security settings allow you to remove the ability of 
+themes to change notifications, thus saving RAM.
+
+*The font is called Lato and is available under SIL Open Font Licence.
 .
 
 Repo Type:git
 Repo:https://github.com/elelinux/GreatFreedom.git
 
-Build:1.7,8
-    commit=153d817fc3c5e051d4af6a8
-    init=rm -rf bin gen build
+Build:1.8,9
+    commit=1fdad079d229b72f2a5e60f6dfbbb
+    init=rm -rf bin gen build assets/icons
 
 Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest/cm-11.0
-Current Version:1.7
-Current Version Code:8
+Current Version:1.8
+Current Version Code:9
 
