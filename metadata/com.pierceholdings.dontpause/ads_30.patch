@@ -1,0 +1,89 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 5d5d0e1..041c5a0 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -49,12 +49,8 @@
+         android:label="@string/app_name"
+         android:persistent="true"
+         android:theme="@style/Theme.Sherlock.Light" >
+-         <meta-data android:name="com.google.android.gms.version"
+-           android:value="@integer/google_play_services_version"
+-            />
+         <meta-data android:name="com.bastionsdk.android.API_KEY" android:value="5399458025117876D56CB6A7899A1A" />
+         <activity
+-            android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+         <activity
+             android:name="com.pierceholdings.dontpause.MainActivity"
+diff --git a/src/com/pierceholdings/dontpause/MainActivity.java b/src/com/pierceholdings/dontpause/MainActivity.java
+index 90df88a..1aaeb1c 100644
+--- a/src/com/pierceholdings/dontpause/MainActivity.java
++++ b/src/com/pierceholdings/dontpause/MainActivity.java
+@@ -32,8 +32,6 @@ import com.bastionsdk.android.BastionOfferListener;
+ import com.bastionsdk.android.Feature;
+ import com.bastionsdk.android.Offer;
+ import com.bastionsdk.android.Resource;
+-import com.google.android.gms.ads.AdRequest;
+-import com.google.android.gms.ads.InterstitialAd;
+ 
+ /**
+  * Developed by Trent Pierce for Pierce Holdings LLC
+@@ -61,7 +59,6 @@ public class MainActivity extends SherlockActivity  implements OnClickListener,
+ 	  boolean adsenabled;
+ 	  NotificationManager mNotificationManager;
+ 	  boolean unlocked = false;
+-	  private InterstitialAd interstitial;
+ 
+ 	  
+ 	  //This class is the UI of the app. This is where I define buttons and decide whether you are using the free or pro version
+@@ -93,16 +90,6 @@ public class MainActivity extends SherlockActivity  implements OnClickListener,
+                 this); /* Pass this as second parameter since  we're implementing BastionOfferListener */
+         
+         
+-  	 // Create the interstitial ad.
+-  	    interstitial = new InterstitialAd(this);
+-  	    interstitial.setAdUnitId("ca-app-pub-5038706716632727/8458526186");
+-
+-  	    // Create ad request.
+-  	    AdRequest adRequest = new AdRequest.Builder().build();
+-
+-  	    // Begin loading your interstitial.
+-  	    interstitial.loadAd(adRequest);
+-
+   	    //Setup the actionbar sherlock action bar
+ 	    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+ 		getSupportActionBar().setDisplayShowTitleEnabled(false);
+@@ -190,9 +177,6 @@ public class MainActivity extends SherlockActivity  implements OnClickListener,
+ 	        //You know I love to log
+ 			Log.d(TAG, "onStart");
+ 			
+-			//Build and load that Interstitial ad
+-			AdRequest adRequest = new AdRequest.Builder().build();
+-			interstitial.loadAd(adRequest);
+ 	      break;
+ 	      
+ 	      //Stop Button
+@@ -224,16 +208,6 @@ public class MainActivity extends SherlockActivity  implements OnClickListener,
+ 			//Stop Bastion
+ 			Bastion.onStop(this);
+ 			
+-			//Check whether I have ads enabled? We already loaded it anyway, but should I show it?
+-          if (adsenabled) {
+-	//Don't show me an ad
+-               } else {
+-//I love to support hard working developers. Show me that beautiful interstitial ad; if it actually loaded.	
+-			   if (interstitial.isLoaded()) {
+-				      //Show it!
+-				      interstitial.show();
+-			    }
+-			}
+ 	      break;
+ 	    }
+ 	  }
+@@ -441,4 +415,4 @@ private void savePreferences(String key, boolean value) {
+ i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+ startActivity(i);   
+   }
+-}
+\ No newline at end of file
++}
