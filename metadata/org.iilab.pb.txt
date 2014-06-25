@@ -13,6 +13,7 @@ Source Code:https://github.com/iilab/PanicButton
 Issue Tracker:https://github.com/iilab/PanicButton/issues
 
 Auto Name:Calculate!
+Name:Panic Button
 Summary:Set one-click emergency options
 Description:
 Set up emergency plans like whom to text in case of intimidation. When
