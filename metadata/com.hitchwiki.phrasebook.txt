@@ -55,6 +55,9 @@ Need to muck about with versionCode: https://issues.apache.org/jira/browse/CB-50
 version in config.xml, but no versionCode.
 
 Will use grunt in v2 branch.
+
+There's this too: https://github.com/marko-petrovic/hitchwiki-android-app
+but it uses GMS and other non-free libs.
 .
 
 Update Check Mode:None

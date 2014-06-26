@@ -25,10 +25,11 @@ that will be detected
 Repo Type:git
 Repo:https://github.com/TobbenTM/dogeweather.git
 
+# not exact
 Build:1.3,13
     commit=558ab080b1a6d9e14
     subdir=src
-    srclibs=1:Appcompat@thing;1:ASync-http@thing
+    srclibs=1:Appcompat@thing;2:ASync-http@thing
 
 Maintainer Notes:
 .

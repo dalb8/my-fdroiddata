@@ -12,7 +12,7 @@ Web Site:
 Source Code:https://android.googlesource.com/platform/packages/inputmethods/PinyinIME
 Issue Tracker:
 
-Auto Name:
+Auto Name:Pinyin IME
 Summary:Keyboard
 Description:
 No description available

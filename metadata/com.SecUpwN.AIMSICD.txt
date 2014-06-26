@@ -35,6 +35,8 @@ Build:0.2.2,3
 
 Maintainer Notes:
 Can be built with framework and telephony jars from a ROM or from source
+
+Using GMS for location in latest versions.
 .
 
 Update Check Mode:None

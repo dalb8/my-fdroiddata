@@ -12,7 +12,7 @@ Web Site:http://www.livitski.name/projects/n-puzzle
 Source Code:https://github.com/StanLivitski/n-puzzle/commits
 Issue Tracker:
 
-Auto Name:
+Auto Name:n-Puzzle
 Summary:A classic puzzle game with custom images
 Description:
 n-Puzzle app is a classic sliding puzzle game based on the Fifteen Puzzle. It allows you to

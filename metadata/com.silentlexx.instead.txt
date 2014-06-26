@@ -21,6 +21,8 @@ quests.
 
 The package includes interpreter and interactive fiction manager, capable of downloading games in 
 choosen language.
+
+There are newer versions available on gplay.
 .
 
 Repo Type:git-svn
@@ -40,7 +42,8 @@ Build:1.6.1.9,16109
 
 Maintainer Notes:
 1.9.1.1 on gplay.
-Srclib moved to github but Android code hasn't been updated in a while.
+Srclib moved to github: https://github.com/instead-hub/instead, but Android
+code hasn't been updated in a while.
 .
 
 Update Check Mode:None

@@ -31,11 +31,10 @@ Build:1.99.11,129
     commit=v1.99.11
     target=android-12
     extlibs=keepass/sha2-07-01-07.zip
-    init=rm assets/*.key assets/*.kdb assets/*.kdbx
-    rm=tests
+    rm=assets/*.key,assets/*.kdb,assets/*.kdbx,tests
     prebuild=unzip libs/sha2-07-01-07.zip -d jni/sha && \
         rm libs/sha2-07-01-07.zip
-    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    build=ndk-build APP_ABI=armeabi-v7a
     buildjni=no
 
 Maintainer Notes:
