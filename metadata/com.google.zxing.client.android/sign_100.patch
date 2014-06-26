@@ -1,0 +1,74 @@
+diff --git a/pom.xml b/pom.xml
+index e390d2b..18039e7 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -69,10 +69,6 @@
+ 
+   <modules>
+     <module>core</module>
+-    <module>javase</module>
+-    <module>android-integration</module>
+-    <module>zxing.appspot.com</module>
+-    <module>zxingorg</module>
+   </modules>
+ 
+   <properties>
+@@ -528,57 +524,15 @@
+       <modules>
+         <module>android-core</module>
+         <module>android</module>
+-        <module>androidtest</module>
+-        <module>glass</module>
+       </modules>
+-    </profile>
+-    <profile>
+-      <id>release</id>
+-      <build>
+-        <plugins>
+-          <plugin>
+-            <groupId>org.apache.maven.plugins</groupId>
+-            <artifactId>maven-gpg-plugin</artifactId>
+-          </plugin>
+-        </plugins>
+-      </build>
+-    </profile>
+-    <profile>
+-      <id>android-release</id>
+       <build>
+         <plugins>
+           <plugin>
+-            <groupId>org.apache.maven.plugins</groupId>
+-            <artifactId>maven-jarsigner-plugin</artifactId>
+-            <executions>
+-              <execution>
+-                <id>signing</id>
+-                <goals>
+-                  <goal>sign</goal>
+-                </goals>
+-                <phase>package</phase>
+-                <configuration>
+-                  <includes>
+-                    <include>target/*.apk</include>
+-                  </includes>
+-                  <keystore>../private/ZXing.keystore</keystore>
+-                  <alias>zxing</alias>
+-                  <arguments>
+-                    <argument>-sigalg</argument>
+-                    <argument>MD5withRSA</argument>
+-                    <argument>-digestalg</argument>
+-                    <argument>SHA1</argument>
+-                  </arguments>
+-                </configuration>
+-              </execution>
+-            </executions>
+-          </plugin>
+-          <plugin>
+             <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+             <artifactId>android-maven-plugin</artifactId>
+             <configuration>
+               <proguard>
+-                <skip>false</skip>
++                <skip>true</skip>
+                 <config>proguard.cfg</config>
+               </proguard>
+               <sign>

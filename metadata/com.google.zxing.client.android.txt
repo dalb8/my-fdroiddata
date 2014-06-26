@@ -27,17 +27,19 @@ http://en.wikibooks.org/w/index.php?search=%s.
 Repo Type:srclib
 Repo:Zxing
 
-Build:4.4.1,92
-    commit=8e1b1a3bb4
-    subdir=android
-    build=$$MVN3$$ package -DskipTests -f ../core/pom.xml
-
 Build:4.6.3,98
     commit=BS-4.6.3
     subdir=android
     patch=sign_98.patch
     build=$$MVN3$$ -Pandroid-release -DskipTests package
     output=target/android-4.6.3.apk
+
+Build:4.7.0,100
+    commit=BS-4.7.0
+    subdir=android
+    patch=sign_100.patch
+    build=$$MVN3$$ -f ../pom.xml -Pbuild-android -DskipTests package
+    output=target/android-4.7.0.apk
 
 Maintainer Notes:
 .
