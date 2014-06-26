@@ -57,10 +57,31 @@ Build:1.1.19-ARMv7,224
     build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle nativeArmV7LibstoJar
     gradle=aV7
 
-Maintainer Notes:
-N.B. Like Telegram, libstojar needs to be run ''twice'': via build= and
-via main gradle task.
+Build:1.1.22-ARM,128
+    commit=1.1.22
+    submodules=yes
+    subdir=textfairy
+    rm=OCRTest/xv
+    init=echo -e 'sdk.dir=$$SDK$$\nndk.dir=$$NDK$$' > local.properties && \
+      sed -i -e 's@com.android.tools.build:gradle:0.7.+@com.android.tools.build:gradle:0.9.+@g' ../Android-ViewPagerIndicator/library/build.gradle && \
+      sed -e '23,62d' -e "110 i \\\t\tjniLibs.srcDir 'libs'\n\\t\\tjni.srcDirs = []" -e '88 i \\t\tversionNameSuffix "-ARM"' -e '/compile fileTree/Id' -i build.gradle
+    buildjni=no
+    build=ndk-build APP_ABI=armeabi
+    gradle=aV5
 
+Build:1.1.22-ARMv7,228
+    commit=1.1.22
+    submodules=yes
+    subdir=textfairy
+    rm=OCRTest/xv
+    init=echo -e 'sdk.dir=$$SDK$$\nndk.dir=$$NDK$$' > local.properties && \
+      sed -i -e 's@com.android.tools.build:gradle:0.7.+@com.android.tools.build:gradle:0.9.+@g' ../Android-ViewPagerIndicator/library/build.gradle && \
+      sed -e '23,62d' -e "110 i \\\t\tjniLibs.srcDir 'libs'\n\\t\\tjni.srcDirs = []" -e '88 i \\t\tversionNameSuffix "-ARMv7"' -e '/compile fileTree/Id' -i build.gradle
+    buildjni=no
+    build=ndk-build APP_ABI=armeabi-v7a
+    gradle=aV7
+
+Maintainer Notes:
 Prepend 6 at to the vercode in Vercode Operation to mark the
 highest jni flavour.
 

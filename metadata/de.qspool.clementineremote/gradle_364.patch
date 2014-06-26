@@ -1,0 +1,44 @@
+diff --git a/build.gradle b/build.gradle
+index 5a7ec25..7d6b6f2 100644
+--- a/build.gradle
++++ b/build.gradle
+@@ -73,37 +73,8 @@ android {
+         release.setRoot('build-types/release')
+     }
+ 
+-    signingConfigs {
+-        release {
+-            // Signing code for buildbot
+-            //signProperties props = new Properties()
+-            //signprops.load(new FileInputStream(file("PROPERTIES_FILE")))
+-            //signstoreFile file(props['keystore'])
+-            //signstorePassword props['keystore.password']
+-            //signkeyAlias props['key.alias']
+-            //signkeyPassword props['key.password']
+-
+-            // Signing code for manual signing
+-            //storeFile file(System.console().readLine("\n\$ Enter keystore path: "))
+-            //storePassword System.console().readPassword("\n\$ Enter keystore password: ").toString()
+-            //keyAlias System.console().readLine("\n\$ Enter key alias: ")
+-            //keyPassword System.console().readPassword("\n\$ Enter key password: ").toString()
+-        }
+-    }
+-
+-    buildTypes {
+-        release {
+-            signingConfig signingConfigs.release
+-            applicationVariants.all { variant ->
+-                def file = variant.outputFile
+-                if(variant.name == "release")
+-                    variant.outputFile = new File(file.parent, "ClementineRemote-release-" + defaultConfig.versionName + ".apk")
+-            }
+-        }
+-    }
+-
+     compileOptions {
+         sourceCompatibility JavaVersion.VERSION_1_7
+         targetCompatibility JavaVersion.VERSION_1_7
+     }
+-}
+\ No newline at end of file
++}

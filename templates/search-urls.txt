@@ -1,5 +1,5 @@
 https://github.com/search?o=desc&q=donate+copyright+extension%3Axml++stars%3A%3E0&ref=searchresults&s=indexed&type=Code
 https://github.com/search?q=android+NOT+library+stars%3A%3E1+fork%3Atrue+created%3A%3E2014-06-17&type=Code&ref=searchresults
 https://github.com/search?q=android+in%3Aname+stars%3A%3E1+created%3A%3E2014-06-17+fork%3Atrue&type=Repositories&ref=searchresults
-https://github.com/search?q=%22play.google.com%22+NOT+demo+in%3Areadme+created%3A%3E2014-06-20&type=Repositories&ref=searchresults
+https://github.com/search?q=%22play.google.com%22+NOT+demo+in%3Areadme+created%3A%3E2014-06-25&type=Repositories&ref=searchresults
 https://github.com/search?o=desc&q=f-droid&ref=searchresults&s=updated&type=Issues
