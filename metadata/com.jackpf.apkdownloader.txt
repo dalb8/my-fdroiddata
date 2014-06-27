@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:MIT
+Web Site:http://soba.cs.man.ac.uk/~farrelj1
+Source Code:https://github.com/jackpf/ApkDownloader/commits
+Issue Tracker:https://github.com/jackpf/ApkDownloader/issues
+
+Auto Name:Apk Downloader
+Summary:Download apps from Google Play
+Description:
+You need to supply the app with an Android (or GSF) ID which the Google
+Play app assigns to every device to determine compatibility; if you can't 
+grab one from an existing device that has the Google Play app installed
+you can have the desktop equivalent
+[https://github.com/onyxbits/Raccoon Raccoon] generate one corresponding
+to an American Samsung Galaxy S4. There are options as well to set the
+SDK version and country if there are compatibility issues.
+
+The app also needs to be supplied with Google credentials.
+It should be possible to authenticate with oAuth so you don't need to supply a
+password.  Otherwise, you can create a throwaway account for this purpose. 
+.
+
+Repo Type:git
+Repo:https://github.com/jackpf/ApkDownloader.git
+
+Build:1.2.1,5
+    commit=f170a2ce4da55e17e0426d27d09305cda5
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.2.1
+Current Version Code:5
+
