@@ -16,6 +16,7 @@ Issue Tracker:https://github.com/dalb8/CMTheme-ChromeOldNovaFonts/issues
 
 Summary:CM-11 Theme
 Description:
+Contains Opens Sans, Old Standard and Nova Mono fonts.
 .
 
 Repo Type:git

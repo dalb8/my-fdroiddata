@@ -1,0 +1,33 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv2+
+Web Site:
+Source Code:https://bitbucket.org/tickytacky/mirrormirror/commits
+Issue Tracker:https://bitbucket.org/tickytacky/mirrormirror/issues
+
+Auto Name:Mirror Mirror
+Summary:Non-reversing mirror
+Description:
+See what your front camera sees.
+.
+
+Repo Type:hg
+Repo:https://bitbucket.org/tickytacky/mirrormirror
+
+Build:1.0.2,3
+    commit=v1.0.2
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.0.2
+Current Version Code:3
+

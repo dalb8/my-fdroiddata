@@ -1,3 +1,4 @@
 Repo Type:svn
-Repo:https://jutf7.svn.sourceforge.net/svnroot/jutf7/trunk
+#Repo:https://jutf7.svn.sourceforge.net/svnroot/jutf7/trunk
+Repo:https://svn.code.sf.net/p/jutf7/code/trunk
 

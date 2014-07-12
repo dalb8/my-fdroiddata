@@ -1,0 +1,45 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Reading
+License:GPLv3
+Web Site:
+Source Code:https://code.google.com/p/android-comicsreader/source
+Issue Tracker:https://code.google.com/p/android-comicsreader/issues
+
+Auto Name:Comics Reader
+Summary:Comic and image viewer
+Description:
+'''N.B''' No cbr (rar archive) support.
+* Can be used to open cbz, cbt; jpeg, png and gif from any file manager.
+* Comics browser with thumbnails.
+* Bookmarks manager to download albums from remote sites.
+* Fast pages switcher with pages previews.
+* Double pages mode.
+* Fling gesture to change page with smooth animation.
+* Fullscreen for devices with physical buttons.
+* Use lower quality images (resolution is decreased) if any out of memory exception occurs.
+.
+
+Repo Type:hg
+Repo:https://code.google.com/p/android-comicsreader
+
+Build:2.0,21
+    commit=48908c83d453
+    prebuild=rm -rf jni
+
+Maintainer Notes:
+Jni contains rar code which isn't free.
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.0
+Current Version Code:21
+

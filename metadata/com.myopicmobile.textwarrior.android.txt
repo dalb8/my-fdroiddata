@@ -38,7 +38,7 @@ This seems oK. Note that target=android-17
     prebuild=sed -i 's/targetSdkVersion="10"/targetSdkVersion="17"/g' AndroidManifest.xml
 .
 
-#Update Check Mode:Tags
+Update Check Mode:Tags
 Current Version:0.93
 Current Version Code:13
 

@@ -24,6 +24,7 @@ Repo Type:svn
 Repo:https://flickr-viewer-for-honeycomb.googlecode.com/svn/trunk
 
 Build:1.2.8,19
+    disable=need to change api to use SSL which is required since 06/2014
     commit=402
     init=sed -i '/uses-library/d' AndroidManifest.xml && \
      sed -i 's@\(target=\).*@\1android-16@' project.properties

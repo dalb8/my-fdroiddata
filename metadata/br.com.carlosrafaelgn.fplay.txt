@@ -38,15 +38,15 @@ The player also has these other features:
 Repo Type:git
 Repo:https://github.com/carlosrafaelgn/FPlayAndroid.git
 
-Build:0.99,34
-    commit=2b04cd9ae94723cb8a920b06
+Build:1.02,37
+    commit=cc100e8df045385b8e16d324ed
     prebuild=mv jni/ApplicationOthers.mk jni/Application.mk && \
        mv jni/AndroidOthers.mk jni/Android.mk
     buildjni=no
     build=ndk-build APP_ABI='armeabi armeabi-v7a'
 
-Build:1.02,37
-    commit=cc100e8df045385b8e16d324ed
+Build:1.05,40
+    commit=2fde19398b7fce0e8aa82fb00f95a713d
     prebuild=mv jni/ApplicationOthers.mk jni/Application.mk && \
        mv jni/AndroidOthers.mk jni/Android.mk
     buildjni=no
@@ -57,6 +57,6 @@ Can build armeabi-v7-hard if using ndk-r9d.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.02
-Current Version Code:37
+Current Version:1.05
+Current Version Code:40
 
