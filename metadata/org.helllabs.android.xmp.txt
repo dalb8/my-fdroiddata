@@ -43,6 +43,8 @@ Build:3.8.0,50
 
 Maintainer Notes:
 See res/values/strings.xml to determine Libxmp version
+
+Also https://github.com/cmatsuoka/xmp-android
 .
 
 #Update Check Mode:Tags
