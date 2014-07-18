@@ -25,6 +25,8 @@ navigation by default uses offline methods.
 Map data packages for many territories can be downloaded from
 within the app and there is a desktop program available on the website as well
 for creating your own.
+
+Some code for tracking map downloads was removed.
 .
 
 Repo Type:srclib
@@ -50,27 +52,34 @@ Build:1.5-ARM,145
         ant build -f ../OsmAnd-java/build.xml
     buildjni=no
 
-# not exact! should use legacy_core branch of $$core$$ but it's missing a external/build.sh
-Build:1.7.5_armv7-neon,170
-    commit=5df6b3caf2
+Build:1.8.2,182
+    commit=5424d97
     subdir=OsmAnd
     init=rm ../SherlockBar/build.xml ant.properties
-    srclibs=core@master,resources@master
-    prebuild=sed -i 's/app_version">[^<]*/app_version">1.7.5_armv7-neon/' res/values/no_translate.xml
-    build=ANDROID_SDK=$$SDK$$ ANDROID_NDK=$$NDK$$ OSMAND_ARCHITECTURES_SET=armv7-neon ./full-ndk-build.sh 
+    patch=remove_analytics_182.diff
+    srclibs=core@5dc3d15,resources@f5173dd,help@9fa5ea0
+    prebuild=sed -i 's/"OsmAnd+"/"OsmAnd~"/g' build.xml
+    build=./old-ndk-build.sh && \
+        ant -Dsdk.dir="$ANDROID_SDK" -Dndk.dir="$ANDROID_NDK" -DBLACKBERRY_BUILD=false -DBUILD_SUFFIX= -DAPK_NUMBER_VERSION=182 "-DFEATURES=+play_market +gps_status +parking_plugin -blackberry -amazon +route_nav" -DCLEAN_CPP=false -DPACKAGE_TO_BUILT=net.osmand.plus -DAPK_VERSION=1.8.2 -Dnet.osmand.plus= -Dbuild.version=1.8.2 -Dbuild.version.code=182 -Dnativeoff=false "-DversionFeatures=+play_market +gps_status +parking_plugin -blackberry -amazon +route_nav" release
     buildjni=no
+    output=bin/OsmAnd-release-unsigned.apk
 
 Maintainer Notes:
-see https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml
+See https://github.com/osmandapp/OsmAnd-manifest/blob/master/current_release.xml and
+http://builder.osmand.net:8080/view/OsmAnd%20Builds/job/Osmand-release/217/consoleFull
+for commits and build flags.
+Not sure how those ant build flags are set and what they mean; at least set the
+parking plugin.
+ 
+The bulk of the APK is in the resources, thus making separate APKs for different ABIs
+gives less benefit.
 
-Needs plenty of disk space, but the app can be run without native code
+Could build gnu-trove via srclib.
 
-Could build gnu-trove via srclib
-
-Qt in qtcore branch
+Qt in qtcore branch.
 .
 
 Update Check Mode:None
-Current Version:1.7.5
-Current Version Code:170
+Current Version:1.8.2
+Current Version Code:182
 
