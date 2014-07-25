@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black.
+# Copyright (c) 2014 David Black
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
 # notice and this notice are preserved.  This file is offered as-is,
@@ -8,27 +8,29 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:System
-License:Apache
-Web Site:
-Source Code:https://github.com/dalb8
-Issue Tracker:
+Categories:Multimedia
+License:GPLv2+
+Web Site:http://www.rockbox.org
+Source Code:http://git.rockbox.org/?p=rockbox.git;a=summary
+Issue Tracker:http://www.rockbox.org/wiki/Main/FlySpray
+Donate:http://www.rockbox.org
 
-Name:Andika Fonts
-Summary:CM-11 Theme
+Auto Name:Rockbox
+Summary:Audio player
 Description:
+Designed to be used with buttons.
+
+Status: Alpha.
 .
 
 Repo Type:git
-Repo:https://github.com/dalb8/CMTheme-SILFonts
-
-Build:1.0,1
-    commit=master
+Repo:git://git.rockbox.org/rockbox
 
 Maintainer Notes:
 .
 
 Update Check Mode:None
-Current Version:1.0
-Current Version Code:1
+#In Repo:e557951-140710,1
+Current Version:e557951-140710
+Current Version Code:9999999
 

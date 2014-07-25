@@ -1,0 +1,48 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://sites.google.com/site/ghostcommander1
+Source Code:http://sourceforge.net/p/gc-samba/code
+Issue Tracker:http://sourceforge.net/p/gc-samba/_list/tickets
+Donate:http://sourceforge.net/p/ghostcommander/donate
+
+Auto Name:Ghost Commander - Samba plugin
+Summary:Access files on the network
+Description:
+A plug-in for [[com.ghostsq.commander]] to access to Windows network shared
+folders (also referenced as SMB, Samba, CIFS or even NetBios).
+Launch Ghost Commander and go to 'Menu > Location > Home > Windows share'.
+Alternatively, scroll along the toolbar until you arrive at 'Home'.
+Enter your server name and credentials (if any), then tap the 'Connect' button.
+Once connected, you should be able to see a list of Windows machines or
+Samba servers on the network. Tip: Better have the Windows account with
+password. A passwordless Windows account might not work.
+.
+
+Repo Type:git-svn
+Repo:https://svn.code.sf.net/p/gc-samba/code
+
+Build:1.30,51
+    commit=106
+    extlibs=jcifs/jcifs-1.3.17.jar,gc-custom_rules.xml
+    srclibs=GhostCommander@390
+    build=mv libs/gc-custom_rules.xml custom_rules.xml && \
+        ant debug -f $$GhostCommander$$/build.xml && \
+        jar c -C $$GhostCommander$$/bin/classes/ com > gc.jar && \
+        install -D gc.jar libs/gc.jar
+
+Maintainer Notes:
+# If you are building this yourself, config.py must be edited to sign this
+# with the same key as Ghost Commander
+.
+#Update Check Mode:RepoManifest
+Current Version:1.31
+Current Version Code:52
+

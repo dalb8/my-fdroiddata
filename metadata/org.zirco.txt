@@ -1,0 +1,40 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:GPLv3
+Web Site:
+Source Code:https://code.google.com/p/zirco-browser/source/list
+Issue Tracker:https://code.google.com/p/zirco-browser/issues
+
+Auto Name:Zirco Browser
+Summary:Web browser
+Description:
+A web browser featuring:
+* Basic browser features (bookmarks, history, downloads...);
+* Unlimited tabs;
+* Easy bookmarks access;
+* Easy tabs opening and closing;
+* Bookmarks import from legacy Android browser;
+* Can be set as default browser;
+* Ad-blocker
+.
+
+Repo Type:svn
+Repo:https://zirco-browser.googlecode.com/svn/trunk
+
+Build:0.4.4,18
+    commit=468
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.4.4
+Current Version Code:18
+

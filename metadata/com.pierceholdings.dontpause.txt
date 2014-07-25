@@ -27,6 +27,7 @@ Repo Type:git
 Repo:https://github.com/TrentPierce/DontPause
 
 Build:3.45,30
+    disable=INSTALL_PARSE_FAILED_MANIFEST_MALFORMED
     commit=7b1f94a8faa9cf7bdb371b6cc98d093
     patch=ads_30.patch,bastion_30.patch
     srclibs=1:ActionBarSherlock@4.4.0,2:ActionBarSherlock@4.4.0,3:ActionBarSherlock@4.4.0

@@ -35,6 +35,17 @@ Newer versions include proprietary libraries.
 Repo Type:git
 Repo:https://github.com/geometer/FBReaderJ.git
 
+Build:1.8.2-Froyo,108021
+    commit=1.8.2
+    forceversion=yes
+    init=rm build.xml && \
+      sed -i 's/android-11/android-12/' third-party/AmbilWarna/project.properties && \
+      echo "APP_CFLAGS+=-Wno-error=format-security" >> jni/Application.mk && \
+      mkdir res/drawable && \
+      find icons -iname "*.*" -exec cp {} res/drawable \;
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
+    buildjni=no
+
 Build:1.8.2,108022
     commit=1.8.2-ics
     init=rm build.xml && \

@@ -12,8 +12,8 @@ AntiFeatures:NonFreeNet
 Categories:Phone & SMS
 License:GPL
 Web Site:https://telegram.org
-Source Code:https://github.com/slp/Telegram-FOSS/commits
-Issue Tracker:https://github.com/slp/Telegram-FOSS/issues
+Source Code:https://github.com/DrKLO/Telegram/commits
+Issue Tracker:https://github.com/DrKLO/Telegram/issues
 
 Auto Name:Telegram
 Summary:Client for the Telegram network
@@ -32,9 +32,9 @@ for a variety of platforms, including GNU/Linux and the WWW.
 .
 
 Repo Type:git
-Repo:https://github.com/slp/Telegram-FOSS.git
+Repo:https://github.com/DrKLO/Telegram.git
 
-# not exact: this is from slp
+# not exact: this is from SLP/Telegram-FOSS
 Build:1.4.9,219
     commit=v1.4.9c
     subdir=TMessagesProj
@@ -56,10 +56,23 @@ Build:1.5.0,250
     buildjni=no
     gradle=Foss
 
+# not exact: this still contains GMS; use build.gradle from dev branch; can't use foss build type
+Build:1.6.1,288
+    commit=e2a6511fbf1f45c9a934b895e22bf95032a7cff9
+    subdir=TMessagesProj
+    init=sed -i '62 i packageName "org.telegram.ui.ApplicationLoader.foss"' build.gradle && \
+       sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
+    rm=TMessagesProj/libs/*/*.so
+    build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
+      gradle-1.12 assembleRelease
+    buildjni=no
+    output=build/outputs/apk/TMessagesProj-release-unsigned.apk
+
 Maintainer Notes:
+Not needed: init=sed -i 's/org.telegram.messenger/org.telegram.ui.ApplicationLoader.foss/' config/foss/AndroidManifest.xml
 .
 
 Update Check Mode:None
-Current Version:1.5.0
-Current Version Code:250
+Current Version:1.6.1
+Current Version Code:288
 
