@@ -17,13 +17,12 @@ FlattrID:745609
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 
 Auto Name:AntennaPod
-Summary:Listen to audio feeds
+Summary:Listen to podcasts
 Description:
-AntennaPod is a podcast manager for Android 2.3.3 and above. It offers all the
-basic features you expect
+Offers all the basic features you expect
 from a podcatcher, like streaming and downloading episodes, refreshing all
 feeds automatically or adding them
-to a queue to listen to them later. The Miro directory can be searched and
+to a queue to listen to them later. The gPodder directory can be searched and
 browsed for shows.
 
 [https://raw.github.com/danieloeh/AntennaPod/master/CHANGELOG.md Changelog]
@@ -51,10 +50,20 @@ Build:0.9.9.1,38
         cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
     gradle=yes
 
+#not exact: fdroidserver crash
+Build:0.9.9.2,39
+    commit=0.9.9.2
+    patch=flattr.patch
+    srclibs=DragSort-danoeh@80011c50e444e1
+    prebuild=rm -f submodules/dslv/library && \
+        ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
+        cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
+    gradle=yes
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.9.9.1
-Current Version Code:38
+Current Version:0.9.9.2
+Current Version Code:39
 

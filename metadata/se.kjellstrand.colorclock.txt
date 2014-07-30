@@ -1,0 +1,22 @@
+Categories:Wallpaper
+License:MIT
+Web Site:
+Source Code:https://github.com/carlemil/ColorClock
+Issue Tracker:https://github.com/carlemil/ColorClock/issues
+
+Auto Name:Color Coded Clock
+Summary:Hard-to-read clock widget
+Description:
+Red for hours, yellow for minutes, blue for seconds.
+.
+
+Repo Type:git
+Repo:https://github.com/carlemil/ColorClock
+
+Build:CCC 2.01,11
+    commit=b2d499c
+
+Update Check Mode:RepoManifest
+Current Version:CCC 2.01
+Current Version Code:11
+

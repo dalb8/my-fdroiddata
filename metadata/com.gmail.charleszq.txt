@@ -20,7 +20,7 @@ Description:
 The build replaces Google Maps with OSM.
 .
 
-Repo Type:svn
+Repo Type:git-svn
 Repo:https://flickr-viewer-for-honeycomb.googlecode.com/svn/trunk
 
 Build:1.2.8,19

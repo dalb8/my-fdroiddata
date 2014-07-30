@@ -17,7 +17,7 @@ FlattrID:745609
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 
 Auto Name:AntennaPod
-Summary:Listen to audio feeds
+Summary:Listen to podcasts
 Description:
 Debug version of Antennapod.
 .

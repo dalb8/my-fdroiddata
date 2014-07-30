@@ -25,7 +25,7 @@ A web browser featuring:
 * Ad-blocker
 .
 
-Repo Type:svn
+Repo Type:git-svn
 Repo:https://zirco-browser.googlecode.com/svn/trunk
 
 Build:0.4.4,18

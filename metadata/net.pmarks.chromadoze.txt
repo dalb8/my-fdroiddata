@@ -17,7 +17,7 @@ steady-state behavior selects blocks at random, and smoothly crossfades between
 them.
 .
 
-Repo Type:svn
+Repo Type:git-svn
 Repo:https://chromadoze.googlecode.com/svn/trunk
 
 Build:3.3,14
