@@ -25,16 +25,23 @@ remaining until an event.
 Repo Type:git
 Repo:https://github.com/cr5315/countdown-for-dashclock.git
 
+# not exact: doesn't exist in newer repo
 Build:1.3.4.1,20
     commit=bd1d9852e85816b6aa0
     rm=libs/dashclock-api-r2.0.jar
     srclibs=DashClock@ecb5a191880
     prebuild=echo 'source.dir=src;$$DashClock$$/api/src/main/java;$$DashClock$$/api/src/main/aidl' >> project.properties
 
+# not exact: doesn't exist in newer repo
 Build:2.0.4,26
     commit=d9b25f
     subdir=App/CFDC
     rm=libs/dashclock-api-r2.0.jar
+    gradle=yes
+
+Build:2.1,27
+    commit=02ee9fa9f42228ecd34482de07b55de807e1cb46
+    subdir=app
     gradle=yes
 
 Maintainer Notes:
@@ -44,6 +51,6 @@ Can use gradle too.
 .
 
 #Update Check Mode:RepoManifest
-Current Version:2.0.4
-Current Version Code:26
+Current Version:2.1
+Current Version Code:27
 

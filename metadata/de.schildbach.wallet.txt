@@ -54,6 +54,14 @@ Build:3.50,171
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
+Build:3.54,175
+    commit=237bd85ddef8daf99b339dabcaa3fd3217cbaca6
+    subdir=wallet
+    srclibs=BitcoinJ@v0.11.3
+    prebuild=sed -i '73s/3.7.0/3.8.2/g' ../pom.xml
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
+    maven=yes@..
+
 Maintainer Notes:
 Even though BitcoinJ is taken from Maven Central build it anyway.
 
@@ -65,5 +73,5 @@ Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
 
 #Update Check Mode:RepoManifest/prod
 Current Version:3.50
-Current Version Code:171
+Current Version Code:175
 
