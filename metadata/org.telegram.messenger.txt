@@ -68,11 +68,21 @@ Build:1.6.1,288
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
+# not exact: this still contains GMS
+Build:1.9.4,355
+    commit=43674c486f92415e669a102d0c403fc94cac2cd3
+    subdir=TMessagesProj
+    init=sed -i -e 's/APP_ID = 0/APP_ID = 17516/' -e 's/APP_HASH = ""/APP_HASH = "1533a7871599eed1dcab637ddc3b6f34"/' src/main/java/org/telegram/messenger/BuildVars.java
+    rm=TMessagesProj/libs/*/*.so
+    build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
+      gradle-2.1 assembleRelease
+    buildjni=no
+    output=build/outputs/apk/TMessagesProj-release-unsigned.apk
+
 Maintainer Notes:
-Not needed: init=sed -i 's/org.telegram.messenger/org.telegram.ui.ApplicationLoader.foss/' config/foss/AndroidManifest.xml
 .
 
 Update Check Mode:None
-Current Version:1.6.1
-Current Version Code:288
+Current Version:1.9.4
+Current Version Code:355
 
