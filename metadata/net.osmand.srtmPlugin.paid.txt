@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2010-2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:GPLv3
+Web Site:http://osmand.net/en/plugins/82-osmand-plugins.html
+Source Code:https://github.com/osmandapp/Osmand/commits
+Issue Tracker:https://github.com/osmandapp/Osmand/issues
+Donate:https://code.google.com/p/osmand/#Please_support_the_project
+
+Auto Name:OsmAnd Contour lines
+Summary:Show contour lines on maps
+Description:
+Plugin to display contour lines and hillshades in [[net.osmand.plus]].
+Need to enable the plugin in the Osmand settings first.
+.
+
+Repo Type:srclib
+Repo:android
+
+Build:1.0,6
+    commit=044c2d1cec5b705cf1f00a8d97c3493f09189cf1
+    subdir=plugins/Osmand-SRTMPlugin
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:6
+
