@@ -17,7 +17,6 @@ Issue Tracker:https://github.com/SecUpwN/Android-IMSI-Catcher-Detector/issues
 Auto Name:AIMSICD
 Summary:Avoid fake phone networks
 Description:
-Built to use OSM instead of Google Maps.
 .
 
 Repo Type:git
@@ -33,13 +32,15 @@ Build:0.2.2,3
     srclibs=1:MapsAPI@f6dd3410b223,2:Appcompat@android-4.4_r1.1
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
-Maintainer Notes:
-Can be built with framework and telephony jars from a ROM or from source
+Build:0.1.24-alpha,24
+    commit=eddf37469e48acf194c852d2da81875c650ae052
+    subdir=app
+    gradle=yes
 
-Using GMS for location in latest versions.
+Maintainer Notes:
 .
 
 Update Check Mode:None
-Current Version:0.2.2
-Current Version Code:3
+Current Version:0.1.24
+Current Version Code:24
 
