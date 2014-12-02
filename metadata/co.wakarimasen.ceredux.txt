@@ -1,0 +1,46 @@
+# Copyright (c) 2014 David Black.
+# Copyright (c) 2014 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:NonFreeNet
+Categories:Internet
+License:MIT
+Source Code:https://github.com/Proplex/Leaf/commits
+Issue Tracker:https://github.com/Proplex/Leaf/issues
+
+Auto Name:Leaf
+Summary:Mobile 4Chan client
+Description:
+Supports:
+* Auto Updater
+* Tabs
+* GIFs
+* Image Downloading
+* 4Chan Pass
+
+Anti-feature: Non-free network service. 4chan.org doesn't publish source code.
+.
+
+Repo Type:git
+Repo:https://github.com/Proplex/Leaf.git
+
+Build:1.0.2,3
+    commit=26ce69549b8b7540bd1e0cf0d646e3bd5c1ffde6
+    subdir=mainActivity
+    rm=mainActivity/src/main/libs/armeabi-v7a/libgifdrawable.so,mainActivity/src/main/libs/armeabi/libgifdrawable.so,slidingMenu/libs/*.jar
+    prebuild=sed -i -e 's/com.android.support:support-v4:+/com.android.support:support-v4:20.+/g' build.gradle ../slidingMenu/build.gradle && \
+        sed -i -e 's/extends FragmentActivity implements SlidingActivityBase/extends com.actionbarsherlock.app.SherlockFragmentActivity implements SlidingActivityBase/' ../slidingMenu/src/main/java/com/slidingmenu/lib/app/SlidingFragmentActivity.java 
+    buildjni=src/main/jni
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.0.2
+Current Version Code:3
+
