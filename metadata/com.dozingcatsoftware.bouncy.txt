@@ -1,0 +1,36 @@
+# Copyright (c) 2014 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:GPLv3
+Web Site:http://www.dozingcatsoftware.com
+Source Code:https://github.com/dozingcat/Vector-Pinball/commits
+Issue Tracker:https://github.com/dozingcat/Vector-Pinball/issues
+
+Auto Name:Vector Pinball
+Summary:Pinball game
+Description:
+Vector Pinball is a pinball game.
+.
+
+Repo Type:git
+Repo:https://github.com/dozingcat/Vector-Pinball.git
+
+Build:1.4.2,14
+    commit=5bb3c7d64ef3bcc8e8f7d97f55353d6b6a7b68cd
+    scanignore=libs/*/*.so
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.4.2
+Current Version Code:14
+
