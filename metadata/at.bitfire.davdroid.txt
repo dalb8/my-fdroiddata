@@ -9,8 +9,8 @@
 Categories:Office
 License:GPLv3
 Web Site:http://davdroid.bitfire.at
-Source Code:https://github.com/rfc2822/davdroid/commits
-Issue Tracker:https://github.com/rfc2822/davdroid/issues
+Source Code:https://github.com/bitfireAT/davdroid/commits
+Issue Tracker:https://github.com/bitfireAT/davdroid/issues
 Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ZT8F5NRCBDB2C&no_note=0&no_shipping=1&currency_code=EUR&item_name=DAVdroid+donation
 FlattrID:2100160
 Bitcoin:1KSCy7RHztKuhW9fLLaUYqdwdC2iwbejZU
@@ -24,7 +24,7 @@ hoster to keep your contacts and events under your control.
 .
 
 Repo Type:git
-Repo:https://github.com/rfc2822/davdroid.git
+Repo:https://github.com/bitfireAT/davdroid.git
 
 Build:0.4.4-alpha,17
     commit=v0.4.4-alpha
@@ -39,6 +39,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.5.14-alpha
-Current Version Code:37
+Current Version:0.6.8
+Current Version Code:47
 
