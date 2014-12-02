@@ -9,8 +9,8 @@
 Categories:Internet
 License:GPLv3
 Web Site:http://mariotaku.tumblr.com
-Source Code:https://github.com/mariotaku/twidere/commits
-Issue Tracker:https://github.com/mariotaku/twidere/issues
+Source Code:https://github.com/TwidereProject/Twidere-Android/commits
+Issue Tracker:https://github.com/TwidereProject/Twidere-Android/issues
 Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=mariotaku.lee%40gmail%2ecom&item_name=Donate%20to%20Twidere
 Bitcoin:1BaBZ5fueY7SgRVsPqYANuYiB4EVg72oBG
 
@@ -41,7 +41,7 @@ JARs are not really checked out.
 .
 
 Repo Type:git
-Repo:https://github.com/mariotaku/twidere.git
+Repo:https://github.com/TwidereProject/Twidere-Android.git
 
 Build:0.2.9.9,91
     commit=0.2.9.9
