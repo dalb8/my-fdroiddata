@@ -41,13 +41,13 @@ However, the app can function without root by using Hotspot mode.
 Repo Type:git
 Repo:https://github.com/servalproject/batphone.git
 
-# not exact! pre-release; assets missing
-Build:0.92,2237
-    commit=ea6e4c219503e44f
+# not exact! assets missing
+Build:0.92,2301
+    commit=0.92
     submodules=yes
     init=echo -e 'ndk.dir=$$NDK$$\nversion.name=0.92' >> local.properties && \
       sed -i 's/depends="-args-release,-check-pandoc,-keystore-properties,-check-manifest,generate-html,android_rules.release,-play-apk,-create-manifest,-remove-instance"/depends="android_rules.release,-create-manifest"/' build.xml
-    rm=jni/opus/celt/tests;gdbserver
+    rm=jni/opus/celt/tests,gdbserver
     buildjni=no
 
 Maintainer Notes:
@@ -61,5 +61,5 @@ Run ant version to get version info
 
 Update Check Mode:None
 Current Version:0.92
-Current Version Code:2237
+Current Version Code:2301
 
