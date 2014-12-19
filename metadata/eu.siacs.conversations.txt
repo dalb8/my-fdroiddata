@@ -11,6 +11,9 @@ License:GPLv3
 Web Site:
 Source Code:https://github.com/siacs/Conversations/commits
 Issue Tracker:https://github.com/siacs/Conversations/issues
+Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CW3SYT3KG5PDL
+FlattrID:3531619
+Bitcoin:1NxSU1YxYzJVDpX1rcESAA3NJki7kRgeeu
 
 Auto Name:Conversations
 Summary:XMPP client
@@ -27,19 +30,17 @@ Description:
 Repo Type:git
 Repo:https://github.com/siacs/Conversations.git
 
-Build:0.2.3,14
-    commit=0.2.3
-    submodules=yes
-    srclibs=Otr4j-jitsi@30fbaea93886,BouncyCastle@r1rv50
-    build=ant -f $$BouncyCastle$$/ant/jdk15+.xml build-provider && \
-        mv $$BouncyCastle$$/build/artifacts/jdk1.5/jars/bcprov-jdk15on-150.jar libs/ && \
-        $$MVN3$$ package -DskipTests -f $$Otr4j-jitsi$$/pom.xml && \
-        mv $$Otr4j-jitsi$$/target/otr4j-0.10.jar libs/
+Build:0.9.1,38
+    commit=0.9.1
+    srclibs=Otr4j-jitsi@6d879761605dba48c80c0d3f44a6555b522d0c2e
+    prebuild=$$MVN3$$ clean install -f $$Otr4j-jitsi$$/pom.xml && \
+        sed -i -e '/mavenCentral/amavenLocal()\n' -e '/maven {/d' -e '/jitsi.github.com/,+1d' -e '/buildTypes {/i/*' -e '/subprojects/i*/' build.gradle
+    gradle=yes
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.2.3
-Current Version Code:14
+Current Version:0.9.1
+Current Version Code:38
 
