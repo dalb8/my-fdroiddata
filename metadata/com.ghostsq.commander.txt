@@ -44,6 +44,10 @@ Build:1.52.2,250
     commit=445
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
+Build:1.52.6b1,276
+    commit=505
+    scanignore=src/com/ghostsq/commander/adapters/CA.java
+
 Maintainer Notes:
 No commit messages in source repo! No tags. Apks on website can be used to
 confirm a release is real. Commit where AndroidManifest is changed usually
@@ -53,6 +57,6 @@ The scanignore is for the dex class loading which is used for loading plugins.
 .
 
 Update Check Mode:None
-Current Version:1.52.2
-Current Version Code:250
+Current Version:1.52.6b1
+Current Version Code:276
 

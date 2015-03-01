@@ -36,6 +36,11 @@ Build:0.9,9
     prebuild=sed -i 's/3.6.0/3.8.0/' pom.xml
     maven=yes
 
+Build:0.14,16
+    commit=v0.14
+    subdir=PrepayCreditAndroid
+    gradle=yes
+
 Maintainer Notes:
 .
 

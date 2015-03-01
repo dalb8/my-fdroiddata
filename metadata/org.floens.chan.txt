@@ -35,6 +35,11 @@ Build:v1.1.2,26
     subdir=Clover/app
     gradle=yes
 
+Build:v1.2.5,43
+    commit=v1.2.5
+    subdir=Clover/app
+    gradle=yes
+
 Maintainer Notes:
 version supposed to be in app/version.properties
 .

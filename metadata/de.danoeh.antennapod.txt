@@ -11,8 +11,8 @@
 Categories:Multimedia
 License:MIT
 Web Site:
-Source Code:https://github.com/danieloeh/AntennaPod/commits
-Issue Tracker:https://github.com/danieloeh/AntennaPod/issues
+Source Code:https://github.com/AntennaPod/AntennaPod/commits
+Issue Tracker:https://github.com/AntennaPod/AntennaPod/issues
 FlattrID:745609
 Bitcoin:1DzvtuvdW8VhDsq9GUytMyALmsHeaHEKbg
 
@@ -25,11 +25,11 @@ feeds automatically or adding them
 to a queue to listen to them later. The gPodder directory can be searched and
 browsed for shows.
 
-[https://raw.github.com/danieloeh/AntennaPod/master/CHANGELOG.md Changelog]
+[https://raw.github.com/AntennaPod/AntennaPod/master/CHANGELOG.md Changelog]
 .
 
 Repo Type:git
-Repo:https://github.com/danieloeh/AntennaPod.git
+Repo:https://github.com/AntennaPod/AntennaPod.git
 
 Build:0.9.9.0,37
     commit=0.9.9.0
@@ -66,6 +66,14 @@ Build:0.9.9.4,41
     prebuild=rm -f submodules/dslv/library && \
         ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
         echo -e 'FLATTR_APP_KEY="1wpjfofGEf6zu9acSYorcFky1QpsGeRx"\nFLATTR_APP_SECRET="B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8"' >> gradle.properties
+    gradle=yes
+
+Build:1.0,44
+    commit=1.0
+    subdir=app
+    submodules=yes
+    prebuild=rm settings.gradle && \
+        sed -i -e 's/build:gradle:0.12.+/build:gradle:1.0.0/g' -e 's/android-library/com.android.library/g' dslv/library/build.gradle
     gradle=yes
 
 Maintainer Notes:

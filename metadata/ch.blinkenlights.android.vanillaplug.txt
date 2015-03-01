@@ -11,8 +11,8 @@
 Categories:Multimedia
 License:GPLv3
 Web Site:
-Source Code:https://github.com/adrian-bl/vanilla-headphone-detector/commits
-Issue Tracker:https://github.com/adrian-bl/vanilla-headphone-detector/issues
+Source Code:https://github.com/vanilla-music/vanilla-headphone-detector/commits
+Issue Tracker:https://github.com/vanilla-music/vanilla-headphone-detector/issues
 
 Name:Vanilla Music Detector
 Summary:Launch music player
@@ -24,7 +24,7 @@ The app needs to be launched once for the trick to work.
 .
 
 Repo Type:git
-Repo:https://github.com/adrian-bl/vanilla-headphone-detector.git
+Repo:https://github.com/vanilla-music/vanilla-headphone-detector.git
 
 Build:1.1,110
     commit=4a6be5

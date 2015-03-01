@@ -57,7 +57,7 @@ Build:1.5.0,6
         ./fdroid_build mad && \
         ./fdroid_build flac $$FLAC$$ && \
         ./fdroid_build scummvm 
-    antcommand="-p"
+    antcommands="-p"
 
 Maintainer Notes:
 Made quick fix to work since bindir parameter was removed: not tested

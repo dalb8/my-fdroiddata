@@ -44,6 +44,7 @@ alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/*/gradle-1.11/bin/gra
 alias gradle-1.12='~/.gradle/wrapper/dists/gradle-1.12-bin/*/gradle-1.12/bin/gradle'
 alias gradle-1.13='~/.gradle/wrapper/dists/gradle-1.13-bin/*/gradle-1.13/bin/gradle'
 alias gradle-2.1='~/.gradle/wrapper/dists/gradle-2.1-bin/*/gradle-2.1/bin/gradle'
+alias gradle-2.2.1='~/.gradle/wrapper/dists/gradle-2.2.1-bin/*/gradle-2.2.1/bin/gradle'
 # note: use $$MVN3$$ in metadata
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
 alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
@@ -71,7 +72,7 @@ function lsa () { grep -i "^Auto Name:.*"$1"" metadata/*.txt ;}
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
 export BUILD_TOOLS=${ANDROID_HOME}/build-tools/19.1.0
-export ANDROID_NDK=~/android-ndk-r10
+export ANDROID_NDK=~/android-ndk-r10d
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
