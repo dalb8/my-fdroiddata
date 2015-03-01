@@ -20,6 +20,8 @@ over 90 mainstream and obscure module formats from Amiga, Atari, Acorn,
 Apple IIgs and PC. All module formats are supported, but external file
 compressors are not. Some examples are provided and can be seen when you
 browse /sdcard/mod from the app and sites that distribute more are listed on the website.
+
+An API key to allow the download of mods is missing.
 .
 
 Repo Type:git
@@ -41,13 +43,30 @@ Build:3.8.0,50
     build=$$NDK$$/ndk-build -C $$Libxmp$$ -e 'APP_ABI=armeabi-v7a armeabi' && \
       $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi'
 
-Maintainer Notes:
-See res/values/strings.xml to determine Libxmp version
+Build:4.4.1,75
+    commit=android-4.4.1
+    srclibs=Libxmp@libxmp-4.3.5,1:Appcompat@android-5.0.2_r1,2:Gridlayout@android-5.0.2_r1
+    extlibs=android/android-support-v4.jar
+    prebuild=\
+        cp libs/android-support-v4.jar $$Appcompat$$/libs/ && \
+        mv libs/android-support-v4.jar $$Gridlayout$$/libs/ && \
+        echo -e "java.source=7\njava.target=7" >> $$Appcompat$$/local.properties && \
+        sed -i 's/android-19/android-21/' $$Appcompat$$/project.properties && \
+        ln -s $(readlink -f $$Libxmp$$/include) jni/ && \
+        ln -s $(readlink -f $$Libxmp$$/src) jni/ && \
+        sed -i 's@../../libxmp@$$Libxmp$$@g' jni/Android.mk && \
+        cd $$Libxmp$$ && \
+        autoconf && \
+        ./configure
+    buildjni=no
+    build=$$NDK$$/ndk-build -C $$Libxmp$$ -e 'APP_ABI=armeabi-v7a armeabi' && \
+      $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a armeabi' TARGET_PLATFORM=android-21
 
+Maintainer Notes:
 Also https://github.com/cmatsuoka/xmp-android
 .
 
 #Update Check Mode:Tags
-Current Version:3.8.0
-Current Version Code:50
+Current Version:4.4.1
+Current Version Code:75
 
