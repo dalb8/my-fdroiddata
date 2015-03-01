@@ -1,0 +1,47 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2012-2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Reading
+License:GPLv3+
+Web Site:https://github.com/eleybourn/Book-Catalogue/wiki
+Source Code:https://github.com/eleybourn/Book-Catalogue
+Issue Tracker:https://github.com/eleybourn/Book-Catalogue/issues
+
+Auto Name:Book Catalogue
+Summary:Book cataloguing tool
+Description:
+N.B The GoodReads integration won't work as there aren't any API
+keys in the source code to make it work. If you are switching between
+different APK signatures it is a good idea to back up the database
+before uninstalling.
+
+This is a simple book catalogue application, to store a list of your books.
+Books can be added either manually, by ISBN, or by barcode if you have
+[[com.google.zxing.client.android]] installed. In the case of the last two
+methods, information including cover images is sought on the internet
+meaning you can have a thorough record of a book in as little as 30 seconds.
+
+One thing to watch out for is that in rare case, barcodes do not contain ISBN
+numbers. This will usually apply to older trade or pulp books and a barcode is
+often also present inside the front cover. If no ISBN is present a search for
+the author's name may still give results.
+.
+
+Repo Type:git
+Repo:https://github.com/eleybourn/Book-Catalogue.git
+
+Build:5.1.0-B3,156
+    commit=v5.1.0-beta3
+    target=android-16
+    srclibs=1:ActionBarSherlock@4.2.0
+    prebuild=sed -i -e 's/GoodreadsApiKeys.GOODREADS_DEV_SECRET/"JARXkJTfyo0F8MyctYi9bUmrLISjo8vXAHsZHiuk2E"/g' -e 's/GoodreadsApiKeys.GOODREADS_DEV_KEY/"udFVpMhBnhJutfVj6abfA"/g' src/com/eleybourn/bookcatalogue/goodreads/GoodreadsManager.java
+
+#Update Check Mode:Tags
+Current Version:5.1.0-B3
+Current Version Code:156
+
