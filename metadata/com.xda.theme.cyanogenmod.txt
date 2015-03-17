@@ -1,0 +1,36 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Themes
+License:GPLv3
+Web Site:
+Source Code:https://github.com/enricocid/ChocoUI---XDA-Colors/commits
+Issue Tracker:https://github.com/enricocid/ChocoUI---XDA-Colors/issues
+
+Auto Name:ChocoUI (XDA colors)
+Summary:CyanogenMod-compatible theme
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/enricocid/ChocoUI---XDA-Colors
+
+Build:4,4
+    commit=ba8af
+    prebuild=mkdir src
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:4
+Current Version Code:4
+

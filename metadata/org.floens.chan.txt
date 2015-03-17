@@ -45,6 +45,6 @@ version supposed to be in app/version.properties
 .
 
 Update Check Mode:None
-Current Version:v1.1.2
+Current Version:v1.2.5
 Current Version Code:9999999
 
