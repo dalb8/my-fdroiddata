@@ -1,0 +1,40 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:
+Source Code:https://github.com/SrpMtt/DeadPixel/commits
+Issue Tracker:https://github.com/SrpMtt/DeadPixel/issues
+
+Auto Name:DeadPixel
+Summary:Check for dead pixels
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/SrpMtt/DeadPixel
+
+Build:1.0,2
+    commit=master
+    srclibs=1:Appcompat@android-4.4_r1.1
+    extlibs=android/android-support-v4.jar
+    prebuild=echo 'source.dir=java' > ant.properties && \
+        mv libs/android-support-v4.jar $$Appcompat$$/libs
+    target=android-19
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:2
+
