@@ -1,0 +1,36 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Themes
+License:GPLv3
+Web Site:
+Source Code:https://github.com/enricocid/JellyRevenge-CM11-theme
+Issue Tracker:https://github.com/enricocid/JellyRevenge-CM11-theme/issues
+
+Auto Name:JellyRevenge
+Summary:CyanogenMod-compatible theme
+Description:
+No description available
+.
+
+Repo Type:git
+Repo:https://github.com/enricocid/JellyRevenge-CM11-theme
+
+Build:11,11
+    commit=058f25
+    prebuild=mkdir src
+
+Maintainer Notes:
+.
+
+Update Check Mode:RepoManifest
+Current Version:11
+Current Version Code:11
+
