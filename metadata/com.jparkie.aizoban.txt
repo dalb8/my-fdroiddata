@@ -1,0 +1,41 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Reading,Multimedia
+License:Apache
+Web Site:http://jparkie.github.io/Aizoban
+Source Code:https://github.com/jparkie/Aizoban
+Issue Tracker:https://github.com/jparkie/Aizoban/issues
+
+Auto Name:Aizōban
+Summary:Digital manga catalogue and reader
+Description:
+* Access to over 45 000 manga series from currently several sources
+* Responsive viewer with options to switch reading direction, lock orientation, lock zoom, full-screen or immersive mode.
+* A search tool capable of filtering and ordering manga series by name, genre (not for all sources), and status.
+* An “Exploring” function to discover random manga series.
+* A download manager to collect your desired manga series offline.
+* Your personalized list of favourite manga series and recently read chapters (manageable with "Mark Read") .
+* Easy settings to manage your reading experience such as "Enable Lazy Loading" to conserve bandwidth.
+.
+
+Repo Type:git
+Repo:https://github.com/jparkie/Aizoban
+
+Build:1.2.5,27
+    commit=b7b1fd0
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.2.5
+Current Version Code:27
+

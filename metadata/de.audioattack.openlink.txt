@@ -8,9 +8,9 @@
 
 Categories:System
 License:GPLv3
-Web Site:https://gitorious.org/openlink
-Source Code:https://gitorious.org/openlink/openlink/source
-Issue Tracker:http://bugtracker.audioattack.de
+Web Site:https://gitlab.com/marc.nause/openlink
+Source Code:https://gitlab.com/marc.nause/openlink/commits
+Issue Tracker:https://gitlab.com/marc.nause/openlink/issues
 
 Auto Name:Easy Open Link
 Summary:Open URLs via select and share
@@ -22,12 +22,10 @@ Easy Open Link also allows you to open several links at the same time.
 # Roughly select the URL(s). It does not matter if the selection also contains additional text or white spaces.
 # Press the "share" symbol.
 # Select "open link"
-
-[https://gitorious.org/openlink/openlink/raw/changelog.txt Changelog]
 .
 
 Repo Type:git
-Repo:https://gitorious.org/openlink/openlink.git
+Repo:https://gitlab.com/marc.nause/openlink.git
 
 Build:1.2,5
     commit=r1.2

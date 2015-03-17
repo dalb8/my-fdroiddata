@@ -1,0 +1,34 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:Apache
+Web Site:
+Source Code:https://github.com/takke/DataStats/commits
+Issue Tracker:https://github.com/takke/DataStats/issues
+
+Auto Name:DataStats
+Summary:View bandwith usage
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/takke/DataStats
+
+Build:1.2.3,8
+    commit=ed7420a8f8d4b8f273753a69be36c26bf2d66b71
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.2.3
+Current Version Code:8
+
