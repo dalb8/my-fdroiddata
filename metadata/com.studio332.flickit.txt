@@ -12,7 +12,8 @@ Web Site:http://studio332apps.com
 Source Code:https://github.com/louffoster/FlickIt/commits
 Issue Tracker:https://github.com/louffoster/FlickIt/issues
 
-Auto Name:FlickIt!
+Auto Name:flickit
+Name:FlickIt!
 Summary:Family game of skill
 Description:
 It combines aspects of shuffleboard, 9-ball and bumper pool into a unique new 
@@ -36,12 +37,17 @@ Build:1.2,3
     subdir=FlickIt-android
     init=mv ../FlickIt/libs/gdx.jar libs/ && \
         echo 'source.dir=src;../FlickIt/src' > ant.properties
-    scanignore=FlickIt-android/libs/armeabi/libgdx.so;FlickIt-android/libs/x86/libgdx.so;FlickIt-android/libs/armeabi-v7a/libgdx.so
+    scanignore=FlickIt-android/libs/armeabi/libgdx.so,FlickIt-android/libs/x86/libgdx.so,FlickIt-android/libs/armeabi-v7a/libgdx.so
 
-Maintainer Notes:
-.
+Build:1.4,4
+    commit=6ec5ed
+    subdir=android
+    prebuild=sed -i '75d' ../build.gradle && \
+        sed -i '3s/com.studio332.flickit.android/com.studio332.flickit/' AndroidManifest.xml
+    gradle=yes
 
-#Update Check Mode:RepoManifest
-Current Version:1.2
-Current Version Code:3
+Update Check Mode:RepoManifest
+Update Check Name:com.studio332.flickit.android
+Current Version:1.4
+Current Version Code:4
 
