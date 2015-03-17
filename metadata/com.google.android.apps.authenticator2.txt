@@ -1,0 +1,37 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Internet
+License:Apache
+Web Site:
+Source Code:https://github.com/google/google-authenticator-android/commits
+Issue Tracker:https://github.com/google/google-authenticator-android/issues
+
+Auto Name:Authenticator
+Summary:2FA
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/google/google-authenticator-android
+
+Build:2.21,21
+    commit=f8b14ae
+    subdir=AuthenticatorApp
+    gradle=yes
+
+Maintainer Notes:
+Not sure how this is related to the Plague Store release.
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.21
+Current Version Code:21
+
