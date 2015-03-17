@@ -1,0 +1,37 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Games
+License:GPLv3+
+Web Site:http://pixeldungeon.watabou.ru
+Source Code:https://github.com/watabou/pixel-dungeon/commits
+Issue Tracker:https://github.com/watabou/pixel-dungeon/issues
+Bitcoin:1LyLJAzxCfieivap1yK3iCpGoUmzAnjdyK
+
+Auto Name:Pixel Dungeon
+Summary:Rogue-like
+Description:
+Traditional roguelike game with pixel-art graphics and simple interface.
+
+[http://pixeldungeon.wikia.com/wiki/Update Changelog]
+.
+
+Repo Type:git
+Repo:https://github.com/watabou/pixel-dungeon
+
+Build:1.7.5a,70
+    commit=8760fd8f4a33676aff70f7442c8fc4c4774dfbb6
+    patch=types-175a.patch
+    srclibs=PDClasses@2a7faeb1cfb2a8143887392eb209e0d102ba35a4
+    prebuild=echo -e 'source.dir=$$PDClasses$$\njava.source=1.7\njava.target=1.7\njava.encoding=ISO-8859-1' >> ant.properties
+    target=android-19
+
+#Update Check Mode:RepoManifest
+Current Version:1.7.5a
+Current Version Code:70
+
