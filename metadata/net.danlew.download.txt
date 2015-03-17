@@ -1,0 +1,39 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:UpstreamNonFree
+Categories:System
+License:Apache
+Web Site:
+Source Code:https://github.com/dlew/android-download-shortcut/commits
+Issue Tracker:https://github.com/dlew/android-download-shortcut/issues
+
+Auto Name:Download Shortcut
+Summary:Download arbitrary targets
+Description:
+Crashlytics was removed.
+.
+
+Repo Type:git
+Repo:https://github.com/dlew/android-download-shortcut
+
+Build:1.1,2
+    commit=v1.1
+    subdir=app
+    prebuild=find $PWD -type f -print0 | xargs -0 sed -i '/crashlytics/Id'
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:1.1
+Current Version Code:2
+

@@ -49,7 +49,7 @@ alias gradle-2.2.1='~/.gradle/wrapper/dists/gradle-2.2.1-bin/*/gradle-2.2.1/bin/
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
 alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
 
-function gplay() { w3m play.google.com/store/apps/details/?id="$@" ;}
+function gplay() { w3m https://play.google.com/store/apps/details/?id="$@" ;}
 function gplayf() { firefox play.google.com/store/apps/details/?id="$@" ;}
 function fed() { edit $MYFDROIDDATA/metadata/"$@".txt ;}
 function fch() { cd $MYFDROIDDATA/build/"$@" ;}
