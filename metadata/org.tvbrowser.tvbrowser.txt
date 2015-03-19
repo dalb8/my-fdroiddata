@@ -31,10 +31,15 @@ Build:0.2.6,178
     commit=release_0.2.6
     subdir=TV-Browser
 
-Maintainer Notes:
-.
+Build:0.5.8.3,329
+    disable=build probs
+    commit=release_0.2.6
+    subdir=TV-Browser
+    extlibs=android/android-support-v4.jar
+    srclibs=1:Appcompat@android-5.1.0_r1
+    prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
 Update Check Mode:Tags
-Current Version:0.2.6
-Current Version Code:178
+Current Version:0.5.8.3
+Current Version Code:329
 
