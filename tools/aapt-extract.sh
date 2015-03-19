@@ -1,4 +1,4 @@
-## Originally published at https://gitorious.org/asdgasd/my-fdroiddata.
+## Originally published at https://github.com/dalb8/my-fdroiddata.
 # Copyright (c) 2014 David Black.
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright

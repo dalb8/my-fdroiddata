@@ -34,7 +34,7 @@ mvn3 = "/opt/maven/apache-maven-3.1.1/bin/mvn"
 gradle="/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle"
 
 
-#repo_url = "https://gitorious.org/asdgasd"
+#repo_url = "https://github.com/dalb8"
 #repo_name = "Appz"
 #repo_icon = "icon-fancy_repo.png"
 repo_url = "http://192.168.1.9:3000"

@@ -2,7 +2,7 @@
 # Copyright (c) 2013 Carlos Rafael Gimenes das Neves. All rights reserved.
 # Licensed under two-clause FreeBSD license
 
-## Originally published at https://gitorious.org/asdgasd/my-fdroiddata:
+## Originally published at https://github.com/dalb8/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
