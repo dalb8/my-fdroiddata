@@ -10,9 +10,11 @@
 
 Categories:Office
 License:GPLv3
+Web Site:
 Source Code:https://github.com/ligi/PassAndroid/commits
 Issue Tracker:https://github.com/ligi/PassAndroid/issues
 
+Auto Name:PassAndroid
 Summary:Display digital tickets
 Description:
 For showing Passbook (pkpass) files and their barcodes: boarding passes, coupons, event
@@ -29,8 +31,7 @@ Build:2.2.0,220
     commit=e038e1d872760e
     init=sed -i -e '17 i mavenLocal()' -e '18,20d' build.gradle
     srclibs=Tracedroid@2740c,AXT@0.25,Zxing@1ce4516d00385bac6
-    build=\
-        $$MVN3$$ package -DskipTests -f $$Zxing$$/core/pom.xml && \
+    build=$$MVN3$$ package -DskipTests -f $$Zxing$$/core/pom.xml && \
         mv $$Zxing$$/android/libs/core-2.3.0-SNAPSHOT.jar libs/zxing-core-2.3.0-SNAPSHOT.jar && \
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle jar -p $$Tracedroid$$ && \
         $$MVN3$$ install:install-file -DgroupId=org.ligi -DartifactId=tracedroid -Dversion=1.1 -Dpackaging=jar -Dfile=$$Tracedroid$$/build/libs/Tracedroid-1.1.jar && \
@@ -40,13 +41,11 @@ Build:2.2.0,220
     output=build/apk/org.ligi.passandroid-noMaps-noAnalytics-forFDroid-release-unsigned.apk
 
 Maintainer Notes:
-Tags unreliable.
-
 Zxing has to be built from a snapshot in 2.2.0 because latest tags don't 
 work so well for Aztec.
 .
 
-Update Check Mode:RepoManifest
-Current Version:2.2.1
-Current Version Code:221
+#Update Check Mode:Tags
+Current Version:2.5.0
+Current Version Code:250
 
