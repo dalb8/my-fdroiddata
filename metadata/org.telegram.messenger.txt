@@ -39,7 +39,7 @@ Build:1.4.9,219
     commit=v1.4.9c
     subdir=TMessagesProj
     init=sed -i '82 i \ \ \ \ packageName "org.telegram.ui.ApplicationLoader.foss"' build.gradle && \
-      sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
+        sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
     build=$$NDK$$/ndk-build -C jni -e 'APP_ABI=armeabi-v7a' && \
         /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle nativeLibsToJar
     buildjni=no
@@ -50,7 +50,7 @@ Build:1.5.0,250
     commit=master
     subdir=TMessagesProj
     init=sed -i 's/org.telegram.messenger/org.telegram.ui.ApplicationLoader.foss/' config/foss/AndroidManifest.xml && \
-       sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
+        sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
     rm=TMessagesProj/libs/*/*.so
     build=ndk-build -C jni APP_ABI=armeabi-v7a
     buildjni=no
@@ -61,10 +61,10 @@ Build:1.6.1,288
     commit=e2a6511fbf1f45c9a934b895e22bf95032a7cff9
     subdir=TMessagesProj
     init=sed -i '62 i packageName "org.telegram.ui.ApplicationLoader.foss"' build.gradle && \
-       sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
+        sed -i 's/DEBUG_VERSION = true/DEBUG_VERSION = false/' src/main/java/org/telegram/messenger/BuildVars.java
     rm=TMessagesProj/libs/*/*.so
     build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
-      gradle-1.12 assembleRelease
+        gradle-1.12 assembleRelease
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
@@ -75,25 +75,22 @@ Build:1.9.4,355
     init=sed -i -e 's/APP_ID = 0/APP_ID = 17516/' -e 's/APP_HASH = ""/APP_HASH = "1533a7871599eed1dcab637ddc3b6f34"/' src/main/java/org/telegram/messenger/BuildVars.java
     rm=TMessagesProj/libs/*/*.so
     build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
-      gradle-2.1 assembleRelease
+        gradle-2.1 assembleRelease
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
 # not exact: this still contains GMS
-Build:2.1.0,403
-    commit=8c50d4d03bdda3839978e55ae1f0a2ca5492b0f6
+Build:2.6.0,468
+    commit=a484ab0d7fcb1b76c85ef74442f2cc0a914c3671
     subdir=TMessagesProj
-    init=sed -i -e 's/APP_ID = 0/APP_ID = 17516/' -e 's/APP_HASH = ""/APP_HASH = "1533a7871599eed1dcab637ddc3b6f34"/' src/main/java/org/telegram/messenger/BuildVars.java
+    init=sed -i -e 's/APP_ID = 0/APP_ID = 17516/' -e 's/APP_HASH = ""/APP_HASH = "1533a7871599eed1dcab637ddc3b6f34"/' -e 's/HOCKEY_APP_HASH = "your-hockey-app-api-key-here"/HOCKEY_APP_HASH = "5d41402abc4b2a76b9719d911017c592"/' -e 's/BING_SEARCH_KEY = ""/BING_SEARCH_KEY = "1234567817516"/' src/main/java/org/telegram/messenger/BuildVars.java
     rm=TMessagesProj/libs/*/*.so
     build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
-      gradle-2.1 assembleRelease
+        gradle-2.2.1 assembleRelease
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
-Maintainer Notes:
-.
-
-Update Check Mode:None
-Current Version:210
-Current Version Code:403
+Update Check Mode:RepoManifest/dev
+Current Version:2.6.0
+Current Version Code:468
 
