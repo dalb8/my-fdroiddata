@@ -22,7 +22,7 @@ Description:
 Offers all the basic features you expect
 from a podcatcher, like streaming and downloading episodes, refreshing all
 feeds automatically or adding them
-to a queue to listen to them later. The gPodder directory can be searched and
+to a queue to listen to them later. The gPodder and iTunes directories can be searched and
 browsed for shows.
 
 [https://raw.github.com/AntennaPod/AntennaPod/master/CHANGELOG.md Changelog]
