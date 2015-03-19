@@ -43,6 +43,6 @@ Neither the main app, MapsAPI nor NlpAPI have targets
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.1
-Current Version Code:1010
+Current Version:1.1.0
+Current Version Code:1100
 

@@ -38,6 +38,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.732
-Current Version Code:16
+Current Version:1.744
+Current Version Code:21
 

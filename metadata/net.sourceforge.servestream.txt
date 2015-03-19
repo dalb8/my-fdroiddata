@@ -72,6 +72,6 @@ Note submodules dir is not for submodules
 .
 
 #Update Check Mode:Tags
-Current Version:0.6.8
-Current Version Code:98
+Current Version:0.7.0
+Current Version Code:105
 

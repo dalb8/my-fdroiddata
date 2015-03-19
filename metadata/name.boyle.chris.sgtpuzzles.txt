@@ -35,6 +35,6 @@ One line sed patch is to fix issue #77; shouldn't be needed in next version
 .
 
 #Update Check Mode:Tags
-Current Version:9561.1
-Current Version Code:72
+Current Version:2014-11-09-1643-4a8edc6
+Current Version Code:97
 

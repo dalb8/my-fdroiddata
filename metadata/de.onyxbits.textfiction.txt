@@ -44,6 +44,6 @@ Tags are behind gplay
 .
 
 #Update Check Mode:Tags
-Current Version:2.4
-Current Version Code:8
+Current Version:2.6
+Current Version Code:10
 

@@ -42,6 +42,6 @@ Build:5.1.0-B3,156
     prebuild=sed -i -e 's/GoodreadsApiKeys.GOODREADS_DEV_SECRET/"JARXkJTfyo0F8MyctYi9bUmrLISjo8vXAHsZHiuk2E"/g' -e 's/GoodreadsApiKeys.GOODREADS_DEV_KEY/"udFVpMhBnhJutfVj6abfA"/g' src/com/eleybourn/bookcatalogue/goodreads/GoodreadsManager.java
 
 #Update Check Mode:Tags
-Current Version:5.1.0-B3
-Current Version Code:156
+Current Version:5.1.1
+Current Version Code:168
 

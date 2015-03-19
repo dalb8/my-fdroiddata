@@ -38,6 +38,6 @@ Both terminal and emulator view libraries use android-11
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.61
-Current Version Code:62
+Current Version:1.0.65
+Current Version Code:66
 

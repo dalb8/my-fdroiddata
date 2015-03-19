@@ -41,6 +41,6 @@ sdk-deployer.
 .
 
 #Update Check Mode:Tags
-Current Version:0.2
-Current Version Code:20
+Current Version:0.4.1
+Current Version Code:41
 

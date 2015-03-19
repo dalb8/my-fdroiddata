@@ -60,6 +60,6 @@ device variable i.e see gplay for date
 .
 
 #Update Check Mode:RepoManifest/0.9
-Current Version:0.9.4r770
-Current Version Code:30
+Current Version:0.9.4r828
+Current Version Code:32
 

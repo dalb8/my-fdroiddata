@@ -65,6 +65,6 @@ In gplay as ….pro and ….ads.
 .
 
 #Update Check Mode:Tags
-Current Version:2.2.5
-Current Version Code:60
+Current Version:2.3.0
+Current Version Code:62
 

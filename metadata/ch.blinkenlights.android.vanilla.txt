@@ -33,6 +33,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.9.24
-Current Version Code:924
+Current Version:0.9.42
+Current Version Code:942
 

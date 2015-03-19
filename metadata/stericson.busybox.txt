@@ -83,6 +83,6 @@ Toolbox is pulled from a CM11 Nightly for p990.
 .
 
 #Update Check Mode:RepoManifest
-Current Version:10.9.2
-Current Version Code:159
+Current Version:25
+Current Version Code:175
 

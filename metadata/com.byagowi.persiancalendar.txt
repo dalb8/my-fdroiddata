@@ -33,6 +33,6 @@ Using tags from 4.02 onwards.
 .
 
 #Update Check Mode:Tags
-Current Version:4.04
-Current Version Code:44
+Current Version:4.05
+Current Version Code:45
 

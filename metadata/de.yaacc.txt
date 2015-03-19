@@ -44,6 +44,6 @@ LOTS of jars.
 .
 
 #Update Check Mode:Tags
-Current Version:1.1.5-SNAPSHOT
-Current Version Code:9
+Current Version:1.1.6-SNAPSHOT
+Current Version Code:10
 

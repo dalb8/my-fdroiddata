@@ -74,6 +74,6 @@ JARs are not really checked out.
 .
 
 #Update Check Mode:Tags
-Current Version:0.2.9.12
-Current Version Code:94
+Current Version:0.3.0-dev
+Current Version Code:99
 

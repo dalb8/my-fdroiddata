@@ -63,6 +63,6 @@ Not mounting: try deleting the emulated/legacy mountpoint next time
 .
 
 #Update Check Mode:Tags
-Current Version:0.4.6
-Current Version Code:11
+Current Version:0.5.4
+Current Version Code:5400
 
