@@ -10,8 +10,8 @@ AntiFeatures:UpstreamNonFree
 Categories:Multimedia
 License:GPLv3
 Web Site:http://justplayer-dev.blogspot.jp
-Source Code:https://bitbucket.org/yokmama/just-player/commits
-Issue Tracker:https://bitbucket.org/yokmama/just-player/issues
+#Source Code:https://bitbucket.org/yokmama/just-player/commits
+#Issue Tracker:https://bitbucket.org/yokmama/just-player/issues
 
 Name:Just Player
 Auto Name:JUST PLAYER
@@ -22,6 +22,7 @@ Beam (on Android 4), automatic playback on headphone insertion, gapless
 playback, customizable tabs and folder browsing.
 
 Google Admob was removed before building.
+Source code disappeared.
 .
 
 Repo Type:git
@@ -48,7 +49,7 @@ Maintainer Notes:
 Use different branch for Gingerbread and below
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:3.37
 Current Version Code:2111600304
 
