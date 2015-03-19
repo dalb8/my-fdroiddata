@@ -18,6 +18,8 @@ Auto Name:Dashclock Yr Extension
 Name:DashClock: Yr Weather
 Summary:Weather info on the lockscreen
 Description:
+'''No longer working; source code not pushed to repo.'''
+
 This project contains an extension to [[net.nurik.roman.dashclock]]. The
 extension is a clone of the Weather extension that comes included with
 Dashclock, with the difference that this app pulls data from the Norwegian
