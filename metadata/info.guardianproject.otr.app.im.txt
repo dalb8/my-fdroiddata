@@ -9,7 +9,7 @@
 Categories:Internet
 License:Apache
 Web Site:https://dev.guardianproject.info/projects/gibberbot
-Source Code:https://github.com/guardianproject/Gibberbot/commits
+Source Code:https://github.com/guardianproject/ChatSecureAndroid/commits
 Issue Tracker:https://dev.guardianproject.info/projects/gibberbot
 
 Auto Name:ChatSecure
@@ -19,12 +19,10 @@ XMPP (Jabber) client that can do end-to-end encryption using the
 [http://en.wikipedia.org/wiki/Off-the-Record_Messaging Off-the-Record Messaging]
 protocol and can anonymize your chats via the [[org.torproject.android]] app 
 (root not required).
-
-The app used to be called GibberBot.
 .
 
 Repo Type:git
-Repo:https://github.com/guardianproject/Gibberbot.git
+Repo:https://github.com/guardianproject/ChatSecureAndroid.git
 
 Build:13.1.2,107
     commit=13.1.2

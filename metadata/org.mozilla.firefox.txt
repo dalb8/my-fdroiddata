@@ -42,10 +42,12 @@ Build:25.0,2013102514
     commit=25.0
 
 Maintainer Notes:
+The build system has been much improved.
+There's an Iceweasel build knocking about
 .
 
 Update Check Mode:None
-#In Repo:33.0,2014101101
-Current Version:33.0
+#In Repo:36.0,2015022510
+Current Version:36.0.2
 Current Version Code:9999999999
 

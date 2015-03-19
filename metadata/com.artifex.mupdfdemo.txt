@@ -21,7 +21,7 @@ It also reads OpenXPS and CBZ (comic book) documents.
 .
 
 Repo Type:git
-Repo:http://git.ghostscript.com/mupdf.git
+Repo:https://git.ghostscript.com/mupdf.git
 
 Build:1.4,51
     commit=1.4
