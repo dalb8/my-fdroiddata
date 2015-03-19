@@ -14,7 +14,7 @@ Web Site:http://almalence.com/mobile-applications#abc
 Source Code:https://github.com/almalence/OpenCamera/commits
 Issue Tracker:https://github.com/almalence/OpenCamera/issues
 
-Auto Name:
+Auto Name:A Better Camera
 Summary:Highly configurable camera
 Description:
 HDR, groupshot, burst, exposure-bracketing, night mode, object removal,
@@ -23,16 +23,18 @@ Histograms, grids, white balance, focus mode and that's even before
 the settings are opened!
 
 Seems that even the premium features are available in this build.
+
+Not entirely built from source.
 .
 
 Repo Type:git
 Repo:https://github.com/almalence/OpenCamera.git
 
-Build:3.15,51
-    commit=master
-    disable=many prebuilts
-    rm=jni/almashot/x86;jni/prebuilt/OpenCV/libs/x86;jni/prebuilt/x86
-    scanignore=jni/almashot/armeabi-v7a;jni/prebuilt/armeabi-v7a;jni/prebuilt/OpenCV/libs/armeabi-v7a;jni/prebuilt/OpenCV/3rdparty/libs
+Build:3.32,94
+    commit=d9d89663b7313b
+    rm=jni/almashot/x86,jni/prebuilt/OpenCV/libs/x86,jni/prebuilt/x86
+    prebuild=mv libs/xzing-2.1/core.jar libs/
+    scanignore=jni/almashot/armeabi-v7a,jni/prebuilt/armeabi-v7a,jni/prebuilt/OpenCV/libs/armeabi-v7a,jni/prebuilt/OpenCV/3rdparty/libs
     buildjni=yes
 
 Maintainer Notes:
@@ -40,12 +42,12 @@ Builds armeabi-v7a by default.
 
 Lots of native prebuilts in source code that probably have source code
 but the exiv jar has the same namespace as the developer and I can't locate
-source.code.
+source code.
 
 Can't use UCM:RM
 .
 
 Update Check Mode:None
-Current Version:3.15
-Current Version Code:51
+Current Version:3.32
+Current Version Code:94
 
