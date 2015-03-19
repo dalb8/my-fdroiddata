@@ -48,6 +48,6 @@ Tags kind of unreliable
 .
 
 Update Check Mode:RepoManifest
-Current Version:pre1.5v2
-Current Version Code:27
+Current Version:1.6
+Current Version Code:30
 

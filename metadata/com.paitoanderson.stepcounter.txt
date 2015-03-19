@@ -33,6 +33,6 @@ Haven't been able to test yet.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.0
-Current Version Code:1
+Current Version:1.0.1
+Current Version Code:101
 

@@ -67,6 +67,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.4
-Current Version Code:42
+Current Version:0.4a
+Current Version Code:46
 

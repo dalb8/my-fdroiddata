@@ -64,6 +64,6 @@ sqlite3: include $(BUILD_EXECUTABLE) craps out at the end and this produces
 .
 
 Update Check Mode:RepoManifest
-Current Version:2.2.3
-Current Version Code:2203
+Current Version:2.2.5
+Current Version Code:2205
 

@@ -46,6 +46,6 @@ Remember to sign with debug key!
 
 Update Check Mode:Tags
 Update Check Name:de.danoeh.antennapod
-Current Version:0.9.9.0
-Current Version Code:37
+Current Version:0.9.9.4
+Current Version Code:41
 

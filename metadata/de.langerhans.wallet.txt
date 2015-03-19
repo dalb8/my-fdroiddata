@@ -45,6 +45,6 @@ For x86:
 .
 
 Update Check Mode:Tags ^1
-Current Version:1.07
-Current Version Code:157
+Current Version:1.08
+Current Version Code:158
 

@@ -37,6 +37,6 @@ Could work on GB but not worth me testing.
 .
 
 Update Check Mode:Tags
-Current Version:1.6.0
-Current Version Code:15
+Current Version:1.7.0
+Current Version Code:16
 

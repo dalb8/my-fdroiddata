@@ -55,6 +55,6 @@ The above should work, but it doesn't.
 .
 
 Update Check Mode:Tags
-Current Version:0.5
-Current Version Code:5
+Current Version:1.0.0
+Current Version Code:100
 
