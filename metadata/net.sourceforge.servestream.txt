@@ -54,10 +54,10 @@ Build:0.6.8,98
     extlibs=servestream-icons.zip
     rm=custom_rules.xml;libs/android-support-v7-appcompat.jar
     prebuild=sed -i 's/make -j4/make -j2/g' scripts/* && \
-        sed -i '56,73d' scripts/build-ffmpeg.sh && \
+        sed -i '12d;56,73d' scripts/build-ffmpeg.sh && \
         chmod +x scripts/build-ffmpeg.sh && \
         mv libs/android-support-v4.jar $$Appcompat$$/libs/ && \
-        echo ndk.dir=$$NDK$$ >> local.properties && \
+        export NDK=$$NDK$$ && \
         unzip -o libs/servestream-icons.zip
     build=./scripts/build-ffmpeg.sh && \
       $$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'

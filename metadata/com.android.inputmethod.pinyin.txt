@@ -31,6 +31,7 @@ Build:4.2.1,1
     buildjni=yes
 
 Maintainer Notes:
+There's an app gplay like this so this is unlikely to see updates.
 .
 
 Update Check Mode:None
