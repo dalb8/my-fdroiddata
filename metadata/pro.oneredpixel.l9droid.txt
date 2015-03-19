@@ -28,7 +28,7 @@ Build:0.5,3
 Maintainer Notes:
 .
 
-#Update Check Mode:RepoManifest
+#Update Check Mode:Tags
 Current Version:0.6
 Current Version Code:4
 

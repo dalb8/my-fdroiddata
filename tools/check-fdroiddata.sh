@@ -12,10 +12,10 @@
 #comm -12 <( find $MYFDROIDDATA/metadata/*.txt -printf '%f\n' | sort | uniq ) <( find $FDROIDDATA/metadata/*.txt -printf '%f\n' | sort | uniq )
 
 #! /bin/bash
-for i in `grep -s -l '^Update Check Mode:' $MYFDROIDDATA/metadata/*.txt`
+for i in `grep -s -l '#Update Check Mode:' $MYFDROIDDATA/metadata/*.txt`
 do N=`basename $i`
-   CVC=$(sed -n 's/Current Version Code://p' ~/tmp/metadata/$N)
+   CVC=$(sed -n 's/Current Version Code://p' $FDROIDDATA/metadata/$N)
    sed -i "s/Current Version Code:[.0-9]*/Current Version Code:$CVC/" $MYFDROIDDATA/metadata/$N`
-   CV=$(sed -n 's/Current Version://p' ~/tmp/metadata/$N)
+   CV=$(sed -n 's/Current Version://p' $FDROIDDATA/metadata/$N)
    sed -i "s/Current Version:.*/Current Version:$CV/"  $MYFDROIDDATA/metadata/$N`
 done
