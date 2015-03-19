@@ -13,14 +13,14 @@ Web Site:http://reicast.com
 Source Code:https://github.com/reicast/reicast-emulator/commits
 Issue Tracker:https://github.com/reicast/reicast-emulator/issues
 
-Auto Name:Reicast
+Auto Name:reicast
 Summary:Sega Dreamcast Emulator
 Description:
 This is a fork/rewrite/remix of various versions of nulldc and nulldce.
 Bios/flash have to be on /sdcard/dc/data/dc_boot.bin and /sdcard/dc/data/dc_flash.bin.
 Supported game formats: gdi, chd.
 
-Ouya SDK library was removed.
+Ouya SDK and BDA libraries were removed.
 .
 
 Repo Type:git
@@ -36,8 +36,9 @@ Build:0.r5+,6
     rm=reicast/android/libs/ouya-sdk.jar
     buildjni=yes
 
-Build:0.r6+,7
-    commit=?
+Build:0.r7,7
+    disable=need to patch nonfree jars
+    commit=cbc4f8db2cee419ffe234948ce9b3a38dcf02870
     subdir=shell/android
     forcevercode=yes
 
@@ -45,6 +46,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.r6+
-Current Version Code:6
+Current Version:r7
+Current Version Code:7
 
