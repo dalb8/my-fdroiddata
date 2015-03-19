@@ -14,6 +14,7 @@ Web Site:
 Source Code:https://github.com/aaronjwood/PortAuthority/commits
 Issue Tracker:https://github.com/aaronjwood/PortAuthority/issues
 
+Auto Name:Port Authority
 Summary:Scan ports and networks
 Description:
 No description available
@@ -27,8 +28,8 @@ Build:1.3.2,11
     subdir=app
     gradle=free
 
-Maintainer Notes:
-.
-
 Update Check Mode:Tags
+Update Check Name:com.aaronjwood.portauthority
+Current Version:1.3.2
+Current Version Code:11
 
