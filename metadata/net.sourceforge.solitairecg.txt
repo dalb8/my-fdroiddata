@@ -41,7 +41,7 @@ Build:1.13,451
     commit=v1.13
     target=android-8
 
-#Update Check Mode:Tags
+Update Check Mode:Tags
 Current Version:1.13
 Current Version Code:451
 
