@@ -34,15 +34,15 @@ safe.
 Repo Type:git
 Repo:https://github.com/abaker/tasks.git
 
-Build:4.6.16,331
-    commit=4.6.16
-    subdir=astrid
+Build:4.7.8,351
+    commit=4.7.8
+    prebuild=sed -i -e 's/21.0.2/21.0.+/g' -e 's/gradle:1.0.0-rc4/gradle:0.14.0/g' -e '/2.2.1/d' build.gradle
     gradle=yes
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:4.6.16
-Current Version Code:331
+Current Version:4.7.8
+Current Version Code:351
 
