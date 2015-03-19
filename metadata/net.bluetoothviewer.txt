@@ -42,10 +42,15 @@ Build:1.0.2,3
     subdir=bluetoothviewer
     gradle=yes
 
+Build:1.1.1,7
+    commit=v7
+    subdir=bluetoothviewer
+    gradle=yes
+
 Maintainer Notes:
 .
 
-#Update Check Mode:RepoManifest
+#Update Check Mode:Tags
 Current Version:1.0.4
 Current Version Code:5
 

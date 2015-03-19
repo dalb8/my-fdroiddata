@@ -25,6 +25,8 @@ Panodroid supports kinetic rotation and tag-based image queries.
 It can also act as generic panorama image viewer for other third-party apps.
 
 Google Maps is replaced with OSM.
+
+The version on gplay is now completely different.
 .
 
 Repo Type:git
@@ -41,9 +43,10 @@ Build:1.0,1
     buildjni=yes
 
 Maintainer Notes:
+The version on gplay is now completely different.
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:1.0
 Current Version Code:1
 
