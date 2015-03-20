@@ -17,7 +17,7 @@ Donate:http://forum.xda-developers.com/donatetome.php?u=3999488
 Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 
 Auto Name:µg UnifiedNlp
-Name:Network-based Location
+Name:NLP Base
 Summary:Device location provider
 Description:
 "For geolocating android phones without Google's Geolocation service. It allows

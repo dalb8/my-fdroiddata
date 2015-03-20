@@ -15,18 +15,13 @@ Issue Tracker:https://github.com/microg/AppleWifiNlpBackend/issues
 Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 
 Auto Name:AppleWifiNlpBackend
+Name:NLP: Apple
 Summary:Location backend
 Description:
-A  provider for
-[https://github.com/microg/android_packages_apps_UnifiedNlp Nlp]
-that uses Apple Corporation's database of WiFi access points 
-to make your current location available to other apps. 
+[[com.google.android.gms]] backend that uses Apple's service to resolve WiFi locations.
 
 Location calculation is done on-device and WiFi locations are cached to 
 minimize data usage.
-
-Nlp (not yet available)
-needs to be installed already as System app.
 .
 
 Repo Type:git

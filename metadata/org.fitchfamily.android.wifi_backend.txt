@@ -1,0 +1,51 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:GPLv3+
+Web Site:
+Source Code:https://github.com/n76/wifi_backend/commits
+Issue Tracker:https://github.com/n76/wifi_backend/issues
+
+Name:NLP: Local WiFi
+Auto Name:WiFi Backend
+Summary:UnifiedNlp location provider
+Description:
+[[com.google.android.gms]] backend that uses locally acquired WiFi AP data to
+resolve user location.
+
+This backend consists of two parts sharing a common database. One part
+passively monitors the GPS. If the GPS has acquired and has a good position
+accuracy, then the WiFi APs detected by the phone are stored.
+
+The other part is the actual location provider which uses the database to
+estimate location when the GPS is not available or has not yet gotten its first
+fix. The use of stored WiFi AP can dramatically decrease the GPS time to first
+fix.
+
+This backend performs no network data. All data acquired by the phone stays on
+the phone and no queries are made to a centralized AP location provider.
+.
+
+Repo Type:git
+Repo:https://github.com/n76/wifi_backend
+
+Build:0.12.0,16
+    commit=v0.12.0
+    srclibs=1:Nlp@v1.0.1
+    rm=libs/*.jar
+    prebuild=echo "android.library=true" >> $$Nlp$$/project.properties
+    target=android-19
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.12.0
+Current Version Code:16
+

@@ -1,19 +1,28 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Navigation
 License:GPLv3
 Web Site:
 Source Code:https://github.com/microg/OpenWlanMapNlpBackend/commits
 Issue Tracker:https://github.com/microg/OpenWlanMapNlpBackend/issues
 
+Name:NLP: OpenWlanMap
+Auto Name:OpenWlanMapNlpBackend
 Summary:Location backend
 Description:
-A  provider for
-[https://github.com/microg/android_packages_apps_UnifiedNlp Nlp]
+A  provider for [[com.google.android.gms]]
 that uses OpenWlanMap's database of WiFi access points 
 to make your current location available to other apps. 
 
 Location calculation is done online.
-
-Nlp needs to be installed already as System app.
 .
 
 Repo Type:git
