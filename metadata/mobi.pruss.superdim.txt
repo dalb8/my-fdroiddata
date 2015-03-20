@@ -11,8 +11,8 @@
 Categories:System
 License:Public Domain
 Web Site:http://pruss.mobi
-Source Code:https://code.google.com/p/superdim/source/list
-Issue Tracker:https://code.google.com/p/superdim/issues
+Source Code:https://github.com/arpruss/superdim/commits
+Issue Tracker:https://github.com/arpruss/superdim/issues
 
 Auto Name:RootDim
 Summary:Dim the screen
@@ -20,14 +20,13 @@ Description:
 Requires Root:Yes
 .
 
-Repo Type:git-svn
-Repo:https://superdim.googlecode.com/svn/trunk
+Repo Type:git
+Repo:https://github.com/arpruss/superdim
 
 Build:1.60b1,144
     commit=64
 
 Maintainer Notes:
-1.58 on gplay
 .
 
 Update Check Mode:RepoManifest

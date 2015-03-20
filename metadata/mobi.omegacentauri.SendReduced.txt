@@ -9,8 +9,8 @@
 Categories:Multimedia
 License:New BSD
 Web Site:http://pruss.mobi
-Source Code:https://code.google.com/p/sendreduced/source/list
-Issue Tracker:https://code.google.com/p/sendreduced/issues/list
+Source Code:https://github.com/arpruss/sendreduced/commits
+Issue Tracker:https://github.com/arpruss/sendreduced/issues
 
 Auto Name:Send Reduced
 Summary:Reduce image size
@@ -20,8 +20,8 @@ will reduce the size again before being sent. Share via the gallery or via the
 messaging client.
 .
 
-Repo Type:git-svn
-Repo:https://sendreduced.googlecode.com/svn/trunk
+Repo Type:git
+Repo:https://github.com/arpruss/sendreduced
 
 Build:0.05,5
     commit=7

@@ -8,11 +8,11 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:
+Categories:Office
 License:Apache
 Web Site:http://pruss.mobi
-Source Code:http://code.google.com/p/twopointheight/source/list
-Issue Tracker:http://code.google.com/p/twopointheight/issues/list
+Source Code:https://github.com/arpruss/twopointheight/commits
+Issue Tracker:https://github.com/apruss/twopointheight/issues
 
 Auto Name:Two Point Height
 Summary:Measure the height of things
@@ -24,8 +24,8 @@ For greater precision you should fill in the height at which you hold the
 device and your distance from the object.
 .
 
-Repo Type:git-svn
-Repo:http://twopointheight.googlecode.com/svn/trunk
+Repo Type:git
+Repo:https://github.com/arpruss/twopointheight
 
 Build:0.02,2
     commit=6
