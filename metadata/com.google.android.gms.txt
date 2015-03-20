@@ -1,4 +1,4 @@
-# Copyright (c) 2014 David Black.
+# Copyright (c) 2014,2015 David Black.
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright
 # notice and this notice are preserved.  This file is offered as-is,
@@ -10,22 +10,26 @@
 
 Categories:System
 License:Apache
-Web Site:http://forum.xda-developers.com/showthread.php?t=1715375
-Source Code:https://github.com/microg/NetworkLocation/commits
-Issue Tracker:https://github.com/microg/NetworkLocation/issues
+Web Site:http://forum.xda-developers.com/showthread.php?t=2991544
+Source Code:https://github.com/microg/android_packages_apps_UnifiedNlp/commits
+Issue Tracker:https://github.com/microg/android_packages_apps_UnifiedNlp/issues
 Donate:http://forum.xda-developers.com/donatetome.php?u=3999488
 Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 
-Auto Name:Network Location
-Name:Network Location for KitKat
+Auto Name:µg UnifiedNlp
+Name:Network-based Location
 Summary:Device location provider
 Description:
-Replacement for network location services, normally existing on
-phones that you buy, but not part of AOSP.
-Also known as NOGAPPS.
-
-'''This version isn't for Android 4.3 and below''':
-use [[com.google.android.location]] instead.
+"For geolocating android phones without Google's Geolocation service. It allows
+apps that use Android's coarse or network locating features to geolocate the
+phone which is usually faster and less battery consuming then GPS. If you use
+your phone without GAPPS this might become a useful tool for you.  The real
+location work is done by backends (plug-ins) that can be configured through the
+UnifiedNlp UI. There is already a number of backends out there that use data
+from various data sources, some of them working completely offline.  The same
+backend technique is used for UnifiedNlp's secondary feature: (reverse)
+geocoding. This allows apps like the android gallery to convert geo-coordinates
+to an address, resulting in better user experience."
 
 Because of the permissions it needs, this needs to be installed in /system.
 Copy to phone, remount /system, move to '''/system/priv-app/''' fix the 
@@ -36,30 +40,21 @@ Network location services are found in NetworkLocation.apk in older Android vers
 but they're part of the Google Play Services apk (or perhaps another)
 since Android 4.4, hence this package has the same name as that.
 
-Sources are currently limited to Apple Corp's database.
-Future updates will be known as Nlp and will allow other sources via plugins 
-(backends).
-
 Test it by visiting this [http://html5demos.com/geo site] with Firefox.
 .
 
 Repo Type:git
-Repo:https://github.com/microg/NetworkLocation.git
+Repo:https://github.com/microg/android_packages_apps_UnifiedNlp
 
-Build:1.3.2,1302
-    commit=v1.3.2
-    subdir=NetworkLocation
-    prebuild=sed -i -e 's/package="com.google.android.location"/package="com.google.android.gms"/g' -e 's/android:minSdkVersion="9"/android:minSdkVersion="19"/g' -e 's/android:targetSdkVersion="18"/android:targetSdkVersion="19"/g' ../NetworkLocation/AndroidManifest.xml
-    maven=yes
+Build:1.3.0,1300
+    commit=v1.3.0
+    submodules=yes
+    gradle=NetworkLocation
 
 Maintainer Notes:
-Get CV from the other package
-
-Development moving to https://github.com/microg/android_packages_apps_UnifiedNlp
-See other package for build WIP.
 .
 
 Update Check Mode:None
-Current Version:1.3.2
-Current Version Code:1302
+Current Version:1.3.0
+Current Version Code:1300
 
