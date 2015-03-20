@@ -1,3 +1,13 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Reading
 License:MIT
 Web Site:
@@ -22,8 +32,10 @@ Build:1.18,18
         sed -i -e '/ImageViewTouch/d' project.properties && \
         echo "android.library.reference.1=../ImageViewTouchLibrary" >> project.properties
 
-Auto Update Mode:None
-Update Check Mode:RepoManifest
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
 Current Version:1.18
 Current Version Code:18
 

@@ -23,10 +23,10 @@ Repo:https://github.com/brk3/glimmr.git
 
 Build:2.22-SNAPSHOT,39
     commit=glimmrpro-2.22
-    maven=yes
-    srclibs=Flickrj@401b946c5b7a425
     patch=api.patch
+    srclibs=Flickrj@401b946c5b7a425
     build=$$MVN3$$ install -DskipTests -f $$Flickrj$$/pom.xml
+    maven=yes
 
 Build:2.23,41
     commit=glimmrpro-2.23
@@ -35,6 +35,8 @@ Build:2.23,41
 
 Maintainer Notes:
 Third-party maven repos are for commonsware and viewpager-indicator
+
+Tags but somehow they aren't getting latest version
 .
 
 Update Check Mode:None

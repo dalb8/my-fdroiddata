@@ -31,7 +31,7 @@ Build:1.1.2,4
 Maintainer Notes:
 .
 
-Update Check Mode:None
+Update Check Mode:Tags
 Current Version:1.1.2
 Current Version Code:4
 

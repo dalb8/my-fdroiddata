@@ -41,7 +41,7 @@ Maintainer Notes:
 Tags are old
 .
 
-Update Check Mode:None
+Update Check Mode:RepoManifest
 Current Version:0.4.1
 Current Version Code:16
 
