@@ -27,6 +27,7 @@ Build:1.0,1
     srclibs=1:ColorPickerPreference@15b666
 
 Maintainer Notes:
+1.0.1 on gplay
 .
 
 Update Check Mode:RepoManifest

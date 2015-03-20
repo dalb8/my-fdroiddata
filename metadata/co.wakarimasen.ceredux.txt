@@ -38,6 +38,7 @@ Build:1.0.2,3
     gradle=yes
 
 Maintainer Notes:
+1.0.3 on gplay
 .
 
 #Update Check Mode:RepoManifest

@@ -24,6 +24,8 @@ into focus for a couple of seconds.
 The details of it can be viewed from the launcher.
 
 An API exists to make extensions for other collections.
+
+Latest upstream code uses GMS.
 .
 
 Repo Type:git
@@ -46,7 +48,7 @@ Maintainer Notes:
 API releases are tagged.
 .
 
-Update Check Mode:None
+Update Check Mode:Static
 Current Version:1.0.1
 Current Version Code:1008
 

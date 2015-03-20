@@ -30,15 +30,13 @@ Build:1.1.15,20140222
         sed -i 's/Tahoma/sans-serif-light/' res/raw/style_dark.css && \
         sed -i '1 s/^\xef\xbb\xbf//' src/com/erakk/lnreader/adapter/PageModelAdapter.java
 
-Build:1.1.16-beta,20140306
-    disable=beta
-    subdir=LNReader
-
 Maintainer Notes:
 Can put styles on sdcard too.
+
+UCM not working; info in AM.xml
 .
 
-Update Check Mode:RepoManifest
-Current Version:1.1.17b
-Current Version Code:20140527
+Update Check Mode:None
+Current Version:1.1.26
+Current Version Code:20150212
 

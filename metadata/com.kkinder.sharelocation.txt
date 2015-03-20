@@ -38,9 +38,11 @@ Build:1.4.1,141
 
 Maintainer Notes:
 Note that MapsAPI requires WRITE_EXTERNAL_STORAGE
+
+Source code on older version; newer versions probably use GMS anyway.
 .
 
-#Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:1.4.1
 Current Version Code:141
 

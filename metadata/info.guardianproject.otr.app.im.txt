@@ -42,9 +42,10 @@ Build:13.1.2,107
           cp build/asmack-android-7.jar ../../libs
 
 Maintainer Notes:
+Use #Update Check Mode:Tags: just can't be bothered cloning repo now.
 .
 
-#Update Check Mode:Tags
-Current Version:14.0.9
-Current Version Code:1409002
+Update Check Mode:None
+Current Version:14.1.1
+Current Version Code:1411005
 

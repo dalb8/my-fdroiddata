@@ -29,7 +29,7 @@ Description:
 .
 
 Repo Type:hg
-Repo:https://code.google.com/p/android-comicsreader
+Repo:http://hg.kervala.net/comicsreader
 
 Build:2.0,21
     commit=48908c83d453
@@ -37,6 +37,8 @@ Build:2.0,21
 
 Maintainer Notes:
 Jni contains rar code which isn't free.
+
+Version number is a string.
 .
 
 Update Check Mode:RepoManifest

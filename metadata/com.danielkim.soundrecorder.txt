@@ -27,11 +27,10 @@ Build:1.2.2,5
     gradle=yes
 
 Maintainer Notes:
-Might qualify for UCM:Tags and AUM:Version v%v with the next release.
+1.2.3 on gplay
 .
 
-Auto Update Mode:None
-Update Check Mode:RepoManifest
+#Update Check Mode:RepoManifest
 Current Version:1.2.2
 Current Version Code:5
 

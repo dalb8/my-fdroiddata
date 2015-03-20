@@ -41,10 +41,9 @@ Build:v1.2.5,43
     gradle=yes
 
 Maintainer Notes:
-version supposed to be in app/version.properties
 .
 
-Update Check Mode:None
-Current Version:v1.2.5
+#Update Check Mode:Tags
+Current Version:v1.2.9
 Current Version Code:9999999
 

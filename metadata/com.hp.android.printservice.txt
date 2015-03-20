@@ -16,8 +16,8 @@ Summary:Plugin for HP printers
 Description:
 .
 
-#In Repo:1.0.47,47
-Current Version:1.0.47
-Current Version Code:47
+#In Repo:2.2.1-1.0.1-10c-62,62
+Current Version:2.2.1-1.0.1-10c-62
+Current Version Code:62
 
 

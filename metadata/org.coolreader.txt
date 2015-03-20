@@ -35,10 +35,10 @@ Build:3.1.2-39,859
     buildjni=no
 
 Maintainer Notes:
-Too many tags so use RepoManifest
+3.1.2-56 on gplay
 .
 
-Update Check Mode:RepoManifest
+#Update Check Mode:Tags
 Current Version:3.1.2-55
 Current Version Code:875
 
