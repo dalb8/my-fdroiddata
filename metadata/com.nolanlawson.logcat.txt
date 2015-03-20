@@ -10,7 +10,7 @@
 
 Categories:Development
 License:WTFPL
-Web Site:https://github.com/nolanlawson/Catlog
+Web Site:http://nolanlawson/apps#catlog
 Source Code:https://github.com/nolanlawson/Catlog/commits
 Issue Tracker:https://github.com/nolanlawson/Catlog/issues
 Donate:http://nolanlawson.com/donate

@@ -10,7 +10,7 @@
 
 Categories:Games
 License:GPLv3
-Web Site:http://niparasc.blogspot.com
+Web Site:
 Source Code:https://github.com/niparasc/papanikolis-submarine/commits
 Issue Tracker:https://github.com/niparasc/papanikolis-submarine/issues
 

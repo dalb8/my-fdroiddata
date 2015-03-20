@@ -13,7 +13,6 @@ License:GPLv3
 Web Site:http://blog.ecomobilecitizen.com/android/bluetoothviewer
 Source Code:https://github.com/janosgyerik/bluetoothviewer/commits
 Issue Tracker:https://github.com/janosgyerik/bluetoothviewer/issues
-Donate:https://github.com/janosgyerik/bluetoothviewer#Donations
 
 Auto Name:Bluetooth Viewer (LITE)
 Name:Bluetooth Viewer

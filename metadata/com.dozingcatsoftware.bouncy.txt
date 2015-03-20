@@ -10,7 +10,7 @@
 
 Categories:Games
 License:GPLv3
-Web Site:http://www.dozingcatsoftware.com
+Web Site:http://www.dozingcatsoftware.com/VectorPinball/index.html
 Source Code:https://github.com/dozingcat/Vector-Pinball/commits
 Issue Tracker:https://github.com/dozingcat/Vector-Pinball/issues
 

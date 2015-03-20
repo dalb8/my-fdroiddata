@@ -11,7 +11,7 @@ License:GPLv2
 Web Site:http://www.roguetemple.com/z/hyper.php
 Source Code:https://bitbucket.org/dalb8/hyperrogue-iii-for-android/commits
 Issue Tracker:
-Donate:http://www.roguetemple.com/z/hyper.php
+Donate:http://www.roguetemple.com/z/donate.php?id=Hyperrogue+Android
 
 Auto Name:HyperRogue
 Summary:Top-down rogue-like adventure

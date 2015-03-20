@@ -8,7 +8,7 @@
 
 Categories:Office
 License:GPLv3
-Web Site:https://bitbucket.org/thomasebell/urecord
+Web Site:
 Source Code:https://bitbucket.org/thomasebell/urecord/commits
 Issue Tracker:
 

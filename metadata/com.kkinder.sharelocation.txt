@@ -10,7 +10,7 @@
 
 Categories:Navigation
 License:MIT
-Web Site:https://kkinder.com/2011/01/13/gps-share
+Web Site:https://kkinder.com/gps-share
 Source Code:https://bitbucket.org/kkinder/gpsshare/commits
 Issue Tracker:https://bitbucket.org/kkinder/gpsshare/issues
 

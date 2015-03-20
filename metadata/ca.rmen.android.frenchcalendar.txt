@@ -8,7 +8,7 @@
 
 Categories:Wallpaper,Office
 License:GPLv2
-Web Site:https://github.com/caarmen/FRCAndroidWidget
+Web Site:
 Source Code:https://github.com/caarmen/FRCAndroidWidget/commits
 Issue Tracker:https://github.com/caarmen/FRCAndroidWidget/issues
 

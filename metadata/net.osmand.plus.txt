@@ -8,10 +8,10 @@
 
 Categories:Navigation
 License:GPLv3
-Web Site:http://osmand.net
+Web Site:http://osmandapp.github.io
 Source Code:https://github.com/osmandapp/Osmand/commits
-Issue Tracker:https://code.google.com/p/osmand/issues/list
-Donate:https://code.google.com/p/osmand/#Please_support_the_project
+Issue Tracker:https://github.com/osmandapp/Osmand/issues
+Donate:http://osmandapp.github.io/faq.html#buy_app
 
 Auto Name:OsmAnd~
 Summary:Maps & navigation; online and off
@@ -27,6 +27,8 @@ within the app and there is a desktop program available on the website as well
 for creating your own.
 
 Some code for tracking map downloads was removed.
+
+[http://osmandapp.github.io/changes.html Changelog.]
 .
 
 Repo Type:srclib
@@ -80,6 +82,6 @@ Qt in qtcore branch.
 .
 
 Update Check Mode:None
-Current Version:1.8.2
-Current Version Code:182
+Current Version:1.9.5
+Current Version Code:197
 

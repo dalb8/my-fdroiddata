@@ -8,7 +8,7 @@
 
 Categories:Science & Education
 License:Apache
-Web Site:https://code.google.com/p/auroraapp
+Web Site:
 Source Code:https://code.google.com/p/auroraapp/source/list
 Issue Tracker:https://code.google.com/p/auroraapp/issues/list
 

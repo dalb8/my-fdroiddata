@@ -8,7 +8,7 @@
 
 Categories:Multimedia
 License:MIT
-Web Site:https://github.com/dkim0419/SoundRecorder
+Web Site:
 Source Code:https://github.com/dkim0419/SoundRecorder/commits
 Issue Tracker:https://github.com/dkim0419/SoundRecorder/issues
 

@@ -10,7 +10,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Reading
 #See README
 License:Custom
-Web Site:https://github.com/ahmedre/quran_android
+Web Site:http://android.quran.com
 Source Code:https://github.com/ahmedre/quran_android/commits
 Issue Tracker:https://github.com/ahmedre/quran_android/issues
 

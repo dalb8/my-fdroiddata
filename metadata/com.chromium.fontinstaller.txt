@@ -10,7 +10,7 @@
 
 Categories:None
 License:Unknown
-Web Site:http://fonster.ch
+Web Site:http://fontster.cf
 Source Code:https://github.com/Chromium1/FontInstaller
 Issue Tracker:https://github.com/Chromium1/FontInstaller/issues
 

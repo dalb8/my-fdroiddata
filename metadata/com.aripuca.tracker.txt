@@ -11,7 +11,7 @@
 AntiFeatures:UpstreamNonFree
 Categories:Navigation
 License:Apache
-Web Site:https://code.google.com/p/aripuca-tracker
+Web Site:http://tracker.aripuca.com/blog
 Source Code:https://code.google.com/p/aripuca-tracker/source/list
 Issue Tracker:https://code.google.com/p/aripuca-tracker/issues
 

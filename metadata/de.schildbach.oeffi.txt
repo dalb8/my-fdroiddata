@@ -23,7 +23,7 @@ Maintainer Notes:
 .
 
 Update Check Mode:None
-#In Repo:8.14-aosp,406
-Current Version:8.16
+#In Repo:8.71-aosp,471
+Current Version:8.71
 Current Version Code:9999999
 
