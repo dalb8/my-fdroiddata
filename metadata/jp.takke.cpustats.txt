@@ -25,10 +25,16 @@ Build:1.2.0,6
     commit=33ef50
     subdir=CpuStats
 
+Build:1.2.2,8
+    commit=d877b08
+    subdir=app
+    gradle=quad5
+
 Maintainer Notes:
+Not sure whether to use quad3 or quad5
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.2.0
-Current Version Code:6
+Current Version:1.2.2
+Current Version Code:8
 
