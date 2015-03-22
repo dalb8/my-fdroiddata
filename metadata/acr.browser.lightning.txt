@@ -34,10 +34,9 @@ Build:3.1.1a,66
     extlibs=android/android-support-v4.jar
 
 Maintainer Notes:
-Some confusion over whether version on gplay is proprietary,
-but latest version does have drawer.
-
 Use later commit for 66 to avoid crashes.
+
+Tags are totally unreliabler: check against gplay.
 .
 
 

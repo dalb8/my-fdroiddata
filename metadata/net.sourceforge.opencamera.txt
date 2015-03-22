@@ -11,6 +11,7 @@ License:GPLv3
 Web Site:http://opencamera.sourceforge.net
 Source Code:http://sourceforge.net/p/opencamera/code/commit_browser
 Issue Tracker:http://sourceforge.net/p/opencamera/tickets
+Donate:http://opencamera.sourceforge.net
 Bitcoin:LKCFto9SQGqtcvqZxHkqDPqNjSnfMmsow
 
 Auto Name:Open Camera
@@ -28,8 +29,8 @@ Build:1.5,7
 Build:1.9,11
     commit=v1.9
 
-Build:1.11,13
-    disable=crashy
+Build:1.23,27
+    commit=v1.23
 
 Maintainer Notes:
 .
