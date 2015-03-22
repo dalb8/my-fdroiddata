@@ -52,8 +52,14 @@ Build:1.05,40
     buildjni=no
     build=ndk-build APP_ABI='armeabi armeabi-v7a'
 
+Build:1.35,70
+    commit=1fed713f32ed4ac01b3401cfc68747d3d8f66aaa
+    prebuild=sed -i '/proguard/d' project.properties
+    scandelete=libs
+    buildjni=no
+    build=ndk-build APP_ABI='armeabi armeabi-v7a armeabi-v7a-hard'
+
 Maintainer Notes:
-Can build armeabi-v7-hard if using ndk-r9d.
 .
 
 Update Check Mode:RepoManifest
