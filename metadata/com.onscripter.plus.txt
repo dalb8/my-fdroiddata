@@ -15,7 +15,6 @@ Source Code:https://github.com/matthewn4444/onscripter-plus-android/commits
 Issue Tracker:https://github.com/matthewn4444/onscripter-plus-android/issues
 
 Auto Name:ONScripter Plus (Ad Free)
-Name:ONScripter Plus
 Summary:Interactive novel player
 Description:
 [http://onscripter.sourceforge.jp/android/android.html ONScripter] player.
@@ -43,7 +42,24 @@ Build:1.1.8,17
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
+# not exact: something like this
+Build:1.2.1,41
+    commit=810b252d8e9d2fac81bbcdf86cffa24b1342ea39
+    submodules=yes
+    init=sed -i 's@\(android.library.reference.1=\).*@\1libs/actionbarsherlock@' project.properties && \
+        mv libs/android-support-v4.jar libs/actionbarsherlock/libs/ && \
+        sed -i '/onscripter_log.h/d' libs/ONScripter/jni/application/onscripter/ScriptDecoder.h && \
+        sed -i 's/ (Ad Free)//' res/values/strings.xml
+    build=cd libs/VPlayer_lib/ffmpeg/ && \
+       NDK=$$NDK$$ ./config_and_build.sh && \
+       cd ../VPlayer_library/jni && \
+       ./setup.sh && \
+       ndk-build APP_ABI=armeabi-v7a && \
+       ndk-build -C ../../../../libs/ONScripter APP_ABI=armeabi-v7a
+    buildjni=no
+
 Maintainer Notes:
+Tags are used for the submodule?!
 .
 
 Update Check Mode:RepoManifest
