@@ -24,6 +24,7 @@ Repo Type:git
 Repo:https://github.com/Astonex/Antox.git
 
 Build:0.6.6-ARMv7,12
+    disable=deprecated
     commit=05c9eff2fe3e8
     subdir=app
     gradle=yes
