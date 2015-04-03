@@ -1,0 +1,51 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://sites.google.com/site/ghostcommander1
+Source Code:http://sourceforge.net/p/gc-webdav/svn/commit_browser
+Issue Tracker:http://sourceforge.net/p/gc-samba/_list/tickets
+Donate:http://sourceforge.net/p/ghostcommander/donate
+
+Auto Name:Ghost Commander - WebDAV plugin
+Summary:Access files on the network
+Description:
+A plug-in for [[com.ghostsq.commander]] to access to Windows network shared
+folders (also referenced as SMB, Samba, CIFS or even NetBios).
+Launch Ghost Commander and go to 'Menu > Location > Home > Windows share'.
+Alternatively, scroll along the toolbar until you arrive at 'Home'.
+Enter your server name and credentials (if any), then tap the 'Connect' button.
+Once connected, you should be able to see a list of Windows machines or
+Samba servers on the network. Tip: Better have the Windows account with
+password. A passwordless Windows account might not work.
+.
+
+Repo Type:git-svn
+Repo:svn://svn.code.sf.net/p/gc-webdav/svn
+
+# not exact: line of code needed deleting
+Build:1.0,3
+    commit=9
+    srclibs=GhostCommander@505
+    extlibs=commons/commons-httpclient-3.1.jar,commons/commons-logging-1.2.jar,servlet-api-2.5.jar,sl4j/slf4j-android-1.6.1-RC1.jar
+    build=ant release -f $$GhostCommander$$/build.xml && \
+        jar c -C $$GhostCommander$$/bin/classes/ com > gc.jar && \
+        install -D gc.jar libs/gc.jar
+
+Maintainer Notes:
+If you are building this yourself, config.py must be edited to sign this
+with the same key as Ghost Commander
+.
+
+Update Check Mode:RepoManifest
+Current Version:1.0
+Current Version Code:3
+
