@@ -1,8 +1,18 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Multimedia
 License:GPLv3
 Web Site:
-Source Code:https://code.google.com/p/chromadoze/source/list
-Issue Tracker:https://code.google.com/p/chromadoze/issues
+Source Code:https://github.com/pmarks-net/chromadoze/commits
+Issue Tracker:https://github.com/pmarks-net/chromadoze/issues
 
 Auto Name:Chroma Doze
 Summary:Noise generator
@@ -17,8 +27,8 @@ steady-state behavior selects blocks at random, and smoothly crossfades between
 them.
 .
 
-Repo Type:git-svn
-Repo:https://chromadoze.googlecode.com/svn/trunk
+Repo Type:git
+Repo:https://github.com/pmarks-net/chromadoze
 
 Build:3.3,14
     commit=72
@@ -27,7 +37,12 @@ Build:3.3,14
     srclibs=1:Appcompat@android-4.4_r1.1
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
-#Update Check Mode:RepoManifest
-Current Version:3.5
-Current Version Code:16
+Build:3.5.1,17
+    commit=v3.5.1
+    subdir=app
+    gradle=yes
+
+#Update Check Mode:Tags
+Current Version:3.5.1
+Current Version Code:17
 

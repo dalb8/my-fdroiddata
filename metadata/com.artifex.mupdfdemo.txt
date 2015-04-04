@@ -1,11 +1,9 @@
 # Copyright (c) 2014 David Black.
 # Copyright (c) 2010-2014 the Fdroiddata contributors.
 # Licensed under the GNU AGPLv3.
-
 ## Originally published at https://github.com/dalb8/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
-
 Categories:Reading
 License:AGPLv3
 Web Site:http://mupdf.com
@@ -21,24 +19,39 @@ It also reads OpenXPS and CBZ (comic book) documents.
 .
 
 Repo Type:git
-Repo:https://git.ghostscript.com/mupdf.git
+Repo:http://git.ghostscript.com/mupdf.git
 
 Build:1.4,51
     commit=1.4
-    submodules=yes
     subdir=platform/android
+    submodules=yes
     forceversion=yes
     forcevercode=yes
-    build=(cd ../.. && make generate) && \
-       $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
+    build=(cd ../.. && \
+        make generate) && \
+        $$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
     buildjni=no
 
+Build:1.6,61
+    commit=android-release-60
+    subdir=platform/android
+    submodules=yes
+    forceversion=yes
+    forcevercode=yes
+    prebuild=sed -i 's/armeabi-v7a/armeabi-v7a/g' jni/Application.mk && \
+        cd ../.. && \
+        make generate
+    scandelete=build/debug
+    buildjni=yes
+
 Maintainer Notes:
-Not great about bumping version codes.
-Tags should be available for releases, but not usable for UCM.
+Likely version code; revise vercode operation:
+armeabi = baseversion + 0, e.g. mupdf-1.5-android-50-armeabi.apk
+armv7 = baseversion + 1, e.g. mupdf-1.5-android-51-armv7a.apk
 .
 
-Update Check Mode:None
-Current Version:1.4
-Current Version Code:51
+Update Check Mode:Tags
+Vercode Operation:%c + 11
+Current Version:1.6 (git build)
+Current Version Code:61
 
