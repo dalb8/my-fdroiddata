@@ -54,8 +54,7 @@ Maintainer Notes:
 Note: JAR libraries not verified yet.
 .
 
-Update Check Mode:Tags ^((?!a).)*$
-#In Repo:2.2.9,26
+#Update Check Mode:Tags
 Current Version:2.2.9
 Current Version Code:26
 

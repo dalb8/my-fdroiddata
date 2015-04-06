@@ -1,8 +1,10 @@
-commit 9dc92cd51b3f93d58709f1c5758d1f4b240de5e2
-Author: AlexanderR <alexander.r@gmx.com>
-Date:   Sat Sep 21 19:59:26 2013 +1100
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2013 AlexanderR <alexander.r@gmx.com>
+# Licensed under the GNU AGPLv3.
 
-    Added fdroid_build
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
 diff --git a/fdroid_build b/fdroid_build
 new file mode 100755
@@ -12,10 +14,10 @@ index 0000000..f9a86f4
 @@ -0,0 +1,71 @@
 +#!/bin/sh
 +
-+BIN="$ANDROID_NDK/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86/bin"
++BIN="$ANDROID_NDK/toolchains/arm-linux-androideabi-4.6/prebuilt/linux-x86_64/bin"
 +
 +export PATH="$BIN:$PATH"
-+export SYSROOT="$ANDROID_NDK/platforms/android-4/arch-arm/"
++export SYSROOT="$ANDROID_NDK/platforms/android-8/arch-arm/"
 +export PREFIX="$BIN/arm-linux-androideabi-"
 +export CC="${PREFIX}gcc --sysroot=$SYSROOT"
 +export CXX="${PREFIX}g++ --sysroot=$SYSROOT"
@@ -75,9 +77,9 @@ index 0000000..f9a86f4
 +
 +# "--default-dynamic" is too much of pain to distribute, so all plugins are bundled together
 +scummvm() {
-+./configure --host=android  --enable-plugins \
++./configure --host=android-arm-v7a  --enable-plugins \
 +--with-tremor-prefix="$PREF" --with-mad-prefix="$PREF" --with-flac-prefix="$PREF"
-+make
++make androidrelease
 +}
 +
 +$1 $2
