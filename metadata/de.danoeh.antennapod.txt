@@ -76,6 +76,12 @@ Build:1.0,44
         sed -i -e 's/build:gradle:0.12.+/build:gradle:1.0.0/g' -e 's/android-library/com.android.library/g' dslv/library/build.gradle
     gradle=yes
 
+Build:1.1rc3,47
+    disable=not released
+    commit=976f308dbd098cdbfa38d46b6646849ada6deb26
+    subdir=app
+    gradle=yes
+
 Maintainer Notes:
 .
 

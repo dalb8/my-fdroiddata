@@ -30,11 +30,10 @@ Build:5.0-121886,79
     forceversion=yes
     forcevercode=yes
     scandelete=.
-    build=cd ../PsiphonAndroidLibrary
     build=cd ../Android/libsodium && \
        ./autogen.sh && \
        ./configure && \
-       make
+        make
     buildjni=../PsiphonAndroidLibrary
 
 Maintainer Notes:

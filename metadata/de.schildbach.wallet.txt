@@ -62,6 +62,13 @@ Build:3.54,175
     build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
     maven=yes@..
 
+Build:3.61-v3,182
+    commit=df02643faa5c2a84fa3709e56eb4ba134bb2446c
+    subdir=wallet
+    srclibs=BitcoinJ@v0.11.3
+    build=$$MVN3$$ clean install -DskipTests -f $$BitcoinJ$$/pom.xml
+    maven=yes@..
+
 Maintainer Notes:
 Even though BitcoinJ is taken from Maven Central build it anyway.
 
