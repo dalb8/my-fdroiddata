@@ -17,26 +17,33 @@ Issue Tracker:https://bitbucket.org/psiphon/psiphon-circumvention-system/issues
 Auto Name:Psiphon
 Summary:VPN
 Description:
-No description available
+Build woes; developer build for now.
 .
 
 Repo Type:hg
 Repo:https://bitbucket.org/psiphon/psiphon-circumvention-system
 
-Build:57,570
-    disable=build errors
-    commit=4150
+Build:5.0-121886,79
+    disable=WIP
+    commit=4848
     subdir=Android/PsiphonAndroid
     forceversion=yes
     forcevercode=yes
-    rm=Android/PsiphonAndroidLibrary/*/*.so
+    scandelete=.
+    build=cd ../PsiphonAndroidLibrary
+    build=cd ../Android/libsodium && \
+       ./autogen.sh && \
+       ./configure && \
+       make
     buildjni=../PsiphonAndroidLibrary
 
 Maintainer Notes:
-Not much in the way of release info; have to use gplay
+Not much in the way of version or release info and AM.xml has no version numbers.
+version numbers of dev APK differ from gplay
 .
 
 Update Check Mode:None
-Current Version:57
-Current Version Code:570
+#In Repo:79' platformBuildVersionName='5.0-1521886,79
+Current Version:5.0-1521886
+Current Version Code:79
 

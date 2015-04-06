@@ -27,12 +27,13 @@ On a rooted device, the proxying can be completely transparent i.e. the app
 that accesses the network need not be aware of the proxy's existence; 
 you can choose which apps go via the proxy in the settings.
 
-Requires root: No, but you will need to use apps that allow proxies if root
-is not granted.
+Requires root: No. It can work in one of three modes: in the Apps mode, by 
+making use of the VPN feature in Android 4; by working with apps that include 
+the NetCipher library; or in root mode that transparently proxies all or some apps.
 .
 
 Repo Type:git
-Repo:git://git.torproject.org/orbot.git
+Repo:https://git.torproject.org/orbot.git
 
 Build:0.2.3.23-rc-1.0.11-RC5-test2,51
     disable=iptables blobs can't be removed at ff38bf4e5
@@ -53,13 +54,22 @@ Build:14.0.3.1,105
     rm=external/superuser-commands/RootCommands-Demo
     build=NDK_BASE=$$NDK$$ make -C external
 
+Build:15.0.0-beta-2,15102
+    commit=v15-beta-2
+    submodules=yes
+    init=./update-ant-build.sh
+    rm=external/superuser-commands/RootCommands-Demo,libs/armeabi*
+    scanignore=external/pluto/plugins
+    build=NDK_BASE=$$NDK$$ make -C external
+    buildjni=yes
+
 Maintainer Notes:
-Watch out for prebuilts in res/raw
+Not sure about the scanignore
 
 Don't publish every tag: check gplay first
 .
 
-#Update Check Mode:None
-Current Version:14.1.4-PIE
-Current Version Code:133
+Update Check Mode:Tags
+Current Version:15.0.0-beta-2
+Current Version Code:15102
 
