@@ -27,6 +27,10 @@ Build:1.4.2,14
     commit=5bb3c7d64ef3bcc8e8f7d97f55353d6b6a7b68cd
     scanignore=libs/*/*.so
 
+Build:1.5.1,16
+    commit=18f2c77e4bd17ca6600e629ceb44cd2793842df1
+    scanignore=libs/*/*.so
+
 Maintainer Notes:
 .
 

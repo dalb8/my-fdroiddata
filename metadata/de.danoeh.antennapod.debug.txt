@@ -29,6 +29,7 @@ Build:0.9.8.3,36
     commit=0.9.8.3
     init=sed -e '83 i \\t\tdebuggable false' -i build.gradle 
     patch=flattr.patch
+    output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
     srclibs=DragSort-danoeh@1bb29afb91f
     prebuild=rm -f submodules/dslv/library && \
         ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
@@ -36,7 +37,6 @@ Build:0.9.8.3,36
         cp src/de/danoeh/antennapod/util/flattr/FlattrConfig.java.example src/de/danoeh/antennapod/util/flattr/FlattrConfig.java
     build=/home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleDebug && \
         zip -d build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk META-INF/*
-    output=build/apk/de.danoeh.antennapod.debug-debug-unaligned.apk
 
 Maintainer Notes:
 Uses submodules
@@ -44,8 +44,8 @@ Uses submodules
 Remember to sign with debug key!
 .
 
-Update Check Mode:Tags
+Update Check Mode:RepoManifest/develop
 Update Check Name:de.danoeh.antennapod
-Current Version:0.9.9.4
-Current Version Code:41
+Current Version:1.1rc3
+Current Version Code:47
 

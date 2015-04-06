@@ -26,6 +26,9 @@ Repo:https://github.com/yhcting/netmbuddy.git
 Build:1.2.12,30
     commit=a906ec0925f73
 
+Build:1.2.13,31
+    commit=8dc6e0a09b8d28b16c38ff7c2dcd15eff3fbc813
+
 Maintainer Notes:
 Tags unreliable
 .

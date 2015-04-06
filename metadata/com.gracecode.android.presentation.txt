@@ -30,7 +30,7 @@ Build:1.0.2,20131114
         find src -type f -print0 | xargs -0 sed -i '/TCAgent/d'
 
 Maintainer Notes:
-#Update Check Mode:RepoManifest
+Submodule repo AWOL. Penchant for proprietary SDKs.
 .
 
 Update Check Mode:None
