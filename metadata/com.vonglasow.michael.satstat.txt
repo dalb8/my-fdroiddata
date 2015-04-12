@@ -57,6 +57,14 @@ Build:1.8,80
     init=git update-index --assume-unchanged res/raw/build.txt && \
       echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
 
+Build:2.0,2000
+    commit=satstat-2.0
+    init=git update-index --assume-unchanged res/raw/build.txt && \
+      echo git-`git log -1 --pretty=format:%h``git diff-index --quiet HEAD || echo -dirty` > res/raw/build.txt
+    rm=libs/*.jar
+    prebuild=sed -i -e 's/0.4.0/0.4.3/g' build.gradle
+    gradle=yes
+
 Maintainer Notes:
 .
 

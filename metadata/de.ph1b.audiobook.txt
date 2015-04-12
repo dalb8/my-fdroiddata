@@ -36,7 +36,12 @@ Build:2.0.3,43
     subdir=audiobook
     gradle=yes
 
+Build:2.0.5,45
+    commit=v2.0.5
+    subdir=audiobook
+    gradle=yes
+
 #Update Check Mode:Tags ^v[0-9.]+?$
-Current Version:2.0.3
-Current Version Code:43
+Current Version:2.0.5
+Current Version Code:45
 

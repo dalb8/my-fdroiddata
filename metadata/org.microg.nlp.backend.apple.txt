@@ -33,11 +33,15 @@ Build:1.0.1,1010
     srclibs=1:Nlp@0b2f855,2:MapsAPI@v0.5,Wire@wire-1.2.0
     prebuild=echo 'source.dir=$$Wire$$/src/main/java;src' >> ant.properties 
 
+Build:1.1.1,10101
+    commit=v1.1.1
+    submodules=yes
+    gradle=yes
+
 Maintainer Notes:
-Neither the main app, MapsAPI nor NlpAPI have targets
 .
 
 #Update Check Mode:Tags
-Current Version:1.1.0
-Current Version Code:1100
+Current Version:1.1.1
+Current Version Code:10101
 

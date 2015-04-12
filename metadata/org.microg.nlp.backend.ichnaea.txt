@@ -31,6 +31,10 @@ Build:0.10.1,1001
     submodules=yes
     gradle=yes
 
+Build:1.1.0,10100
+    commit=v1.1.0
+    gradle=yes
+
 Maintainer Notes:
 .
 
