@@ -31,6 +31,14 @@ Build:0.4,6
     submodules=yes
     build=./build-pte.sh
 
+# not exact: submodules need checking out manually
+Build:0.5.3,12
+    commit=0.5.3
+    submodules=yes
+    prebuild=./pre-build.sh && \
+        rm -r sublibs/public-transport-enabler/enabler/target
+    gradle=yes
+
 Maintainer Notes:
 .
 

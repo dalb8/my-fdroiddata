@@ -1,7 +1,6 @@
 Repo Type:git
 Repo:https://github.com/asksven/AndroidCommon
 
-Srclibs:RootTools
-Prepare:rm libs/RootTools-2.6.jar
-Update Project:Yes
+Srclibs:RootTools-new
+Prepare:rm libs/RootTools-*.jar && echo 'source.dir=$$RootTools-new$$/src/main/java;java' >> ant.properties
 #&& cp -R $$RootTools$$/src/com/* src/com/    && sed -i '/RootTools/d' project.properties
