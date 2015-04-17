@@ -26,13 +26,19 @@ will display sunrise, sunset, and twilight times on the clock face.
 Repo Type:git
 Repo:git://staticfree.info/git/24hAnalogWidget.git
 
-Build:0.4.2,8
-    commit=0.4.2
+Build:0.4.1,7
+    commit=7687b8495ff6bcbed5070f70f94c1deae453eebf
+
+# not exact: remove wear from settings.gradle
+Build:0.5.0,9
+    commit=7f3d89f91cee4edd8f7ade7fdf6c199fbcff4741
+    subdir=phoneWidget
+    gradle=yes
 
 Maintainer Notes:
 .
 
-#Update Check Mode:Tags
-Current Version:0.4.2
-Current Version Code:8
+Update Check Mode:RepoManifest
+Current Version:0.5.0
+Current Version Code:9
 
