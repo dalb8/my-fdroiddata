@@ -31,11 +31,10 @@ Repo:https://svn.code.sf.net/p/textwarrior/code;trunk=trunk/android;tags=release
 Build:0.93,13
     commit=0.93
     subdir=TextWarrior
-    prebuild=sed -i 's/targetSdkVersion="10"/targetSdkVersion="17"/g' AndroidManifest.xml
+    prebuild=sed -i 's/targetSdkVersion="10"/targetSdkVersion="22"/g' AndroidManifest.xml
+    target=android-22
 
 Maintainer Notes:
-This seems oK. Note that target=android-17
-    prebuild=sed -i 's/targetSdkVersion="10"/targetSdkVersion="17"/g' AndroidManifest.xml
 .
 
 Update Check Mode:Tags
