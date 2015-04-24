@@ -76,15 +76,16 @@ Build:1.0,44
         sed -i -e 's/build:gradle:0.12.+/build:gradle:1.0.0/g' -e 's/android-library/com.android.library/g' dslv/library/build.gradle
     gradle=yes
 
-Build:1.1,49
-    commit=6a1a9afa6b31e9bc2b422d0e75866626af1bc90e
+Build:1.1.1,50
+    commit=1.1.1
     subdir=app
+    prebuild=echo -e 'FLATTR_APP_KEY="1wpjfofGEf6zu9acSYorcFky1QpsGeRx"\nFLATTR_APP_SECRET="B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8"' >> ../gradle.properties
     gradle=yes
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.1
-Current Version Code:49
+Current Version:1.1.1
+Current Version Code:50
 

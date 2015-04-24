@@ -14,7 +14,6 @@ Web Site:http://forum.xda-developers.com/showthread.php?t=2991544
 Source Code:https://github.com/microg/android_packages_apps_UnifiedNlp/commits
 Issue Tracker:https://github.com/microg/android_packages_apps_UnifiedNlp/issues
 Donate:http://forum.xda-developers.com/donatetome.php?u=3999488
-Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 
 Auto Name:µg UnifiedNlp
 Name:NLP Base
@@ -28,19 +27,28 @@ location work is done by backends (plug-ins) that can be configured through the
 UnifiedNlp UI. There is already a number of backends out there that use data
 from various data sources, some of them working completely offline.  The same
 backend technique is used for UnifiedNlp's secondary feature: (reverse)
-geocoding. This allows apps like the android gallery to convert geo-coordinates
+geocoding. This allows apps like the Android Gallery app to convert geo-coordinates
 to an address, resulting in better user experience."
 
-Because of the permissions it needs, this needs to be installed in /system.
-Copy to phone, remount /system, move to '''/system/priv-app/''' fix the 
-permissions and reboot; updates can be installed as normal.
-It won't work until it can recognise at least a couple of nearby networks.
+If the device runs an AOSP-type ROM without Google services then this package
+can be installed as a regular app. Depending on the ROM, the UI might appear
+in the app drawer or in Settings.
+If the device runs a non-AOSP-type ROM without Google services, it may need
+to be installed in /system (needs root or custom recovery): Copy to phone, 
+remount /system, move to /system/priv-app/NLP/, set the permissions and 
+reboot; updates can be installed as normal.
+There exists an Xposed module somewhere if these methods are impossible.
 
-Network location services are found in NetworkLocation.apk in older Android versions 
-but they're part of the Google Play Services apk (or perhaps another)
-since Android 4.4, hence this package has the same name as that.
+It won't work until it can recognise at least a couple of nearby networks
+and rebooting might be necessary.
 
-Test it by visiting this [http://html5demos.com/geo site] with Firefox.
+In older Android versions, Network location services are found in 
+NetworkLocation.apk but they're part of the Google Play Services apk since 
+Android 4.4, hence the package has the same name as that.
+There exists a package that may work on prior versions of Android.
+
+Test it by visiting this [http://html5demos.com/geo site] with Firefox,
+with SatStat or another mapping app.
 .
 
 Repo Type:git

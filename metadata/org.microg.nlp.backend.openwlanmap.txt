@@ -1,3 +1,4 @@
+Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 # Copyright (c) 2015 David Black.
 # Copying and distribution of this file, with or without modification,
 # are permitted in any medium without royalty provided the copyright

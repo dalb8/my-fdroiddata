@@ -20,6 +20,7 @@ alias gl='git log'
 alias glp='git log -p' 
 alias ga='git add' 
 alias s='less' 
+alias ai='adb install'
 
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'

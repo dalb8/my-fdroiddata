@@ -12,7 +12,6 @@ License:Apache
 Web Site:
 Source Code:https://github.com/microg/AppleWifiNlpBackend/commits
 Issue Tracker:https://github.com/microg/AppleWifiNlpBackend/issues
-Bitcoin:1C9AfLLhe6QrSF4zQp6Vd99GaYUUf6mUvM
 
 Auto Name:AppleWifiNlpBackend
 Name:NLP: Apple
