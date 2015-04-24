@@ -32,15 +32,28 @@ Repo:https://github.com/dschuermann/document-viewer.git
 Build:2.5,2500
     commit=v2.5
     subdir=document-viewer
-    gradle=yes
     prebuild=sed -i '25,36d' build.gradle
     build=$$NDK$$/ndk-build -e "APP_ABI=armeabi armeabi-v7a"
     buildjni=no
+    gradle=yes
+
+Build:2.7,2700
+    commit=v2.7
+    submodules=yes
+    subdir=document-viewer
+    prebuild=pushd ../ && \
+        ./init.sh && \
+        popd && \
+        sed -i '25,36d' build.gradle
+    scandelete=document-viewer/jni/mupdf/mupdf/build/debug/
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi armeabi-v7a"
+    buildjni=no
+    gradle=yes
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:2.6.1
-Current Version Code:2610
+Current Version:2.7
+Current Version Code:2700
 
