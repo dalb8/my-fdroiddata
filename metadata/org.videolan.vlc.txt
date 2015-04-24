@@ -18,6 +18,8 @@ Summary:Media player
 Description:
 Video and audio player that supports a wide range of formats,
 for both local and remote playback.
+
+[http://git.videolan.org/?p=vlc-ports/android.git;a=blob_plain;f=NEWS;hb=HEAD Changelog].
 .
 
 Repo Type:git

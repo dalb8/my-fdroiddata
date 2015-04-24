@@ -11,7 +11,7 @@
 AntiFeatures:NonFreeNet
 Categories:Phone & SMS
 License:GPL
-Web Site:https://telegram.org
+Web Site:https://telegram.org/blog
 Source Code:https://github.com/DrKLO/Telegram/commits
 Issue Tracker:https://github.com/DrKLO/Telegram/issues
 

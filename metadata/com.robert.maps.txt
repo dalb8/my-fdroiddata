@@ -16,18 +16,29 @@ Issue Tracker:https://code.google.com/p/robertprojects/issues/list
 Auto Name:RMaps
 Summary:Map viewer
 Description:
-Map viewer with a long list of online sources available from OpenStreetMap Cyclemap to Soviet military maps.
+Map viewer with a long list of online sources available from OpenStreetMap 
+Cyclemap to Soviet military maps.
 Offline maps using sqlite can be created easily with
 [http://trekbuddyatlasc.sourceforge.net/index.html Mobile Atlas Creator].
 
 The non-free Google Analytics library has been removed.
+The app was removed from Google Play so this package follows a forked repo for now
 .
 
-Repo Type:git-svn
-Repo:https://robertprojects.googlecode.com/svn/trunk
+Repo Type:git
+Repo:https://github.com/xavier-b/RMaps-xavPatch
 
 Build:0.9.4.1,8140
     commit=703
+    subdir=RMaps.Free
+    rm=RMaps.AppLib/libs/libGoogleAnalytics.jar
+    srclibs=NoAnalytics@158a4a
+    prebuild=mkdir -p src && \
+      android update project -p ../RMaps.AppLib -l $$NoAnalytics$$
+
+Build:0.9.4.1-xavPatch.1,8141
+    commit=v0.9.4.1-xavPatch1
+    forcevercode=yes
     subdir=RMaps.Free
     rm=RMaps.AppLib/libs/libGoogleAnalytics.jar
     srclibs=NoAnalytics@158a4a

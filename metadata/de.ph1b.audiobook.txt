@@ -42,6 +42,6 @@ Build:2.0.5,45
     gradle=yes
 
 #Update Check Mode:Tags ^v[0-9.]+?$
-Current Version:2.0.5
-Current Version Code:45
+Current Version:2.1.21
+Current Version Code:54
 
