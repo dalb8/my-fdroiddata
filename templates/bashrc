@@ -18,6 +18,7 @@ alias gfo='git fetch origin'
 alias gp='git pull' 
 alias gl='git log' 
 alias glp='git log -p' 
+alias glpfd='cd $FDROIDDATA/metadata && glp -- $(ls $MYFDROIDDATA/metadata)'
 alias ga='git add' 
 alias s='less' 
 alias ai='adb install'
@@ -72,7 +73,7 @@ function lsa () { grep -i "^Auto Name:.*"$1"" metadata/*.txt ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
-export BUILD_TOOLS=${ANDROID_HOME}/build-tools/22.0.0
+export BUILD_TOOLS=${ANDROID_HOME}/build-tools/22.0.1
 export ANDROID_NDK=~/android-ndk-r10d
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1

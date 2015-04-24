@@ -9,8 +9,8 @@
 Categories:Reading
 License:GPLv3
 Web Site:
-Source Code:https://github.com/HoloAddict/Flym/commits
-Issue Tracker:https://github.com/HoloAddict/Flym/issues
+Source Code:https://github.com/FredJul/Flym/commits
+Issue Tracker:https://github.com/FredJul/Flym/issues
 
 Auto Name:Flym
 Summary:Feed reader
@@ -20,7 +20,7 @@ from the device on a regular basis.
 .
 
 Repo Type:git
-Repo:https://github.com/HoloAddict/Flym.git
+Repo:https://github.com/FredJul/Flym.git
 
 Build:1.5.3,39
     commit=v1.5.3
