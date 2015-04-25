@@ -44,6 +44,18 @@ Build:1.6,61
     scandelete=build/debug
     buildjni=yes
 
+Build:1.7,71
+    commit=1.7
+    subdir=platform/android
+    submodules=yes
+    forceversion=yes
+    forcevercode=yes
+    prebuild=sed -i 's/armeabi-v7a/armeabi-v7a/g' jni/Application.mk && \
+        cd ../.. && \
+        make generate
+    scandelete=build/debug
+    buildjni=yes
+
 Maintainer Notes:
 Likely version code; revise vercode operation:
 armeabi = baseversion + 0, e.g. mupdf-1.5-android-50-armeabi.apk
