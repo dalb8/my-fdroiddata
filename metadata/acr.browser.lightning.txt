@@ -33,14 +33,18 @@ Build:3.1.1a,66
     target=android-19
     extlibs=android/android-support-v4.jar
 
-Maintainer Notes:
-Use later commit for 66 to avoid crashes.
+Build:4.0.8a,76
+    commit=4711fa696ab8ef311fcd21c6cec8
+    submodules=yes
+    init=./setup-ant.sh
+    update=no
 
+Maintainer Notes:
 Tags are totally unreliabler: check against gplay.
 .
 
 
-Update Check Mode:Tags
-Current Version:4.0.3a
+Update Check Mode:None
+Current Version:4.0.8a
 Current Version Code:71
 
