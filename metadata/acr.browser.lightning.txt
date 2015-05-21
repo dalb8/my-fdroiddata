@@ -34,15 +34,25 @@ Build:3.1.1a,66
     extlibs=android/android-support-v4.jar
 
 Build:4.0.8a,76
-    commit=4711fa696ab8ef311fcd21c6cec8
+    commit=a6a1baf41ba0d5fab46a1703f456591b
     submodules=yes
     init=./setup-ant.sh
     update=no
 
-Maintainer Notes:
-Tags are totally unreliabler: check against gplay.
-.
+Build:4.0.10a,78
+    disable=BETA
+    commit=9677135c2859851bf86417e3e878cdce9d1174ee
+    submodules=yes
+    subdir=app
+    rm=app/libs/*.jar
+    prebuild=sed -i -e 's/1.2.3/1.1.3/g' ../build.gradle && sed -i -e '/compile files/d' -e 's/minifyEnabled true/minifyEnabled false/g' -e '/palette-v7/icompile "com.android.support:support-v4:22.1.1"\n' build.gradle && \
+        sed -i -e '/fileTree/acompile "com.madgag.spongycastle:core:1.51.0.0"' ../external/netcipher/libnetcipher/build.gradle && \
+        rm -fR ../external/netcipher/libnetcipher/libs/spongycastle*.jar
+    gradle=yes
 
+Maintainer Notes:
+Tags are totally unreliable: check against gplay.
+.
 
 Update Check Mode:None
 Current Version:4.0.8a
