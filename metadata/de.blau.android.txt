@@ -8,9 +8,9 @@
 
 Categories:Navigation
 License:Apache
-Web Site:https://code.google.com/p/osmeditor4android
-Source Code:https://code.google.com/p/osmeditor4android/source/list
-Issue Tracker:https://code.google.com/p/osmeditor4android/issues/list
+Web Site:https://marcuswolschon.github.io/osmeditor4android
+Source Code:https://github.com/MarcusWolschon/osmeditor4android
+Issue Tracker:https://github.com/MarcusWolschon/osmeditor4android/issues
 
 Auto Name:Vespucci
 Summary:OpenStreetMap editor
@@ -29,12 +29,12 @@ Description:
 What is Vespucci NOT?
 * a map-view or even a routing-application
 * a professional-editing tool like JOSM or Merkaator
-
-Instructions are on the [https://code.google.com/p/osmeditor4android/wiki/Overview?tm=6 wiki].
 .
 
-Repo Type:git-svn
-Repo:https://osmeditor4android.googlecode.com/svn/branches/0.9
+#Repo Type:git-svn
+#Repo:https://osmeditor4android.googlecode.com/svn/branches/0.9
+Repo Type:git
+Repo:https://github.com/MarcusWolschon/osmeditor4android
 
 Build:0.9.4r681,26
     commit=681
@@ -54,12 +54,18 @@ Build:0.9.4r770,30
     srclibs=1:ActionBarSherlock@4.4.0
     prebuild=cp libs/android-support-v4.jar $$ActionBarSherlock$$/libs/
 
+# not exact: prebuilt jars, see issue 285
+Build:0.9.5.1.965,44
+    commit=0.9.5.1.965
+    prebuild=sed -i -e '/versionCode/d' -e '/versionName/d' build.gradle
+    gradle=yes
+
 Maintainer Notes:
 Version in res/values/appname.xml
 device variable i.e see gplay for date
 .
 
-#Update Check Mode:RepoManifest/0.9
-Current Version:0.9.4r828
-Current Version Code:32
+#Update Check Mode:Tags
+Current Version:0.9.5.1.965
+Current Version Code:44
 
