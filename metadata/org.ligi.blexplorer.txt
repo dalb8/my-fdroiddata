@@ -1,0 +1,36 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Development
+License:GPLv3
+Web Site:
+Source Code:https://github.com/ligi/BLExplorer
+Issue Tracker:https://github.com/ligi/BLExplorer/issues
+
+Auto Name:BLExplorer
+Summary:Bluetooth device explorer
+Description:
+.
+
+Repo Type:git
+Repo:https://github.com/ligi/BLExplorer.git
+
+Build:1.0,1
+    commit=1.0
+    subdir=app
+    prebuild=sed -i '/play_services/d' build.gradle && \
+        sed -i '/android-sdk-manager/d' build.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.0
+Current Version Code:1
+
