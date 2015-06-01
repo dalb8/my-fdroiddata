@@ -79,14 +79,14 @@ Build:1.9.4,355
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
-# not exact: this still contains GMS
-Build:2.6.0,468
-    commit=a484ab0d7fcb1b76c85ef74442f2cc0a914c3671
+# not exact: this still contains GMS; and is missing some API key
+Build:2.9.1,542
+    commit=f8e8d089f7c7008288668f4f4cb053ea48d5df2f
     subdir=TMessagesProj
     init=sed -i -e 's/APP_ID = 0/APP_ID = 17516/' -e 's/APP_HASH = ""/APP_HASH = "1533a7871599eed1dcab637ddc3b6f34"/' -e 's/HOCKEY_APP_HASH = "your-hockey-app-api-key-here"/HOCKEY_APP_HASH = "5d41402abc4b2a76b9719d911017c592"/' -e 's/BING_SEARCH_KEY = ""/BING_SEARCH_KEY = "1234567817516"/' src/main/java/org/telegram/messenger/BuildVars.java
     rm=TMessagesProj/libs/*/*.so
     build=ndk-build -C jni APP_ABI="armeabi-v7a armeabi" && \
-        gradle-2.2.1 assembleRelease
+        gradle-2.3 assembleRelease
     buildjni=no
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 

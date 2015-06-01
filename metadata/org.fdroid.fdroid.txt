@@ -54,6 +54,13 @@ Build:0.62,620
     update=no
     prebuild=./ant-prepare.sh
 
+# not exact: could do with patch: see below
+Build:0.91,910
+    commit=0.91
+    submodules=yes
+    subdir=F-Droid
+    prebuild=./ant-prepare.sh
+
 Maintainer Notes:
 Don't forget the patch:
     patch=play_570.patch

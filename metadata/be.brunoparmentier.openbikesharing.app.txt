@@ -33,6 +33,11 @@ Build:1.5,10
     subdir=app
     gradle=yes
 
+Build:1.7.5,18
+    commit=v1.7.5
+    subdir=app
+    gradle=yes
+
 Maintainer Notes:
 .
 

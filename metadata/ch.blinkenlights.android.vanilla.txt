@@ -32,6 +32,9 @@ Build:0.9.24,924
 Build:0.9.99,999
     commit=0.9.99
 
+Build:1.0.10,1010
+    commit=1.0.10
+
 Maintainer Notes:
 .
 
