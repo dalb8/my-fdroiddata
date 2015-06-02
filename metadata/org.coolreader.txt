@@ -10,7 +10,7 @@ Categories:Reading
 License:GPLv2
 Web Site:http://crengine.sourceforge.net
 Source Code:http://sourceforge.net/p/crengine/crengine/commit_browser
-Issue Tracker:http://sourceforge.net/tracker/?group_id=191284
+Issue Tracker:http://sourceforge.net/p/crengine/bugs
 Donate:http://sourceforge.net/project/project_donations.php?group_id=191284
 
 Auto Name:Cool Reader

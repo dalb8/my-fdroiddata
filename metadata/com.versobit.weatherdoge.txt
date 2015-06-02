@@ -25,13 +25,12 @@ displaying it in the style of dogeweather.com.
 Repo Type:git
 Repo:https://github.com/VersoBit/WeatherDoge.git
 
-# not exact: problem escaping the sed
 Build:1.3f-4044bdb,6
     disable=not a release
     commit=4044bdb
     subdir=WeatherDoge
     prebuild=sed -i -e "/playCompile/d" -e "s@WeatherDoge/versionDef.txt@versionDef.txt@" -e "/signing.gradle/d" build.gradle && \
-       sed -i  'buildConfig/abuildConfigField \'String\', \'OWM_APPID\', \'"08bbb7d185f1c966030bcf8e4eeb1817"\'' build.gradle 
+       sed -i  "/buildConfig/abuildConfigField 'String', 'OWM_APPID', '\"08bbb7d185f1c966030bcf8e4eeb1817\"'" build.gradle 
     gradle=foss
 
 Maintainer Notes:
