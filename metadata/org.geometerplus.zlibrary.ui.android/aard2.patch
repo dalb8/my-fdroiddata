@@ -1,0 +1,18 @@
+diff --git a/assets/dictionaries/main.xml b/assets/dictionaries/main.xml
+index a55e923..e553118 100644
+--- a/assets/dictionaries/main.xml
++++ b/assets/dictionaries/main.xml
+@@ -76,10 +76,9 @@
+ 		pattern="%s"
+ 	/>
+ 	<dictionary
+-		id="Popup Dictionary"
+-		package="com.barisatamer.popupdictionary"
+-		class=".MainActivity"
+-		action="android.intent.action.VIEW"
++		id="Aard 2"
++		action="aard2.lookup"
++		dataKey="query"
+ 		pattern="%s"
+ 	/>
+ </dictionaries>

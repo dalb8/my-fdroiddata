@@ -22,11 +22,10 @@ online OPDS libraries like Project Gutenberg straight from the app.
 F-Droid.org has two other addon apps that provide text-to-speech functionality 
 and one to support ''local'' OPDS shares.
 
-This version is only for Android 4+, though older platforms are supported.
-
 Anti-features: Addons. While there are some addons for this app that are free, 
 the dictionaries that are suggested are not. However, it does support 
-[[aarddict.android]], as long as that is installed beforehand '''and'''
+[[itkach.aard2]] (only on 1.8.2-ics via a patch) and [[aarddict.android]] (on 1.8.2),
+as long as that is installed beforehand '''and'''
 you choose it via the Dictionary section of the settings.
 
 Newer versions include proprietary libraries.
@@ -53,6 +52,7 @@ Build:1.8.2,108022
       echo "APP_CFLAGS+=-Wno-error=format-security" >> jni/Application.mk && \
       mkdir res/drawable && \
       find icons -iname "*.*" -exec cp {} res/drawable \;
+    patch=aard2.patch
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
     buildjni=no
 
