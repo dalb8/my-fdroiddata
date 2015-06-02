@@ -1,0 +1,4 @@
+Repo Type:git
+Repo:https://github.com/itkach/slobber
+Srclibs:Slobj
+Prepare:echo "project(':slobj').projectDir = new File('../Slobj')" >> standalaone-settings.gradle && mv standalaone-settings.gradle settings.gradle

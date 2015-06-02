@@ -1,0 +1,45 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Web Site:http://aarddict.org/android
+Source Code:https://github.com/itkach/aard2-android/commits
+Issue Tracker:https://github.com/itkach/aard2-android/issues
+FlattrID:80944
+
+Auto Name:Aard 2
+Summary:Offline dictionary
+Description:
+Successor to [[aarddict.android]]; uses a different dictionary format.
+
+It doesn't integrate directly with known book readers yet but the share menu
+can still be used. To implement integration see the README for details.
+
+Ready-made dictionaries can be found on the website, or you can roll your own 
+with the tools on the website.
+.
+
+Repo Type:git
+Repo:https://github.com/itkach/aard2-android.git
+
+Build:0.24,24
+    commit=0.24
+    srclibs=Slobj@8fa1184,Slobber@c620b93
+    prebuild=echo -e "project(':slobj').projectDir = new File('$$Slobj$$')\nproject(':slobber').projectDir = new File('$$Slobber$$')" >> settings.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+Update Check Mode:Tags
+Current Version:0.24
+Current Version Code:24
+
