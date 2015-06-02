@@ -9,8 +9,8 @@
 Categories:Internet
 License:GPL
 Web Site:
-Source Code:https://code.google.com/p/ics-openvpn/source/list
-Issue Tracker:https://code.google.com/p/ics-openvpn/issues/list
+Source Code:https://github.com/schwabe/ics-openvpn/commits
+Issue Tracker:https://github.com/schwabe/ics-openvpn/issues
 
 Auto Name:OpenVPN for Android
 Summary:OpenVPN without root
@@ -19,8 +19,8 @@ With the VPNService in Android 4.0+ it is possible to create a VPN that doesn't
 need root access.
 .
 
-Repo Type:hg
-Repo:https://code.google.com/p/ics-openvpn
+Repo Type:git
+Repo:https://github.com/schwabe/ics-openvpn
 
 Build:0.5.47,80
     commit=v0.5.47
