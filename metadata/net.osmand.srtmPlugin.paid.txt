@@ -16,7 +16,13 @@ Donate:https://code.google.com/p/osmand/#Please_support_the_project
 Auto Name:OsmAnd Contour lines
 Summary:Show contour lines on maps
 Description:
-Plugin to display contour lines and hillshades in [[net.osmand.plus]].
+Plugin to display contour lines and hillshades in older versions of
+[[net.osmand.plus]].
+
+Note that hillshade data goes in the tile directory and appears in the online
+section of the map download screen. It must be chosen as a map overlay.
+They don't appear to be available for download currently.
+
 Need to enable the plugin in the Osmand settings first.
 .
 
