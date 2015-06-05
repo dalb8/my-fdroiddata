@@ -33,6 +33,12 @@ Build:1.0.61,62
     buildjni=no
     build=ndk-build APP_ABI='armeabi armeabi-v7a'
 
+Build:1.0.70,71
+    commit=v1.0.70
+    subdir=term
+    prebuild=sed -i "s@\(abiFilters\).*@\1'armeabi'@" build.gradle
+    gradle=yes
+
 Maintainer Notes:
 Both terminal and emulator view libraries use android-11
 .
