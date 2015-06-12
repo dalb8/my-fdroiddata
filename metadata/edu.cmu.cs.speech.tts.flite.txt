@@ -1,0 +1,49 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:BSD
+Web Site:http://www.cmuflite.org
+Source Code:https://github.com/happyalu/Flite-TTS-Engine-for-Android
+Issue Tracker:https://github.com/happyalu/Flite-TTS-Engine-for-Android/issues
+
+Auto Name:Flite TTS Engine
+Summary:Alternative Text to Speech
+Description:
+(Un)-official Android port of the Flite TTS Engine.
+
+Needs to download voice data from the internet to work.
+
+Status: Not yet published by upstream.
+.
+
+Repo Type:git
+Repo:https://github.com/happyalu/Flite-TTS-Engine-for-Android
+
+# not exact: server arch not detected correctly in configure
+Build:2.0.2,3
+    commit=master
+    prebuild=wget http://www.festvox.org/flite/packed/flite-2.0/flite-2.0.0-release.tar.bz2 && \
+        tar xf flite-2.0.0-release.tar.bz2 && \
+        export FLITE_APP_DIR=$PWD && \
+        export FLITEDIR=$PWD/flite-2.0.0-release && \
+        cd $FLITEDIR && \
+        ./configure --with-langvox=android --target=armeabiv7a-android
+    build=make
+    buildjni=no
+
+Maintainer Notes:
+build.xml does ndk-build
+.
+
+Update Check Mode:RepoManifest
+Current Version:2.0.2
+Current Version Code:3
+
