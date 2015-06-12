@@ -11,6 +11,7 @@ License:GPLv3+
 Web Site:
 Source Code:https://github.com/Ph1b/MaterialAudiobookPlayer/commits
 Issue Tracker:https://github.com/Ph1b/MaterialAudiobookPlayer/issues
+Donate:https://github.com/Ph1b/MaterialAudiobookPlayer#donations
 
 Auto Name:Material Player
 Summary:Simple audiobook player
@@ -21,39 +22,20 @@ Audiobook player with the following basic features:
 * Easy, intuitive interface
 * Sleep-timer
 * Easily jump to a position
+* Bookmarks
+* Speed control
 .
 
 Repo Type:git
 Repo:https://github.com/Ph1b/MaterialAudiobookPlayer
 
-Build:1.4.6.1,24
-    commit=v1.4.6.1
-    subdir=audiobook
-    gradle=yes
-
-Build:2.0.3,43
-    commit=v2.0.3
-    subdir=audiobook
-    gradle=yes
-
-Build:2.0.5,45
-    commit=v2.0.5
-    subdir=audiobook
-    gradle=yes
-
-Build:2.1.3,56
-    commit=v2.1.3
-    subdir=audiobook
-    prebuild=sed -i 's/minifyEnabled true/minifyEnabled false/' build.gradle
-    gradle=yes
-
-Build:2.1.7,62
-    commit=v2.1.7
+Build:2.1.9.1,65
+    commit=v2.1.9.1
     subdir=audiobook
     prebuild=sed -i 's/minifyEnabled true/minifyEnabled false/' build.gradle
     gradle=yes
 
 #Update Check Mode:Tags ^v[0-9.]+?$
-Current Version:2.1.21
-Current Version Code:54
+Current Version:2.1.9.1
+Current Version Code:65
 

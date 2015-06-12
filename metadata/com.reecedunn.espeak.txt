@@ -14,6 +14,7 @@ Web Site:http://reecedunn.co.uk/espeak-for-android
 Source Code:https://github.com/rhdunn/espeak/commits
 Issue Tracker:https://github.com/rhdunn/espeak/issues
 Donate:https://github.com/rhdunn/espeak
+FlattrID:3062318
 
 Auto Name:eSpeak
 Name:eSpeak (Cainteoir)
@@ -22,6 +23,8 @@ Description:
 Improvement on [[com.googlecode.eyesfree.espeak]], which hasn't been 
 updated in quite a while and possibly won't given that Google now publish
 their own proprietary TTS engine.
+
+Needs to download voice data from the internet to work.
 .
 
 Repo Type:git
@@ -39,15 +42,25 @@ Build:1.47.12,17
     buildjni=no
     gradle=yes
 
+# not exact: need to delete GRADLE variable set
+Build:1.48.11,19
+    disable=doesn't make
+    commit=android/1.48.11
+    submodules=yes
+    subdir=android
+    scanignore=platforms
+    build=cd ..; ./autogen.sh; ./configure && \
+        make espeakdata && \
+        ndk-build APP_ABI="armeabi armeabi-v7a"
+    buildjni=no
+    gradle=yes
+
 Maintainer Notes:
 Code is on android branch.
 
 GPLv3 according to the website, even though licence headers say Apache.
 
-Need wxwidgets-dev packages to build the espeak data.
-Should be easy enough on Debian distros.
-Alternatively, use prebuilt data by zipping the espeak-data directory in
-wget http://sourceforge.net/projects/espeak/files/espeak/espeak-1.47/espeak-1.47.11-source.zip/download -O espeak.zip
+See Readme for dependencies. Some can be switched off.
 .
 
 Update Check Mode:Tags
