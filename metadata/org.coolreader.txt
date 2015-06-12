@@ -34,6 +34,13 @@ Build:3.1.2-39,859
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
     buildjni=no
 
+Build:3.1.2-68,888
+    commit=cr3.1.2-68
+    subdir=android
+    rm=android/build.properties
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
+    buildjni=no
+
 Maintainer Notes:
 3.1.2-56 on gplay
 .

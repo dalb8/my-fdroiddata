@@ -24,6 +24,8 @@ Document Viewer is a fork of the last GPL version of
 * XPS (OpenXPS)
 * Comic Books (cbz) (NO support for cbr (rar compressed))
 * FictionBook (fb2, fb2.zip)
+
+[https://raw.githubusercontent.com/sufficientlysecure/document-viewer/master/document-viewer/src/main/assets/about/en/changelog.wiki Changelog]
 .
 
 Repo Type:git
