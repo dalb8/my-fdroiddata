@@ -17,7 +17,11 @@ Name:Document Viewer Font Pack
 Auto Name:DV FontPack
 Summary:Extra fonts for Document Viewer
 Description:
-Academy, Academy Old, DejaVu, FreeFonts, Free Nimbus L, Linux Libertine and URW Symbol.
+In latest versions of Document Viewer fonts aren't included so glyphs will
+be rendered with the system font (e.g. Roboto) unless this be installed.
+
+Fonts are: Academy, Academy Old, DejaVu, FreeFonts, Free Nimbus L, Linux
+Libertine and URW Symbol.
 .
 
 Repo Type:git
