@@ -32,14 +32,16 @@ Repo Type:git
 Repo:https://github.com/langtech/aikuma.git
 
 Build:1.0.0-rc.4,10019
+    disable=not functional
     commit=v1.0.0-rc.4
     subdir=Aikuma
     rm=resources,web,Aikuma/test
 
 Maintainer Notes:
+Uses GMS lately.
 .
 
-Update Check Mode:Tags
+Update Check Mode:Static
 Current Version:1.0.0-rc.4
 Current Version Code:10020
 
