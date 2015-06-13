@@ -108,9 +108,11 @@ To get all source in a tarball:
         cp -r $$JToxcore$$/* ../JToxcore && \
         cp -r $$Sodium$$/* ../Sodium && \
         cp -r $$Zxing$$/* ../Zxing && \
+
+Development moved to another repo.
 .
 
-Update Check Mode:Tags
+Update Check Mode:Static
 Current Version:0.14.0
 Current Version Code:43
 
