@@ -18,7 +18,7 @@ Bitcoin:1NxSU1YxYzJVDpX1rcESAA3NJki7kRgeeu
 Auto Name:Conversations
 Summary:XMPP client
 Description:
-* End-to-end encryption with either OTR or openPGP
+* End-to-end encryption with either OTR or openPGP (e.g. [[org.sufficientlysecure.keychain]])
 * Holo UI
 * Syncs with your desktop client
 * Group chats

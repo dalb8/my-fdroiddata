@@ -20,6 +20,8 @@ Settings and account configurations can be exported so that they can be imported
 easily if you are switching packages/signatures: a file manager will need to be 
 already installed to achieve this.
 
+Integrates with [[org.sufficientlysecure.keychain]].
+
 If you would like to contribute financially to k9mail, consider donating to
 the local SPCA (Societies for the prevention of cruelty to animals).
 
@@ -67,7 +69,17 @@ Build:4.904,21007
     build=$$MVN3$$ package -f HtmlCleaner/pom.xml && \
         mv HtmlCleaner/target/htmlcleaner-2.2.jar libs/
 
+Build:5.006,22006
+    commit=5.006
+    srclibs=Jutf7@20
+    rm=libs/*
+    prebuild=$$MVN3$$ install -f $$Jutf7$$ && \
+       sed -i -e "/buildToolsVersion/adefaultConfig {\ntargetSdkVersion 17\n}\n\npackagingOptions {\n exclude 'META-INF/LICENSE.txt'\n  exclude 'META-INF/NOTICE.txt'\n}" -e "/com.android.application/arepositories {\n  mavenCentral()\n  mavenLocal()\n}" -e "/fileTree/acompile 'net.sourceforge.htmlcleaner:htmlcleaner:2.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-core:0.7.2'" -e "/fileTree/acompile 'org.apache.james:apache-mime4j-dom:0.7.2'" -e "/fileTree/acompile 'com.jcraft:jzlib:1.0.7'" -e "/fileTree/acompile 'com.beetstra.jutf7:jutf7:1.0.1-SNAPSHOT'" -e "/fileTree/acompile 'commons-io:commons-io:2.0.1'" build.gradle
+    gradle=yes
+
+
 Maintainer Notes:
+Version of the type x.odd are beta versions, while x.even are major.
 .
 
 Update Check Mode:RepoManifest/4.8-MAINT
