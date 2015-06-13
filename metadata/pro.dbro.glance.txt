@@ -19,27 +19,28 @@ Summary:Read without moving eyes
 Description:
 Read ebooks directly or share web pages to this app and it will display
 the text by flashing each word in quick succession.
+
+Latest versions use proprietary libraries.
 .
 
 Repo Type:git
 Repo:https://github.com/OnlyInAmerica/OpenSpritz-Android.git
 
 Build:0.9,2
-    commit=bc03a88f50275a60e
+    commit=607853bf6ea286f4d2ff57bff29e1
     subdir=app
-    gradle=yes
     init=sed -i 's/"spritzer_text_view_text_size">35sp/"spritzer_text_view_text_size">28sp/' src/main/res/values-w300dp-h400dp/dimens.xml && \
-      sed -i '/SECRET/d' src/main/java/pro/dbro/openspritz/MainActivity.java
-    rm=app/libs/epublib-core-latest.jar
+        sed -i '/SECRET/d' src/main/java/pro/dbro/glance/MainActivity.java
     srclibs=Epublib@ff14999c509e6e3
+    rm=app/libs/epublib-core-latest.jar
     build=$$MVN3$$ package -DskipTests -f $$Epublib$$/pom.xml && \
-      mv $$Epublib$$/target/epublib-core-3.1.jar libs/
+        mv $$Epublib$$/target/epublib-core-3.1.jar libs/
+    gradle=yes
 
 Maintainer Notes:
-Needed to hack out Billing secret for GP donations.
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.9
-Current Version Code:2
+Current Version:1.0
+Current Version Code:6
 
