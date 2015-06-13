@@ -1,0 +1,44 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:NonFreeAdd
+Categories:Reading
+License:Apache
+Web Site:http://www.hyperionics.com/?Page=/TtsPlus
+Source Code:https://github.com/gregko/TtsPlus-FBReader
+Issue Tracker:https://github.com/gregko/TtsPlus-FBReader/issues
+
+Auto Name:FBReader TTS+ Plugin
+Summary:Enhanced TTS plugin for FBReader
+Description:
+Set rate , pitch, volume, language. Pause at the end of sentences.  Bluetooth
+support that can control the app from another app. Just choose Speak+ from the
+[[org.geometerplus.zlibrary.ui.android]] menu to activate.
+
+Tracking and cloud integration libraries were removed.
+
+Anti-features: The dialog links to another non-free app by the author.
+
+Later versions are proprietary.
+.
+
+Repo Type:git
+Repo:https://github.com/gregko/TtsPlus-FBReader.git
+
+Build:2.2.1,2002010
+    commit=a75651e3e45
+    rm=libs/dropbox-android-sdk-1.5.4.jar,src/com/hyperionics/cloud,src/org/acra
+    prebuild=sed -i -e '/proguard/d' project.properties
+
+Maintainer Notes:
+.
+
+Update Check Mode:Static
+Current Version:2.2.1
+Current Version Code:2002010
+
