@@ -63,7 +63,7 @@ Keep an eye out for new word list
         mv libs/armeabi* src/main/jniLibs/
 .
 
-Update Check Mode:Tags
+Update Check Mode:None
 Current Version:Unknown
 Current Version Code:135
 
