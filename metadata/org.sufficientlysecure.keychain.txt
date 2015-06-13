@@ -37,12 +37,21 @@ Build:2.7,27000
 
 Build:3.1.2,31200
     commit=v3.1.2
-    subdir=OpenKeychain
     submodules=yes
+    subdir=OpenKeychain
     init=sed -i '34,60d' build.gradle
     gradle=yes
 
+Build:3.2.3,32300
+    disable=build hangs at 97%, dex release
+    commit=v3.2.3
+    submodules=yes
+    subdir=OpenKeychain
+    init=sed -i '95,115d' build.gradle
+    gradle=yes
+
 Maintainer Notes:
+Huge build; should definitely disable proguard.
 .
 
 #Update Check Mode:Tags
