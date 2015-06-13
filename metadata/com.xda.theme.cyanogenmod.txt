@@ -30,7 +30,7 @@ Build:4,4
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:4
 Current Version Code:4
 
