@@ -16,17 +16,20 @@ Donate:http://www.fbreader.org/donation/make.php
 Auto Name:FBReader TTS plugin
 Summary:Addon for FBReader
 Description:
-Adds text to speech functionality to FBReader. It doesn't create a launcher
-entry, but the speech can be activated from FBReader's context menu.
+Adds text to speech functionality to [[org.geometerplus.zlibrary.ui.android]].
+It doesn't create a launcher entry, but the speech can be activated from
+FBReader's context menu.
 .
 
 Repo Type:git
 Repo:https://github.com/geometer/FBReaderJ-plugin-tts.git
 
 Build:1.1,10100
+    disable=not needed
     commit=1.1
 
 Build:1.2,102000
+    disable=not needed
     commit=1.2+premium
 
 Maintainer Notes:
