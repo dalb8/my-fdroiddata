@@ -37,11 +37,14 @@ Features include:
 Repo Type:git
 Repo:git://git.code.sf.net/p/solitairecg/code
 
-Build:1.13,451
-    commit=v1.13
+Build:1.15.2,455
+    commit=SolitaireCG-1.15.2
     target=android-8
 
-Update Check Mode:Tags
-Current Version:1.13
-Current Version Code:451
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.15.2
+Current Version Code:455
 
