@@ -9,8 +9,8 @@
 Categories:Science & Education
 License:GPLv2
 Web Site:http://www.busydoingnothing.co.uk/prevo
-Source Code:http://git.busydoingnothing.co.uk/cgit/prevo-android.git
-Issue Tracker:
+Source Code:https://github.com/bpeel/prevo/commits
+Issue Tracker:https://github.com/bpeel/prevo/issues
 FlattrID:2653025
 Bitcoin:16mQGTBWHx5wT2XX5YEGsU2sDqwSiP2wBn
 
@@ -23,7 +23,7 @@ searched with the keyboard.
 .
 
 Repo Type:git
-Repo:git://git.busydoingnothing.co.uk/prevo-android.git
+Repo:https://github.com/bpeel/prevo
 
 Build:0.9,9
     commit=0.9
