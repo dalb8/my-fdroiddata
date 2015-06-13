@@ -11,8 +11,8 @@
 Categories:System
 License:GPLv3
 Web Site:
-Source Code:https://code.google.com/p/dynamicg-android-apps2/source/list
-Issue Tracker:https://code.google.com/p/dynamicg-android-apps2/issues
+Source Code:https://github.com/eswarm/dynamicg-android-apps2/commits/master/HomeButtonLauncher
+Issue Tracker:https://github.com/eswarm/dynamicg-android-apps2/issues
 
 Auto Name:Home Launcher
 Summary:Configure swipe-from-home
@@ -20,11 +20,14 @@ Description:
 …and stop Google from launching by mistake.
 .
 
-Repo Type:git-svn
-Repo:https://dynamicg-android-apps2.googlecode.com/svn/trunk/HomeButtonLauncher
+#Repo Type:git-svn
+#Repo:https://dynamicg-android-apps2.googlecode.com/svn/trunk/HomeButtonLauncher
+Repo Type:git
+Repo:https://github.com/eswarm/dynamicg-android-apps2
 
 Build:3.0,30001
-    commit=1379
+    commit=8df0d00
+    subdir=HomeButtonLauncher
     patch=custom_rules_30001.patch
     prebuild=ant stripLogging -f build-release.xml
 
