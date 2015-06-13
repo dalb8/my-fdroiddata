@@ -67,6 +67,6 @@ Also https://github.com/cmatsuoka/xmp-android
 .
 
 #Update Check Mode:Tags
-Current Version:4.4.1
-Current Version Code:75
+Current Version:4.6.0
+Current Version Code:78
 

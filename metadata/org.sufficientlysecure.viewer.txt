@@ -56,6 +56,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:2.7
-Current Version Code:2700
+Current Version:2.7.1
+Current Version Code:2710
 

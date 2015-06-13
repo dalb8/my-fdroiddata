@@ -46,6 +46,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:v1.37
-Current Version Code:1037
+Current Version:v1.38.2
+Current Version Code:1038002
 

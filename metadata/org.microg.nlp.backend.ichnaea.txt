@@ -15,7 +15,7 @@ Source Code:https://github.com/microg/IchnaeaNlpBackend/commits
 Issue Tracker:https://github.com/microg/IchnaeaNlpBackend/issues
 
 Name:NLP: Ichnaea (Mozilla)
-Auto Name:Ichnaea UnifiedNlp Backend
+Auto Name:Mozilla UnifiedNlp Backend
 Summary:UnifiedNlp location provider
 Description:
 [[com.google.android.gms]] backend that uses [https://location.services.mozilla.com/ Mozilla Location Services].
@@ -39,6 +39,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:0.10.1
-Current Version Code:1001
+Current Version:1.1.0
+Current Version Code:10100
 

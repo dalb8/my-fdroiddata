@@ -63,6 +63,6 @@ Tags are used for the submodule?!
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.2.1
-Current Version Code:41
+Current Version:1.2.2
+Current Version Code:43
 

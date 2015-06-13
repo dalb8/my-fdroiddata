@@ -75,6 +75,6 @@ remove buildjni=no later
 # +5: None (current version)
 #Update Check Mode:Tags
 Vercode Operation:%c + 4
-Current Version:1.1.5
-Current Version Code:1010509
+Current Version:1.4.1
+Current Version Code:1040105
 

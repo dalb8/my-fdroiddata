@@ -55,6 +55,6 @@ Huge build; should definitely disable proguard.
 .
 
 #Update Check Mode:Tags
-Current Version:3.1.2
-Current Version Code:31200
+Current Version:3.2.3
+Current Version Code:32300
 

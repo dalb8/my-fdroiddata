@@ -54,6 +54,6 @@ Disappeared off gplay
 .
 
 Update Check Mode:RepoManifest
-Current Version:0.10.0.b1
-Current Version Code:8151
+Current Version:0.9.4.1-xavPatch.1
+Current Version Code:8140
 

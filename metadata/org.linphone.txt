@@ -47,6 +47,6 @@ Note x86 won't work with NDK r10.
 .
 
 #Update Check Mode:Tags
-Current Version:2.3.2-fdroid
-Current Version Code:2302
+Current Version:Unknown
+Current Version Code:2411
 

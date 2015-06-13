@@ -39,6 +39,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.1.0
-Current Version Code:1100
+Current Version:1.1.1
+Current Version Code:10101
 

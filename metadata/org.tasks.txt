@@ -43,6 +43,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:4.7.8
-Current Version Code:351
+Current Version:4.7.11
+Current Version Code:362
 
