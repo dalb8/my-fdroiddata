@@ -20,9 +20,9 @@ Summary:Offline dictionary
 Description:
 Successor to [[aarddict.android]]; uses a different dictionary format.
 
-Only integrates directly with patched [[org.geometerplus.zlibrary.ui.android]]
-for the moment but the share menu can still be used.
-To implement integration see the README for details.
+Integrates directly with [[org.geometerplus.zlibrary.ui.android]]
+and [[org.coolreader]]; the share menu can also be used.
+To implement integration in other apps, see the README.
 
 Ready-made dictionaries can be found on the website, or you can roll your own 
 with the tools on the website.

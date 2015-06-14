@@ -1,9 +1,11 @@
 # Copyright (c) 2014 David Black.
 # Copyright (c) 2010-2014 the Fdroiddata contributors.
 # Licensed under the GNU AGPLv3.
+
 ## Originally published at https://github.com/dalb8/my-fdroiddata:
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
 Categories:Reading
 License:AGPLv3
 Web Site:http://mupdf.com
@@ -15,7 +17,7 @@ Summary:Lightweight document viewer
 Description:
 MuPDF supports PDF 1.7 with transparency, encryption, hyperlinks, annotations,
 searching, form editing and more.
-It also reads OpenXPS and CBZ (comic book) documents.
+It also reads OpenXPS, CBZ (comic book) and EPUB documents.
 .
 
 Repo Type:git

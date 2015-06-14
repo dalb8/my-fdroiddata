@@ -19,15 +19,15 @@ Description:
 Dual panel file manager, like Norton Commander, Midnight Commander or
 Total Commander. Unlike regular file managers, it copies and moves
 files between its two panels.
-May allow you to edit secondary storage on Android 4.4.
 
 The file manager can also create or extract ZIP archives and transfer
 files to/from FTP servers.
-The SFTP/SMB network share functionalities need
-plugin apps, that can also be found in the repository.
+The SFTP/SMB/WebDAV functionalities need
+plugin apps that can also be found in the repository.
 There is also a handy app manager featuring package names,
 installation dates, sharing apks (via long-press), manifests and
 access to activities and shortcuts.
+The Picture Viewer allows for high resolution.
 
 Requires root: No, but if you allow it root you can remount filesystems,
 and mess around with the system files.
@@ -48,6 +48,11 @@ Build:1.52.6b1,276
     commit=505
     scanignore=src/com/ghostsq/commander/adapters/CA.java
 
+Build:1.53,285
+    commit=519
+    extlibs=android/android-support-v4.jar
+    scanignore=src/com/ghostsq/commander/adapters/CA.java
+
 Maintainer Notes:
 No commit messages in source repo! No tags. Apks on website can be used to
 confirm a release is real. Commit where AndroidManifest is changed usually
@@ -57,6 +62,6 @@ The scanignore is for the dex class loading which is used for loading plugins.
 .
 
 Update Check Mode:None
-Current Version:1.52.6b1
-Current Version Code:276
+Current Version:1.53
+Current Version Code:285
 

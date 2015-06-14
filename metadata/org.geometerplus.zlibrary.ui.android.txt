@@ -24,7 +24,7 @@ and one to support ''local'' OPDS shares.
 
 Anti-features: Addons. While there are some addons for this app that are free, 
 the dictionaries that are suggested are not. However, it does support 
-[[itkach.aard2]] (only on 1.8.2-ics via a patch) and [[aarddict.android]] (on 1.8.2),
+[[itkach.aard2]] (only on 1.8.2) and [[aarddict.android]] (on 1.8.2/1.8.2-Froyo),
 as long as that is installed beforehand '''and'''
 you choose it via the Dictionary section of the settings.
 
