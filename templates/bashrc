@@ -23,10 +23,11 @@ alias glpfd='cd $FDROIDDATA/metadata && glp -- $(ls $MYFDROIDDATA/metadata)'
 alias ga='git add' 
 alias s='less' 
 alias ai='adb install'
+alias racc='java -jar ~/srclib/Raccoon/target/raccoon.jar -a ~/Raccoon/archives/default -u && cd ~/bin-fdroiddata/ && ln -fs $(find ~/Raccoon/archives/default -name *apk) repo/ && basename -a $(find ~/Raccoon/archives/default -name *apk) > apks.list && fdroid update -c && fup && rm -f *.apk'
 
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
-alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache'"
+alias fup="fdroid update -v --pretty 2>&1 >/dev/null | grep -v 'has no packages\|know when\|from cache' && rm $MYFDROIDDATA/*.apk"
 alias fempty="mv tmp/apkcache . && rm -rf tmp/* unsigned/* && mv apkcache tmp/"
 alias fcv="grep 'Current Version:' $MYFDROIDDATA/metadata/$(basename $PWD).txt -C 1 -B 1"
 alias fd='fdroid'

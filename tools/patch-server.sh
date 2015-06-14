@@ -8,3 +8,5 @@ sed -i "s/'gradle'\]\, 'clean'/'gradle'\]\, '-v'/g" $FDROIDSERVER/fdroidserver/b
 sed -i 's/"-s", dev, "install"/"install", "-r"/g' $FDROIDSERVER/fdroidserver/install.py
 
 sed -i "/writefield('Auto Update Mode')/d" $FDROIDSERVER/fdroidserver/metadata.py
+
+sed -i '/f.write(".\\n")/a\\t\tf.write("\\n")\n\t\tf.write("Current Version Code:9999999\\n\\n")' $FDROIDSERVER/fdroidserver/update.py
