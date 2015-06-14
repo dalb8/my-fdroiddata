@@ -8,7 +8,7 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:
+Categories:System
 License:Apache
 Web Site:http://greety.sakura.ne.jp/redo
 Source Code:https://github.com/youten/iBeaconDetector/commits
