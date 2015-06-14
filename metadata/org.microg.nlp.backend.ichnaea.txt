@@ -14,7 +14,7 @@ Web Site:
 Source Code:https://github.com/microg/IchnaeaNlpBackend/commits
 Issue Tracker:https://github.com/microg/IchnaeaNlpBackend/issues
 
-Name:NLP: Ichnaea (Mozilla)
+Name:NLP: Mozilla
 Auto Name:Mozilla UnifiedNlp Backend
 Summary:UnifiedNlp location provider
 Description:

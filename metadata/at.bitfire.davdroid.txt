@@ -35,6 +35,11 @@ Build:0.5.9,30
 Build:0.5.14-alpha,37
     commit=v0.5.14-alpha
 
+Build:0.8.0,66
+    commit=v0.8.0-1
+    subdir=app
+    gradle=yes
+
 Maintainer Notes:
 .
 
