@@ -2,6 +2,7 @@ source $FDROIDSERVER/completion/bash-completion
 
 alias cdm='cd $MYFDROIDDATA'
 alias cdfd='cd $FDROIDDATA'
+alias cdb='cd ~/bin-fdroiddata'
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/' |less"
 alias gd='git diff'

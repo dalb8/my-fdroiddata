@@ -28,7 +28,6 @@ See https://f-droid.org/forums/topic/cups-print-app
 .
 
 Update Check Mode:Static
-#In Repo:0.21JfBeta,3
 Current Version:0.21
 Current Version Code:9999999
 

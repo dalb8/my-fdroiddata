@@ -69,7 +69,6 @@ The buildall script calls a bunch of scripts; the scripts download archives over
 .
 
 Update Check Mode:None
-#In Repo:1.0,1
 Current Version:1.0
 Current Version Code:1
 

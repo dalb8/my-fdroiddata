@@ -20,7 +20,7 @@ Supports browsing by folder, queueing, shake-to-skip and more. Supports
 the same audio formats as the stock music player since the system media
 APIs are used.
 
-Can filter output via [[com.bel.android.dspmanager]].
+Output is filtered via the audio effects app.
 .
 
 Repo Type:git

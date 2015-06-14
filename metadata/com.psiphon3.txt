@@ -42,7 +42,6 @@ version numbers of dev APK differ from gplay
 .
 
 Update Check Mode:None
-#In Repo:79' platformBuildVersionName='5.0-1521886,79
 Current Version:5.0-1521886
 Current Version Code:79
 

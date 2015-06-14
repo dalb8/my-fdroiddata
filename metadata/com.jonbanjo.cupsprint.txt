@@ -25,7 +25,6 @@ See https://f-droid.org/forums/topic/cups-print-app
 .
 
 Update Check Mode:Static
-#In Repo:0.62,22
 Current Version:0.62
 Current Version Code:22
 
