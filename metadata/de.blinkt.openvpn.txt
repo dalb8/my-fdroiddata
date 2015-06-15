@@ -8,7 +8,7 @@
 
 Categories:Internet
 License:GPL
-Web Site:
+Web Site:http://ics-openvpn.blinkt.de
 Source Code:https://github.com/schwabe/ics-openvpn/commits
 Issue Tracker:https://github.com/schwabe/ics-openvpn/issues
 
