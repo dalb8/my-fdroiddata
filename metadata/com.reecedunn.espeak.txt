@@ -42,21 +42,20 @@ Build:1.47.12,17
     buildjni=no
     gradle=yes
 
-# not exact: need to delete GRADLE variable set
-Build:1.48.11,19
-    disable=doesn't make
-    commit=android/1.48.11
+Build:1.48.05,18
+    disable=don‘t build
+    commit=f4adda1
     submodules=yes
     subdir=android
     scanignore=platforms
-    build=cd ..; ./autogen.sh; ./configure && \
-        make espeakdata && \
-        ndk-build APP_ABI="armeabi armeabi-v7a"
+    build=cd ..; ./autogen.sh && \
+        ./configure --with-gradle=/home/david/.gradle/wrapper/dists/gradle-1.10-bin/6oa4rff9viiqskhgd6uns5v1f8/gradle-1.10/bin/gradle && \
+        make
     buildjni=no
-    gradle=yes
+    output=android/build/outputs/apk/espeak-release-unsigned.apk
 
 Maintainer Notes:
-Code is on android branch.
+*Code is on android branch*.
 
 GPLv3 according to the website, even though licence headers say Apache.
 
