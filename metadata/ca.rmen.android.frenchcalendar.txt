@@ -38,8 +38,8 @@ Build:1.6.1,161
     subdir=handheld
     gradle=foss
 
-Build:1.7.0,170
-    commit=release-1.7.0
+Build:1.7.1,171
+    commit=release-1.7.1
     subdir=handheld
     gradle=foss
 
@@ -47,6 +47,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags ^release-
-Current Version:1.7.0
-Current Version Code:170
+Current Version:1.7.1
+Current Version Code:171
 

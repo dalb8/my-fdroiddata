@@ -82,6 +82,12 @@ Build:1.1.1,50
     prebuild=echo -e 'FLATTR_APP_KEY="1wpjfofGEf6zu9acSYorcFky1QpsGeRx"\nFLATTR_APP_SECRET="B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8"' >> ../gradle.properties
     gradle=yes
 
+Build:1.2.1,58
+    commit=1.2.1
+    subdir=app
+    prebuild=echo -e 'FLATTR_APP_KEY="1wpjfofGEf6zu9acSYorcFky1QpsGeRx"\nFLATTR_APP_SECRET="B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8"' >> ../gradle.properties
+    gradle=yes
+
 Maintainer Notes:
 .
 
