@@ -85,6 +85,7 @@ Build:1.1.1,50
 Build:1.2.1,58
     commit=1.2.1
     subdir=app
+    patch=fix_58.diff
     prebuild=echo -e 'FLATTR_APP_KEY="1wpjfofGEf6zu9acSYorcFky1QpsGeRx"\nFLATTR_APP_SECRET="B6HHlMdPSaedaffS3ua6ZkuR1J9xOQVgNsNY5REORIRSOWAIhAE6LZOCyNZduKj8"' >> ../gradle.properties
     gradle=yes
 
@@ -92,6 +93,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.1.2
-Current Version Code:52
+Current Version:1.2.1
+Current Version Code:58
 

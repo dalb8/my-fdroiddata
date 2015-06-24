@@ -2,7 +2,8 @@ source $FDROIDSERVER/completion/bash-completion
 
 alias cdm='cd $MYFDROIDDATA'
 alias cdfd='cd $FDROIDDATA'
-alias cdb='cd ~/bin-fdroiddata'
+alias cdb='cd $BINFDROIDDATA'
+alias cdr='cd $RACCOON'
 alias aup='android update project -p . -s'
 alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|/' |less"
 alias gd='git diff'
@@ -23,7 +24,7 @@ alias glpfd='cd $FDROIDDATA/metadata && glp -- $(ls $MYFDROIDDATA/metadata)'
 alias ga='git add' 
 alias s='less' 
 alias ai='adb install'
-alias racc='java -jar ~/srclib/Raccoon/target/raccoon.jar -a ~/Raccoon/archives/default -u && cd ~/bin-fdroiddata/ && ln -fs $(find ~/Raccoon/archives/default -name *apk) repo/ && basename -a $(find ~/Raccoon/archives/default -name *apk) > apks.list && fdroid update -c && fdroid update && rm *.apk'
+alias racc='java -jar $RACCOON/source/target/raccoon.jar -a $RACCOON/archives/default -u && cd $BINFDROIDDATA && ln -fs $(find $RACCOON/archives/default -name *apk) repo/ && basename -a $(find $RACCOON/archives/default -name *apk) > apks.list && fdroid update -c && fdroid update --pretty && rm -f *.apk'
 
 alias fdim='fdroid import -v -u'
 alias fub='fdroid publish'
