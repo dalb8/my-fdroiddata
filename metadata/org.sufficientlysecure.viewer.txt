@@ -26,6 +26,9 @@ Document Viewer is a fork of the last GPL version of
 * FictionBook (fb2, fb2.zip)
 * EPUB
 
+Get [[org.sufficientlysecure.viewer.fontpack]] to get a larger
+range of fonts.
+
 [https://raw.githubusercontent.com/sufficientlysecure/document-viewer/master/document-viewer/src/main/assets/about/en/changelog.wiki Changelog]
 .
 
@@ -40,16 +43,15 @@ Build:2.5,2500
     buildjni=no
     gradle=yes
 
-Build:2.7,2700
-    commit=v2.7
+Build:2.7.2,2720
+    commit=v2.7.2
     submodules=yes
     subdir=document-viewer
-    prebuild=pushd ../ && \
-        ./init.sh && \
-        popd && \
-        sed -i '25,36d' build.gradle
+    init=sed -i '21,56d' build.gradle
+    prebuild=cd ../ && \
+        ./init.sh
     scandelete=document-viewer/jni/mupdf/mupdf/build/debug/
-    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi armeabi-v7a"
+    build=$$NDK$$/ndk-build -e "APP_ABI=armeabi-v7a"
     buildjni=no
     gradle=yes
 
@@ -57,6 +59,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:2.7.1
-Current Version Code:2710
+Current Version:2.7.2
+Current Version Code:2720
 
