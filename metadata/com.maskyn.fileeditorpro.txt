@@ -1,0 +1,42 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3+
+Web Site:https://vmihalachi.github.io/turbo-editor
+Source Code:https://github.com/vmihalachi/turbo-editor/commits
+Issue Tracker:https://github.com/vmihalachi/turbo-editor/issues
+Donate:https://vmihalachi.github.io/turbo-editor
+FlattrID:2173527
+
+Auto Name:Turbo Editor
+Summary:Simple text editor
+Description:
+Simple, yet powerful editor for text files.
+.
+
+Repo Type:git
+Repo:https://github.com/vmihalachi/turbo-editor
+
+Build:1.19,47
+    commit=a1e82b65d420860085393319ba1bcce86d56f72b
+    subdir=app-pro
+    srclibs=MarkdownView@98b0db192bfb3bf4c0fe7520c2510e569783ba58
+    rm=app,libraries/sharedCode/libs/*.jar
+    prebuild=ant release -f $$MarkdownView$$/build.xml && \
+       mv $$MarkdownView$$/bin/classes.jar ../libraries/sharedCode/libs/MarkdownView-1.2.jar && \
+       sed -i -e '/dependencies/acompile "com.googlecode.juniversalchardet:juniversalchardet:1.0.3"' ../libraries/sharedCode/build.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.19
+Current Version Code:47
+
