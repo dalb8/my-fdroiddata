@@ -1,0 +1,47 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation,Security
+License:GPLv3+
+Web Site:https://guardianproject.info/2015/01/23/sharing-your-location-privately
+Source Code:https://github.com/guardianproject/LocationPrivacy/commits
+Issue Tracker:https://dev.guardianproject.info/projects/panic/issues
+Bitcoin:1Fi5xUHiAPRKxHvyUGVFGt9extBe8Srdbk
+
+Auto Name:LocationPrivacy
+Summary:Adapt the sharing of location
+Description:
+LocationPrivacy is not really app but rather a set of "Intent Filters" for all
+of the various ways of sharing location. When you share location from one app,
+LocationPrivacy offers itself as an option. It then recognizes insecure methods
+of sharing location, and then converts them to more secure methods. This mostly
+means that it rewrites URLs to use https, and even to use geo: URIs, which can
+work on fully offline setups. LocationPrivacy mostly works by reading the
+location information from the URL itself. For many URLs, LocationPrivacy must
+actually load some of the webpage in order to get the location.
+
+LocationPrivacy can also serve as a way to redirect all location links to your
+favorite mapping app. All map apps in Android can view geo: URIs, and
+LocationPrivacy converts many kinds of links to geo: URIs, including: Google
+Maps, OpenStreetMap, Amap, Baidu Map, QQ Map, Nokia HERE, Yandex Maps.
+.
+
+Repo Type:git
+Repo:https://github.com/guardianproject/LocationPrivacy.git
+
+Build:0.1,10
+    commit=0.1
+    target=android-21
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.1
+Current Version Code:10
+
