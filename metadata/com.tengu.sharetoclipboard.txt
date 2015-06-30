@@ -1,0 +1,38 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3
+Web Site:
+Source Code:https://github.com/tengusw/share_to_clipboard/commits
+Issue Tracker:https://github.com/tengusw/share_to_clipboard/issues
+
+Auto Name:Share to Clipboard
+Summary:Copy to clipboard from the Share menu
+Description:
+Adds a "Copy to clipboard" function to the default "Share" menu of all
+apps and hooks into the Android native Share system for seamless
+integration.
+.
+
+Repo Type:git
+Repo:https://github.com/tengusw/share_to_clipboard
+
+Build:1.0.7,8
+    commit=310e6f9e7ededc1dc1c9f6f49cd44bc07917010e
+    subdir=app
+    rm=app/libs/*.jar
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.0.7
+Current Version Code:8
+
