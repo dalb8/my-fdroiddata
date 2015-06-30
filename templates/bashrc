@@ -75,6 +75,7 @@ function header-agplv3 () {( cat $MYFDROIDDATA/templates/agplv3-header.txt; cat 
 function mnotes () { sed -i '/Update Check Mode:/i Maintainer Notes:\n.\n' "$1" ;}
 function lsm () { ls metadata/*.txt | grep "$1" ;}
 function lsa () { grep -i "^Auto Name:.*"$1"" metadata/*.txt ;}
+function lss () { grep -i "^Summary:.*"$1"" metadata/*.txt ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
