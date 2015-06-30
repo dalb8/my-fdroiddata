@@ -10,16 +10,25 @@
 
 Categories:Internet
 License:MIT
-Web Site:http://apps.ape-apps.com/forum-fiend-osp
+Web Site:
 Source Code:https://github.com/abartmatozu/forum-fiend-osp
 Issue Tracker:https://github.com/abartmatozu/forum-fiend-osp/issues
+Donate:http://www.ape-apps.com/donation
+Bitcoin:192tVHb31NDCpNeRjZ2wdYPm7HCEGstskL
 
 Summary:Forum reader
 Description:
-Uses Tapatalk API.
+Read and post to any forum that uses Tapatalk API.
 
-Status: No longer in development though forks are likely.
-Once a proprietary app.
+Status: No longer in development and source code is in a forked repo.
+See this [blog post http://www.bastecklein.com/2015/03/cease-and-desist.html].
+
+[Website http://apps.ape-apps.com/forum-fiend-osp] of the original developer;
+The donate link is for him.
+
+[Relevant XDA thread http://forum.xda-developers.com/showthread.php?t=2733755].
+
+It was once a proprietary app.
 .
 
 Repo Type:git
