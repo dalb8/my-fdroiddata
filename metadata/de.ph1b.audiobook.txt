@@ -24,6 +24,8 @@ Audiobook player with the following basic features:
 * Easily jump to a position
 * Bookmarks
 * Speed control
+
+[Changelog https://github.com/Ph1b/MaterialAudiobookPlayer/blob/master/CHANGELOG.md]
 .
 
 Repo Type:git
