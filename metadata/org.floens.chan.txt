@@ -40,8 +40,8 @@ Build:v1.2.5,43
     subdir=Clover/app
     gradle=yes
 
-Build:v1.2.10,49
-    commit=v1.2.10
+Build:v1.2.11,50
+    commit=v1.2.11
     subdir=Clover/app
     gradle=yes
 
@@ -49,6 +49,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:v1.2.10
-Current Version Code:49
+Current Version:v1.2.11
+Current Version Code:50
 
