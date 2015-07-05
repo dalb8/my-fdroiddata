@@ -1,0 +1,121 @@
+commit a4b78501dc2d32664fbdfdbe617a19defb2f213e
+Author: daniel oeh <daniel.oeh@gmail.com>
+Date:   Mon Mar 31 19:47:06 2014 +0200
+
+    Disabled downloading of episode images. closes #390
+    
+    Uses too much bandwidth
+
+diff --git a/src/de/danoeh/antennapod/feed/FeedItem.java b/src/de/danoeh/antennapod/feed/FeedItem.java
+index 921a03b..956131a 100644
+--- a/src/de/danoeh/antennapod/feed/FeedItem.java
++++ b/src/de/danoeh/antennapod/feed/FeedItem.java
+@@ -280,7 +280,7 @@ public class FeedItem extends FeedComponent implements
+     @Override
+     public InputStream openImageInputStream() {
+         InputStream out = null;
+-        if (hasItemImage()) {
++        if (hasItemImageDownloaded()) {
+             out = image.openImageInputStream();
+         } else if (hasMedia()) {
+             out = media.openImageInputStream();
+@@ -293,7 +293,7 @@ public class FeedItem extends FeedComponent implements
+     @Override
+     public InputStream reopenImageInputStream(InputStream input) {
+         InputStream out = null;
+-        if (hasItemImage()) {
++        if (hasItemImageDownloaded()) {
+             out = image.reopenImageInputStream(input);
+         } else if (hasMedia()) {
+             out = media.reopenImageInputStream(input);
+@@ -306,7 +306,7 @@ public class FeedItem extends FeedComponent implements
+     @Override
+     public String getImageLoaderCacheKey() {
+         String out = null;
+-        if (hasItemImage()) {
++        if (hasItemImageDownloaded()) {
+             out = image.getImageLoaderCacheKey();
+         } else if (hasMedia()) {
+             out = media.getImageLoaderCacheKey();
+@@ -346,6 +346,13 @@ public class FeedItem extends FeedComponent implements
+         return image != null;
+     }
+ 
++    /**
++     * Returns true if this FeedItem has its own image and the image has been downloaded.
++     */
++    public boolean hasItemImageDownloaded() {
++        return image != null && image.isDownloaded();
++    }
++
+     @Override
+     public String getHumanReadableIdentifier() {
+         return title;
+diff --git a/src/de/danoeh/antennapod/feed/FeedMedia.java b/src/de/danoeh/antennapod/feed/FeedMedia.java
+index f38e923..16bb9cc 100644
+--- a/src/de/danoeh/antennapod/feed/FeedMedia.java
++++ b/src/de/danoeh/antennapod/feed/FeedMedia.java
+@@ -204,7 +204,7 @@ public class FeedMedia extends FeedFile implements Playable {
+ 
+     public FeedImage getImage() {
+         if (item != null) {
+-            return (item.hasItemImage()) ? item.getImage() : item.getFeed().getImage();
++            return (item.hasItemImageDownloaded()) ? item.getImage() : item.getFeed().getImage();
+         }
+         return null;
+     }
+@@ -384,7 +384,7 @@ public class FeedMedia extends FeedFile implements Playable {
+     @Override
+     public InputStream openImageInputStream() {
+         InputStream out;
+-        if (item.hasItemImage()) {
++        if (item.hasItemImageDownloaded()) {
+             out = item.openImageInputStream();
+         } else {
+             out = new Playable.DefaultPlayableImageLoader(this)
+@@ -401,7 +401,7 @@ public class FeedMedia extends FeedFile implements Playable {
+     @Override
+     public String getImageLoaderCacheKey() {
+         String out;
+-        if (item.hasItemImage()) {
++        if (item.hasItemImageDownloaded()) {
+             out = item.getImageLoaderCacheKey();
+         } else {
+             out = new Playable.DefaultPlayableImageLoader(this)
+diff --git a/src/de/danoeh/antennapod/service/download/DownloadService.java b/src/de/danoeh/antennapod/service/download/DownloadService.java
+index 72e0852..f5883ba 100644
+--- a/src/de/danoeh/antennapod/service/download/DownloadService.java
++++ b/src/de/danoeh/antennapod/service/download/DownloadService.java
+@@ -678,32 +678,6 @@ public class DownloadService extends Service {
+                         );
+                     }
+                 }
+-                // download FeedItem images if provided and not downloaded
+-                for (FeedItem item : savedFeed.getItems()) {
+-                    if (item.hasItemImage() && (!item.getImage().isDownloaded())) {
+-                        if (BuildConfig.DEBUG)
+-                            Log.d(TAG, "Item has image; Downloading....");
+-                        try {
+-                            requester.downloadImage(DownloadService.this,
+-                                    item.getImage());
+-                        } catch (DownloadRequestException e) {
+-                            e.printStackTrace();
+-                            DBWriter.addDownloadStatus(
+-                                    DownloadService.this,
+-                                    new DownloadStatus(
+-                                            item.getImage(),
+-                                            item
+-                                                    .getImage()
+-                                                    .getHumanReadableIdentifier(),
+-                                            DownloadError.ERROR_REQUEST_ERROR,
+-                                            false, e.getMessage()
+-                                    )
+-                            );
+-                        }
+-                    }
+-                }
+-
+-
+             } catch (SAXException e) {
+                 successful = false;
+                 e.printStackTrace();
