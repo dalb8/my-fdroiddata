@@ -1,0 +1,17 @@
+diff --git a/src/de/danoeh/antennapod/service/playback/PlaybackService.java b/src/de/danoeh/antennapod/service/playback/PlaybackService.java
+index fb2569b..b89ce4a 100644
+--- a/src/de/danoeh/antennapod/service/playback/PlaybackService.java
++++ b/src/de/danoeh/antennapod/service/playback/PlaybackService.java
+@@ -310,10 +310,12 @@ public class PlaybackService extends Service {
+                     mediaPlayer.pause(true, true);
+                 }
+                 break;
++            case KeyEvent.KEYCODE_MEDIA_NEXT:
+             case KeyEvent.KEYCODE_MEDIA_FAST_FORWARD: {
+                 mediaPlayer.seekDelta(PlaybackController.DEFAULT_SEEK_DELTA);
+                 break;
+             }
++            case KeyEvent.KEYCODE_MEDIA_PREVIOUS:
+             case KeyEvent.KEYCODE_MEDIA_REWIND: {
+                 mediaPlayer.seekDelta(-PlaybackController.DEFAULT_SEEK_DELTA);
+                 break;

@@ -39,7 +39,7 @@ Build:0.9.6.4,25
 
 Build:0.9.8.3,36
     commit=0.9.8.3
-    patch=flattr.patch,speeds_36.patch,disable_images_36.patch
+    patch=flattr.patch,speeds_36.patch,disable_images_36.patch,buttons_36.patch
     srclibs=DragSort-danoeh@1bb29afb91f
     prebuild=rm -f submodules/dslv/library && \
         ln -s $(readlink -f $$DragSort-danoeh$$) submodules/dslv/ && \
