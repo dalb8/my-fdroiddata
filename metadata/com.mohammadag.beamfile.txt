@@ -28,6 +28,9 @@ then tap two devices together, then tap the screen again. Only the
 sender needs to have the app installed, but both devices need NFC.
 The actual file transfer goes over WiFi.
 
+The functionality is built into Android 5.x so this app may
+not be necessary on the sending device.
+
 A proprietary Google Admob binary was removed before building.
 .
 
