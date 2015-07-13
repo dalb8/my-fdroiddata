@@ -15,7 +15,7 @@ Issue Tracker:https://github.com/yhcting/netmbuddy/issues
 Auto Name:NetMBuddy
 Summary:Music player for Youtube
 Description:
-This basically a Youtube viewer but it's presented like a regular
+This is a YouTube viewer but it's presented like a regular
 music player, allowing you to manage queues and playlists easily and
 play and pause audio in the background.
 .
@@ -31,11 +31,19 @@ Build:1.2.13,31
     disable=broken again; songs won't play
     commit=8dc6e0a09b8d28b16c38ff7c2dcd15eff3fbc813
 
+Build:1.2.14,32
+    commit=7d0e08a76473ae5d89f7f922afb7a87ef2fd81d6
+    forceversion=yes
+    forcevercode=yes
+    init=mv build.gradle old.gradle && \
+        echo -e "buildscript {\nrepositories {\njcenter()\n}\ndependencies {\nclasspath 'com.android.tools.build:gradle:1.2.2'\n}\n}\nallprojects {\nrepositories {\njcenter()\n}\n}" > build.gradle && cat old.gradle >> build.gradle && rm old.gradle
+    gradle=yes
+
 Maintainer Notes:
 Tags unreliable
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.2.13
-Current Version Code:31
+Current Version:1.2.14
+Current Version Code:32
 

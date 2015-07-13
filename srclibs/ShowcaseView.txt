@@ -1,0 +1,6 @@
+Repo Type:git
+Repo:https://github.com/amlcurran/ShowcaseView
+
+Subdir:library
+Prepare:rm libs/robo*.jar libs/mockito*.jar
+

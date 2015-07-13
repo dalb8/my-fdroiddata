@@ -41,10 +41,14 @@ Build:1.15.2,455
     commit=SolitaireCG-1.15.2
     target=android-8
 
+Build:2.0.1,556
+    commit=SolitaireCG-2.0.1
+    target=android-8
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.15.2
-Current Version Code:455
+Current Version:2.0.1
+Current Version Code:556
 
