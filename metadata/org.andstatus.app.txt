@@ -33,6 +33,11 @@ Build:9.0-SNAPSHOT,102
     commit=623f928ca8b5c1b248bccdf93540070ff2
     init=rm build.xml custom_rules.xml
 
+Build:17.1,125
+    commit=AndStatus-17.1
+    subdir=app
+    prebuild=echo -e 'java.source=1.7\njava.target=1.7' > ant.properties
+
 Maintainer Notes:
 .
 

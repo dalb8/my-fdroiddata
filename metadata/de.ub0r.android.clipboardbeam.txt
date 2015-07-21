@@ -15,16 +15,15 @@ Source Code:https://github.com/felixb/clipboard-beam
 Issue Tracker:https://github.com/felixb/clipboard-beam/issues
 
 Auto Name:Clipboard Beam
-Summary:Share clipboard between devices
+Summary:Share text
 Description:
+The app lets you type any text for sharing. If it is itself activated
+via the share menu, it shows what occupies the clipboard and can share it.
+Useful with [[net.solutinno.websearch]].
+
 If you have two devices (each having NFC and Beam enabled in Settings),
 you can pass the contents of the device clipboard (or whatever
 you can type into the box) just by touching the devices together.
-
-The app also shows what occupies the clipboard and can share it.
-
-The functionality is built into Android 5.x so this app may
-not be necessary on the sending device.
 
 If one of the gadgets doesn't have an NFC radio you can make QR codes with
 [[com.google.zxing.client.android]] which can be read by the other
@@ -36,6 +35,7 @@ Repo:https://github.com/felixb/clipboard-beam.git
 
 Build:1.0,14100000
     commit=ClipboardBeam-1.0
+    patch=disable-nfc.patch
 
 Maintainer Notes:
 .

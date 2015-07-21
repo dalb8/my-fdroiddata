@@ -1,0 +1,58 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index db71471..83a7e13 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -27,7 +27,7 @@
+ 
+     <uses-feature
+         android:name="android.hardware.nfc"
+-        android:required="true" />
++        android:required="false" />
+ 
+     <application
+         android:allowBackup="false"
+@@ -54,4 +54,4 @@
+         </activity>
+     </application>
+ 
+-</manifest>
+\ No newline at end of file
++</manifest>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 556360e..5eb1f9d 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -17,14 +17,14 @@
+ <resources>
+ 
+     <string name="app_name">Clipboard Beam</string>
+-    <string name="touch_phones">Touch phones&#8230;</string>
+-    <string name="activate_nfc">Please activate NFC</string>
++    <string name="touch_phones">Touch phones or enter some text&#8230;</string>
++    <string name="activate_nfc">Maybe you need to activate NFC?</string>
+     <string name="menu_share">Share</string>
+     <string name="text_saved">Text saved to clipboard</string>
+     <string name="error">Error</string>
+     <string name="info">Info</string>
+-    <string name="info_long">%1$s reads your clipboard and beams the content to your buddy with Android Beam&#8482;.\n\nIt\'s free. It\'s open source. It\'s GPLv3 (%2$s).\n\nGet the source on github: %3$s</string>
++    <string name="info_long">%1$s reads your clipboard and beams the content to your buddy with Android Beam&#8482;.\n\nIt\'s free. It\'s open source. It\'s GPLv3 (%2$s).\n\nGet the source on github.com: %3$s</string>
+     <string name="link_gpl3" translatable="false">http://www.gnu.org/licenses/gpl-3.0.txt</string>
+-    <string name="link_github" translatable="false">https://gihub.com/felixb/clipboard-beam/</string>
++    <string name="link_github" translatable="false">https://github.com/felixb/clipboard-beam/</string>
+ 
+-</resources>
+\ No newline at end of file
++</resources>
+diff --git a/src/de/ub0r/android/clipboardbeam/MainActivity.java b/src/de/ub0r/android/clipboardbeam/MainActivity.java
+index 68c83c0..fc428dc 100644
+--- a/src/de/ub0r/android/clipboardbeam/MainActivity.java
++++ b/src/de/ub0r/android/clipboardbeam/MainActivity.java
+@@ -110,8 +110,6 @@ public class MainActivity extends Activity implements CreateNdefMessageCallback
+ 			// point to NFC settings
+ 			Toast.makeText(this, R.string.activate_nfc, Toast.LENGTH_LONG)
+ 					.show();
+-			startActivity(new Intent(
+-					android.provider.Settings.ACTION_WIRELESS_SETTINGS));
+ 		} else {
+ 			mNfcAdapter.setNdefPushMessageCallback(this, this, this);
+ 		}
