@@ -22,6 +22,8 @@ on GNU/Linux KeePassX is a well-established client. Portable editions are
 available if you need to use it
 on a Windows machine. Supports both versions 1
 (kdb) & 2 (kdbx) of the Keepass database.
+
+[https://github.com/bpellin/keepassdroid/blob/master/CHANGELOG Changelog]
 .
 
 Repo Type:git
