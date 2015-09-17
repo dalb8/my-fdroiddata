@@ -1,0 +1,37 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv3+
+Web Site:
+Source Code:https://github.com/theScrabi/NewPipe/commits
+Issue Tracker:https://github.com/theScrabi/NewPipe/issues
+
+Auto Name:NewPipe
+Summary:Lightweight YouTube frontend
+Description:
+Lightweight YouTube frontend that's supposed to be used without the proprietary
+YouTube-API or any of Google's (proprietary) play-services. NewPipe only parses
+the YouTube website in order to gain the information it needs.
+.
+
+Repo Type:git
+Repo:https://github.com/theScrabi/NewPipe
+
+Build:0.3.5,2
+    commit=v0.3.5
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.3.5
+Current Version Code:2
+
