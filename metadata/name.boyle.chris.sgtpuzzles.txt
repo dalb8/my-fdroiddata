@@ -29,12 +29,18 @@ Build:9561.1,72
         sed -i '261 i \\t\tpaint.setStyle(Paint.Style.FILL);' src/name/boyle/chris/sgtpuzzles/GameView.java
     buildjni=yes
 
+Build:2015-08-17-1251-dd9e24a,109
+    commit=2015-08-17-1251-dd9e24a
+    subdir=app
+    forceversion=yes
+    gradle=yes
+
 Maintainer Notes:
 I've built binaries for x86 but haven't run it on a device; mips doesn't build with ndk-r9c
 One line sed patch is to fix issue #77; shouldn't be needed in next version
 .
 
 #Update Check Mode:Tags
-Current Version:2014-11-09-1643-4a8edc6
-Current Version Code:97
+Current Version:${timestamp()}-${idForSimon()}
+Current Version Code:109
 

@@ -25,7 +25,7 @@ Audiobook player with the following basic features:
 * Bookmarks
 * Speed control
 
-[Changelog https://github.com/Ph1b/MaterialAudiobookPlayer/blob/master/CHANGELOG.md]
+[https://github.com/Ph1b/MaterialAudiobookPlayer/raw/master/CHANGELOG.md Changelog]
 .
 
 Repo Type:git
@@ -37,14 +37,17 @@ Build:2.1.9.1,65
     prebuild=sed -i 's/minifyEnabled true/minifyEnabled false/' build.gradle
     gradle=yes
 
-Build:2.2.1,67
-    commit=v2.2.1
+Build:2.4.0.1,73
+    commit=v2.4.0.1
     subdir=audiobook
-    prebuild=echo "ndk.dir=$$NDK$$" >> ../local.properties && \
-       sed -i 's/minifyEnabled true/minifyEnabled false/' build.gradle
+    prebuild=echo "ndk.dir=$$NDK$$" >> ../local.properties
     gradle=yes
 
+Maintainer Notes:
+       sed -i 's/minifyEnabled true/minifyEnabled false/' build.gradle
+.
+
 #Update Check Mode:Tags ^v[0-9.]+?$
-Current Version:2.2.1
-Current Version Code:67
+Current Version:2.4.0.1
+Current Version Code:73
 

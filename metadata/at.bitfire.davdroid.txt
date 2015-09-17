@@ -10,7 +10,7 @@ Categories:Office
 License:GPLv3
 Web Site:https://davdroid.bitfire.at
 Source Code:https://github.com/bitfireAT/davdroid/commits
-Issue Tracker:https://github.com/bitfireAT/davdroid/issues
+Issue Tracker:https://forums.bitfire.at/category/4/davdroid
 Donate:https://davdroid.bitfire.at/donate
 FlattrID:2100160
 Bitcoin:1KSCy7RHztKuhW9fLLaUYqdwdC2iwbejZU

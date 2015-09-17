@@ -37,10 +37,16 @@ Build:0.24,24
     prebuild=echo -e "project(':slobj').projectDir = new File('$$Slobj$$')\nproject(':slobber').projectDir = new File('$$Slobber$$')" >> settings.gradle
     gradle=yes
 
+Build:0.27,27
+    commit=0.27
+    srclibs=Slobj@8fa1184,Slobber@c620b93
+    prebuild=echo -e "project(':slobj').projectDir = new File('$$Slobj$$')\nproject(':slobber').projectDir = new File('$$Slobber$$')" >> settings.gradle
+    gradle=yes
+
 Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:0.24
-Current Version Code:24
+Current Version:0.27
+Current Version Code:27
 
