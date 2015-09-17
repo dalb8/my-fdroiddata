@@ -9,8 +9,8 @@
 Categories:Reading
 License:GPLv3
 Web Site:
-Source Code:https://github.com/dschuermann/document-viewer-fontpack/commits
-Issue Tracker:https://github.com/dschuermann/document-viewer-fontpack/issues
+Source Code:https://github.com/Free-Software-for-Android/document-viewer-fontpack/commits
+Issue Tracker:https://github.com/Free-Software-for-Android/document-viewer-fontpack/issues
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 
 Name:Document Viewer Font Pack
@@ -25,7 +25,7 @@ Libertine and URW Symbol.
 .
 
 Repo Type:git
-Repo:https://github.com/dschuermann/document-viewer-fontpack
+Repo:https://github.com/Free-Software-for-Android/document-viewer-fontpack
 
 Build:2.2,2200
     commit=v2.2

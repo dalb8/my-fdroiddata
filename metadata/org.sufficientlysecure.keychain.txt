@@ -8,9 +8,10 @@
 
 Categories:Internet
 License:GPLv3+
-Web Site:https://open-keychain.github.io
-Source Code:https://github.com/open-keychain/openpgp-keychain/commits
-Issue Tracker:https://github.com/open-keychain/openpgp-keychain/issues
+Web Site:https://openpgp-keychain.github.io
+Source Code:https://github.com/openpgp-keychain/openpgp-keychain/commits
+Issue Tracker:https://github.com/openpgp-keychain/openpgp-keychain/issues
+Donate:http://www.openkeychain.org
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 
 Auto Name:OpenPGP Keychain
@@ -26,7 +27,7 @@ Features:
 .
 
 Repo Type:git
-Repo:https://github.com/open-keychain/openpgp-keychain.git
+Repo:https://github.com/openpgp-keychain/openpgp-keychain.git
 
 Build:2.7,27000
     commit=v2.7

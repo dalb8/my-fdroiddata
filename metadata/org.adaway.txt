@@ -9,8 +9,8 @@
 Categories:System
 License:GPLv3
 Web Site:http://sufficientlysecure.org/index.php/adaway
-Source Code:https://github.com/dschuermann/ad-away/commits
-Issue Tracker:https://github.com/dschuermann/ad-away/issues
+Source Code:https://github.com/Free-Software-for-Android/ad-away/commits
+Issue Tracker:https://github.com/Free-Software-for-Android/ad-away/issues
 Donate:http://sufficientlysecure.org/index.php/adaway
 FlattrID:369138
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
@@ -27,20 +27,20 @@ address of your choosing. You can download hosts files from the
 app but it is possible to use your own and to add certain sites
 to the white- and black-lists.
 
-[https://github.com/dschuermann/ad-away/raw/master/CHANGELOG Changelog]
+[https://github.com/Free-Software-for-Android/ad-away/raw/master/CHANGELOG Changelog]
 
 Requires root: Yes. The hosts files is located in /system which is normally
 read-only.
 .
 
 Repo Type:git
-Repo:https://github.com/dschuermann/ad-away.git
+Repo:https://github.com/Free-Software-for-Android/ad-away.git
 
 Build:2.3,42
     commit=v2.3
     subdir=AdAway
     init=rm android-libs/Donations/custom_rules.xml && \
-        git clone https://github.com/dschuermann/HtmlSpanner android-libs/HtmlSpanner
+        git clone https://github.com/Free-Software-for-Android/HtmlSpanner android-libs/HtmlSpanner
     update=.;android-libs/Donations;android-libs/ActionBarSherlock;android-libs/HtmlSpanner/htmlspanner
     extlibs=htmlcleaner/htmlcleaner-2.2.jar
     srclibs=RootCommands@c940b0e503

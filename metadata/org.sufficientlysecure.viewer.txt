@@ -9,8 +9,8 @@
 Categories:Reading
 License:GPLv3
 Web Site:
-Source Code:https://github.com/dschuermann/document-viewer/commits
-Issue Tracker:https://github.com/dschuermann/document-viewer/issues
+Source Code:https://github.com/Free-Software-for-Android/document-viewer/commits
+Issue Tracker:https://github.com/Free-Software-for-Android/document-viewer/issues
 Bitcoin:1CXUJDMaXNed69U42okCxeMyiGHjboVw1j
 
 Auto Name:Document Viewer
@@ -33,7 +33,7 @@ range of fonts.
 .
 
 Repo Type:git
-Repo:https://github.com/dschuermann/document-viewer.git
+Repo:https://github.com/Free-Software-for-Android/document-viewer.git
 
 Build:2.5,2500
     commit=v2.5
