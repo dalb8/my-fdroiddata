@@ -30,17 +30,16 @@ Description:
 Repo Type:git
 Repo:https://github.com/vackosar/search-based-launcher.git
 
-# not exact: different package name
-Build:1.13,5
-    commit=859f3a19ed
-    prebuild=sed -i 's/16711936/47694800/' src/com/ideasfrombrain/search_based_launcher_v2/MainActivity.java
-    target=android-16
+Build:45,45
+    commit=c16e7b
+    prebuild=sed -i 's/16711936/47694800/' src/main/java/com/vackosar/searchbasedlauncher/control/ColorService.java
+    gradle=yes
 
 Maintainer Notes:
 Patch to remove garish green
 .
 
-Update Check Mode:RepoManifest
-Current Version:1.13
-Current Version Code:5
+#Update Check Mode:RepoManifest
+Current Version:45
+Current Version Code:45
 

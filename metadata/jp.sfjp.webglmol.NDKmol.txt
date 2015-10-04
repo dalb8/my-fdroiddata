@@ -31,10 +31,16 @@ Build:0.92,15
     commit=8724f587
     buildjni=yes
 
+Build:0.95,18
+    disable=ndk-build fails
+    commit=79b012c5992a070bcad10fab5670dc38c0c78ce3
+    target=android-21
+    buildjni=yes
+
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest/ES1
+#Update Check Mode:RepoManifest
 Current Version:0.92
 Current Version Code:15
 

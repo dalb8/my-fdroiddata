@@ -37,15 +37,15 @@ Build:0.9.1,38
         sed -i -e '/mavenCentral/amavenLocal()\n' -e '/maven {/d' -e '/jitsi.github.com/,+1d' -e '/buildTypes {/i/*' -e '/subprojects/i*/' build.gradle
     gradle=yes
 
-# not exact: pre-dex error with fdroidserver
-Build:1.1.0-beta,51
-    commit=1.1.0-beta
+Build:1.6.11,98
+    commit=1.6.11
     gradle=yes
+    prebuild=sed -i -e '/applicationVariants/i/*' -e '/lintOptions {/i*/' build.gradle
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.4.3
-Current Version Code:69
+Current Version:1.6.11
+Current Version Code:98
 

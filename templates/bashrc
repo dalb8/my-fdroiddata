@@ -44,15 +44,8 @@ complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates -v'
 complete -F _fdroid_checkupdates fcheck
 
-alias gradle-1.9='~/.gradle/wrapper/dists/gradle-1.9-bin/*/gradle-1.9/bin/gradle'
-alias gradle-1.10='~/.gradle/wrapper/dists/gradle-1.10-bin/*/gradle-1.10/bin/gradle'
-alias gradle-1.11='~/.gradle/wrapper/dists/gradle-1.11-bin/*/gradle-1.11/bin/gradle'
-alias gradle-1.12='~/.gradle/wrapper/dists/gradle-1.12-bin/*/gradle-1.12/bin/gradle'
-alias gradle-1.13='~/.gradle/wrapper/dists/gradle-1.13-bin/*/gradle-1.13/bin/gradle'
-alias gradle-2.1='~/.gradle/wrapper/dists/gradle-2.1-bin/*/gradle-2.1/bin/gradle'
-alias gradle-2.2.1='~/.gradle/wrapper/dists/gradle-2.2.1-bin/*/gradle-2.2.1/bin/gradle'
 alias gradle-2.3='~/.gradle/wrapper/dists/gradle-2.3-bin/*/gradle-2.3/bin/gradle'
-alias gradle-2.4='~/.gradle/wrapper/dists/gradle-2.4-bin/*/gradle-2.4/bin/gradle'
+alias gradle-2.4='~/.gradle/wrapper/dists/gradle-2.4-bin/qtpfibs0bk58et4qkc9rtloo1/gradle-2.4/bin/gradle'
 # note: use $$MVN3$$ in metadata
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
 alias mvn-3.1.1='export M2_HOME=/opt/maven/apache-maven-3.1.1 && mvn'
@@ -80,7 +73,7 @@ function lss () { grep -i "^Summary:.*"$1"" metadata/*.txt ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
-export BUILD_TOOLS=${ANDROID_HOME}/build-tools/22.0.1
+export BUILD_TOOLS=${ANDROID_HOME}/build-tools/23.0.1
 export ANDROID_NDK=~/android-ndk-r10d
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1

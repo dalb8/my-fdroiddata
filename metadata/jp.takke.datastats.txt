@@ -25,10 +25,15 @@ Build:1.2.3,8
     subdir=app
     gradle=yes
 
+Build:2.2.3,17
+    commit=c8c373d980111d1ca5e3d2ad64fc27643924ce2c
+    subdir=app
+    gradle=yes
+
 Maintainer Notes:
 .
 
 #Update Check Mode:RepoManifest
-Current Version:2.2.2
-Current Version Code:16
+Current Version:2.2.3
+Current Version Code:17
 

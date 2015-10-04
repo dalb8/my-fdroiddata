@@ -26,22 +26,13 @@ Output is filtered via the audio effects app.
 Repo Type:git
 Repo:https://github.com/vanilla-music/vanilla.git
 
-Build:0.9.24,924
-    commit=0.9.24
-
-Build:0.9.99,999
-    commit=0.9.99
-
-Build:1.0.10,1010
-    commit=1.0.10
-
-Build:1.0.20,1020
-    commit=1.0.20
+Build:1.0.32,1032
+    commit=1.0.32
 
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.20
-Current Version Code:1020
+Current Version:1.0.32
+Current Version Code:1032
 
