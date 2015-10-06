@@ -19,8 +19,6 @@ Summary:Launch music player
 Description:
 Start or stop music via [[ch.blinkenlights.android.vanilla]]
 whenever headphones are plugged in or out.
-
-The app needs to be launched once for the trick to work.
 .
 
 Repo Type:git
@@ -30,10 +28,14 @@ Build:1.1,110
     commit=4a6be5
     target=android-16
 
+Build:1.5,150
+    commit=478bddd
+    target=android-21
+
 Maintainer Notes:
 .
 
-Update Check Mode:RepoManifest
-Current Version:1.1
-Current Version Code:110
+#Update Check Mode:RepoManifest
+Current Version:1.5
+Current Version Code:150
 

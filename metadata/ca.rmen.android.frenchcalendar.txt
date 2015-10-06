@@ -43,6 +43,11 @@ Build:1.7.1,171
     subdir=handheld
     gradle=foss
 
+Build:1.8.1,181
+    commit=release-1.8.1
+    subdir=handheld
+    gradle=foss
+
 Maintainer Notes:
 .
 
