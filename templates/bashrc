@@ -44,9 +44,9 @@ complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates -v'
 complete -F _fdroid_checkupdates fcheck
 
-alias gradle-2.3='~/.gradle/wrapper/dists/gradle-2.3-bin/*/gradle-2.3/bin/gradle'
 alias gradle-2.4='~/.gradle/wrapper/dists/gradle-2.4-bin/*/gradle-2.4/bin/gradle'
 alias gradle-2.5='~/.gradle/wrapper/dists/gradle-2.5-bin/*/gradle-2.5/bin/gradle'
+alias gradle-2.6='~/.gradle/wrapper/dists/gradle-2.6-bin/*/gradle-2.6/bin/gradle'
 
 # note: use $$MVN3$$ in metadata
 alias mvn-3.0.4='export M2_HOME=/opt/maven/apache-maven-3.0.4 && mvn'
