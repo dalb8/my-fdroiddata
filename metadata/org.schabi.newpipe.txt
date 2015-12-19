@@ -8,7 +8,7 @@
 
 Categories:Multimedia
 License:GPLv3+
-Web Site:
+Web Site:http://dasochan.nl/newpipe
 Source Code:https://github.com/theScrabi/NewPipe/commits
 Issue Tracker:https://github.com/theScrabi/NewPipe/issues
 
@@ -23,13 +23,13 @@ the YouTube website in order to gain the information it needs.
 Repo Type:git
 Repo:https://github.com/theScrabi/NewPipe
 
-Build:0.3.5,2
-    commit=v0.3.5
+Build:0.5.0,5
+    commit=v0.5.0
     subdir=app
     gradle=yes
 
-Build:0.4.1,4
-    commit=v0.4.1
+Build:0.6.0,6
+    commit=v0.6.0
     subdir=app
     gradle=yes
 

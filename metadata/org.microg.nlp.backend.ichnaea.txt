@@ -35,10 +35,14 @@ Build:1.1.0,10100
     commit=v1.1.0
     gradle=yes
 
+Build:1.2.0,10200
+    commit=v1.2.0
+    gradle=yes
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.1.0
-Current Version Code:10100
+Current Version:1.2.0
+Current Version Code:10200
 

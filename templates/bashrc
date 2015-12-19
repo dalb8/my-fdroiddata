@@ -44,8 +44,6 @@ complete -F _fdroid_install fbldi
 alias fcheck='fdroid checkupdates -v'
 complete -F _fdroid_checkupdates fcheck
 
-alias gradle-2.4='~/.gradle/wrapper/dists/gradle-2.4-bin/*/gradle-2.4/bin/gradle'
-alias gradle-2.5='~/.gradle/wrapper/dists/gradle-2.5-bin/*/gradle-2.5/bin/gradle'
 alias gradle-2.6='~/.gradle/wrapper/dists/gradle-2.6-bin/*/gradle-2.6/bin/gradle'
 
 # note: use $$MVN3$$ in metadata
@@ -76,7 +74,7 @@ function appversion () { adb shell dumpsys package "$1" | grep versionName ;}
 
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
-export BUILD_TOOLS=${ANDROID_HOME}/build-tools/23.0.1
+export BUILD_TOOLS=${ANDROID_HOME}/build-tools/23.0.2
 export ANDROID_NDK=~/android-ndk-r10d
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1

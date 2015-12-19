@@ -1,0 +1,38 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Reading
+License:Apache
+Web Site:
+Source Code:https://github.com/rdoeffinger/Dictionary/commits
+Issue Tracker:https://github.com/rdoeffinger/Dictionary/issues
+
+Auto Name:QuickDic
+Summary:Fast dictionary
+Description:
+Uses data from Wiktionary and Beolingus to generate dictionary files that can be used
+offline. These can be downloaded from within the app. These can also be
+generated automatically, though documentation for the process is currently
+missing.
+.
+
+Repo Type:git
+Repo:https://github.com/rdoeffinger/Dictionary.git
+
+Build:5.2.1,52
+    commit=v5.2.1
+    srclibs=QuickdicUtilsRestored@9fbd31a
+    prebuild=echo "quickdicUtilDir=$$QuickdicUtilsRestored$$" >> gradle.properties
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags ^v[0-9.]*$
+Current Version:5.2.1
+Current Version Code:52

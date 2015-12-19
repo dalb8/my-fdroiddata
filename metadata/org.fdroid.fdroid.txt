@@ -61,6 +61,12 @@ Build:0.91,910
     subdir=F-Droid
     prebuild=./ant-prepare.sh
 
+Build:0.97,97050
+    disable=buggy
+    commit=v0.97
+    subdir=F-Droid
+    gradle=yes
+
 Maintainer Notes:
 Don't forget the patch:
     patch=play_570.patch

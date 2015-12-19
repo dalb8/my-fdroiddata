@@ -38,6 +38,12 @@ Build:2013.1231.1.1305,201312311
              sed -i 's/4.4.3/4.6/' jni/Application.mk
     buildjni=yes
 
+Build:2014.1204.1.1305,201412041
+    commit=6
+    prebuild=sed -i 's/,--gc-section//g' jni/libwnnDictionary/Android.mk && \
+       sed -i 's/x86//' jni/Application.mk
+    buildjni=yes
+
 Maintainer Notes:
 Grab zip from website and push to repo.
 .
