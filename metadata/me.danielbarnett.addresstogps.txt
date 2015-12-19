@@ -1,0 +1,40 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+AntiFeatures:NonFreeNet
+Categories:Navigation
+License:MIT
+Web Site:http://addresstogps.com
+Source Code:https://github.com/DanielBarnett714/AddressToGPS/commits
+Issue Tracker:https://github.com/DanielBarnett714/AddressToGPS/issues
+Donate:http://addresstogps.com
+
+Auto Name:AddressToGPS
+Summary:A simple address/POI search for navigation apps
+Description:
+Search for an address, location, or area using the Google Maps javascript API
+via [http://addresstogps.com AddressToGPS.com], a server provided by the
+original author. Once you have selected a location you then can get the
+coordinates and open the locationin a maps app (OsmAnd). This tool does not
+require your location, only an internet connection.
+.
+
+Repo Type:git
+Repo:https://github.com/DanielBarnett714/AddressToGPS
+
+Build:1.12,12
+    commit=1.12
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.12
+Current Version Code:12

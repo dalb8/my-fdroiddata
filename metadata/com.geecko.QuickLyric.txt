@@ -1,0 +1,36 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Multimedia
+License:GPLv3
+Web Site:
+Source Code:https://github.com/geecko86/QuickLyric/commits
+Issue Tracker:https://github.com/geecko86/QuickLyric/issues
+Donate:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RSJZUSUHBBKTJ&lc=US&item_name=geecko&item_number=00&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted
+
+Auto Name:QuickLyric
+Summary:Fetch and display song lyrics
+Description:
+QuickLyric fetches your lyrics for you. It includes a search engine and is
+simple and easy to use. It can also detect what song is playing on your device.
+.
+
+Repo Type:git
+Repo:https://github.com/geecko86/QuickLyric
+
+Build:1.8d,47
+    commit=1.8d
+    subdir=QuickLyric
+    gradle=fdroid
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.8d
+Current Version Code:47

@@ -1,0 +1,44 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:
+Source Code:https://github.com/jonasbleyl/Recurrence/commits
+Issue Tracker:https://github.com/jonasbleyl/Recurrence/issues
+
+Auto Name:Recurrence
+Summary:Get reminded about notifications
+Description:
+* Repeat reminders daily, weekly, monthly or even yearly.
+* Decide exactly how many times you want a notification to appear.
+* Snooze notifications to have them remind you again at a later time.
+* View all of your upcoming and previous notification reminders.
+* Add icons and colors to your notifications.
+.
+
+Repo Type:git
+Repo:https://github.com/jonasbleyl/Recurrence
+
+Build:1.1.1,11
+    commit=c379e72
+    subdir=app
+    gradle=yes
+
+Build:1.3,15
+    commit=712b6c10e35a7c488ed2c1783e86452623eba709
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:1.1.1
+Current Version Code:11
+

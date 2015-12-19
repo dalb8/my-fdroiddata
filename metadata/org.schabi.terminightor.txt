@@ -1,0 +1,47 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:GPLv3+
+Web Site:
+Source Code:https://github.com/theScrabi/Terminightor/commits
+Issue Tracker:https://github.com/theScrabi/Terminightor/issues
+
+Auto Name:Terminightor
+Summary:Alarm clock based on NFC tags
+Description:
+A simple alarm clock with a spicy special: In order to put off an alarm, you
+have to hold a NFC tag onto your phone. Unless you do that the alarm will not
+stop, even if you try to kill the Terminightor service.
+
+So if you put a tag for example into your bathroom, and set up an alarm with
+that tag, it will ensure that you really get up in the morning.
+
+Features:
+
+* repeat/don't repeat alarms
+* repeat alarms only on certain week days
+* custom ring-tone
+* put vibration on/off
+* put alarms off via NFC tag
+.
+
+Repo Type:git
+Repo:https://github.com/theScrabi/Terminightor
+
+Build:0.9,2
+    commit=v0.9
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.9
+Current Version Code:2
