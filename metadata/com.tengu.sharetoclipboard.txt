@@ -29,6 +29,12 @@ Build:1.0.7,8
     rm=app/libs/*.jar
     gradle=yes
 
+Build:1.1.1,10
+    commit=v1.1.1
+    subdir=app
+    rm=app/libs/*.jar
+    gradle=yes
+
 Maintainer Notes:
 .
 

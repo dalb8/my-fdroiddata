@@ -35,6 +35,11 @@ Build:0.2,20
     prebuild=$$MVN3$$ install:install-file -DgroupId=android -DartifactId=android -Dversion=4.4.2_r3 -Dpackaging=jar -Dfile=$$SDK$$/platforms/android-19/android.jar
     maven=yes
 
+Build:0.4.1,41
+    commit=v0.4.1
+    gradle=yes
+    prebuild=.utility/remove-incomplete-translations
+
 Maintainer Notes:
 20: SDK maven repo doesn't download jars; there is a script in .utilities to do it via 
 sdk-deployer.

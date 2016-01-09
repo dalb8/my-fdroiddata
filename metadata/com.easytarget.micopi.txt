@@ -27,6 +27,11 @@ Build:1.8,6
     commit=b08f
     gradle=yes
 
+Build:3.4.1,25
+    commit=9662834
+    subdir=app
+    gradle=yes
+
 Maintainer Notes:
 .
 

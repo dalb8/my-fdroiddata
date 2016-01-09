@@ -37,8 +37,17 @@ Build:2.2,18
     build=cd ../ && /home/gerry/.gradle/wrapper/dists/gradle-1.11-bin/4h5v8877arc3jhuqbm3osbr7o7/gradle-1.11/bin/gradle assembleRelease
     output=build/net.cyclestreets/cyclestreets/build/apk/cyclestreets-release-unsigned.apk
 
+Build:3.1+,20
+    commit=91d5458
+    subdir=cyclestreets.vNext
+    prebuild=sed -i 's/cyclestreets.v3/cyclestreets/' build.gradle && \
+        sed -i 's/21.1.2/23.0.1/' config.properties
+    gradle=yes
+
 Maintainer Notes:
 Version info in config.properties.
+
+may be called net.cyclestreets.v3
 .
 
 Update Check Mode:None

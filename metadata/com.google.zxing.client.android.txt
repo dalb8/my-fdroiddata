@@ -41,6 +41,15 @@ Build:4.7.0,100
     build=$$MVN3$$ -f ../pom.xml -Pbuild-android -DskipTests package
     output=target/android-4.7.0.apk
 
+Build:4.7.5,105
+    disable=need maven 3.2.1
+    commit=BS-4.7.5
+    subdir=android
+    scanignore=core/src/test
+    build=$$MVN3$$ install -f ../core/pom.xml -Dmaven.test.skip=true && \
+        $$MVN3$$ install -f ../android-core/pom.xml -Dmaven.test.skip=true
+    maven=yes
+
 Maintainer Notes:
 .
 

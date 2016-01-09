@@ -60,6 +60,11 @@ Build:0.9.5.1.965,44
     prebuild=sed -i -e '/versionCode/d' -e '/versionName/d' build.gradle
     gradle=yes
 
+Build:0.9.7.1.1071,60
+    commit=0.9.7-MAINT
+    prebuild=sed -i -e '/versionCode/d' -e '/versionName/d' build.gradle
+    gradle=yes
+
 Maintainer Notes:
 Version in res/values/appname.xml
 device variable i.e see gplay for date

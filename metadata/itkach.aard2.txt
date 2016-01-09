@@ -43,6 +43,12 @@ Build:0.27,27
     prebuild=echo -e "project(':slobj').projectDir = new File('$$Slobj$$')\nproject(':slobber').projectDir = new File('$$Slobber$$')" >> settings.gradle
     gradle=yes
 
+Build:0.31,31
+    commit=0.31
+    srclibs=Slobj@abdb9,Slobber@5c159
+    prebuild=echo -e "project(':slobj').projectDir = new File('$$Slobj$$')\nproject(':slobber').projectDir = new File('$$Slobber$$')" >> settings.gradle
+    gradle=yes
+
 Maintainer Notes:
 .
 
