@@ -11,8 +11,8 @@
 Categories:System
 License:GPLv3
 Web Site:
-Source Code:https://github.com/eswarm/dynamicg-android-apps2/commits/master/HomeButtonLauncher
-Issue Tracker:https://github.com/eswarm/dynamicg-android-apps2/issues
+Source Code:https://dynamicgandroidapps.svn.cloudforge.com/trunk/HomeButtonLauncher
+Issue Tracker:
 
 Auto Name:Home Launcher
 Summary:Configure swipe-from-home
@@ -22,8 +22,10 @@ Description:
 
 #Repo Type:git-svn
 #Repo:https://dynamicg-android-apps2.googlecode.com/svn/trunk/HomeButtonLauncher
-Repo Type:git
-Repo:https://github.com/eswarm/dynamicg-android-apps2
+#Repo Type:git
+#Repo:https://github.com/eswarm/dynamicg-android-apps2
+Repo Type:git-svn
+Repo:https://dynamicgandroidapps.svn.cloudforge.com/trunk/HomeButtonLauncher
 
 Build:3.0,30001
     commit=8df0d00
@@ -31,10 +33,13 @@ Build:3.0,30001
     patch=custom_rules_30001.patch
     prebuild=ant stripLogging -f build-release.xml
 
+Build:4.3,43001
+    commit=81
+
 Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:4.1
-Current Version Code:41001
+Current Version:4.3
+Current Version Code:43001
 
