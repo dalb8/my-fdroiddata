@@ -1,0 +1,39 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Navigation
+License:GPLv3
+Web Site:
+Source Code:https://github.com/mapsquare/osm-contributor/commits
+Issue Tracker:https://github.com/mapsquare/osm-contributor/issues
+
+Summary:OpenStreetMap Contributor Mapping Tool
+Description:
+The Openstreetmap Contributor app allows anyone to contribute to OSM. It enables
+those-who-know to easily manage a group of newbies as the contribution process
+is intuitive and easy.
+
+The App comes in three flavours: store (for the Android
+Store version), poi-storage (for MapSquare POI Databases), and template (for the
+osm.mapsquare.io tool for Mapping parties (NON-FREE). 
+.
+
+Repo Type:git
+Repo:https://github.com/mapsquare/osm-contributor
+
+Build:2.2.2,14
+    commit=2.2.2
+    build=gradle-2.6 aR -Pfoss=true
+    output=i.apk
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:Unknown
+Current Version Code:14
