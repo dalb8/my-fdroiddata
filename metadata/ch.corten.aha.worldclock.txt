@@ -35,15 +35,16 @@ Build:1.6.0,32
     subdir=worldclockwidget
 
 # not exact: can't build with fdroidserver as it deletes gradle/
-Build:1.7.2,37
-    commit=1.7.2
+Build:1.7.5,40
+    commit=1.7.5
     subdir=worldclockwidget
     gradle=yes
+    prebuild=sed -i -e '/codequality/d' -e '/def buildSuffix/,+4d' build.gradle
 
 Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:1.7.2
-Current Version Code:37
+Current Version:1.7.5
+Current Version Code:40
 

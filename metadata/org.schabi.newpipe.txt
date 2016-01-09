@@ -23,13 +23,8 @@ the YouTube website in order to gain the information it needs.
 Repo Type:git
 Repo:https://github.com/theScrabi/NewPipe
 
-Build:0.5.0,5
-    commit=v0.5.0
-    subdir=app
-    gradle=yes
-
-Build:0.6.0,6
-    commit=v0.6.0
+Build:0.6.2,8
+    commit=v0.6.2
     subdir=app
     gradle=yes
 
