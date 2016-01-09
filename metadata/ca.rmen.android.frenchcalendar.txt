@@ -52,6 +52,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags ^release-
-Current Version:1.7.1
-Current Version Code:171
+Current Version:1.8.1
+Current Version Code:181
 

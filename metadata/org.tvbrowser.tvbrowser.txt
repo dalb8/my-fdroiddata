@@ -40,6 +40,6 @@ Build:0.5.8.3,329
     prebuild=mv libs/android-support-v4.jar $$Appcompat$$/libs/
 
 Update Check Mode:Tags
-Current Version:0.5.8.10
-Current Version Code:344
+Current Version:0.5.9.8 Beta1
+Current Version Code:363
 

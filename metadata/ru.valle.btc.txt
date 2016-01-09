@@ -45,6 +45,6 @@ https://github.com/ZBar/ZBar but was unsuccessful. See trikita.obsqr though.
 .
 
 #Update Check Mode:RepoManifest
-Current Version:2.3.0
-Current Version Code:230
+Current Version:2.5.0
+Current Version Code:250
 

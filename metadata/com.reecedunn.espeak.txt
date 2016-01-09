@@ -63,6 +63,6 @@ See Readme for dependencies. Some can be switched off.
 .
 
 Update Check Mode:Tags
-Current Version:1.48.11
-Current Version Code:19
+Current Version:1.48.15
+Current Version Code:20
 

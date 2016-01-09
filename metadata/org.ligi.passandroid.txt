@@ -46,6 +46,6 @@ work so well for Aztec.
 .
 
 #Update Check Mode:Tags
-Current Version:2.5.5
-Current Version Code:255
+Current Version:2.6.4
+Current Version Code:264
 

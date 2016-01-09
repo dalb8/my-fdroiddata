@@ -70,6 +70,6 @@ Don't publish every tag: check gplay first
 .
 
 Update Check Mode:Tags
-Current Version:15.0.0-RC-3
-Current Version Code:150003
+Current Version:15.1.0-ALPHA-3
+Current Version Code:15100003
 

@@ -34,5 +34,5 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags ^v[0-9.]*$
-Current Version:5.2.1
-Current Version Code:52
+Current Version:5.2.2
+Current Version Code:53

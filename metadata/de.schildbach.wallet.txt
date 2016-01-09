@@ -85,6 +85,6 @@ Use latest commit in 'prod' branch, which is a rebase on top of the latest tag.
 
 ##Update Check Mode:RepoManifest/release-v3-prod
 #Update Check Mode:RepoManifest/prod
-Current Version:4.32
-Current Version Code:222
+Current Version:4.45
+Current Version Code:235
 

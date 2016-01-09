@@ -45,6 +45,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:4.7.3
-Current Version Code:103
+Current Version:4.7.5
+Current Version Code:105
 

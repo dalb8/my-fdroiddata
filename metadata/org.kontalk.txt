@@ -55,6 +55,6 @@ Note: JAR libraries not verified yet.
 .
 
 #Update Check Mode:Tags
-Current Version:3.0-rc4
-Current Version Code:50
+Current Version:3.1.1
+Current Version Code:78
 

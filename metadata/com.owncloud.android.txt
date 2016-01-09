@@ -48,6 +48,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:Tags ^oc-android-[0-9.]*
-Current Version:1.8.0
-Current Version Code:10800000
+Current Version:1.9.0
+Current Version Code:10900000
 

@@ -63,6 +63,6 @@ Maintainer Notes:
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.39
-Current Version Code:74
+Current Version:1.48
+Current Version Code:83
 

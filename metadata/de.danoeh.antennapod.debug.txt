@@ -46,6 +46,6 @@ Remember to sign with debug key!
 
 Update Check Mode:RepoManifest/develop
 Update Check Name:de.danoeh.antennapod
-Current Version:1.2
-Current Version Code:56
+Current Version:1.4.2.2
+Current Version Code:1040202
 

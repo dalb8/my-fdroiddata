@@ -40,6 +40,6 @@ Patch to remove garish green
 .
 
 #Update Check Mode:RepoManifest
-Current Version:45
-Current Version Code:45
+Current Version:51
+Current Version Code:51
 

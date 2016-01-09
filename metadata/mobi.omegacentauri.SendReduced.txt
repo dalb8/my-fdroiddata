@@ -32,6 +32,6 @@ Maintainer Notes:
 .
 
 #Update Check Mode:RepoManifest
-Current Version:0.05
-Current Version Code:5
+Current Version:0.10
+Current Version Code:1000
 

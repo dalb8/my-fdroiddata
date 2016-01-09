@@ -43,6 +43,6 @@ Can put styles on sdcard too.
 .
 
 Update Check Mode:RepoManifest
-Current Version:1.1.31-beta1
-Current Version Code:201506110
+Current Version:1.1.37
+Current Version Code:201511070
 

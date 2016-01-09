@@ -66,6 +66,6 @@ device variable i.e see gplay for date
 .
 
 #Update Check Mode:Tags
-Current Version:0.9.5.1.965
-Current Version Code:44
+Current Version:0.9.7.1.1071
+Current Version Code:60
 
