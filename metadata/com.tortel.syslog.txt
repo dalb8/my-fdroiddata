@@ -30,13 +30,17 @@ Build:1.6.0,15
     srclibs=2:ActionBarSherlock@4a79d53,1:Libsuperuser-chainfire@185868f
     prebuild=sed -i 's/minSdkVersion="10"/minSdkVersion="16"/' AndroidManifest.xml
 
-Maintainer Notes:
-Uses submodules
+Build:1.9.0,16
+    disable=can't find artifact
+    commit=v1.9.0
+    subdir=app
+    submodules=yes
+    gradle=yes
 
-Could work on GB but not worth me testing.
+Maintainer Notes:
 .
 
 Update Check Mode:Tags
-Current Version:1.7.0
-Current Version Code:16
+Current Version:1.9.0
+Current Version Code:19
 

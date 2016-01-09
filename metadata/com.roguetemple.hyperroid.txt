@@ -43,12 +43,19 @@ Build:4.4,440
     commit=6
     buildjni=yes
 
+Build:6.6,661
+    commit=4cb38ea
+    subdir=app
+    rm=app/src/main/jni/hyper
+    scanignore=app/src/main/orig/langen
+    gradle=yes
+
 Maintainer Notes:
 Grab source archive from website and push it to repo
 May need to include extra code from the Windows sources
 .
 
 Update Check Mode:None
-Current Version:5.5a
-Current Version Code:551
+Current Version:6.6
+Current Version Code:661
 

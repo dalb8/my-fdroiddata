@@ -12,7 +12,7 @@ AntiFeatures:UpstreamNonFree
 Categories:Development
 License:Apache
 Web Site:
-Source Code:https://github.com/AOKP/external_jbirdvegas_mGerrit/commits
+Source Code:https://github.com/JBirdVegas/external_jbirdvegas_mGerrit/commits
 Issue Tracker:
 
 Auto Name:mGerrit
@@ -25,7 +25,7 @@ A lot of jars still need checking out.
 .
 
 Repo Type:git
-Repo:https://github.com/AOKP/external_jbirdvegas_mGerrit.git
+Repo:https://github.com/JBirdVegas/external_jbirdvegas_mGerrit.git
 
 Build:2.10.005,210005
     commit=d3b09959b58eaab3de066f2c45513b6a882552
@@ -48,12 +48,10 @@ Build:2.10.008,210008
 Maintainer Notes:
 A lot of jars still need checking out
 
-Uses tags but they're ROM milestones
-
-UCM:RM doesn't work.
+UCM:Tags doesn't work.
 .
 
 Update Check Mode:None
-Current Version:2.11.000
-Current Version Code:211000
+Current Version:2.111.73
+Current Version Code:9999999
 

@@ -34,6 +34,7 @@ Build:1.19,47
     gradle=yes
 
 Maintainer Notes:
+Source code not up-to-date
 .
 
 #Update Check Mode:RepoManifest

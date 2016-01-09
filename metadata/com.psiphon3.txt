@@ -42,6 +42,6 @@ version numbers of dev APK differ from gplay
 .
 
 Update Check Mode:None
-Current Version:5.0-1521886
-Current Version Code:79
+Current Version:91
+Current Version Code:9999999
 

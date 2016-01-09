@@ -36,9 +36,10 @@ Build:014 beta,14
         mv $$Smashwords-API$$/build/libs/SmashwordsAPI-1.0-SNAPSHOT.jar libs/
 
 Maintainer Notes:
+Source code not up to date
 .
 
-Update Check Mode:RepoManifest
-Current Version:015 beta
-Current Version Code:15
+Update Check Mode:None
+Current Version:019
+Current Version Code:19
 

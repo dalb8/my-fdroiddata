@@ -59,7 +59,7 @@ Maintainer Notes:
 All source files and jars but no licence in README
 .
 
-Update Check Mode:Tags
-Current Version:1.15.0.0_RC8
-Current Version Code:43
+Update Check Mode:RepoManifest
+Current Version:2.2.0.0B4
+Current Version Code:76
 

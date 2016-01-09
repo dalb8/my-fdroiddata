@@ -82,7 +82,7 @@ Maintainer Notes:
 Toolbox is pulled from a CM11 Nightly for p990.
 .
 
-#Update Check Mode:RepoManifest
+Update Check Mode:Static
 Current Version:25
 Current Version Code:175
 

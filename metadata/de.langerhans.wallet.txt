@@ -44,7 +44,7 @@ For x86:
         mv $$Scrypt$$/target/libscrypt.so libs/x86/ && \
 .
 
-Update Check Mode:Tags ^1
-Current Version:1.08
-Current Version Code:158
+#Update Check Mode:RepoManifest
+Current Version:2.07
+Current Version Code:207
 

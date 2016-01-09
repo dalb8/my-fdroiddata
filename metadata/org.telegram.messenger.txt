@@ -91,7 +91,7 @@ Build:2.9.1,542
     output=build/outputs/apk/TMessagesProj-release-unsigned.apk
 
 ##Update Check Mode:RepoManifest/dev
-Update Check Mode:None
+Update Check Mode:Static
 Current Version:2.9.1
 Current Version Code:542
 

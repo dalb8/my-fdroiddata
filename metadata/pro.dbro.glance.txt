@@ -11,8 +11,8 @@
 Categories:Reading
 License:GPLv3
 Web Site:
-Source Code:https://github.com/OnlyInAmerica/OpenSpritz-Android/commits
-Issue Tracker:https://github.com/OnlyInAmerica/OpenSpritz-Android/issues
+Source Code:https://github.com/OnlyInAmerica/GlanceReader/commits
+Issue Tracker:https://github.com/OnlyInAmerica/GlanceReader/issues
 
 Auto Name:Glance
 Summary:Read without moving eyes
@@ -24,7 +24,7 @@ Latest versions use proprietary libraries.
 .
 
 Repo Type:git
-Repo:https://github.com/OnlyInAmerica/OpenSpritz-Android.git
+Repo:https://github.com/OnlyInAmerica/GlanceReader.git
 
 Build:0.9,2
     commit=607853bf6ea286f4d2ff57bff29e1
@@ -38,6 +38,7 @@ Build:0.9,2
     gradle=yes
 
 Maintainer Notes:
+Source code lagging
 .
 
 Update Check Mode:RepoManifest

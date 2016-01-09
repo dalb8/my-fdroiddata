@@ -44,8 +44,7 @@ Maintainer Notes:
 Need to delete google breakpad references rather than build with WITH_BREAKPAD=0.
 .
 
-##Update Check Mode:Tags .*-production
-Update Check Mode:None
-Current Version:0.6.26
-Current Version Code:107
+#Update Check Mode:Tags .*-production
+Current Version:0.6.44
+Current Version Code:124
 

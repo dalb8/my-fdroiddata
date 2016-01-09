@@ -44,11 +44,20 @@ Build:3.0.9.8,60
         mv libs/armeabi/osmcore assets/osmcore_arm
     buildjni=no
 
+Build:3.5.0.6,89
+    commit=0e42271e2f451b2760538b2f01bc08b050eec9c7
+    submodules=yes
+    subdir=app
+    build=mkdir src/main/assets/ && \
+        $$NDK$$/ndk-build -C src/main/jni -e "APP_ABI=armeabi" && \
+        mv src/libs/armeabi/osmcore* assets/
+    gradle=yes
+
 Maintainer Notes:
-Tags unreliable.
+build.gradle should take care of ndk-build
 .
 
-Update Check Mode:RepoManifest
-Current Version:3.4.1.0
-Current Version Code:82
+#Update Check Mode:RepoManifest
+Current Version:3.5.0.6
+Current Version Code:89
 

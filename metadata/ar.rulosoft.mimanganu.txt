@@ -32,6 +32,15 @@ Build:1.18,18
         sed -i -e '/ImageViewTouch/d' project.properties && \
         echo "android.library.reference.1=../ImageViewTouchLibrary" >> project.properties
 
+Build:1.43,43
+    commit=1.43
+    subdir=app
+    srclibs=RapidDecoder@0.2.7
+    prebuild=cp -fR $$RapidDecoder$$/library/src/main/java/rapid src/main/java/ && \
+        sed -i -e '/rapid.decoder/g' build.gradle && \
+        sed -i -e '/maven {/,+2d' ../build.gradle
+    gradle=yes
+
 Maintainer Notes:
 .
 
