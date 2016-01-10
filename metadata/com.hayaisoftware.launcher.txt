@@ -1,0 +1,37 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:Apache
+Web Site:
+Source Code:https://github.com/seizonsenryaku/HayaiLauncher/commits
+Issue Tracker:https://github.com/seizonsenryaku/HayaiLauncher/issues
+
+Summary:Fast and lightweight launcher
+Description:
+Maps to the swipe-from-home action.
+.
+
+Repo Type:git
+Repo:https://github.com/seizonsenryaku/HayaiLauncher
+
+Build:1.1.4,10
+    commit=v1.1.4
+    subdir=app
+    prebuild=pushd ../scripts && \
+        sh optimize_png_resources.sh && \
+        popd
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:1.1.6
+Current Version Code:12
+

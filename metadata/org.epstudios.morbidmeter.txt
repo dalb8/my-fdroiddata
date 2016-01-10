@@ -1,0 +1,40 @@
+# Copyright (c) 2015 David Black.
+# Copying and distribution of this file, with or without modification,
+# are permitted in any medium without royalty provided the copyright
+# notice and this notice are preserved.  This file is offered as-is,
+# without any warranty.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Science & Education
+License:GPLv3
+Web Site:
+Source Code:https://github.com/mannd/morbidmeter-android/commits
+Issue Tracker:https://github.com/mannd/morbidmeter-android/issues
+
+Summary:Life expectancy widget
+Description:
+Morbid Meter is a widget that puts your time on earth into perspective. Choose a
+life-expectancy and a timescale and the widget will display how much of that
+timescale you have already lived. The default is years, so that will show what
+month of the year it is, so to speak. Choose it to be reversed, with seconds,
+and it will show you how many more seconds you can be expected to live for.
+.
+
+Repo Type:git
+Repo:https://github.com/mannd/morbidmeter-android.git
+
+Build:2.6,15
+    commit=v2.6
+    subdir=morbidmeterandroid
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:2.6
+Current Version Code:15
+
