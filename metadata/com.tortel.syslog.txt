@@ -30,11 +30,11 @@ Build:1.6.0,15
     srclibs=2:ActionBarSherlock@4a79d53,1:Libsuperuser-chainfire@185868f
     prebuild=sed -i 's/minSdkVersion="10"/minSdkVersion="16"/' AndroidManifest.xml
 
-Build:1.9.0,16
-    disable=can't find artifact
+Build:1.9.0,19
     commit=v1.9.0
     subdir=app
     submodules=yes
+    prebuild=sed -i '12 i \\tmaven { url "https://jitpack.io" }' ../build.gradle
     gradle=yes
 
 Maintainer Notes:

@@ -1,0 +1,54 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:
+Source Code:https://github.com/arpitkh96/AmazeFileManager
+Issue Tracker:https://github.com/arpitkh96/AmazeFileManager/issues
+
+Summary:File Manager
+Description:
+Light and smooth file manager following the Material Design guidelines.
+
+Features:
+
+* Basic features like cut, copy, delete, compress, extract etc. easily accessible
+* Work on multiple tabs at same time
+* Multiple themes with cool icons
+* Navigation drawer for quick navigation
+* App Manager to open, backup, or directly uninstall any app
+* Quickly access history, access bookmarks or search for any file
+* Root explorer for advanced users
+.
+
+Repo Type:git
+Repo:https://github.com/arpitkh96/AmazeFileManager
+
+Build:3.0.1,29
+    commit=v3.0.1
+    srclibs=RootTools-new@3.4,7ZipJBindings@63009c
+    rm=libs/RootTools.jar,libs/sevenzipjbinding/*.jar
+    prebuild=cp -fR $$RootTools-new$$/src/main/java/com src/main/java/ && \
+        sed -i -e '/playCompile/d' -e '/Properties/,$d' build.gradle && \
+        pushd $$7ZipJBindings$$ && \
+        cmake . && \
+        make && \
+        make package && \
+        popd && \
+        cp $$7ZipJBindings$$/jbinding-java/sevenzipjbinding.jar libs/ && \
+        sed -i '14 i \\tmaven { url "https://jitpack.io" }' build.gradle
+    gradle=fdroid
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:3.0.1
+Current Version Code:29
+
