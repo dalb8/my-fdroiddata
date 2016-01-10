@@ -21,6 +21,23 @@ to the SIP settings i.e. to enable incoming calls. The second one allows you to
 select how calls should be routed primarily: you can select whether all calls
 should be made via SIP by default; only Internet calls via SIP (Airplane mode),
 or if you want to be asked before each call.
+
+'''N.B''' In this version the Cyanogenmod quick settings tile
+was patched out.
+
+For Android 5 (Lollipop) devices and newer: Google changed the SIP API, so the
+functionality has changed. The left button now redirects to call settings, it's
+one click from there to SIP settings. A direct link to SIP settings is
+currently not possible due to restrictions of Android 5, sorry. The right
+button (and also the quick settings tile) now switches whether all calls are
+made through SIP, or only ones going to a SIP address. Please set "Ask first"
+for "Make calls with" in "phone account settings", then this button will toggle
+between asking and making calls through cell phone network by default.
+
+Please note that by default the built in SIP functionality on Android only
+works via Wifi on most devices! Furthermore, some ROMs of network providers
+(branded phones) disable the SIP functionality. If you can't find SIP settings
+in your phone's settings, this widget probably won't work correctly.
 .
 
 Repo Type:git
@@ -32,8 +49,13 @@ Build:1.0.4,5
 Build:1.0.8,9
     commit=1.0.8
 
+# not exact: patch out CM platform jars
+Build:1.1.0,10
+    commit=1.1.0
+    submodules=yes
+    gradle=yes
+
 Maintainer Notes:
-1.0.7 on gplay
 .
 
 #Update Check Mode:Tags
