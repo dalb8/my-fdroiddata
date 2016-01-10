@@ -11,10 +11,9 @@
 Categories:Science & Education
 License:Apache
 Web Site:
-Source Code:https://code.google.com/p/typeandspeak/source
-Issue Tracker:https://code.google.com/p/typeandspeak/issues
+Source Code:https://github.com/nilsm/typeandspeak/commits
+Issue Tracker:https://github.com/nilsm/typeandspeak/issues
 
-Auto Name:Type and Speak
 Summary:Text to speech
 Description:
 Type and Speak makes your phone say out loud whatever you type! 
@@ -27,7 +26,7 @@ Pico (which comes with AOSP).
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/typeandspeak
+Repo:https://github.com/nilsm/typeandspeak
 
 Build:1.4.8,36
     commit=44fe67acc70a
