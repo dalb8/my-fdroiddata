@@ -42,6 +42,11 @@ Build:4.4.3,4430
     extlibs=android/android-support-v13.jar
     prebuild=mkdir WallpaperPicker/libs; mv libs/android-support-v13.jar WallpaperPicker/libs
 
+Build:6.0.1,6001
+    commit=android-6.0.1_r5
+    prebuild=sed -i -e 's/versionName = "1.0"/versionName = "6.0.1"/' -e 's/versionCode = 1/versionCode = 6001/' build.gradle 
+    gradle=yes
+
 Maintainer Notes:
 .
 
