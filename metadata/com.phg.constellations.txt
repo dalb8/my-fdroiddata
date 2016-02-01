@@ -1,0 +1,35 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:Office
+License:MIT
+Web Site:
+Source Code:https://github.com/gituser1357/constellations/commits
+Issue Tracker:https://github.com/gituser1357/constellations/issues
+
+Summary:Show star charts and data
+Description:
+Star charts and data of the 88 modern constellations, based on data by
+Wikipedia.
+.
+
+Repo Type:git
+Repo:https://github.com/gituser1357/constellations
+
+Build:2.0.3,10005
+    commit=v2.0.3
+    subdir=app
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:2.0.3
+Current Version Code:9999999
+
