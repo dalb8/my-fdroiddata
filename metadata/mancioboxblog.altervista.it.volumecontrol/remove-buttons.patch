@@ -1,0 +1,87 @@
+diff --git a/Volume Control/AndroidManifest.xml b/Volume Control/AndroidManifest.xml
+index eefb284..51730cf 100644
+--- a/Volume Control/AndroidManifest.xml	
++++ b/Volume Control/AndroidManifest.xml	
+@@ -25,7 +25,7 @@
+     android:versionCode="1"
+     android:versionName="1.0" >
+ 
+-    <uses-sdk android:minSdkVersion="3" />
++    <uses-sdk android:minSdkVersion="4" />
+ 
+     
+ 
+@@ -54,4 +54,4 @@
+         </activity>
+     </application>
+ 
+-</manifest>
+\ No newline at end of file
++</manifest>
+diff --git a/Volume Control/project.properties b/Volume Control/project.properties
+index 102994c..19c32e6 100644
+--- a/Volume Control/project.properties	
++++ b/Volume Control/project.properties	
+@@ -8,4 +8,4 @@
+ # project structure.
+ 
+ # Project target.
+-target=android-3
++target=android-23
+diff --git a/Volume Control/res/layout/volumecontrol.xml b/Volume Control/res/layout/volumecontrol.xml
+index c33778b..ce09495 100644
+--- a/Volume Control/res/layout/volumecontrol.xml	
++++ b/Volume Control/res/layout/volumecontrol.xml	
+@@ -28,17 +28,6 @@
+     android:baselineAligned="false"
+     android:orientation="vertical" >
+ 
+-    <TextView
+-        android:id="@+id/textView1"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentTop="true"
+-        android:layout_centerHorizontal="true"
+-        android:padding="10dip"
+-        android:text="@string/title"
+-        android:textAppearance="?android:attr/textAppearanceLarge"
+-        android:textStyle="bold" />
+-
+     <Button
+         android:id="@+id/button1"
+         android:layout_width="fill_parent"
+@@ -59,32 +48,4 @@
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textStyle="bold" />
+ 
+-    <Button
+-        android:id="@+id/button3"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentLeft="true"
+-        android:layout_below="@+id/button2"
+-        android:text="@string/button3"
+-        android:textAppearance="?android:attr/textAppearanceLarge"
+-        android:textStyle="bold" />
+-
+-    <Button
+-        android:id="@+id/button4"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignParentRight="true"
+-        android:layout_below="@+id/button2"
+-        android:text="@string/button4"
+-        android:textAppearance="?android:attr/textAppearanceLarge"
+-        android:textStyle="bold" />
+-
+-     <ImageButton
+-        android:id="@+id/imageButton1"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_alignTop="@+id/button4"
+-        android:layout_centerHorizontal="true"
+-        android:src="@drawable/sound_off" /> 
+-
+-</RelativeLayout>
+\ No newline at end of file
++</RelativeLayout>

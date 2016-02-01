@@ -29,10 +29,13 @@ Repo:https://github.com/vanilla-music/vanilla.git
 Build:1.0.32,1032
     commit=1.0.32
 
+Build:1.0.36,1036
+    commit=1.0.36
+
 Maintainer Notes:
 .
 
 #Update Check Mode:Tags
-Current Version:1.0.35
-Current Version Code:1035
+Current Version:1.0.36
+Current Version Code:1036
 

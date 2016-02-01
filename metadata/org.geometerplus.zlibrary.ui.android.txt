@@ -56,11 +56,32 @@ Build:1.8.2,108022
     build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi armeabi-v7a'
     buildjni=no
 
-Maintainer Notes:
-Three branches can be used: android-1.5, master and ice-cream-sandwich. 
+# not exact: patch other proprietary jars and Yota references and fix src/org/geometerplus/android/fbreader/network/auth
+Build:2.5.9-ics,2050920
+    commit=2.5.9-ics
+    forceversion=yes
+    patch=fbreader-2.0.6.patch
+    rm=libs/Lingvo*,libs/open-dictionary*
+    srclibs=ApacheHttpClient@4.2.5
+    prebuild=echo -e "sdk.dir=$$SDK$$\nndk.dir=$$NDK$$\n" >> local.properties && \
+        $$MVN3$$ package -f $$ApacheHttpClient$$/httpmime/pom.xml && \
+        cp $$ApacheHttpClient$$/httpmime/target/httpmime-4.2.5.jar libs/ && \
+        mkdir third-party/drag-sort-listview/library/libs/ && \
+        cp libs/android-support-v4.jar third-party/drag-sort-listview/library/libs/ && \
+        rm -fR src/org/geometerplus/android/fbreader/YotaSwitchScreenAction.java src/com/yotadevices && \
+        sed -i -e '/com.google.android.gms.version/d' -e '/google_play_services/d'  AndroidManifest.xml && \
+        sed -i -e '/google.services.lib.dir/d' -e '/yota/d' project.properties
+    update=third-party/AmbilWarna,third-party/android-filechooser/code,third-party/drag-sort-listview/library,third-party/SuperToasts,.
+    target=android-21
+    buildjni=no
+    build=$$NDK$$/ndk-build -e 'APP_ABI=armeabi-v7a'
 
-Now using what look like proprietary libraries:
-    rm=libs/LingvoIntegration_2.5.2.12.jar,libs/open-dictionary-api-1.2.1.jar
+Maintainer Notes:
+* LingvoIntegration and OpenDictionary APIs are non-free. Remove jars and patch
+  depending code.
+* ics branch uses google play, so we have to sed AM.xml and ant files, as well
+  as we need src/org/geometerplus/android/fbreader/network/auth from the master
+  (= gingerbread) branch, which doesn't use play services.
 .
 
 ##Update Check Mode:Tags .*-ics

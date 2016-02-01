@@ -19,7 +19,7 @@ Description:
 * Convert images to pdf
 * Recognize text in images
 * Basic document management (delete/edit/join documents, view toc)
-* 50 languages supported
+* Over 50 languages supported
 
 Tip: Use good lighting for best results.
 

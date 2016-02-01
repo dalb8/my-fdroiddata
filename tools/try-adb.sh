@@ -27,7 +27,7 @@ echo -e "Uses Permissions:\n$PERMISSIONS"
 echo "Run? (Press Enter)"
 read
 echo "Running $NAME"
-adb shell am start -n $PNAME/$PNAME."$2"
+adb shell monkey -p $PNAME 1
 echo "Uninstall? (Press Enter)"
 read
 adb uninstall $PNAME

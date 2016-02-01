@@ -52,7 +52,6 @@ Build:2014.02.24.1822,1393266173
     novcheck=yes
     output=.build/bin/GloomyDungeons-release-unsigned.apk
 
-# not exact: not built yet; could patch permissions
 Build:2014.10.26.1200,1414314000
     commit=224781247acaac201be80d1b71ec0c6cc31457b8
     gradle=FdroidnormalNormalWithoutanalyticsWithoutzeemoteWithoutrateoffer
@@ -61,8 +60,6 @@ Build:2014.10.26.1200,1414314000
     novcheck=yes
 
 Maintainer Notes:
-Manifest is patched because network permissions aren't needed.
-
 In Market under zame.GloomyDungeons.fullversion.game & has non-free resources
 There's also a hardcore version
 

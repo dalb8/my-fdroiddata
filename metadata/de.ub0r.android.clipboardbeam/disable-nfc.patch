@@ -44,10 +44,57 @@ index 556360e..5eb1f9d 100644
 \ No newline at end of file
 +</resources>
 diff --git a/src/de/ub0r/android/clipboardbeam/MainActivity.java b/src/de/ub0r/android/clipboardbeam/MainActivity.java
-index 68c83c0..fc428dc 100644
+index 68c83c0..b9d36ce 100644
 --- a/src/de/ub0r/android/clipboardbeam/MainActivity.java
 +++ b/src/de/ub0r/android/clipboardbeam/MainActivity.java
-@@ -110,8 +110,6 @@ public class MainActivity extends Activity implements CreateNdefMessageCallback
+@@ -63,55 +63,12 @@ public class MainActivity extends Activity implements CreateNdefMessageCallback
+ 		setContentView(R.layout.activity_main);
+ 
+ 		mEt = (EditText) findViewById(R.id.editText1);
+-		if (savedInstanceState != null) {
+-			mEt.setText(savedInstanceState.getString("text"));
+-		} else {
+-			CharSequence text = null;
+-			ClipboardManager cb = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+-			Intent i = getIntent();
+-			String action = i.getAction();
+-			if (action != null
+-					&& action.equals(NfcAdapter.ACTION_NDEF_DISCOVERED)) {
+-				// got NFC, save to mET & CB
+-				text = null;
+-				Parcelable[] rawMsgs = i
+-						.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
+-				if (rawMsgs != null && rawMsgs.length > 0) {
+-					NdefMessage msg = (NdefMessage) rawMsgs[0];
+-					NdefRecord[] records = msg.getRecords();
+-					if (records != null && records.length > 0) {
+-						try {
+-							text = parseNdef(records[0]);
+-						} catch (UnsupportedEncodingException e) {
+-							Log.e(TAG, "encoding error", e);
+-							Toast.makeText(this, R.string.error,
+-									Toast.LENGTH_LONG).show();
+-							text = null;
+-						}
+-					}
+-				}
+-				if (text != null) {
+-					text = text.toString().trim();
+-				}
+-				cb.setPrimaryClip(new ClipData("text",
+-						new String[] { "text/plain" }, new Item(text)));
+-				Toast.makeText(this, R.string.text_saved, Toast.LENGTH_LONG)
+-						.show();
+-			} else if (cb.hasPrimaryClip()) {
+-				text = cb.getPrimaryClip().getItemAt(0).coerceToText(this);
+-			}
+-			if (text != null) {
+-				mEt.setText(text.toString().trim());
+-			}
+-		}
+ 
+ 		mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
+ 		if (mNfcAdapter == null) {
  			// point to NFC settings
  			Toast.makeText(this, R.string.activate_nfc, Toast.LENGTH_LONG)
  					.show();

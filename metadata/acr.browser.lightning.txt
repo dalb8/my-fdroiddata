@@ -50,11 +50,18 @@ Build:4.0.10a,78
         rm -fR ../external/netcipher/libnetcipher/libs/spongycastle*.jar
     gradle=yes
 
+Build:4.2.3a,84
+    commit=v4.2.3
+    submodules=yes
+    subdir=app
+    scanignore=external/netcipher/libnetcipher/external/pinning/res/raw/cacerts
+    gradle=lightningPlus
+
 Maintainer Notes:
 Tags are totally unreliable: check against gplay.
 .
 
 Update Check Mode:None
-Current Version:4.0.8a
-Current Version Code:71
+Current Version:4.2.3a
+Current Version Code:84
 

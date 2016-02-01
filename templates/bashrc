@@ -24,7 +24,9 @@ alias glpfd='cd $FDROIDDATA/metadata && glp -- $(ls $MYFDROIDDATA/metadata)'
 alias ga='git add' 
 alias s='less' 
 alias ai='adb install'
+alias au='adb uninstall'
 alias racc='java -jar $RACCOON/source/target/raccoon.jar -a $RACCOON/archives/default'
+alias raccgui='java -jar $RACCOON/source/target/raccoon.jar'
 alias raccfup='cd $BINFDROIDDATA && ln -fs `find $RACCOON/archives/default -name \*apk` repo/ && basename -a `find $RACCOON/archives/default -name \*apk` > templates/apks-gplay.txt && fdroid update -c && fdroid update --pretty && rm -f *.apk'
 alias filecast='java -jar ~/srclib/FileCast/target/filecast-1.0-shaded.jar'
 
@@ -62,6 +64,7 @@ function badj() { aapt d badging "$@"  |less ;}
 function plog() { adb logcat | grep $(adb shell ps | grep "$@" | cut -c10-15) ;}
 function ymca-make() { echo -e "TARGET=$1\nACTIVITY=$(basename $PWD)/$(basename $PWD).$2\nDEVICE=ALL\ninclude YMCA.mk" > Makefile.ymca ;}
 function ymca() { make -f Makefile.ymca -I $MYFDROIDDATA/templates "$1" ;}
+function al() { adb shell monkey -p "$1" -c android.intent.category.LAUNCHER 1 ;}
 function ghuser() { gnome-open https://github.com/"$1"?tab=repositories ;}
 function gpsearch() { gnome-open https://play.google.com/store/search?q="$1" ;}
 function gsha1() { echo "Copying latest commit number to clipboard..." && echo $(git --no-pager log -1 --pretty=format:%H) |xsel -b ;}
