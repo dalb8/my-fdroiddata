@@ -8,9 +8,9 @@
 
 Categories:Games
 License:GPLv3
-Web Site:https://code.google.com/p/hunkypunk
-Source Code:https://code.google.com/p/hunkypunk/source/list
-Issue Tracker:https://code.google.com/p/hunkypunk/issues/list
+Web Site:
+Source Code:https://github.com/retrobits/son_of_hunkypunk/commits
+Issue Tracker:https://github.com/retrobits/son_of_hunkypunk/issues
 
 Auto Name:Son of Hunky Punk
 Summary:Interactive fiction player
@@ -28,7 +28,7 @@ story management support.
 .
 
 Repo Type:git
-Repo:https://code.google.com/p/hunkypunk
+Repo:https://github.com/retrobits/son_of_hunkypunk
 
 Build:0.8,5
     commit=744b8c26032
