@@ -1,0 +1,13 @@
+diff --git a/F-Droid/src/org/fdroid/fdroid/AppDetails.java b/F-Droid/src/org/fdroid/fdroid/AppDetails.java
+index 63002cf..813670d 100644
+--- a/F-Droid/src/org/fdroid/fdroid/AppDetails.java
++++ b/F-Droid/src/org/fdroid/fdroid/AppDetails.java
+@@ -959,7 +959,7 @@ public class AppDetails extends AppCompatActivity implements ProgressListener, A
+         shareIntent.setType("text/plain");
+ 
+         shareIntent.putExtra(Intent.EXTRA_SUBJECT, app.name);
+-        shareIntent.putExtra(Intent.EXTRA_TEXT, app.name + " (" + app.summary + ") - https://f-droid.org/app/" + app.packageName);
++        shareIntent.putExtra(Intent.EXTRA_TEXT, app.name + " (" + app.summary + ") - https://play.google.com/store/apps/details?id=" + app.packageName);
+ 
+         startActivity(Intent.createChooser(shareIntent, getString(R.string.menu_share)));
+     }

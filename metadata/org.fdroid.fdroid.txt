@@ -61,20 +61,16 @@ Build:0.91,910
     subdir=F-Droid
     prebuild=./ant-prepare.sh
 
-Build:0.97,97050
-    disable=buggy
-    commit=v0.97
+Build:0.98,98050
+    commit=v0.98
     subdir=F-Droid
+    patch=play_58000.patch
     gradle=yes
 
 Maintainer Notes:
-Don't forget the patch:
-    patch=play_570.patch
-
-    init=sed -i "60 i \\\tdefaultConfig{packageName 'org.appz.fdroid'}" build.gradle && \
 .
 
 Update Check Mode:None
-Current Version:0.62
-Current Version Code:620
+Current Version:0.98
+Current Version Code:58050
 

@@ -6,7 +6,7 @@
 ##   build recipes might rely on other files found there.
 ## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
 
-Categories:Wallpapers
+Categories:Wallpaper
 License:MIT
 Web Site:http://xearth.org/
 Source Code:https://gitlab.com/kollo/xearth/commits/master

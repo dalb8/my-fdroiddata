@@ -25,6 +25,7 @@ alias ga='git add'
 alias s='less' 
 alias ai='adb install'
 alias au='adb uninstall'
+alias scron='adb shell input keyevent KEYCODE_POWER'
 alias racc='java -jar $RACCOON/source/target/raccoon.jar -a $RACCOON/archives/default'
 alias raccgui='java -jar $RACCOON/source/target/raccoon.jar'
 alias raccfup='cd $BINFDROIDDATA && ln -fs `find $RACCOON/archives/default -name \*apk` repo/ && basename -a `find $RACCOON/archives/default -name \*apk` > templates/apks-gplay.txt && fdroid update -c && fdroid update --pretty && rm -f *.apk'
@@ -79,7 +80,7 @@ function appversion () { adb shell dumpsys package "$1" | grep versionName ;}
 export ANDROID_HOME=~/android-sdk-linux
 export ANDROID_SDK=~/android-sdk-linux
 export BUILD_TOOLS=${ANDROID_HOME}/build-tools/23.0.2
-export ANDROID_NDK=~/android-ndk-r10d
+export ANDROID_NDK=~/android-ndk-r10e
 # Still need to set this for fdroid
 export M2_HOME=/opt/maven/apache-maven-3.1.1
 export M2=${M2_HOME}/bin
