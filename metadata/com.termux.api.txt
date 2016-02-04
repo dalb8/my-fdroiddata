@@ -1,0 +1,37 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://termux.com
+Source Code:https://github.com/termux/termux-api/commits
+Issue Tracker:https://github.com/termux/termux-api/issues
+
+Auto Name:Termux:API
+Summary:Access Android functions from Termux
+Description:
+Expose basic Android functionality like sending SMS or accessing GPS data to the
+[[com.termux]] app.
+.
+
+Repo Type:git
+Repo:https://github.com/termux/termux-api
+
+Build:0.8,8
+    commit=v0.8
+    subdir=app
+    prebuild=sed -i -e '/signingConfig/d' build.gradle
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:Tags
+Current Version:0.8
+Current Version Code:8
+

@@ -1,0 +1,53 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:http://termux.com
+Source Code:https://github.com/termux/termux-app/commits
+Issue Tracker:https://github.com/termux/termux-app/issues
+
+Summary:Terminal emulator with packages
+Description:
+Termux combines powerful terminal emulation with an extensive Linux package
+collection.
+
+* Enjoy the bash and zsh shells.
+* Edit files with nano and vim.
+* Access servers over ssh.
+* Compile code with gcc and clang.
+* Use the python console as a pocket calculator.
+* Check out projects with git and subversion.
+* Run text-based games with frotz.
+
+At first start a small base system is downloaded - desired packages can then be
+installed using the apt package manager known from the Debian and Ubuntu Linux
+distributions. Access the built-in help by long-pressing anywhere on the
+terminal and selecting the Help menu option to learn more.
+
+.
+
+Repo Type:git
+Repo:https://github.com/termux/termux-app
+
+Build:0.17,17
+    commit=v0.17
+    subdir=app
+    scandelete=app/src/main/jniLibs
+    build=cd .. && \
+        ./build-jnilibs.sh
+    gradle=yes
+
+Maintainer Notes:
+#See also [[com.termux.widget]], [[com.termux.styling]] and [[com.termux.api]].
+.
+
+#Update Check Mode:Tags
+Current Version:0.25
+Current Version Code:9999999
+
