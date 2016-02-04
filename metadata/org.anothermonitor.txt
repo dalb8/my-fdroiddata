@@ -1,0 +1,35 @@
+# Copyright (c) 2015 David Black.
+# Copyright (c) 2015 the Fdroiddata contributors.
+# Licensed under the GNU AGPLv3.
+
+## Originally published at https://github.com/dalb8/my-fdroiddata:
+##   build recipes might rely on other files found there.
+## ANY OF THE FOLLOWING COULD BE OUTDATED OR JUST PLAIN WRONG!
+
+Categories:System
+License:GPLv3
+Web Site:
+Source Code:https://github.com/AntonioRedondo/AnotherMonitor/commits
+Issue Tracker:https://github.com/AntonioRedondo/AnotherMonitor/issues
+
+Summary:Monitor and record CPU and memory usage
+Description:
+* Generates a graphic output of CPU and memory usage in 0.5, 1, 2 or 4 second intervals
+* Can record values to a CSV file for later usage and process in a spreadsheet program
+.
+
+Repo Type:git
+Repo:https://github.com/AntonioRedondo/AnotherMonitor
+
+Build:3.0.3,5
+    commit=ada8e454f8765835856484a27014b02dcf07b9a4
+    subdir=AnotherMonitor
+    gradle=yes
+
+Maintainer Notes:
+.
+
+#Update Check Mode:RepoManifest
+Current Version:3.0.5
+Current Version Code:9999999
+
